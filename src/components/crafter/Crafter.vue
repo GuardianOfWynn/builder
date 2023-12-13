@@ -304,19 +304,6 @@ export default {
         rolls: [new Map(), new Map()],
       });
 
-      let baseHealthOrDamage = 0;
-      if(isConsumable) {
-        baseHealthOrDamage = selectedCraftType.value.possibleBaseHPRBounds[index];
-      } else if(isWeapon) {
-        baseHealthOrDamage = selectedCraftType.value.possibleBaseHPRBounds[index]
-      }
-      if(isWeapon)
-        ? selectedCraftType.value.possibleBaseHPRBounds[index]
-        : 
-
-      let lowerBaseDurabilityOrDuration = baseDurabilityOrDuration[0];
-      let upperBaseDurabilityOrDuration = baseDurabilityOrDuration[1];
-
       recaulculateEffectiveness();
       for (let x = 0; x < 3; x++) {
         for (let y = 0; y < 2; y++) {
