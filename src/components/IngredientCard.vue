@@ -5,8 +5,8 @@
 
     <div v-else>
         <div class="flex justify-center mb-2">
-            <img v-if="ing.sprite.id == 397" class="w-8 h-8 pixelated object-contain" :src="require('../assets/sprites/' + ing.sprite.head)" />
-            <img v-else class="w-8 h-8 pixelated object-contain" :src="require('../assets/sprites/' + ing.sprite.id + '_' + ing.sprite.damage + '.webp')" />
+            <img v-if="ing.sprite.id == 397" class="w-8 h-8 pixelated object-contain" :src="'/sprites/' + ing.sprite.head" />
+            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/sprites/' + ing.sprite.id + '_' + ing.sprite.damage + '.webp'" />
         </div>
 
         <p class="text-md text-mc-gray mr-2 text-center">{{ing.name}}</p>
@@ -81,7 +81,7 @@
             <div>
                 <p class="text-mc-gray">Crafting Lv. Min: {{ing.level}}</p>
                 <div v-for="(value) in ing.skills" class="flex ml-4">
-                    <img class="pixelated w-4 h-4 my-auto" :src="require('../assets/sprites/' + value.toLowerCase() + '.webp')"/>
+                    <img class="pixelated w-4 h-4 my-auto" :src="'/sprites/' + value.toLowerCase() + '.webp'"/>
                     <span class="my-auto text-mc-gray ml-2"> {{dict.get(value)}}</span>
                 </div>
             </div>
@@ -105,7 +105,7 @@ import { ref } from "vue";
       },
       async setup(props) {
         
-        const dictionary = await fetch("/dictionary.json");
+        const dictionary = await (await fetch("/dictionary.json")).json();
 
         const dict = ref(new Map(Object.entries(dictionary)));
         const format = (val, idName) => {

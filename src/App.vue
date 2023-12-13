@@ -11,7 +11,7 @@ import Crafter from './components/crafter/Crafter.vue';
     </div>
     </template>
     <template #fallback>
-
+        <p>Loading...</p>
     </template>
   </Suspense>
 </template>

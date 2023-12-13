@@ -3,8 +3,8 @@
         <div class="font-minecraft relative">
           <ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
             <div class="flex">
-              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="imgHead()" />
-              <img v-else class="w-6 h-6 pixelated object-contain" :src="imgSprite()" />
+              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="'/sprites/' + selectedIng.sprite.head" />
+              <img v-else class="w-6 h-6 pixelated object-contain" :src="'/sprites/' + selectedIng.sprite.id + '_' + selectedIng.sprite.damage + '.webp'" />
             </div>
           </ComboboxButton>
           <ComboboxInput :spellcheck="false" class="pt-8 text-sm border-purple-600 border-[1px] h-16 text-white text-center bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
@@ -60,18 +60,6 @@
     emit('update-ing');
     const query = ref('');
     const selectedIng = ref(undefined);
-    const imgHead = () => {
-      if(selectedIng.value === undefined) {
-        return "";
-      }
-      return new URL(`../../../public/sprites/${selectedIng.value.sprite.head}`, import.meta.url).href;
-    }
-    const imgSprite = () =>{
-      if(selectedIng.value === undefined) {
-        return "";
-      }
-      return new URL(`../../../public/sprites/${selectedIng.value.sprite.id + "_" + selectedIng.value.sprite.damage + ".webp"}`, import.meta.url).href;
-    }
 
     const filteredIngredients = computed(() =>
             query.value === ''
@@ -79,7 +67,7 @@
             : ingredients.filter((ing) => {
                 return ing.name.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0,20));     
-    return {query, emit, filteredIngredients, selectedIng, imgHead, imgSprite}
+    return {query, emit, filteredIngredients, selectedIng}
   }}
   </script>
   
