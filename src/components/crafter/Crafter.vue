@@ -119,9 +119,11 @@ export default {
     const igs = await (await fetch("/builder/ings.json")).json();
     const craft_types = await (await fetch("/builder/craft_types.json")).json();
     const ings = ref(igs);
+
     const selectedCraftType = ref(craft_types[0]);
     const selectedMaterials = ref(crafts_scroll.crafts[0]);
     const selectedBound = ref([1,3]);
+    const selectedAttackSpeed = ref("Slow");
 
     const materialRolls = ref(crafts_scroll.crafts);
     const levelRolls = ref(crafts_scroll.crafts[0].possibleBounds);
@@ -136,19 +138,6 @@ export default {
     let amounts = this.recipe.get("materials").map(x=> x.get("amount"));
     matmult = (tierToMult[tiers[0]]*amounts[0] + tierToMult[tiers[1]]*amounts[1]) / (amounts[0]+amounts[1]);
     */
-
-    const result = ref({
-      duration: [0, 0],
-      charges: 0,
-      reqStrenght: 0,
-      reqIntelligence: 0,
-      reqDexterity: 0,
-      reqAgility: 0,
-      reqDefence: 0,
-      level: [0, 0],
-      baseHP: [0, 0],
-      identifications: [new Map(), new Map()],
-    });
 
     const ingredients = reactive([
       [ref({}), ref({})],
@@ -186,7 +175,9 @@ export default {
     }
 
     const handleCraftTypeChange = (value) => {
-      if (value === undefined) return;
+      if (value === undefined) { 
+        return;
+      }
       materialRolls.value = materials(value.name);
       levelRolls.value = materialRolls.value[0].possibleBounds;
       selectedCraftType.value = value;
@@ -195,14 +186,18 @@ export default {
     }
 
     const handleMaterialsChanged = (value) => {
-      if (value === undefined) return;
+      if (value === undefined) {
+        return;
+      }
       selectedMaterials.value = value;
       selectedBound.value = selectedMaterials.value.possibleBounds[0];
       levelRolls.value = selectedMaterials.value.possibleBounds;
     }
 
     const handleCraftLevelChanged = (value) => {
-      if (value === undefined) return;
+      if (value === undefined) {
+        return;
+      }
       selectedBound.value = value;
     }
 
@@ -250,12 +245,92 @@ export default {
       }
     }
 
+    const noIngredients = () => {
+      for(let x = 0; x < 3; x++) {
+        for(let y = 0; y < 2; y++) {
+          if(ingredients[x][y] !== undefined) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
     const assemble = () => {
+
+      let index = levelRolls.indexOf(selectedBound);
+      let isConsumable = ["Potion", "Food", "Scroll"].includes(selectedCraftType.value.name);
+      let isWeapon = ["Spear", "Relik", "Wand", "Bow", "Dagger"].includes(selectedCraftType.value.name);
+      
+      let materialTierMultiplier = 1;
+
+      let baseDurabilityOrDuration = (!isConsumable 
+        ? selectedCraftType.value.possibleBaseDurabilityBounds[index]
+        : selectedCraftType.value.possibleBaseDurationBounds[index])
+        .map(x => x*materialTierMultiplier);
+
+      let baseCharges = (isConsumable
+        ? selectedCraftType.value.consumableOnlyIDs.charges
+        : 0).map(x => x*materialTierMultiplier);
+
+      let baseHp = (isConsumable 
+        ? (noIngredients() 
+          ? selectedCraftType.value.possibleBaseHPRBounds[index] 
+          : [0,0]) 
+        : (!isWeapon 
+          ? selectedCraftType.value.possibleBaseHPBounds[index] 
+          : [0,0]))
+        .map(x => x*materialTierMultiplier);
+
+      let baseDamage =
+        (isWeapon ?
+        (selectedAttackSpeed === "Fast" ? selectedCraftType.value.possibleBaseFastDamageBounds[index] :
+          (selectedAttackSpeed === "Normal" ? selectedCraftType.value.possibleBaseNormalDamageBounds[index]
+            : selectedCraftType.value.possibleBaseSlowDamageBounds[index])) 
+        : [[0,0],[0,0]]
+        );
+
+      const result = ref({
+        duration: baseDurabilityOrDuration,
+        baseDamage: baseDamage,
+        charges: baseCharges,
+        reqStrenght: 0,
+        reqIntelligence: 0,
+        reqDexterity: 0,
+        reqAgility: 0,
+        reqDefence: 0,
+        level: selectedBound.value,
+        baseHP: baseHp,
+        rolls: [new Map(), new Map()],
+      });
+
+      let baseHealthOrDamage = 0;
+      if(isConsumable) {
+        baseHealthOrDamage = selectedCraftType.value.possibleBaseHPRBounds[index];
+      } else if(isWeapon) {
+        baseHealthOrDamage = selectedCraftType.value.possibleBaseHPRBounds[index]
+      }
+      if(isWeapon)
+        ? selectedCraftType.value.possibleBaseHPRBounds[index]
+        : 
+
+      let lowerBaseDurabilityOrDuration = baseDurabilityOrDuration[0];
+      let upperBaseDurabilityOrDuration = baseDurabilityOrDuration[1];
+
       recaulculateEffectiveness();
       for (let x = 0; x < 3; x++) {
         for (let y = 0; y < 2; y++) {
           let currentIngredient = ingredients[x][y];
-
+          if(currentIngredient != undefined && isConsumable) {
+            baseHP
+          }
+          let multiplier = effectiveness[x][y]/100;
+          result.value.reqStrenght += currentIngredient.itemOnlyIDs.strengthRequirement*multiplier;
+          result.value.reqIntelligence += currentIngredient.itemOnlyIDs.intelligenceRequirement*multiplier;
+          result.value.reqAgility += currentIngredient.itemOnlyIDs.agilityRequirement*multiplier;
+          result.value.reqDefence += currentIngredient.itemOnlyIDs.defenceRequirement*multiplier;
+          result.value.reqDexterity += currentIngredient.itemOnlyIDs.dexterityRequirement*multiplier;
+          
         }
       }
     }
