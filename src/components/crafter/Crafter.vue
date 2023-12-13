@@ -27,12 +27,15 @@
         </div>
         <div class="grid grid-cols-5 grid-rows-3 w-full gap-y-1">
           <p class="my-auto text-white">Type</p>
-          <CraftTypeCombobox class="col-span-4" @update-craft-type="handleCraftTypeChange" />
+          <CraftTypeCombobox class="col-span-4" 
+            @update-craft-type="handleCraftTypeChange" />
           <p class="my-auto text-white">Materials</p>
-          <MaterialsCombobox class="col-span-4" :craftType="selectedCraftType"
-            @update-craft-materials="handleMaterialsChanged" />
+          <MaterialsCombobox class="col-span-4" 
+            :materials="materialRolls"
+            @update-craft-materials="handleMaterialsChanged"/>
           <p class="my-auto text-white">Level</p>
-          <CraftLevelCombobox class="col-span-4" :craftMaterials="selectedMaterials"
+          <CraftLevelCombobox class="col-span-4" 
+            :levels="levelRolls"
             @update-craft-level="handleCraftLevelChanged" />
         </div>
       </div>
@@ -104,13 +107,24 @@ export default {
   name: 'Crafter',
   async setup() {
 
+    const crafts_spears = await (await fetch("/builder/crafts/spear.json")).json();
+    const crafts_helmet = await (await fetch("/builder/crafts/helmet.json")).json();
+    const crafts_chestplate = await (await fetch("/builder/crafts/chestplate.json")).json();
+    const crafts_leggings = await (await fetch("/builder/crafts/leggings.json")).json();
+    const crafts_boots = await (await fetch("/builder/crafts/boots.json")).json();
+    const crafts_food = await (await fetch("/builder/crafts/food.json")).json();
+    const crafts_potion = await (await fetch("/builder/crafts/potion.json")).json();
     const crafts_scroll = await (await fetch("/builder/crafts/scroll.json")).json();
+
     const igs = await (await fetch("/builder/ings.json")).json();
     const craft_types = await (await fetch("/builder/craft_types.json")).json();
     const ings = ref(igs);
     const selectedCraftType = ref(craft_types[0]);
     const selectedMaterials = ref(crafts_scroll.crafts[0]);
-    const selectedBound = ref(100);
+    const selectedBound = ref([1,3]);
+
+    const materialRolls = ref(crafts_scroll.crafts);
+    const levelRolls = ref(crafts_scroll.crafts[0].possibleBounds);
 
     /* Thanks hpp-eng!
     let mat_tiers = [];
@@ -148,6 +162,18 @@ export default {
       [ref(100), ref(100)]
     ]);
 
+    const materials = (craftType) => {
+      switch (craftType) {
+        case "Helmet": return crafts_helmet.crafts;
+        case "Chestplate": return crafts_chestplate.crafts;
+        case "Leggings": return crafts_leggings.crafts;
+        case "Boots": return crafts_boots.crafts;
+        case "Potion": return crafts_potion.crafts;
+        case "Food": return crafts_food.crafts;
+        case "Scroll": return crafts_scroll.crafts;
+      }
+    }
+
     const touching = (x1, x2, y1, y2) => x1 === x2 || (y1 === y2 && (x1 === (x2 - 1) || x1 === (x2 + 1)));
     const under = (x1, x2, y1, y2) => y1 === y2 && x1 < x2;
     const above = (x1, x2, y1, y2) => y1 === y2 && x1 > x2;
@@ -161,13 +187,18 @@ export default {
 
     const handleCraftTypeChange = (value) => {
       if (value === undefined) return;
+      materialRolls.value = materials(value.name);
+      levelRolls.value = materialRolls.value[0].possibleBounds;
       selectedCraftType.value = value;
+      selectedMaterials.value = materialRolls.value[0];
+      selectedBound.value = selectedMaterials.value.possibleBounds[0];
     }
 
     const handleMaterialsChanged = (value) => {
       if (value === undefined) return;
       selectedMaterials.value = value;
-      selectedBound.value = 0;
+      selectedBound.value = selectedMaterials.value.possibleBounds[0];
+      levelRolls.value = selectedMaterials.value.possibleBounds;
     }
 
     const handleCraftLevelChanged = (value) => {
@@ -229,7 +260,7 @@ export default {
       }
     }
 
-    return { ings, ingredients, effectiveness, selectedCraftType, selectedMaterials, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleCraftTypeChange }
+    return { ings, ingredients, effectiveness, selectedCraftType, selectedMaterials, materialRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleCraftTypeChange }
   },
   components: { IngredientCombobox, IngredientCard, IngredientCard, EffectivenessCard, CraftTypeCombobox, MaterialsCombobox, CraftLevelCombobox, IngredientCombobox }
 }

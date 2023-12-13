@@ -1,5 +1,5 @@
 <template>
-  <Combobox immediate :defaultValue="crafts_scroll.crafts[0]"
+  <Combobox immediate :defaultValue="rolls[0]"
     @update:modelValue="value => $emit('update-craft-materials', value)" v-model="selectedMats" name="assignee"
     class="h-8">
     <div class="font-minecraft relative flex gap-x-4 ">
@@ -48,46 +48,26 @@ export default {
   },
   emits: ['update-craft-materials'],
   props: {
-    craftType: Object
+    materials: Array
   },
   async setup(props, { emit }) {
-    emit('update-craft-materials');
-
-    const crafts_spears = await (await fetch("/builder/crafts/spear.json")).json();
-    const crafts_helmet = await (await fetch("/builder/crafts/helmet.json")).json();
-    const crafts_chestplate = await (await fetch("/builder/crafts/chestplate.json")).json();
-    const crafts_leggings = await (await fetch("/builder/crafts/leggings.json")).json();
-    const crafts_boots = await (await fetch("/builder/crafts/boots.json")).json();
-    const crafts_food = await (await fetch("/builder/crafts/food.json")).json();
-    const crafts_potion = await (await fetch("/builder/crafts/potion.json")).json();
-    const crafts_scroll = await (await fetch("/builder/crafts/scroll.json")).json();
-
+  
     const query = ref('');
-
-    const materials = () => {
-      console.log(props.craftType.name);
-      switch (props.craftType.name) {
-        case "Helmet": return crafts_helmet.crafts;
-        case "Chestplate": return crafts_chestplate.crafts;
-        case "Leggings": return crafts_leggings.crafts;
-        case "Boots": return crafts_boots.crafts;
-        case "Potion": return crafts_potion.crafts;
-        case "Food": return crafts_food.crafts;
-        case "Scroll": return crafts_scroll.crafts;
-      }
-    }
-
-    const selectedMats = ref(undefined);
+    const rolls = ref(props.materials);
+    const selectedMats = ref(props.materials[0]);
 
     const filteredMaterials = computed(() =>
       query.value === ''
-        ? materials()
-        : materials().filter((x) => {
+        ? props.materials
+        : props.materials.filter((x) => {
           return x.name.toLowerCase().includes(query.value.toLowerCase())
         }));
 
-    watchEffect(() => selectedMats.value = materials()[0]);
-    return { query, emit, filteredMaterials, materials, selectedMats, crafts_scroll }
+    watchEffect(() => {
+      rolls.value = props.materials;
+      selectedMats.value = rolls.value[0];
+    });
+    return { query, emit, filteredMaterials, selectedMats, rolls }
   }
 }
 </script>
