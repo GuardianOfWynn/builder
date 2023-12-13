@@ -245,16 +245,7 @@ export default {
       }
     }
 
-    const noIngredients = () => {
-      for(let x = 0; x < 3; x++) {
-        for(let y = 0; y < 2; y++) {
-          if(ingredients[x][y] !== undefined) {
-            return false;
-          }
-        }
-      }
-      return true;
-    }
+    const noIngredients = () => ingredients.flat(1).every(x => x===undefined);
 
     const assemble = () => {
 
@@ -264,14 +255,8 @@ export default {
       
       let materialTierMultiplier = 1;
 
-      let baseDurabilityOrDuration = (!isConsumable 
-        ? selectedCraftType.value.possibleBaseDurabilityBounds[index]
-        : selectedCraftType.value.possibleBaseDurationBounds[index])
-        .map(x => x*materialTierMultiplier);
-
-      let baseCharges = (isConsumable
-        ? selectedCraftType.value.consumableOnlyIDs.charges
-        : 0).map(x => x*materialTierMultiplier);
+      let baseDurabilityOrDuration = getBaseDurationOrDurability(selectedCraftType.value.name, selectedMaterials.value, selectedBound.value);
+      let baseCharges = getBaseCharges(selectedMaterials.value);
 
       let baseHp = (isConsumable 
         ? (noIngredients() 
