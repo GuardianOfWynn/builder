@@ -12,7 +12,7 @@
             :displayValue="(x) => x.name"/>
           <ComboboxOptions class="absolute z-10 flex flex-col right-0 top-0">
             <ComboboxOption
-              v-for="(x) in filteredMaterials"
+              v-for="(x, i) in filteredMaterials"
               :key="x.name"
               :value="x"
             >
@@ -28,7 +28,7 @@
   </template>
   
   <script>
-  import { computed, ref } from "vue";
+  import { computed, ref, watchEffect } from "vue";
   import {
   Combobox,
   ComboboxInput,
@@ -65,9 +65,9 @@ ComboboxLabel,
     const crafts_scroll = await (await fetch( "/crafts/scroll.json")).json();
 
     const query = ref('');
-    const selectedMats = ref(undefined);
 
     const materials = () => {
+      console.log(props.craftType.name);
       switch(props.craftType.name) {
         case "Helmet": return crafts_helmet.crafts;
         case "Chestplate": return crafts_chestplate.crafts;
@@ -79,12 +79,16 @@ ComboboxLabel,
       }
     }
 
+    const selectedMats = ref(undefined);
+
     const filteredMaterials = computed(() =>
             query.value === ''
             ? materials()
             : materials().filter((x) => {
                 return x.name.toLowerCase().includes(query.value.toLowerCase())
-        }));     
+        }));
+        
+      watchEffect(() => selectedMats.value = materials()[0]);
     return {query, emit,filteredMaterials , materials, selectedMats,crafts_scroll}
   }}
   </script>
