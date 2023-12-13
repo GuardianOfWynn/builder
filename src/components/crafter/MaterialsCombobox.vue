@@ -3,12 +3,6 @@
     @update:modelValue="value => $emit('update-craft-materials', value)" v-model="selectedMats" name="assignee"
     class="h-8">
     <div class="font-minecraft relative flex gap-x-4 ">
-      <!--<ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
-            <div class="flex">
-              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="require('../assets/sprites/' + selectedIng.sprite.head)" />
-              <img v-else class="w-6 h-6 pixelated object-contain" :src="require('../assets/sprites/' + selectedIng.sprite.id + '_' + selectedIng.sprite.damage + '.webp')" />
-            </div>
-          </ComboboxButton>-->
       <ComboboxInput :spellcheck="false"
         class="text-md border-purple-600 border-[1px] text-white bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
         @change="query = $event.target.value" :displayValue="(x) => x.name" />
