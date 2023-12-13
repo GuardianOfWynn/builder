@@ -92,16 +92,22 @@ export default {
     name: 'Crafter',
     async setup() {
 
-      const igs = await fetch("/ings.json");
-      const craft_types = await fetch("/craft_types.json");
-      const crafts_scroll = await fetch("/crafts/scroll.json");
-  
-      console.log(JSON.stringify(crafts_scroll));
+      const crafts_spears = await (await fetch("/crafts/spear.json")).json();
+      const crafts_helmet = await (await fetch( "/crafts/helmet.json")).json();
+      const crafts_chestplate = await (await fetch( "/crafts/chestplate.json")).json();
+      const crafts_leggings = await (await fetch( "/crafts/leggings.json")).json();
+      const crafts_boots = await (await fetch( "/crafts/boots.json")).json();
+      const crafts_food = await (await fetch( "/crafts/food.json")).json();
+      const crafts_potion = await (await fetch( "/crafts/potion.json")).json();
+      const crafts_scroll = await (await fetch( "/crafts/scroll.json")).json();
+
+      const igs = await (await fetch("/ings.json")).json();
+      const craft_types = await (await fetch("/craft_types.json")).json();
 
       const ings = ref(igs);
 
       const selectedCraftType = ref(craft_types[0]);
-      const selectedMaterials = ref(crafts_scroll.crafts[0]);
+      const selectedMaterials = reactive(crafts_scroll.crafts[0]);
       const selectedBound = ref(100);
 
       /* Thanks hpp-eng!
@@ -154,7 +160,6 @@ export default {
       const handleCraftTypeChange = (value) => {
         if(value === undefined) return;
         selectedCraftType.value = value;
-        selectedMaterials
       }
 
       const handleMaterialsChanged = (value) => {

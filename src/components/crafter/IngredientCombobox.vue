@@ -55,7 +55,7 @@
   },
   async setup(props, { emit }) {
 
-    const ingredients = await fetch("/ings.json");
+    const ingredients = await(await fetch("/ings.json")).json();
 
     emit('update-ing');
     const query = ref('');
@@ -64,13 +64,13 @@
       if(selectedIng.value === undefined) {
         return "";
       }
-      return new URL(`../../assets/sprites/${selectedIng.value.sprite.head}`, import.meta.url);
+      return new URL(`../../../public/sprites/${selectedIng.value.sprite.head}`, import.meta.url).href;
     }
     const imgSprite = () =>{
       if(selectedIng.value === undefined) {
         return "";
       }
-      return new URL(`../../assets/sprites/${selectedIng.value.sprite.id + "_" + selectedIng.value.sprite.damage + ".webp"}`, import.meta.url);
+      return new URL(`../../../public/sprites/${selectedIng.value.sprite.id + "_" + selectedIng.value.sprite.damage + ".webp"}`, import.meta.url).href;
     }
 
     const filteredIngredients = computed(() =>

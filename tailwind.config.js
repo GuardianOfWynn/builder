@@ -37,10 +37,10 @@ module.exports = {
         'boots': '-178px -180px'
       },
       backgroundImage: {
-        'professions': "url('/src/assets/sprites/ProfessionIcon.png')",
-        'wynn-icons': "url('/src/assets/sprites/WynnIcons.png')",
-        'accessories': "url('/src/assets/sprites/AccessorySprites.gif')",
-        'armours': "url('/src/assets/sprites/ArmourSprites.png')"
+        'professions': "url('/sprites/ProfessionIcon.png')",
+        'wynn-icons': "url('/sprites/WynnIcons.png')",
+        'accessories': "url('/sprites/AccessorySprites.gif')",
+        'armours': "url('/sprites/ArmourSprites.png')"
       }
      },
    },

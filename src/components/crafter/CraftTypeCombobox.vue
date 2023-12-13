@@ -53,7 +53,7 @@ ComboboxLabel,
   },
   async setup(props, { emit }) {
 
-    const craft_types = await fetch("/craft_types.json"); 
+    const craft_types = await (await fetch("/craft_types.json")).json(); 
 
     emit('update-craft-type');
     const types = ref(craft_types);
@@ -61,7 +61,7 @@ ComboboxLabel,
     const selectedType = ref(undefined);
     const filteredTypes = computed(() =>
             query.value === ''
-            ? craft_types.slice(0, 20)
+            ? craft_types
             : craft_types.filter((x) => {
                 return x.name.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0,20));     
