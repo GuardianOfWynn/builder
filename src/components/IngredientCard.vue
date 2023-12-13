@@ -5,8 +5,8 @@
 
     <div v-else>
         <div class="flex justify-center mb-2">
-            <img v-if="ing.sprite.id == 397" class="w-8 h-8 pixelated object-contain" :src="'/sprites/' + ing.sprite.head" />
-            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/sprites/' + ing.sprite.id + '_' + ing.sprite.damage + '.webp'" />
+            <img v-if="ing.sprite.id == 397" class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite.head" />
+            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite.id + '_' + ing.sprite.damage + '.webp'" />
         </div>
 
         <p class="text-md text-mc-gray mr-2 text-center">{{ing.name}}</p>
@@ -105,7 +105,7 @@ import { ref } from "vue";
       },
       async setup(props) {
         
-        const dictionary = await (await fetch("/dictionary.json")).json();
+        const dictionary = await (await fetch("/builder/dictionary.json")).json();
 
         const dict = ref(new Map(Object.entries(dictionary)));
         const format = (val, idName) => {

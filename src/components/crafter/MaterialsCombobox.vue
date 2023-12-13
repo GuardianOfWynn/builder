@@ -53,14 +53,14 @@ export default {
   async setup(props, { emit }) {
     emit('update-craft-materials');
 
-    const crafts_spears = await (await fetch("/crafts/spear.json")).json();
-    const crafts_helmet = await (await fetch("/crafts/helmet.json")).json();
-    const crafts_chestplate = await (await fetch("/crafts/chestplate.json")).json();
-    const crafts_leggings = await (await fetch("/crafts/leggings.json")).json();
-    const crafts_boots = await (await fetch("/crafts/boots.json")).json();
-    const crafts_food = await (await fetch("/crafts/food.json")).json();
-    const crafts_potion = await (await fetch("/crafts/potion.json")).json();
-    const crafts_scroll = await (await fetch("/crafts/scroll.json")).json();
+    const crafts_spears = await (await fetch("/builder/crafts/spear.json")).json();
+    const crafts_helmet = await (await fetch("/builder/crafts/helmet.json")).json();
+    const crafts_chestplate = await (await fetch("/builder/crafts/chestplate.json")).json();
+    const crafts_leggings = await (await fetch("/builder/crafts/leggings.json")).json();
+    const crafts_boots = await (await fetch("/builder/crafts/boots.json")).json();
+    const crafts_food = await (await fetch("/builder/crafts/food.json")).json();
+    const crafts_potion = await (await fetch("/builder/crafts/potion.json")).json();
+    const crafts_scroll = await (await fetch("/builder/crafts/scroll.json")).json();
 
     const query = ref('');
 

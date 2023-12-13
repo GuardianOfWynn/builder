@@ -3,8 +3,8 @@
         <div class="font-minecraft relative">
           <ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
             <div class="flex">
-              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="'/sprites/' + selectedIng.sprite.head" />
-              <img v-else class="w-6 h-6 pixelated object-contain" :src="'/sprites/' + selectedIng.sprite.id + '_' + selectedIng.sprite.damage + '.webp'" />
+              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite.head" />
+              <img v-else class="w-6 h-6 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite.id + '_' + selectedIng.sprite.damage + '.webp'" />
             </div>
           </ComboboxButton>
           <ComboboxInput :spellcheck="false" class="pt-8 text-sm border-purple-600 border-[1px] h-16 text-white text-center bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
@@ -55,7 +55,7 @@
   },
   async setup(props, { emit }) {
 
-    const ingredients = await(await fetch("/ings.json")).json();
+    const ingredients = await(await fetch("/builder/ings.json")).json();
 
     emit('update-ing');
     const query = ref('');

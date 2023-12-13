@@ -53,7 +53,7 @@ ComboboxLabel,
   },
   async setup(props, { emit }) {
 
-    const craft_types = await (await fetch("/craft_types.json")).json(); 
+    const craft_types = await (await fetch("/builder/craft_types.json")).json(); 
 
     emit('update-craft-type');
     const types = ref(craft_types);

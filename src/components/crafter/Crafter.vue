@@ -104,9 +104,9 @@ export default {
   name: 'Crafter',
   async setup() {
 
-    const crafts_scroll = await (await fetch("/crafts/scroll.json")).json();
-    const igs = await (await fetch("/ings.json")).json();
-    const craft_types = await (await fetch("/craft_types.json")).json();
+    const crafts_scroll = await (await fetch("/builder/crafts/scroll.json")).json();
+    const igs = await (await fetch("/builder/ings.json")).json();
+    const craft_types = await (await fetch("/builder/craft_types.json")).json();
     const ings = ref(igs);
     const selectedCraftType = ref(craft_types[0]);
     const selectedMaterials = ref(crafts_scroll.crafts[0]);
