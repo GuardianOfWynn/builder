@@ -96,7 +96,6 @@
 </template>
   
 <script>
-import dictionary from "../assets/dictionary.json"
 import { ref } from "vue";
   
   export default {
@@ -104,7 +103,10 @@ import { ref } from "vue";
       props: {
           ing: Object,
       },
-      setup(props) {
+      async setup(props) {
+        
+        const dictionary = await fetch("/dictionary.json");
+
         const dict = ref(new Map(Object.entries(dictionary)));
         const format = (val, idName) => {
             if (idName === "POISON") {

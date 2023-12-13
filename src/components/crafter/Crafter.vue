@@ -76,14 +76,11 @@
 </template>
 
 <script>
-import igs from "../../assets/ings.json";;
-import craft_types from "../../assets/craft_types.json";
-import crafts_scroll from "../../assets/crafts/scroll.json";
 import { reactive, ref } from "vue";
-import "../../assets/sprites/WynnIcons.png";
-import "../../assets/sprites/ProfessionIcon.png";
-import "../../assets/sprites/AccessorySprites.gif";
-import "../../assets/sprites/ArmourSprites.png";
+import "/sprites/WynnIcons.png";
+import "/sprites/ProfessionIcon.png";
+import "/sprites/AccessorySprites.gif";
+import "/sprites/ArmourSprites.png";
 import MaterialsCombobox from "./MaterialsCombobox.vue";
 import CraftLevelCombobox from "./CraftLevelCombobox.vue";
 import CraftTypeCombobox from "./CraftTypeCombobox.vue";
@@ -93,8 +90,14 @@ import EffectivenessCard from "./EffectivenessCard.vue"
 
 export default {
     name: 'Crafter',
-    setup() {
+    async setup() {
+
+      const igs = await fetch("/ings.json");
+      const craft_types = await fetch("/craft_types.json");
+      const crafts_scroll = await fetch("/crafts/scroll.json");
   
+      console.log(JSON.stringify(crafts_scroll));
+
       const ings = ref(igs);
 
       const selectedCraftType = ref(craft_types[0]);

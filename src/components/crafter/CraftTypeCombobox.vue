@@ -29,8 +29,6 @@
   
   <script>
   import { computed, ref } from "vue";
-  import craft_types from "../../assets/craft_types.json";
-  import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/24/solid'
   import {
   Combobox,
   ComboboxInput,
@@ -53,7 +51,10 @@ ComboboxLabel,
     emits: ['update-craft-type'],
     props: {
   },
-  setup(props, { emit }) {
+  async setup(props, { emit }) {
+
+    const craft_types = await fetch("/craft_types.json"); 
+
     emit('update-craft-type');
     const types = ref(craft_types);
     const query = ref('');

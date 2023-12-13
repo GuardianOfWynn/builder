@@ -30,7 +30,6 @@
   ComboboxButton,
   ComboboxOptions,
   ComboboxOption,
-  TransitionRoot,
 ComboboxLabel,
 } from '@headlessui/vue' 
   

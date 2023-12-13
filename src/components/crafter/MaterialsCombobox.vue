@@ -29,14 +29,6 @@
   
   <script>
   import { computed, ref } from "vue";
-  import crafts_spears from "../../assets/crafts/spear.json";
-  import crafts_helmet from "../../assets/crafts/helmet.json";
-  import crafts_chestplate from "../../assets/crafts/chestplate.json";
-  import crafts_leggings from "../../assets/crafts/leggings.json";
-  import crafts_boots from "../../assets/crafts/boots.json";
-  import crafts_food from "../../assets/crafts/food.json";
-  import crafts_potion from "../../assets/crafts/potion.json";
-  import crafts_scroll from "../../assets/crafts/scroll.json";
   import {
   Combobox,
   ComboboxInput,
@@ -60,8 +52,18 @@ ComboboxLabel,
     props: {
       craftType: Object
     },
-  setup(props, { emit }) {
+  async setup(props, { emit }) {
     emit('update-craft-materials');
+
+    const crafts_spears = await fetch("/crafts/spear.json");
+    const crafts_helmet = await fetch( "/crafts/helmet.json");
+    const crafts_chestplate = await fetch( "/crafts/chestplate.json");
+    const crafts_leggings = await fetch( "/crafts/leggings.json");
+    const crafts_boots = await fetch( "/crafts/boots.json");
+    const crafts_food = await fetch( "/crafts/food.json");
+    const crafts_potion = await fetch( "/crafts/potion.json");
+    const crafts_scroll = await fetch( "/crafts/scroll.json");
+
     const query = ref('');
     const selectedMats = ref(undefined);
 

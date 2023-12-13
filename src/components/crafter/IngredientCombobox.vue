@@ -31,8 +31,6 @@
   
   <script>
   import { computed, ref } from "vue";
-  import ingredients from "../../assets/ings.json";
-  import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/24/solid'
   import {
   Combobox,
   ComboboxInput,
@@ -55,7 +53,10 @@
   props: {
     ingredient: Object
   },
-  setup(props, { emit }) {
+  async setup(props, { emit }) {
+
+    const ingredients = await fetch("/ings.json");
+
     emit('update-ing');
     const query = ref('');
     const selectedIng = ref(undefined);
