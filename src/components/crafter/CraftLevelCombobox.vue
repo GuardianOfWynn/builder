@@ -53,8 +53,8 @@ export default {
 
     const filteredLevels = computed(() =>
       query.value === ''
-        ? rolls.possibleBounds
-        : rolls.possibleBounds.filter((x) => {
+        ? rolls.value
+        : rolls.value.filter((x) => {
           return x.toString().toLowerCase().includes(query.value.toLowerCase())
         }));
 
