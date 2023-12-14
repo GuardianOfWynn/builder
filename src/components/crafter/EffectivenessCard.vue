@@ -8,16 +8,14 @@
 </template>
   
 <script>
+import { ref, watch } from 'vue';
+
   
   export default {
       name: 'EffectivenessCard',
       props: {
           effectiveness: Object,
           ingredient: Object
-      },
-      setup(props) {
-        
-       
       },
       components: { }
   }

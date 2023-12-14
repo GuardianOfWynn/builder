@@ -46,6 +46,7 @@ export function getEffectiveness(ingredients) {
 
         }
     }
+    return effectiveness;
 }
 
 export function getBaseDurationOrDurability(craftType, materials, levelRange) {

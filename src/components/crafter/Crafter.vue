@@ -1,8 +1,8 @@
 <template>
   <div class="p-8  font-minecraft">
-    <div class="w-1/2">
-      <p class="text-3xl text-mc-light-purple">GsWCrafter</p>
-      <div class="flex gap-x-4 w-full">
+    <div class="w-2/5">
+      <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
+      <div class="flex gap-x-4 w-full mb-4">
         <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
           <div v-if="craftType === 'Scroll'"
             class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
@@ -128,9 +128,9 @@ export default {
     const levelRolls = ref(scrollCrafts.crafts[0].possibleBounds);
 
     const ingredients = reactive([
-      [ref({}), ref({})],
-      [ref({}), ref({})],
-      [ref({}), ref({})]
+      [ref(undefined), ref(undefined)],
+      [ref(undefined), ref(undefined)],
+      [ref(undefined), ref(undefined)]
     ]);
 
     const effectiveness = reactive([
@@ -188,7 +188,14 @@ export default {
 
     const assemble = () => {
 
-      effectiveness.values = getEffectiveness(ingredients);
+      let effec = getEffectiveness(ingredients);
+      
+      effectiveness[0][0].value = effec[0][0];
+      effectiveness[0][1].value = effec[0][1];
+      effectiveness[1][0].value = effec[1][0];
+      effectiveness[1][1].value = effec[1][1];
+      effectiveness[2][0].value = effec[2][0];
+      effectiveness[2][1].value = effec[2][1];
 
       let materialTierMultiplier = 1;
 
