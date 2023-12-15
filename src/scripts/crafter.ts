@@ -76,11 +76,11 @@ export function getBaseCharges<T extends Recipe>(recipe: T): number {
     return recipe instanceof ConsumableRecipe ? (<ConsumableRecipe>recipe).charges : 0;
 }
 
-export function getBaseHealth(craftType, materials, levelRange, noIngredients) {
-    let index = getLevelRangeIndex(materials, levelRange);
-    return (isConsumable(craftType)
-        ? (noIngredients ? materials.possibleBaseHPRBounds[index] : [0,0]) 
-        : (isArmour(craftType) ? materials.possibleBaseHPBounds[index] : [0,0]))
+export function getBaseHealth<T extends Recipe>(recipe: T, levelRange: NumberRange, noIngredients: Boolean) {
+    let index = getLevelRangeIndex(recipe, levelRange);
+    return (recipe instanceof ConsumableRecipe
+        ? (noIngredients ? .possibleBaseHPRBounds[index] : [0,0]) 
+        : (isArmour(recipe) ? recipe.possibleBaseHPBounds[index] : [0,0]))
 }
 
 export function getLevelRangeIndex(recipe: Recipe, levelRange: NumberRange): number {

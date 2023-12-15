@@ -1,115 +1,740 @@
-{
-    "ratio1": 1,
-        "ratio2": 2,
-        "crafts": [
+[
+    {
+        "material2": "Wheat Grains",
+        "material1": "Gudgeon Oil",
+        "material2Amount": 2,
+        "name": "Gudgeon Oil + Wheat Grains (Lvl. 1-9)",
+        "material1Amount": 1,
+        "levels": [
             {
-                "name": "Gudgeon Oil + Wheat Grains (Lvl. 1-9)",
-                "multiplier": 1,
-                "material1": "Gudgeon Oil",
-                "material2": "Wheat Grains",
-                "possibleBounds": [[1,3], [3,5], [5,7], [7,9]],
-                "possibleBaseHPRBounds":[[24, 33], [33,42], [43,54], [54,59]],
-                "possibleBaseDurationBounds": [[360,372],[372,384],[384,396],[396,408]]
+                "levelRange": {
+                    "maximum": 3,
+                    "minimum": 1
+                },
+                "id": "1-3",
+                "durationRange": {
+                    "maximum": 372,
+                    "minimum": 360
+                },
+                "hprRange": {
+                    "maximum": 33,
+                    "minimum": 24
+                }
             },
             {
-                "name": "Trout Oil + Barley Grains (Lvl. 10-19)",
-                "multiplier": 2,
-                "material1": "Trout Oil",
-                "material2": "Barley Grains",
-                "possibleBounds": [[10,13], [13,15], [15,17], [17,19]],
-                "possibleBaseHPRBounds":[[60, 79], [79,99], [99,113], [99,128]],
-                "possibleBaseDurationBounds": [[414,432],[432,444],[444,456],[456,468]]
+                "levelRange": {
+                    "maximum": 5,
+                    "minimum": 3
+                },
+                "id": "3-5",
+                "durationRange": {
+                    "maximum": 384,
+                    "minimum": 372
+                },
+                "hprRange": {
+                    "maximum": 42,
+                    "minimum": 33
+                }
             },
             {
-                "name": "Salmon Oil + Oat Grains (Lvl. 20-29)",
-                "multiplier": 2,
-                "material1": "Salmon Oil",
-                "material2": "Oat Grains",
-                "possibleBounds": [[20,23], [23,25], [25,27], [27,29]],
-                "possibleBaseHPRBounds":[[122, 150], [150,173], [173,210], [173,243]],
-                "possibleBaseDurationBounds": [[474,492],[492,504 ],[504 ,516 ],[516 ,528 ]]
+                "levelRange": {
+                    "maximum": 7,
+                    "minimum": 5
+                },
+                "id": "5-7",
+                "durationRange": {
+                    "maximum": 396,
+                    "minimum": 384
+                },
+                "hprRange": {
+                    "maximum": 54,
+                    "minimum": 43
+                }
             },
             {
-                "name":  "Carp Oil + Malt Grains (Lvl. 30-39)",
-                "multiplier": 3,
-                "material1": "Carp Oil",
-                "material2": "Malt Grains",
-                "possibleBounds": [[30,33], [33,35], [35,37], [37,39]],
-                "possibleBaseHPRBounds":[[254, 298], [298,342], [342,403], [403,463]],
-                "possibleBaseDurationBounds": [[534,552],[552,564],[564,576],[576,584]]
-            
-            },
-            {
-                "name": "Icefish Oil + Hops Grains (Lvl. 40-49)",
-                "multiplier": 3,
-                "material1": "Icefish Oil",
-                "material2": "Hops Grains",
-                "possibleBounds": [[40,43], [43,45], [45,47], [47,49]],
-                "possibleBaseHPRBounds":[[474, 551], [551,628], [628,722], [722,815]],
-                "possibleBaseDurationBounds": [[594,612],[612,624],[624,636],[636,648]]
-            },
-            {
-                "name": "Piranha Oil + Rye Grains (Lvl. 50-59)",
-                "multiplier": 4,
-                "material1": "Piranha Oil",
-                "material2": "Rye Grains",
-                "possibleBounds": [[50,53], [53,55], [55,57], [57,59]],
-                "possibleBaseHPRBounds":[[837, 997], [997,1156], [1156,1277], [1277,1398]],
-                "possibleBaseDurationBounds": [[654,672],[672,684],[684,696],[696,708]]
-            },
-            {
-                "name": "Koi Oil + Millet Grains (Lvl. 60-69)",
-                "multiplier": 4,
-                "material1": "Koi Oil",
-                "material2": "Millet Grains",
-                "possibleBounds": [[60,63], [63,65], [65,67], [67,69]],
-                "possibleBaseHPRBounds":[[1420, 1541], [1541,1662], [1662,1816], [1816,1882]],
-                "possibleBaseDurationBounds": [[714,732],[732,744],[744,756],[756,768]]
-            },
-            {
-                "name": "Gylia Oil + Decay Grains (Lvl. 70-79)",
-                "multiplier": 5,
-                "material1": "Gylia Oil",
-                "material2": "Decay Grains",
-                "possibleBounds": [[70,73], [73,75], [75,77], [77,79]],
-                "possibleBaseHPRBounds":[[1992, 2212], [2212,2432], [2432,2575], [2575,2718]],
-                "possibleBaseDurationBounds": [[774,792],[792 ,804],[804,816],[816,828]]
-            },
-            {
-                "name": "Bass Oil + Rice Grains (Lvl. 80-89)",
-                "multiplier": 5,
-                "material1": "Bass Oil",
-                "material2": "Rice Grains",
-                "possibleBounds": [[80,83], [83,85], [85,87], [87,89]],
-                "possibleBaseHPRBounds":[[2762, 2927], [2927,3092], [3092,3323], [3323,3554]],
-                "possibleBaseDurationBounds": [[834,852],[852 ,864],[864 ,876],[876,888]]
-            },
-            {
-                "name":  "Molten Oil + Sorghum Grains (Lvl. 90-99)",
-                "multiplier": 6,
-                "material1": "Molten Oil",
-                "material2": "Sorghum Grains",
-                "possibleBounds": [[90,93], [93,95], [95,97], [97,99]],
-                "possibleBaseHPRBounds":[[3587, 3835], [3835,4082], [4082,4467], [4467,4852]],
-                "possibleBaseDurationBounds": [[894,912],[912,924],[924 ,936],[936,948]]
-            }, 
-            {
-                "name": "Starfish Oil + Hemp Grains (Lvl. 100-103)",
-                "multiplier": 6,
-                "material1": "Starfish Oil",
-                "material2": "Hemp Grains",
-                "possibleBounds": [[100,103]],
-                "possibleBaseHPRBounds":[[4962,5072]],
-                "possibleBaseDurationBounds": [[954,960]]
-            },
-            {
-                "name": "Dernic Oil + Dernic Seed Grains (Lvl. 103-105)",
-                "multiplier": 6,
-                "material1": "Dernic Oil",
-                "material2": "Dernic Paper",
-                "possibleBounds": [[103,105]],
-                "possibleBaseHPRBounds":[[5072,5170]],
-                "possibleBaseDurationBounds": [[960,964]]
+                "levelRange": {
+                    "maximum": 9,
+                    "minimum": 7
+                },
+                "id": "7-9",
+                "durationRange": {
+                    "maximum": 408,
+                    "minimum": 396
+                },
+                "hprRange": {
+                    "maximum": 59,
+                    "minimum": 54
+                }
             }
         ]
-}
+    },
+    {
+        "material2": "Barley Grains",
+        "material1": "Trout Oil",
+        "material2Amount": 4,
+        "name": "Trout Oil + Barley Grains (Lvl. 10-19)",
+        "material1Amount": 2,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 13,
+                    "minimum": 10
+                },
+                "id": "10-13",
+                "durationRange": {
+                    "maximum": 432,
+                    "minimum": 414
+                },
+                "hprRange": {
+                    "maximum": 79,
+                    "minimum": 60
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 15,
+                    "minimum": 13
+                },
+                "id": "13-15",
+                "durationRange": {
+                    "maximum": 444,
+                    "minimum": 432
+                },
+                "hprRange": {
+                    "maximum": 99,
+                    "minimum": 79
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 17,
+                    "minimum": 15
+                },
+                "id": "15-17",
+                "durationRange": {
+                    "maximum": 456,
+                    "minimum": 444
+                },
+                "hprRange": {
+                    "maximum": 113,
+                    "minimum": 99
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 19,
+                    "minimum": 17
+                },
+                "id": "17-19",
+                "durationRange": {
+                    "maximum": 468,
+                    "minimum": 456
+                },
+                "hprRange": {
+                    "maximum": 128,
+                    "minimum": 113
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Oat Grains",
+        "material1": "Salmon Oil",
+        "material2Amount": 4,
+        "name": "Salmon Oil + Oat Grains (Lvl. 20-29)",
+        "material1Amount": 2,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 23,
+                    "minimum": 20
+                },
+                "id": "20-23",
+                "durationRange": {
+                    "maximum": 492,
+                    "minimum": 474
+                },
+                "hprRange": {
+                    "maximum": 150,
+                    "minimum": 122
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 25,
+                    "minimum": 23
+                },
+                "id": "23-25",
+                "durationRange": {
+                    "maximum": 504,
+                    "minimum": 492
+                },
+                "hprRange": {
+                    "maximum": 177,
+                    "minimum": 150
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 27,
+                    "minimum": 25
+                },
+                "id": "25-27",
+                "durationRange": {
+                    "maximum": 516,
+                    "minimum": 504
+                },
+                "hprRange": {
+                    "maximum": 210,
+                    "minimum": 177
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 29,
+                    "minimum": 27
+                },
+                "id": "27-29",
+                "durationRange": {
+                    "maximum": 528,
+                    "minimum": 516
+                },
+                "hprRange": {
+                    "maximum": 243,
+                    "minimum": 210
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Malt Grains",
+        "material1": "Carp Oil",
+        "material2Amount": 6,
+        "name": "Carp Oil + Malt Grains (Lvl. 30-39)",
+        "material1Amount": 3,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 33,
+                    "minimum": 30
+                },
+                "id": "30-33",
+                "durationRange": {
+                    "maximum": 552,
+                    "minimum": 534
+                },
+                "hprRange": {
+                    "maximum": 298,
+                    "minimum": 254
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 35,
+                    "minimum": 33
+                },
+                "id": "33-35",
+                "durationRange": {
+                    "maximum": 564,
+                    "minimum": 552
+                },
+                "hprRange": {
+                    "maximum": 342,
+                    "minimum": 298
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 37,
+                    "minimum": 35
+                },
+                "id": "35-37",
+                "durationRange": {
+                    "maximum": 576,
+                    "minimum": 564
+                },
+                "hprRange": {
+                    "maximum": 403,
+                    "minimum": 342
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 39,
+                    "minimum": 37
+                },
+                "id": "37-39",
+                "durationRange": {
+                    "maximum": 588,
+                    "minimum": 576
+                },
+                "hprRange": {
+                    "maximum": 463,
+                    "minimum": 403
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Hops Grains",
+        "material1": "Icefish Oil",
+        "material2Amount": 6,
+        "name": "Icefish Oil + Hops Grains (Lvl. 40-49)",
+        "material1Amount": 3,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 43,
+                    "minimum": 40
+                },
+                "id": "40-43",
+                "durationRange": {
+                    "maximum": 612,
+                    "minimum": 594
+                },
+                "hprRange": {
+                    "maximum": 551,
+                    "minimum": 474
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 45,
+                    "minimum": 43
+                },
+                "id": "43-45",
+                "durationRange": {
+                    "maximum": 624,
+                    "minimum": 612
+                },
+                "hprRange": {
+                    "maximum": 628,
+                    "minimum": 551
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 47,
+                    "minimum": 45
+                },
+                "id": "45-47",
+                "durationRange": {
+                    "maximum": 636,
+                    "minimum": 624
+                },
+                "hprRange": {
+                    "maximum": 722,
+                    "minimum": 628
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 49,
+                    "minimum": 47
+                },
+                "id": "47-49",
+                "durationRange": {
+                    "maximum": 648,
+                    "minimum": 636
+                },
+                "hprRange": {
+                    "maximum": 815,
+                    "minimum": 722
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Rye Grains",
+        "material1": "Piranha Oil",
+        "material2Amount": 8,
+        "name": "Piranha Oil + Rye Grains (Lvl. 50-59)",
+        "material1Amount": 4,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 53,
+                    "minimum": 50
+                },
+                "id": "50-53",
+                "durationRange": {
+                    "maximum": 672,
+                    "minimum": 654
+                },
+                "hprRange": {
+                    "maximum": 997,
+                    "minimum": 837
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 55,
+                    "minimum": 53
+                },
+                "id": "53-55",
+                "durationRange": {
+                    "maximum": 684,
+                    "minimum": 672
+                },
+                "hprRange": {
+                    "maximum": 1156,
+                    "minimum": 997
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 57,
+                    "minimum": 55
+                },
+                "id": "55-57",
+                "durationRange": {
+                    "maximum": 696,
+                    "minimum": 684
+                },
+                "hprRange": {
+                    "maximum": 1277,
+                    "minimum": 1156
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 59,
+                    "minimum": 57
+                },
+                "id": "57-59",
+                "durationRange": {
+                    "maximum": 708,
+                    "minimum": 696
+                },
+                "hprRange": {
+                    "maximum": 1398,
+                    "minimum": 1277
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Millet Grains",
+        "material1": "Koi Oil",
+        "material2Amount": 8,
+        "name": "Koi Oil + Millet Grains (Lvl. 60-69)",
+        "material1Amount": 4,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 63,
+                    "minimum": 60
+                },
+                "id": "60-63",
+                "durationRange": {
+                    "maximum": 732,
+                    "minimum": 714
+                },
+                "hprRange": {
+                    "maximum": 1541,
+                    "minimum": 1420
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 65,
+                    "minimum": 63
+                },
+                "id": "63-65",
+                "durationRange": {
+                    "maximum": 744,
+                    "minimum": 732
+                },
+                "hprRange": {
+                    "maximum": 1662,
+                    "minimum": 1541
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 67,
+                    "minimum": 65
+                },
+                "id": "65-67",
+                "durationRange": {
+                    "maximum": 756,
+                    "minimum": 744
+                },
+                "hprRange": {
+                    "maximum": 1816,
+                    "minimum": 1662
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 69,
+                    "minimum": 67
+                },
+                "id": "67-69",
+                "durationRange": {
+                    "maximum": 768,
+                    "minimum": 756
+                },
+                "hprRange": {
+                    "maximum": 1970,
+                    "minimum": 1816
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Decay Grains",
+        "material1": "Gylia Oil",
+        "material2Amount": 10,
+        "name": "Gylia Oil + Decay Grains (Lvl. 70-79)",
+        "material1Amount": 5,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 73,
+                    "minimum": 70
+                },
+                "id": "70-73",
+                "durationRange": {
+                    "maximum": 792,
+                    "minimum": 774
+                },
+                "hprRange": {
+                    "maximum": 2212,
+                    "minimum": 1992
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 75,
+                    "minimum": 73
+                },
+                "id": "73-75",
+                "durationRange": {
+                    "maximum": 804,
+                    "minimum": 792
+                },
+                "hprRange": {
+                    "maximum": 2432,
+                    "minimum": 2212
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 77,
+                    "minimum": 75
+                },
+                "id": "75-77",
+                "durationRange": {
+                    "maximum": 816,
+                    "minimum": 804
+                },
+                "hprRange": {
+                    "maximum": 2575,
+                    "minimum": 2432
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 79,
+                    "minimum": 77
+                },
+                "id": "77-79",
+                "durationRange": {
+                    "maximum": 828,
+                    "minimum": 816
+                },
+                "hprRange": {
+                    "maximum": 2718,
+                    "minimum": 2575
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Rice Grains",
+        "material1": "Bass Oil",
+        "material2Amount": 10,
+        "name": "Bass Oil + Rice Grains (Lvl. 80-89)",
+        "material1Amount": 5,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 83,
+                    "minimum": 80
+                },
+                "id": "80-83",
+                "durationRange": {
+                    "maximum": 852,
+                    "minimum": 834
+                },
+                "hprRange": {
+                    "maximum": 2927,
+                    "minimum": 2762
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 85,
+                    "minimum": 83
+                },
+                "id": "83-85",
+                "durationRange": {
+                    "maximum": 864,
+                    "minimum": 852
+                },
+                "hprRange": {
+                    "maximum": 3092,
+                    "minimum": 2927
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 87,
+                    "minimum": 85
+                },
+                "id": "85-87",
+                "durationRange": {
+                    "maximum": 876,
+                    "minimum": 864
+                },
+                "hprRange": {
+                    "maximum": 3323,
+                    "minimum": 3092
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 89,
+                    "minimum": 87
+                },
+                "id": "87-89",
+                "durationRange": {
+                    "maximum": 888,
+                    "minimum": 876
+                },
+                "hprRange": {
+                    "maximum": 3554,
+                    "minimum": 3323
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Sorghum Grains",
+        "material1": "Molten Oil",
+        "material2Amount": 12,
+        "name": "Molten Oil + Sorghum Grains (Lvl. 90-99)",
+        "material1Amount": 6,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 93,
+                    "minimum": 90
+                },
+                "id": "90-93",
+                "durationRange": {
+                    "maximum": 912,
+                    "minimum": 894
+                },
+                "hprRange": {
+                    "maximum": 3835,
+                    "minimum": 3587
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 95,
+                    "minimum": 93
+                },
+                "id": "93-95",
+                "durationRange": {
+                    "maximum": 924,
+                    "minimum": 912
+                },
+                "hprRange": {
+                    "maximum": 4082,
+                    "minimum": 3835
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 97,
+                    "minimum": 95
+                },
+                "id": "95-97",
+                "durationRange": {
+                    "maximum": 936,
+                    "minimum": 924
+                },
+                "hprRange": {
+                    "maximum": 4467,
+                    "minimum": 4082
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 99,
+                    "minimum": 97
+                },
+                "id": "97-99",
+                "durationRange": {
+                    "maximum": 948,
+                    "minimum": 936
+                },
+                "hprRange": {
+                    "maximum": 4852,
+                    "minimum": 4467
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Hemp Grains",
+        "material1": "Starfish Oil",
+        "material2Amount": 12,
+        "name": "Starfish Oil + Hemp Grains (Lvl. 100-103)",
+        "material1Amount": 6,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 103,
+                    "minimum": 100
+                },
+                "id": "100-103",
+                "durationRange": {
+                    "maximum": 960,
+                    "minimum": 954
+                },
+                "hprRange": {
+                    "maximum": 5072,
+                    "minimum": 4962
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Dernic Grains",
+        "material1": "Dernic Oil",
+        "material2Amount": 12,
+        "name": "Dernic Oil + Dernic Grains (Lvl. 103-105)",
+        "material1Amount": 6,
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 105,
+                    "minimum": 103
+                },
+                "id": "100-103",
+                "durationRange": {
+                    "minimum": 960,
+                    "maximum": 964
+                },
+                "hprRange": {
+                    "minimum": 5072,
+                    "maximum": 5170
+                }
+            }
+        ]
+    }
+]
