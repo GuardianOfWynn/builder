@@ -1,10 +1,10 @@
 export default interface Ingredient {
-    name: string;
-    skills: string[];
-    tier: number;
-    level: number;
+    name: string; //ok
+    skills: string[]; //ok
+    tier: number; //ok
+    level: number; //ok
     sprite: string;
-    requirements: Requirements;
+    requirements: Requirements; //ok
     modifiers: Modifiers;
     effectivenessModifiers: EffectivenessModifiers;
     identifications: Identification[];
@@ -19,9 +19,9 @@ export interface Requirements {
 }
 
 export interface Modifiers {
-  durationModifier: number;
-  durabilityModifier: number;
-  chargesModifier: number;
+  duration: number;
+  durability: number;
+  charges: number;
 }
 
 export interface EffectivenessModifiers {
@@ -34,7 +34,8 @@ export interface EffectivenessModifiers {
 }
 
 export interface Identification {
-  id: string,
+  id: string;
+  name: string;
   minimum: number;
   maximum: number;
 }

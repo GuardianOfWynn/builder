@@ -8,9 +8,68 @@
             "powderSlots": 1,
             "material1": "Wheat String",
             "material2": "Copper Ingot",
-            "possibleBounds": [[1,3], [3,5], [5,7], [7,9]],
-            "possibleBaseHPBounds":[[9, 11], [11,17], [17,21], [21,30]],
-            "possibleBaseDurabilityBounds": [[175,182],[182 ,189],[189,196],[196,203]]
+            "levelRange": [
+                {
+                    "id": "1-3",
+                    "levelRange": {
+                        "minimum": 1,
+                        "maximum": 3
+                    },
+                    "baseHpRange": {
+                        "minimum": 9,
+                        "maximum": 11
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 175,
+                        "maximum": 182
+                    }
+                },
+                {
+                    "id": "3-5",
+                    "levelRange": {
+                        "minimum": 3,
+                        "maximum": 5
+                    },
+                    "baseHpRange": {
+                        "minimum": 11,
+                        "maximum": 17
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 182,
+                        "maximum": 189
+                    }
+                },
+                {
+                    "id": "5-7",
+                    "levelRange": {
+                        "minimum": 5,
+                        "maximum": 7
+                    },
+                    "baseHpRange": {
+                        "minimum": 17,
+                        "maximum": 21
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 189,
+                        "maximum": 196
+                    }
+                },
+                {
+                    "id": "7-9",
+                    "levelRange": {
+                        "minimum": 7,
+                        "maximum": 9
+                    },
+                    "baseHpRange": {
+                        "minimum": 21,
+                        "maximum": 30
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 196,
+                        "maximum": 203
+                    }
+                }
+            ] 
         },
         {
             "name": "Granite Ingot + Barley String (Lvl. 10-19)",
@@ -18,9 +77,68 @@
             "powderSlots": 1,
             "material1": "Barley String",
             "material2": "Granite Ingot",
-            "possibleBounds": [[10,13], [13,15], [15,17], [17,19]],
-            "possibleBaseHPBounds":[[28, 36], [36,51], [51,60], [60,70]],
-            "possibleBaseDurabilityBounds": [[207,217],[217 ,224],[224,231],[231,238]]
+            "levelRange": [
+                {
+                    "id": "10-13",
+                    "levelRange": {
+                        "minimum": 10,
+                        "maximum": 13
+                    },
+                    "baseHpRange": {
+                        "minimum": 28,
+                        "maximum": 36
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 207,
+                        "maximum": 217
+                    }
+                },
+                {
+                    "id": "13-15",
+                    "levelRange": {
+                        "minimum": 13,
+                        "maximum": 15
+                    },
+                    "baseHpRange": {
+                        "minimum": 36,
+                        "maximum": 51
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 217,
+                        "maximum": 224
+                    }
+                },
+                {
+                    "id": "15-17",
+                    "levelRange": {
+                        "minimum": 15,
+                        "maximum": 17
+                    },
+                    "baseHpRange": {
+                        "minimum": 51,
+                        "maximum": 60
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 224,
+                        "maximum": 231
+                    }
+                },
+                {
+                    "id": "17-19",
+                    "levelRange": {
+                        "minimum": 17,
+                        "maximum": 19
+                    },
+                    "baseHpRange": {
+                        "minimum": 60,
+                        "maximum": 70
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 231,
+                        "maximum": 238
+                    }
+                }
+            ]
         },
         {
             "name": "Gold Ingot + Oat String (Lvl. 20-29)",
@@ -28,9 +146,68 @@
             "powderSlots": 1,
             "material1": "Oat String",
             "material2": "Gold Ingot",
-            "possibleBounds": [[20,23], [23,25], [25,27], [27,29]],
-            "possibleBaseHPBounds":[[66, 79], [79,92], [92,112], [112,133]],
-            "possibleBaseDurabilityBounds": [[242,252],[252 ,259],[259,266],[266,273]]
+            "levelRange": [
+                {
+                    "id": "20-23",
+                    "levelRange": {
+                        "minimum": 20,
+                        "maximum": 23
+                    },
+                    "baseHpRange": {
+                        "minimum": 66,
+                        "maximum": 79
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 242,
+                        "maximum": 252
+                    }
+                },
+                {
+                    "id": "23-25",
+                    "levelRange": {
+                        "minimum": 23,
+                        "maximum": 25
+                    },
+                    "baseHpRange": {
+                        "minimum": 79,
+                        "maximum": 92
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 252,
+                        "maximum": 259
+                    }
+                },
+                {
+                    "id": "25-27",
+                    "levelRange": {
+                        "minimum": 25,
+                        "maximum": 27
+                    },
+                    "baseHpRange": {
+                        "minimum": 92,
+                        "maximum": 112
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 259,
+                        "maximum": 266
+                    }
+                },
+                {
+                    "id": "27-29",
+                    "levelRange": {
+                        "minimum": 27,
+                        "maximum": 29
+                    },
+                    "baseHpRange": {
+                        "minimum": 112,
+                        "maximum": 133
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 266,
+                        "maximum": 273
+                    }
+                }
+            ]
         },
         {
             "name": "Sandstone Ingot + Malt String (Lvl. 30-39)",
@@ -38,9 +215,68 @@
             "powderSlots": 2,
             "material1": "Malt String",
             "material2": "Sandstone Ingot",
-            "possibleBounds": [[30,33], [33,35], [35,37], [37,39]],
-            "possibleBaseHPBounds":[[120, 143], [143,170], [170,195], [195,225]],
-            "possibleBaseDurabilityBounds": [[277,287],[287 ,294],[294,301],[301,308]]
+            "levelRange": [
+                {
+                    "id": "30-33",
+                    "levelRange": {
+                        "minimum": 30,
+                        "maximum": 33
+                    },
+                    "baseHpRange": {
+                        "minimum": 120,
+                        "maximum": 143
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 277,
+                        "maximum": 287
+                    }
+                },
+                {
+                    "id": "33-35",
+                    "levelRange": {
+                        "minimum": 33,
+                        "maximum": 35
+                    },
+                    "baseHpRange": {
+                        "minimum": 143,
+                        "maximum": 170
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 287,
+                        "maximum": 294
+                    }
+                },
+                {
+                    "id": "35-37",
+                    "levelRange": {
+                        "minimum": 35,
+                        "maximum": 37
+                    },
+                    "baseHpRange": {
+                        "minimum": 170,
+                        "maximum": 195
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 294,
+                        "maximum": 301
+                    }
+                },
+                {
+                    "id": "37-39",
+                    "levelRange": {
+                        "minimum": 37,
+                        "maximum": 39
+                    },
+                    "baseHpRange": {
+                        "minimum": 195,
+                        "maximum": 225
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 301,
+                        "maximum": 308
+                    }
+                }
+            ]
         },
         {
             "name": "Iron Ingot + Hops String (Lvl. 40-49)",
@@ -48,9 +284,68 @@
             "powderSlots": 2,
             "material1": "Hops String",
             "material2": "Iron Ingot",
-            "possibleBounds": [[40,43], [43,45], [45,47], [47,49]],
-            "possibleBaseHPBounds":[[233, 275], [275,315], [315,360], [360,405]],
-            "possibleBaseDurabilityBounds": [[312,322],[322 ,329],[329,336],[336,343]]
+            "levelRange": [
+                {
+                    "id": "40-43",
+                    "levelRange": {
+                        "minimum": 40,
+                        "maximum": 43
+                    },
+                    "baseHpRange": {
+                        "minimum": 233,
+                        "maximum": 275
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 312,
+                        "maximum": 322
+                    }
+                },
+                {
+                    "id": "43-45",
+                    "levelRange": {
+                        "minimum": 43,
+                        "maximum": 45
+                    },
+                    "baseHpRange": {
+                        "minimum": 275,
+                        "maximum": 315
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 322,
+                        "maximum": 329
+                    }
+                },
+                {
+                    "id": "45-47",
+                    "levelRange": {
+                        "minimum": 45,
+                        "maximum": 47
+                    },
+                    "baseHpRange": {
+                        "minimum": 315,
+                        "maximum": 360
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 329,
+                        "maximum": 336
+                    }
+                },
+                {
+                    "id": "47-49",
+                    "levelRange": {
+                        "minimum": 47,
+                        "maximum": 49
+                    },
+                    "baseHpRange": {
+                        "minimum": 360,
+                        "maximum": 405
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 336,
+                        "maximum": 343
+                    }
+                }
+            ]
         },
         {
             "name": "Silver Ingot + Rye String (Lvl. 50-59)",
@@ -58,9 +353,68 @@
             "powderSlots": 2,
             "material1": "Rye String",
             "material2": "Silver Ingot",
-            "possibleBounds": [[50,53], [53,55], [55,57], [57,59]],
-            "possibleBaseHPBounds":[[413, 473], [473,555], [555,638], [638,720]],
-            "possibleBaseDurabilityBounds": [[347,357],[357 ,364],[364,371],[371,378]]
+            "levelRange": [
+                {
+                    "id": "50-53",
+                    "levelRange": {
+                        "minimum": 50,
+                        "maximum": 53
+                    },
+                    "baseHpRange": {
+                        "minimum": 413,
+                        "maximum": 473
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 347,
+                        "maximum": 357
+                    }
+                },
+                {
+                    "id": "53-55",
+                    "levelRange": {
+                        "minimum": 53,
+                        "maximum": 55
+                    },
+                    "baseHpRange": {
+                        "minimum": 473,
+                        "maximum": 555
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 357,
+                        "maximum": 364
+                    }
+                },
+                {
+                    "id": "55-57",
+                    "levelRange": {
+                        "minimum": 55,
+                        "maximum": 57
+                    },
+                    "baseHpRange": {
+                        "minimum": 555,
+                        "maximum": 638
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 364,
+                        "maximum": 371
+                    }
+                },
+                {
+                    "id": "57-59",
+                    "levelRange": {
+                        "minimum": 57,
+                        "maximum": 59
+                    },
+                    "baseHpRange": {
+                        "minimum": 638,
+                        "maximum": 720
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 371,
+                        "maximum": 378
+                    }
+                }
+            ]
         },
         {
             "name": "Cobalt Ingot + Millet String (Lvl. 60-69)",
@@ -68,9 +422,68 @@
             "powderSlots": 2,
             "material1": "Millet String",
             "material2": "Cobalt Ingot",
-            "possibleBounds": [[60,63], [63,65], [65,67], [67,69]],
-            "possibleBaseHPBounds":[[728, 803], [803,870], [870,945], [945,1013]],
-            "possibleBaseDurabilityBounds": [[382,392],[392 ,399],[399,406],[406,413]]
+            "levelRange": [
+                {
+                    "id": "60-63",
+                    "levelRange": {
+                        "minimum": 60,
+                        "maximum": 63
+                    },
+                    "baseHpRange": {
+                        "minimum": 728,
+                        "maximum": 803
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 382,
+                        "maximum": 392
+                    }
+                },
+                {
+                    "id": "63-65",
+                    "levelRange": {
+                        "minimum": 63,
+                        "maximum": 65
+                    },
+                    "baseHpRange": {
+                        "minimum": 803,
+                        "maximum": 870
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 392,
+                        "maximum": 399
+                    }
+                },
+                {
+                    "id": "65-67",
+                    "levelRange": {
+                        "minimum": 65,
+                        "maximum": 67
+                    },
+                    "baseHpRange": {
+                        "minimum": 870,
+                        "maximum": 945
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 399,
+                        "maximum": 406
+                    }
+                },
+                {
+                    "id": "67-69",
+                    "levelRange": {
+                        "minimum": 67,
+                        "maximum": 69
+                    },
+                    "baseHpRange": {
+                        "minimum": 945,
+                        "maximum": 1013
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 406,
+                        "maximum": 413
+                    }
+                }
+            ]
         },
         {
             "name": "Kanderstone Ingot + Decay String (Lvl. 70-79)",
@@ -78,9 +491,68 @@
             "powderSlots": 3,
             "material1": "Decay String",
             "material2": "Kanderstone Ingot",
-            "possibleBounds": [[70,73], [73,75], [75,77], [77,79]],
-            "possibleBaseHPBounds":[[1020, 1110], [1110,1200], [1200,1298], [1298,1403]],
-            "possibleBaseDurabilityBounds": [[417,427],[427 ,434],[434,441],[441,448]]
+            "levelRange": [
+                {
+                    "id": "70-73",
+                    "levelRange": {
+                        "minimum": 70,
+                        "maximum": 73
+                    },
+                    "baseHpRange": {
+                        "minimum": 1020,
+                        "maximum": 1110
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 417,
+                        "maximum": 427
+                    }
+                },
+                {
+                    "id": "73-75",
+                    "levelRange": {
+                        "minimum": 73,
+                        "maximum": 75
+                    },
+                    "baseHpRange": {
+                        "minimum": 1110,
+                        "maximum": 1200
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 427,
+                        "maximum": 434
+                    }
+                },
+                {
+                    "id": "75-77",
+                    "levelRange": {
+                        "minimum": 75,
+                        "maximum": 77
+                    },
+                    "baseHpRange": {
+                        "minimum": 1200,
+                        "maximum": 1298
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 434,
+                        "maximum": 441
+                    }
+                },
+                {
+                    "id": "77-79",
+                    "levelRange": {
+                        "minimum": 77,
+                        "maximum": 79
+                    },
+                    "baseHpRange": {
+                        "minimum": 1298,
+                        "maximum": 1403
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 441,
+                        "maximum": 448
+                    }
+                }
+            ]
         },
         {
             "name": "Diamond Ingot + Rice String (Lvl. 80-89)",
@@ -88,9 +560,53 @@
             "powderSlots": 3,
             "material1": "Rice String",
             "material2": "Diamond Ingot",
-            "possibleBounds": [[80,83], [83,85], [85,87], [87,89]],
-            "possibleBaseHPBounds":[[1403, 1508], [1508,1620], [1620,1740], [1740,1860]],
-            "possibleBaseDurabilityBounds": [[452,462],[462 ,469],[469,476],[476,483]]
+            "levelRange": [
+                {
+                    "id": "80-83",
+                    "levelRange": {
+                        "minimum": 80,
+                        "maximum": 83
+                    },
+                    "baseHpRange": {
+                        "minimum": 1403,
+                        "maximum": 1508
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 452,
+                        "maximum": 462
+                    }
+                },
+                {
+                    "id": "83-85",
+                    "levelRange": {
+                        "minimum": 83,
+                        "maximum": 85
+                    },
+                    "baseHpRange": {
+                        "minimum": 1508,
+                        "maximum": 1620
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 462,
+                        "maximum": 469
+                    }
+                },
+                {
+                    "id": "85-87",
+                    "levelRange": {
+                        "minimum": 85,
+                        "maximum": 87
+                    },
+                    "baseHpRange": {
+                        "minimum": 1620,
+                        "maximum": 1740
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 469,
+                        "maximum": 476
+                    }
+                }
+            ]
         },
         {
             "name": "Molten Ingot + Sorghum String (Lvl. 90-99)",
@@ -98,9 +614,68 @@
             "powderSlots": 3,
             "material1": "Sorghum String",
             "material2": "Molten Ingot",
-            "possibleBounds": [[90,93],[93,95],[95,97],[97,99]],
-            "possibleBaseHPBounds":[[1860, 1980], [1980,2130], [2130,2265], [2265,2400]],
-            "possibleBaseDurabilityBounds": [[487,497],[497 ,504],[504,511],[511,518]]
+            "levelRange": [
+                {
+                    "id": "90-93",
+                    "levelRange": {
+                        "minimum": 90,
+                        "maximum": 93
+                    },
+                    "baseHpRange": {
+                        "minimum": 1860,
+                        "maximum": 1980
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 487,
+                        "maximum": 497
+                    }
+                },
+                {
+                    "id": "93-95",
+                    "levelRange": {
+                        "minimum": 93,
+                        "maximum": 95
+                    },
+                    "baseHpRange": {
+                        "minimum": 1980,
+                        "maximum": 2130
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 497,
+                        "maximum": 504
+                    }
+                },
+                {
+                    "id": "95-97",
+                    "levelRange": {
+                        "minimum": 95,
+                        "maximum": 97
+                    },
+                    "baseHpRange": {
+                        "minimum": 2130,
+                        "maximum": 2265
+                    },
+                    "baseDurabilityRange": {
+                        "minimum": 504,
+                        "maximum": 511
+                    }
+                },
+                {
+                        "id": "97-99",
+                        "levelRange": {
+                            "minimum": 97,
+                            "maximum": 99
+                        },
+                        "baseHpRange": {
+                            "minimum": 2265,
+                            "maximum": 2400
+                        },
+                        "baseDurabilityRange": {
+                            "minimum": 511,
+                            "maximum": 518
+                        }
+                    }
+            ]
         },
         {
             "name": "Voidstone Ingot + Hemp String (Lvl. 100-103)",
@@ -108,9 +683,24 @@
             "powderSlots": 3,
             "material1": "Hemp String",
             "material2": "Voidstone Ingot",
-            "possibleBounds": [[100,103]],
-            "possibleBaseHPBounds":[[2400, 2475]],
-            "possibleBaseDurabilityBounds": [[522,525]]
+            "levelRange": [
+                {
+                    "id": "100-103",
+                        "levelRange": {
+                            "minimum": 100,
+                            "maximum": 103
+                        },
+                        "baseHpRange": {
+                            "minimum": 2400,
+                            "maximum": 247
+                        },
+                        "baseDurabilityRange": {
+                            "minimum": 522,
+                            "maximum": 525
+                        }
+                }
+                
+            ]
         },
         {
             "name": "Dernic Ingot + Dernic String (Lvl. 103-105)",
@@ -118,9 +708,24 @@
             "powderSlots": 3,
             "material1": "Dernic String",
             "material2": "Dernic Ingot",
-            "possibleBounds": [[103,105]],
-            "possibleBaseHPBounds":[[2475, 2513]],
-            "possibleBaseDurabilityBounds": [[525,527]]
+            "levelRange": [
+                {
+                    "id": "103-105",
+                        "levelRange": {
+                            "minimum": 103,
+                            "maximum": 105
+                        },
+                        "baseHpRange": {
+                            "minimum": 2475,
+                            "maximum": 2513
+                        },
+                        "baseDurabilityRange": {
+                            "minimum": 525,
+                            "maximum": 527
+                        }
+                }
+                
+            ]
         }
     ]
 }

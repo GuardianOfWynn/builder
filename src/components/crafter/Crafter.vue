@@ -90,13 +90,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { reactive, ref } from "vue";
 import "/sprites/WynnIcons.png";
 import "/sprites/ProfessionIcon.png";
 import "/sprites/AccessorySprites.gif";
 import "/sprites/ArmourSprites.png";
-import {getBaseCharges, getBaseDamage, getBaseHealth, getBaseDurationOrDurability, getEffectiveness} from "../../scripts/crafter.js"
+import {getBaseCharges, getBaseDamage, getBaseHealth, getBaseDurationOrDurability, getEffectiveness} from "../../scripts/crafter.ts"
+import Ingredient from "../../model/ingredient";
 import MaterialsCombobox from "./MaterialsCombobox.vue";
 import CraftLevelCombobox from "./CraftLevelCombobox.vue";
 import CraftTypeCombobox from "./CraftTypeCombobox.vue";
@@ -116,8 +117,9 @@ export default {
     const foodCrafts = await (await fetch("/builder/crafts/food.json")).json();
     const potionCrafts = await (await fetch("/builder/crafts/potion.json")).json();
     const scrollCrafts = await (await fetch("/builder/crafts/scroll.json")).json();
-    const ingredientList = await (await fetch("/builder/ings.json")).json();
-    const craftTypes = await (await fetch("/builder/craft_types.json")).json();
+
+    const ingredientList: Ingredient[] = JSON.parse(await (await fetch("/builder/ings.json")).json());
+    const craftTypes: string[] = JSON.parse(await (await fetch("/builder/craft_types.json")).json());
 
     const craftType = ref(craftTypes[0]);
     const materials = ref(scrollCrafts.crafts[0]);
