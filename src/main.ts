@@ -10,7 +10,7 @@ const a = async() => {
 
 
     let data: Array<String> = await(await fetch("/builder/all_recipes.json")).json();
-    console.log(JSON.stringify(data.filter(x => x.includes("Boots"))));
+    console.log(JSON.stringify(data.filter(x => x.includes("Dagger"))));
 }
 
 a();
