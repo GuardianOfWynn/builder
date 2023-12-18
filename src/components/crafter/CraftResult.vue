@@ -14,11 +14,6 @@
       props: {
           result: Object
       },
-      setup(props) {
-        
-       
-      },
-      components: { }
   }
   </script>
   

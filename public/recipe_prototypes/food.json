@@ -5,6 +5,10 @@
         "name": "Gudgeon Meat + Wheat Grains (Lvl. 1-9)",
         "material2Amount": 1,
         "material1Amount": 2,
+        "levelRange": {
+            "minimum": 1,
+            "maximum": 9
+        },
         "levels": [
             {
                 "levelRange": {
@@ -74,6 +78,10 @@
         "name": "Trout Meat + Barley Grains (Lvl. 10-19)",
         "material2Amount": 2,
         "material1Amount": 4,
+        "levelRange": {
+            "minimum": 10,
+            "maximum": 19
+        },
         "levels": [
             {
                 "levelRange": {
@@ -143,6 +151,10 @@
         "name": "Salmon Meat + Oat Grains (Lvl. 20-29)",
         "material2Amount": 2,
         "material1Amount": 4,
+        "levelRange": {
+            "minimum": 20,
+            "maximum": 29
+        },
         "levels": [
             {
                 "levelRange": {
@@ -212,6 +224,10 @@
         "name": "Carp Meat + Malt Grains (Lvl. 30-39)",
         "material2Amount": 3,
         "material1Amount": 6,
+        "levelRange": {
+            "minimum": 30,
+            "maximum": 39
+        },
         "levels": [
             {
                 "levelRange": {
@@ -281,6 +297,10 @@
         "name": "Icefish Meat + Hops Grains (Lvl. 40-49)",
         "material2Amount": 3,
         "material1Amount": 6,
+        "levelRange": {
+            "minimum": 40,
+            "maximum": 49
+        },
         "levels": [
             {
                 "levelRange": {
@@ -350,6 +370,10 @@
         "name": "Piranha Meat + Rye Grains (Lvl. 50-59)",
         "material2Amount": 4,
         "material1Amount": 8,
+        "levelRange": {
+            "minimum": 50,
+            "maximum": 59
+        },
         "levels": [
             {
                 "levelRange": {
@@ -419,6 +443,10 @@
         "name": "Koi Meat + Millet Grains (Lvl. 60-69)",
         "material2Amount": 4,
         "material1Amount": 8,
+        "levelRange": {
+            "minimum": 60,
+            "maximum": 69
+        },
         "levels": [
             {
                 "levelRange": {
@@ -488,6 +516,10 @@
         "name": "Gylia Meat + Decay Grains (Lvl. 70-79)",
         "material2Amount": 5,
         "material1Amount": 10,
+        "levelRange": {
+            "minimum": 70,
+            "maximum": 79
+        },
         "levels": [
             {
                 "levelRange": {
@@ -556,7 +588,10 @@
         "material1": "Bass Meat",
         "name": "Bass Meat + Rice Grains (Lvl. 80-89)",
         "material2Amount": 5,
-        "material1Amount": 10,
+        "material1Amount": 10,"levelRange": {
+            "minimum": 80,
+            "maximum": 89
+        },
         "levels": [
             {
                 "levelRange": {
@@ -625,7 +660,10 @@
         "material1": "Molten Meat",
         "name": "Molten Meat + Sorghum Grains (Lvl. 90-99)",
         "material2Amount": 6,
-        "material1Amount": 12,
+        "material1Amount": 12,"levelRange": {
+            "minimum": 90,
+            "maximum": 99
+        },
         "levels": [
             {
                 "levelRange": {
@@ -694,7 +732,10 @@
         "material1": "Starfish Meat",
         "name": "Starfish Meat + Hemp Grains (Lvl. 100-103)",
         "material2Amount": 6,
-        "material1Amount": 12,
+        "material1Amount": 12,"levelRange": {
+            "minimum": 100,
+            "maximum": 103
+        },
         "levels": [
             {
                 "levelRange": {
@@ -717,7 +758,10 @@
         "material2": "Dernic Grains",
         "material1": "Dernic Meat",
         "name": "Dernic Meat + Dernic Grains (Lvl. 103-105)",
-        "material2Amount": 6,
+        "material2Amount": 6,"levelRange": {
+            "minimum": 103,
+            "maximum": 105
+        },
         "material1Amount": 12,
         "levels": [
             {

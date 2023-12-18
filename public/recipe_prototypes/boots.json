@@ -1,10 +1,14 @@
 [
     {
-        "material2": "Oak Paper",
+        "material2": "Wheat String",
         "material1": "Copper Ingot",
-        "material2Amount": 1,
-        "name": "Copper Ingot + Oak Paper (Lvl. 1 - 9)",
-        "material1Amount": 2,
+        "material2Amount": 2,
+        "name": "Copper Ingot + Wheat String (Lvl. 1 - 9)",
+        "material1Amount": 1,
+        "levelRange": {
+            "minimum": 1,
+            "maximum": 9
+        },
         "levels": [
             {
                 "levelRange": {
@@ -16,7 +20,7 @@
                     "maximum": 182,
                     "minimum": 175
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 11,
                     "minimum": 9
                 }
@@ -31,7 +35,7 @@
                     "maximum": 189,
                     "minimum": 182
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 17,
                     "minimum": 11
                 }
@@ -46,7 +50,7 @@
                     "maximum": 196,
                     "minimum": 189
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 21,
                     "minimum": 17
                 }
@@ -61,7 +65,7 @@
                     "maximum": 203,
                     "minimum": 196
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 30,
                     "minimum": 20
                 }
@@ -69,11 +73,15 @@
         ]
     },
     {
-        "material2": "Birch Paper",
+        "material2": "Barley String",
         "material1": "Granite Ingot",
-        "material2Amount": 2,
-        "name": "Granite Ingot + Birch Paper (Lvl. 10 - 19)",
-        "material1Amount": 4,
+        "material2Amount": 4,
+        "name": "Granite Ingot + Barley String (Lvl. 10 - 19)",
+        "material1Amount": 2,
+        "levelRange": {
+            "minimum": 10,
+            "maximum": 19
+        },
         "levels": [
             {
                 "levelRange": {
@@ -85,7 +93,7 @@
                     "maximum": 217,
                     "minimum": 207
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 36,
                     "minimum": 28
                 }
@@ -100,7 +108,7 @@
                     "maximum": 224,
                     "minimum": 217
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 51,
                     "minimum": 36
                 }
@@ -115,7 +123,7 @@
                     "maximum": 231,
                     "minimum": 224
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 60,
                     "minimum": 51
                 }
@@ -130,7 +138,7 @@
                     "maximum": 238,
                     "minimum": 231
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 70,
                     "minimum": 60
                 }
@@ -138,11 +146,15 @@
         ]
     },
     {
-        "material2": "Willow Paper",
+        "material2": "Oat String",
         "material1": "Gold Ingot",
-        "material2Amount": 2,
-        "name": "Gold Ingot + Willow Paper (Lvl. 20 - 29)",
-        "material1Amount": 4,
+        "material2Amount": 4,
+        "name": "Gold Ingot + Oat String (Lvl. 20 - 29)",
+        "material1Amount": 2,
+        "levelRange": {
+            "minimum": 20,
+            "maximum": 29
+        },
         "levels": [
             {
                 "levelRange": {
@@ -152,9 +164,9 @@
                 "id": "20-23",
                 "durabilityRange": {
                     "maximum": 252,
-                    "minimum": 242
+                    "minimum": 238
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 79,
                     "minimum": 66
                 }
@@ -169,7 +181,7 @@
                     "maximum": 259,
                     "minimum": 252
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 92,
                     "minimum": 75
                 }
@@ -184,7 +196,7 @@
                     "maximum": 266,
                     "minimum": 259
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 112,
                     "minimum": 92
                 }
@@ -199,7 +211,7 @@
                     "maximum": 273,
                     "minimum": 266
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 133,
                     "minimum": 112
                 }
@@ -207,11 +219,15 @@
         ]
     },
     {
-        "material2": "Acacia Paper",
+        "material2": "Malt String",
         "material1": "Sandstone Ingot",
-        "material2Amount": 3,
-        "name": "Sandstone Ingot + Acacia Paper (Lvl. 30 - 39)",
-        "material1Amount": 6,
+        "material2Amount": 6,
+        "name": "Sandstone Ingot + Malt String (Lvl. 30 - 39)",
+        "material1Amount": 3,
+        "levelRange": {
+            "minimum": 30,
+            "maximum": 39
+        },
         "levels": [
             {
                 "levelRange": {
@@ -223,7 +239,7 @@
                     "maximum": 287,
                     "minimum": 277
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 143,
                     "minimum": 120
                 }
@@ -238,7 +254,7 @@
                     "maximum": 294,
                     "minimum": 287
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 170,
                     "minimum": 143
                 }
@@ -253,7 +269,7 @@
                     "maximum": 301,
                     "minimum": 294
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 195,
                     "minimum": 170
                 }
@@ -268,7 +284,7 @@
                     "maximum": 308,
                     "minimum": 301
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 225,
                     "minimum": 195
                 }
@@ -276,11 +292,15 @@
         ]
     },
     {
-        "material2": "Spruce Paper",
+        "material2": "Hops String",
         "material1": "Iron Ingot",
-        "material2Amount": 3,
-        "name": "Iron Ingot + Spruce Paper (Lvl. 40 - 49)",
-        "material1Amount": 6,
+        "material2Amount": 6,
+        "name": "Iron Ingot + Hops String (Lvl. 40 - 49)",
+        "material1Amount": 3,
+        "levelRange": {
+            "minimum": 40,
+            "maximum": 49
+        },
         "levels": [
             {
                 "levelRange": {
@@ -292,7 +312,7 @@
                     "maximum": 322,
                     "minimum": 312
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 275,
                     "minimum": 233
                 }
@@ -307,24 +327,9 @@
                     "maximum": 329,
                     "minimum": 322
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 315,
                     "minimum": 275
-                }
-            },
-            {
-                "levelRange": {
-                    "maximum": 49,
-                    "minimum": 47
-                },
-                "id": "47-49",
-                "durabilityRange": {
-                    "maximum": 343,
-                    "minimum": 336
-                },
-                "hprRange": {
-                    "maximum": 405,
-                    "minimum": 360
                 }
             },
             {
@@ -337,19 +342,38 @@
                     "maximum": 336,
                     "minimum": 329
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 360,
                     "minimum": 315
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 49,
+                    "minimum": 47
+                },
+                "id": "47-49",
+                "durabilityRange": {
+                    "maximum": 343,
+                    "minimum": 336
+                },
+                "hpRange": {
+                    "maximum": 405,
+                    "minimum": 360
                 }
             }
         ]
     },
     {
-        "material2": "Jungle Paper",
+        "material2": "Rye String",
         "material1": "Silver Ingot",
-        "material2Amount": 4,
-        "name": "Silver Ingot + Jungle Paper (Lvl. 50 - 59)",
-        "material1Amount": 8,
+        "material2Amount": 8,
+        "name": "Silver Ingot + Rye String (Lvl. 50 - 59)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 50,
+            "maximum": 59
+        },
         "levels": [
             {
                 "levelRange": {
@@ -361,7 +385,7 @@
                     "maximum": 357,
                     "minimum": 347
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 473,
                     "minimum": 413
                 }
@@ -376,7 +400,7 @@
                     "maximum": 364,
                     "minimum": 357
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 555,
                     "minimum": 473
                 }
@@ -391,7 +415,7 @@
                     "maximum": 371,
                     "minimum": 364
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 638,
                     "minimum": 555
                 }
@@ -406,7 +430,7 @@
                     "maximum": 378,
                     "minimum": 371
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 720,
                     "minimum": 638
                 }
@@ -414,11 +438,15 @@
         ]
     },
     {
-        "material2": "Dark Paper",
+        "material2": "Millet String",
         "material1": "Cobalt Ingot",
-        "material2Amount": 4,
-        "name": "Cobalt Ingot + Dark Paper (Lvl. 60 - 69)",
-        "material1Amount": 8,
+        "material2Amount": 8,
+        "name": "Cobalt Ingot + Millet String (Lvl. 60 - 69)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 60,
+            "maximum": 69
+        },
         "levels": [
             {
                 "levelRange": {
@@ -430,7 +458,7 @@
                     "maximum": 392,
                     "minimum": 382
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 803,
                     "minimum": 728
                 }
@@ -445,7 +473,7 @@
                     "maximum": 399,
                     "minimum": 392
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 870,
                     "minimum": 803
                 }
@@ -460,7 +488,7 @@
                     "maximum": 406,
                     "minimum": 399
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 945,
                     "minimum": 870
                 }
@@ -475,7 +503,7 @@
                     "maximum": 413,
                     "minimum": 406
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1013,
                     "minimum": 945
                 }
@@ -483,11 +511,15 @@
         ]
     },
     {
-        "material2": "Light Paper",
+        "material2": "Decay String",
         "material1": "Kanderstone Ingot",
-        "material2Amount": 5,
-        "name": "Kanderstone Ingot + Light Paper (Lvl. 70 - 79)",
-        "material1Amount": 10,
+        "material2Amount": 10,
+        "name": "Kanderstone Ingot + Decay String (Lvl. 70 - 79)",
+        "material1Amount": 5,
+        "levelRange": {
+            "minimum": 70,
+            "maximum": 79
+        },
         "levels": [
             {
                 "levelRange": {
@@ -499,7 +531,7 @@
                     "maximum": 427,
                     "minimum": 417
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1110,
                     "minimum": 1020
                 }
@@ -514,7 +546,7 @@
                     "maximum": 434,
                     "minimum": 427
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1200,
                     "minimum": 1110
                 }
@@ -529,7 +561,7 @@
                     "maximum": 441,
                     "minimum": 434
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1298,
                     "minimum": 1200
                 }
@@ -544,7 +576,7 @@
                     "maximum": 448,
                     "minimum": 441
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1403,
                     "minimum": 1298
                 }
@@ -552,11 +584,15 @@
         ]
     },
     {
-        "material2": "Pine Paper",
+        "material2": "Rice String",
         "material1": "Diamond Ingot",
-        "material2Amount": 5,
-        "name": "Diamond Ingot + Pine Paper (Lvl. 80 - 89)",
-        "material1Amount": 10,
+        "material2Amount": 10,
+        "name": "Diamond Ingot + Rice String (Lvl. 80 - 89)",
+        "material1Amount": 5,
+        "levelRange": {
+            "minimum": 80,
+            "maximum": 89
+        },
         "levels": [
             {
                 "levelRange": {
@@ -568,7 +604,7 @@
                     "maximum": 462,
                     "minimum": 452
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1508,
                     "minimum": 1403
                 }
@@ -583,7 +619,7 @@
                     "maximum": 469,
                     "minimum": 462
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1620,
                     "minimum": 1508
                 }
@@ -598,7 +634,7 @@
                     "maximum": 476,
                     "minimum": 469
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1740,
                     "minimum": 1620
                 }
@@ -613,7 +649,7 @@
                     "maximum": 483,
                     "minimum": 476
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1860,
                     "minimum": 1740
                 }
@@ -621,11 +657,15 @@
         ]
     },
     {
-        "material2": "Avo Paper",
+        "material2": "Sorghum String",
         "material1": "Molten Ingot",
-        "material2Amount": 6,
-        "name": "Molten Ingot + Avo Paper (Lvl. 90 - 99)",
-        "material1Amount": 12,
+        "material2Amount": 12,
+        "name": "Molten Ingot + Sorghum String (Lvl. 90 - 99)",
+        "material1Amount": 6,
+        "levelRange": {
+            "minimum": 90,
+            "maximum": 99
+        },
         "levels": [
             {
                 "levelRange": {
@@ -637,7 +677,7 @@
                     "maximum": 497,
                     "minimum": 487
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1980,
                     "minimum": 1860
                 }
@@ -652,7 +692,7 @@
                     "maximum": 504,
                     "minimum": 497
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2130,
                     "minimum": 1980
                 }
@@ -667,7 +707,7 @@
                     "maximum": 511,
                     "minimum": 504
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2265,
                     "minimum": 2130
                 }
@@ -682,7 +722,7 @@
                     "maximum": 518,
                     "minimum": 511
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2400,
                     "minimum": 2265
                 }
@@ -690,11 +730,15 @@
         ]
     },
     {
-        "material2": "Sky Paper",
+        "material2": "Hemp String",
         "material1": "Voidstone Ingot",
-        "material2Amount": 6,
-        "name": "Voidstone Ingot + Sky Paper (Lvl. 100 - 103)",
-        "material1Amount": 12,
+        "material2Amount": 12,
+        "name": "Voidstone Ingot + Hemp String (Lvl. 100 - 103)",
+        "material1Amount": 6,
+        "levelRange": {
+            "minimum": 100,
+            "maximum": 103
+        },
         "levels": [
             {
                 "levelRange": {
@@ -706,7 +750,7 @@
                     "maximum": 525,
                     "minimum": 522
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2475,
                     "minimum": 2400
                 }
@@ -714,23 +758,27 @@
         ]
     },
     {
-        "material2": "Dernic Paper",
+        "material2": "Dernic String",
         "material1": "Dernic Ingot",
-        "material2Amount": 6,
-        "name": "Dernic Ingot + Dernic Paper (Lvl. 103 - 105)",
-        "material1Amount": 12,
+        "material2Amount": 12,
+        "name": "Dernic Ingot + Dernic String (Lvl. 103 - 105)",
+        "material1Amount": 6,
+        "levelRange": {
+            "minimum": 103,
+            "maximum": 105
+        },
         "levels": [
             {
                 "levelRange": {
-                    "maximum": 105,
-                    "minimum": 103
+                    "maximum": 103,
+                    "minimum": 100
                 },
-                "id": "103-105",
+                "id": "100-103",
                 "durabilityRange": {
                     "minimum": 525,
                     "maximum": 527
                 },
-                "hprRange": {
+                "hpRange": {
                     "minimum": 2475,
                     "maximum": 2513
                 }

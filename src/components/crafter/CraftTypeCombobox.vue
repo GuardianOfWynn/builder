@@ -1,5 +1,5 @@
 <template>
-  <Combobox immediate :defaultValue="types[0]" @update:modelValue="value => $emit('update-craft-type', value)"
+  <Combobox immediate :defaultValue="craftTypes[0]" @update:modelValue="value => $emit('update-craft-type', value)"
     v-model="selectedType" name="assignee" class="h-8">
     <div class="font-minecraft relative flex gap-x-4 ">
       <!--<ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
@@ -10,9 +10,9 @@
           </ComboboxButton>-->
       <ComboboxInput :spellcheck="false"
         class="text-md border-purple-600 border-[1px] text-white bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
-        @change="query = $event.target.value" :displayValue="(x) => x" />
+        @change="query = $event.target.value" :displayValue="(x: any) => x" />
       <ComboboxOptions class="absolute z-10 flex flex-col right-0 top-0">
-        <ComboboxOption v-for="(x, i) in filteredTypes" :key="x" :value="x">
+        <ComboboxOption v-for="(x, i) in filteredTypes" :key="x.toString()" :value="x">
           <div v-bind:class="{ 'border-b-0': i != filteredTypes.length - 1, 'border-t-0': i != 0 }"
             class="cursor-pointer p-1 px-2 bg-mc-bg text-white w-full border-[1px] border-purple-600 hover:bg-purple-900">
             {{ x }}
@@ -23,8 +23,8 @@
   </Combobox>
 </template>
   
-<script>
-import { computed, ref } from "vue";
+<script lang="ts">
+import { computed, ref, Ref } from "vue";
 import {
   Combobox,
   ComboboxInput,
@@ -36,7 +36,7 @@ import {
 } from '@headlessui/vue'
 
 export default {
-  name: 'CraftTypeCombobox',
+  name: 'ItemTypeCombobox',
   components: {
     Combobox,
     ComboboxInput,
@@ -48,19 +48,18 @@ export default {
   emits: ['update-craft-type'],
   props: {
   },
-  async setup(props, { emit }) {
+  async setup({ emit }: any) {
 
-    const craftTypes = await (await fetch("/builder/craft_types.json")).json();
-    const types = ref(craftTypes);
+    const craftTypes: String[] = JSON.parse(await (await fetch("/builder/craft_types.json")).json());
     const query = ref('');
-    const selectedType = ref(undefined);
+    const selectedType: Ref<String | undefined> = ref(undefined);
     const filteredTypes = computed(() =>
       query.value === ''
-        ? types.value
-        : types.value.filter((x) => {
+        ? craftTypes
+        : craftTypes.filter((x) => {
           return x.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0, 20));
-    return { query, emit, filteredTypes, selectedType, types }
+    return { query, emit, filteredTypes, selectedType, craftTypes }
   }
 }
 </script>

@@ -4,39 +4,30 @@
       <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
       <div class="flex gap-x-4 w-full mb-4">
         <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
-          <div v-if="craftType === 'Scroll'"
-            class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
+          <div v-if="craftType === 'Scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
           <div v-if="craftType === 'Food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
           </div>
-          <div v-if="craftType === 'Potion'"
-            class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
-          <div v-if="craftType === 'Ring'"
-            class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
+          <div v-if="craftType === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
+          <div v-if="craftType === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
           <div v-if="craftType === 'Bracelet'"
             class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
           <div v-if="craftType === 'Necklace'"
             class="pixelated inline-block w-[53px] h-[53px] bg-necklace bg-accessories"></div>
-          <div v-if="craftType === 'Helmet'"
-            class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours"></div>
+          <div v-if="craftType === 'Helmet'" class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours"></div>
           <div v-if="craftType === 'Chestplate'"
             class="pixelated inline-block h-[62px] w-[62px] bg-chestplate bg-armours"></div>
-          <div v-if="craftType === 'Leggings'"
-            class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours"></div>
-          <div v-if="craftType === 'Boots'"
-            class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours"></div>
+          <div v-if="craftType === 'Leggings'" class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours">
+          </div>
+          <div v-if="craftType === 'Boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours"></div>
         </div>
         <div class="grid grid-cols-5 grid-rows-3 w-full gap-y-1">
           <p class="my-auto text-white">Type</p>
-          <CraftTypeCombobox class="col-span-4" 
-            @update-craft-type="handleCraftTypeChange" />
+          <ItemTypeCombobox class="col-span-4" @update-craft-type="handleItemTypeChange" />
           <p class="my-auto text-white">Materials</p>
-          <MaterialsCombobox class="col-span-4" 
-            :materials="materialRolls"
-            @update-craft-materials="handleMaterialsChanged"/>
+          <MaterialsCombobox class="col-span-4" :materials="materialRolls"
+            @update-craft-materials="handleMaterialsChanged" />
           <p class="my-auto text-white">Level</p>
-          <CraftLevelCombobox class="col-span-4" 
-            :levels="levelRolls"
-            @update-craft-level="handleCraftLevelChanged" />
+          <CraftLevelCombobox class="col-span-4" :levels="levelRolls" @update-craft-level="handleCraftLevelChanged" />
         </div>
       </div>
     </div>
@@ -91,48 +82,39 @@
 </template>
 
 <script lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, Ref, UnwrapNestedRefs } from "vue";
 import "/sprites/WynnIcons.png";
 import "/sprites/ProfessionIcon.png";
 import "/sprites/AccessorySprites.gif";
 import "/sprites/ArmourSprites.png";
-import {getBaseCharges, getBaseDamage, getBaseHealth, getBaseDurationOrDurability, getEffectiveness} from "../../scripts/crafter.ts"
 import Ingredient from "../../model/ingredient";
-import MaterialsCombobox from "./MaterialsCombobox.vue";
-import CraftLevelCombobox from "./CraftLevelCombobox.vue";
-import CraftTypeCombobox from "./CraftTypeCombobox.vue";
-import IngredientCombobox from "./IngredientCombobox.vue";
-import IngredientCard from "../IngredientCard.vue"
-import EffectivenessCard from "./EffectivenessCard.vue"
+import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES } from "../../model/recipe"
+import { getEffectivenessMatrix, IngredientSlot, getBaseDurationOrDurability, getBaseCharges, getBaseHealth, getBaseDamage } from "../../scripts/crafter"
+import { ItemType, CraftedAttackSpeed, NumberRange } from "../../scripts/util"
 
 export default {
   name: 'Crafter',
   async setup() {
 
-    const spearCrafts = await (await fetch("/builder/crafts/spear.json")).json();
-    const helmetCrafts = await (await fetch("/builder/crafts/helmet.json")).json();
-    const chestplateCrafts = await (await fetch("/builder/crafts/chestplate.json")).json();
-    const leggingsCrafts = await (await fetch("/builder/crafts/leggings.json")).json();
-    const bootsCrafts = await (await fetch("/builder/crafts/boots.json")).json();
-    const foodCrafts = await (await fetch("/builder/crafts/food.json")).json();
-    const potionCrafts = await (await fetch("/builder/crafts/potion.json")).json();
-    const scrollCrafts = await (await fetch("/builder/crafts/scroll.json")).json();
+    const noIngredients = () => ingredients.flat(1).every(x => x.ingredient === undefined);
 
     const ingredientList: Ingredient[] = JSON.parse(await (await fetch("/builder/ings.json")).json());
     const craftTypes: string[] = JSON.parse(await (await fetch("/builder/craft_types.json")).json());
 
     const craftType = ref(craftTypes[0]);
-    const materials = ref(scrollCrafts.crafts[0]);
-    const level = ref([1,3]);
-    const attackSpeed = ref("Slow");
+    const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
+    const level = ref(recipe.value.levels[0]);
+    const attackSpeed = ref(CraftedAttackSpeed.NORMAL);
+    const recipeRolls: Ref<RecipePrototype[]> = ref(SCROLL_RECIPES);
+    const levelRolls: Ref<LevelRanges[]> = ref(SCROLL_RECIPES[0].levels);
 
-    const materialRolls = ref(scrollCrafts.crafts);
-    const levelRolls = ref(scrollCrafts.crafts[0].possibleBounds);
-
-    const ingredients = reactive([
-      [ref(undefined), ref(undefined)],
-      [ref(undefined), ref(undefined)],
-      [ref(undefined), ref(undefined)]
+    const ingredients: UnwrapNestedRefs<IngredientSlot[]> = reactive([
+      { ingredient: undefined, x: 0, y: 0 },
+      { ingredient: undefined, x: 1, y: 0 },
+      { ingredient: undefined, x: 0, y: 1 },
+      { ingredient: undefined, x: 1, y: 1 },
+      { ingredient: undefined, x: 0, y: 2 },
+      { ingredient: undefined, x: 1, y: 2 },
     ]);
 
     const effectiveness = reactive([
@@ -141,70 +123,52 @@ export default {
       [ref(100), ref(100)]
     ]);
 
-    function getMaterialsFor(craftType) {
-      switch (craftType) {
-        case "Helmet": return helmetCrafts.crafts;
-        case "Chestplate": return chestplateCrafts.crafts;
-        case "Leggings": return leggingsCrafts.crafts;
-        case "Boots": return bootsCrafts.crafts;
-        case "Potion": return potionCrafts.crafts;
-        case "Food": return foodCrafts.crafts;
-        case "Scroll": return scrollCrafts.crafts;
-        default: return "";
-      }
-    }
-
-    function handleIngredientUpdated(x,y,ingredient) {
-      ingredients[x][y].value = ingredient;
+    function handleIngredientUpdated(x: number, y: number, ingredient: Ingredient) {
+      ingredients.values[x][y] = ingredient;
       assemble();
     }
 
-    function handleCraftTypeChange(val) {
-      if (val === undefined) { 
+    function handleItemTypeChange(val: ItemType) {
+      if (val === undefined) {
         return;
       }
-      materialRolls.value = getMaterialsFor(val);
-      materials.value = materialRolls.value[0];
-      levelRolls.value = materials.value.possibleBounds;
+      recipeRolls.value = getRecipePrototypeFor(val);
+      recipe.value = recipeRolls.value[0];
+      levelRolls.value = recipe.value.levels;
       craftType.value = val;
-      level.value = materials.value.possibleBounds[0];
+      level.value = recipe.value.levels[0];
     }
 
-    function handleMaterialsChanged(material) {
-      if (material === undefined) {
+    function handleMaterialsChanged(val: RecipePrototype) {
+      if (val === undefined) {
         return;
       }
-      materials.value = material;
-      level.value = materials.value.possibleBounds[0];
-      levelRolls.value = materials.value.possibleBounds;
+      recipe.value = val;
+      level.value = recipe.value.levels[0];
+      levelRolls.value = recipe.value.levels;
     }
 
-    function handleCraftLevelChanged(lvl) {
+    function handleCraftLevelChanged(lvl: NumberRange) {
       if (lvl === undefined) {
         return;
       }
-      level.value = lvl;
+      level.value.levelRange = lvl;
     }
-
-    const noIngredients = () => ingredients.flat(1).every(x => x === undefined);
 
     const assemble = () => {
 
-      let effec = getEffectiveness(ingredients);
-      
+      let effec = getEffectivenessMatrix(Array.from(ingredients.values()));
       effectiveness[0][0].value = effec[0][0];
       effectiveness[0][1].value = effec[0][1];
       effectiveness[1][0].value = effec[1][0];
       effectiveness[1][1].value = effec[1][1];
       effectiveness[2][0].value = effec[2][0];
       effectiveness[2][1].value = effec[2][1];
-
       let materialTierMultiplier = 1;
-
-      let baseDurabilityOrDuration = getBaseDurationOrDurability(craftType.value, materials.value, level.value);
-      let baseCharges = getBaseCharges(materials.value);
-      let baseHp = getBaseHealth(craftType.value, materials.value, level.value, noIngredients());
-      let baseDamage = getBaseDamage(craftType.value, materials.value, level.value, attackSpeed.value);
+      let baseDurabilityOrDuration = getBaseDurationOrDurability(recipe.value, level.value.levelRange);
+      let baseCharges = getBaseCharges(recipe.value);
+      let baseHp = getBaseHealth(recipe.value, level.value.levelRange, noIngredients());
+      let baseDamage = getBaseDamage(recipe.value, level.value.levelRange);
 
       const result = {
         duration: baseDurabilityOrDuration,
@@ -220,29 +184,25 @@ export default {
         rolls: [new Map(), new Map()],
       };
 
-      for (let x = 0; x < 3; x++) {
-        for (let y = 0; y < 2; y++) {
+      Array.from(ingredients.values()).forEach(ingredientSlot => {
 
-          let currentIngredient = ingredients[x][y];
-          if(currentIngredient === undefined || currentIngredient.name === undefined) {
-            continue;
-          }
-
-          let multiplier = effectiveness[x][y]/100;
-          let unwrapped = currentIngredient;
-
-          result.reqStrenght += unwrapped.itemOnlyIDs.strengthRequirement *multiplier;
-          result.reqIntelligence += unwrapped.itemOnlyIDs.intelligenceRequirement*multiplier;
-          result.reqAgility += unwrapped.itemOnlyIDs.agilityRequirement*multiplier;
-          result.reqDefence += unwrapped.itemOnlyIDs.defenceRequirement*multiplier;
-          result.reqDexterity += unwrapped.itemOnlyIDs.dexterityRequirement*multiplier;
-          
+        if (ingredientSlot.ingredient === undefined || ingredientSlot.ingredient.name === undefined) {
+          return;
         }
-      }
+
+        let ingredient = ingredientSlot.ingredient;
+        let multiplier = effectiveness[ingredientSlot.x][ingredientSlot.y].value;
+        result.reqStrenght += ingredient.requirements.strength * multiplier;
+        result.reqIntelligence += ingredient.requirements.intelligence * multiplier;
+        result.reqAgility += ingredient.requirements.agility * multiplier;
+        result.reqDefence += ingredient.requirements.defence * multiplier;
+        result.reqDexterity += ingredient.requirements.dexterity * multiplier;
+
+      });
     }
 
-    return { ingredientList, ingredients, effectiveness, craftType, materials, materialRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleCraftTypeChange }
+    return { ingredientList, ingredients, effectiveness, craftType, materials, materialRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { IngredientCombobox, IngredientCard, IngredientCard, EffectivenessCard, CraftTypeCombobox, MaterialsCombobox, CraftLevelCombobox, IngredientCombobox }
+  components: { IngredientCombobox, IngredientCard, IngredientCard, EffectivenessCard, ItemTypeCombobox, MaterialsCombobox, CraftLevelCombobox, IngredientCombobox }
 }
 </script>

@@ -1,16 +1,16 @@
-export default interface Ingredient {
-    name: string; //ok
-    skills: string[]; //ok
-    tier: number; //ok
-    level: number; //ok
+export default class Ingredient {
+    name: string;
+    skills: string[];
+    tier: number;
+    level: number; 
     sprite: string;
-    requirements: Requirements; //ok
+    requirements: Requirements;
     modifiers: Modifiers;
     effectivenessModifiers: EffectivenessModifiers;
     identifications: Identification[];
 }
 
-export interface Requirements {
+export class Requirements {
     dexterity: number;
     defence: number;
     strength: number;
@@ -18,13 +18,13 @@ export interface Requirements {
     agility: number;
 }
 
-export interface Modifiers {
+export class Modifiers {
   duration: number;
   durability: number;
   charges: number;
 }
 
-export interface EffectivenessModifiers {
+export class EffectivenessModifiers {
   under: number;
   above: number;
   touching: number;
@@ -33,7 +33,7 @@ export interface EffectivenessModifiers {
   right: number;
 }
 
-export interface Identification {
+export class Identification {
   id: string;
   name: string;
   minimum: number;

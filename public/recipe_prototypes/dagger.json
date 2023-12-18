@@ -1,10 +1,14 @@
 [
     {
         "material2": "Oak Wood",
-        "material1": "Wheat String",
-        "material2Amount": 2,
-        "name": "Wheat String + Oak Wood (Lvl. 1 - 9)",
-        "material1Amount": 1,
+        "material1": "Copper Ingot",
+        "material2Amount": 1,
+        "name": "Copper Ingot + Oak Wood (Lvl. 1 - 9)",
+        "material1Amount": 2,
+        "levelRange": {
+            "minimum": 1,
+            "maximum": 9
+        },
         "levels": [
             {
                 "levelRange": {
@@ -12,8 +16,8 @@
                     "minimum": 1
                 },
                 "damageRange": {
-                    "maximum": 5,
-                    "minimum": 3
+                    "maximum": 8,
+                    "minimum": 6
                 },
                 "id": "1-3",
                 "durabilityRange": {
@@ -27,8 +31,8 @@
                     "minimum": 3
                 },
                 "damageRange": {
-                    "maximum": 7,
-                    "minimum": 5
+                    "maximum": 12,
+                    "minimum": 8
                 },
                 "id": "3-5",
                 "durabilityRange": {
@@ -42,8 +46,8 @@
                     "minimum": 5
                 },
                 "damageRange": {
-                    "maximum": 10,
-                    "minimum": 7
+                    "maximum": 15,
+                    "minimum": 12
                 },
                 "id": "5-7",
                 "durabilityRange": {
@@ -57,8 +61,8 @@
                     "minimum": 7
                 },
                 "damageRange": {
-                    "maximum": 12,
-                    "minimum": 10
+                    "maximum": 17,
+                    "minimum": 15
                 },
                 "id": "7-9",
                 "durabilityRange": {
@@ -70,10 +74,14 @@
     },
     {
         "material2": "Birch Wood",
-        "material1": "Barley String",
-        "material2Amount": 4,
-        "name": "Barley String + Birch Wood (Lvl. 10 - 19)",
-        "material1Amount": 2,
+        "material1": "Granite Ingot",
+        "material2Amount": 2,
+        "name": "Granite Ingot + Birch Wood (Lvl. 10 - 19)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 10,
+            "maximum": 19
+        },
         "levels": [
             {
                 "levelRange": {
@@ -81,8 +89,8 @@
                     "minimum": 10
                 },
                 "damageRange": {
-                    "maximum": 13,
-                    "minimum": 11
+                    "maximum": 22,
+                    "minimum": 18
                 },
                 "id": "10-13",
                 "durabilityRange": {
@@ -96,8 +104,8 @@
                     "minimum": 13
                 },
                 "damageRange": {
-                    "maximum": 15,
-                    "minimum": 13
+                    "maximum": 24,
+                    "minimum": 22
                 },
                 "id": "13-15",
                 "durabilityRange": {
@@ -111,8 +119,8 @@
                     "minimum": 15
                 },
                 "damageRange": {
-                    "maximum": 17,
-                    "minimum": 15
+                    "maximum": 27,
+                    "minimum": 24
                 },
                 "id": "15-17",
                 "durabilityRange": {
@@ -126,8 +134,8 @@
                     "minimum": 17
                 },
                 "damageRange": {
-                    "maximum": 19,
-                    "minimum": 16
+                    "maximum": 30,
+                    "minimum": 27
                 },
                 "id": "17-19",
                 "durabilityRange": {
@@ -139,10 +147,14 @@
     },
     {
         "material2": "Willow Wood",
-        "material1": "Oat String",
-        "material2Amount": 4,
-        "name": "Oat String + Willow Wood (Lvl. 20 - 29)",
-        "material1Amount": 2,
+        "material1": "Gold Ingot",
+        "material2Amount": 2,
+        "name": "Gold Ingot + Willow Wood (Lvl. 20 - 29)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 20,
+            "maximum": 29
+        },
         "levels": [
             {
                 "levelRange": {
@@ -150,8 +162,8 @@
                     "minimum": 20
                 },
                 "damageRange": {
-                    "maximum": 21,
-                    "minimum": 19
+                    "maximum": 33,
+                    "minimum": 30
                 },
                 "id": "20-23",
                 "durabilityRange": {
@@ -165,8 +177,8 @@
                     "minimum": 23
                 },
                 "damageRange": {
-                    "maximum": 23,
-                    "minimum": 20
+                    "maximum": 36,
+                    "minimum": 33
                 },
                 "id": "23-25",
                 "durabilityRange": {
@@ -180,8 +192,8 @@
                     "minimum": 25
                 },
                 "damageRange": {
-                    "maximum": 24,
-                    "minimum": 22
+                    "maximum": 37,
+                    "minimum": 33
                 },
                 "id": "25-27",
                 "durabilityRange": {
@@ -195,8 +207,8 @@
                     "minimum": 27
                 },
                 "damageRange": {
-                    "maximum": 25,
-                    "minimum": 22
+                    "maximum": 40,
+                    "minimum": 36
                 },
                 "id": "27-29",
                 "durabilityRange": {
@@ -208,10 +220,14 @@
     },
     {
         "material2": "Acacia Wood",
-        "material1": "Malt String",
-        "material2Amount": 6,
-        "name": "Malt String + Acacia Wood (Lvl. 30 - 39)",
-        "material1Amount": 3,
+        "material1": "Sandstone Ingot",
+        "material2Amount": 3,
+        "name": "Sandstone Ingot + Acacia Wood (Lvl. 30 - 39)",
+        "material1Amount": 6,
+        "levelRange": {
+            "minimum": 30,
+            "maximum": 39
+        },
         "levels": [
             {
                 "levelRange": {
@@ -219,8 +235,8 @@
                     "minimum": 30
                 },
                 "damageRange": {
-                    "maximum": 28,
-                    "minimum": 25
+                    "maximum": 46,
+                    "minimum": 41
                 },
                 "id": "30-33",
                 "durabilityRange": {
@@ -234,8 +250,8 @@
                     "minimum": 33
                 },
                 "damageRange": {
-                    "maximum": 31,
-                    "minimum": 28
+                    "maximum": 51,
+                    "minimum": 46
                 },
                 "id": "33-35",
                 "durabilityRange": {
@@ -249,8 +265,8 @@
                     "minimum": 35
                 },
                 "damageRange": {
-                    "maximum": 33,
-                    "minimum": 31
+                    "maximum": 55,
+                    "minimum": 51
                 },
                 "id": "35-37",
                 "durabilityRange": {
@@ -264,8 +280,8 @@
                     "minimum": 37
                 },
                 "damageRange": {
-                    "maximum": 36,
-                    "minimum": 33
+                    "maximum": 60,
+                    "minimum": 55
                 },
                 "id": "37-39",
                 "durabilityRange": {
@@ -277,10 +293,14 @@
     },
     {
         "material2": "Spruce Wood",
-        "material1": "Hops String",
-        "material2Amount": 6,
-        "name": "Hops String + Spruce Wood (Lvl. 40 - 49)",
-        "material1Amount": 3,
+        "material1": "Iron Ingot",
+        "material2Amount": 3,
+        "name": "Iron Ingot + Spruce Wood (Lvl. 40 - 49)",
+        "material1Amount": 6,
+        "levelRange": {
+            "minimum": 40,
+            "maximum": 49
+        },
         "levels": [
             {
                 "levelRange": {
@@ -288,8 +308,8 @@
                     "minimum": 40
                 },
                 "damageRange": {
-                    "maximum": 40,
-                    "minimum": 37
+                    "maximum": 67,
+                    "minimum": 61
                 },
                 "id": "40-43",
                 "durabilityRange": {
@@ -303,8 +323,8 @@
                     "minimum": 43
                 },
                 "damageRange": {
-                    "maximum": 44,
-                    "minimum": 40
+                    "maximum": 74,
+                    "minimum": 67
                 },
                 "id": "43-45",
                 "durabilityRange": {
@@ -318,8 +338,8 @@
                     "minimum": 45
                 },
                 "damageRange": {
-                    "maximum": 49,
-                    "minimum": 44
+                    "maximum": 81,
+                    "minimum": 74
                 },
                 "id": "45-47",
                 "durabilityRange": {
@@ -333,8 +353,8 @@
                     "minimum": 47
                 },
                 "damageRange": {
-                    "maximum": 53,
-                    "minimum": 49
+                    "maximum": 88,
+                    "minimum": 81
                 },
                 "id": "47-49",
                 "durabilityRange": {
@@ -346,10 +366,14 @@
     },
     {
         "material2": "Jungle Wood",
-        "material1": "Rye String",
-        "material2Amount": 8,
-        "name": "Rye String + Jungle Wood (Lvl. 50 - 59)",
-        "material1Amount": 4,
+        "material1": "Silver Ingot",
+        "material2Amount": 4,
+        "name": "Silver Ingot + Jungle Wood (Lvl. 50 - 59)",
+        "material1Amount": 8,
+        "levelRange": {
+            "minimum": 50,
+            "maximum": 59
+        },
         "levels": [
             {
                 "levelRange": {
@@ -357,8 +381,8 @@
                     "minimum": 50
                 },
                 "damageRange": {
-                    "maximum": 58,
-                    "minimum": 53
+                    "maximum": 97,
+                    "minimum": 89
                 },
                 "id": "50-53",
                 "durabilityRange": {
@@ -372,8 +396,8 @@
                     "minimum": 53
                 },
                 "damageRange": {
-                    "maximum": 64,
-                    "minimum": 58
+                    "maximum": 106,
+                    "minimum": 97
                 },
                 "id": "53-55",
                 "durabilityRange": {
@@ -387,8 +411,8 @@
                     "minimum": 55
                 },
                 "damageRange": {
-                    "maximum": 69,
-                    "minimum": 64
+                    "maximum": 115,
+                    "minimum": 106
                 },
                 "id": "55-57",
                 "durabilityRange": {
@@ -402,8 +426,8 @@
                     "minimum": 57
                 },
                 "damageRange": {
-                    "maximum": 74,
-                    "minimum": 69
+                    "maximum": 124,
+                    "minimum": 115
                 },
                 "id": "57-59",
                 "durabilityRange": {
@@ -415,10 +439,14 @@
     },
     {
         "material2": "Dark Wood",
-        "material1": "Millet String",
-        "material2Amount": 8,
-        "name": "Millet String + Dark Wood (Lvl. 60 - 69)",
-        "material1Amount": 4,
+        "material1": "Cobalt Ingot",
+        "material2Amount": 4,
+        "name": "Cobalt Ingot + Dark Wood (Lvl. 60 - 69)",
+        "material1Amount": 8,
+        "levelRange": {
+            "minimum": 60,
+            "maximum": 69
+        },
         "levels": [
             {
                 "levelRange": {
@@ -426,8 +454,8 @@
                     "minimum": 60
                 },
                 "damageRange": {
-                    "maximum": 81,
-                    "minimum": 75
+                    "maximum": 135,
+                    "minimum": 125
                 },
                 "id": "60-63",
                 "durabilityRange": {
@@ -441,8 +469,8 @@
                     "minimum": 63
                 },
                 "damageRange": {
-                    "maximum": 87,
-                    "minimum": 81
+                    "maximum": 145,
+                    "minimum": 135
                 },
                 "id": "63-65",
                 "durabilityRange": {
@@ -456,8 +484,8 @@
                     "minimum": 65
                 },
                 "damageRange": {
-                    "maximum": 93,
-                    "minimum": 87
+                    "maximum": 155,
+                    "minimum": 145
                 },
                 "id": "65-67",
                 "durabilityRange": {
@@ -471,8 +499,8 @@
                     "minimum": 67
                 },
                 "damageRange": {
-                    "maximum": 99,
-                    "minimum": 93
+                    "maximum": 165,
+                    "minimum": 155
                 },
                 "id": "67-69",
                 "durabilityRange": {
@@ -484,10 +512,14 @@
     },
     {
         "material2": "Light Wood",
-        "material1": "Decay String",
-        "material2Amount": 10,
-        "name": "Decay String + Light Wood (Lvl. 70 - 79)",
-        "material1Amount": 5,
+        "material1": "Kanderstone Ingot",
+        "material2Amount": 5,
+        "name": "Kanderstone Ingot + Light Wood (Lvl. 70 - 79)",
+        "material1Amount": 10,
+        "levelRange": {
+            "minimum": 70,
+            "maximum": 79
+        },
         "levels": [
             {
                 "levelRange": {
@@ -495,8 +527,8 @@
                     "minimum": 70
                 },
                 "damageRange": {
-                    "maximum": 108,
-                    "minimum": 103
+                    "maximum": 180,
+                    "minimum": 172
                 },
                 "id": "70-73",
                 "durabilityRange": {
@@ -510,8 +542,8 @@
                     "minimum": 73
                 },
                 "damageRange": {
-                    "maximum": 110,
-                    "minimum": 108
+                    "maximum": 184,
+                    "minimum": 180
                 },
                 "id": "73-75",
                 "durabilityRange": {
@@ -525,8 +557,8 @@
                     "minimum": 75
                 },
                 "damageRange": {
-                    "maximum": 113,
-                    "minimum": 110
+                    "maximum": 189,
+                    "minimum": 184
                 },
                 "id": "75-77",
                 "durabilityRange": {
@@ -540,8 +572,8 @@
                     "minimum": 77
                 },
                 "damageRange": {
-                    "maximum": 114,
-                    "minimum": 113
+                    "maximum": 190,
+                    "minimum": 189
                 },
                 "id": "77-79",
                 "durabilityRange": {
@@ -553,10 +585,13 @@
     },
     {
         "material2": "Pine Wood",
-        "material1": "Rice String",
-        "material2Amount": 10,
-        "name": "Rice String + Pine Wood (Lvl. 80 - 89)",
-        "material1Amount": 5,
+        "material1": "Diamond Ingot",
+        "material2Amount": 5,
+        "name": "Diamond Ingot + Pine Wood (Lvl. 80 - 89)",
+        "material1Amount": 10,"levelRange": {
+            "minimum": 80,
+            "maximum": 89
+        },
         "levels": [
             {
                 "levelRange": {
@@ -564,8 +599,8 @@
                     "minimum": 80
                 },
                 "damageRange": {
-                    "maximum": 119,
-                    "minimum": 115
+                    "maximum": 198,
+                    "minimum": 192
                 },
                 "id": "80-83",
                 "durabilityRange": {
@@ -579,8 +614,8 @@
                     "minimum": 83
                 },
                 "damageRange": {
-                    "maximum": 121,
-                    "minimum": 119
+                    "maximum": 202,
+                    "minimum": 198
                 },
                 "id": "83-85",
                 "durabilityRange": {
@@ -594,8 +629,8 @@
                     "minimum": 85
                 },
                 "damageRange": {
-                    "maximum": 124,
-                    "minimum": 121
+                    "maximum": 206,
+                    "minimum": 202
                 },
                 "id": "85-87",
                 "durabilityRange": {
@@ -609,8 +644,8 @@
                     "minimum": 87
                 },
                 "damageRange": {
-                    "maximum": 125,
-                    "minimum": 124
+                    "maximum": 207,
+                    "minimum": 206
                 },
                 "id": "87-89",
                 "durabilityRange": {
@@ -622,10 +657,13 @@
     },
     {
         "material2": "Avo Wood",
-        "material1": "Sorghum String",
-        "material2Amount": 12,
-        "name": "Sorghum String + Avo Wood (Lvl. 90 - 99)",
-        "material1Amount": 6,
+        "material1": "Molten Ingot",
+        "material2Amount": 6,
+        "name": "Molten Ingot + Avo Wood (Lvl. 90 - 99)",
+        "material1Amount": 12,"levelRange": {
+            "minimum": 90,
+            "maximum": 99
+        },
         "levels": [
             {
                 "levelRange": {
@@ -633,8 +671,8 @@
                     "minimum": 90
                 },
                 "damageRange": {
-                    "maximum": 127,
-                    "minimum": 126
+                    "maximum": 212,
+                    "minimum": 208
                 },
                 "id": "90-93",
                 "durabilityRange": {
@@ -648,8 +686,8 @@
                     "minimum": 93
                 },
                 "damageRange": {
-                    "maximum": 129,
-                    "minimum": 127
+                    "maximum": 215,
+                    "minimum": 212
                 },
                 "id": "93-95",
                 "durabilityRange": {
@@ -663,8 +701,8 @@
                     "minimum": 95
                 },
                 "damageRange": {
-                    "maximum": 130,
-                    "minimum": 129
+                    "maximum": 217,
+                    "minimum": 215
                 },
                 "id": "95-97",
                 "durabilityRange": {
@@ -678,8 +716,8 @@
                     "minimum": 97
                 },
                 "damageRange": {
-                    "maximum": 131,
-                    "minimum": 130
+                    "maximum": 218,
+                    "minimum": 217
                 },
                 "id": "97-99",
                 "durabilityRange": {
@@ -691,10 +729,13 @@
     },
     {
         "material2": "Sky Wood",
-        "material1": "Hemp String",
-        "material2Amount": 12,
-        "name": "Hemp String + Sky Wood (Lvl. 100 - 103)",
-        "material1Amount": 6,
+        "material1": "Voidstone Ingot",
+        "material2Amount": 6,
+        "name": "Voidstone Ingot + Sky Wood (Lvl. 100 - 103)",
+        "material1Amount": 12,"levelRange": {
+            "minimum": 100,
+            "maximum": 103
+        },
         "levels": [
             {
                 "levelRange": {
@@ -702,8 +743,8 @@
                     "minimum": 100
                 },
                 "damageRange": {
-                    "maximum": 132,
-                    "minimum": 131
+                    "maximum": 220,
+                    "minimum": 219
                 },
                 "id": "100-103",
                 "durabilityRange": {
@@ -715,10 +756,13 @@
     },
     {
         "material2": "Dernic Wood",
-        "material1": "Dernic String",
-        "material2Amount": 12,
-        "name": "Dernic String + Dernic Wood (Lvl. 103 - 105)",
-        "material1Amount": 6,
+        "material1": "Dernic Ingot",
+        "material2Amount": 6,
+        "name": "Dernic Ingot + Dernic Wood (Lvl. 103 - 105)",
+        "material1Amount": 12,"levelRange": {
+            "minimum": 103,
+            "maximum": 105
+        },
         "levels": [
             {
                 "levelRange": {
@@ -726,8 +770,8 @@
                     "minimum": 103
                 },
                 "damageRange": {
-                    "minimum": 132,
-                    "maximum": 133
+                    "minimum": 220,
+                    "maximum": 221
                 },
                 "id": "103-105",
                 "durabilityRange": {

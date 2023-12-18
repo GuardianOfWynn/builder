@@ -3,13 +3,13 @@
         <div class="font-minecraft relative">
           <ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
             <div class="flex">
-              <img v-if="selectedIng.sprite.id == 397" class="w-4 h-4 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite.head" />
-              <img v-else class="w-6 h-6 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite.id + '_' + selectedIng.sprite.damage + '.webp'" />
+              <img v-if="selectedIng.sprite.includes('.png')" class="w-4 h-4 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite" />
+              <img v-else class="w-6 h-6 pixelated object-contain" :src="'/builder/sprites/' + selectedIng.sprite" />
             </div>
           </ComboboxButton>
           <ComboboxInput :spellcheck="false" class="pt-8 text-sm border-purple-600 border-[1px] h-16 text-white text-center bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
             @change="query = $event.target.value"
-            :displayValue="(ing) => {
+            :displayValue="(ing: any) => {
               return ing === null || ing === undefined || ing.name === undefined ? 'No ingredient' : ing.name
             }"/>
           <ComboboxOptions class="absolute z-10 flex flex-col align-middle">
@@ -29,18 +29,19 @@
 
   </template>
   
-  <script>
-  import { computed, ref } from "vue";
-  import {
-  Combobox,
-  ComboboxInput,
-  ComboboxButton,
-  ComboboxOptions,
-  ComboboxOption,
-  TransitionRoot,
-} from '@headlessui/vue' 
+  <script lang="ts">
+    import { computed, ref,defineComponent, Ref } from "vue";
+    import Ingredient from "../../model/ingredient";
+    import {
+    Combobox,
+    ComboboxInput,
+    ComboboxButton,
+    ComboboxOptions,
+    ComboboxOption,
+    TransitionRoot,
+  } from '@headlessui/vue' 
   
-  export default {
+  export default defineComponent({
     name: 'IngredientCombobox',
     components: { Combobox,
         ComboboxInput,
@@ -51,15 +52,13 @@
   },
   emits: ['update-ing'],
   props: {
-    ingredient: Object
+    ingredient: Ingredient
   },
-  async setup(props, { emit }) {
+  async setup({ emit }: any) {
 
-    const ingredients = await(await fetch("/builder/ings.json")).json();
-
-    emit('update-ing');
+    const ingredients: Ingredient[] = JSON.parse(await(await fetch("/builder/ingredients.json")).json());
     const query = ref('');
-    const selectedIng = ref(undefined);
+    const selectedIng: Ref<Ingredient | undefined> = ref(undefined);
 
     const filteredIngredients = computed(() =>
             query.value === ''
@@ -68,6 +67,6 @@
                 return ing.name.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0,20));     
     return {query, emit, filteredIngredients, selectedIng}
-  }}
+  }})
   </script>
   

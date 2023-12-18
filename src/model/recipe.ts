@@ -1,52 +1,82 @@
-import { NumberRange } from "../scripts/util";
+import { ItemType, NumberRange } from "../scripts/util";
 
-export class CraftType {
-    ratio1: number;
-    ratio2: number;
-    recipes: Recipe[];
+export const SPEAR_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/spear.json")).json());
+export const BOW_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/bow.json")).json());
+export const RELIK_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/relil.json")).json());
+export const WAND_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/wand.json")).json());
+export const DAGGER_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/dagger.json")).json());
+export const HELMET_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/helmet.json")).json());
+export const CHESTPLATE_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/chestplate.json")).json());
+export const LEGGINGS_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/leggings.json")).json());
+export const BOOTS_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/boots.json")).json());
+export const RING_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/ring.json")).json());
+export const BRACELET_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/bracelet.json")).json());
+export const NECKLACE_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/necklace.json")).json());
+export const POTION_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/potion.json")).json());
+export const FOOD_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/food.json")).json());
+export const SCROLL_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/scroll.json")).json());
+
+export function getRecipePrototypeFor(type: ItemType): RecipePrototype[] {
+    switch(type) {
+        case ItemType.SPEAR: return SPEAR_RECIPES;
+        case ItemType.DAGGER: return DAGGER_RECIPES;
+        case ItemType.BOW: return BOW_RECIPES;
+        case ItemType.RELIK: return RELIK_RECIPES;
+        case ItemType.WAND: return WAND_RECIPES;
+        case ItemType.HELMET: return HELMET_RECIPES;
+        case ItemType.CHESTPLATE: return CHESTPLATE_RECIPES;
+        case ItemType.LEGGINGS: return LEGGINGS_RECIPES;
+        case ItemType.BOOTS: return BOOTS_RECIPES;
+        case ItemType.RING: return RING_RECIPES;
+        case ItemType.BRACELET: return BRACELET_RECIPES;
+        case ItemType.NECKLACE: return NECKLACE_RECIPES;
+        case ItemType.FOOD: return FOOD_RECIPES;
+        case ItemType.POTION: return POTION_RECIPES;
+        case ItemType.SCROLL: return SCROLL_RECIPES;
+        default: return SCROLL_RECIPES;
+    }
 }
 
 export class RecipePrototype {
     name: string;
-    multiplier: number;
-    powderSlots: number;
     material1: string;
     material2: string;
-    charges: number;
+    material1Amount: string;
+    material2Amount: string;
+    levels: LevelRanges[];
 
-    constructor(name: string, material1: string, material2: string, multiplier: number, powderSlots: number, charges: number) {
+    constructor(name: string, material1: string, material2: string) {
         this.name = name;
         this.material1 = material1;
         this.material2 = material2;
-        this.multiplier = multiplier;
-        this.powderSlots = powderSlots;
-        this.charges = charges;
     }
 }
 
-export class ArmourRecipe extends RecipePrototype {
+export class ArmourRecipePrototype extends RecipePrototype {
     levelRange: ArmourLevelRanges;
 
-    constructor(name: string, material1: string, material2: string, multiplier: number, powderSlots: number, charges: number, range: ArmourLevelRanges) {
-        super(name, material1, material2, multiplier, powderSlots, charges);
+    constructor(name: string, material1: string, material2: string, range: ArmourLevelRanges) {
+        super(name, material1, material2);
         this.levelRange = range;
     }
 }
 
-export class ConsumableRecipe extends RecipePrototype {
-    levelRange: ConsumableLevelRanges;
+export class WeaponRecipePrototype extends RecipePrototype {
+    levelRange: WeaponLevelRanges;
 
-    constructor(name: string, material1: string, material2: string, multiplier: number, powderSlots: number, charges: number, range: ConsumableLevelRanges) {
-        super(name, material1, material2, multiplier, powderSlots, charges);
+    constructor(name: string, material1: string, material2: string, range: WeaponLevelRanges) {
+        super(name, material1, material2);
         this.levelRange = range;
     }
-} 
+}
 
-export class WeaponPrototype extends RecipeRecipePrototype {
-    possibleBaseSlowDamageBounds: NumberRange[][];
-    possibleBaseNormalDamageBounds: NumberRange[][];
-    possibleBaseFastDamageBounds: NumberRange[][];
-    possibleBaseDurabilityBounds: NumberRange[];
+export class ConsumableRecipePrototype extends RecipePrototype {
+    levelRange: ConsumableLevelRanges;
+
+    constructor(name: string, material1: string, material2: string, range: ConsumableLevelRanges) {
+        super(name, material1, material2);
+        this.levelRange = range;
+    }
 } 
 
 export class LevelRanges {
@@ -54,14 +84,17 @@ export class LevelRanges {
     levelRange: NumberRange;
 }
 
+export class WeaponLevelRanges extends LevelRanges {
+    damageRange: NumberRange;
+    durabilityRange: NumberRange;
+} 
+
 export class ArmourLevelRanges extends LevelRanges {
-    baseHpRange: NumberRange;
-    baseDurabilityRange: NumberRange;
+    hpRange: NumberRange;
+    durabilityRange: NumberRange;
 }
 
 export class ConsumableLevelRanges extends LevelRanges {
-    baseHpRange: NumberRange;
-    baseDurabilityRange: NumberRange;
+    hpRange: NumberRange;
+    durationRange: NumberRange;
 }
-
-export const emptyRange = () => new NumberRange(0,0);

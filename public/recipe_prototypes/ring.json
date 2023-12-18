@@ -5,6 +5,10 @@
        "material2Amount":1,
        "name":"Copper Gem + Gudgeon Oil (Lvl. 1 - 9)",
        "material1Amount":1,
+       "levelRange": {
+         "minimum": 1,
+         "maximum": 9
+     },
        "levels":[
           {
              "levelRange":{
@@ -74,6 +78,10 @@
        "material2Amount":2,
        "name":"Granite Gem + Trout Oil (Lvl. 10 - 19)",
        "material1Amount":2,
+       "levelRange": {
+         "minimum": 10,
+         "maximum": 19
+     },
        "levels":[
         {
             "levelRange":{
@@ -143,6 +151,10 @@
        "material2Amount":2,
        "name":"Gold Gem + Salmon Oil (Lvl. 20 - 29)",
        "material1Amount":2,
+       "levelRange": {
+         "minimum": 20,
+         "maximum": 29
+     },
        "levels":[
           {
              "levelRange":{
@@ -212,6 +224,10 @@
        "material2Amount":3,
        "name":"Sandstone Gem + Carp Oil (Lvl. 30 - 39)",
        "material1Amount":3,
+       "levelRange": {
+         "minimum": 30,
+         "maximum": 39
+     },
        "levels":[
           {
              "levelRange":{
@@ -282,6 +298,10 @@
        "material2Amount":3,
        "name":"Iron Gem + Icefish Oil (Lvl. 40 - 49)",
        "material1Amount":3,
+       "levelRange": {
+         "minimum": 40,
+         "maximum": 49
+     },
        "levels":[
         {
             "levelRange":{
@@ -351,6 +371,10 @@
        "material2Amount":4,
        "name":"Silver Gem + Piranha Oil (Lvl. 50 - 59)",
        "material1Amount":4,
+       "levelRange": {
+         "minimum": 50,
+         "maximum": 59
+     },
        "levels":[
           {
              "levelRange":{
@@ -420,6 +444,10 @@
        "material2Amount":4,
        "name":"Cobalt Gem + Koi Oil (Lvl. 60 - 69)",
        "material1Amount":4,
+       "levelRange": {
+         "minimum": 60,
+         "maximum": 69
+     },
        "levels":[
           {
              "levelRange":{
@@ -489,6 +517,10 @@
        "material2Amount":5,
        "name":"Kanderstone Gem + Gylia Oil (Lvl. 70 - 79)",
        "material1Amount":5,
+       "levelRange": {
+         "minimum": 70,
+         "maximum": 79
+     },
        "levels":[
           {
              "levelRange":{
@@ -557,7 +589,10 @@
        "material1":"Diamond Gem",
        "material2Amount":5,
        "name":"Diamond Gem + Bass Oil (Lvl. 80 - 89)",
-       "material1Amount":5,
+       "material1Amount":5,"levelRange": {
+         "minimum": 80,
+         "maximum": 89
+     },
        "levels":[
           {
              "levelRange":{
@@ -626,7 +661,10 @@
        "material1":"Molten Gem",
        "material2Amount":6,
        "name":"Molten Gem + Molten Oil (Lvl. 90 - 99)",
-       "material1Amount":6,
+       "material1Amount":6,"levelRange": {
+         "minimum": 90,
+         "maximum": 99
+     },
        "levels":[
           {
              "levelRange":{
@@ -691,11 +729,41 @@
        ]
     },
     {
+      "material2":"Starfish Oil",
+      "material1":"Voidstone Gem",
+      "material2Amount":6,
+      "name":"Voidstone Gem + Dernic Oil (Lvl. 100 - 103)",
+      "material1Amount":6,"levelRange": {
+         "minimum": 100,
+         "maximum": 103
+     },
+      "levels":[
+         {
+            "levelRange":{
+               "maximum":103,
+               "minimum":100
+            },
+            "id":"100-103",
+            "durabilityRange":{
+               "maximum":525,
+               "minimum":522
+            },
+            "hpRange":{
+               "maximum":0,
+               "minimum":0
+            }
+         }
+      ]
+   },
+    {
        "material2":"Dernic Oil",
        "material1":"Dernic Gem",
        "material2Amount":6,
        "name":"Dernic Gem + Dernic Oil (Lvl. 103 - 105)",
-       "material1Amount":6,
+       "material1Amount":6,"levelRange": {
+         "minimum": 103,
+         "maximum": 105
+     },
        "levels":[
           {
              "levelRange":{

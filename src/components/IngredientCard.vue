@@ -5,8 +5,8 @@
 
     <div v-else>
         <div class="flex justify-center mb-2">
-            <img v-if="ing.sprite.id == 397" class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite.head" />
-            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite.id + '_' + ing.sprite.damage + '.webp'" />
+            <img v-if="ing.sprite.includes('.png')" class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite" />
+            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite" />
         </div>
 
         <p class="text-md text-mc-gray mr-2 text-center">{{ing.name}}</p>
@@ -28,61 +28,61 @@
 
         <div class="text-left mt-4 gap-y-4 flex flex-col text-xs">
             <div>
-                <p v-for="(value, name, index) in ing.identifications">
-                    <span :class="value.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ value.minimum <= 0 ? format(value.minimum, name) : '+' + format(value.minimum, name) }}</span>
-                    <span :class="value.minimum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
-                    <span :class="value.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ value.maximum <= 0 ? format(value.maximum, name) : '+' + format(value.maximum, name) }}</span>
-                    <span class="text-sm text-mc-gray ml-2"> {{dict.get(name)}}</span>
+                <p v-for="(identification) in ing.identifications">
+                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.minimum <= 0 ? format(identification.minimum, identification.name) : '+' + format(identification.minimum, identification.name) }}</span>
+                    <span :class="identification.minimum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
+                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.maximum <= 0 ? format(identification.maximum, identification.name) : '+' + format(identification.maximum, identification.name) }}</span>
+                    <span class="text-sm text-mc-gray ml-2">{{ identification.name }}</span>
                 </p>
             </div>
 
             <div>
-                <p v-show="ing.ingredientPositionModifiers.left != 0" :class="ing.ingredientPositionModifiers.left < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.left <= 0 ? ing.ingredientPositionModifiers.left : '+' + ing.ingredientPositionModifiers.left }}% 
+                <p v-show="ing.effectivenessModifiers.left != 0" :class="ing.effectivenessModifiers.left < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.left <= 0 ? ing.effectivenessModifiers.left : '+' + ing.effectivenessModifiers.left }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients to the left of this one)</span>
                 </p>
-                <p v-show="ing.ingredientPositionModifiers.right != 0" :class="ing.ingredientPositionModifiers.right < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.right <= 0 ? ing.ingredientPositionModifiers.right : '+' + ing.ingredientPositionModifiers.right }}% 
+                <p v-show="ing.effectivenessModifiers.right != 0" :class="ing.effectivenessModifiers.right < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.right <= 0 ? ing.effectivenessModifiers.right : '+' + ing.effectivenessModifiers.right }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients to the right of this one)</span>
                 </p>
-                <p v-show="ing.ingredientPositionModifiers.touching != 0" :class="ing.ingredientPositionModifiers.touching < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.touching <= 0 ? ing.ingredientPositionModifiers.touching : '+' + ing.ingredientPositionModifiers.touching }}% 
+                <p v-show="ing.effectivenessModifiers.touching != 0" :class="ing.effectivenessModifiers.touching < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.touching <= 0 ? ing.effectivenessModifiers.touching : '+' + ing.effectivenessModifiers.touching }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients touching this one)</span>
                 </p>
-                <p v-show="ing.ingredientPositionModifiers.notTouching != 0" :class="ing.ingredientPositionModifiers.notTouching < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.notTouching <= 0 ? ing.ingredientPositionModifiers.notTouching : '+' + ing.ingredientPositionModifiers.notTouching }}% 
+                <p v-show="ing.effectivenessModifiers.notTouching != 0" :class="ing.effectivenessModifiers.notTouching < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.notTouching <= 0 ? ing.effectivenessModifiers.notTouching : '+' + ing.effectivenessModifiers.notTouching }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients not touching this one)</span>
                 </p>
-                <p v-show="ing.ingredientPositionModifiers.above != 0" :class="ing.ingredientPositionModifiers.above < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.above <= 0 ? ing.ingredientPositionModifiers.above : '+' + ing.ingredientPositionModifiers.above }}% 
+                <p v-show="ing.effectivenessModifiers.above != 0" :class="ing.effectivenessModifiers.above < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.above <= 0 ? ing.effectivenessModifiers.above : '+' + ing.effectivenessModifiers.above }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients above this one)</span>
                 </p>
-                <p v-show="ing.ingredientPositionModifiers.under != 0" :class="ing.ingredientPositionModifiers.under < 0 ? 'text-mc-red' : 'text-mc-lime'">
-                    {{ ing.ingredientPositionModifiers.under <= 0 ? ing.ingredientPositionModifiers.under : '+' + ing.ingredientPositionModifiers.under }}% 
+                <p v-show="ing.effectivenessModifiers.under != 0" :class="ing.effectivenessModifiers.under < 0 ? 'text-mc-red' : 'text-mc-lime'">
+                    {{ ing.effectivenessModifiers.under <= 0 ? ing.effectivenessModifiers.under : '+' + ing.effectivenessModifiers.under }}% 
                     <span class="text-mc-gray">Ingredient Effectiveness (To ingredients under this one)</span>
                 </p>
             </div>
     
             <div>
-                <span v-show="ing.itemOnlyIDs.durabilityModifier != 0" :class="ing.itemOnlyIDs.durabilityModifier <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.durabilityModifier <= 0 ? ing.itemOnlyIDs.durabilityModifier : '+' + ing.itemOnlyIDs.durabilityModifier }} Durability</span>
-                <span v-show="ing.itemOnlyIDs.durabilityModifier != 0 && ing.consumableOnlyIDs.duration != 0" class="text-mc-gray"> or </span>
-                <span v-show="ing.consumableOnlyIDs.duration != 0" :class="ing.consumableOnlyIDs.duration <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.consumableOnlyIDs.duration <= 0 ? ing.consumableOnlyIDs.duration : '+' + ing.consumableOnlyIDs.duration }}s Duration</span>
-                <p v-show="ing.consumableOnlyIDs.charges != 0" :class="ing.consumableOnlyIDs.charges <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.consumableOnlyIDs.charges <= 0 ? ing.consumableOnlyIDs.charges : '+' + ing.consumableOnlyIDs.charges }} Charges</p>
+                <span v-show="ing.modifiers.durability != 0" :class="ing.modifiers.durability <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.modifiers.durability <= 0 ? ing.modifiers.durability : '+' + ing.modifiers.durability }} Durability</span>
+                <span v-show="ing.modifiers.duration != 0 && ing.modifiers.durability != 0" class="text-mc-gray"> or </span>
+                <span v-show="ing.modifiers.duration != 0" :class="ing.modifiers.duration <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.modifiers.duration <= 0 ? ing.modifiers.duration : '+' + ing.modifiers.duration }}s Duration</span>
+                <p v-show="ing.modifiers.charges != 0" :class="ing.modifiers.charges <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.modifiers.charges <= 0 ? ing.modifiers.charges : '+' + ing.modifiers.charges }} Charges</p>
             </div>
 
             <div>
-                <p v-show="ing.itemOnlyIDs.dexterityRequirement != 0" :class="ing.itemOnlyIDs.dexterityRequirement > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.dexterityRequirement <= 0 ? ing.itemOnlyIDs.dexterityRequirement : '+' + ing.itemOnlyIDs.dexterityRequirement }} Dexterity Min.</p>
-                <p v-show="ing.itemOnlyIDs.defenceRequirement != 0" :class="ing.itemOnlyIDs.defenceRequirement > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.defenceRequirement <= 0 ? ing.itemOnlyIDs.defenceRequirement : '+' + ing.itemOnlyIDs.defenceRequirement }} Defence Min.</p>
-                <p v-show="ing.itemOnlyIDs.strengthRequirement != 0" :class="ing.itemOnlyIDs.strengthRequirement > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.strengthRequirement <= 0 ? ing.itemOnlyIDs.strengthRequirement : '+' + ing.itemOnlyIDs.strengthRequirement }} Strenght Min.</p>
-                <p v-show="ing.itemOnlyIDs.intelligenceRequirement != 0" :class="ing.itemOnlyIDs.intelligenceRequirement > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.intelligenceRequirement <= 0 ? ing.itemOnlyIDs.intelligenceRequirement : '+' + ing.itemOnlyIDs.intelligenceRequirement }} Intelligence Min.</p>
-                <p v-show="ing.itemOnlyIDs.agilityRequirement != 0" :class="ing.itemOnlyIDs.agilityRequirement > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.itemOnlyIDs.agilityRequirement <= 0 ? ing.itemOnlyIDs.agilityRequirement : '+' + ing.itemOnlyIDs.agilityRequirement }} Agility Min.</p>
+                <p v-show="ing.requirements.dexterity != 0" :class="ing.requirements.dexterity > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.requirements.dexterity <= 0 ? ing.requirements.dexterity : '+' + ing.requirements.dexterity }} Dexterity Min.</p>
+                <p v-show="ing.requirements.defence != 0" :class="ing.requirements.defence > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.requirements.defence <= 0 ? ing.requirements.defence : '+' + ing.requirements.defence }} Defence Min.</p>
+                <p v-show="ing.requirements.strength != 0" :class="ing.requirements.strength > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.requirements.strength <= 0 ? ing.requirements.strength : '+' + ing.requirements.strength }} Strenght Min.</p>
+                <p v-show="ing.requirements.intelligence != 0" :class="ing.requirements.intelligence > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.requirements.intelligence <= 0 ? ing.requirements.intelligence : '+' + ing.requirements.intelligence }} Intelligence Min.</p>
+                <p v-show="ing.requirements.agility != 0" :class="ing.requirements.agility > 0 ? 'text-mc-red' : 'text-mc-lime'">{{ ing.requirements.agility <= 0 ? ing.requirements.agility : '+' + ing.requirements.agility }} Agility Min.</p>
             </div>
 
             <div>
                 <p class="text-mc-gray">Crafting Lv. Min: {{ing.level}}</p>
                 <div v-for="(value) in ing.skills" class="flex ml-4">
                     <img class="pixelated w-4 h-4 my-auto" :src="'/sprites/' + value.toLowerCase() + '.webp'"/>
-                    <span class="my-auto text-mc-gray ml-2"> {{dict.get(value)}}</span>
+                    <span class="my-auto text-mc-gray ml-2"> {{ value }}</span>
                 </div>
             </div>
 
@@ -95,19 +95,17 @@
     </div>
 </template>
   
-<script>
-import { ref } from "vue";
+<script lang="ts">
+import Ingredient from "../model/ingredient";
   
   export default {
       name: 'IngredientCard',
       props: {
-          ing: Object,
+          ing: Ingredient,
       },
-      async setup(props) {
+      async setup() {
         
-        const dictionary = await (await fetch("/builder/dictionary.json")).json();
-
-        const dict = ref(new Map(Object.entries(dictionary)));
+        const dictionary: Map<String, String> = JSON.parse(await (await fetch("/builder/dictionary.json")).json());
         const format = (val, idName) => {
             if (idName === "POISON") {
                 return val + "/3s"
@@ -124,7 +122,7 @@ import { ref } from "vue";
                 return val + "%";
             }
         }
-        return {dict, format}
+        return {dictionary, format}
       },
       components: { }
   }
