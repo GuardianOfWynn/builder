@@ -105,7 +105,6 @@ import Ingredient from "../model/ingredient";
       },
       async setup() {
         
-        const dictionary: Map<String, String> = JSON.parse(await (await fetch("/builder/dictionary.json")).json());
         const format = (val, idName) => {
             if (idName === "POISON") {
                 return val + "/3s"
@@ -122,7 +121,7 @@ import Ingredient from "../model/ingredient";
                 return val + "%";
             }
         }
-        return {dictionary, format}
+        return {format}
       },
       components: { }
   }

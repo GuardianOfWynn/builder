@@ -56,7 +56,7 @@
   },
   async setup({ emit }: any) {
 
-    const ingredients: Ingredient[] = JSON.parse(await(await fetch("/builder/ingredients.json")).json());
+    const ingredients: Ingredient[] = await(await fetch("/builder/ingredients.json")).json();
     const query = ref('');
     const selectedIng: Ref<Ingredient | undefined> = ref(undefined);
 

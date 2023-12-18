@@ -1,6 +1,7 @@
 import Ingredient from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype } from "../model/recipe";
 import { ItemType, CraftedAttackSpeed, NumberRange } from "./util";
+import { WynnItem } from "../model/item";
 
 const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
 const isArmour = (craftType: ItemType) => [ItemType.HELMET, ItemType.CHESTPLATE, ItemType.LEGGINGS, ItemType.BOOTS].includes(craftType);
@@ -19,47 +20,42 @@ export interface IngredientSlot {
   y: number
 }
 
+/*
 export function assembleCraft(ingredient: IngredientSlot[], effectivenessMatrix: number[][]): WynnItem {
-  
+  return undefined;
 }
+*/
 
-export function getEffectivenessMatrix(ingredient: IngredientSlot[]): number[][] {
+export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][] {
   let effectiveness = [[100, 100], [100, 100], [100, 100]];
-  for (let x1 = 0; x1 < 3; x1++) {
-    for (let y1 = 0; y1 < 2; y1++) {
+  ingredients.forEach(ingredient => {
 
-      let current = ingredients[x1][y1];
-
-      if (current === undefined) {
-        continue;
-      }
-
-      for (let x2 = 0; x2 < 3; x2++) {
-        for (let y2 = 0; y2 < 2; y2++) {
-          if (x1 == x2 && y1 == y2) continue;
-          if (!touching(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.notTouching;
-          }
-          if (touching(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.touching;
-          }
-          if (under(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.under;
-          }
-          if (above(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.above;
-          }
-          if (left(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.left;
-          }
-          if (right(x1, x2, y1, y2)) {
-            effectiveness[x2][y2] += current.effectivenessModifiers.right;
-          }
-        }
-      }
-
+    if(ingredient.ingredient === undefined) {
+      return;
     }
-  }
+
+    ingredients.forEach(target => {
+      
+      if (!touching(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.notTouching;
+      }
+      if (touching(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.touching;
+      }
+      if (under(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.under;
+      }
+      if (above(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.above;
+      }
+      if (left(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.left;
+      }
+      if (right(ingredient.x, target.x, ingredient.y, target.y)) {
+        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.right;
+      }
+    })
+  });
   return effectiveness;
 }
 

@@ -66,19 +66,19 @@ export class NumberRange {
         this.to = to;
     }
 
-    public static of(from: number, to: number) {
+    static of(from: number, to: number) {
         return new NumberRange(from, to);
     }
 
-    public equals(range: NumberRange) {
+    equals(range: NumberRange) {
         return range.from === this.from && range.to === this.to;
     }
 
-    public isGreaterThan(range: NumberRange) {
+    isGreaterThan(range: NumberRange) {
         return this.from >= range.from && this.to > range.to;
     }
 
-    public isBetween(range: NumberRange) {
+    isBetween(range: NumberRange) {
         return this.from >= range.from && this.to <= range.to;
     }
 }

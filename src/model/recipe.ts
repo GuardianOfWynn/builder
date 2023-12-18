@@ -1,20 +1,20 @@
 import { ItemType, NumberRange } from "../scripts/util";
 
-export const SPEAR_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/spear.json")).json());
-export const BOW_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/bow.json")).json());
-export const RELIK_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/relil.json")).json());
-export const WAND_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/wand.json")).json());
-export const DAGGER_RECIPES: WeaponRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/dagger.json")).json());
-export const HELMET_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/helmet.json")).json());
-export const CHESTPLATE_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/chestplate.json")).json());
-export const LEGGINGS_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/leggings.json")).json());
-export const BOOTS_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/boots.json")).json());
-export const RING_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/ring.json")).json());
-export const BRACELET_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/bracelet.json")).json());
-export const NECKLACE_RECIPES: ArmourRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/necklace.json")).json());
-export const POTION_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/potion.json")).json());
-export const FOOD_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/food.json")).json());
-export const SCROLL_RECIPES: ConsumableRecipePrototype[] = JSON.parse(await (await fetch("/builder/recipe_prototypes/scroll.json")).json());
+export const SPEAR_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/spear.json")).json();
+export const BOW_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/bow.json")).json();
+export const RELIK_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/relik.json")).json();
+export const WAND_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/wand.json")).json();
+export const DAGGER_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/dagger.json")).json();
+export const HELMET_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/helmet.json")).json();
+export const CHESTPLATE_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/chestplate.json")).json();
+export const LEGGINGS_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/leggings.json")).json();
+export const BOOTS_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/boots.json")).json();
+export const RING_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/ring.json")).json();
+export const BRACELET_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/bracelet.json")).json();
+export const NECKLACE_RECIPES: ArmourRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/necklace.json")).json();
+export const POTION_RECIPES: ConsumableRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/potion.json")).json();
+export const FOOD_RECIPES: ConsumableRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/food.json")).json();
+export const SCROLL_RECIPES: ConsumableRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/scroll.json")).json();
 
 export function getRecipePrototypeFor(type: ItemType): RecipePrototype[] {
     switch(type) {

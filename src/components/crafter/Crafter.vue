@@ -22,12 +22,12 @@
         </div>
         <div class="grid grid-cols-5 grid-rows-3 w-full gap-y-1">
           <p class="my-auto text-white">Type</p>
-          <ItemTypeCombobox class="col-span-4" @update-craft-type="handleItemTypeChange" />
+          <CraftTypeCombobox class="col-span-4" @update-craft-type="handleItemTypeChange" />
           <p class="my-auto text-white">Materials</p>
-          <MaterialsCombobox class="col-span-4" :materials="materialRolls"
+          <MaterialsCombobox class="col-span-4" :recipePrototypes="recipeRolls"
             @update-craft-materials="handleMaterialsChanged" />
           <p class="my-auto text-white">Level</p>
-          <CraftLevelCombobox class="col-span-4" :levels="levelRolls" @update-craft-level="handleCraftLevelChanged" />
+          <CraftLevelCombobox class="col-span-4" :recipe="recipe" @update-craft-level="handleCraftLevelChanged" />
         </div>
       </div>
     </div>
@@ -36,34 +36,34 @@
         <p class="text-xl font-minecraft text-mc-lime mb-2">Ingredients:</p>
         <div class="grid w-full grid-cols-2 gap-2 grid-rows-3 ">
           <div class="w-full">
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(0, 0, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(0, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(0, 1, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(1, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(1, 0, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(2, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(1, 1, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(3, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(2, 0, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(4, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(2, 1, value)" />
+            <IngredientCombobox @update-ing="value => handleIngredientUpdated(5, value)" />
           </div>
         </div>
       </div>
       <div class="w-1/5 max-h-full">
         <p class="text-xl font-minecraft text-mc-lime mb-2">Effectiveness:</p>
         <div class="grid h-full gap-2 grid-cols-2 grid-rows-3">
-          <EffectivenessCard :ingredient="ingredients[0][0]" :effectiveness="effectiveness[0][0]" />
-          <EffectivenessCard :ingredient="ingredients[0][1]" :effectiveness="effectiveness[0][1]" />
-          <EffectivenessCard :ingredient="ingredients[1][0]" :effectiveness="effectiveness[1][0]" />
-          <EffectivenessCard :ingredient="ingredients[1][1]" :effectiveness="effectiveness[1][1]" />
-          <EffectivenessCard :ingredient="ingredients[2][0]" :effectiveness="effectiveness[2][0]" />
-          <EffectivenessCard :ingredient="ingredients[2][1]" :effectiveness="effectiveness[2][1]" />
+          <EffectivenessCard :ingredient="ingredients[0].ingredient" :effectiveness="effectiveness[0][0]" />
+          <EffectivenessCard :ingredient="ingredients[1].ingredient" :effectiveness="effectiveness[0][1]" />
+          <EffectivenessCard :ingredient="ingredients[2].ingredient" :effectiveness="effectiveness[1][0]" />
+          <EffectivenessCard :ingredient="ingredients[3].ingredient" :effectiveness="effectiveness[1][1]" />
+          <EffectivenessCard :ingredient="ingredients[4].ingredient" :effectiveness="effectiveness[2][0]" />
+          <EffectivenessCard :ingredient="ingredients[5].ingredient" :effectiveness="effectiveness[2][1]" />
         </div>
       </div>
       <div class="w-2/5">
@@ -71,12 +71,12 @@
       </div>
     </div>
     <div class="mt-16 grid grid-cols-6 grid-rows-1 gap-x-2 gap-y-2 pb-16">
-      <IngredientCard :ing="ingredients[0][0]" />
-      <IngredientCard :ing="ingredients[0][1]" />
-      <IngredientCard :ing="ingredients[1][0]" />
-      <IngredientCard :ing="ingredients[1][1]" />
-      <IngredientCard :ing="ingredients[2][0]" />
-      <IngredientCard :ing="ingredients[2][1]" />
+      <IngredientCard :ing="ingredients[0].ingredient" />
+      <IngredientCard :ing="ingredients[1].ingredient" />
+      <IngredientCard :ing="ingredients[2].ingredient" />
+      <IngredientCard :ing="ingredients[3].ingredient" />
+      <IngredientCard :ing="ingredients[4].ingredient" />
+      <IngredientCard :ing="ingredients[5].ingredient" />
     </div>
   </div>
 </template>
@@ -87,6 +87,12 @@ import "/sprites/WynnIcons.png";
 import "/sprites/ProfessionIcon.png";
 import "/sprites/AccessorySprites.gif";
 import "/sprites/ArmourSprites.png";
+import CraftLevelCombobox from "./CraftLevelCombobox.vue"
+import IngredientCombobox from "./IngredientCombobox.vue"
+import IngredientCard from "../IngredientCard.vue"
+import EffectivenessCard from "./EffectivenessCard.vue"
+import MaterialsCombobox from "./MaterialsCombobox.vue"
+import CraftTypeCombobox from "./CraftTypeCombobox.vue"
 import Ingredient from "../../model/ingredient";
 import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES } from "../../model/recipe"
 import { getEffectivenessMatrix, IngredientSlot, getBaseDurationOrDurability, getBaseCharges, getBaseHealth, getBaseDamage } from "../../scripts/crafter"
@@ -98,8 +104,8 @@ export default {
 
     const noIngredients = () => ingredients.flat(1).every(x => x.ingredient === undefined);
 
-    const ingredientList: Ingredient[] = JSON.parse(await (await fetch("/builder/ings.json")).json());
-    const craftTypes: string[] = JSON.parse(await (await fetch("/builder/craft_types.json")).json());
+    const ingredientList: Ingredient[] = await (await fetch("/builder/ingredients.json")).json();
+    const craftTypes: string[] = await (await fetch("/builder/craft_types.json")).json();
 
     const craftType = ref(craftTypes[0]);
     const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
@@ -123,8 +129,8 @@ export default {
       [ref(100), ref(100)]
     ]);
 
-    function handleIngredientUpdated(x: number, y: number, ingredient: Ingredient) {
-      ingredients.values[x][y] = ingredient;
+    function handleIngredientUpdated(pos: number, ingredient: Ingredient) {
+      ingredients.values[pos] = ingredient;
       assemble();
     }
 
@@ -201,8 +207,8 @@ export default {
       });
     }
 
-    return { ingredientList, ingredients, effectiveness, craftType, materials, materialRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
+    return { ingredientList, ingredients, effectiveness, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { IngredientCombobox, IngredientCard, IngredientCard, EffectivenessCard, ItemTypeCombobox, MaterialsCombobox, CraftLevelCombobox, IngredientCombobox }
+  components: {CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard}
 }
 </script>

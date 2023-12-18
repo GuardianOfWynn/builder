@@ -11,7 +11,7 @@
         <ComboboxOption v-for="(x, i) in filteredLevels" :key="x.id" :value="x.levelRange">
           <div v-bind:class="{ 'border-b-0': i != filteredLevels!.length - 1, 'border-t-0': i != 0 }"
             class="cursor-pointer p-1 px-2 bg-mc-bg text-white w-full border-[1px] border-purple-600 hover:bg-purple-900">
-            {{ x[0] + '-' + x[1] }}
+            {{ x.levelRange.from + '-' + x.levelRange.to }}
           </div>
         </ComboboxOption>
       </ComboboxOptions>
@@ -31,7 +31,7 @@ import {
   ComboboxLabel,
 } from '@headlessui/vue'
 import { NumberRange } from "../../scripts/util";
-import { RecipePrototype } from "../../model/recipe";
+import { LevelRanges, RecipePrototype } from "../../model/recipe";
 
 export default {
   name: 'CraftLevelCombobox',
@@ -45,23 +45,22 @@ export default {
   },
   emits: ['update-craft-level'],
   props: {
-    recipe: RecipePrototype
+    recipe: Object
   },
   setup(props, { emit }) {
 
     const query = ref('');
-    const rolls = ref(props.recipe?.levels);
+    const rolls: Ref<LevelRanges[]> = ref((props.recipe as Ref<RecipePrototype>).value.levels);
     const selectedLevel: Ref<NumberRange | undefined> = ref(undefined);
-
     const filteredLevels = computed(() =>
       query.value === ''
         ? rolls.value
-        : rolls.value?.filter((x) => {
+        : rolls.value!.filter((x) => {
           return x.toString().toLowerCase().includes(query.value.toLowerCase())
         }));
 
     watchEffect(() => {
-      rolls.value = props.recipe?.levels;
+      rolls.value = props.recipe!.levels;
       selectedLevel.value = props.recipe?.levels[0].levelRange
     });
     return { query, emit, filteredLevels, selectedLevel, rolls }

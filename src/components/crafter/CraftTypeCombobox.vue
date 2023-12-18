@@ -46,11 +46,9 @@ export default {
     TransitionRoot, ComboboxLabel
   },
   emits: ['update-craft-type'],
-  props: {
-  },
   async setup({ emit }: any) {
 
-    const craftTypes: String[] = JSON.parse(await (await fetch("/builder/craft_types.json")).json());
+    const craftTypes: String[] = await (await fetch("/builder/craft_types.json")).json();
     const query = ref('');
     const selectedType: Ref<String | undefined> = ref(undefined);
     const filteredTypes = computed(() =>
