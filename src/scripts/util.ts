@@ -39,7 +39,7 @@ export enum ArmorType {
     BOOTS = "Boots"
 }
 
-export enum AttackSpped {
+export enum AttackSpeed {
     SUPER_SLOW = "Super Slow",
     VERY_SLOW = "Very Slow",
     SLOW = "Slow",
@@ -50,11 +50,11 @@ export enum AttackSpped {
 }
 
 export enum WynnClass {
-    SHAMAN = "Shaman",
-    ASSASSIN = "Assassin",
-    MAGE = "Mage",
-    ARCHER = "Archer",
-    WARRIOR = "Warrior"
+    SHAMAN = "Shaman/Skyseer",
+    ASSASSIN = "Assassin/Ninja",
+    MAGE = "Mage/Dark Wizard",
+    ARCHER = "Archer/Hunter",
+    WARRIOR = "Warrior/Knight"
 }
 
 export enum MaterialTier {
@@ -92,4 +92,12 @@ export function isBetween(range1: NumberRange, range: NumberRange): boolean {
 
 export function isGreaterThan(range1: NumberRange, range: NumberRange): boolean {
     return range1.minimum >= range.minimum && range1.maximum > range.maximum;
+}
+
+export function sumWithMax(range: NumberRange, value: number, max: number): NumberRange {
+    return new NumberRange(Math.max(max, range.minimum + value), Math.max(max, range.maximum + value));
+}
+
+export function isEmpty(range: NumberRange): boolean {
+    return range.maximum === 0 && range.maximum === 0;
 }

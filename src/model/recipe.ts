@@ -64,8 +64,8 @@ export class RecipePrototype {
     name: string;
     material1: string;
     material2: string;
-    material1Amount: string;
-    material2Amount: string;
+    material1Amount: number;
+    material2Amount: number;
     levels: LevelRanges[];
 
     constructor(name: string, material1: string, material2: string) {

@@ -81,7 +81,7 @@
             <div>
                 <p class="text-mc-gray">Crafting Lv. Min: {{ing.level}}</p>
                 <div v-for="(value) in ing.skills" class="flex ml-4">
-                    <img class="pixelated w-4 h-4 my-auto" :src="'/sprites/' + value.toLowerCase() + '.webp'"/>
+                    <img class="pixelated w-4 h-4 my-auto" :src="'/builder/sprites/' + value.toLowerCase() + '.webp'"/>
                     <span class="my-auto text-mc-gray ml-2"> {{ value }}</span>
                 </div>
             </div>

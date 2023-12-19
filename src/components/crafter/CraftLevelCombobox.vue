@@ -61,7 +61,7 @@ export default {
 
     watchEffect(() => {
       rolls.value = props.recipe!.levels;
-      selectedLevel.value = props.recipe?.levels[0].levelRange
+      selectedLevel.value = props.recipe!.levels[0].levelRange
     });
     return { query, emit, filteredLevels, selectedLevel, rolls }
   }

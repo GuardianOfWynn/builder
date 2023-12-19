@@ -1,5 +1,5 @@
 <template>
-  <Combobox immediate :defaultValue="craftTypes[0]" @update:modelValue="value => $emit('update-craft-type', value)"
+  <Combobox immediate :defaultValue="craftTypes[12]" @update:modelValue="value => $emit('update-craft-type', value)"
     v-model="selectedType" name="assignee" class="h-8">
     <div class="font-minecraft relative flex gap-x-4 ">
       <!--<ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
@@ -10,7 +10,8 @@
           </ComboboxButton>-->
       <ComboboxInput :spellcheck="false"
         class="text-md border-purple-600 border-[1px] text-white bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
-        @change="query = $event.target.value" :displayValue="(x: any) => x" />
+        @change="query = $event.target.value" :displayValue="(x: any) => x" 
+        />
       <ComboboxOptions class="absolute z-10 flex flex-col right-0 top-0">
         <ComboboxOption v-for="(x, i) in filteredTypes" :key="x.toString()" :value="x">
           <div v-bind:class="{ 'border-b-0': i != filteredTypes.length - 1, 'border-t-0': i != 0 }"
@@ -34,6 +35,7 @@ import {
   TransitionRoot,
   ComboboxLabel,
 } from '@headlessui/vue'
+import { ItemType } from "../../scripts/util";
 
 export default {
   name: 'ItemTypeCombobox',
@@ -48,9 +50,9 @@ export default {
   emits: ['update-craft-type'],
   async setup({ emit }: any) {
 
-    const craftTypes: String[] = await (await fetch("/builder/craft_types.json")).json();
+    const craftTypes: ItemType[] = Object.values(ItemType);
     const query = ref('');
-    const selectedType: Ref<String | undefined> = ref(undefined);
+    const selectedType: Ref<ItemType | undefined> = ref(undefined);
     const filteredTypes = computed(() =>
       query.value === ''
         ? craftTypes

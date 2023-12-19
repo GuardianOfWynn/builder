@@ -5,6 +5,11 @@ export interface DamageBounds {
     high: NumberRange;
 }
 
+export function calculateMaterialMultiplier(material1Quantity: number, material2Quantity: number, material1Tier: number, material2Tier: number): number {
+    let tierToMult = [0,1,1.25,1.4];
+    return (tierToMult[material1Tier]*material1Quantity + tierToMult[material2Tier]*material2Quantity) / (material1Quantity + material2Quantity);
+}
+
 export function calculateDamage(baseLower: number, baseUpper: number, attackSpeed: CraftedAttackSpeed): DamageBounds  {
 
     // thanks hpp-eng!
