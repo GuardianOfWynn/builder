@@ -5,7 +5,7 @@ export class WynnItem {
 
     name: string;
     tier: ItemTier;
-    health: number;
+    health: NumberRange;
     set: string | null;
     powderSlots: number;
     type: ItemType;

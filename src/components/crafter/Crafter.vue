@@ -35,8 +35,7 @@
           <p class="my-auto col-span-3" >{{ recipe.material2 }} tier: </p>
           <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4" :tier="material2Tier" />
           <p class="col-span-3">Attack Speed: </p>
-          <div>
-          </div>
+          <AttackSpeedSelector :tier="attackSpeed" class="col-span-4"/>
         </div>
       </div>
     </div>
@@ -110,10 +109,12 @@ import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../s
 import { WynnItem } from "../../model/item";
 import ItemCard from "../ItemCard.vue";
 import MaterialTierSelector from "./MaterialTierSelector.vue";
+import AttackSpeedSelector from "./AttackSpeedSelector.vue";
 
 export default {
   name: 'Crafter',
   async setup() {
+    
     onMounted(() => {
       assemble();
     })
@@ -124,7 +125,7 @@ export default {
     const craftType: Ref<ItemType> = ref(craftTypes[12]);
     const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
     const level = ref(recipe.value.levels[0]);
-    const attackSpeed = ref(CraftedAttackSpeed.NORMAL);
+    const attackSpeed = ref('Normal');
     const recipeRolls: Ref<RecipePrototype[]> = ref(SCROLL_RECIPES);
     const levelRolls: Ref<LevelRanges[]> = ref(SCROLL_RECIPES[0].levels);
     const result: Ref<WynnItem | undefined> = ref(undefined);
@@ -145,6 +146,10 @@ export default {
       [ref(100), ref(100)],
       [ref(100), ref(100)]
     ]);
+
+    function getAttackSpeed(val: string) {
+      return val === 'Slow' ? CraftedAttackSpeed.SLOW : val === 'Normal' ? CraftedAttackSpeed.NORMAL : CraftedAttackSpeed.FAST;
+    } 
 
     function handleIngredientUpdated(pos: number, ingredient: Ingredient) {
       ingredients[pos].ingredient = ingredient;
@@ -200,13 +205,13 @@ export default {
           craftType.value,
           material1Tier.value,
           material2Tier.value,
-          attackSpeed.value,
+          getAttackSpeed(attackSpeed.value),
           level.value
         ));
     }
 
-    return { ingredientList, ingredients, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, material2Tier, result, effectiveness, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
+    return { ingredientList, ingredients, attackSpeed, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, material2Tier, result, effectiveness, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector }
+  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector }
 }
 </script>

@@ -25,6 +25,7 @@
         <p class="text-md text-mc-gray mr-2 text-center">{{item.name}}</p>
         <p class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{item.type}}</p>
 
+        <p v-show="item.health.maximum !== 0 && item.health.minimum !== 0" class="text-mc-dark-red">Health: <span class="text-white">{{ Math.floor(item.health.minimum) + " - " + Math.floor(item.health.maximum) }}</span></p>
         <p class=" text-mc-gray" v-show="item.clazz !== undefined">Class Req: {{ item.clazz }}</p>
         <p class=" text-mc-gray">Combat Lv. Min: {{ item.requirements.level }}</p>
 

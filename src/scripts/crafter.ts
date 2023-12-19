@@ -29,15 +29,18 @@ export function assembleCraft(recipe: Recipe): WynnItem {
   let item = new WynnItem();
 
   let materialMultiplier = calculateMaterialMultiplier(recipe.prototype.material1Amount, recipe.prototype.material2Amount, recipe.material1Tier, recipe.material2Tier);
-  console.log(materialMultiplier);
   item.isCrafted = true;
   let baseCharges = getBaseCharges(recipe.craftType, recipe.prototype);
-  let baseDurability = getBaseDurationOrDurability(recipe.craftType, recipe.prototype, recipe.level);
+  let baseDurability = getBaseDurationOrDurability(recipe.craftType, recipe.prototype, recipe.level, recipe.ingredients.every(x => x.ingredient === undefined));
   item.craftedStatus = {
     durability: isConsumable(recipe.craftType) ? new NumberRange(0,0) : new NumberRange(baseDurability.minimum * materialMultiplier, baseDurability.maximum * materialMultiplier),
     duration: !isConsumable(recipe.craftType) ? new NumberRange(0,0) : new NumberRange(baseDurability.minimum * materialMultiplier, baseDurability.maximum * materialMultiplier),
     charges: baseCharges
   }
+
+  let baseHealth = getBaseHealth(recipe.craftType, recipe.prototype, recipe.level, recipe.ingredients.every(x => x.ingredient === undefined))
+  console.log(baseHealth);
+  item.health = new NumberRange(baseHealth.minimum * materialMultiplier, baseHealth.maximum * materialMultiplier);
 
   item.requirements = {
     strength: 0,
@@ -170,9 +173,9 @@ export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][
   return effectiveness;
 }
 
-export function getBaseDurationOrDurability<T extends RecipePrototype>(craftType: ItemType, recipe: T, levelRange: LevelRanges): NumberRange {
+export function getBaseDurationOrDurability<T extends RecipePrototype>(craftType: ItemType, recipe: T, levelRange: LevelRanges, noIngredients: boolean): NumberRange {
   return (isConsumable(craftType))
-    ? (<ConsumableLevelRanges[]>(<ConsumableRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].durationRange
+    ? (!noIngredients ? (<ConsumableLevelRanges[]>(<ConsumableRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].durationRange : new NumberRange(3,3))
     : ((isWeapon(craftType)))
       ? (<WeaponLevelRanges[]>(<WeaponRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].durabilityRange
       : (isArmour(craftType) || isAccessory(craftType))
@@ -209,7 +212,7 @@ export function getBaseCharges<T extends RecipePrototype>(craftType: ItemType, r
 
 export function getBaseHealth<T extends RecipePrototype>(craftType: ItemType, recipe: T, levelRange: LevelRanges, noIngredients: Boolean) {
   return (isConsumable(craftType) && noIngredients)
-    ? (<ConsumableLevelRanges[]>(<ConsumableRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].hpRange
+    ? (<ConsumableLevelRanges[]>(<ConsumableRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].hprRange
     : (isArmour(craftType))
       ? (<ArmourLevelRanges[]>(<ArmourRecipePrototype><unknown>recipe).levels).filter(x => x.id === levelRange.id)[0].hpRange
       : NumberRange.of(0,0);

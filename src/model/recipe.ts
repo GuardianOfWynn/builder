@@ -118,6 +118,6 @@ export class ArmourLevelRanges extends LevelRanges {
 }
 
 export class ConsumableLevelRanges extends LevelRanges {
-    hpRange: NumberRange;
+    hprRange: NumberRange;
     durationRange: NumberRange;
 }
