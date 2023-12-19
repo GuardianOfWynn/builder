@@ -71,12 +71,12 @@
       </div>
     </div>
     <div class="mt-16 grid grid-cols-6 grid-rows-1 gap-x-2 gap-y-2 pb-16">
-      <IngredientCard :ing="ingredients[0].ingredient" />
-      <IngredientCard :ing="ingredients[1].ingredient" />
-      <IngredientCard :ing="ingredients[2].ingredient" />
-      <IngredientCard :ing="ingredients[3].ingredient" />
-      <IngredientCard :ing="ingredients[4].ingredient" />
-      <IngredientCard :ing="ingredients[5].ingredient" />
+      <IngredientCard :ingredient="ingredients[0].ingredient" />
+      <IngredientCard :ingredient="ingredients[1].ingredient" />
+      <IngredientCard :ingredient="ingredients[2].ingredient" />
+      <IngredientCard :ingredient="ingredients[3].ingredient" />
+      <IngredientCard :ingredient="ingredients[4].ingredient" />
+      <IngredientCard :ingredient="ingredients[5].ingredient" />
     </div>
   </div>
 </template>
@@ -130,7 +130,7 @@ export default {
     ]);
 
     function handleIngredientUpdated(pos: number, ingredient: Ingredient) {
-      ingredients.values[pos] = ingredient;
+      ingredients[pos].ingredient = ingredient;
       assemble();
     }
 
@@ -163,7 +163,8 @@ export default {
 
     const assemble = () => {
 
-      let effec = getEffectivenessMatrix(Array.from(ingredients.values()));
+      let effec = getEffectivenessMatrix(ingredients);
+      console.log(effec);
       effectiveness[0][0].value = effec[0][0];
       effectiveness[0][1].value = effec[0][1];
       effectiveness[1][0].value = effec[1][0];

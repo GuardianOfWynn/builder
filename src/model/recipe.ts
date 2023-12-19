@@ -1,4 +1,5 @@
-import { ItemType, NumberRange } from "../scripts/util";
+import { IngredientSlot, getEffectivenessMatrix } from "../scripts/crafter";
+import { CraftedAttackSpeed, ItemType, MaterialTier, NumberRange } from "../scripts/util";
 
 export const SPEAR_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/spear.json")).json();
 export const BOW_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/bow.json")).json();
@@ -34,6 +35,28 @@ export function getRecipePrototypeFor(type: ItemType): RecipePrototype[] {
         case ItemType.POTION: return POTION_RECIPES;
         case ItemType.SCROLL: return SCROLL_RECIPES;
         default: return SCROLL_RECIPES;
+    }
+}
+
+export class Recipe {
+    ingredients: IngredientSlot[];
+    prototype: RecipePrototype;
+    material1Tier: MaterialTier;
+    material2Tier: MaterialTier;
+    attackSpeed: CraftedAttackSpeed;
+    level: LevelRanges;
+    craftType: ItemType;
+    effectivenessMatrix: number[][];
+
+    constructor(prototype: RecipePrototype, ingredients: IngredientSlot[], craftType: ItemType, material1Tier: MaterialTier, material2Tier: MaterialTier, attackSpeed: CraftedAttackSpeed, level: LevelRanges) {
+        this.prototype = prototype;
+        this.material1Tier = material1Tier;
+        this.material2Tier = material2Tier;
+        this.attackSpeed = attackSpeed;
+        this.level = level;
+        this.ingredients = ingredients;
+        this.craftType = craftType;
+        this.effectivenessMatrix = getEffectivenessMatrix(ingredients);
     }
 }
 

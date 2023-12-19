@@ -57,28 +57,39 @@ export enum WynnClass {
     WARRIOR = "Warrior"
 }
 
+export enum MaterialTier {
+    TIER_3 = 3,
+    TIER_2 = 2,
+    TIER_1 = 1
+}
+
 export class NumberRange {
-    from: number;
-    to: number;
+    minimum: number;
+    maximum: number;
 
     constructor(from: number, to: number) {
-        this.from = from;
-        this.to = to;
+        this.minimum = from;
+        this.maximum = to;
     }
 
-    static of(from: number, to: number) {
+    static of(from: number, to: number): NumberRange {
         return new NumberRange(from, to);
     }
 
-    equals(range: NumberRange) {
-        return range.from === this.from && range.to === this.to;
+    public equals(range: NumberRange): boolean {
+        return range.minimum === this.minimum && range.maximum === this.maximum;
     }
 
-    isGreaterThan(range: NumberRange) {
-        return this.from >= range.from && this.to > range.to;
+    public isGreaterThan(range: NumberRange): boolean {
+        return this.minimum >= range.minimum && this.maximum > range.maximum;
     }
 
-    isBetween(range: NumberRange) {
-        return this.from >= range.from && this.to <= range.to;
-    }
+}
+
+export function isBetween(range1: NumberRange, range: NumberRange): boolean {
+    return range1.minimum >= range.minimum && range1.maximum <= range.maximum;
+}
+
+export function isGreaterThan(range1: NumberRange, range: NumberRange): boolean {
+    return range1.minimum >= range.minimum && range1.maximum > range.maximum;
 }

@@ -96,15 +96,22 @@
 </template>
   
 <script lang="ts">
+import { ref, watchEffect } from "vue";
 import Ingredient from "../model/ingredient";
   
   export default {
       name: 'IngredientCard',
       props: {
-          ing: Ingredient,
+          ingredient: Ingredient,
       },
-      async setup() {
+      async setup(props) {
         
+        const ing = ref(props.ingredient);
+
+        watchEffect(() => {
+            ing.value = props.ingredient;
+        })
+
         const format = (val, idName) => {
             if (idName === "POISON") {
                 return val + "/3s"
@@ -121,7 +128,7 @@ import Ingredient from "../model/ingredient";
                 return val + "%";
             }
         }
-        return {format}
+        return {ing,format}
       },
       components: { }
   }

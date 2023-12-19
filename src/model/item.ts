@@ -11,8 +11,14 @@ export class WynnItem {
     attackSpeed: AttackSpped;
     armorType: ArmorType;
     clazz: WynnClass | null;
+    isCrafted: boolean;
     isQuestItem: boolean;
     isUntradable: boolean;
+    craftedStatus: {
+        durability: NumberRange;
+        duration: NumberRange;
+        charges: number;
+    }
     requirements: {
         level: Number;
         dexterity: Number;

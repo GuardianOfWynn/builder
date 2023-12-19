@@ -1,7 +1,8 @@
 import Ingredient from "../model/ingredient";
-import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype } from "../model/recipe";
-import { ItemType, CraftedAttackSpeed, NumberRange } from "./util";
+import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype } from "../model/recipe";
+import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, MaterialTier, AttackSpped } from "./util";
 import { WynnItem } from "../model/item";
+import { Ref } from "vue";
 
 const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
 const isArmour = (craftType: ItemType) => [ItemType.HELMET, ItemType.CHESTPLATE, ItemType.LEGGINGS, ItemType.BOOTS].includes(craftType);
@@ -20,11 +21,38 @@ export interface IngredientSlot {
   y: number
 }
 
-/*
-export function assembleCraft(ingredient: IngredientSlot[], effectivenessMatrix: number[][]): WynnItem {
-  return undefined;
+
+export function assembleCraft(recipe: Recipe): WynnItem {
+  let effectivenessMatrix = getEffectivenessMatrix(recipe.ingredients);
+
+  let item = new WynnItem();
+
+  let baseDurability = getBaseDurationOrDurability(recipe.prototype, recipe.level.levelRange);
+  item.craftedStatus.durability = baseDurability;
+  item.craftedStatus.duration = baseDurability;
+
+  let baseDamage = getBaseDamage(recipe.prototype, recipe.level.levelRange);
+  item.damages.neutral = baseDamage;
+
+  if(recipe.prototype instanceof ArmourRecipePrototype) {
+    item.defenses = {
+      air: new NumberRange(0,0),
+      earth: new NumberRange(0,0),
+      thunder: new NumberRange(0,0),
+      water: new NumberRange(0,0),
+      fire: new NumberRange(0,0)
+    };
+    item.craftedStatus.durability = new NumberRange(0,0);
+  }
+  if(recipe.prototype instanceof ArmourRecipePrototype) {
+
+  }
+
+  ingredients.forEach(ingredients => {
+
+  })
 }
-*/
+
 
 export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][] {
   let effectiveness = [[100, 100], [100, 100], [100, 100]];
@@ -37,22 +65,22 @@ export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][
     ingredients.forEach(target => {
       
       if (!touching(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.notTouching;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.notTouching;
       }
       if (touching(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.touching;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.touching;
       }
       if (under(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.under;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.under;
       }
       if (above(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.above;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.above;
       }
       if (left(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.left;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.left;
       }
       if (right(ingredient.x, target.x, ingredient.y, target.y)) {
-        effectiveness[target.x][target.y] += ingredient.ingredient!.effectivenessModifiers.right;
+        effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.right;
       }
     })
   });
@@ -81,15 +109,15 @@ export function getBaseCharges<T extends RecipePrototype>(recipe: T): number {
     return 0;
   }
 
-  if(recipe.levels[0].levelRange.isBetween(NumberRange.of(1,29))) {
+  if(isBetween(recipe.levels[0].levelRange, NumberRange.of(1,29))) {
     return 1;
   }
 
-  if(recipe.levels[0].levelRange.isBetween(NumberRange.of(30,69))) {
+  if(isBetween(recipe.levels[0].levelRange, NumberRange.of(30,69))) {
     return 2;
   }
 
-  if(recipe.levels[0].levelRange.isBetween(NumberRange.of(70,105))) {
+  if(isBetween(recipe.levels[0].levelRange, NumberRange.of(70,105))) {
     return 3;
   }
 
@@ -97,7 +125,7 @@ export function getBaseCharges<T extends RecipePrototype>(recipe: T): number {
 }
 
 export function getBaseHealth<T extends RecipePrototype>(recipe: T, levelRange: NumberRange, noIngredients: Boolean) {
-  return (recipe instanceof ConsumableRecipePrototype)
+  return (recipe instanceof ConsumableRecipePrototype && noIngredients)
     ? (<ConsumableLevelRanges[]>(<ConsumableRecipePrototype>recipe).levels).filter(x => x.levelRange.equals(levelRange))[0].hpRange
     : (recipe instanceof ArmourRecipePrototype)
       ? (<ArmourLevelRanges[]>(<ArmourRecipePrototype>recipe).levels).filter(x => x.levelRange.equals(levelRange))[0].hpRange
