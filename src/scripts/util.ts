@@ -57,6 +57,30 @@ export enum WynnClass {
     WARRIOR = "Warrior/Knight"
 }
 
+export enum Profession {
+    WEAPONSMITHING = "Weaponsmithing",
+    WOODWORKING = "Woodworking",
+    SCRIBING = "Scribing",
+    ALCHEMISM = "Alchemism",
+    COOKING = "Cooking",
+    ARMOURING = "Armouring",
+    TAILORING = "Tailoring",
+    JEWELING = "Jeweling"
+}
+
+export function getProfessionForItemType(itemType: ItemType) {
+    switch(itemType) {
+        case ItemType.BOOTS: case ItemType.LEGGINGS: return Profession.TAILORING;
+        case ItemType.CHESTPLATE: case ItemType.HELMET: return Profession.ARMOURING;
+        case ItemType.NECKLACE: case ItemType.RING: case ItemType.BRACELET: return Profession.JEWELING;
+        case ItemType.RELIK: case ItemType.BOW: case ItemType.WAND: return Profession.WOODWORKING;
+        case ItemType.SPEAR: case ItemType.DAGGER: return Profession.WEAPONSMITHING;
+        case ItemType.SCROLL: return Profession.SCRIBING;
+        case ItemType.FOOD: return Profession.COOKING;
+        case ItemType.POTION: return Profession.ALCHEMISM;
+    }
+}
+
 export enum MaterialTier {
     TIER_3 = 3,
     TIER_2 = 2,
@@ -75,8 +99,11 @@ export class NumberRange {
     static of(from: number, to: number): NumberRange {
         return new NumberRange(from, to);
     }
+}
 
-
+export class Pair<T, U> {
+    first: T;
+    second: U;
 }
 
 export function isBetween(range1: NumberRange, range: NumberRange): boolean {

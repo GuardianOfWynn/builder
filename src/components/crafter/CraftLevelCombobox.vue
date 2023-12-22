@@ -45,13 +45,14 @@ export default {
   },
   emits: ['update-craft-level'],
   props: {
-    recipe: RecipePrototype
+    recipe: RecipePrototype,
+    level: LevelRanges
   },
   setup(props, { emit }) {
 
     const query = ref('');
     const rolls: Ref<LevelRanges[]> = ref(props.recipe!.levels);
-    const selectedLevel: Ref<NumberRange | undefined> = ref(undefined);
+    const selectedLevel: Ref<NumberRange | undefined> = ref(props.level?.levelRange);
     const filteredLevels = computed(() =>
       query.value === ''
         ? rolls.value
@@ -61,7 +62,8 @@ export default {
 
     watchEffect(() => {
       rolls.value = props.recipe!.levels;
-      selectedLevel.value = props.recipe!.levels[0].levelRange
+      selectedLevel.value = props.recipe!.levels[0].levelRange;
+      selectedLevel.value = props.level?.levelRange;
     });
     return { query, emit, filteredLevels, selectedLevel, rolls }
   }

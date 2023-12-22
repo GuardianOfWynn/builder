@@ -6,6 +6,9 @@ export default defineConfig({
   base: '/builder/',
   plugins: [vue()],
   build: {
-    target: 'esnext'
+    target: 'esnext',
+    rollupOptions: {
+      external: 'NonExistingPath'
+    }
   }
 })

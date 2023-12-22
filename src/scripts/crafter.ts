@@ -1,8 +1,8 @@
 import Ingredient, { Identification } from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
-import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, sumWithMax, WynnClass, MaterialTier, AttackSpeed } from "./util";
+import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, sumWithMax, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType } from "./util";
 import { WynnItem } from "../model/item";
-import { Ref } from "vue";
+import { Ref, warn } from "vue";
 import { calculateMaterialMultiplier } from "./math";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
@@ -23,13 +23,17 @@ export interface IngredientSlot {
 }
 
 
-export function assembleCraft(recipe: Recipe): WynnItem {
+export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
   let effectivenessMatrix = getEffectivenessMatrix(recipe.ingredients);
+  let warnings: string[] = []; 
 
   let item = new WynnItem();
+  item.name = recipe.hash;
+  item.isCrafted = true;
+
+  let targetProf = getProfessionForItemType(recipe.craftType);
 
   let materialMultiplier = calculateMaterialMultiplier(recipe.prototype.material1Amount, recipe.prototype.material2Amount, recipe.material1Tier, recipe.material2Tier);
-  item.isCrafted = true;
   let baseCharges = getBaseCharges(recipe.craftType, recipe.prototype);
   let baseDurability = getBaseDurationOrDurability(recipe.craftType, recipe.prototype, recipe.level, recipe.ingredients.every(x => x.ingredient === undefined));
   item.craftedStatus = {
@@ -39,7 +43,6 @@ export function assembleCraft(recipe: Recipe): WynnItem {
   }
 
   let baseHealth = getBaseHealth(recipe.craftType, recipe.prototype, recipe.level, recipe.ingredients.every(x => x.ingredient === undefined))
-  console.log(baseHealth);
   item.health = new NumberRange(baseHealth.minimum * materialMultiplier, baseHealth.maximum * materialMultiplier);
 
   item.requirements = {
@@ -88,12 +91,26 @@ export function assembleCraft(recipe: Recipe): WynnItem {
   let identifications: Identification[] = [];
   recipe.ingredients.forEach(slot => {
 
-    if (slot.ingredient === undefined) {
+    if (slot.ingredient === undefined || slot.ingredient === null) {
       return;
     }
 
     let effectivenessMultiplier = effectivenessMatrix[slot.y][slot.x] / 100;
     let ingredient = slot.ingredient;
+
+    if(ingredient.level > recipe.level.levelRange.maximum) {
+      let warning = "WARNING: " + ingredient.name + " requires combat level " + ingredient.level;
+      if(!warnings.includes(warning)) {
+        warnings.push(warning);
+      }
+    }
+
+    if(!ingredient.skills.includes(targetProf)) {
+      let warning = "WARNING: " + ingredient.name + " cannot be used for " + targetProf;
+      if(!warnings.includes(warning)) {
+        warnings.push(warning);
+      }
+    }
 
     if (ingredient.level > item.requirements.level) {
       item.requirements.level = ingredient.level;
@@ -135,7 +152,10 @@ export function assembleCraft(recipe: Recipe): WynnItem {
 
   item.identifications = identifications;
 
-  return item;
+  return {
+    first: item,
+    second: warnings
+  };
 
 }
 
@@ -143,7 +163,7 @@ export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][
   let effectiveness = [[100, 100], [100, 100], [100, 100]];
   ingredients.forEach(ingredient => {
 
-    if (ingredient.ingredient === undefined) {
+    if (ingredient.ingredient === undefined || ingredient.ingredient === null) {
       return;
     }
 
@@ -219,48 +239,50 @@ export function getBaseHealth<T extends RecipePrototype>(craftType: ItemType, re
 
 export function encodeRecipe(recipe: Recipe): string {
   let ingredients = recipe.ingredients.reduce((accumulator, value) => {
-    if (value.ingredient === undefined) {
-      return "00";
+    if (value.ingredient === undefined || value.ingredient === null) {
+      return accumulator + "00";
     }
     return accumulator + value.ingredient.id;
   }, "");
-  let prototypeIndex = getRecipePrototypeFor(recipe.craftType).indexOf(recipe.prototype);
+  let prototypeIndex = getRecipePrototypeFor(recipe.craftType).findIndex(x => x.name === recipe.prototype.name);
   let attackSpeed = recipe.attackSpeed === CraftedAttackSpeed.SLOW ? "1" : recipe.attackSpeed === CraftedAttackSpeed.FAST ? "3" : "2"; 
-  let lvlIndex = recipe.prototype.levels.indexOf(recipe.level);
-  let encoded = recipe.craftType + "-" + ingredients + "-" + attackSpeed + "-" + prototypeIndex + "-" + lvlIndex + "-" + recipe.material1Tier.toString() + recipe.material2Tier.toString();
+  let lvlIndex = recipe.prototype.levels.findIndex(x => x.id === recipe.level.id);
+  let encoded = "CR-" + Object.values(ItemType).indexOf(recipe.craftType) + "-" + ingredients + "-" + attackSpeed + "-" + prototypeIndex + "-" + lvlIndex + "-" + recipe.material1Tier.toString() + recipe.material2Tier.toString();
   return encoded;
 }
 
 export function isValidHash(encoded: string): boolean {
   let splited = encoded.split("-")
-  return splited.length === 6 // Encoded recipe must have 6 sections
-    && Object.values(ItemType).includes(splited[0].toLowerCase().charAt(0).toUpperCase() + splited[0].toLowerCase().slice(1) as ItemType) // ItemType
-    && splited[1].length === 12 // Six ingredients, each ingredient ID has 2 characters
-    && !isNaN(parseInt(splited[2])) && parseInt(splited[2]) >= 1 && parseInt(splited[2]) <= 3 // Attack speed: Fast (1), Normal (2), Slow (3)
-    && !isNaN(parseInt(splited[3])) && parseInt(splited[3]) >= 0 || parseInt(splited[3]) <= 11 // Prototype index
-    && !isNaN(parseInt(splited[4])) && parseInt(splited[4]) >= 0 || parseInt(splited[4]) <= 3 //  Level index
-    && !isNaN(parseInt(splited[5])) && splited[5].length === 2 && parseInt(splited[5].charAt(0)) >= 1 &&
-        parseInt(splited[5].charAt(0)) <= 3 && parseInt(splited[5].charAt(1)) >= 1 && parseInt(splited[5].charAt(1)) <= 3; // Material tiers
+  return encoded.startsWith("CR") && splited.length === 7 // Encoded recipe must have 6 sections
+    && !isNaN(parseInt(splited[1])) && parseInt(splited[1]) >= 0 && parseInt(splited[1]) <= 14 // ItemType
+    && splited[2].length === 12 // Six ingredients, each ingredient ID has 2 characters
+    && !isNaN(parseInt(splited[3])) && parseInt(splited[3]) >= 1 && parseInt(splited[3]) <= 3 // Attack speed: Fast (1), Normal (2), Slow (3)
+    && !isNaN(parseInt(splited[4])) && parseInt(splited[4]) >= 0 || parseInt(splited[4]) <= 11 // Prototype index
+    && !isNaN(parseInt(splited[5])) && parseInt(splited[5]) >= 0 || parseInt(splited[5]) <= 3 //  Level index
+    && !isNaN(parseInt(splited[6])) && splited[6].length === 2 && parseInt(splited[6].charAt(0)) >= 1 &&
+        parseInt(splited[6].charAt(0)) <= 3 && parseInt(splited[6].charAt(1)) >= 1 && parseInt(splited[6].charAt(1)) <= 3; // Material tiers
 
 }
 
 export function decodeRecipe(encoded: string, ingredients: Ingredient[]): Recipe {
   let splited = encoded.split("-");
-  let urlItemType = splited[0].toLowerCase().charAt(0).toUpperCase() + splited[0].toLowerCase().slice(1);
-  let itemType = Object.values(ItemType).includes(urlItemType as ItemType) ? urlItemType as ItemType : ItemType.SCROLL
-  let ingredientsStr = splited[1];
-  let attackSpeed = splited[2] === "1" ? CraftedAttackSpeed.SLOW : splited[2] == "3" ? CraftedAttackSpeed.FAST : CraftedAttackSpeed.NORMAL
-  let parsedProtypeIndex = parseInt(splited[3]);
+  let itemTypeIndex = isNaN(parseInt(splited[1])) || parseInt(splited[1]) < 0 || parseInt(splited[1]) > 14 ? 0 : parseInt(splited[1])
+  let itemType = Object.values(ItemType).at(itemTypeIndex)
+  let ingredientsStr = splited[2];
+  let attackSpeed = splited[3] === "1" ? CraftedAttackSpeed.SLOW : splited[3] == "3" ? CraftedAttackSpeed.FAST : CraftedAttackSpeed.NORMAL
+  let parsedProtypeIndex = parseInt(splited[4]);
   let prototypeIndex = isNaN(parsedProtypeIndex) || parsedProtypeIndex < 0 || parsedProtypeIndex > 11 ? 0 : parsedProtypeIndex;
-  let parsedLvlIndex = parseInt(splited[4]);
-  let mat1Tier = splited[5].charAt(0);
-  let mat2Tier = splited[5].charAt(1);
+  let parsedLvlIndex = parseInt(splited[5]);
+  let mat1Tier = splited[6].charAt(0);
+  let mat2Tier = splited[6].charAt(1);
   let prototype = getRecipePrototypeFor(itemType as ItemType)[prototypeIndex];
   let lvlIndex = isNaN(parsedLvlIndex) || parsedLvlIndex < 0 || parsedLvlIndex > 3 || parsedLvlIndex > prototype.levels.length - 1 ? 0 : parsedLvlIndex;
+  console.log(lvlIndex);
   let recipe: Recipe = {
+    hash: encoded,
     ingredients: [],
     attackSpeed: attackSpeed,
-    craftType: itemType,
+    craftType: itemType!,
     effectivenessMatrix: [[]],
     prototype: prototype,
     material1Tier: mat1Tier === "2" ? MaterialTier.TIER_2 : mat1Tier === "3" ? MaterialTier.TIER_3 : MaterialTier.TIER_1,

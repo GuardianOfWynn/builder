@@ -25,7 +25,7 @@
 </template>
   
 <script lang="ts">
-import { computed, ref, Ref } from "vue";
+import { computed, ref, Ref, watchEffect } from "vue";
 import {
   Combobox,
   ComboboxInput,
@@ -47,18 +47,22 @@ export default {
     ComboboxOption,
     TransitionRoot, ComboboxLabel
   },
+  props: {
+    craftType: String
+  },
   emits: ['update-craft-type'],
-  async setup({ emit }: any) {
+  async setup(props, { emit }: any) {
 
     const craftTypes: ItemType[] = Object.values(ItemType);
     const query = ref('');
-    const selectedType: Ref<ItemType | undefined> = ref(undefined);
+    const selectedType: Ref<ItemType | undefined> = ref(props.craftType as ItemType);
     const filteredTypes = computed(() =>
       query.value === ''
         ? craftTypes
         : craftTypes.filter((x) => {
           return x.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0, 20));
+    watchEffect(() => selectedType.value = props.craftType as ItemType)
     return { query, emit, filteredTypes, selectedType, craftTypes }
   }
 }

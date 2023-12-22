@@ -33,6 +33,7 @@ import { MaterialTier } from "../../scripts/util";
     setup(props, {emit}: any) {
         const tiers = [1,2,3];
         const selectedTier = ref(props.tier)
+        watchEffect(() => selectedTier.value = props.tier)
         return { tiers, selectedTier, emit }
     },
     components: { RadioGroup, RadioGroupOption }

@@ -33,6 +33,7 @@ import { AttackSpeed, CraftedAttackSpeed, MaterialTier } from "../../scripts/uti
     setup(props, {emit}: any) {
         const tiers = ['Slow', 'Normal', 'Fast'];
         const selectedTier = ref(props.tier)
+        watchEffect(() => selectedTier.value = props.tier);
         return { tiers, selectedTier, emit }
     },
     components: { RadioGroup, RadioGroupOption }

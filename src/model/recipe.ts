@@ -1,4 +1,4 @@
-import { IngredientSlot, getEffectivenessMatrix } from "../scripts/crafter";
+import { IngredientSlot, encodeRecipe, getEffectivenessMatrix } from "../scripts/crafter";
 import { CraftedAttackSpeed, ItemType, MaterialTier, NumberRange } from "../scripts/util";
 
 export const SPEAR_RECIPES: WeaponRecipePrototype[] = await (await fetch("/builder/recipe_prototypes/spear.json")).json();
@@ -39,6 +39,7 @@ export function getRecipePrototypeFor(type: ItemType): RecipePrototype[] {
 }
 
 export class Recipe {
+    hash: string;
     ingredients: IngredientSlot[];
     prototype: RecipePrototype;
     material1Tier: MaterialTier;
@@ -57,6 +58,7 @@ export class Recipe {
         this.ingredients = ingredients;
         this.craftType = craftType;
         this.effectivenessMatrix = getEffectivenessMatrix(ingredients);
+        this.hash = encodeRecipe(this);
     }
 }
 

@@ -10,17 +10,17 @@
           <div v-if="craftType === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
           <div v-if="craftType === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
           <div v-if="craftType === 'Spear'" class="">
-            <img src="/builder/sprites/spear.webp" alt="">
+            <img src="/sprites/spear.webp" alt="">
           </div>
           <div v-if="craftType === 'Dagger'" class="">
-            <img src="/builder/sprites/dagger.webp" alt="">
+            <img src="/sprites/dagger.webp" alt="">
           </div>
           <div v-if="craftType === 'Relik'">
-            <img src="/builder/sprites/relik.webp" alt=""></div>
+            <img src="/sprites/relik.webp" alt=""></div>
           <div v-if="craftType === 'Bow'">
-            <img src="/builder/sprites/bow.webp" alt=""></div>
+            <img src="/sprites/bow.webp" alt=""></div>
           <div v-if="craftType === 'Wand'">
-            <img src="/builder/sprites/wand.webp" alt=""></div>
+            <img src="/sprites/wand.webp" alt=""></div>
           <div v-if="craftType === 'Bracelet'"
             class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
           <div v-if="craftType === 'Necklace'"
@@ -34,12 +34,12 @@
         </div>
         <div class="grid grid-cols-5 grid-rows-3 w-fit gap-x-2 gap-y-1">
           <p class="my-auto text-white">Type</p>
-          <CraftTypeCombobox class="col-span-4" @update-craft-type="handleItemTypeChange" />
+          <CraftTypeCombobox :craft-type="craftType" class="col-span-4" @update-craft-type="handleItemTypeChange" />
           <p class="my-auto text-white">Materials</p>
-          <MaterialsCombobox class="col-span-4" :recipePrototypes="recipeRolls"
+          <MaterialsCombobox :selected-prototype="recipe" class="col-span-4" :recipePrototypes="recipeRolls"
             @update-craft-materials="handleMaterialsChanged" />
           <p class="my-auto text-white">Level</p>
-          <CraftLevelCombobox class="col-span-4" :recipe="recipe" @update-craft-level="handleCraftLevelChanged" />
+          <CraftLevelCombobox :level="level" class="col-span-4" :recipe="recipe" @update-craft-level="handleCraftLevelChanged" />
         </div>
         <div class="grid grid-cols-7 gap-x-1 gap-y-1 text-mc-gray">
           <p class="my-auto col-span-3">{{ recipe.material1 }} tier: </p>
@@ -48,6 +48,9 @@
           <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4" :tier="material2Tier" />
           <p class="col-span-3">Attack Speed: </p>
           <AttackSpeedSelector :tier="attackSpeed" class="col-span-4"/>
+        </div>
+        <div :on-click="clipboardRecipe()" class="rounded-md border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
+          Copy recipe link
         </div>
       </div>
     </div>
@@ -91,6 +94,11 @@
         <ItemCard :item="result"/>
       </div>
     </div>
+    <div class="mt-24 w-full" v-show="warnings.length > 0">
+      <p class="text-center text-mc-red" v-for="warn in warnings">
+        {{ warn }}
+      </p>
+    </div>
     <div class="mt-16 grid grid-cols-6 grid-rows-1 gap-x-2 gap-y-2 pb-16">
       <IngredientCard :ingredient="ingredients[0].ingredient" />
       <IngredientCard :ingredient="ingredients[1].ingredient" />
@@ -115,7 +123,7 @@ import EffectivenessCard from "./EffectivenessCard.vue"
 import MaterialsCombobox from "./MaterialsCombobox.vue"
 import CraftTypeCombobox from "./CraftTypeCombobox.vue"
 import Ingredient from "../../model/ingredient";
-import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe, ConsumableRecipePrototype, ArmourRecipePrototype, WeaponRecipePrototype, WeaponLevelRanges, ConsumableLevelRanges } from "../../model/recipe"
+import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe } from "../../model/recipe"
 import { IngredientSlot, assembleCraft, getEffectivenessMatrix, decodeRecipe, encodeRecipe, isValidHash } from "../../scripts/crafter"
 import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../scripts/util"
 import { WynnItem } from "../../model/item";
@@ -135,7 +143,6 @@ export default {
     const route = useRoute();
     const ingredientList: Ingredient[] = await (await fetch("/builder/ingredients.json")).json();
     const craftTypes: ItemType[] = Object.values(ItemType);
-    let first = true;
     const craftType: Ref<ItemType> = ref(craftTypes[12]);
     const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
     const level = ref(recipe.value.levels[0]);
@@ -145,6 +152,9 @@ export default {
     const result: Ref<WynnItem | undefined> = ref(undefined);
     const material1Tier = ref(MaterialTier.TIER_1);
     const material2Tier = ref(MaterialTier.TIER_1);
+    const warnings: Ref<string[]> = ref([]);
+
+    let first = true;
 
     const ingredients: UnwrapNestedRefs<IngredientSlot[]> = reactive([
       { ingredient: undefined, x: 0, y: 0 },
@@ -211,6 +221,14 @@ export default {
       assemble();
     }
 
+    const clipboardRecipe = async () => {
+    try {
+      await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/crafter#/' + (result.value === undefined ? '' : result.value!.name));
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+    }
+
     const assemble = () => {
 
         let effectMatrix = getEffectivenessMatrix(ingredients);
@@ -241,7 +259,7 @@ export default {
           first = false;
         }
 
-        result.value = assembleCraft(new Recipe(
+        let rec = new Recipe(
           recipe.value,
           ingredients, 
           craftType.value,
@@ -249,10 +267,16 @@ export default {
           material2Tier.value,
           getAttackSpeed(attackSpeed.value),
           level.value
-        ));
+        );
+
+
+        let res = assembleCraft(rec);
+        warnings.value = res.second;
+        result.value = res.first;
+
     }
 
-    return { ingredientList, ingredients, attackSpeed, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, material2Tier, result, effectiveness, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
+    return { ingredientList, warnings, ingredients, attackSpeed, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, effectiveness, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
   components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector }
 }

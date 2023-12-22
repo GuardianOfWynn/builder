@@ -2,24 +2,24 @@
     <div class="border-[1px] bg-mc-bg font-minecraft w-full h-fit border-mc-aqua rounded-md p-2">
         
     <p v-if="item === undefined" class="text-mc-dark-gray text-center">No item</p>
-
     <div v-else class="text-sm">
+        <p class="text-center" :class="[item.isCrafted ? 'text-mc-dark-aqua' : 'text-mc-gray']">{{ item.name }}</p>
         <div class="flex items-center justify-center h-24 w-24 p-2 rounded-md mx-auto">
             <div v-if="item.type === 'Scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
             <div v-if="item.type === 'Food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
             </div>
             <div v-if="item.type === 'Spear'" class="">
-            <img src="/builder/sprites/spear.webp" alt="">
+            <img src="/sprites/spear.webp" alt="">
           </div>
           <div v-if="item.type === 'Dagger'" class="">
-            <img src="/builder/sprites/dagger.webp" alt="">
+            <img src="/sprites/dagger.webp" alt="">
           </div>
           <div v-if="item.type === 'Relik'">
-            <img src="/builder/sprites/relik.webp" alt=""></div>
+            <img src="/sprites/relik.webp" alt=""></div>
           <div v-if="item.type === 'Bow'">
-            <img src="/builder/sprites/bow.webp" alt=""></div>
+            <img src="/sprites/bow.webp" alt=""></div>
           <div v-if="item.type === 'Wand'">
-            <img src="/builder/sprites/wand.webp" alt=""></div>
+            <img src="/sprites/wand.webp" alt=""></div>
             <div v-if="item.type === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
             <div v-if="item.type === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
             <div v-if="item.type === 'Bracelet'"
@@ -34,8 +34,7 @@
             <div v-if="item.type === 'Boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours"></div>
           </div>
 
-        <p class="text-md text-mc-gray mr-2 text-center">{{item.name}}</p>
-        <p class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{item.type}}</p>
+        <p v-if="item.isCrafted" class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{item.type}}</p>
 
         <p v-show="item.health.maximum !== 0 && item.health.minimum !== 0" class="text-mc-dark-red">Health: <span class="text-white">{{ Math.floor(item.health.minimum) + " - " + Math.floor(item.health.maximum) }}</span></p>
         <p class=" text-mc-gray" v-show="item.clazz !== undefined">Class Req: {{ item.clazz }}</p>

@@ -43,13 +43,14 @@ export default {
   },
   emits: ['update-craft-materials'],
   props: {
-    recipePrototypes: Array<RecipePrototype>
+    recipePrototypes: Array<RecipePrototype>,
+    selectedPrototype: RecipePrototype
   },
   async setup(props, { emit }) {
   
     const query = ref('');
     const rolls = ref(props.recipePrototypes);
-    const selectedMats = ref(props.recipePrototypes![0]);
+    const selectedMats = ref(props.selectedPrototype);
 
     const filteredMaterials = computed(() =>
       query.value === ''
@@ -61,6 +62,7 @@ export default {
     watchEffect(() => {
       rolls.value = props.recipePrototypes;
       selectedMats.value = rolls.value![0];
+      selectedMats.value = props.selectedPrototype;
     });
     return { query, emit, filteredMaterials, selectedMats, rolls }
   }
