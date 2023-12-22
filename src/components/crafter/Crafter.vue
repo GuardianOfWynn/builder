@@ -9,6 +9,18 @@
           </div>
           <div v-if="craftType === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
           <div v-if="craftType === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
+          <div v-if="craftType === 'Spear'" class="">
+            <img src="/builder/sprites/spear.webp" alt="">
+          </div>
+          <div v-if="craftType === 'Dagger'" class="">
+            <img src="/builder/sprites/dagger.webp" alt="">
+          </div>
+          <div v-if="craftType === 'Relik'">
+            <img src="/builder/sprites/relik.webp" alt=""></div>
+          <div v-if="craftType === 'Bow'">
+            <img src="/builder/sprites/bow.webp" alt=""></div>
+          <div v-if="craftType === 'Wand'">
+            <img src="/builder/sprites/wand.webp" alt=""></div>
           <div v-if="craftType === 'Bracelet'"
             class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
           <div v-if="craftType === 'Necklace'"
@@ -44,22 +56,22 @@
         <p class="text-xl font-minecraft text-mc-lime mb-2">Ingredients:</p>
         <div class="grid w-full grid-cols-2 gap-2 grid-rows-3 ">
           <div class="w-full">
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(0, value)" />
+            <IngredientCombobox :ingredient="ingredients[0].ingredient" @update-ing="value => handleIngredientUpdated(0, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(1, value)" />
+            <IngredientCombobox :ingredient="ingredients[1].ingredient" @update-ing="value => handleIngredientUpdated(1, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(2, value)" />
+            <IngredientCombobox :ingredient="ingredients[2].ingredient" @update-ing="value => handleIngredientUpdated(2, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(3, value)" />
+            <IngredientCombobox :ingredient="ingredients[3].ingredient" @update-ing="value => handleIngredientUpdated(3, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(4, value)" />
+            <IngredientCombobox :ingredient="ingredients[4].ingredient" @update-ing="value => handleIngredientUpdated(4, value)" />
           </div>
           <div>
-            <IngredientCombobox @update-ing="value => handleIngredientUpdated(5, value)" />
+            <IngredientCombobox :ingredient="ingredients[5].ingredient" @update-ing="value => handleIngredientUpdated(5, value)" />
           </div>
         </div>
       </div>
@@ -104,12 +116,13 @@ import MaterialsCombobox from "./MaterialsCombobox.vue"
 import CraftTypeCombobox from "./CraftTypeCombobox.vue"
 import Ingredient from "../../model/ingredient";
 import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe, ConsumableRecipePrototype, ArmourRecipePrototype, WeaponRecipePrototype, WeaponLevelRanges, ConsumableLevelRanges } from "../../model/recipe"
-import { IngredientSlot, assembleCraft, isWeapon, isArmour, isConsumable, isAccessory, getEffectivenessMatrix } from "../../scripts/crafter"
+import { IngredientSlot, assembleCraft, getEffectivenessMatrix, decodeRecipe, encodeRecipe, isValidHash } from "../../scripts/crafter"
 import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../scripts/util"
 import { WynnItem } from "../../model/item";
 import ItemCard from "../ItemCard.vue";
 import MaterialTierSelector from "./MaterialTierSelector.vue";
 import AttackSpeedSelector from "./AttackSpeedSelector.vue";
+import {useRoute} from 'vue-router'
 
 export default {
   name: 'Crafter',
@@ -119,9 +132,10 @@ export default {
       assemble();
     })
 
+    const route = useRoute();
     const ingredientList: Ingredient[] = await (await fetch("/builder/ingredients.json")).json();
     const craftTypes: ItemType[] = Object.values(ItemType);
-
+    let first = true;
     const craftType: Ref<ItemType> = ref(craftTypes[12]);
     const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
     const level = ref(recipe.value.levels[0]);
@@ -170,7 +184,6 @@ export default {
 
     function handleMaterial1TierChanged(tier: number) {
       material1Tier.value = tier === 1 ? MaterialTier.TIER_1 : tier === 2 ? MaterialTier.TIER_2 : MaterialTier.TIER_3;
-      console.log(tier);
       assemble();
     }
 
@@ -207,6 +220,26 @@ export default {
         effectiveness[1][1].value = effectMatrix[1][1]
         effectiveness[2][0].value = effectMatrix[2][0]
         effectiveness[2][1].value = effectMatrix[2][1]
+
+        if(first) {
+          if(route.path !== "/" && isValidHash(route.path.slice(1))) {
+            let recipeStr = route.path.slice(1);
+            let decoded = decodeRecipe(recipeStr, ingredientList);
+            recipe.value = decoded.prototype;
+            ingredients[0].ingredient = decoded.ingredients[0].ingredient;
+            ingredients[1].ingredient = decoded.ingredients[1].ingredient;
+            ingredients[2].ingredient = decoded.ingredients[2].ingredient;
+            ingredients[3].ingredient = decoded.ingredients[3].ingredient;
+            ingredients[4].ingredient = decoded.ingredients[4].ingredient;
+            ingredients[5].ingredient = decoded.ingredients[5].ingredient;
+            craftType.value = decoded.craftType;
+            material1Tier.value = decoded.material1Tier;
+            material2Tier.value = decoded.material2Tier;
+            attackSpeed.value = decoded.attackSpeed === CraftedAttackSpeed.SLOW ? 'Slow' : decoded.attackSpeed === CraftedAttackSpeed.FAST ? 'Fast' : 'Normal';
+            level.value = decoded.level;
+          }
+          first = false;
+        }
 
         result.value = assembleCraft(new Recipe(
           recipe.value,

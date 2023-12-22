@@ -76,13 +76,6 @@ export class NumberRange {
         return new NumberRange(from, to);
     }
 
-    public equals(range: NumberRange): boolean {
-        return range.minimum === this.minimum && range.maximum === this.maximum;
-    }
-
-    public isGreaterThan(range: NumberRange): boolean {
-        return this.minimum >= range.minimum && this.maximum > range.maximum;
-    }
 
 }
 

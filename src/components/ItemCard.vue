@@ -8,6 +8,18 @@
             <div v-if="item.type === 'Scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
             <div v-if="item.type === 'Food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
             </div>
+            <div v-if="item.type === 'Spear'" class="">
+            <img src="/builder/sprites/spear.webp" alt="">
+          </div>
+          <div v-if="item.type === 'Dagger'" class="">
+            <img src="/builder/sprites/dagger.webp" alt="">
+          </div>
+          <div v-if="item.type === 'Relik'">
+            <img src="/builder/sprites/relik.webp" alt=""></div>
+          <div v-if="item.type === 'Bow'">
+            <img src="/builder/sprites/bow.webp" alt=""></div>
+          <div v-if="item.type === 'Wand'">
+            <img src="/builder/sprites/wand.webp" alt=""></div>
             <div v-if="item.type === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
             <div v-if="item.type === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
             <div v-if="item.type === 'Bracelet'"

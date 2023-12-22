@@ -34,9 +34,14 @@ module.exports = {
         'helmet': '-178px -0px',
         'chestplate': '-178px -60px',
         'leggings': '-178px -120px',
-        'boots': '-178px -180px'
+        'boots': '-178px -180px',
       },
       backgroundImage: {
+        'spear': "url('/sprites/spear.webp')",
+        'dagger': "url('/sprites/dagger.webp')",
+        'wand': "url('/sprites/wand.webp')",
+        'bow': "url('/sprites/bow.webp')",
+        'relik': "url('/sprites/relik.webp')",
         'professions': "url('/sprites/ProfessionIcon.png')",
         'wynn-icons': "url('/sprites/WynnIcons.png')",
         'accessories': "url('/sprites/AccessorySprites.gif')",

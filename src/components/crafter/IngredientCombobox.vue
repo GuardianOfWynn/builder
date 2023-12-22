@@ -30,7 +30,7 @@
   </template>
   
   <script lang="ts">
-    import { computed, ref,defineComponent, Ref } from "vue";
+    import { computed, ref,defineComponent, Ref, onMounted, watchEffect } from "vue";
     import Ingredient from "../../model/ingredient";
     import {
     Combobox,
@@ -54,18 +54,19 @@
   props: {
     ingredient: Ingredient
   },
-  async setup({ emit }: any) {
-
+  async setup(props, { emit }: any) {
     const ingredients: Ingredient[] = await(await fetch("/builder/ingredients.json")).json();
     const query = ref('');
-    const selectedIng: Ref<Ingredient | undefined> = ref(undefined);
+    const selectedIng: Ref<Ingredient | undefined> = ref(props.ingredient);
 
     const filteredIngredients = computed(() =>
             query.value === ''
             ? ingredients.slice(0, 20)
             : ingredients.filter((ing) => {
                 return ing.name.toLowerCase().includes(query.value.toLowerCase())
-        }).slice(0,20));     
+        }).slice(0,20)); 
+        
+    watchEffect(() => selectedIng.value = props.ingredient);
     return {query, emit, filteredIngredients, selectedIng}
   }})
   </script>

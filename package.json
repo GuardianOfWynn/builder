@@ -11,7 +11,8 @@
   "dependencies": {
     "@headlessui/vue": "0.0.0-insiders.c2096b0",
     "@heroicons/vue": "^2.0.18",
-    "vue": "^3.3.11"
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

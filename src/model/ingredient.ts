@@ -1,5 +1,6 @@
 export default class Ingredient {
     name: string;
+    id: string;
     skills: string[];
     tier: number;
     level: number; 

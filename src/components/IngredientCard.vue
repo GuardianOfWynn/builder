@@ -29,9 +29,9 @@
         <div class="text-left mt-4 gap-y-4 flex flex-col text-xs">
             <div>
                 <p v-for="(identification) in ing.identifications">
-                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.minimum <= 0 ? format(identification.minimum, identification.name) : '+' + format(identification.minimum, identification.name) }}</span>
+                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.minimum <= 0 ? format(identification.minimum, identification.id) : '+' + format(identification.minimum, identification.id) }}</span>
                     <span :class="identification.minimum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
-                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.maximum <= 0 ? format(identification.maximum, identification.name) : '+' + format(identification.maximum, identification.name) }}</span>
+                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.maximum <= 0 ? format(identification.maximum, identification.id) : '+' + format(identification.maximum, identification.id) }}</span>
                     <span class="text-sm text-mc-gray ml-2">{{ identification.name }}</span>
                 </p>
             </div>
@@ -112,21 +112,22 @@ import Ingredient from "../model/ingredient";
             ing.value = props.ingredient;
         })
 
-        const format = (val, idName) => {
-            if (idName === "POISON") {
+        const format = (val, id) => {
+            if (id === "POISON") {
                 return val + "/3s"
             }
         
-            switch (idName) {
+            switch (id) {
                 case "POISON": case "MANASTEAL": case "LIFESTEAL": return val + "/3s";
                 case "MANAREGEN": return val + "/5s";
                 case "ATTACKSPEED": return val + " tier";
                 default:
             }
 
-            if(!idName.includes("RAW") && !idName.includes("POINTS")) {
+            if(!id.includes("RAW") && !id.includes("POINTS") && !id.includes("HEALTHBONUS")) {
                 return val + "%";
             }
+            return val
         }
         return {ing,format}
       },
