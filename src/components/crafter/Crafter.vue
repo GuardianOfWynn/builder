@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8  font-minecraft">
+  <div class="p-8  font-minecraft w-3/4 mx-auto">
     <div class="w-full">
       <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
       <div class="flex gap-x-4 w-full mb-4">
@@ -104,7 +104,7 @@ import MaterialsCombobox from "./MaterialsCombobox.vue"
 import CraftTypeCombobox from "./CraftTypeCombobox.vue"
 import Ingredient from "../../model/ingredient";
 import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe, ConsumableRecipePrototype, ArmourRecipePrototype, WeaponRecipePrototype, WeaponLevelRanges, ConsumableLevelRanges } from "../../model/recipe"
-import { IngredientSlot, assembleCraft, isWeapon, isArmour, isConsumable, isAccessory } from "../../scripts/crafter"
+import { IngredientSlot, assembleCraft, isWeapon, isArmour, isConsumable, isAccessory, getEffectivenessMatrix } from "../../scripts/crafter"
 import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../scripts/util"
 import { WynnItem } from "../../model/item";
 import ItemCard from "../ItemCard.vue";
@@ -199,6 +199,15 @@ export default {
     }
 
     const assemble = () => {
+
+        let effectMatrix = getEffectivenessMatrix(ingredients);
+        effectiveness[0][0].value = effectMatrix[0][0]
+        effectiveness[0][1].value = effectMatrix[0][1]
+        effectiveness[1][0].value = effectMatrix[1][0]
+        effectiveness[1][1].value = effectMatrix[1][1]
+        effectiveness[2][0].value = effectMatrix[2][0]
+        effectiveness[2][1].value = effectMatrix[2][1]
+
         result.value = assembleCraft(new Recipe(
           recipe.value,
           ingredients, 
