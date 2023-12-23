@@ -116,8 +116,8 @@ export function isGreaterThan(range1: NumberRange, range: NumberRange): boolean 
     return range1.minimum >= range.minimum && range1.maximum > range.maximum;
 }
 
-export function sumWithMax(range: NumberRange, value: number, max: number): NumberRange {
-    return new NumberRange(Math.max(max, range.minimum + value), Math.max(max, range.maximum + value));
+export function sum(range: NumberRange, value: number): NumberRange {
+    return new NumberRange(range.minimum + value, range.maximum + value);
 }
 
 export function isEmpty(range: NumberRange): boolean {

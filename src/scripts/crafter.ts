@@ -1,6 +1,6 @@
 import Ingredient, { Identification } from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
-import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, sumWithMax, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType } from "./util";
+import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, sumWithMax, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum } from "./util";
 import { WynnItem } from "../model/item";
 import { Ref, warn } from "vue";
 import { calculateMaterialMultiplier } from "./math";
@@ -126,11 +126,13 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
 
     // Duration/durability calc
     if (isConsumable(recipe.craftType)) {
-      item.craftedStatus.charges = Math.max(1, item.craftedStatus.charges + ingredient.modifiers.charges);
-      item.craftedStatus.duration = sumWithMax(item.craftedStatus.duration, ingredient.modifiers.duration, 10);
+      item.craftedStatus.charges = item.craftedStatus.charges + ingredient.modifiers.charges;
+      item.craftedStatus.duration = sum(item.craftedStatus.duration, ingredient.modifiers.duration);
     } else {
-      item.craftedStatus.durability = sumWithMax(item.craftedStatus.durability, ingredient.modifiers.durability, 1);
+      item.craftedStatus.durability = sum(item.craftedStatus.durability, ingredient.modifiers.durability);
     }
+
+    console.log(item.craftedStatus.duration);
 
     // Implement powders on weapons and armours
 
@@ -150,6 +152,13 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
       }
     });
   })
+
+  if(isConsumable(recipe.craftType)) {
+    item.craftedStatus.duration = NumberRange.of(Math.max(10, item.craftedStatus.duration.minimum), Math.max(10, item.craftedStatus.duration.maximum));
+    item.craftedStatus.charges = Math.max(1, item.craftedStatus.charges);
+  } else {
+    item.craftedStatus.durability = NumberRange.of(Math.max(1, item.craftedStatus.durability.minimum), Math.max(1, item.craftedStatus.durability.maximum));
+  }
 
   item.identifications = identifications;
 
@@ -290,12 +299,12 @@ export function decodeRecipe(encoded: string, ingredients: Ingredient[]): Recipe
     level: prototype.levels[lvlIndex]
   }
   let positions = [
-    { id: ingredientsStr.substring(0, 2), x: 0, y: 0, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(2, 4), x: 1, y: 0, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(4, 6), x: 0, y: 1, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(6, 8), x: 1, y: 1, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(8, 10), x: 0, y: 2, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(10, 12), x: 1, y: 2, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(0, 2), x: 0, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(2, 4), x: 1, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(4, 6), x: 0, y: 1, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(6, 8), x: 1, y: 1, effectiveness: 100,ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(8, 10), x: 0, y: 2, ieffectiveness: 100 , ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(10, 12), x: 1, y: 2, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
   ]
   positions.forEach(pos => {
     ingredients.filter(ing => {
@@ -306,10 +315,18 @@ export function decodeRecipe(encoded: string, ingredients: Ingredient[]): Recipe
     }).forEach(ing => pos.ingredient = ing);
     recipe.ingredients.push({
       ingredient: pos.ingredient,
+      effectiveness: pos.effectiveness!,
       x: pos.x,
       y: pos.y
     })
   });
+  let effectivenessMatrix = getEffectivenessMatrix(recipe.ingredients)
+    recipe.ingredients[0].effectiveness = effectivenessMatrix[0][0];
+    recipe.ingredients[1].effectiveness = effectivenessMatrix[0][1];
+    recipe.ingredients[2].effectiveness = effectivenessMatrix[1][0];
+    recipe.ingredients[3].effectiveness = effectivenessMatrix[1][1];
+    recipe.ingredients[4].effectiveness = effectivenessMatrix[2][0];
+    recipe.ingredients[5].effectiveness = effectivenessMatrix[2][1];
   recipe.effectivenessMatrix = getEffectivenessMatrix(recipe.ingredients);
 
   return recipe;
