@@ -1,51 +1,55 @@
 <template>
-  <div class="p-8  font-minecraft w-3/4 mx-auto">
+  <div class="p-8 md:p-8 font-minecraft w-full md:w-3/4 mx-auto">
     <div class="w-full">
       <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
-      <div class="flex gap-x-4 w-full mb-4">
-        <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
-          <div v-if="craftType === 'Scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
-          <div v-if="craftType === 'Food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
+      <div class="flex md:flex-row flex-col gap-x-4 w-full mb-4">
+        <div class="flex gap-x-2">
+          <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
+            <div v-if="craftType === 'Scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions"></div>
+            <div v-if="craftType === 'Food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
+            </div>
+            <div v-if="craftType === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
+            <div v-if="craftType === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories">
+            </div>
+            <div v-if="craftType === 'Spear'" class="">
+              <img src="/sprites/spear.webp" alt="">
+            </div>
+            <div v-if="craftType === 'Dagger'" class="">
+              <img src="/sprites/dagger.webp" alt="">
+            </div>
+            <div v-if="craftType === 'Relik'">
+              <img src="/sprites/relik.webp" alt="">
+            </div>
+            <div v-if="craftType === 'Bow'">
+              <img src="/sprites/bow.webp" alt="">
+            </div>
+            <div v-if="craftType === 'Wand'">
+              <img src="/sprites/wand.webp" alt="">
+            </div>
+            <div v-if="craftType === 'Bracelet'"
+              class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
+            <div v-if="craftType === 'Necklace'"
+              class="pixelated inline-block w-[53px] h-[53px] bg-necklace bg-accessories"></div>
+            <div v-if="craftType === 'Helmet'" class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours">
+            </div>
+            <div v-if="craftType === 'Chestplate'"
+              class="pixelated inline-block h-[62px] w-[62px] bg-chestplate bg-armours"></div>
+            <div v-if="craftType === 'Leggings'" class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours">
+            </div>
+            <div v-if="craftType === 'Boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours"></div>
           </div>
-          <div v-if="craftType === 'Potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
-          <div v-if="craftType === 'Ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories"></div>
-          <div v-if="craftType === 'Spear'" class="">
-            <img src="/sprites/spear.webp" alt="">
+          <div class="grid grid-cols-5 grid-rows-3 w-fit gap-x-2 gap-y-1">
+            <p class="my-auto text-white">Type</p>
+            <CraftTypeCombobox :craft-type="craftType" class="col-span-4" @update-craft-type="handleItemTypeChange" />
+            <p class="my-auto text-white">Materials</p>
+            <MaterialsCombobox :selected-prototype="recipe" class="col-span-4" :recipePrototypes="recipeRolls"
+              @update-craft-materials="handleMaterialsChanged" />
+            <p class="my-auto text-white">Level</p>
+            <CraftLevelCombobox :level="level" class="col-span-4" :recipe="recipe"
+              @update-craft-level="handleCraftLevelChanged" />
           </div>
-          <div v-if="craftType === 'Dagger'" class="">
-            <img src="/sprites/dagger.webp" alt="">
-          </div>
-          <div v-if="craftType === 'Relik'">
-            <img src="/sprites/relik.webp" alt="">
-          </div>
-          <div v-if="craftType === 'Bow'">
-            <img src="/sprites/bow.webp" alt="">
-          </div>
-          <div v-if="craftType === 'Wand'">
-            <img src="/sprites/wand.webp" alt="">
-          </div>
-          <div v-if="craftType === 'Bracelet'"
-            class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
-          <div v-if="craftType === 'Necklace'"
-            class="pixelated inline-block w-[53px] h-[53px] bg-necklace bg-accessories"></div>
-          <div v-if="craftType === 'Helmet'" class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours"></div>
-          <div v-if="craftType === 'Chestplate'"
-            class="pixelated inline-block h-[62px] w-[62px] bg-chestplate bg-armours"></div>
-          <div v-if="craftType === 'Leggings'" class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours">
-          </div>
-          <div v-if="craftType === 'Boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours"></div>
         </div>
-        <div class="grid grid-cols-5 grid-rows-3 w-fit gap-x-2 gap-y-1">
-          <p class="my-auto text-white">Type</p>
-          <CraftTypeCombobox :craft-type="craftType" class="col-span-4" @update-craft-type="handleItemTypeChange" />
-          <p class="my-auto text-white">Materials</p>
-          <MaterialsCombobox :selected-prototype="recipe" class="col-span-4" :recipePrototypes="recipeRolls"
-            @update-craft-materials="handleMaterialsChanged" />
-          <p class="my-auto text-white">Level</p>
-          <CraftLevelCombobox :level="level" class="col-span-4" :recipe="recipe"
-            @update-craft-level="handleCraftLevelChanged" />
-        </div>
-        <div class="grid grid-cols-7 gap-x-1 gap-y-1 text-mc-gray">
+        <div class="grid grid-cols-7 md:mt-0 mt-4 gap-x-1 gap-y-1 text-mc-gray">
           <p class="my-auto col-span-3">{{ recipe.material1 }} tier: </p>
           <MaterialTierSelector @updade-tier="value => handleMaterial1TierChanged(value)" class="my-auto col-span-4"
             :tier="material1Tier" />
@@ -56,13 +60,13 @@
           <AttackSpeedSelector :tier="attackSpeed" class="col-span-4" />
         </div>
         <div @click="clipboardRecipe()"
-          class="rounded-md border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
+          class="rounded-md md:mt-0 mt-4 border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
           Copy recipe link
         </div>
       </div>
     </div>
-    <div class="flex gap-x-12">
-      <div class="max-h-full max-w-full  w-2/5">
+    <div class="flex md:flex-row flex-col gap-x-12">
+      <div class="max-h-full max-w-full w-full md:w-2/5">
         <p class="text-xl font-minecraft text-mc-lime mb-2">Ingredients:</p>
         <div class="grid w-full grid-cols-2 gap-2 grid-rows-3 ">
           <div class="w-full">
@@ -91,7 +95,7 @@
           </div>
         </div>
       </div>
-      <div class="w-2/5 max-h-full">
+      <div class="w-full md:mt-0 mt-4 md:w-2/5 max-h-full">
         <p class="text-xl font-minecraft text-mc-lime mb-2">Effectiveness:</p>
         <div class="grid h-full gap-2 grid-cols-2 grid-rows-3">
           <EffectivenessCard :slot="ingredients[0]" />
@@ -102,7 +106,7 @@
           <EffectivenessCard :slot="ingredients[5]" />
         </div>
       </div>
-      <div class="w-2/5">
+      <div class="w-full md:mt-0 mt-4 md:w-2/5">
         <p class="text-xl font-minecraft text-mc-lime mb-2">Result:</p>
         <ItemCard :item="result" />
       </div>
@@ -112,7 +116,7 @@
         {{ warn }}
       </p>
     </div>
-    <div class="mt-16 grid grid-cols-6 grid-rows-1 gap-x-2 gap-y-2 pb-16">
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-6 grid-rows-3 md:grid-rows-1 gap-x-2 gap-y-2 pb-16">
       <IngredientCard :ingredient="ingredients[0].ingredient" />
       <IngredientCard :ingredient="ingredients[1].ingredient" />
       <IngredientCard :ingredient="ingredients[2].ingredient" />
@@ -230,14 +234,13 @@ export default {
 
     const clipboardRecipe = async () => {
       try {
-        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/' + (result.value === undefined ? '' : result.value!.name));
+        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/crafter#/' + (result.value === undefined ? '' : result.value!.name));
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
     }
 
     const assemble = () => {
-
       if (first) {
         if (route.path !== "/" && isValidHash(route.path.slice(1))) {
           let recipeStr = route.path.slice(1);
