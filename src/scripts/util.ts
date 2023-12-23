@@ -1,3 +1,5 @@
+export const crafter_url = ''
+
 export enum CraftedAttackSpeed {
     SLOW = 1,
     NORMAL,

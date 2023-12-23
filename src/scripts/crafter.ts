@@ -16,10 +16,11 @@ const above = (x1: number, x2: number, y1: number, y2: number): Boolean => x1 ==
 const left = (x1: number, x2: number, y1: number, y2: number): Boolean => y1 === y2 && x2 < x1;
 const right = (x1: number, x2: number, y1: number, y2: number): Boolean => y1 === y2 && x2 > x1;
 
-export interface IngredientSlot {
-  ingredient: Ingredient | undefined,
-  x: number,
-  y: number
+export class IngredientSlot {
+  ingredient: Ingredient | undefined;
+  effectiveness: number;
+  x: number;
+  y: number;
 }
 
 
@@ -277,7 +278,6 @@ export function decodeRecipe(encoded: string, ingredients: Ingredient[]): Recipe
   let mat2Tier = splited[6].charAt(1);
   let prototype = getRecipePrototypeFor(itemType as ItemType)[prototypeIndex];
   let lvlIndex = isNaN(parsedLvlIndex) || parsedLvlIndex < 0 || parsedLvlIndex > 3 || parsedLvlIndex > prototype.levels.length - 1 ? 0 : parsedLvlIndex;
-  console.log(lvlIndex);
   let recipe: Recipe = {
     hash: encoded,
     ingredients: [],
