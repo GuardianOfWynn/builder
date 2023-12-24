@@ -48,7 +48,9 @@
             "minimum": 8
          }
       ],
-      "id": "AA"
+      "id": "AA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -93,7 +95,9 @@
             "minimum": -60
          }
       ],
-      "id": "AB"
+      "id": "AB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -132,7 +136,9 @@
             "minimum": 175
          }
       ],
-      "id": "AC"
+      "id": "AC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -177,7 +183,9 @@
             "minimum": 970
          }
       ],
-      "id": "AD"
+      "id": "AD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -217,7 +225,9 @@
             "minimum": 2
          }
       ],
-      "id": "AE"
+      "id": "AE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -267,7 +277,9 @@
             "minimum": 6
          }
       ],
-      "id": "AF"
+      "id": "AF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -311,7 +323,9 @@
             "minimum": 5
          }
       ],
-      "id": "AG"
+      "id": "AG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -350,7 +364,9 @@
             "minimum": 500
          }
       ],
-      "id": "AH"
+      "id": "AH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -388,7 +404,9 @@
             "minimum": 4
          }
       ],
-      "id": "AI"
+      "id": "AI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -433,7 +451,9 @@
             "minimum": 10
          }
       ],
-      "id": "AJ"
+      "id": "AJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -477,7 +497,9 @@
             "minimum": 24
          }
       ],
-      "id": "AK"
+      "id": "AK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -528,7 +550,9 @@
             "minimum": 25
          }
       ],
-      "id": "AL"
+      "id": "AL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -572,7 +596,9 @@
             "minimum": 6
          }
       ],
-      "id": "AM"
+      "id": "AM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -605,7 +631,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "AN"
+      "id": "AN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -655,7 +683,9 @@
             "minimum": 7
          }
       ],
-      "id": "AO"
+      "id": "AO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -694,7 +724,9 @@
             "minimum": 1
          }
       ],
-      "id": "AP"
+      "id": "AP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -738,7 +770,9 @@
             "minimum": 6
          }
       ],
-      "id": "AQ"
+      "id": "AQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -790,7 +824,9 @@
             "minimum": 4
          }
       ],
-      "id": "AR"
+      "id": "AR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -834,7 +870,9 @@
             "minimum": 3
          }
       ],
-      "id": "AS"
+      "id": "AS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -872,7 +910,9 @@
             "minimum": 55
          }
       ],
-      "id": "AT"
+      "id": "AT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -917,7 +957,9 @@
             "minimum": 3
          }
       ],
-      "id": "AU"
+      "id": "AU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -961,7 +1003,9 @@
             "minimum": -8
          }
       ],
-      "id": "AV"
+      "id": "AV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1005,7 +1049,9 @@
             "minimum": 5
          }
       ],
-      "id": "AW"
+      "id": "AW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1045,7 +1091,9 @@
             "minimum": 20
          }
       ],
-      "id": "AX"
+      "id": "AX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1107,7 +1155,9 @@
             "minimum": 4
          }
       ],
-      "id": "AY"
+      "id": "AY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1151,7 +1201,9 @@
             "minimum": 40
          }
       ],
-      "id": "AZ"
+      "id": "AZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1195,7 +1247,9 @@
             "minimum": 6
          }
       ],
-      "id": "Aa"
+      "id": "Aa",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1240,7 +1294,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ab"
+      "id": "Ab",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1278,7 +1334,9 @@
             "minimum": 4
          }
       ],
-      "id": "Ac"
+      "id": "Ac",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1316,7 +1374,9 @@
             "minimum": 15
          }
       ],
-      "id": "Ad"
+      "id": "Ad",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1362,7 +1422,9 @@
             "minimum": 25
          }
       ],
-      "id": "Ae"
+      "id": "Ae",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1407,7 +1469,9 @@
             "minimum": -11
          }
       ],
-      "id": "Af"
+      "id": "Af",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1451,7 +1515,9 @@
             "minimum": -3
          }
       ],
-      "id": "Ag"
+      "id": "Ag",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1483,7 +1549,9 @@
          "under": 110
       },
       "identifications": [],
-      "id": "Ah"
+      "id": "Ah",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1545,7 +1613,9 @@
             "minimum": 4
          }
       ],
-      "id": "Ai"
+      "id": "Ai",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1589,7 +1659,9 @@
             "minimum": -7
          }
       ],
-      "id": "Aj"
+      "id": "Aj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1627,7 +1699,9 @@
             "minimum": -12
          }
       ],
-      "id": "Ak"
+      "id": "Ak",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1671,7 +1745,9 @@
             "minimum": 13
          }
       ],
-      "id": "Al"
+      "id": "Al",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1727,7 +1803,9 @@
             "minimum": 65
          }
       ],
-      "id": "Am"
+      "id": "Am",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1772,7 +1850,9 @@
             "minimum": 3
          }
       ],
-      "id": "An"
+      "id": "An",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1810,7 +1890,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ao"
+      "id": "Ao",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1848,7 +1930,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ap"
+      "id": "Ap",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1892,7 +1976,9 @@
             "minimum": 6
          }
       ],
-      "id": "Aq"
+      "id": "Aq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1942,7 +2028,9 @@
             "minimum": -20
          }
       ],
-      "id": "Ar"
+      "id": "Ar",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -1986,7 +2074,9 @@
             "minimum": 24
          }
       ],
-      "id": "As"
+      "id": "As",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2033,7 +2123,9 @@
             "minimum": -4
          }
       ],
-      "id": "At"
+      "id": "At",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2078,7 +2170,9 @@
             "minimum": -15
          }
       ],
-      "id": "Au"
+      "id": "Au",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2117,7 +2211,9 @@
             "minimum": 16
          }
       ],
-      "id": "Av"
+      "id": "Av",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2156,7 +2252,9 @@
             "minimum": 2
          }
       ],
-      "id": "Aw"
+      "id": "Aw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2196,7 +2294,9 @@
             "minimum": 10
          }
       ],
-      "id": "Ax"
+      "id": "Ax",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2241,7 +2341,9 @@
             "minimum": 10
          }
       ],
-      "id": "Ay"
+      "id": "Ay",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2285,7 +2387,9 @@
             "minimum": 15
          }
       ],
-      "id": "Az"
+      "id": "Az",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2335,7 +2439,9 @@
             "minimum": 16
          }
       ],
-      "id": "BA"
+      "id": "BA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2366,7 +2472,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "BB"
+      "id": "BB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2405,7 +2513,9 @@
             "minimum": 8
          }
       ],
-      "id": "BC"
+      "id": "BC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2451,7 +2561,9 @@
             "minimum": 2
          }
       ],
-      "id": "BD"
+      "id": "BD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2495,7 +2607,9 @@
             "minimum": 9
          }
       ],
-      "id": "BE"
+      "id": "BE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2533,7 +2647,9 @@
             "minimum": 3
          }
       ],
-      "id": "BF"
+      "id": "BF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2578,7 +2694,9 @@
             "minimum": 1
          }
       ],
-      "id": "BG"
+      "id": "BG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2622,7 +2740,9 @@
             "minimum": -20
          }
       ],
-      "id": "BH"
+      "id": "BH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2666,7 +2786,9 @@
             "minimum": 5
          }
       ],
-      "id": "BI"
+      "id": "BI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2711,7 +2833,9 @@
             "minimum": 12
          }
       ],
-      "id": "BJ"
+      "id": "BJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2749,7 +2873,9 @@
             "minimum": 1
          }
       ],
-      "id": "BK"
+      "id": "BK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2784,7 +2910,9 @@
          "under": 25
       },
       "identifications": [],
-      "id": "BL"
+      "id": "BL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2823,7 +2951,9 @@
             "minimum": 1
          }
       ],
-      "id": "BM"
+      "id": "BM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2862,7 +2992,9 @@
             "minimum": 12
          }
       ],
-      "id": "BN"
+      "id": "BN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2912,7 +3044,9 @@
             "minimum": 12
          }
       ],
-      "id": "BO"
+      "id": "BO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2951,7 +3085,9 @@
             "minimum": 2
          }
       ],
-      "id": "BP"
+      "id": "BP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -2989,7 +3125,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "BQ"
+      "id": "BQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3033,7 +3171,9 @@
             "minimum": 3
          }
       ],
-      "id": "BR"
+      "id": "BR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3078,7 +3218,9 @@
             "minimum": 40
          }
       ],
-      "id": "BS"
+      "id": "BS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3122,7 +3264,9 @@
             "minimum": -3
          }
       ],
-      "id": "BT"
+      "id": "BT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3160,7 +3304,9 @@
             "minimum": 8
          }
       ],
-      "id": "BU"
+      "id": "BU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3204,7 +3350,9 @@
             "minimum": 2
          }
       ],
-      "id": "BV"
+      "id": "BV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3248,7 +3396,9 @@
             "minimum": 22
          }
       ],
-      "id": "BW"
+      "id": "BW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3287,7 +3437,9 @@
             "minimum": 4
          }
       ],
-      "id": "BX"
+      "id": "BX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3331,7 +3483,9 @@
             "minimum": 3
          }
       ],
-      "id": "BY"
+      "id": "BY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3369,7 +3523,9 @@
             "minimum": 3
          }
       ],
-      "id": "BZ"
+      "id": "BZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3413,7 +3569,9 @@
             "minimum": 18
          }
       ],
-      "id": "Ba"
+      "id": "Ba",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3463,7 +3621,9 @@
             "minimum": -5
          }
       ],
-      "id": "Bb"
+      "id": "Bb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3508,7 +3668,9 @@
             "minimum": 1
          }
       ],
-      "id": "Bc"
+      "id": "Bc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3553,7 +3715,9 @@
             "minimum": 10
          }
       ],
-      "id": "Bd"
+      "id": "Bd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3598,7 +3762,9 @@
             "minimum": -10
          }
       ],
-      "id": "Be"
+      "id": "Be",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3637,7 +3803,9 @@
             "minimum": 1
          }
       ],
-      "id": "Bf"
+      "id": "Bf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3681,7 +3849,9 @@
             "minimum": -6
          }
       ],
-      "id": "Bg"
+      "id": "Bg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3726,7 +3896,9 @@
             "minimum": 15
          }
       ],
-      "id": "Bh"
+      "id": "Bh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3771,7 +3943,9 @@
             "minimum": -10
          }
       ],
-      "id": "Bi"
+      "id": "Bi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3816,7 +3990,9 @@
             "minimum": 8
          }
       ],
-      "id": "Bj"
+      "id": "Bj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3855,7 +4031,9 @@
             "minimum": -6
          }
       ],
-      "id": "Bk"
+      "id": "Bk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3893,7 +4071,9 @@
             "minimum": 3
          }
       ],
-      "id": "Bl"
+      "id": "Bl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3943,7 +4123,9 @@
             "minimum": 3
          }
       ],
-      "id": "Bm"
+      "id": "Bm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -3994,7 +4176,9 @@
             "minimum": -7
          }
       ],
-      "id": "Bn"
+      "id": "Bn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4038,7 +4222,9 @@
             "minimum": -10
          }
       ],
-      "id": "Bo"
+      "id": "Bo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4082,7 +4268,9 @@
             "minimum": 50
          }
       ],
-      "id": "Bp"
+      "id": "Bp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4120,7 +4308,9 @@
             "minimum": 1
          }
       ],
-      "id": "Bq"
+      "id": "Bq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4159,7 +4349,9 @@
             "minimum": 4
          }
       ],
-      "id": "Br"
+      "id": "Br",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4203,7 +4395,9 @@
             "minimum": 4
          }
       ],
-      "id": "Bs"
+      "id": "Bs",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4250,7 +4444,9 @@
             "minimum": 2
          }
       ],
-      "id": "Bt"
+      "id": "Bt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4294,7 +4490,9 @@
             "minimum": 2
          }
       ],
-      "id": "Bu"
+      "id": "Bu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4339,7 +4537,9 @@
             "minimum": 15
          }
       ],
-      "id": "Bv"
+      "id": "Bv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4384,7 +4584,9 @@
             "minimum": 6
          }
       ],
-      "id": "Bw"
+      "id": "Bw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4434,7 +4636,9 @@
             "minimum": 3
          }
       ],
-      "id": "Bx"
+      "id": "Bx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4479,7 +4683,9 @@
             "minimum": 2
          }
       ],
-      "id": "By"
+      "id": "By",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4524,7 +4730,9 @@
             "minimum": 425
          }
       ],
-      "id": "Bz"
+      "id": "Bz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4563,7 +4771,9 @@
             "minimum": 2
          }
       ],
-      "id": "CA"
+      "id": "CA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4637,7 +4847,9 @@
             "minimum": -45
          }
       ],
-      "id": "CB"
+      "id": "CB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4668,7 +4880,9 @@
          "under": 80
       },
       "identifications": [],
-      "id": "CC"
+      "id": "CC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4706,7 +4920,9 @@
             "minimum": 4
          }
       ],
-      "id": "CD"
+      "id": "CD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4744,7 +4960,9 @@
             "minimum": 2
          }
       ],
-      "id": "CE"
+      "id": "CE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4782,7 +5000,9 @@
             "minimum": 3
          }
       ],
-      "id": "CF"
+      "id": "CF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4821,7 +5041,9 @@
             "minimum": 3
          }
       ],
-      "id": "CG"
+      "id": "CG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4865,7 +5087,9 @@
             "minimum": 12
          }
       ],
-      "id": "CH"
+      "id": "CH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4921,7 +5145,9 @@
             "minimum": -80
          }
       ],
-      "id": "CI"
+      "id": "CI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -4972,7 +5198,9 @@
             "minimum": -40
          }
       ],
-      "id": "CJ"
+      "id": "CJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5010,7 +5238,9 @@
             "minimum": 5
          }
       ],
-      "id": "CK"
+      "id": "CK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5054,7 +5284,9 @@
             "minimum": 6
          }
       ],
-      "id": "CL"
+      "id": "CL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5098,7 +5330,9 @@
             "minimum": -12
          }
       ],
-      "id": "CM"
+      "id": "CM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5143,7 +5377,9 @@
             "minimum": 35
          }
       ],
-      "id": "CN"
+      "id": "CN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5181,7 +5417,9 @@
             "minimum": 1
          }
       ],
-      "id": "CO"
+      "id": "CO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5226,7 +5464,9 @@
             "minimum": 10
          }
       ],
-      "id": "CP"
+      "id": "CP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5270,7 +5510,9 @@
             "minimum": -6
          }
       ],
-      "id": "CQ"
+      "id": "CQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5308,7 +5550,9 @@
             "minimum": 13
          }
       ],
-      "id": "CR"
+      "id": "CR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5370,7 +5614,9 @@
             "minimum": 5
          }
       ],
-      "id": "CS"
+      "id": "CS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5415,7 +5661,9 @@
             "minimum": 20
          }
       ],
-      "id": "CT"
+      "id": "CT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5454,7 +5702,9 @@
             "minimum": 3
          }
       ],
-      "id": "CU"
+      "id": "CU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5498,7 +5748,9 @@
             "minimum": 8
          }
       ],
-      "id": "CV"
+      "id": "CV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5551,7 +5803,9 @@
             "minimum": 12
          }
       ],
-      "id": "CW"
+      "id": "CW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5596,7 +5850,9 @@
             "minimum": 20
          }
       ],
-      "id": "CX"
+      "id": "CX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5640,7 +5896,9 @@
             "minimum": 6
          }
       ],
-      "id": "CY"
+      "id": "CY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5678,7 +5936,9 @@
             "minimum": 2
          }
       ],
-      "id": "CZ"
+      "id": "CZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5716,7 +5976,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ca"
+      "id": "Ca",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5755,7 +6017,9 @@
             "minimum": 2
          }
       ],
-      "id": "Cb"
+      "id": "Cb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5799,7 +6063,9 @@
             "minimum": -4
          }
       ],
-      "id": "Cc"
+      "id": "Cc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5844,7 +6110,9 @@
             "minimum": 2
          }
       ],
-      "id": "Cd"
+      "id": "Cd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5884,7 +6152,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ce"
+      "id": "Ce",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5946,7 +6216,9 @@
             "minimum": 2
          }
       ],
-      "id": "Cf"
+      "id": "Cf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -5991,7 +6263,9 @@
             "minimum": 1
          }
       ],
-      "id": "Cg"
+      "id": "Cg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6022,7 +6296,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Ch"
+      "id": "Ch",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6061,7 +6337,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ci"
+      "id": "Ci",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6099,7 +6377,9 @@
             "minimum": -2
          }
       ],
-      "id": "Cj"
+      "id": "Cj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6144,7 +6424,9 @@
             "minimum": 65
          }
       ],
-      "id": "Ck"
+      "id": "Ck",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6182,7 +6464,9 @@
             "minimum": 2
          }
       ],
-      "id": "Cl"
+      "id": "Cl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6227,7 +6511,9 @@
             "minimum": 4
          }
       ],
-      "id": "Cm"
+      "id": "Cm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6271,7 +6557,9 @@
             "minimum": 10
          }
       ],
-      "id": "Cn"
+      "id": "Cn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6322,7 +6610,9 @@
             "minimum": 15
          }
       ],
-      "id": "Co"
+      "id": "Co",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6360,7 +6650,9 @@
             "minimum": 4
          }
       ],
-      "id": "Cp"
+      "id": "Cp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6404,7 +6696,9 @@
             "minimum": 1
          }
       ],
-      "id": "Cq"
+      "id": "Cq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6442,7 +6736,9 @@
             "minimum": 165
          }
       ],
-      "id": "Cr"
+      "id": "Cr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6481,7 +6777,9 @@
             "minimum": 3
          }
       ],
-      "id": "Cs"
+      "id": "Cs",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6525,7 +6823,9 @@
             "minimum": -50
          }
       ],
-      "id": "Ct"
+      "id": "Ct",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6564,7 +6864,9 @@
             "minimum": 1000
          }
       ],
-      "id": "Cu"
+      "id": "Cu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6608,7 +6910,9 @@
             "minimum": 90
          }
       ],
-      "id": "Cv"
+      "id": "Cv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6652,7 +6956,9 @@
             "minimum": 8
          }
       ],
-      "id": "Cw"
+      "id": "Cw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6696,7 +7002,9 @@
             "minimum": 6
          }
       ],
-      "id": "Cx"
+      "id": "Cx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6729,7 +7037,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Cy"
+      "id": "Cy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6767,7 +7077,9 @@
             "minimum": 1
          }
       ],
-      "id": "Cz"
+      "id": "Cz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6799,7 +7111,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "DA"
+      "id": "DA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6843,7 +7157,9 @@
             "minimum": 27
          }
       ],
-      "id": "DB"
+      "id": "DB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6881,7 +7197,9 @@
             "minimum": 15
          }
       ],
-      "id": "DC"
+      "id": "DC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6933,7 +7251,9 @@
             "minimum": -24
          }
       ],
-      "id": "DD"
+      "id": "DD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -6984,7 +7304,9 @@
             "minimum": 6
          }
       ],
-      "id": "DE"
+      "id": "DE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7029,7 +7351,9 @@
             "minimum": -8
          }
       ],
-      "id": "DF"
+      "id": "DF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7073,7 +7397,9 @@
             "minimum": 5
          }
       ],
-      "id": "DG"
+      "id": "DG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7117,7 +7443,9 @@
             "minimum": 1
          }
       ],
-      "id": "DH"
+      "id": "DH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7155,7 +7483,9 @@
             "minimum": 4
          }
       ],
-      "id": "DI"
+      "id": "DI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7201,7 +7531,9 @@
             "minimum": 530
          }
       ],
-      "id": "DJ"
+      "id": "DJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7240,7 +7572,9 @@
             "minimum": 3
          }
       ],
-      "id": "DK"
+      "id": "DK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7285,7 +7619,9 @@
             "minimum": 5
          }
       ],
-      "id": "DL"
+      "id": "DL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7360,7 +7696,9 @@
             "minimum": -4
          }
       ],
-      "id": "DM"
+      "id": "DM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7404,7 +7742,9 @@
             "minimum": 2
          }
       ],
-      "id": "DN"
+      "id": "DN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7454,7 +7794,9 @@
             "minimum": -3
          }
       ],
-      "id": "DO"
+      "id": "DO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7511,7 +7853,9 @@
             "minimum": 8
          }
       ],
-      "id": "DP"
+      "id": "DP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7556,7 +7900,9 @@
             "minimum": 999
          }
       ],
-      "id": "DQ"
+      "id": "DQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7588,7 +7934,9 @@
          "under": -75
       },
       "identifications": [],
-      "id": "DR"
+      "id": "DR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7626,7 +7974,9 @@
             "minimum": 90
          }
       ],
-      "id": "DS"
+      "id": "DS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7670,7 +8020,9 @@
             "minimum": 60
          }
       ],
-      "id": "DT"
+      "id": "DT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7702,7 +8054,9 @@
          "under": 60
       },
       "identifications": [],
-      "id": "DU"
+      "id": "DU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7734,7 +8088,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "DV"
+      "id": "DV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7778,7 +8134,9 @@
             "minimum": 5
          }
       ],
-      "id": "DW"
+      "id": "DW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7828,7 +8186,9 @@
             "minimum": 6
          }
       ],
-      "id": "DX"
+      "id": "DX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7867,7 +8227,9 @@
             "minimum": 1
          }
       ],
-      "id": "DY"
+      "id": "DY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7917,7 +8279,9 @@
             "minimum": 5
          }
       ],
-      "id": "DZ"
+      "id": "DZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7957,7 +8321,9 @@
             "minimum": 6
          }
       ],
-      "id": "Da"
+      "id": "Da",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -7989,7 +8355,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Db"
+      "id": "Db",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8034,7 +8402,9 @@
             "minimum": -4
          }
       ],
-      "id": "Dc"
+      "id": "Dc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8079,7 +8449,9 @@
             "minimum": 2
          }
       ],
-      "id": "Dd"
+      "id": "Dd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8117,7 +8489,9 @@
             "minimum": 2
          }
       ],
-      "id": "De"
+      "id": "De",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8161,7 +8535,9 @@
             "minimum": 4
          }
       ],
-      "id": "Df"
+      "id": "Df",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8202,7 +8578,9 @@
             "minimum": 4
          }
       ],
-      "id": "Dg"
+      "id": "Dg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8240,7 +8618,9 @@
             "minimum": 6
          }
       ],
-      "id": "Dh"
+      "id": "Dh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8305,7 +8685,9 @@
             "minimum": 14
          }
       ],
-      "id": "Di"
+      "id": "Di",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8353,7 +8735,9 @@
             "minimum": 24
          }
       ],
-      "id": "Dj"
+      "id": "Dj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8404,7 +8788,9 @@
             "minimum": 8
          }
       ],
-      "id": "Dk"
+      "id": "Dk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8448,7 +8834,9 @@
             "minimum": 3
          }
       ],
-      "id": "Dl"
+      "id": "Dl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8493,7 +8881,9 @@
             "minimum": 5
          }
       ],
-      "id": "Dm"
+      "id": "Dm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8531,7 +8921,9 @@
             "minimum": 1000
          }
       ],
-      "id": "Dn"
+      "id": "Dn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8582,7 +8974,9 @@
             "minimum": -24
          }
       ],
-      "id": "Do"
+      "id": "Do",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8626,7 +9020,9 @@
             "minimum": 3
          }
       ],
-      "id": "Dp"
+      "id": "Dp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8672,7 +9068,9 @@
             "minimum": 1200
          }
       ],
-      "id": "Dq"
+      "id": "Dq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8718,7 +9116,9 @@
             "minimum": 9
          }
       ],
-      "id": "Dr"
+      "id": "Dr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8764,7 +9164,9 @@
             "minimum": 65
          }
       ],
-      "id": "Ds"
+      "id": "Ds",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8810,7 +9212,9 @@
             "minimum": 8
          }
       ],
-      "id": "Dt"
+      "id": "Dt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8849,7 +9253,9 @@
             "minimum": 6
          }
       ],
-      "id": "Du"
+      "id": "Du",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8895,7 +9301,9 @@
             "minimum": 8
          }
       ],
-      "id": "Dv"
+      "id": "Dv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8941,7 +9349,9 @@
             "minimum": 9
          }
       ],
-      "id": "Dw"
+      "id": "Dw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -8985,7 +9395,9 @@
             "minimum": 16
          }
       ],
-      "id": "Dx"
+      "id": "Dx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9029,7 +9441,9 @@
             "minimum": 3
          }
       ],
-      "id": "Dy"
+      "id": "Dy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9074,7 +9488,9 @@
             "minimum": 17
          }
       ],
-      "id": "Dz"
+      "id": "Dz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9130,7 +9546,9 @@
             "minimum": 5
          }
       ],
-      "id": "EA"
+      "id": "EA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9174,7 +9592,9 @@
             "minimum": -12
          }
       ],
-      "id": "EB"
+      "id": "EB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9230,7 +9650,9 @@
             "minimum": 8
          }
       ],
-      "id": "EC"
+      "id": "EC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9287,7 +9709,9 @@
             "minimum": 8
          }
       ],
-      "id": "ED"
+      "id": "ED",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9338,7 +9762,9 @@
             "minimum": 8
          }
       ],
-      "id": "EE"
+      "id": "EE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9388,7 +9814,9 @@
             "minimum": -6
          }
       ],
-      "id": "EF"
+      "id": "EF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9426,7 +9854,9 @@
             "minimum": 30
          }
       ],
-      "id": "EG"
+      "id": "EG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9476,7 +9906,9 @@
             "minimum": 45
          }
       ],
-      "id": "EH"
+      "id": "EH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9520,7 +9952,9 @@
             "minimum": 8
          }
       ],
-      "id": "EI"
+      "id": "EI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9559,7 +9993,9 @@
             "minimum": 3
          }
       ],
-      "id": "EJ"
+      "id": "EJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9604,7 +10040,9 @@
             "minimum": 35
          }
       ],
-      "id": "EK"
+      "id": "EK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9666,7 +10104,9 @@
             "minimum": -3
          }
       ],
-      "id": "EL"
+      "id": "EL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9710,7 +10150,9 @@
             "minimum": 25
          }
       ],
-      "id": "EM"
+      "id": "EM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9754,7 +10196,9 @@
             "minimum": 12
          }
       ],
-      "id": "EN"
+      "id": "EN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9799,7 +10243,9 @@
             "minimum": 7
          }
       ],
-      "id": "EO"
+      "id": "EO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9843,7 +10289,9 @@
             "minimum": 4
          }
       ],
-      "id": "EP"
+      "id": "EP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9882,7 +10330,9 @@
             "minimum": 12
          }
       ],
-      "id": "EQ"
+      "id": "EQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9927,7 +10377,9 @@
             "minimum": 9
          }
       ],
-      "id": "ER"
+      "id": "ER",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -9978,7 +10430,9 @@
             "minimum": -70
          }
       ],
-      "id": "ES"
+      "id": "ES",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10022,7 +10476,9 @@
             "minimum": 2
          }
       ],
-      "id": "ET"
+      "id": "ET",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10061,7 +10517,9 @@
             "minimum": 3
          }
       ],
-      "id": "EU"
+      "id": "EU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10105,7 +10563,9 @@
             "minimum": 8
          }
       ],
-      "id": "EV"
+      "id": "EV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10150,7 +10610,9 @@
             "minimum": 52
          }
       ],
-      "id": "EW"
+      "id": "EW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10195,7 +10657,9 @@
             "minimum": 3
          }
       ],
-      "id": "EX"
+      "id": "EX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10246,7 +10710,9 @@
             "minimum": 60
          }
       ],
-      "id": "EY"
+      "id": "EY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10290,7 +10756,9 @@
             "minimum": -6
          }
       ],
-      "id": "EZ"
+      "id": "EZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10334,7 +10802,9 @@
             "minimum": 16
          }
       ],
-      "id": "Ea"
+      "id": "Ea",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10372,7 +10842,9 @@
             "minimum": 3
          }
       ],
-      "id": "Eb"
+      "id": "Eb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10417,7 +10889,9 @@
             "minimum": 40
          }
       ],
-      "id": "Ec"
+      "id": "Ec",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10457,7 +10931,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ed"
+      "id": "Ed",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10502,7 +10978,9 @@
             "minimum": 650
          }
       ],
-      "id": "Ee"
+      "id": "Ee",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10540,7 +11018,9 @@
             "minimum": 7
          }
       ],
-      "id": "Ef"
+      "id": "Ef",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10585,7 +11065,9 @@
             "minimum": 12
          }
       ],
-      "id": "Eg"
+      "id": "Eg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10630,7 +11112,9 @@
             "minimum": 6
          }
       ],
-      "id": "Eh"
+      "id": "Eh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10668,7 +11152,9 @@
             "minimum": 250
          }
       ],
-      "id": "Ei"
+      "id": "Ei",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10713,7 +11199,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ej"
+      "id": "Ej",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10763,7 +11251,9 @@
             "minimum": 125
          }
       ],
-      "id": "Ek"
+      "id": "Ek",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10803,7 +11293,9 @@
             "minimum": 1
          }
       ],
-      "id": "El"
+      "id": "El",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10848,7 +11340,9 @@
             "minimum": 120
          }
       ],
-      "id": "Em"
+      "id": "Em",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10898,7 +11392,9 @@
             "minimum": 12
          }
       ],
-      "id": "En"
+      "id": "En",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10936,7 +11432,9 @@
             "minimum": 1
          }
       ],
-      "id": "Eo"
+      "id": "Eo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -10982,7 +11480,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ep"
+      "id": "Ep",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11027,7 +11527,9 @@
             "minimum": 5
          }
       ],
-      "id": "Eq"
+      "id": "Eq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11067,7 +11569,9 @@
             "minimum": -4
          }
       ],
-      "id": "Er"
+      "id": "Er",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11105,7 +11609,9 @@
             "minimum": 300
          }
       ],
-      "id": "Es"
+      "id": "Es",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11144,7 +11650,9 @@
             "minimum": 2
          }
       ],
-      "id": "Et"
+      "id": "Et",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11183,7 +11691,9 @@
             "minimum": 1
          }
       ],
-      "id": "Eu"
+      "id": "Eu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11228,7 +11738,9 @@
             "minimum": 0
          }
       ],
-      "id": "Ev"
+      "id": "Ev",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11279,7 +11791,9 @@
             "minimum": 80
          }
       ],
-      "id": "Ew"
+      "id": "Ew",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11326,7 +11840,9 @@
             "minimum": 8
          }
       ],
-      "id": "Ex"
+      "id": "Ex",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11371,7 +11887,9 @@
             "minimum": 60
          }
       ],
-      "id": "Ey"
+      "id": "Ey",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11415,7 +11933,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ez"
+      "id": "Ez",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11465,7 +11985,9 @@
             "minimum": 24
          }
       ],
-      "id": "FA"
+      "id": "FA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11510,7 +12032,9 @@
             "minimum": 3
          }
       ],
-      "id": "FB"
+      "id": "FB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11554,7 +12078,9 @@
             "minimum": 3
          }
       ],
-      "id": "FC"
+      "id": "FC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11605,7 +12131,9 @@
             "minimum": -12
          }
       ],
-      "id": "FD"
+      "id": "FD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11658,7 +12186,9 @@
             "minimum": 6
          }
       ],
-      "id": "FE"
+      "id": "FE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11702,7 +12232,9 @@
             "minimum": 5
          }
       ],
-      "id": "FF"
+      "id": "FF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11746,7 +12278,9 @@
             "minimum": 1
          }
       ],
-      "id": "FG"
+      "id": "FG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11784,7 +12318,9 @@
             "minimum": -1
          }
       ],
-      "id": "FH"
+      "id": "FH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11829,7 +12365,9 @@
             "minimum": 3
          }
       ],
-      "id": "FI"
+      "id": "FI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11873,7 +12411,9 @@
             "minimum": 1
          }
       ],
-      "id": "FJ"
+      "id": "FJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11905,7 +12445,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "FK"
+      "id": "FK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11943,7 +12485,9 @@
             "minimum": 1
          }
       ],
-      "id": "FL"
+      "id": "FL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -11988,7 +12532,9 @@
             "minimum": 2
          }
       ],
-      "id": "FM"
+      "id": "FM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12033,7 +12579,9 @@
             "minimum": 15
          }
       ],
-      "id": "FN"
+      "id": "FN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12078,7 +12626,9 @@
             "minimum": 2
          }
       ],
-      "id": "FO"
+      "id": "FO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12123,7 +12673,9 @@
             "minimum": 4
          }
       ],
-      "id": "FP"
+      "id": "FP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12173,7 +12725,9 @@
             "minimum": 5
          }
       ],
-      "id": "FQ"
+      "id": "FQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12217,7 +12771,9 @@
             "minimum": 3
          }
       ],
-      "id": "FR"
+      "id": "FR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12255,7 +12811,9 @@
             "minimum": 1
          }
       ],
-      "id": "FS"
+      "id": "FS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12294,7 +12852,9 @@
             "minimum": 11
          }
       ],
-      "id": "FT"
+      "id": "FT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12338,7 +12898,9 @@
             "minimum": 8
          }
       ],
-      "id": "FU"
+      "id": "FU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12389,7 +12951,9 @@
             "minimum": 20
          }
       ],
-      "id": "FV"
+      "id": "FV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12439,7 +13003,9 @@
             "minimum": 4
          }
       ],
-      "id": "FW"
+      "id": "FW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12483,7 +13049,9 @@
             "minimum": 35
          }
       ],
-      "id": "FX"
+      "id": "FX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12533,7 +13101,9 @@
             "minimum": 4
          }
       ],
-      "id": "FY"
+      "id": "FY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12577,7 +13147,9 @@
             "minimum": 1
          }
       ],
-      "id": "FZ"
+      "id": "FZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12622,7 +13194,9 @@
             "minimum": -10
          }
       ],
-      "id": "Fa"
+      "id": "Fa",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12661,7 +13235,9 @@
             "minimum": 400
          }
       ],
-      "id": "Fb"
+      "id": "Fb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12700,7 +13276,9 @@
             "minimum": 1
          }
       ],
-      "id": "Fc"
+      "id": "Fc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12751,7 +13329,9 @@
             "minimum": 5
          }
       ],
-      "id": "Fd"
+      "id": "Fd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12796,7 +13376,9 @@
             "minimum": 1
          }
       ],
-      "id": "Fe"
+      "id": "Fe",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12841,7 +13423,9 @@
             "minimum": 4
          }
       ],
-      "id": "Ff"
+      "id": "Ff",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12886,7 +13470,9 @@
             "minimum": 2
          }
       ],
-      "id": "Fg"
+      "id": "Fg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12931,7 +13517,9 @@
             "minimum": 1
          }
       ],
-      "id": "Fh"
+      "id": "Fh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -12975,7 +13563,9 @@
             "minimum": 270
          }
       ],
-      "id": "Fi"
+      "id": "Fi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13020,7 +13610,9 @@
             "minimum": 5
          }
       ],
-      "id": "Fj"
+      "id": "Fj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13064,7 +13656,9 @@
             "minimum": 14
          }
       ],
-      "id": "Fk"
+      "id": "Fk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13108,7 +13702,9 @@
             "minimum": 15
          }
       ],
-      "id": "Fl"
+      "id": "Fl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13146,7 +13742,9 @@
             "minimum": 2
          }
       ],
-      "id": "Fm"
+      "id": "Fm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13196,7 +13794,9 @@
             "minimum": 3
          }
       ],
-      "id": "Fn"
+      "id": "Fn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13241,7 +13841,9 @@
             "minimum": 1600
          }
       ],
-      "id": "Fo"
+      "id": "Fo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13280,7 +13882,9 @@
             "minimum": 1
          }
       ],
-      "id": "Fp"
+      "id": "Fp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13324,7 +13928,9 @@
             "minimum": 2
          }
       ],
-      "id": "Fq"
+      "id": "Fq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13374,7 +13980,9 @@
             "minimum": -20
          }
       ],
-      "id": "Fr"
+      "id": "Fr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13419,7 +14027,9 @@
             "minimum": 2
          }
       ],
-      "id": "Fs"
+      "id": "Fs",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13470,7 +14080,9 @@
             "minimum": 10
          }
       ],
-      "id": "Ft"
+      "id": "Ft",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13520,7 +14132,9 @@
             "minimum": 16
          }
       ],
-      "id": "Fu"
+      "id": "Fu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13558,7 +14172,9 @@
             "minimum": 4
          }
       ],
-      "id": "Fv"
+      "id": "Fv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13597,7 +14213,9 @@
             "minimum": 1
          }
       ],
-      "id": "Fw"
+      "id": "Fw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13643,7 +14261,9 @@
             "minimum": 8
          }
       ],
-      "id": "Fx"
+      "id": "Fx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13687,7 +14307,9 @@
             "minimum": 2
          }
       ],
-      "id": "Fy"
+      "id": "Fy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13744,7 +14366,9 @@
             "minimum": 8
          }
       ],
-      "id": "Fz"
+      "id": "Fz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13788,7 +14412,9 @@
             "minimum": -4
          }
       ],
-      "id": "GA"
+      "id": "GA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13833,7 +14459,9 @@
             "minimum": 35
          }
       ],
-      "id": "GB"
+      "id": "GB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13903,7 +14531,9 @@
             "minimum": -10
          }
       ],
-      "id": "GC"
+      "id": "GC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13948,7 +14578,9 @@
             "minimum": 40
          }
       ],
-      "id": "GD"
+      "id": "GD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -13993,7 +14625,9 @@
             "minimum": 2
          }
       ],
-      "id": "GE"
+      "id": "GE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14038,7 +14672,9 @@
             "minimum": 10
          }
       ],
-      "id": "GF"
+      "id": "GF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14083,7 +14719,9 @@
             "minimum": 4
          }
       ],
-      "id": "GG"
+      "id": "GG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14127,7 +14765,9 @@
             "minimum": 1
          }
       ],
-      "id": "GH"
+      "id": "GH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14178,7 +14818,9 @@
             "minimum": -575
          }
       ],
-      "id": "GI"
+      "id": "GI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14222,7 +14864,9 @@
             "minimum": 19
          }
       ],
-      "id": "GJ"
+      "id": "GJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14254,7 +14898,9 @@
          "under": -25
       },
       "identifications": [],
-      "id": "GK"
+      "id": "GK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14304,7 +14950,9 @@
             "minimum": 8
          }
       ],
-      "id": "GL"
+      "id": "GL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14373,7 +15021,9 @@
             "minimum": -5
          }
       ],
-      "id": "GM"
+      "id": "GM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14411,7 +15061,9 @@
             "minimum": 3
          }
       ],
-      "id": "GN"
+      "id": "GN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14457,7 +15109,9 @@
             "minimum": 5
          }
       ],
-      "id": "GO"
+      "id": "GO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14509,7 +15163,9 @@
             "minimum": 6
          }
       ],
-      "id": "GP"
+      "id": "GP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14562,7 +15218,9 @@
             "minimum": 65
          }
       ],
-      "id": "GQ"
+      "id": "GQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14600,7 +15258,9 @@
             "minimum": 2
          }
       ],
-      "id": "GR"
+      "id": "GR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14644,7 +15304,9 @@
             "minimum": -7
          }
       ],
-      "id": "GS"
+      "id": "GS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14688,7 +15350,9 @@
             "minimum": -175
          }
       ],
-      "id": "GT"
+      "id": "GT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14726,7 +15390,9 @@
             "minimum": 5
          }
       ],
-      "id": "GU"
+      "id": "GU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14770,7 +15436,9 @@
             "minimum": 4
          }
       ],
-      "id": "GV"
+      "id": "GV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14814,7 +15482,9 @@
             "minimum": -16
          }
       ],
-      "id": "GW"
+      "id": "GW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14858,7 +15528,9 @@
             "minimum": 2
          }
       ],
-      "id": "GX"
+      "id": "GX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14902,7 +15574,9 @@
             "minimum": 90
          }
       ],
-      "id": "GY"
+      "id": "GY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14947,7 +15621,9 @@
             "minimum": 600
          }
       ],
-      "id": "GZ"
+      "id": "GZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -14997,7 +15673,9 @@
             "minimum": 350
          }
       ],
-      "id": "Ga"
+      "id": "Ga",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15037,7 +15715,9 @@
             "minimum": 4
          }
       ],
-      "id": "Gb"
+      "id": "Gb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15075,7 +15755,9 @@
             "minimum": 2
          }
       ],
-      "id": "Gc"
+      "id": "Gc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15107,7 +15789,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Gd"
+      "id": "Gd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15157,7 +15841,9 @@
             "minimum": 6
          }
       ],
-      "id": "Ge"
+      "id": "Ge",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15207,7 +15893,9 @@
             "minimum": -8
          }
       ],
-      "id": "Gf"
+      "id": "Gf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15246,7 +15934,9 @@
             "minimum": 1
          }
       ],
-      "id": "Gg"
+      "id": "Gg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15290,7 +15980,9 @@
             "minimum": 85
          }
       ],
-      "id": "Gh"
+      "id": "Gh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15352,7 +16044,9 @@
             "minimum": 4
          }
       ],
-      "id": "Gi"
+      "id": "Gi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15396,7 +16090,9 @@
             "minimum": 6
          }
       ],
-      "id": "Gj"
+      "id": "Gj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15434,7 +16130,9 @@
             "minimum": 2
          }
       ],
-      "id": "Gk"
+      "id": "Gk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15479,7 +16177,9 @@
             "minimum": -3
          }
       ],
-      "id": "Gl"
+      "id": "Gl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15530,7 +16230,9 @@
             "minimum": 60
          }
       ],
-      "id": "Gm"
+      "id": "Gm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15575,7 +16277,9 @@
             "minimum": 4
          }
       ],
-      "id": "Gn"
+      "id": "Gn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15625,7 +16329,9 @@
             "minimum": 4
          }
       ],
-      "id": "Go"
+      "id": "Go",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15670,7 +16376,9 @@
             "minimum": 5
          }
       ],
-      "id": "Gp"
+      "id": "Gp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15715,7 +16423,9 @@
             "minimum": 1
          }
       ],
-      "id": "Gq"
+      "id": "Gq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15753,7 +16463,9 @@
             "minimum": -300
          }
       ],
-      "id": "Gr"
+      "id": "Gr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15797,7 +16509,9 @@
             "minimum": 110
          }
       ],
-      "id": "Gs"
+      "id": "Gs",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15842,7 +16556,9 @@
             "minimum": 0
          }
       ],
-      "id": "Gt"
+      "id": "Gt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15886,7 +16602,9 @@
             "minimum": 3
          }
       ],
-      "id": "Gu"
+      "id": "Gu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15932,7 +16650,9 @@
             "minimum": 6
          }
       ],
-      "id": "Gv"
+      "id": "Gv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -15977,7 +16697,9 @@
             "minimum": 4
          }
       ],
-      "id": "Gw"
+      "id": "Gw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16024,7 +16746,9 @@
             "minimum": 2
          }
       ],
-      "id": "Gx"
+      "id": "Gx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16057,7 +16781,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Gy"
+      "id": "Gy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16101,7 +16827,9 @@
             "minimum": 10
          }
       ],
-      "id": "Gz"
+      "id": "Gz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16147,7 +16875,9 @@
             "minimum": -15
          }
       ],
-      "id": "HA"
+      "id": "HA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16186,7 +16916,9 @@
             "minimum": 5
          }
       ],
-      "id": "HB"
+      "id": "HB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16224,7 +16956,9 @@
             "minimum": 380
          }
       ],
-      "id": "HC"
+      "id": "HC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16263,7 +16997,9 @@
             "minimum": 3
          }
       ],
-      "id": "HD"
+      "id": "HD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16302,7 +17038,9 @@
             "minimum": 2
          }
       ],
-      "id": "HE"
+      "id": "HE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16340,7 +17078,9 @@
             "minimum": 10
          }
       ],
-      "id": "HF"
+      "id": "HF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16385,7 +17125,9 @@
             "minimum": -8
          }
       ],
-      "id": "HG"
+      "id": "HG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16436,7 +17178,9 @@
             "minimum": 2
          }
       ],
-      "id": "HH"
+      "id": "HH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16474,7 +17218,9 @@
             "minimum": 16
          }
       ],
-      "id": "HI"
+      "id": "HI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16530,7 +17276,9 @@
             "minimum": -3
          }
       ],
-      "id": "HJ"
+      "id": "HJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16568,7 +17316,9 @@
             "minimum": 2
          }
       ],
-      "id": "HK"
+      "id": "HK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16614,7 +17364,9 @@
             "minimum": 1
          }
       ],
-      "id": "HL"
+      "id": "HL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16650,7 +17402,9 @@
          "under": -20
       },
       "identifications": [],
-      "id": "HM"
+      "id": "HM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16701,7 +17455,9 @@
             "minimum": -10
          }
       ],
-      "id": "HN"
+      "id": "HN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16741,7 +17497,9 @@
             "minimum": 5
          }
       ],
-      "id": "HO"
+      "id": "HO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16791,7 +17549,9 @@
             "minimum": 13
          }
       ],
-      "id": "HP"
+      "id": "HP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16829,7 +17589,9 @@
             "minimum": 4
          }
       ],
-      "id": "HQ"
+      "id": "HQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16874,7 +17636,9 @@
             "minimum": 2
          }
       ],
-      "id": "HR"
+      "id": "HR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16918,7 +17682,9 @@
             "minimum": 1
          }
       ],
-      "id": "HS"
+      "id": "HS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -16963,7 +17729,9 @@
             "minimum": 4
          }
       ],
-      "id": "HT"
+      "id": "HT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17001,7 +17769,9 @@
             "minimum": 2
          }
       ],
-      "id": "HU"
+      "id": "HU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17039,7 +17809,9 @@
             "minimum": 40
          }
       ],
-      "id": "HV"
+      "id": "HV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17084,7 +17856,9 @@
             "minimum": 2
          }
       ],
-      "id": "HW"
+      "id": "HW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17129,7 +17903,9 @@
             "minimum": 4
          }
       ],
-      "id": "HX"
+      "id": "HX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17167,7 +17943,9 @@
             "minimum": -4
          }
       ],
-      "id": "HY"
+      "id": "HY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17206,7 +17984,9 @@
             "minimum": 1
          }
       ],
-      "id": "HZ"
+      "id": "HZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17263,7 +18043,9 @@
             "minimum": 35
          }
       ],
-      "id": "Ha"
+      "id": "Ha",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17301,7 +18083,9 @@
             "minimum": 5
          }
       ],
-      "id": "Hb"
+      "id": "Hb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17340,7 +18124,9 @@
             "minimum": -3
          }
       ],
-      "id": "Hc"
+      "id": "Hc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17393,7 +18179,9 @@
             "minimum": -75
          }
       ],
-      "id": "Hd"
+      "id": "Hd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17437,7 +18225,9 @@
             "minimum": 35
          }
       ],
-      "id": "He"
+      "id": "He",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17481,7 +18271,9 @@
             "minimum": 3
          }
       ],
-      "id": "Hf"
+      "id": "Hf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17531,7 +18323,9 @@
             "minimum": 6
          }
       ],
-      "id": "Hg"
+      "id": "Hg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17593,7 +18387,9 @@
             "minimum": 3
          }
       ],
-      "id": "Hh"
+      "id": "Hh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17638,7 +18434,9 @@
             "minimum": 4
          }
       ],
-      "id": "Hi"
+      "id": "Hi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17700,7 +18498,9 @@
             "minimum": 3
          }
       ],
-      "id": "Hj"
+      "id": "Hj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17744,7 +18544,9 @@
             "minimum": 2
          }
       ],
-      "id": "Hk"
+      "id": "Hk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17789,7 +18591,9 @@
             "minimum": 1
          }
       ],
-      "id": "Hl"
+      "id": "Hl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17827,7 +18631,9 @@
             "minimum": 4
          }
       ],
-      "id": "Hm"
+      "id": "Hm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17865,7 +18671,9 @@
             "minimum": 12
          }
       ],
-      "id": "Hn"
+      "id": "Hn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17905,7 +18713,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ho"
+      "id": "Ho",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17949,7 +18759,9 @@
             "minimum": -5
          }
       ],
-      "id": "Hp"
+      "id": "Hp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -17993,7 +18805,9 @@
             "minimum": 5
          }
       ],
-      "id": "Hq"
+      "id": "Hq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18037,7 +18851,9 @@
             "minimum": 3
          }
       ],
-      "id": "Hr"
+      "id": "Hr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18070,7 +18886,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Hs"
+      "id": "Hs",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18114,7 +18932,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ht"
+      "id": "Ht",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18159,7 +18979,9 @@
             "minimum": 4
          }
       ],
-      "id": "Hu"
+      "id": "Hu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18203,7 +19025,9 @@
             "minimum": 6
          }
       ],
-      "id": "Hv"
+      "id": "Hv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18236,7 +19060,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Hw"
+      "id": "Hw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18299,7 +19125,9 @@
             "minimum": 15
          }
       ],
-      "id": "Hx"
+      "id": "Hx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18343,7 +19171,9 @@
             "minimum": 3
          }
       ],
-      "id": "Hy"
+      "id": "Hy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18382,7 +19212,9 @@
             "minimum": 2
          }
       ],
-      "id": "Hz"
+      "id": "Hz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18420,7 +19252,9 @@
             "minimum": 4
          }
       ],
-      "id": "IA"
+      "id": "IA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18458,7 +19292,9 @@
             "minimum": 0
          }
       ],
-      "id": "IB"
+      "id": "IB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18503,7 +19339,9 @@
             "minimum": -2
          }
       ],
-      "id": "IC"
+      "id": "IC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18548,7 +19386,9 @@
             "minimum": 35
          }
       ],
-      "id": "ID"
+      "id": "ID",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18586,7 +19426,9 @@
             "minimum": 4
          }
       ],
-      "id": "IE"
+      "id": "IE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18630,7 +19472,9 @@
             "minimum": 20
          }
       ],
-      "id": "IF"
+      "id": "IF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18675,7 +19519,9 @@
             "minimum": 7
          }
       ],
-      "id": "IG"
+      "id": "IG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18713,7 +19559,9 @@
             "minimum": 9
          }
       ],
-      "id": "IH"
+      "id": "IH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18758,7 +19606,9 @@
             "minimum": 3
          }
       ],
-      "id": "II"
+      "id": "II",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18802,7 +19652,9 @@
             "minimum": 1
          }
       ],
-      "id": "IJ"
+      "id": "IJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18841,7 +19693,9 @@
             "minimum": 7
          }
       ],
-      "id": "IK"
+      "id": "IK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18886,7 +19740,9 @@
             "minimum": 6
          }
       ],
-      "id": "IL"
+      "id": "IL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -18936,7 +19792,9 @@
             "minimum": 1
          }
       ],
-      "id": "IM"
+      "id": "IM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19005,7 +19863,9 @@
             "minimum": 15
          }
       ],
-      "id": "IN"
+      "id": "IN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19058,7 +19918,9 @@
             "minimum": 5
          }
       ],
-      "id": "IO"
+      "id": "IO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19114,7 +19976,9 @@
             "minimum": 8
          }
       ],
-      "id": "IP"
+      "id": "IP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19153,7 +20017,9 @@
             "minimum": 3
          }
       ],
-      "id": "IQ"
+      "id": "IQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19222,7 +20088,9 @@
             "minimum": 15
          }
       ],
-      "id": "IR"
+      "id": "IR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19261,7 +20129,9 @@
             "minimum": 0
          }
       ],
-      "id": "IS"
+      "id": "IS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19305,7 +20175,9 @@
             "minimum": 10
          }
       ],
-      "id": "IT"
+      "id": "IT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19350,7 +20222,9 @@
             "minimum": 3
          }
       ],
-      "id": "IU"
+      "id": "IU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19400,7 +20274,9 @@
             "minimum": 12
          }
       ],
-      "id": "IV"
+      "id": "IV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19445,7 +20321,9 @@
             "minimum": 17
          }
       ],
-      "id": "IW"
+      "id": "IW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19484,7 +20362,9 @@
             "minimum": 12
          }
       ],
-      "id": "IX"
+      "id": "IX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19528,7 +20408,9 @@
             "minimum": 5
          }
       ],
-      "id": "IY"
+      "id": "IY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19566,7 +20448,9 @@
             "minimum": 2
          }
       ],
-      "id": "IZ"
+      "id": "IZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19605,7 +20489,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ia"
+      "id": "Ia",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19650,7 +20536,9 @@
             "minimum": 6
          }
       ],
-      "id": "Ib"
+      "id": "Ib",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19688,7 +20576,9 @@
             "minimum": 12
          }
       ],
-      "id": "Ic"
+      "id": "Ic",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19726,7 +20616,9 @@
             "minimum": 60
          }
       ],
-      "id": "Id"
+      "id": "Id",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19770,7 +20662,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ie"
+      "id": "Ie",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19815,7 +20709,9 @@
             "minimum": 45
          }
       ],
-      "id": "If"
+      "id": "If",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19860,7 +20756,9 @@
             "minimum": 45
          }
       ],
-      "id": "Ig"
+      "id": "Ig",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19898,7 +20796,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ih"
+      "id": "Ih",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19944,7 +20844,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ii"
+      "id": "Ii",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -19989,7 +20891,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ij"
+      "id": "Ij",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20027,7 +20931,9 @@
             "minimum": 15
          }
       ],
-      "id": "Ik"
+      "id": "Ik",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20077,7 +20983,9 @@
             "minimum": 3
          }
       ],
-      "id": "Il"
+      "id": "Il",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20121,7 +21029,9 @@
             "minimum": 48
          }
       ],
-      "id": "Im"
+      "id": "Im",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20153,7 +21063,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "In"
+      "id": "In",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20198,7 +21110,9 @@
             "minimum": -320
          }
       ],
-      "id": "Io"
+      "id": "Io",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20260,7 +21174,9 @@
             "minimum": 15
          }
       ],
-      "id": "Ip"
+      "id": "Ip",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20304,7 +21220,9 @@
             "minimum": 560
          }
       ],
-      "id": "Iq"
+      "id": "Iq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20342,7 +21260,9 @@
             "minimum": 140
          }
       ],
-      "id": "Ir"
+      "id": "Ir",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20386,7 +21306,9 @@
             "minimum": -2
          }
       ],
-      "id": "Is"
+      "id": "Is",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20425,7 +21347,9 @@
             "minimum": 2
          }
       ],
-      "id": "It"
+      "id": "It",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20469,7 +21393,9 @@
             "minimum": 11
          }
       ],
-      "id": "Iu"
+      "id": "Iu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20507,7 +21433,9 @@
             "minimum": 4
          }
       ],
-      "id": "Iv"
+      "id": "Iv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20551,7 +21479,9 @@
             "minimum": 8
          }
       ],
-      "id": "Iw"
+      "id": "Iw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20589,7 +21519,9 @@
             "minimum": 5
          }
       ],
-      "id": "Ix"
+      "id": "Ix",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20636,7 +21568,9 @@
             "minimum": -8
          }
       ],
-      "id": "Iy"
+      "id": "Iy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20669,7 +21603,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Iz"
+      "id": "Iz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20708,7 +21644,9 @@
             "minimum": 2
          }
       ],
-      "id": "JA"
+      "id": "JA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20746,7 +21684,9 @@
             "minimum": 1
          }
       ],
-      "id": "JB"
+      "id": "JB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20796,7 +21736,9 @@
             "minimum": 2
          }
       ],
-      "id": "JC"
+      "id": "JC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20828,7 +21770,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "JD"
+      "id": "JD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20866,7 +21810,9 @@
             "minimum": -10
          }
       ],
-      "id": "JE"
+      "id": "JE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20910,7 +21856,9 @@
             "minimum": 10
          }
       ],
-      "id": "JF"
+      "id": "JF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -20954,7 +21902,9 @@
             "minimum": 6
          }
       ],
-      "id": "JG"
+      "id": "JG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21016,7 +21966,9 @@
             "minimum": 1
          }
       ],
-      "id": "JH"
+      "id": "JH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21061,7 +22013,9 @@
             "minimum": 5
          }
       ],
-      "id": "JI"
+      "id": "JI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21105,7 +22059,9 @@
             "minimum": 4
          }
       ],
-      "id": "JJ"
+      "id": "JJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21152,7 +22108,9 @@
             "minimum": 16
          }
       ],
-      "id": "JK"
+      "id": "JK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21190,7 +22148,9 @@
             "minimum": 1
          }
       ],
-      "id": "JL"
+      "id": "JL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21228,7 +22188,9 @@
             "minimum": 1
          }
       ],
-      "id": "JM"
+      "id": "JM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21266,7 +22228,9 @@
             "minimum": 4
          }
       ],
-      "id": "JN"
+      "id": "JN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21311,7 +22275,9 @@
             "minimum": 16
          }
       ],
-      "id": "JO"
+      "id": "JO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21349,7 +22315,9 @@
             "minimum": 460
          }
       ],
-      "id": "JP"
+      "id": "JP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21388,7 +22356,9 @@
             "minimum": 3
          }
       ],
-      "id": "JQ"
+      "id": "JQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21427,7 +22397,9 @@
             "minimum": 6
          }
       ],
-      "id": "JR"
+      "id": "JR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21472,7 +22444,9 @@
             "minimum": 6
          }
       ],
-      "id": "JS"
+      "id": "JS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21517,7 +22491,9 @@
             "minimum": 5
          }
       ],
-      "id": "JT"
+      "id": "JT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21567,7 +22543,9 @@
             "minimum": 12
          }
       ],
-      "id": "JU"
+      "id": "JU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21617,7 +22595,9 @@
             "minimum": 12
          }
       ],
-      "id": "JV"
+      "id": "JV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21680,7 +22660,9 @@
             "minimum": 6
          }
       ],
-      "id": "JW"
+      "id": "JW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21730,7 +22712,9 @@
             "minimum": 5
          }
       ],
-      "id": "JX"
+      "id": "JX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21774,7 +22758,9 @@
             "minimum": 3
          }
       ],
-      "id": "JY"
+      "id": "JY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21818,7 +22804,9 @@
             "minimum": -70
          }
       ],
-      "id": "JZ"
+      "id": "JZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21865,7 +22853,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ja"
+      "id": "Ja",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21909,7 +22899,9 @@
             "minimum": 9
          }
       ],
-      "id": "Jb"
+      "id": "Jb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -21959,7 +22951,9 @@
             "minimum": 55
          }
       ],
-      "id": "Jc"
+      "id": "Jc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22009,7 +23003,9 @@
             "minimum": 4
          }
       ],
-      "id": "Jd"
+      "id": "Jd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22059,7 +23055,9 @@
             "minimum": 5
          }
       ],
-      "id": "Je"
+      "id": "Je",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22109,7 +23107,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jf"
+      "id": "Jf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22159,7 +23159,9 @@
             "minimum": 4
          }
       ],
-      "id": "Jg"
+      "id": "Jg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22203,7 +23205,9 @@
             "minimum": 7
          }
       ],
-      "id": "Jh"
+      "id": "Jh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22234,7 +23238,9 @@
          "under": -160
       },
       "identifications": [],
-      "id": "Ji"
+      "id": "Ji",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22278,7 +23284,9 @@
             "minimum": 3
          }
       ],
-      "id": "Jj"
+      "id": "Jj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22352,7 +23360,9 @@
             "minimum": 19
          }
       ],
-      "id": "Jk"
+      "id": "Jk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22402,7 +23412,9 @@
             "minimum": 3
          }
       ],
-      "id": "Jl"
+      "id": "Jl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22452,7 +23464,9 @@
             "minimum": 90
          }
       ],
-      "id": "Jm"
+      "id": "Jm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22502,7 +23516,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jn"
+      "id": "Jn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22552,7 +23568,9 @@
             "minimum": -4
          }
       ],
-      "id": "Jo"
+      "id": "Jo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22602,7 +23620,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jp"
+      "id": "Jp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22652,7 +23672,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jq"
+      "id": "Jq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22702,7 +23724,9 @@
             "minimum": -4
          }
       ],
-      "id": "Jr"
+      "id": "Jr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22752,7 +23776,9 @@
             "minimum": 6
          }
       ],
-      "id": "Js"
+      "id": "Js",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22802,7 +23828,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jt"
+      "id": "Jt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22852,7 +23880,9 @@
             "minimum": 10
          }
       ],
-      "id": "Ju"
+      "id": "Ju",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22902,7 +23932,9 @@
             "minimum": 5
          }
       ],
-      "id": "Jv"
+      "id": "Jv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22946,7 +23978,9 @@
             "minimum": 10
          }
       ],
-      "id": "Jw"
+      "id": "Jw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -22996,7 +24030,9 @@
             "minimum": 6
          }
       ],
-      "id": "Jx"
+      "id": "Jx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23046,7 +24082,9 @@
             "minimum": -7
          }
       ],
-      "id": "Jy"
+      "id": "Jy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23096,7 +24134,9 @@
             "minimum": 20
          }
       ],
-      "id": "Jz"
+      "id": "Jz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23146,7 +24186,9 @@
             "minimum": 4
          }
       ],
-      "id": "KA"
+      "id": "KA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23197,7 +24239,9 @@
             "minimum": 12
          }
       ],
-      "id": "KB"
+      "id": "KB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23247,7 +24291,9 @@
             "minimum": 2
          }
       ],
-      "id": "KC"
+      "id": "KC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23291,7 +24337,9 @@
             "minimum": 4
          }
       ],
-      "id": "KD"
+      "id": "KD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23336,7 +24384,9 @@
             "minimum": 25
          }
       ],
-      "id": "KE"
+      "id": "KE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23380,7 +24430,9 @@
             "minimum": 4
          }
       ],
-      "id": "KF"
+      "id": "KF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23430,7 +24482,9 @@
             "minimum": -9
          }
       ],
-      "id": "KG"
+      "id": "KG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23481,7 +24535,9 @@
             "minimum": 10
          }
       ],
-      "id": "KH"
+      "id": "KH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23531,7 +24587,9 @@
             "minimum": 4
          }
       ],
-      "id": "KI"
+      "id": "KI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23582,7 +24640,9 @@
             "minimum": 3
          }
       ],
-      "id": "KJ"
+      "id": "KJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23626,7 +24686,9 @@
             "minimum": 10
          }
       ],
-      "id": "KK"
+      "id": "KK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23664,7 +24726,9 @@
             "minimum": 2
          }
       ],
-      "id": "KL"
+      "id": "KL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23708,7 +24772,9 @@
             "minimum": 4
          }
       ],
-      "id": "KM"
+      "id": "KM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23758,7 +24824,9 @@
             "minimum": 6
          }
       ],
-      "id": "KN"
+      "id": "KN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23808,7 +24876,9 @@
             "minimum": 6
          }
       ],
-      "id": "KO"
+      "id": "KO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23858,7 +24928,9 @@
             "minimum": 3
          }
       ],
-      "id": "KP"
+      "id": "KP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23902,7 +24974,9 @@
             "minimum": -35
          }
       ],
-      "id": "KQ"
+      "id": "KQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23952,7 +25026,9 @@
             "minimum": 3
          }
       ],
-      "id": "KR"
+      "id": "KR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -23996,7 +25072,9 @@
             "minimum": 7
          }
       ],
-      "id": "KS"
+      "id": "KS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24040,7 +25118,9 @@
             "minimum": 1
          }
       ],
-      "id": "KT"
+      "id": "KT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24085,7 +25165,9 @@
             "minimum": 3
          }
       ],
-      "id": "KU"
+      "id": "KU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24129,7 +25211,9 @@
             "minimum": 2
          }
       ],
-      "id": "KV"
+      "id": "KV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24203,7 +25287,9 @@
             "minimum": 3
          }
       ],
-      "id": "KW"
+      "id": "KW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24259,7 +25345,9 @@
             "minimum": 4
          }
       ],
-      "id": "KX"
+      "id": "KX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24303,7 +25391,9 @@
             "minimum": 15
          }
       ],
-      "id": "KY"
+      "id": "KY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24353,7 +25443,9 @@
             "minimum": 7
          }
       ],
-      "id": "KZ"
+      "id": "KZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24397,7 +25489,9 @@
             "minimum": 40
          }
       ],
-      "id": "Ka"
+      "id": "Ka",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24453,7 +25547,9 @@
             "minimum": 10
          }
       ],
-      "id": "Kb"
+      "id": "Kb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24503,7 +25599,9 @@
             "minimum": 15
          }
       ],
-      "id": "Kc"
+      "id": "Kc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24553,7 +25651,9 @@
             "minimum": 18
          }
       ],
-      "id": "Kd"
+      "id": "Kd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24603,7 +25703,9 @@
             "minimum": 400
          }
       ],
-      "id": "Ke"
+      "id": "Ke",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24653,7 +25755,9 @@
             "minimum": 7
          }
       ],
-      "id": "Kf"
+      "id": "Kf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24728,7 +25832,9 @@
             "minimum": -2
          }
       ],
-      "id": "Kg"
+      "id": "Kg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24767,7 +25873,9 @@
             "minimum": 1
          }
       ],
-      "id": "Kh"
+      "id": "Kh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24811,7 +25919,9 @@
             "minimum": 4
          }
       ],
-      "id": "Ki"
+      "id": "Ki",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24850,7 +25960,9 @@
             "minimum": 5
          }
       ],
-      "id": "Kj"
+      "id": "Kj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24895,7 +26007,9 @@
             "minimum": 5
          }
       ],
-      "id": "Kk"
+      "id": "Kk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24934,7 +26048,9 @@
             "minimum": 2
          }
       ],
-      "id": "Kl"
+      "id": "Kl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -24984,7 +26100,9 @@
             "minimum": 20
          }
       ],
-      "id": "Km"
+      "id": "Km",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25028,7 +26146,9 @@
             "minimum": 3
          }
       ],
-      "id": "Kn"
+      "id": "Kn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25067,7 +26187,9 @@
             "minimum": 640
          }
       ],
-      "id": "Ko"
+      "id": "Ko",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25111,7 +26233,9 @@
             "minimum": -96
          }
       ],
-      "id": "Kp"
+      "id": "Kp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25149,7 +26273,9 @@
             "minimum": 1
          }
       ],
-      "id": "Kq"
+      "id": "Kq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25187,7 +26313,9 @@
             "minimum": 4
          }
       ],
-      "id": "Kr"
+      "id": "Kr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25249,7 +26377,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ks"
+      "id": "Ks",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25295,7 +26425,9 @@
             "minimum": 7
          }
       ],
-      "id": "Kt"
+      "id": "Kt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25340,7 +26472,9 @@
             "minimum": 5
          }
       ],
-      "id": "Ku"
+      "id": "Ku",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25385,7 +26519,9 @@
             "minimum": 40
          }
       ],
-      "id": "Kv"
+      "id": "Kv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25436,7 +26572,9 @@
             "minimum": 3
          }
       ],
-      "id": "Kw"
+      "id": "Kw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25481,7 +26619,9 @@
             "minimum": 2
          }
       ],
-      "id": "Kx"
+      "id": "Kx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25531,7 +26671,9 @@
             "minimum": 25
          }
       ],
-      "id": "Ky"
+      "id": "Ky",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25576,7 +26718,9 @@
             "minimum": 8
          }
       ],
-      "id": "Kz"
+      "id": "Kz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25626,7 +26770,9 @@
             "minimum": 3
          }
       ],
-      "id": "LA"
+      "id": "LA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25670,7 +26816,9 @@
             "minimum": 3
          }
       ],
-      "id": "LB"
+      "id": "LB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25714,7 +26862,9 @@
             "minimum": -3
          }
       ],
-      "id": "LC"
+      "id": "LC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25758,7 +26908,9 @@
             "minimum": 60
          }
       ],
-      "id": "LD"
+      "id": "LD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25802,7 +26954,9 @@
             "minimum": 6
          }
       ],
-      "id": "LE"
+      "id": "LE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25859,7 +27013,9 @@
             "minimum": 8
          }
       ],
-      "id": "LF"
+      "id": "LF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25904,7 +27060,9 @@
             "minimum": 1
          }
       ],
-      "id": "LG"
+      "id": "LG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -25960,7 +27118,9 @@
             "minimum": 6
          }
       ],
-      "id": "LH"
+      "id": "LH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26004,7 +27164,9 @@
             "minimum": 1
          }
       ],
-      "id": "LI"
+      "id": "LI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26049,7 +27211,9 @@
             "minimum": 10
          }
       ],
-      "id": "LJ"
+      "id": "LJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26087,7 +27251,9 @@
             "minimum": 1
          }
       ],
-      "id": "LK"
+      "id": "LK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26131,7 +27297,9 @@
             "minimum": 4
          }
       ],
-      "id": "LL"
+      "id": "LL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26189,7 +27357,9 @@
             "minimum": -8
          }
       ],
-      "id": "LM"
+      "id": "LM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26233,7 +27403,9 @@
             "minimum": 11
          }
       ],
-      "id": "LN"
+      "id": "LN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26278,7 +27450,9 @@
             "minimum": 2
          }
       ],
-      "id": "LO"
+      "id": "LO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26316,7 +27490,9 @@
             "minimum": 1
          }
       ],
-      "id": "LP"
+      "id": "LP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26360,7 +27536,9 @@
             "minimum": 5
          }
       ],
-      "id": "LQ"
+      "id": "LQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26406,7 +27584,9 @@
             "minimum": -4
          }
       ],
-      "id": "LR"
+      "id": "LR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26445,7 +27625,9 @@
             "minimum": 2
          }
       ],
-      "id": "LS"
+      "id": "LS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26490,7 +27672,9 @@
             "minimum": 1
          }
       ],
-      "id": "LT"
+      "id": "LT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26528,7 +27712,9 @@
             "minimum": 3
          }
       ],
-      "id": "LU"
+      "id": "LU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26572,7 +27758,9 @@
             "minimum": 10
          }
       ],
-      "id": "LV"
+      "id": "LV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26616,7 +27804,9 @@
             "minimum": 12
          }
       ],
-      "id": "LW"
+      "id": "LW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26660,7 +27850,9 @@
             "minimum": -15
          }
       ],
-      "id": "LX"
+      "id": "LX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26699,7 +27891,9 @@
             "minimum": 2
          }
       ],
-      "id": "LY"
+      "id": "LY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26743,7 +27937,9 @@
             "minimum": 5
          }
       ],
-      "id": "LZ"
+      "id": "LZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26781,7 +27977,9 @@
             "minimum": -8
          }
       ],
-      "id": "La"
+      "id": "La",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26826,7 +28024,9 @@
             "minimum": 1
          }
       ],
-      "id": "Lb"
+      "id": "Lb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26865,7 +28065,9 @@
             "minimum": 8
          }
       ],
-      "id": "Lc"
+      "id": "Lc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26904,7 +28106,9 @@
             "minimum": 10
          }
       ],
-      "id": "Ld"
+      "id": "Ld",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26948,7 +28152,9 @@
             "minimum": 0
          }
       ],
-      "id": "Le"
+      "id": "Le",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -26979,7 +28185,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Lf"
+      "id": "Lf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27024,7 +28232,9 @@
             "minimum": -3
          }
       ],
-      "id": "Lg"
+      "id": "Lg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27080,7 +28290,9 @@
             "minimum": 8
          }
       ],
-      "id": "Lh"
+      "id": "Lh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27124,7 +28336,9 @@
             "minimum": 1
          }
       ],
-      "id": "Li"
+      "id": "Li",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27168,7 +28382,9 @@
             "minimum": -10
          }
       ],
-      "id": "Lj"
+      "id": "Lj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27236,7 +28452,9 @@
             "minimum": 11
          }
       ],
-      "id": "Lk"
+      "id": "Lk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27275,7 +28493,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ll"
+      "id": "Ll",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27319,7 +28539,9 @@
             "minimum": 6
          }
       ],
-      "id": "Lm"
+      "id": "Lm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27363,7 +28585,9 @@
             "minimum": 12
          }
       ],
-      "id": "Ln"
+      "id": "Ln",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27395,7 +28619,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Lo"
+      "id": "Lo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27439,7 +28665,9 @@
             "minimum": 1
          }
       ],
-      "id": "Lp"
+      "id": "Lp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27484,7 +28712,9 @@
             "minimum": 2
          }
       ],
-      "id": "Lq"
+      "id": "Lq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27540,7 +28770,9 @@
             "minimum": 2
          }
       ],
-      "id": "Lr"
+      "id": "Lr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27602,7 +28834,9 @@
             "minimum": 12
          }
       ],
-      "id": "Ls"
+      "id": "Ls",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27646,7 +28880,9 @@
             "minimum": 4
          }
       ],
-      "id": "Lt"
+      "id": "Lt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27702,7 +28938,9 @@
             "minimum": 5
          }
       ],
-      "id": "Lu"
+      "id": "Lu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27746,7 +28984,9 @@
             "minimum": 6
          }
       ],
-      "id": "Lv"
+      "id": "Lv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27791,7 +29031,9 @@
             "minimum": 70
          }
       ],
-      "id": "Lw"
+      "id": "Lw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27836,7 +29078,9 @@
             "minimum": 10
          }
       ],
-      "id": "Lx"
+      "id": "Lx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27880,7 +29124,9 @@
             "minimum": 14
          }
       ],
-      "id": "Ly"
+      "id": "Ly",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27924,7 +29170,9 @@
             "minimum": -18
          }
       ],
-      "id": "Lz"
+      "id": "Lz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -27968,7 +29216,9 @@
             "minimum": -9
          }
       ],
-      "id": "MA"
+      "id": "MA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28025,7 +29275,9 @@
             "minimum": 80
          }
       ],
-      "id": "MB"
+      "id": "MB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28063,7 +29315,9 @@
             "minimum": 12
          }
       ],
-      "id": "MC"
+      "id": "MC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28108,7 +29362,9 @@
             "minimum": 6
          }
       ],
-      "id": "MD"
+      "id": "MD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28146,7 +29402,9 @@
             "minimum": 20
          }
       ],
-      "id": "ME"
+      "id": "ME",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28185,7 +29443,9 @@
             "minimum": 3
          }
       ],
-      "id": "MF"
+      "id": "MF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28248,7 +29508,9 @@
             "minimum": 1
          }
       ],
-      "id": "MG"
+      "id": "MG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28293,7 +29555,9 @@
             "minimum": 15
          }
       ],
-      "id": "MH"
+      "id": "MH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28355,7 +29619,9 @@
             "minimum": 0
          }
       ],
-      "id": "MI"
+      "id": "MI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28399,7 +29665,9 @@
             "minimum": 2
          }
       ],
-      "id": "MJ"
+      "id": "MJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28443,7 +29711,9 @@
             "minimum": 4
          }
       ],
-      "id": "MK"
+      "id": "MK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28482,7 +29752,9 @@
             "minimum": 2
          }
       ],
-      "id": "ML"
+      "id": "ML",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28532,7 +29804,9 @@
             "minimum": 1150
          }
       ],
-      "id": "MM"
+      "id": "MM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28576,7 +29850,9 @@
             "minimum": 14
          }
       ],
-      "id": "MN"
+      "id": "MN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28620,7 +29896,9 @@
             "minimum": 0
          }
       ],
-      "id": "MO"
+      "id": "MO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28664,7 +29942,9 @@
             "minimum": 25
          }
       ],
-      "id": "MP"
+      "id": "MP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28715,7 +29995,9 @@
             "minimum": 7
          }
       ],
-      "id": "MQ"
+      "id": "MQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28765,7 +30047,9 @@
             "minimum": 5
          }
       ],
-      "id": "MR"
+      "id": "MR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28809,7 +30093,9 @@
             "minimum": -4
          }
       ],
-      "id": "MS"
+      "id": "MS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28853,7 +30139,9 @@
             "minimum": 9
          }
       ],
-      "id": "MT"
+      "id": "MT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28898,7 +30186,9 @@
             "minimum": 15
          }
       ],
-      "id": "MU"
+      "id": "MU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28948,7 +30238,9 @@
             "minimum": 5
          }
       ],
-      "id": "MV"
+      "id": "MV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -28986,7 +30278,9 @@
             "minimum": 1
          }
       ],
-      "id": "MW"
+      "id": "MW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29030,7 +30324,9 @@
             "minimum": 1
          }
       ],
-      "id": "MX"
+      "id": "MX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29080,7 +30376,9 @@
             "minimum": 8
          }
       ],
-      "id": "MY"
+      "id": "MY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29125,7 +30423,9 @@
             "minimum": 3
          }
       ],
-      "id": "MZ"
+      "id": "MZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29170,7 +30470,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ma"
+      "id": "Ma",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29215,7 +30517,9 @@
             "minimum": 28
          }
       ],
-      "id": "Mb"
+      "id": "Mb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29260,7 +30564,9 @@
             "minimum": 20
          }
       ],
-      "id": "Mc"
+      "id": "Mc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29299,7 +30605,9 @@
             "minimum": 2
          }
       ],
-      "id": "Md"
+      "id": "Md",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29338,7 +30646,9 @@
             "minimum": 2
          }
       ],
-      "id": "Me"
+      "id": "Me",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29377,7 +30687,9 @@
             "minimum": 2
          }
       ],
-      "id": "Mf"
+      "id": "Mf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29421,7 +30733,9 @@
             "minimum": 1
          }
       ],
-      "id": "Mg"
+      "id": "Mg",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29466,7 +30780,9 @@
             "minimum": 3
          }
       ],
-      "id": "Mh"
+      "id": "Mh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29505,7 +30821,9 @@
             "minimum": 2
          }
       ],
-      "id": "Mi"
+      "id": "Mi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29555,7 +30873,9 @@
             "minimum": 4
          }
       ],
-      "id": "Mj"
+      "id": "Mj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29594,7 +30914,9 @@
             "minimum": 2
          }
       ],
-      "id": "Mk"
+      "id": "Mk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29639,7 +30961,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ml"
+      "id": "Ml",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29677,7 +31001,9 @@
             "minimum": 1
          }
       ],
-      "id": "Mm"
+      "id": "Mm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29727,7 +31053,9 @@
             "minimum": 45
          }
       ],
-      "id": "Mn"
+      "id": "Mn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29772,7 +31100,9 @@
             "minimum": 28
          }
       ],
-      "id": "Mo"
+      "id": "Mo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29816,7 +31146,9 @@
             "minimum": 23
          }
       ],
-      "id": "Mp"
+      "id": "Mp",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29855,7 +31187,9 @@
             "minimum": 8
          }
       ],
-      "id": "Mq"
+      "id": "Mq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29893,7 +31227,9 @@
             "minimum": 3
          }
       ],
-      "id": "Mr"
+      "id": "Mr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29937,7 +31273,9 @@
             "minimum": -50
          }
       ],
-      "id": "Ms"
+      "id": "Ms",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -29976,7 +31314,9 @@
             "minimum": 6
          }
       ],
-      "id": "Mt"
+      "id": "Mt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30015,7 +31355,9 @@
             "minimum": 4
          }
       ],
-      "id": "Mu"
+      "id": "Mu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30060,7 +31402,9 @@
             "minimum": 6
          }
       ],
-      "id": "Mv"
+      "id": "Mv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30105,7 +31449,9 @@
             "minimum": -7
          }
       ],
-      "id": "Mw"
+      "id": "Mw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30151,7 +31497,9 @@
             "minimum": 8
          }
       ],
-      "id": "Mx"
+      "id": "Mx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30198,7 +31546,9 @@
             "minimum": 1
          }
       ],
-      "id": "My"
+      "id": "My",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30243,7 +31593,9 @@
             "minimum": 30
          }
       ],
-      "id": "Mz"
+      "id": "Mz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30282,7 +31634,9 @@
             "minimum": 3
          }
       ],
-      "id": "NA"
+      "id": "NA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30326,7 +31680,9 @@
             "minimum": 1
          }
       ],
-      "id": "NB"
+      "id": "NB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30364,7 +31720,9 @@
             "minimum": 5
          }
       ],
-      "id": "NC"
+      "id": "NC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30409,7 +31767,9 @@
             "minimum": 5
          }
       ],
-      "id": "ND"
+      "id": "ND",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30448,7 +31808,9 @@
             "minimum": 5
          }
       ],
-      "id": "NE"
+      "id": "NE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30491,7 +31853,9 @@
             "minimum": 4
          }
       ],
-      "id": "NF"
+      "id": "NF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30536,7 +31900,9 @@
             "minimum": 480
          }
       ],
-      "id": "NG"
+      "id": "NG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30586,7 +31952,9 @@
             "minimum": -70
          }
       ],
-      "id": "NH"
+      "id": "NH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30630,7 +31998,9 @@
             "minimum": 4
          }
       ],
-      "id": "NI"
+      "id": "NI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30674,7 +32044,9 @@
             "minimum": 3
          }
       ],
-      "id": "NJ"
+      "id": "NJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30712,7 +32084,9 @@
             "minimum": 2
          }
       ],
-      "id": "NK"
+      "id": "NK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30756,7 +32130,9 @@
             "minimum": 5
          }
       ],
-      "id": "NL"
+      "id": "NL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30819,7 +32195,9 @@
             "minimum": -7
          }
       ],
-      "id": "NM"
+      "id": "NM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30864,7 +32242,9 @@
             "minimum": 3
          }
       ],
-      "id": "NN"
+      "id": "NN",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30905,7 +32285,9 @@
             "minimum": 15
          }
       ],
-      "id": "NO"
+      "id": "NO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30952,7 +32334,9 @@
             "minimum": 1
          }
       ],
-      "id": "NP"
+      "id": "NP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -30997,7 +32381,9 @@
             "minimum": -8
          }
       ],
-      "id": "NQ"
+      "id": "NQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31041,7 +32427,9 @@
             "minimum": 2
          }
       ],
-      "id": "NR"
+      "id": "NR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31080,7 +32468,9 @@
             "minimum": 2
          }
       ],
-      "id": "NS"
+      "id": "NS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31137,7 +32527,9 @@
             "minimum": 3
          }
       ],
-      "id": "NT"
+      "id": "NT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31181,7 +32573,9 @@
             "minimum": 6
          }
       ],
-      "id": "NU"
+      "id": "NU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31225,7 +32619,9 @@
             "minimum": 8
          }
       ],
-      "id": "NV"
+      "id": "NV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31264,7 +32660,9 @@
             "minimum": 1
          }
       ],
-      "id": "NW"
+      "id": "NW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31308,7 +32706,9 @@
             "minimum": 4
          }
       ],
-      "id": "NX"
+      "id": "NX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31352,7 +32752,9 @@
             "minimum": 10
          }
       ],
-      "id": "NY"
+      "id": "NY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31391,7 +32793,9 @@
             "minimum": 3
          }
       ],
-      "id": "NZ"
+      "id": "NZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31441,7 +32845,9 @@
             "minimum": 10
          }
       ],
-      "id": "Na"
+      "id": "Na",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31486,7 +32892,9 @@
             "minimum": 5
          }
       ],
-      "id": "Nb"
+      "id": "Nb",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31531,7 +32939,9 @@
             "minimum": -550
          }
       ],
-      "id": "Nc"
+      "id": "Nc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31569,7 +32979,9 @@
             "minimum": 2
          }
       ],
-      "id": "Nd"
+      "id": "Nd",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31613,7 +33025,9 @@
             "minimum": 7
          }
       ],
-      "id": "Ne"
+      "id": "Ne",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31651,7 +33065,9 @@
             "minimum": 3
          }
       ],
-      "id": "Nf"
+      "id": "Nf",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31689,7 +33105,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ng"
+      "id": "Ng",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31734,7 +33152,9 @@
             "minimum": 4
          }
       ],
-      "id": "Nh"
+      "id": "Nh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31779,7 +33199,9 @@
             "minimum": 5
          }
       ],
-      "id": "Ni"
+      "id": "Ni",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31824,7 +33246,9 @@
             "minimum": -360
          }
       ],
-      "id": "Nj"
+      "id": "Nj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31868,7 +33292,9 @@
             "minimum": 30
          }
       ],
-      "id": "Nk"
+      "id": "Nk",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31912,7 +33338,9 @@
             "minimum": 6
          }
       ],
-      "id": "Nl"
+      "id": "Nl",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31957,7 +33385,9 @@
             "minimum": 10
          }
       ],
-      "id": "Nm"
+      "id": "Nm",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -31997,7 +33427,9 @@
             "minimum": 1
          }
       ],
-      "id": "Nn"
+      "id": "Nn",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32042,7 +33474,9 @@
             "minimum": 1
          }
       ],
-      "id": "No"
+      "id": "No",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32080,7 +33514,9 @@
             "minimum": 135
          }
       ],
-      "id": "Np"
+      "id": "Np",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32119,7 +33555,9 @@
             "minimum": 0
          }
       ],
-      "id": "Nq"
+      "id": "Nq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32164,7 +33602,9 @@
             "minimum": 2
          }
       ],
-      "id": "Nr"
+      "id": "Nr",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32214,7 +33654,9 @@
             "minimum": 8
          }
       ],
-      "id": "Ns"
+      "id": "Ns",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32258,7 +33700,9 @@
             "minimum": 10
          }
       ],
-      "id": "Nt"
+      "id": "Nt",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32302,7 +33746,9 @@
             "minimum": 2
          }
       ],
-      "id": "Nu"
+      "id": "Nu",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32353,7 +33799,9 @@
             "minimum": -6
          }
       ],
-      "id": "Nv"
+      "id": "Nv",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32384,7 +33832,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "Nw"
+      "id": "Nw",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32428,7 +33878,9 @@
             "minimum": 30
          }
       ],
-      "id": "Nx"
+      "id": "Nx",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32478,7 +33930,9 @@
             "minimum": 3
          }
       ],
-      "id": "Ny"
+      "id": "Ny",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32529,7 +33983,9 @@
             "minimum": 320
          }
       ],
-      "id": "Nz"
+      "id": "Nz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32573,7 +34029,9 @@
             "minimum": 8
          }
       ],
-      "id": "OA"
+      "id": "OA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32617,7 +34075,9 @@
             "minimum": -65
          }
       ],
-      "id": "OB"
+      "id": "OB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32662,7 +34122,9 @@
             "minimum": 1
          }
       ],
-      "id": "OC"
+      "id": "OC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32706,7 +34168,9 @@
             "minimum": 1
          }
       ],
-      "id": "OD"
+      "id": "OD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32750,7 +34214,9 @@
             "minimum": 11
          }
       ],
-      "id": "OE"
+      "id": "OE",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32789,7 +34255,9 @@
             "minimum": -5
          }
       ],
-      "id": "OF"
+      "id": "OF",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32834,7 +34302,9 @@
             "minimum": 8
          }
       ],
-      "id": "OG"
+      "id": "OG",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32867,7 +34337,9 @@
          "under": 0
       },
       "identifications": [],
-      "id": "OH"
+      "id": "OH",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32912,7 +34384,9 @@
             "minimum": 2
          }
       ],
-      "id": "OI"
+      "id": "OI",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32950,7 +34424,9 @@
             "minimum": 4
          }
       ],
-      "id": "OJ"
+      "id": "OJ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -32995,7 +34471,9 @@
             "minimum": -24
          }
       ],
-      "id": "OK"
+      "id": "OK",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33034,7 +34512,9 @@
             "minimum": 1
          }
       ],
-      "id": "OL"
+      "id": "OL",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33078,7 +34558,9 @@
             "minimum": -4
          }
       ],
-      "id": "OM"
+      "id": "OM",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33123,7 +34605,9 @@
             "minimum": -5
          }
       ],
-      "id": "ON"
+      "id": "ON",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33170,7 +34654,9 @@
             "minimum": 4
          }
       ],
-      "id": "OO"
+      "id": "OO",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33215,7 +34701,9 @@
             "minimum": 2
          }
       ],
-      "id": "OP"
+      "id": "OP",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33259,7 +34747,9 @@
             "minimum": 2
          }
       ],
-      "id": "OQ"
+      "id": "OQ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33303,7 +34793,9 @@
             "minimum": 2
          }
       ],
-      "id": "OR"
+      "id": "OR",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33342,7 +34834,9 @@
             "minimum": 175
          }
       ],
-      "id": "OS"
+      "id": "OS",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33387,7 +34881,9 @@
             "minimum": 30
          }
       ],
-      "id": "OT"
+      "id": "OT",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33431,7 +34927,9 @@
             "minimum": 21
          }
       ],
-      "id": "OU"
+      "id": "OU",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33500,7 +34998,9 @@
             "minimum": 12
          }
       ],
-      "id": "OV"
+      "id": "OV",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33546,7 +35046,9 @@
             "minimum": 17
          }
       ],
-      "id": "OW"
+      "id": "OW",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33598,7 +35100,9 @@
             "minimum": -4
          }
       ],
-      "id": "OX"
+      "id": "OX",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33642,7 +35146,9 @@
             "minimum": -24
          }
       ],
-      "id": "OY"
+      "id": "OY",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33686,7 +35192,9 @@
             "minimum": 5
          }
       ],
-      "id": "OZ"
+      "id": "OZ",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33725,7 +35233,9 @@
             "minimum": 1
          }
       ],
-      "id": "Oa"
+      "id": "Oa",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33770,7 +35280,9 @@
             "minimum": -5
          }
       ],
-      "id": "Ob"
+      "id": "Ob",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33814,7 +35326,9 @@
             "minimum": 6
          }
       ],
-      "id": "Oc"
+      "id": "Oc",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33864,7 +35378,9 @@
             "minimum": 30
          }
       ],
-      "id": "Od"
+      "id": "Od",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33909,7 +35425,9 @@
             "minimum": -15
          }
       ],
-      "id": "Oe"
+      "id": "Oe",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33953,7 +35471,9 @@
             "minimum": -10
          }
       ],
-      "id": "Of"
+      "id": "Of",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -33998,7 +35518,9 @@
             "minimum": -3
          }
       ],
-      "id": "Og"
+      "id": "Og",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34049,7 +35571,9 @@
             "minimum": 4
          }
       ],
-      "id": "Oh"
+      "id": "Oh",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34093,7 +35617,9 @@
             "minimum": 3
          }
       ],
-      "id": "Oi"
+      "id": "Oi",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34150,7 +35676,9 @@
             "minimum": 8
          }
       ],
-      "id": "Oj"
+      "id": "Oj",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34194,7 +35722,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ok"
+      "id": "Ok",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34233,7 +35763,9 @@
             "minimum": 20
          }
       ],
-      "id": "Ol"
+      "id": "Ol",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34272,7 +35804,9 @@
             "minimum": 10
          }
       ],
-      "id": "Om"
+      "id": "Om",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34311,7 +35845,9 @@
             "minimum": 2
          }
       ],
-      "id": "On"
+      "id": "On",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34355,7 +35891,9 @@
             "minimum": -5
          }
       ],
-      "id": "Oo"
+      "id": "Oo",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34400,7 +35938,9 @@
             "minimum": 1
          }
       ],
-      "id": "Op"
+      "id": "Op",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34444,7 +35984,9 @@
             "minimum": 2
          }
       ],
-      "id": "Oq"
+      "id": "Oq",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34489,7 +36031,9 @@
             "minimum": 8
          }
       ],
-      "id": "Or"
+      "id": "Or",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34536,7 +36080,9 @@
             "minimum": 2
          }
       ],
-      "id": "Os"
+      "id": "Os",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34581,7 +36127,9 @@
             "minimum": 4
          }
       ],
-      "id": "Ot"
+      "id": "Ot",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34620,7 +36168,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ou"
+      "id": "Ou",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34664,7 +36214,9 @@
             "minimum": -14
          }
       ],
-      "id": "Ov"
+      "id": "Ov",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34703,7 +36255,9 @@
             "minimum": 1
          }
       ],
-      "id": "Ow"
+      "id": "Ow",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34741,7 +36295,9 @@
             "minimum": 2
          }
       ],
-      "id": "Ox"
+      "id": "Ox",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34787,7 +36343,9 @@
             "minimum": -4
          }
       ],
-      "id": "Oy"
+      "id": "Oy",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34838,7 +36396,9 @@
             "minimum": -9
          }
       ],
-      "id": "Oz"
+      "id": "Oz",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34883,7 +36443,9 @@
             "minimum": 1
          }
       ],
-      "id": "PA"
+      "id": "PA",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34928,7 +36490,9 @@
             "minimum": 2
          }
       ],
-      "id": "PB"
+      "id": "PB",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -34975,7 +36539,9 @@
             "minimum": 5
          }
       ],
-      "id": "PC"
+      "id": "PC",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -35022,7 +36588,9 @@
             "minimum": 8
          }
       ],
-      "id": "PD"
+      "id": "PD",
+      "isPowder": false,
+      "powderTier": 0
    },
    {
       "skills": [
@@ -35066,6 +36634,1208 @@
             "minimum": -4
          }
       ],
-      "id": "PE"
+      "id": "PE",
+      "isPowder": false,
+      "powderTier": 0
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder I",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PF",
+      "isPowder": true,
+      "powderTier": 1
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder II",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PG",
+      "isPowder": true,
+      "powderTier": 2
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder III",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PH",
+      "isPowder": true,
+      "powderTier": 3
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder IV",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PI",
+      "isPowder": true,
+      "powderTier": 4
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder V",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PJ",
+      "isPowder": true,
+      "powderTier": 5
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Water Powder VI",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PK",
+      "isPowder": true,
+      "powderTier": 6
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder I",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PL",
+      "isPowder": true,
+      "powderTier": 1
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder II",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PM",
+      "isPowder": true,
+      "powderTier": 2
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder III",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PN",
+      "isPowder": true,
+      "powderTier": 3
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder IV",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PO",
+      "isPowder": true,
+      "powderTier": 4
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder V",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PP",
+      "isPowder": true,
+      "powderTier": 5
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Thunder Powder VI",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PQ",
+      "isPowder": true,
+      "powderTier": 6
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder I",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PR",
+      "isPowder": true,
+      "powderTier": 1
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder II",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PS",
+      "isPowder": true,
+      "powderTier": 2
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder III",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PT",
+      "isPowder": true,
+      "powderTier": 3
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder IV",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PU",
+      "isPowder": true,
+      "powderTier": 4
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder V",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PV",
+      "isPowder": true,
+      "powderTier": 5
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Air Powder VI",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PW",
+      "isPowder": true,
+      "powderTier": 6
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder I",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PX",
+      "isPowder": true,
+      "powderTier": 1
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder II",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PY",
+      "isPowder": true,
+      "powderTier": 2
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder III",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "PZ",
+      "isPowder": true,
+      "powderTier": 3
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder IV",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QA",
+      "isPowder": true,
+      "powderTier": 4
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder V",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QB",
+      "isPowder": true,
+      "powderTier": 5
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Earth Powder VI",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QC",
+      "isPowder": true,
+      "powderTier": 6
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder I",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QD",
+      "isPowder": true,
+      "powderTier": 1
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder II",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QE",
+      "isPowder": true,
+      "powderTier": 2
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder III",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QF",
+      "isPowder": true,
+      "powderTier": 3
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder IV",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QG",
+      "isPowder": true,
+      "powderTier": 4
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder V",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QH",
+      "isPowder": true,
+      "powderTier": 5
+   },
+   {
+      "skills": [
+         "Weaponsmithing",
+         "Woodworking",
+         "Armouring",
+         "Tailoring",
+         "Jeweling",
+         "Cooking",
+         "Alchemism",
+         "Scribing"
+      ],
+      "requirements": {
+         "dexterity": 0,
+         "strength": 0,
+         "defence": 0,
+         "agility": 0,
+         "intelligence": 0
+      },
+      "tier": 0,
+      "level": 1,
+      "name": "Fire Powder VI",
+      "sprite": "WynnIcons.png",
+      "modifiers": {
+         "duration": 0,
+         "charges": 0,
+         "durability": 0
+      },
+      "effectivenessModifiers": {
+         "left": 0,
+         "touching": 0,
+         "notTouching": 0,
+         "above": 0,
+         "right": 0,
+         "under": 0
+      },
+      "identifications": [],
+      "id": "QI",
+      "isPowder": true,
+      "powderTier": 6
    }
 ]

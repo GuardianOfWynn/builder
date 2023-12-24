@@ -131,9 +131,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     } else {
       item.craftedStatus.durability = sum(item.craftedStatus.durability, ingredient.modifiers.durability);
     }
-
-    console.log(item.craftedStatus.duration);
-
+    
     // Implement powders on weapons and armours
 
     // Identifications calc

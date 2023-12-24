@@ -5,6 +5,8 @@ export default class Ingredient {
     tier: number;
     level: number; 
     sprite: string;
+    isPowder: boolean;
+    powderTier: number;
     requirements: Requirements;
     modifiers: Modifiers;
     effectivenessModifiers: EffectivenessModifiers;
