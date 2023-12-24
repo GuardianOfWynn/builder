@@ -14,17 +14,5 @@ const router = createRouter({
     routes,
 })
 
-async function a() {
-    const ingredient: Ingredient[] = await (await fetch('/builder/ingredients.json')).json();
-    const newIngredients: Ingredient[] = [];
-    ingredient.forEach(x => {
-        x.isPowder = false;
-        x.powderTier = 0;
-        newIngredients.push(x);
-    })
-    console.log(JSON.stringify(newIngredients));
-}
 
-a();
-
-//createApp(App).use(router).mount('#app')
+createApp(App).use(router).mount('#app')

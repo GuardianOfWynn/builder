@@ -234,7 +234,7 @@ export default {
 
     const clipboardRecipe = async () => {
       try {
-        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/crafter#/' + (result.value === undefined ? '' : result.value!.name));
+        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/' + (result.value === undefined ? '' : result.value!.name));
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
