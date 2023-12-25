@@ -758,7 +758,7 @@
         "material2": "Dernic Paper",
         "material1": "Dernic Ingot",
         "material2Amount": 12,
-        "name": "Voidstone Ingot + Sky Paper (Lvl. 103 - 105)",
+        "name": "Dernic Ingot + Dernic Paper (Lvl. 103 - 105)",
         "material1Amount": 6,"levelRange": {
             "minimum": 103,
             "maximum": 105
