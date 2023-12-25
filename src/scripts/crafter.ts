@@ -141,12 +141,13 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
         identifications.push({
           id: identification.id,
           name: identification.name,
-          maximum: identification.maximum * effectivenessMultiplier,
-          minimum: identification.minimum * effectivenessMultiplier
+          maximum: Math.floor(identification.maximum * effectivenessMultiplier),
+          minimum: Math.floor(identification.minimum * effectivenessMultiplier)
         })
       } else {
-        identifications[index].maximum += identification.maximum * effectivenessMultiplier;
-        identifications[index].minimum += identification.minimum * effectivenessMultiplier;
+        identifications[index].maximum += Math.floor(identification.maximum * effectivenessMultiplier);
+        identifications[index].minimum += Math.floor(identification.minimum * effectivenessMultiplier);
+        console.log(identifications[index].minimum);
       }
     });
   })
