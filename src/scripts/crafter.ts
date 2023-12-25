@@ -147,7 +147,6 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
       } else {
         identifications[index].maximum += Math.floor(identification.maximum * effectivenessMultiplier);
         identifications[index].minimum += Math.floor(identification.minimum * effectivenessMultiplier);
-        console.log(identifications[index].minimum);
       }
     });
   })
