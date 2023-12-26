@@ -51,7 +51,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     dexterity: 0,
     intelligence: 0,
     defence: 0,
-    level: 0
+    level: recipe.level.levelRange
   }
 
   let baseDamage = getBaseDamage(recipe.craftType, recipe.prototype, recipe.level);
@@ -110,10 +110,6 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
       if(!warnings.includes(warning)) {
         warnings.push(warning);
       }
-    }
-
-    if (ingredient.level > item.requirements.level) {
-      item.requirements.level = ingredient.level;
     }
 
     // Requirements calc

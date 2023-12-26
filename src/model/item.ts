@@ -22,7 +22,7 @@ export class WynnItem {
         charges: number;
     };
     requirements: {
-        level: number;
+        level: NumberRange;
         dexterity: number;
         defence: number;
         strength: number;

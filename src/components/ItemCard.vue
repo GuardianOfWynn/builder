@@ -38,7 +38,7 @@
 
         <p v-show="item.health.maximum !== 0 && item.health.minimum !== 0" class="text-mc-dark-red">Health: <span class="text-white">{{ Math.floor(item.health.minimum) + " - " + Math.floor(item.health.maximum) }}</span></p>
         <p class=" text-mc-gray" v-show="item.clazz !== undefined">Class Req: {{ item.clazz }}</p>
-        <p class=" text-mc-gray">Combat Lv. Min: {{ item.requirements.level }}</p>
+        <p class=" text-mc-gray">Combat Lv. Min: {{ item.requirements.level.minimum }} - {{ item.requirements.level.maximum }}</p>
 
         <div v-show="!isConsumable(item.type)" class="text-mc-gray">
             <p v-show="item.requirements.dexterity != 0">Dexterity Min: {{Math.floor(item.requirements.dexterity)}}</p>
