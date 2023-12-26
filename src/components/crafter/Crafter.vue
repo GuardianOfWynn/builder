@@ -1,8 +1,8 @@
 <template>
-  <div class="p-8 md:p-8 font-minecraft w-4/5 mx-auto">
+  <div class="p-4 md:p-8 font-minecraft md:w-4/5 mx-auto">
     <div class="w-full">
       <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
-      <div class="flex gap-x-8 w-full mb-4">
+      <div class="flex flex-col md:flex-row gap-x-8 w-full mb-4">
         <div class="flex flex-col gap-x-2">
           <div class="flex gap-x-2">
             <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
