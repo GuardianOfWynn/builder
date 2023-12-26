@@ -20,7 +20,7 @@
                     "maximum": 182,
                     "minimum": 175
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 11,
                     "minimum": 9
                 }
@@ -35,7 +35,7 @@
                     "maximum": 189,
                     "minimum": 182
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 17,
                     "minimum": 11
                 }
@@ -50,7 +50,7 @@
                     "maximum": 196,
                     "minimum": 189
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 21,
                     "minimum": 17
                 }
@@ -65,7 +65,7 @@
                     "maximum": 203,
                     "minimum": 196
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 30,
                     "minimum": 20
                 }
@@ -93,7 +93,7 @@
                     "maximum": 217,
                     "minimum": 207
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 36,
                     "minimum": 28
                 }
@@ -108,7 +108,7 @@
                     "maximum": 224,
                     "minimum": 217
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 51,
                     "minimum": 36
                 }
@@ -123,7 +123,7 @@
                     "maximum": 231,
                     "minimum": 224
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 60,
                     "minimum": 51
                 }
@@ -138,7 +138,7 @@
                     "maximum": 238,
                     "minimum": 231
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 70,
                     "minimum": 60
                 }
@@ -166,7 +166,7 @@
                     "maximum": 252,
                     "minimum": 242
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 79,
                     "minimum": 66
                 }
@@ -181,7 +181,7 @@
                     "maximum": 259,
                     "minimum": 252
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 92,
                     "minimum": 75
                 }
@@ -196,7 +196,7 @@
                     "maximum": 266,
                     "minimum": 259
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 112,
                     "minimum": 92
                 }
@@ -211,7 +211,7 @@
                     "maximum": 273,
                     "minimum": 266
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 133,
                     "minimum": 112
                 }
@@ -239,7 +239,7 @@
                     "maximum": 287,
                     "minimum": 277
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 143,
                     "minimum": 120
                 }
@@ -254,7 +254,7 @@
                     "maximum": 294,
                     "minimum": 287
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 170,
                     "minimum": 143
                 }
@@ -269,7 +269,7 @@
                     "maximum": 301,
                     "minimum": 294
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 195,
                     "minimum": 170
                 }
@@ -284,7 +284,7 @@
                     "maximum": 308,
                     "minimum": 301
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 225,
                     "minimum": 195
                 }
@@ -312,7 +312,7 @@
                     "maximum": 322,
                     "minimum": 312
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 275,
                     "minimum": 233
                 }
@@ -327,7 +327,7 @@
                     "maximum": 329,
                     "minimum": 322
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 315,
                     "minimum": 275
                 }
@@ -342,7 +342,7 @@
                     "maximum": 343,
                     "minimum": 336
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 405,
                     "minimum": 360
                 }
@@ -357,7 +357,7 @@
                     "maximum": 336,
                     "minimum": 329
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 360,
                     "minimum": 315
                 }
@@ -385,7 +385,7 @@
                     "maximum": 357,
                     "minimum": 347
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 473,
                     "minimum": 413
                 }
@@ -400,7 +400,7 @@
                     "maximum": 364,
                     "minimum": 357
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 555,
                     "minimum": 473
                 }
@@ -415,7 +415,7 @@
                     "maximum": 371,
                     "minimum": 364
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 638,
                     "minimum": 555
                 }
@@ -430,7 +430,7 @@
                     "maximum": 378,
                     "minimum": 371
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 720,
                     "minimum": 638
                 }
@@ -458,7 +458,7 @@
                     "maximum": 392,
                     "minimum": 382
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 803,
                     "minimum": 728
                 }
@@ -473,7 +473,7 @@
                     "maximum": 399,
                     "minimum": 392
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 870,
                     "minimum": 803
                 }
@@ -488,7 +488,7 @@
                     "maximum": 406,
                     "minimum": 399
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 945,
                     "minimum": 870
                 }
@@ -503,7 +503,7 @@
                     "maximum": 413,
                     "minimum": 406
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1013,
                     "minimum": 945
                 }
@@ -531,7 +531,7 @@
                     "maximum": 427,
                     "minimum": 417
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1110,
                     "minimum": 1020
                 }
@@ -546,7 +546,7 @@
                     "maximum": 434,
                     "minimum": 427
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1200,
                     "minimum": 1110
                 }
@@ -561,7 +561,7 @@
                     "maximum": 441,
                     "minimum": 434
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1298,
                     "minimum": 1200
                 }
@@ -576,7 +576,7 @@
                     "maximum": 448,
                     "minimum": 441
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1403,
                     "minimum": 1298
                 }
@@ -603,7 +603,7 @@
                     "maximum": 462,
                     "minimum": 452
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1508,
                     "minimum": 1403
                 }
@@ -618,7 +618,7 @@
                     "maximum": 469,
                     "minimum": 462
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1620,
                     "minimum": 1508
                 }
@@ -633,7 +633,7 @@
                     "maximum": 476,
                     "minimum": 469
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1740,
                     "minimum": 1620
                 }
@@ -648,7 +648,7 @@
                     "maximum": 483,
                     "minimum": 476
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1860,
                     "minimum": 1740
                 }
@@ -675,7 +675,7 @@
                     "maximum": 497,
                     "minimum": 487
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 1980,
                     "minimum": 1860
                 }
@@ -690,7 +690,7 @@
                     "maximum": 504,
                     "minimum": 497
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2130,
                     "minimum": 1980
                 }
@@ -705,7 +705,7 @@
                     "maximum": 511,
                     "minimum": 504
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2265,
                     "minimum": 2130
                 }
@@ -720,7 +720,7 @@
                     "maximum": 518,
                     "minimum": 511
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2400,
                     "minimum": 2265
                 }
@@ -747,7 +747,7 @@
                     "maximum": 525,
                     "minimum": 522
                 },
-                "hprRange": {
+                "hpRange": {
                     "maximum": 2475,
                     "minimum": 2400
                 }
@@ -774,7 +774,7 @@
                     "minimum": 525,
                     "maximum": 527
                 },
-                "hprRange": {
+                "hpRange": {
                     "minimum": 2475,
                     "maximum": 2513
                 }
