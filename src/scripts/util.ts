@@ -120,6 +120,10 @@ export function sum(range: NumberRange, value: number): NumberRange {
     return new NumberRange(range.minimum + value, range.maximum + value);
 }
 
+export function multiplyRange(range: NumberRange, value: number): NumberRange {
+    return new NumberRange(range.minimum*value, range.maximum*value);
+}
+
 export function isEmpty(range: NumberRange): boolean {
     return range.maximum === 0 && range.maximum === 0;
 }

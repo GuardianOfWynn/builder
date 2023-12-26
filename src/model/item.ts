@@ -1,3 +1,4 @@
+import { DamageBounds } from "../scripts/math";
 import { ArmorType, AttackSpeed, ItemTier, ItemType, NumberRange, WynnClass } from "../scripts/util";
 import { Identification } from "./ingredient";
 
@@ -30,12 +31,12 @@ export class WynnItem {
         intelligence: number;
     };
     damages: {
-        neutral: NumberRange;
-        fire: NumberRange;
-        water: NumberRange;
-        thunder: NumberRange;
-        air: NumberRange;
-        earth: NumberRange;
+        neutral: DamageBounds;
+        fire: DamageBounds;
+        water: DamageBounds;
+        thunder: DamageBounds;
+        air: DamageBounds;
+        earth: DamageBounds;
     };
     defenses: {
         fire: NumberRange;

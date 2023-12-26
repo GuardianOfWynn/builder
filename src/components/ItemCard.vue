@@ -35,7 +35,38 @@
           </div>
 
         <p v-if="item.isCrafted" class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{item.type}}</p>
-
+        <div>
+          <p v-if="!isEmpty(item.damages.neutral.high) || !isEmpty(item.damages.neutral.low)" class="text-mc-gold">
+            &#10019; Neutral <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.neutral.low.minimum) }} - {{ Math.floor(item.damages.neutral.low.maximum) }} &#9654; {{ Math.floor(item.damages.neutral.high.minimum) }} - {{ Math.floor(item.damages.neutral.high.maximum) }}
+            </span>
+          </p>
+          <p v-if="!isEmpty(item.damages.fire.high) || !isEmpty(item.damages.fire.low)" class="text-mc-red">
+            &#10041; Fire <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.fire.low.minimum) }} - {{ Math.floor(item.damages.fire.low.maximum) }} &#9654; {{ Math.floor(item.damages.fire.high.minimum) }} - {{ Math.floor(item.damages.fire.high.maximum) }}
+            </span>
+          </p>
+          <p v-if="!isEmpty(item.damages.water.high) || !isEmpty(item.damages.water.low)" class="text-mc-aqua">
+            &#10045; Water <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.water.low.minimum) }} - {{ Math.floor(item.damages.water.low.maximum) }} &#9654; {{ Math.floor(item.damages.water.high.minimum) }} - {{ Math.floor(item.damages.water.high.maximum) }}
+            </span>
+          </p>
+          <p v-if="!isEmpty(item.damages.air.high) || !isEmpty(item.damages.air.low)" class="text-white">
+            &#10049; Air <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.air.low.minimum) }} - {{ Math.floor(item.damages.air.low.maximum) }} &#9654; {{ Math.floor(item.damages.air.high.minimum) }} - {{ Math.floor(item.damages.air.high.maximum) }}
+            </span>
+          </p>
+          <p v-if="!isEmpty(item.damages.thunder.high) || !isEmpty(item.damages.thunder.low)" class="text-mc-yellow">
+            &#10022; Thunder <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.thunder.low.minimum) }} - {{ Math.floor(item.damages.thunder.low.maximum) }} &#9654; {{ Math.floor(item.damages.thunder.high.minimum) }} - {{ Math.floor(item.damages.thunder.high.maximum) }}
+            </span>
+          </p>
+          <p v-if="!isEmpty(item.damages.earth.high) || !isEmpty(item.damages.earth.low)" class="text-mc-dark-green">
+            &#10020; Earth <span class="text-white">
+              <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.earth.low.minimum) }} - {{ Math.floor(item.damages.earth.low.maximum) }} &#9654; {{ Math.floor(item.damages.earth.high.minimum) }} - {{ Math.floor(item.damages.earth.high.maximum) }}
+            </span>
+          </p>
+        </div>
         <p v-show="item.health.maximum !== 0 && item.health.minimum !== 0" class="text-mc-dark-red">Health: <span class="text-white">{{ Math.floor(item.health.minimum) + " - " + Math.floor(item.health.maximum) }}</span></p>
         <p class=" text-mc-gray" v-show="item.clazz !== undefined">Class Req: {{ item.clazz }}</p>
         <p class=" text-mc-gray">Combat Lv. Min: {{ item.requirements.level.minimum }} - {{ item.requirements.level.maximum }}</p>

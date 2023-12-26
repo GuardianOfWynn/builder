@@ -1,8 +1,8 @@
 import Ingredient, { Identification } from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
-import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum } from "./util";
+import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum, multiplyRange } from "./util";
 import { WynnItem } from "../model/item";
-import { calculateMaterialMultiplier } from "./math";
+import { calculateDamage, calculateMaterialMultiplier } from "./math";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
 export const isArmour = (craftType: ItemType) => [ItemType.HELMET, ItemType.CHESTPLATE, ItemType.LEGGINGS, ItemType.BOOTS].includes(craftType);
@@ -54,14 +54,38 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     level: recipe.level.levelRange
   }
 
-  let baseDamage = getBaseDamage(recipe.craftType, recipe.prototype, recipe.level);
   item.damages = {
-    air: new NumberRange(0, 0),
-    earth: new NumberRange(0, 0),
-    fire: new NumberRange(0, 0),
-    neutral: baseDamage,
-    thunder: new NumberRange(0, 0),
-    water: new NumberRange(0, 0)
+    air: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+    earth: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+    fire: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+    neutral: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+    thunder: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+    water: {
+      high: NumberRange.of(0,0),
+      low: NumberRange.of(0,0)
+    },
+  }
+
+  if(isWeapon(recipe.craftType)) {
+    let baseDamage = getBaseDamage(recipe.craftType, recipe.prototype, recipe.level);
+    item.damages.neutral = calculateDamage(baseDamage.minimum, baseDamage.maximum, recipe.attackSpeed);
+    item.damages.neutral.high = multiplyRange(item.damages.neutral.high, materialMultiplier);
+    item.damages.neutral.low = multiplyRange(item.damages.neutral.low, materialMultiplier);
   }
 
   item.type = recipe.craftType;
@@ -126,7 +150,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     } else {
       item.craftedStatus.durability = sum(item.craftedStatus.durability, ingredient.modifiers.durability);
     }
-    
+
     // Implement powders on weapons and armours
 
     // Identifications calc
