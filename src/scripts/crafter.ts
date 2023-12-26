@@ -172,6 +172,10 @@ export function getEffectivenessMatrix(ingredients: IngredientSlot[]): number[][
 
     ingredients.forEach(target => {
 
+      if(ingredient.x === target.x && ingredient.y === target.y) {
+        return;
+      }
+
       if (!touching(ingredient.x, target.x, ingredient.y, target.y)) {
         effectiveness[target.y][target.x] += ingredient.ingredient!.effectivenessModifiers.notTouching;
       }
