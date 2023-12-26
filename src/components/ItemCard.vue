@@ -50,10 +50,10 @@
 
         <div class="text-left mt-4 gap-y-4 flex flex-col text-sm">
             <div>
-                <p v-for="(identification) in item.identifications">
+                <p v-show="identification.minimum !== 0 || identification.maximum !== 0" v-for="(identification) in item.identifications">
                     <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ Math.floor(identification.minimum) <= 0 ? format(Math.floor(identification.minimum), identification.id) : '+' + format(Math.floor(identification.minimum), identification.id) }}</span>
-                    <span :class="identification.minimum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
-                    <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ Math.floor(identification.maximum) <= 0 ? format(Math.floor(identification.maximum), identification.id) : '+' + format(Math.floor(identification.maximum), identification.id) }}</span>
+                    <span :class="identification.maximum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
+                    <span :class="identification.maximum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ Math.floor(identification.maximum) <= 0 ? format(Math.floor(identification.maximum), identification.id) : '+' + format(Math.floor(identification.maximum), identification.id) }}</span>
                     <span class="text-sm text-mc-gray ml-2">{{ identification.name }}</span>
                 </p>
             </div>
