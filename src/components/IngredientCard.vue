@@ -5,8 +5,7 @@
 
     <div v-else>
         <div class="flex justify-center mb-2">
-            <img v-if="ing.sprite.includes('.png')" class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite" />
-            <img v-else class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite" />
+            <img class="w-8 h-8 pixelated object-contain" :src="'/builder/sprites/' + ing.sprite" />
         </div>
 
         <p class="text-md text-mc-gray mr-2 text-center">{{ing.name}}</p>
