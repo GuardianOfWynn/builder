@@ -1,7 +1,13 @@
 <template>
   <div class="p-4 md:p-8 font-minecraft md:w-4/5 mx-auto">
     <div class="w-full">
-      <p class="text-3xl text-mc-light-purple mb-4">GsWCrafter</p>
+    <div class="flex flex-row justify-between mb-8">
+      <p class="text-3xl text-mc-light-purple">GsWCrafter</p>
+      <a class="flex p-2 rounded-md cursor-pointer py-3 gap-x-2" href="https://discord.gg/Nt2rPRHxyX" target="_blank">
+        <img src="/builder/discord.png" class="w-10 object-contain"/>
+        <p class="my-auto text-xs text-mc-blue">Join our discord</p>
+      </a>
+    </div>
       <div class="flex flex-col md:flex-row gap-x-8 w-full mb-4">
         <div class="flex flex-col gap-x-2">
           <div class="flex gap-x-2">
