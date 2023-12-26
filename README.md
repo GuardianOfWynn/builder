@@ -13,6 +13,15 @@ GsW Builder works like hppeng WynnBuilder, but we intend bring updates more ofte
 - WIP: Powders in crafted armour and weapons.
 - Future: Builder and Atlas app. 
 
+#### Special thanks to:
+- 1nfinity
+- Fallingo_
+- iMonoYasuo
+- DragxD
+- My wife.
 
+for making it possible.
+
+Discord: https://discord.gg/Nt2rPRHxyX
 Made by: victuwu #gswontop
 
