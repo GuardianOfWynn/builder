@@ -91,8 +91,8 @@
             <p class="my-auto col-span-3">{{ recipe.material2 }} tier: </p>
             <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4"
               :tier="material2Tier" />
-            <p class="col-span-3">Attack Speed: </p>
-            <AttackSpeedSelector :tier="attackSpeed" class="col-span-4" />
+            <p v-if="isWeapon(craftType)" class="col-span-3">Attack Speed: </p>
+            <AttackSpeedSelector v-if="isWeapon(craftType)" :tier="attackSpeed" class="col-span-4" />
           </div>
           <div class="w-full md:mt-4 mt-4 max-h-full">
             <p class="text-xl font-minecraft text-mc-lime mb-2">Effectiveness:</p>
@@ -108,7 +108,6 @@
         </div>
         <div class="flex md:flex-row flex-col gap-x-12">
             <div class="w-full h-full md:mt-0 mt-4">
-              <p class="text-xl font-minecraft text-mc-lime mb-2">Result:</p>
               <ItemCard :item="result" />
             </div>
           </div>
@@ -148,7 +147,7 @@ import MaterialsCombobox from "./MaterialsCombobox.vue"
 import CraftTypeCombobox from "./CraftTypeCombobox.vue"
 import Ingredient from "../../model/ingredient";
 import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe } from "../../model/recipe"
-import { IngredientSlot, assembleCraft, getEffectivenessMatrix, decodeRecipe, encodeRecipe, isValidHash } from "../../scripts/crafter"
+import { IngredientSlot, assembleCraft, getEffectivenessMatrix, decodeRecipe, encodeRecipe, isValidHash, isWeapon } from "../../scripts/crafter"
 import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../scripts/util"
 import { WynnItem } from "../../model/item";
 import ItemCard from "../ItemCard.vue";
@@ -293,7 +292,7 @@ export default {
 
     }
 
-    return { ingredientList, warnings, ingredients, attackSpeed, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
+    return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
   components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector }
 }
