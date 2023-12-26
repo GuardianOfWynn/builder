@@ -60,9 +60,9 @@
 
             <div v-if="item.isCrafted" class="text-sm text-mc-gray">
                 <div>
-                    <span v-show="item.craftedStatus.charges != 0">Charges: {{ Math.floor(item.craftedStatus.charges) }}</span><br>
-                    <span v-show="!isEmpty(item.craftedStatus.durability)">Durability: {{ Math.floor(item.craftedStatus.durability.minimum) }} - {{ Math.floor(item.craftedStatus.durability.maximum) }}</span>
-                    <span v-show="!isEmpty(item.craftedStatus.duration)">Duration: {{ Math.floor(item.craftedStatus.duration.minimum) }}s - {{ Math.floor(item.craftedStatus.duration.maximum) }}s</span>
+                    <span v-show="item.craftedStatus.charges != 0">Charges: <span class="text-white text-md">{{ Math.floor(item.craftedStatus.charges) }}</span></span><br>
+                    <span v-show="!isEmpty(item.craftedStatus.durability)">Durability:  <span class="text-white text-md">{{ Math.floor(item.craftedStatus.durability.minimum) }} - {{ Math.floor(item.craftedStatus.durability.maximum) }}</span></span>
+                    <span v-show="!isEmpty(item.craftedStatus.duration)">Duration:  <span class="text-white text-md">{{ Math.floor(item.craftedStatus.duration.minimum) }}s - {{ Math.floor(item.craftedStatus.duration.maximum) }}s</span></span>
                     
                 </div>
             </div>
