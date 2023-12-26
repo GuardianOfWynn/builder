@@ -3,7 +3,7 @@
         @update:modelValue="value => $emit('updade-tier', value)">
         <div class="flex gap-x-2">
             <RadioGroupOption as="template" v-for="t in tiers" :key="t" :value="t">
-                <div @click="(x) => selectedTier = t" class="cursor-pointer border-[1px] text-xs py-1 px-2 rounded-md" :class="[t === selectedTier ? 'border-mc-aqua' : 'border-mc-dark-gray']">
+                <div @click="(x) => selectedTier = t" class="cursor-pointer border-[1px] text-sm py-1 px-2 rounded-md" :class="[t === selectedTier ? 'border-mc-aqua' : 'border-mc-dark-gray']">
                     <span v-if="t===1">
                         <span class="text-mc-gold">[<span class="text-mc-yellow">✫<span class="text-mc-dark-gray">✫✫</span></span>]</span>
                     </span>
