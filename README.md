@@ -18,7 +18,7 @@ GsW Builder works like hppeng WynnBuilder, but we intend bring updates more ofte
 - Fallingo_
 - iMonoYasuo
 - DragxD
-- My wife.
+- My wife
 
 for making it possible.
 
