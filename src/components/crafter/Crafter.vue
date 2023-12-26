@@ -59,10 +59,6 @@
           <p class="col-span-3">Attack Speed: </p>
           <AttackSpeedSelector :tier="attackSpeed" class="col-span-4" />
         </div>
-        <div @click="clipboardRecipe()"
-          class="rounded-md md:mt-0 mt-4 border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
-          Copy recipe link
-        </div>
       </div>
     </div>
     <div class="flex md:flex-row flex-col gap-x-12">
@@ -111,6 +107,10 @@
         <ItemCard :item="result" />
       </div>
     </div>
+    <div @click="clipboardRecipe()"
+          class="rounded-md md:mt-24 text-center w-64 mt-8 border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
+          Copy recipe link
+        </div>
     <div class="mt-24 w-full" v-show="warnings.length > 0">
       <p class="text-center text-mc-red" v-for="warn in warnings">
         {{ warn }}

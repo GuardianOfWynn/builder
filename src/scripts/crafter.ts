@@ -1,8 +1,7 @@
 import Ingredient, { Identification } from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
-import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, sumWithMax, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum } from "./util";
+import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum } from "./util";
 import { WynnItem } from "../model/item";
-import { Ref, warn } from "vue";
 import { calculateMaterialMultiplier } from "./math";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);

@@ -50,9 +50,8 @@ export default {
   },
   setup(props, { emit }) {
     const rolls: Ref<LevelRanges[]> = ref(props.recipe!.levels);
-    const selectedLevel: Ref<NumberRange | undefined> = ref(rolls.levelRange);
+    const selectedLevel: Ref<NumberRange | undefined> = ref(props.level?.levelRange);
     watchEffect(() => {
-      console.log(rolls.value);
       rolls.value = props.recipe!.levels;
       selectedLevel.value = props.recipe!.levels[0].levelRange;
       selectedLevel.value = props.level?.levelRange;
