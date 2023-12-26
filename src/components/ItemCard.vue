@@ -62,7 +62,7 @@
                 <div>
                     <span v-show="item.craftedStatus.charges != 0">Charges: <span class="text-white text-md">{{ Math.floor(item.craftedStatus.charges) }}</span></span><br>
                     <span v-show="!isEmpty(item.craftedStatus.durability)">Durability:  <span class="text-white text-md">{{ Math.floor(item.craftedStatus.durability.minimum) }} - {{ Math.floor(item.craftedStatus.durability.maximum) }}</span></span>
-                    <span v-show="!isEmpty(item.craftedStatus.duration)">Duration:  <span class="text-white text-md">{{ Math.floor(item.craftedStatus.duration.minimum) }}s - {{ Math.floor(item.craftedStatus.duration.maximum) }}s</span></span>
+                    <span v-show="!isEmpty(item.craftedStatus.duration)">Duration:  <span class="text-white text-md"></span></span>
                     
                 </div>
             </div>
