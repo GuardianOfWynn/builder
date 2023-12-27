@@ -35,33 +35,33 @@
           </div>
 
         <p v-if="item.isCrafted" class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{item.type}}</p>
-        <div>
-          <p v-if="!isEmpty(item.damages.neutral.high) || !isEmpty(item.damages.neutral.low)" class="text-mc-gold">
+        <div v-if="isWeapon(item.type)">
+          <p v-show="!isEmpty(item.damages.neutral.high) || !isEmpty(item.damages.neutral.low)" class="text-mc-gold">
             &#10019; Neutral <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.neutral.low.minimum) }} - {{ Math.floor(item.damages.neutral.low.maximum) }} &#9654; {{ Math.floor(item.damages.neutral.high.minimum) }} - {{ Math.floor(item.damages.neutral.high.maximum) }}
             </span>
           </p>
-          <p v-if="!isEmpty(item.damages.fire.high) || !isEmpty(item.damages.fire.low)" class="text-mc-red">
+          <p v-show="!isEmpty(item.damages.fire.high) || !isEmpty(item.damages.fire.low)" class="text-mc-red">
             &#10041; Fire <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.fire.low.minimum) }} - {{ Math.floor(item.damages.fire.low.maximum) }} &#9654; {{ Math.floor(item.damages.fire.high.minimum) }} - {{ Math.floor(item.damages.fire.high.maximum) }}
             </span>
           </p>
-          <p v-if="!isEmpty(item.damages.water.high) || !isEmpty(item.damages.water.low)" class="text-mc-aqua">
+          <p v-show="!isEmpty(item.damages.water.high) || !isEmpty(item.damages.water.low)" class="text-mc-aqua">
             &#10045; Water <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.water.low.minimum) }} - {{ Math.floor(item.damages.water.low.maximum) }} &#9654; {{ Math.floor(item.damages.water.high.minimum) }} - {{ Math.floor(item.damages.water.high.maximum) }}
             </span>
           </p>
-          <p v-if="!isEmpty(item.damages.air.high) || !isEmpty(item.damages.air.low)" class="text-white">
+          <p v-show="!isEmpty(item.damages.air.high) || !isEmpty(item.damages.air.low)" class="text-white">
             &#10049; Air <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.air.low.minimum) }} - {{ Math.floor(item.damages.air.low.maximum) }} &#9654; {{ Math.floor(item.damages.air.high.minimum) }} - {{ Math.floor(item.damages.air.high.maximum) }}
             </span>
           </p>
-          <p v-if="!isEmpty(item.damages.thunder.high) || !isEmpty(item.damages.thunder.low)" class="text-mc-yellow">
+          <p v-show="!isEmpty(item.damages.thunder.high) || !isEmpty(item.damages.thunder.low)" class="text-mc-yellow">
             &#10022; Thunder <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.thunder.low.minimum) }} - {{ Math.floor(item.damages.thunder.low.maximum) }} &#9654; {{ Math.floor(item.damages.thunder.high.minimum) }} - {{ Math.floor(item.damages.thunder.high.maximum) }}
             </span>
           </p>
-          <p v-if="!isEmpty(item.damages.earth.high) || !isEmpty(item.damages.earth.low)" class="text-mc-dark-green">
+          <p v-show="!isEmpty(item.damages.earth.high) || !isEmpty(item.damages.earth.low)" class="text-mc-dark-green">
             &#10020; Earth <span class="text-white">
               <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.earth.low.minimum) }} - {{ Math.floor(item.damages.earth.low.maximum) }} &#9654; {{ Math.floor(item.damages.earth.high.minimum) }} - {{ Math.floor(item.damages.earth.high.maximum) }}
             </span>
@@ -109,7 +109,7 @@ import { ref, watchEffect } from "vue";
 import Ingredient from "../model/ingredient";
 import { WynnItem } from "../model/item";
 import { ItemTier, isEmpty } from "../scripts/util";
-import { isConsumable } from "../scripts/crafter";
+import { isConsumable, isWeapon } from "../scripts/crafter";
   
   export default {
       name: 'ItemCard',
@@ -141,7 +141,7 @@ import { isConsumable } from "../scripts/crafter";
             }
             return val
         }
-        return {item, format, isEmpty, isConsumable}
+        return {item, format, isEmpty, isConsumable, isWeapon}
       },
       components: { }
   }
