@@ -172,8 +172,16 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
   })
 
   if(isConsumable(recipe.craftType)) {
-    item.craftedStatus.duration = NumberRange.of(Math.max(10, item.craftedStatus.duration.minimum), Math.max(10, item.craftedStatus.duration.maximum));
-    item.craftedStatus.charges = Math.max(1, item.craftedStatus.charges);
+    if(recipe.ingredients.every(x => x.ingredient === undefined)) {
+      if(recipe.craftType == ItemType.FOOD) {
+        item.craftedStatus.duration = NumberRange.of(60,60);
+      } else {
+        item.craftedStatus.duration = NumberRange.of(3,3);
+      }
+    } else {
+      item.craftedStatus.duration = NumberRange.of(Math.max(10, item.craftedStatus.duration.minimum), Math.max(10, item.craftedStatus.duration.maximum));
+      item.craftedStatus.charges = Math.max(1, item.craftedStatus.charges);
+    }
   } else {
     item.craftedStatus.durability = NumberRange.of(Math.max(1, item.craftedStatus.durability.minimum), Math.max(1, item.craftedStatus.durability.maximum));
   }
