@@ -98,7 +98,7 @@
             <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4"
               :tier="material2Tier" />
             <p v-if="isWeapon(craftType)" class="col-span-3">Attack Speed: </p>
-            <AttackSpeedSelector v-if="isWeapon(craftType)" :tier="attackSpeed" class="col-span-4" />
+            <AttackSpeedSelector v-if="isWeapon(craftType)" @updade-tier="handleAttackSpeedChanged" :tier="attackSpeed.toString()" class="col-span-4" />
           </div>
           <div class="w-full md:mt-4 mt-4 max-h-full">
             <p class="text-xl font-minecraft text-mc-lime mb-2">Effectiveness:</p>
@@ -175,7 +175,7 @@ export default {
     const craftType: Ref<ItemType> = ref(craftTypes[12]);
     const recipe: Ref<RecipePrototype> = ref(SCROLL_RECIPES[0]);
     const level = ref(recipe.value.levels[0]);
-    const attackSpeed = ref('Normal');
+    const attackSpeed = ref(CraftedAttackSpeed.NORMAL);
     const recipeRolls: Ref<RecipePrototype[]> = ref(SCROLL_RECIPES);
     const levelRolls: Ref<LevelRanges[]> = ref(SCROLL_RECIPES[0].levels);
     const result: Ref<WynnItem | undefined> = ref(undefined);
@@ -194,10 +194,6 @@ export default {
       { ingredient: undefined, x: 1, y: 2, effectiveness: (100) },
     ]);
 
-    function getAttackSpeed(val: string) {
-      return val === 'Slow' ? CraftedAttackSpeed.SLOW : val === 'Normal' ? CraftedAttackSpeed.NORMAL : CraftedAttackSpeed.FAST;
-    }
-
     function handleIngredientUpdated(pos: number, ingredient: Ingredient) {
       ingredients[pos].ingredient = ingredient;
       assemble();
@@ -212,6 +208,11 @@ export default {
       levelRolls.value = recipe.value.levels;
       craftType.value = val;
       level.value = recipe.value.levels[0];
+      assemble();
+    }
+
+    function handleAttackSpeedChanged(tier: CraftedAttackSpeed) {
+      attackSpeed.value = tier;
       assemble();
     }
 
@@ -237,7 +238,6 @@ export default {
     }
 
     function handleCraftLevelChanged(lvl: LevelRanges) {
-      console.log(lvl)
       if (lvl === undefined) {
         return;
       }
@@ -268,7 +268,7 @@ export default {
           craftType.value = decoded.craftType;
           material1Tier.value = decoded.material1Tier;
           material2Tier.value = decoded.material2Tier;
-          attackSpeed.value = decoded.attackSpeed === CraftedAttackSpeed.SLOW ? 'Slow' : decoded.attackSpeed === CraftedAttackSpeed.FAST ? 'Fast' : 'Normal';
+          attackSpeed.value = decoded.attackSpeed;
           level.value = decoded.level;
         }
         first = false;
@@ -288,7 +288,7 @@ export default {
         craftType.value,
         material1Tier.value,
         material2Tier.value,
-        getAttackSpeed(attackSpeed.value),
+        attackSpeed.value,
         level.value
       );
 
@@ -299,7 +299,7 @@ export default {
 
     }
 
-    return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
+    return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, handleAttackSpeedChanged, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
   components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector }
 }

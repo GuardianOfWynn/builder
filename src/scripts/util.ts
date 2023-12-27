@@ -1,9 +1,9 @@
 export const crafter_url = ''
 
 export enum CraftedAttackSpeed {
-    SLOW = 1,
-    NORMAL,
-    FAST,
+    SLOW = "Slow",
+    NORMAL = "Normal",
+    FAST = "Fast",
 }
 
 export enum ItemType {
