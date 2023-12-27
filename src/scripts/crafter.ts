@@ -83,9 +83,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
 
   if(isWeapon(recipe.craftType)) {
     let baseDamage = getBaseDamage(recipe.craftType, recipe.prototype, recipe.level);
-    item.damages.neutral = calculateDamage(baseDamage.minimum, baseDamage.maximum, recipe.attackSpeed);
-    item.damages.neutral.high = multiplyRange(item.damages.neutral.high, materialMultiplier);
-    item.damages.neutral.low = multiplyRange(item.damages.neutral.low, materialMultiplier);
+    item.damages.neutral = calculateDamage(baseDamage.minimum, baseDamage.maximum, materialMultiplier, recipe.attackSpeed);
   }
 
   item.type = recipe.craftType;
@@ -152,6 +150,9 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     }
 
     // Implement powders on weapons and armours
+    if(isWeapon(recipe.craftType) && ingredient.isPowder) {
+
+    }
 
     // Identifications calc
     ingredient.identifications.forEach(identification => {

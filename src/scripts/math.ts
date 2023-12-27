@@ -10,10 +10,13 @@ export function calculateMaterialMultiplier(material1Quantity: number, material2
     return (tierToMult[material1Tier]*material1Quantity + tierToMult[material2Tier]*material2Quantity) / (material1Quantity + material2Quantity);
 }
 
-export function calculateDamage(baseLower: number, baseUpper: number, attackSpeed: CraftedAttackSpeed): DamageBounds  {
+export function calculateDamage(baseLower: number, baseUpper: number, matMultipler: number, attackSpeed: CraftedAttackSpeed): DamageBounds  {
 
-    // thanks hpp-eng!
+    // thanks hppeng!
     // https://github.com/hppeng-wynn/hppeng-wynn.github.io/blob/dev/js/craft.js#L204
+
+    baseLower = Math.floor(baseLower * matMultipler);
+    baseUpper = Math.floor(baseUpper * matMultipler);
 
     let ratio = 2.05;
     switch(attackSpeed) {

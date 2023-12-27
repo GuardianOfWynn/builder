@@ -236,11 +236,12 @@ export default {
       assemble();
     }
 
-    function handleCraftLevelChanged(lvl: NumberRange) {
+    function handleCraftLevelChanged(lvl: LevelRanges) {
+      console.log(lvl)
       if (lvl === undefined) {
         return;
       }
-      level.value.levelRange = lvl;
+      level.value = lvl;
       assemble();
     }
 
