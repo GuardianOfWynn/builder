@@ -35,6 +35,9 @@ module.exports = {
         'chestplate': '-178px -60px',
         'leggings': '-178px -120px',
         'boots': '-178px -180px',
+        'crafter': '-288px -0px',
+        'builder': '-224px -0px',
+        'workspace': '-288px -352px'
       },
       backgroundImage: {
         'spear': "url('/sprites/spear.webp')",
@@ -43,6 +46,7 @@ module.exports = {
         'bow': "url('/sprites/bow.webp')",
         'relik': "url('/sprites/relik.webp')",
         'professions': "url('/sprites/ProfessionIcon.png')",
+        'professions-dec': "url('/sprites/ProfessionIconDec.webp')",
         'wynn-icons': "url('/sprites/WynnIcons.png')",
         'accessories': "url('/sprites/AccessorySprites.gif')",
         'armours': "url('/sprites/ArmourSprites.png')"

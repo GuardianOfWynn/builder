@@ -1,3 +1,5 @@
+import Ingredient from '../model/ingredient'
+
 export const crafter_url = ''
 
 export enum CraftedAttackSpeed {
@@ -68,6 +70,27 @@ export enum Profession {
     ARMOURING = "Armouring",
     TAILORING = "Tailoring",
     JEWELING = "Jeweling"
+}
+
+export enum Element {
+    FIRE = "Fire",
+    AIR = "Air",
+    THUNDER = "Thunder",
+    WATER = "Water",
+    EARTH = "Earth"
+}
+
+export function getPowderElement(ingredient: Ingredient): Element | undefined {
+    if(!ingredient.isPowder) {
+        return undefined
+    }
+    switch(ingredient.name.split(" ")[0]) {
+        case "Water": Element.WATER;
+        case "Fire": Element.FIRE;
+        case "Earth": Element.EARTH;
+        case "Air": Element.AIR;
+        case "Thunder": Element.THUNDER;
+    }
 }
 
 export function getProfessionForItemType(itemType: ItemType) {
