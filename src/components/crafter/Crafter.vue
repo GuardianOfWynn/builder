@@ -14,41 +14,7 @@
           <div class="flex flex-col gap-x-2">
             <div class="flex gap-x-2">
               <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
-                <div v-if="craftType === 'scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions">
-                </div>
-                <div v-if="craftType === 'food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
-                </div>
-                <div v-if="craftType === 'potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
-                <div v-if="craftType === 'ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories">
-                </div>
-                <div v-if="craftType === 'spear'" class="">
-                  <img src="/sprites/spear.webp" alt="">
-                </div>
-                <div v-if="craftType === 'dagger'" class="">
-                  <img src="/sprites/dagger.webp" alt="">
-                </div>
-                <div v-if="craftType === 'relik'">
-                  <img src="/sprites/relik.webp" alt="">
-                </div>
-                <div v-if="craftType === 'bow'">
-                  <img src="/sprites/bow.webp" alt="">
-                </div>
-                <div v-if="craftType === 'wand'">
-                  <img src="/sprites/wand.webp" alt="">
-                </div>
-                <div v-if="craftType === 'bracelet'"
-                  class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories"></div>
-                <div v-if="craftType === 'necklace'"
-                  class="pixelated inline-block w-[53px] h-[53px] bg-necklace bg-accessories"></div>
-                <div v-if="craftType === 'helmet'" class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours">
-                </div>
-                <div v-if="craftType === 'chestplate'"
-                  class="pixelated inline-block h-[62px] w-[62px] bg-chestplate bg-armours"></div>
-                <div v-if="craftType === 'leggings'"
-                  class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours">
-                </div>
-                <div v-if="craftType === 'boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours">
-                </div>
+                <ItemTypeIcon :item-type="craftType"/>
               </div>
               <div class="grid grid-cols-5 grid-rows-3 w-fit gap-x-2 gap-y-1">
                 <p class="my-auto text-white">Type</p>
@@ -164,12 +130,13 @@ import Ingredient from "../../model/ingredient";
 import { RecipePrototype, LevelRanges, getRecipePrototypeFor, SCROLL_RECIPES, Recipe } from "../../model/recipe"
 import { IngredientSlot, assembleCraft, getEffectivenessMatrix, decodeRecipe, isValidHash, isWeapon } from "../../scripts/crafter"
 import { ItemType, CraftedAttackSpeed, NumberRange, MaterialTier } from "../../scripts/util"
-import { WynnItem } from "../../model/item";
+import { WynnCraftedItem, WynnItem } from "../../model/item";
 import ItemCard from "../ItemCard.vue";
 import MaterialTierSelector from "./MaterialTierSelector.vue";
 import AttackSpeedSelector from "./AttackSpeedSelector.vue";
 import { useRoute, useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
+import ItemTypeIcon from "../ItemTypeIcon.vue";
 
 export default {
   name: 'Crafter',
@@ -189,7 +156,7 @@ export default {
     const attackSpeed = ref(CraftedAttackSpeed.NORMAL);
     const recipeRolls: Ref<RecipePrototype[]> = ref(SCROLL_RECIPES);
     const levelRolls: Ref<LevelRanges[]> = ref(SCROLL_RECIPES[0].levels);
-    const result: Ref<WynnItem | undefined> = ref(undefined);
+    const result: Ref<WynnCraftedItem | undefined> = ref(undefined);
     const material1Tier = ref(MaterialTier.TIER_1);
     const material2Tier = ref(MaterialTier.TIER_1);
     const warnings: Ref<string[]> = ref([]);
@@ -314,6 +281,6 @@ export default {
 
     return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, handleAttackSpeedChanged, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector, AppsSidebar }
+  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector, AppsSidebar, ItemTypeIcon }
 }
 </script>

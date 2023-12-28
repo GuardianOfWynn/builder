@@ -4,43 +4,7 @@
     <p v-if="item === undefined" class="text-mc-dark-gray text-center">No item</p>
     <div v-else class="text-sm">
       <p class="text-center" :class="[item.isCrafted ? 'text-mc-dark-aqua' : 'text-mc-gray']">{{ item.name }}</p>
-      <div class="flex items-center justify-center h-24 w-24 p-2 rounded-md mx-auto">
-        <div v-if="item.type === 'scroll'" class="pixelated inline-block w-16 h-16 bg-scroll bg-professions">
-        </div>
-        <div v-if="item.type === 'food'" class="pixelated inline-block w-16 h-16 bg-food bg-professions">
-        </div>
-        <div v-if="item.type === 'potion'" class="pixelated inline-block w-16 h-16 bg-potion bg-wynn-icons"></div>
-        <div v-if="item.type === 'ring'" class="pixelated inline-block w-[53px] h-[53px] bg-ring bg-accessories">
-        </div>
-        <div v-if="item.type === 'spear'" class="">
-          <img src="/sprites/spear.webp" alt="">
-        </div>
-        <div v-if="item.type === 'dagger'" class="">
-          <img src="/sprites/dagger.webp" alt="">
-        </div>
-        <div v-if="item.type === 'relik'">
-          <img src="/sprites/relik.webp" alt="">
-        </div>
-        <div v-if="item.type === 'bow'">
-          <img src="/sprites/bow.webp" alt="">
-        </div>
-        <div v-if="item.type === 'wand'">
-          <img src="/sprites/wand.webp" alt="">
-        </div>
-        <div v-if="item.type === 'bracelet'" class="pixelated inline-block w-[62px] h-[62px] bg-bracelet bg-accessories">
-        </div>
-        <div v-if="item.type === 'necklace'" class="pixelated inline-block w-[53px] h-[53px] bg-necklace bg-accessories">
-        </div>
-        <div v-if="item.type === 'helmet'" class="pixelated inline-block h-[62px] w-[62px] bg-helmet bg-armours">
-        </div>
-        <div v-if="item.type === 'chestplate'" class="pixelated inline-block h-[62px] w-[62px] bg-chestplate bg-armours">
-        </div>
-        <div v-if="item.type === 'leggings'" class="pixelated inline-block h-[62px] w-[62px] bg-leggings bg-armours">
-        </div>
-        <div v-if="item.type === 'boots'" class="pixelated inline-block h-[62px] w-[62px] bg-boots bg-armours">
-        </div>
-      </div>
-
+      <ItemTypeIcon :item-type="item.type"/>
       <p v-if="item.isCrafted" class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{ item.type }}</p>
       <div v-if="isWeapon(item.type)">
         <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.neutral.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.neutral.low)" class="text-mc-gold">
@@ -188,11 +152,12 @@ import Ingredient from "../model/ingredient";
 import { WynnCraftedItem, WynnItem } from "../model/item";
 import { ItemTier, isEmpty, format, getWynnClass } from "../scripts/util";
 import { isConsumable, isWeapon } from "../scripts/crafter";
+import ItemTypeIcon from "./ItemTypeIcon.vue";
 
 export default {
   name: 'ItemCard',
   props: {
-    item: WynnItem,
+    item: Object,
   },
   async setup(props) {
 
@@ -204,7 +169,7 @@ export default {
 
     return { item, format, isEmpty, isConsumable, isWeapon, getWynnClass }
   },
-  components: {}
+  components: { ItemTypeIcon }
 }
 </script>
   
