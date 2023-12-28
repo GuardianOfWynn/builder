@@ -3,54 +3,54 @@ import Ingredient from '../model/ingredient'
 export const crafter_url = ''
 
 export enum CraftedAttackSpeed {
-    SLOW = "Slow",
-    NORMAL = "Normal",
-    FAST = "Fast",
+    SLOW = "slow",
+    NORMAL = "normal",
+    FAST = "fast",
 }
 
 export enum ItemType {
-    BOW = "Bow",
-    SPEAR = "Spear",
-    DAGGER = "Dagger",
-    RELIK = "Relik",
-    WAND = "Wand",
-    HELMET = "Helmet",
-    CHESTPLATE = "Chestplate",
-    LEGGINGS = "Leggings",
-    BOOTS = "Boots",
-    RING = "Ring",
-    NECKLACE = "Necklace",
-    BRACELET = "Bracelet",
-    SCROLL = "Scroll",
-    POTION = "Potion",
-    FOOD = "Food"
+    BOW = "bow",
+    SPEAR = "spear",
+    DAGGER = "dagger",
+    RELIK = "relik",
+    WAND = "wand",
+    HELMET = "helmet",
+    CHESTPLATE = "chestplate",
+    LEGGINGS = "leggings",
+    BOOTS = "boots",
+    RING = "ring",
+    NECKLACE = "necklace",
+    BRACELET = "bracelet",
+    SCROLL = "scroll",
+    POTION = "potion",
+    FOOD = "food"
 }
 
 export enum ItemTier {
-    MYTHIC = "Mythic",
-    FABLED = "Fabled",
-    LEGENDARY = "Legendary",
-    SET = "Set",
-    RARE = "Rare",
-    UNIQUE = "Unique",
-    NORMAL = "Normal",
+    MYTHIC = "mythic",
+    FABLED = "fabled",
+    LEGENDARY = "legendary",
+    SET = "set",
+    RARE = "rare",
+    UNIQUE = "unique",
+    NORMAL = "normal",
 }
 
 export enum ArmorType {
-    HELMET = "Helmet",
-    CHESTPLATE = "Chestplate",
-    LEGGINGS = "Leggings",
-    BOOTS = "Boots"
+    HELMET = "helmet",
+    CHESTPLATE = "chestplate",
+    LEGGINGS = "leggings",
+    BOOTS = "boots"
 }
 
 export enum AttackSpeed {
-    SUPER_SLOW = "Super Slow",
-    VERY_SLOW = "Very Slow",
-    SLOW = "Slow",
-    NORMAL = "Normal",
-    FAST = "Fast",
-    VERY_FAST = "Very Fast",
-    SUPER_FAST = "Super Fast"
+    SUPER_SLOW = "super_slow",
+    VERY_SLOW = "very_slow",
+    SLOW = "slow",
+    NORMAL = "normal",
+    FAST = "fast",
+    VERY_FAST = "very_fast",
+    SUPER_FAST = "super_fast"
 }
 
 export enum WynnClass {

@@ -10,13 +10,13 @@
           </ComboboxButton>-->
       <ComboboxInput :spellcheck="false"
         class="text-md border-purple-600 border-[1px] text-white bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
-        @change="query = $event.target.value" :displayValue="(x: any) => x" 
+        @change="query = $event.target.value" :displayValue="(x: any) => x[0].toUpperCase() + x.substring(1)" 
         />
       <ComboboxOptions class="absolute z-10 flex flex-col right-0 top-0">
         <ComboboxOption v-for="(x, i) in filteredTypes" :key="x.toString()" :value="x">
           <div v-bind:class="{ 'border-b-0': i != filteredTypes.length - 1, 'border-t-0': i != 0 }"
             class="cursor-pointer p-1 px-2 bg-mc-bg text-white w-full border-[1px] border-purple-600 hover:bg-purple-900">
-            {{ x }}
+            {{ x[0].toUpperCase() + x.substring(1) }}
           </div>
         </ComboboxOption>
       </ComboboxOptions>
