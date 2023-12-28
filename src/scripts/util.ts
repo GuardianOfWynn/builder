@@ -1,4 +1,6 @@
 import Ingredient from '../model/ingredient'
+import { ITEMS, WynnItem } from '../model/item';
+import { isWeapon } from './crafter';
 
 export const crafter_url = ''
 
@@ -89,6 +91,14 @@ export function getWynnClass(itemType: ItemType): WynnClass | undefined {
         case ItemType.DAGGER : return WynnClass.ASSASSIN;
         default: return undefined;
     }
+}
+
+export function getItemsOf(type: ItemType): WynnItem[] {
+    return ITEMS.filter(x => x.type === type);
+}
+
+export function getWeapons(): WynnItem[] {
+    return ITEMS.filter(x => isWeapon(x.type));
 }
 
 export function format(value: number, id: String): string {

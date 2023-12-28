@@ -1,5 +1,5 @@
 <template>
-    <div class="flex font-minecraft">
+    <div class="flex font-minecraft bg-mc-bg min-h-screen">
         <div>
             <AppsSidebar />
         </div>
@@ -12,9 +12,20 @@
                     <p class="my-auto text-xs text-mc-blue">Join our discord</p>
                 </a>
             </div>
-
-            <div>
-                <p class="text-white text-3xl">Coming soon!</p>
+            <div class="flex w-2/5 justify-between">
+                <div class="flex flex-col gap-y-2">
+                    <ItemSelector :item-type="'helmet'" />
+                    <ItemSelector :item-type="'chestplate'" />
+                    <ItemSelector :item-type="'leggings'" />
+                    <ItemSelector :item-type="'boots'" />
+                    <ItemSelector :item-type="'weapon'" />
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <ItemSelector :item-type="'ring'" />
+                    <ItemSelector :item-type="'ring'" />
+                    <ItemSelector :item-type="'bracelet'" />
+                    <ItemSelector :item-type="'necklace'" />
+                </div>
             </div>
 
         </div>
@@ -25,6 +36,7 @@
 import { ref } from "vue";
 import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
+import ItemSelector from "./ItemSelector.vue";
 
 export default {
     name: 'Builder',
@@ -32,10 +44,18 @@ export default {
     },
     setup() {
         const router = useRouter()
-        const hovered = ref(false);
 
-        return { hovered, router }
+        const helmet = ref(null);
+        const chestplate = ref(null);
+        const leggings = ref(null);
+        const boots = ref(null);
+        const necklace = ref(null);
+        const bracelet = ref(null);
+        const ring1 = ref(null);
+        const ring2 = ref(null);
+
+        return { router }
     },
-    components: { AppsSidebar }
+    components: { AppsSidebar, ItemSelector }
 }
 </script>

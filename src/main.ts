@@ -5,6 +5,7 @@ import {createRouter, createWebHashHistory} from "vue-router"
 import Crafter from './components/crafter/Crafter.vue'
 import Builder from './components/builder/Builder.vue'
 import Ingredient from './model/ingredient'
+import {WynnItem} from './model/item'
 
 const routes = [
     { path: '/crafter/:recipe?', component: Crafter },
@@ -15,6 +16,5 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes,
 })
-
 
 createApp(App).use(router).mount('#app')
