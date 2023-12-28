@@ -19,7 +19,7 @@ export class WynnBaseItem {
     };
 }
 
-export class WynnCraftedItem {
+export class WynnCraftedItem extends WynnBaseItem {
     health: NumberRange;
     level: NumberRange;
     craftedStatus: {

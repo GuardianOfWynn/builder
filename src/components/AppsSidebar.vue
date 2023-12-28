@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen font-minecraft w-20 hover:w-40 bg-gray-900 border-r-mc-light-purple border-[1px] border-l-0 border-b-0 border-t-0" @mouseenter="hovered = true" @mouseleave="hovered = false">
+    <div class="min-h-screen font-minecraft w-20 hover:w-40 bg-[#1f0d1f] border-r-mc-light-purple border-[1px] border-l-0 border-b-0 border-t-0" @mouseenter="hovered = true" @mouseleave="hovered = false">
         <p class="text-white text-center mb-4 pt-4">Apps</p>
         <div :class="[hovered ? 'justify-normal' : 'justify-center']" class="flex p-2 cursor-pointer hover:bg-mc-dark-purple" @click="router.push('/crafter/')">
             <div class="w-8 h-8 bg-professions-dec bg-crafter"></div>

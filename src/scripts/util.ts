@@ -80,6 +80,35 @@ export enum Element {
     EARTH = "Earth"
 }
 
+export function getWynnClass(itemType: ItemType): WynnClass | undefined {
+    switch(itemType) {
+        case ItemType.BOW : return WynnClass.ARCHER;
+        case ItemType.RELIK : return WynnClass.SHAMAN;
+        case ItemType.WAND : return WynnClass.MAGE;
+        case ItemType.SPEAR : return WynnClass.WARRIOR;
+        case ItemType.DAGGER : return WynnClass.ASSASSIN;
+        default: return undefined;
+    }
+}
+
+export function format(value: number, id: String): string {
+    if (id === "POISON") {
+        return value + "/3s"
+      }
+
+      switch (id) {
+        case "POISON": case "MANASTEAL": case "LIFESTEAL": return value + "/3s";
+        case "MANAREGEN": return value + "/5s";
+        case "ATTACKSPEED": return value + " tier";
+        default:
+      }
+
+      if (!id.includes("RAW") && !id.includes("POINTS") && !id.includes("HEALTHBONUS") && !id.includes("JUMP")) {
+        return value + "%";
+      }
+      return value.toString();
+}
+
 export function getPowderElement(ingredient: Ingredient): Element | undefined {
     if(!ingredient.isPowder) {
         return undefined

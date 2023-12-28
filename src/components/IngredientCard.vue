@@ -97,6 +97,7 @@
 <script lang="ts">
 import { ref, watchEffect } from "vue";
 import Ingredient from "../model/ingredient";
+import {format} from "../scripts/util";
   
   export default {
       name: 'IngredientCard',
@@ -110,24 +111,6 @@ import Ingredient from "../model/ingredient";
         watchEffect(() => {
             ing.value = props.ingredient;
         })
-
-        const format = (val, id) => {
-            if (id === "POISON") {
-                return val + "/3s"
-            }
-        
-            switch (id) {
-                case "POISON": case "MANASTEAL": case "LIFESTEAL": return val + "/3s";
-                case "MANAREGEN": return val + "/5s";
-                case "ATTACKSPEED": return val + " tier";
-                default:
-            }
-
-            if(!id.includes("RAW") && !id.includes("POINTS") && !id.includes("HEALTHBONUS")) {
-                return val + "%";
-            }
-            return val
-        }
         return {ing,format}
       },
       components: { }

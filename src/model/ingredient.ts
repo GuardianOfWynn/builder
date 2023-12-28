@@ -39,7 +39,7 @@ export class EffectivenessModifiers {
 export class Identification {
   id: string;
   name: string;
-  isRaw: string;
+  isRaw: boolean;
   raw?: number;
   minimum: number;
   maximum: number;

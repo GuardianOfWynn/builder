@@ -43,54 +43,100 @@
 
       <p v-if="item.isCrafted" class="text-sm text-mc-dark-aqua text-center mb-2">Crafted {{ item.type }}</p>
       <div v-if="isWeapon(item.type)">
-        <p v-show="!isEmpty(item.damages.neutral.high) || !isEmpty(item.damages.neutral.low)" class="text-mc-gold">
-          &#10019; Neutral <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.neutral.low.minimum) }} - {{
-              Math.floor(item.damages.neutral.low.maximum) }} &#9654; {{ Math.floor(item.damages.neutral.high.minimum) }} -
-            {{ Math.floor(item.damages.neutral.high.maximum) }}
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.neutral.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.neutral.low)" class="text-mc-gold">
+            &#10019; Neutral <span class="text-white">
+            <span v-if="item.isCrafted" class="text-mc-gray">damage: </span> 
+              {{ Math.floor((<WynnCraftedItem><unknown>item).damages.neutral.low.minimum) }} - {{Math.floor((<WynnCraftedItem><unknown>item).damages.neutral.low.maximum) }} 
+                &#9654; 
+              {{ Math.floor((<WynnCraftedItem><unknown>item).damages.neutral.high.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.neutral.high.maximum) }}
+            </span>
+        </p>
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.neutral)" class="text-mc-gold">
+            &#10019; Neutral <span class="text-white">
+            <span v-if="item.isCrafted" class="text-mc-gray">damage: </span> 
+              {{ Math.floor((<WynnItem><unknown>item).damages.neutral.minimum) }} - {{Math.floor((<WynnItem><unknown>item).damages.neutral.maximum) }}
+            </span>
+        </p>
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.fire.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.fire.low)" class="text-mc-red">
+            &#10041; Fire <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+              {{ Math.floor((<WynnCraftedItem><unknown>item).damages.fire.low.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.fire.low.maximum) }} 
+                &#9654; 
+              {{ Math.floor((<WynnCraftedItem><unknown>item).damages.fire.high.minimum) }} - {{Math.floor((<WynnCraftedItem><unknown>item).damages.fire.high.maximum) }}
+            </span>
+        </p>
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.fire)" class="text-mc-red">
+            &#10041; Fire <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+              {{ Math.floor((<WynnItem><unknown>item).damages.fire.minimum) }} - {{ Math.floor((<WynnItem><unknown>item).damages.fire.maximum) }} 
+            </span>
+        </p>
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.water.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.water.low)" class="text-mc-aqua">
+            &#10045; Water <span class="text-white">
+            <span class="text-mc-gray">damage: </span>
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.water.low.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.water.low.maximum) }} 
+              &#9654; 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.water.high.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.water.high.maximum) }}
           </span>
         </p>
-        <p v-show="!isEmpty(item.damages.fire.high) || !isEmpty(item.damages.fire.low)" class="text-mc-red">
-          &#10041; Fire <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.fire.low.minimum) }} - {{
-              Math.floor(item.damages.fire.low.maximum) }} &#9654; {{ Math.floor(item.damages.fire.high.minimum) }} - {{
-    Math.floor(item.damages.fire.high.maximum) }}
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.water)" class="text-mc-aqua">
+            &#10045; Water <span class="text-white">
+            <span class="text-mc-gray">damage: </span>
+            {{ Math.floor((<WynnItem><unknown>item).damages.water.minimum) }} - {{ Math.floor((<WynnItem><unknown>item).damages.water.maximum) }} 
           </span>
         </p>
-        <p v-show="!isEmpty(item.damages.water.high) || !isEmpty(item.damages.water.low)" class="text-mc-aqua">
-          &#10045; Water <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.water.low.minimum) }} - {{
-              Math.floor(item.damages.water.low.maximum) }} &#9654; {{ Math.floor(item.damages.water.high.minimum) }} - {{
-    Math.floor(item.damages.water.high.maximum) }}
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.air.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.air.low)" class="text-white">
+            &#10049; Air <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.air.low.minimum) }} - {{Math.floor((<WynnCraftedItem><unknown>item).damages.air.low.maximum) }} 
+            &#9654; 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.air.high.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.air.high.maximum) }}
           </span>
         </p>
-        <p v-show="!isEmpty(item.damages.air.high) || !isEmpty(item.damages.air.low)" class="text-white">
-          &#10049; Air <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.air.low.minimum) }} - {{
-              Math.floor(item.damages.air.low.maximum) }} &#9654; {{ Math.floor(item.damages.air.high.minimum) }} - {{
-    Math.floor(item.damages.air.high.maximum) }}
-          </span>
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.air)" class="text-white">
+            &#10049; Air <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnItem><unknown>item).damages.air.minimum) }} - {{Math.floor((<WynnItem><unknown>item).damages.air.maximum) }} 
+            </span>
         </p>
-        <p v-show="!isEmpty(item.damages.thunder.high) || !isEmpty(item.damages.thunder.low)" class="text-mc-yellow">
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.thunder.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.thunder.low)" class="text-mc-yellow">
           &#10022; Thunder <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.thunder.low.minimum) }} - {{
-              Math.floor(item.damages.thunder.low.maximum) }} &#9654; {{ Math.floor(item.damages.thunder.high.minimum) }} -
-            {{ Math.floor(item.damages.thunder.high.maximum) }}
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.thunder.low.minimum) }} - {{Math.floor((<WynnCraftedItem><unknown>item).damages.thunder.low.maximum) }} 
+              &#9654; 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.thunder.high.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.thunder.high.maximum) }}
           </span>
         </p>
-        <p v-show="!isEmpty(item.damages.earth.high) || !isEmpty(item.damages.earth.low)" class="text-mc-dark-green">
-          &#10020; Earth <span class="text-white">
-            <span class="text-mc-gray">damage: </span> {{ Math.floor(item.damages.earth.low.minimum) }} - {{
-              Math.floor(item.damages.earth.low.maximum) }} &#9654; {{ Math.floor(item.damages.earth.high.minimum) }} - {{
-    Math.floor(item.damages.earth.high.maximum) }}
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.thunder)" class="text-mc-yellow">
+          &#10022; Thunder <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnItem><unknown>item).damages.thunder.minimum) }} - {{Math.floor((<WynnItem><unknown>item).damages.thunder.maximum) }} 
+            </span>
+        </p>
+        <p v-show="item.isCrafted && !isEmpty((<WynnCraftedItem><unknown>item).damages.earth.high) || !isEmpty((<WynnCraftedItem><unknown>item).damages.earth.low)" class="text-mc-dark-green">
+            &#10020; Earth <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.earth.low.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.earth.low.maximum) }} 
+            &#9654; 
+            {{ Math.floor((<WynnCraftedItem><unknown>item).damages.earth.high.minimum) }} - {{ Math.floor((<WynnCraftedItem><unknown>item).damages.earth.high.maximum) }}
           </span>
+        </p>
+        <p v-show="!item.isCrafted && !isEmpty((<WynnItem><unknown>item).damages.earth)" class="text-mc-dark-green">
+            &#10020; Earth <span class="text-white">
+            <span class="text-mc-gray">damage: </span> 
+            {{ Math.floor((<WynnItem><unknown>item).damages.earth.minimum) }} - {{ Math.floor((<WynnItem><unknown>item).damages.earth.maximum) }} 
+            </span>
         </p>
       </div>
-      <p v-show="item.health.maximum !== 0 && item.health.minimum !== 0" class="text-mc-dark-red">Health: <span
-          class="text-white">{{ Math.floor(item.health.minimum) + " - " + Math.floor(item.health.maximum) }}</span></p>
-      <p class=" text-mc-gray" v-show="item.clazz !== undefined">Class Req: {{ item.clazz }}</p>
-      <p class=" text-mc-gray">Combat Lv. Min: {{ item.requirements.level.minimum }} - {{ item.requirements.level.maximum
-      }}</p>
+      <p v-show="item.isCrafted && (<WynnCraftedItem><unknown>item).health.maximum !== 0 && (<WynnCraftedItem><unknown>item).health.minimum !== 0" class="text-mc-dark-red">Health:
+         <span class="text-white">{{ Math.floor((<WynnCraftedItem><unknown>item).health.minimum) + " - " + Math.floor((<WynnCraftedItem><unknown>item).health.maximum) }}</span>
+      </p>
+      <p v-show="!item.isCrafted && (<WynnItem><unknown>item).health !== 0" class="text-mc-dark-red">Health: 
+        <span class="text-white">{{ Math.floor((<WynnItem><unknown>item).health as number) }}</span>
+      </p>
+      <p class=" text-mc-gray" v-show="getWynnClass(item.type) !== undefined">Class Req: {{ getWynnClass(item.type) }}</p>
+      <p v-if="item.isCrafted" class=" text-mc-gray">Combat Lv. Min: {{ (<WynnCraftedItem><unknown>item).level.minimum }} - {{ (<WynnCraftedItem><unknown>item).level.maximum }}</p>
+      <p v-else="!item.isCrafted" class=" text-mc-gray">Combat Lv. Min: {{ (<WynnItem><unknown>item).level }}</p>
 
       <div v-show="!isConsumable(item.type)" class="text-mc-gray">
         <p v-show="item.requirements.dexterity != 0">Dexterity Min: {{ Math.floor(item.requirements.dexterity) }}</p>
@@ -118,13 +164,13 @@
 
         <div v-if="item.isCrafted" class="text-sm text-mc-gray">
           <div>
-            <span v-show="item.craftedStatus.charges != 0">Charges: <span class="text-white text-md">{{
-              Math.floor(item.craftedStatus.charges) }}</span></span><br>
-            <span v-show="!isEmpty(item.craftedStatus.durability)">Durability: <span class="text-white text-md">{{
-              Math.floor(item.craftedStatus.durability.minimum) }} - {{
-    Math.floor(item.craftedStatus.durability.maximum) }}</span></span>
-            <span v-show="!isEmpty(item.craftedStatus.duration)">Duration: <span class="text-white text-md">{{
-              Math.floor(item.craftedStatus.duration.minimum) }}s - {{ Math.floor(item.craftedStatus.duration.maximum)
+            <span v-show="(<WynnCraftedItem><unknown>item).craftedStatus.charges != 0">Charges: <span class="text-white text-md">{{
+              Math.floor((<WynnCraftedItem><unknown>item).craftedStatus.charges) }}</span></span><br>
+            <span v-show="!isEmpty((<WynnCraftedItem><unknown>item).craftedStatus.durability)">Durability: <span class="text-white text-md">{{
+              Math.floor((<WynnCraftedItem><unknown>item).craftedStatus.durability.minimum) }} - {{
+    Math.floor((<WynnCraftedItem><unknown>item).craftedStatus.durability.maximum) }}</span></span>
+            <span v-show="!isEmpty((<WynnCraftedItem><unknown>item).craftedStatus.duration)">Duration: <span class="text-white text-md">{{
+              Math.floor((<WynnCraftedItem><unknown>item).craftedStatus.duration.minimum) }}s - {{ Math.floor((<WynnCraftedItem><unknown>item).craftedStatus.duration.maximum)
   }}s</span></span>
 
           </div>
@@ -139,8 +185,8 @@
 <script lang="ts">
 import { ref, watchEffect } from "vue";
 import Ingredient from "../model/ingredient";
-import { WynnItem } from "../model/item";
-import { ItemTier, isEmpty } from "../scripts/util";
+import { WynnCraftedItem, WynnItem } from "../model/item";
+import { ItemTier, isEmpty, format, getWynnClass } from "../scripts/util";
 import { isConsumable, isWeapon } from "../scripts/crafter";
 
 export default {
@@ -156,24 +202,7 @@ export default {
       item.value = props.item;
     })
 
-    const format = (val, id) => {
-      if (id === "POISON") {
-        return val + "/3s"
-      }
-
-      switch (id) {
-        case "POISON": case "MANASTEAL": case "LIFESTEAL": return val + "/3s";
-        case "MANAREGEN": return val + "/5s";
-        case "ATTACKSPEED": return val + " tier";
-        default:
-      }
-
-      if (!id.includes("RAW") && !id.includes("POINTS") && !id.includes("HEALTHBONUS")) {
-        return val + "%";
-      }
-      return val
-    }
-    return { item, format, isEmpty, isConsumable, isWeapon }
+    return { item, format, isEmpty, isConsumable, isWeapon, getWynnClass }
   },
   components: {}
 }

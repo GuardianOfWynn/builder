@@ -14,7 +14,7 @@
             </div>
 
             <div>
-                
+                <p class="text-white text-3xl">Coming soon!</p>
             </div>
 
         </div>

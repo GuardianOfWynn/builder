@@ -1,7 +1,7 @@
 import Ingredient, { Identification } from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
 import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum, multiplyRange } from "./util";
-import { WynnItem } from "../model/item";
+import { WynnCraftedItem, WynnItem } from "../model/item";
 import { calculateDamage, calculateMaterialMultiplier } from "./math";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
@@ -23,11 +23,11 @@ export class IngredientSlot {
 }
 
 
-export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
+export function assembleCraft(recipe: Recipe): Pair<WynnCraftedItem, string[]> {
   let effectivenessMatrix = getEffectivenessMatrix(recipe.ingredients);
   let warnings: string[] = []; 
 
-  let item = new WynnItem();
+  let item = new WynnCraftedItem();
   item.name = recipe.hash;
   item.isCrafted = true;
 
@@ -51,8 +51,10 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
     dexterity: 0,
     intelligence: 0,
     defence: 0,
-    level: recipe.level.levelRange
+    quest: ""
   }
+
+  item.level = recipe.level.levelRange;
 
   item.damages = {
     air: {
@@ -87,28 +89,6 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
   }
 
   item.type = recipe.craftType;
-
-  switch (recipe.craftType) {
-    case ItemType.SPEAR:
-      item.clazz = WynnClass.WARRIOR;
-      break;
-
-    case ItemType.BOW:
-      item.clazz = WynnClass.ARCHER;
-      break;
-
-    case ItemType.WAND:
-      item.clazz = WynnClass.MAGE;
-      break;
-
-    case ItemType.RELIK:
-      item.clazz = WynnClass.SHAMAN;
-      break;
-
-    case ItemType.DAGGER:
-      item.clazz = WynnClass.ASSASSIN;
-      break;
-  }
 
   let identifications: Identification[] = [];
   recipe.ingredients.forEach(slot => {
@@ -161,6 +141,8 @@ export function assembleCraft(recipe: Recipe): Pair<WynnItem, string[]> {
         identifications.push({
           id: identification.id,
           name: identification.name,
+          isRaw: identification.id.includes("raw"),
+          raw: 0,
           maximum: Math.floor(identification.maximum * effectivenessMultiplier),
           minimum: Math.floor(identification.minimum * effectivenessMultiplier)
         })
