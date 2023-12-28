@@ -1,11 +1,21 @@
 <template>
   <div class="flex gap-x-2">
-    <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
-      <ItemTypeIcon :item-type="type" />
+    <div class="relative">
+      <div class="border-[1px] my-auto pixel-corners flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] to-mc-bg h-20 w-20 p-2"
+        :class="selectedItem !== null && selectedItem.tier == 'mythic' ? 'from-mc-dark-purple' 
+        : selectedItem !== null && selectedItem.tier == 'legendary' ? 'from-mc-aqua'
+        : selectedItem !== null && selectedItem.tier == 'fabled' ? 'from-mc-red'
+        : selectedItem !== null && selectedItem.tier == 'set' ? 'from-mc-lime'
+        : selectedItem !== null && selectedItem.tier == 'rare' ? 'from-mc-light-purple'
+        : selectedItem !== null && selectedItem.tier == 'unique' ? 'from-mc-yellow'
+        : selectedItem !== null && selectedItem.tier == 'normal' ? 'from-white' : 'from-mc-bg'
+        ">
+        <ItemIcon :item="selectedItem" class=""/>
+      </div>
     </div>
     <Combobox placeholder="No item" immediate :defaultValue="undefined" nullable @update:modelValue="value => handleUpdate(value)" v-model="selectedItem" name="assignee" class="">
         <div class="font-minecraft relative">
-          <ComboboxInput :spellcheck="false" class="text-sm border-purple-600 border-[1px] h-1/2 text-white bg-mc-bg rounded-md p-1 px-3 w-full outline-none "
+          <ComboboxInput :spellcheck="false" class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-1/2 text-white bg-mc-bg p-1 px-3 w-full outline-none "
             @change="query = $event.target.value"
             :displayValue="(item: any) => {
               return item === null || item === undefined || item.name === undefined ? '' : item.name
@@ -29,11 +39,12 @@
 
 <script lang="ts">
 
-import { computed, ref, watchEffect } from 'vue';
+import { Ref, computed, ref, watchEffect } from 'vue';
 import ItemTypeIcon from '../ItemTypeIcon.vue';
 import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/vue';
-import { ItemType, getItemsOf, getWeapons } from '../../scripts/util';
+import { ItemTier, ItemType, getItemsOf, getWeapons } from '../../scripts/util';
 import { WynnItem } from '../../model/item';
+import ItemIcon from '../ItemIcon.vue';
 
 export default {
   name: 'ItemSelector',
@@ -45,7 +56,7 @@ export default {
     const type = ref(props.itemType);
     const query = ref('');
     const itemList = props.itemType === 'weapon' ? getWeapons() : getItemsOf(props.itemType as ItemType);
-    const selectedItem = ref(null);
+    const selectedItem: Ref<WynnItem | null> = ref(null);
 
     function handleUpdate(val: WynnItem) {
       type.value = val.type;
@@ -62,6 +73,6 @@ export default {
 
       return {selectedItem, filteredItems, query, type, emit, handleUpdate}
   },
-  components: { ItemTypeIcon, Combobox, ComboboxInput, ComboboxOptions, ComboboxOption }
+  components: { ItemTypeIcon, Combobox, ComboboxInput, ComboboxOptions, ComboboxOption, ItemIcon }
 }
 </script>

@@ -12,7 +12,7 @@
                     <p class="my-auto text-xs text-mc-blue">Join our discord</p>
                 </a>
             </div>
-            <div class="flex w-2/5 justify-between">
+            <div class="flex w-1/2 justify-between">
                 <div class="flex flex-col gap-y-2">
                     <ItemSelector :item-type="'helmet'" />
                     <ItemSelector :item-type="'chestplate'" />

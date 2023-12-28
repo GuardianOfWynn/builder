@@ -6,6 +6,8 @@ export const ITEMS: WynnItem[] = await (await fetch("/builder/items.json")).json
 
 export class WynnBaseItem {
     name: string;
+    sprite?: string;
+    armorType: ArmorType;
     powderSlots: number;
     type: ItemType;
     attackSpeed?: AttackSpeed;

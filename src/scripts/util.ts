@@ -82,6 +82,14 @@ export enum Element {
     EARTH = "Earth"
 }
 
+export enum ArmorType {
+    LEATHER = "leather",
+    CHAIN = "chain",
+    IRON = "iron",
+    GOLDEN = "golden",
+    DIAMOND = "diamond"
+}
+
 export function getWynnClass(itemType: ItemType): WynnClass | undefined {
     switch(itemType) {
         case ItemType.BOW : return WynnClass.ARCHER;
