@@ -1,5 +1,5 @@
 <template>
-  <div class="border-[1px] bg-mc-bg font-minecraft w-full h-fit border-mc-aqua rounded-md p-2">
+  <div class="border-[1px] bg-mc-bg font-minecraft w-full h-fit rounded-md p-2">
 
     <p v-if="item === undefined" class="text-mc-dark-gray text-center">No item</p>
     <div v-else class="text-sm">
@@ -122,7 +122,7 @@
                 <span :class="identification.maximum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{
                   Math.floor(identification.maximum) <= 0 ? format(Math.floor(identification.maximum), identification.id)
                   : '+' + format(Math.floor(identification.maximum), identification.id) }}</span>
-                    <span class="text-sm text-mc-gray ml-2">{{ identification.name }}</span>
+                    <span class="text-sm text-mc-gray ml-2">{{ getIdentification(identification.id).getTranslatedName() }}</span>
           </p>
         </div>
 
@@ -153,6 +153,7 @@ import { WynnCraftedItem, WynnItem } from "../model/item";
 import { ItemTier, isEmpty, format, getWynnClass } from "../scripts/util";
 import { isConsumable, isWeapon } from "../scripts/crafter";
 import ItemTypeIcon from "./ItemTypeIcon.vue";
+import { Identification } from "../model/identification";
 
 export default {
   name: 'ItemCard',
@@ -163,11 +164,13 @@ export default {
 
     const item = ref(props.item);
 
+    const getIdentification = (id: string): Identification => Identification.identifications.get(id)!;
+
     watchEffect(() => {
       item.value = props.item;
     })
 
-    return { item, format, isEmpty, isConsumable, isWeapon, getWynnClass }
+    return { item, format, isEmpty, isConsumable, isWeapon, getWynnClass, getIdentification }
   },
   components: { ItemTypeIcon }
 }

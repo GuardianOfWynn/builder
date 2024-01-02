@@ -1,4 +1,6 @@
+
 import { AbilityNode } from "./ability";
+import { FixedIdentification } from "./identification";
 import { WynnItem } from "./item";
 
 export class Build {
@@ -12,4 +14,9 @@ export class Build {
     bracelet: WynnItem;
     necklace: WynnItem;
     abilityTree: AbilityNode[];
+    stats: BuildStats;
+}
+
+export class BuildStats {
+    stats: FixedIdentification[];
 }
