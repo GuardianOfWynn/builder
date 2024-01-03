@@ -1,9 +1,9 @@
 import Ingredient from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
 import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum, multiplyRange } from "./util";
-import { WynnCraftedItem, WynnItem } from "../model/item";
+import { WynnCraftedItem} from "../model/item";
 import { calculateDamage, calculateMaterialMultiplier } from "./math";
-import { Identification, RangeableIdentification } from "../model/identification";
+import {RangeableIdentification } from "../model/identification";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
 export const isArmour = (craftType: ItemType) => [ItemType.HELMET, ItemType.CHESTPLATE, ItemType.LEGGINGS, ItemType.BOOTS].includes(craftType);

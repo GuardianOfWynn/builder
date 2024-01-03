@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-
+            <AbilityTree/>
         </div>
     </div>
 </template>
@@ -48,6 +48,7 @@ import { ref } from "vue";
 import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
 import ItemSelector from "./ItemSelector.vue";
+import AbilityTree from "./AbilityTree.vue";
 
 export default {
     name: 'Builder',
@@ -57,21 +58,36 @@ export default {
         const router = useRouter()
 
         const helmet = ref(null);
+        const helmetPowders = ref("");
+
         const chestplate = ref(null);
+        const chestplatePowders = ref("");
+
         const leggings = ref(null);
+        const leggingsPowders = ref("");
+
         const boots = ref(null);
+        const bootsPowders = ref("");
+
         const necklace = ref(null);
+        const necklacePowders = ref("");
+
         const bracelet = ref(null);
+        const braceletPowders = ref("");
+
         const ring1 = ref(null);
+        const ring1Powders = ref("");
+
         const ring2 = ref(null);
+        const ring2Powders = ref("");
 
 
         function assemble() {
-            
+
         }
 
         return { router }
     },
-    components: { AppsSidebar, ItemSelector }
+    components: { AppsSidebar, ItemSelector, AbilityTree }
 }
 </script>
