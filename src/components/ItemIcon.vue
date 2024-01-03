@@ -7,14 +7,14 @@
 <script lang="ts">
 
 import {PropType, ref,watchEffect} from 'vue';
-import { WynnItem } from '../model/item';
+import { WynnBaseItem, WynnItem } from '../model/item';
 import { isArmour } from '../scripts/crafter';
 
 export default {
   name: 'ItemTypeIcon',
   props: {
     item: { 
-      type: null as unknown as PropType<WynnItem | null>,
+      type: null as unknown as PropType<WynnBaseItem | null>,
       default: null, required: true
     }
   },

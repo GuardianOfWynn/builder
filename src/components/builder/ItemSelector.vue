@@ -2,18 +2,19 @@
   <div class="flex gap-x-2">
     <div class="relative">
       <div class="border-[1px] my-auto pixel-corners flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] to-mc-bg h-20 w-20 p-2"
-        :class="selectedItem !== null && selectedItem.tier == 'mythic' ? 'from-mc-dark-purple' 
-        : selectedItem !== null && selectedItem.tier == 'legendary' ? 'from-mc-aqua'
-        : selectedItem !== null && selectedItem.tier == 'fabled' ? 'from-mc-red'
-        : selectedItem !== null && selectedItem.tier == 'set' ? 'from-mc-lime'
-        : selectedItem !== null && selectedItem.tier == 'rare' ? 'from-mc-light-purple'
-        : selectedItem !== null && selectedItem.tier == 'unique' ? 'from-mc-yellow'
-        : selectedItem !== null && selectedItem.tier == 'normal' ? 'from-white' : 'from-mc-bg'
+        :class="selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'mythic' ? 'from-mc-dark-purple' 
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'legendary' ? 'from-mc-aqua'
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'fabled' ? 'from-mc-red'
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'set' ? 'from-mc-lime'
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'rare' ? 'from-mc-light-purple'
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'unique' ? 'from-mc-yellow'
+        : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'normal' ? 'from-white' 
+        : selectedItem !== null && !selectedItem?.isCrafted ? 'from-mc-dark-aqua' : 'from-mc-bg'
         ">
         <ItemIcon :item="selectedItem" class=""/>
       </div>
     </div>
-    <Combobox placeholder="No item" immediate :defaultValue="undefined" nullable @update:modelValue="value => handleUpdate(value)" v-model="selectedItem" name="assignee" class="">
+    <Combobox placeholder="No item" immediate :defaultValue="undefined" nullable @update:modelValue="handleUpdate" v-model="selectedItem" name="assignee" class="">
         <div class="font-minecraft relative">
           <ComboboxInput :spellcheck="false" class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-1/2 text-white bg-mc-bg p-1 px-3 w-full outline-none "
             @change="query = $event.target.value"
@@ -43,7 +44,7 @@ import { Ref, computed, ref, watchEffect } from 'vue';
 import ItemTypeIcon from '../ItemTypeIcon.vue';
 import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/vue';
 import { ItemTier, ItemType, getItemsOf, getWeapons } from '../../scripts/util';
-import { WynnItem } from '../../model/item';
+import { WynnBaseItem, WynnItem } from '../../model/item';
 import ItemIcon from '../ItemIcon.vue';
 
 export default {
@@ -51,16 +52,16 @@ export default {
   props: {
     itemType: String,
   },
-  setup(props, {emit}) {
+  emits: ['update-item'],
+  setup(props, {emit}: any) {
 
     const type = ref(props.itemType);
     const query = ref('');
     const itemList = props.itemType === 'weapon' ? getWeapons() : getItemsOf(props.itemType as ItemType);
-    const selectedItem: Ref<WynnItem | null> = ref(null);
+    const selectedItem: Ref<WynnBaseItem | null> = ref(null);
 
     function handleUpdate(val: WynnItem) {
       type.value = val.type;
-      console.log(val.type)
       emit('update-item', val)
     }
     

@@ -51,7 +51,7 @@
             "&7time at a farther range.",
             " ",
             "&c⚔ &7Total Damage: &c-40% &8(of your DPS, per bash)",
-            "  &8(&6✢ &8Damage: &8-40%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-40%&8)",
             "&2➼ &7Range: &f+3 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -85,8 +85,8 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&2✤ &8Earth: &830%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &830%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             "&2➼ &7Range: &f3 Blocks",
             " ",
@@ -136,7 +136,7 @@
         "name": "&f&lVehement",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -174,7 +174,7 @@
         "name": "&a&lCharge",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -206,7 +206,7 @@
         "name": "&a&lWar Scream",
         "coordinates": {
             "x": 7,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -221,10 +221,10 @@
             " ",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &875%&8)",
-            "  &8(&c✹ &8Fire: &825%&8)",
-            "&e🛡 &7Effect: &f20% &7Resistance Bonus (&a❁&7) to Allies",
-            "&d⌛ &7Duration: &f30s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &875%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &825%&8)",
+            "&e🛡 &7Effect: &f20% &7Resistance Bonus (&a�??&7) to Allies",
+            "&d⌛À &7Duration: &f30s",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -246,7 +246,7 @@
         "name": "&a&lUppercut",
         "coordinates": {
             "x": 3,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -260,9 +260,9 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f280% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8200%&8)",
-            "  &8(&2✤ &8Earth: &840%&8)",
-            "  &8(&e✦ &8Thunder: &840%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8200%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &840%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &840%&8)",
             "&3☀ &7Area of Effect: &f1-3 Blocks &7(Cone-Shaped)",
             "&2➼ &7Range: &f5 Blocks",
             " ",
@@ -287,7 +287,7 @@
         "name": "&f&lCheaper Charge",
         "coordinates": {
             "x": 5,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -321,7 +321,7 @@
         "name": "&f&lTougher Skin",
         "coordinates": {
             "x": 7,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -359,7 +359,7 @@
         "name": "&6&lHeavy Impact",
         "coordinates": {
             "x": 2,
-            "y": 11
+            "y": 10
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -371,7 +371,7 @@
             "&7down unto the ground and deal damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8120%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8120%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -390,7 +390,7 @@
         "name": "&6&lQuadruple Bash",
         "coordinates": {
             "x": 1,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -402,7 +402,7 @@
             "&7at double the speed.",
             " ",
             "&c⚔ &7Total Damage: &c-20% &8(of your DPS, per bash)",
-            "  &8(&6✢ &8Damage: &8-20%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-20%&8)",
             "&2➼ &7Range: &f+6 Blocks",
             " ",
             "&c&lFallen Archetype",
@@ -426,7 +426,7 @@
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 9,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -459,7 +459,7 @@
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 1,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -492,7 +492,7 @@
         "name": "&f&lFlyby Jab",
         "coordinates": {
             "x": 7,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -504,8 +504,8 @@
             "&7way when using &nCharge&7.",
             " ",
             "&c⚔ &7Total Damage: &f120%",
-            "  &8(&6✢ &8Damage: &8100%&8)",
-            "  &8(&f❋ &8Air: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -526,7 +526,7 @@
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 7,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -537,8 +537,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f❋ &7Air Damage: &f+3-4",
-            "&f❋ &7Air Damage: &f+15%",
+            "&f�?� &7Air Damage: &f+3-4",
+            "&f�?� &7Air Damage: &f+15%",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -562,7 +562,7 @@
         "name": "&6&lFlaming Uppercut",
         "coordinates": {
             "x": 9,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -574,8 +574,8 @@
             "&7dealing damage every &f0.6&7 seconds.",
             " ",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS)",
-            "  &8(&c✹ &8Fire: &850%&8)",
-            "&d⌛ &7Duration: &f3s",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &850%&8)",
+            "&d⌛À &7Duration: &f3s",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -598,7 +598,7 @@
         "name": "&6&lFireworks",
         "coordinates": {
             "x": 3,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -610,8 +610,8 @@
             "&7mid-air and receive additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+80%&8)",
-            "  &8(&e✦ &8Thunder: &8+20%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+80%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+20%&8)",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -638,7 +638,7 @@
         "name": "&6&lHalf-Moon Swipe",
         "coordinates": {
             "x": 5,
-            "y": 17
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -651,8 +651,8 @@
             " ",
             "&b✺ &7Mana Cost: &f-5",
             "&c⚔ &7Total Damage: &c-40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8-70%&8)",
-            "  &8(&b❉ &8Water: &8+30%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-70%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &8+30%&8)",
             "&2➼ &7Range: &f+1.5 Blocks",
             " ",
             "&e&lBattle Monk Archetype",
@@ -676,7 +676,7 @@
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 3,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -711,7 +711,7 @@
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -722,8 +722,8 @@
             "Increase your damage",
             "from all Water attacks.",
             " ",
-            "&b❉ &7Water Damage: &f+2-4",
-            "&b❉ &7Water Damage: &f+15%",
+            "&b�?� &7Water Damage: &f+2-4",
+            "&b�?� &7Water Damage: &f+15%",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -745,7 +745,7 @@
         "name": "&f&lIron Lungs",
         "coordinates": {
             "x": 8,
-            "y": 17
+            "y": 16
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -756,12 +756,12 @@
             "&7&nWar Scream&7 and &7&nAir Shout&7 will deal more damage.",
             " ",
             "&c⚔ &7Total Damage: &f+60% &8(of your DPS, for &nWar Scream&8)",
-            "  &8(&6✢ &8Damage: &8+30%&8)",
-            "  &8(&f❋ &8Air: &8+30%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+30%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8+30%&8)",
             " ",
             "&c⚔ &7Total Damage: &f+30% &8(of your DPS, for &nAir Shout&8)",
-            "  &8(&6✢ &8Damage: &8+15%&8)",
-            "  &8(&f❋ &8Air: &8+15%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+15%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8+15%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -788,7 +788,7 @@
         "name": "&c&lMantle of the Bovemists",
         "coordinates": {
             "x": 8,
-            "y": 20
+            "y": 18
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -821,7 +821,7 @@
         "name": "&6&lAerodynamics",
         "coordinates": {
             "x": 6,
-            "y": 22
+            "y": 20
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -859,7 +859,7 @@
         "name": "&c&lBak'al's Grasp",
         "coordinates": {
             "x": 2,
-            "y": 21
+            "y": 19
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -897,7 +897,7 @@
         "name": "&6&lProvoke",
         "coordinates": {
             "x": 8,
-            "y": 22
+            "y": 20
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -936,7 +936,7 @@
         "name": "&c&lGeneralist",
         "coordinates": {
             "x": 3,
-            "y": 20
+            "y": 18
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -965,7 +965,7 @@
         "name": "&f&lSpear Proficiency II",
         "coordinates": {
             "x": 1,
-            "y": 22
+            "y": 20
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -999,7 +999,7 @@
         "name": "&6&lAir Shout",
         "coordinates": {
             "x": 5,
-            "y": 20
+            "y": 18
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1011,8 +1011,8 @@
             "&7go through walls and deal damage multiple times.",
             " ",
             "&c⚔ &7Total Damage: &f50%",
-            "  &8(&6✢ &8Damage: &840%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             "&2➼ &7Range: &f32 Blocks",
             " ",
@@ -1038,7 +1038,7 @@
         "name": "&f&lCheaper Uppercut",
         "coordinates": {
             "x": 4,
-            "y": 22
+            "y": 20
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1072,7 +1072,7 @@
         "name": "&f&lPrecise Strikes",
         "coordinates": {
             "x": 2,
-            "y": 23
+            "y": 21
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1097,7 +1097,7 @@
         "name": "&6&lCounter",
         "coordinates": {
             "x": 5,
-            "y": 23
+            "y": 21
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1110,9 +1110,9 @@
             "&7dodging an enemy attack with Agility.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &860%&8)",
-            "  &8(&f❋ &8Air: &820%&8)",
-            "  &8(&e✦ &8Thunder: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -1137,7 +1137,7 @@
         "name": "&d&lManachism",
         "coordinates": {
             "x": 7,
-            "y": 23
+            "y": 21
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1168,7 +1168,7 @@
         "name": "&6&lBoiling Blood",
         "coordinates": {
             "x": 2,
-            "y": 29
+            "y": 26
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1181,10 +1181,10 @@
             "&7damaging enemies on it every &f0.4 &7seconds.",
             " ",
             "&c⚔ &7Total Damage: &f30% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &825%&8)",
-            "  &8(&c✹ &8Fire: &85%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &85%&8)",
             "&e🛡 &7Effect: &f20% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             " ",
             "&7Ability Points: &f2"
         ],
@@ -1207,7 +1207,7 @@
         "name": "&f&lCheaper War Scream",
         "coordinates": {
             "x": 5,
-            "y": 28
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1245,7 +1245,7 @@
         "name": "&6&lCollide",
         "coordinates": {
             "x": 6,
-            "y": 29
+            "y": 26
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1257,8 +1257,8 @@
             "&7will explode and receive additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&c✹ &8Fire: &850%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &850%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks",
             " ",
             "&e&lBattle Monk Archetype",
@@ -1281,7 +1281,7 @@
         "name": "&f&lStronger Mantle",
         "coordinates": {
             "x": 7,
-            "y": 26
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1316,7 +1316,7 @@
         "name": "&f&lCleansing Breeze",
         "coordinates": {
             "x": 7,
-            "y": 28
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1353,7 +1353,7 @@
         "name": "&f&lRiposte",
         "coordinates": {
             "x": 6,
-            "y": 27
+            "y": 24
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1381,7 +1381,7 @@
         "name": "&d&lEnraged Blow",
         "coordinates": {
             "x": 1,
-            "y": 26
+            "y": 23
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1418,7 +1418,7 @@
         "name": "&6&lFlying Kick",
         "coordinates": {
             "x": 4,
-            "y": 26
+            "y": 23
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1430,9 +1430,9 @@
             "&7momentum and knock them away.",
             " ",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&f❋ &8Air: &830%&8)",
-            "  &8(&b❉ &8Water: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &830%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &820%&8)",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -1458,7 +1458,7 @@
         "name": "&6&lComet",
         "coordinates": {
             "x": 3,
-            "y": 30
+            "y": 27
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1470,8 +1470,8 @@
             "&7unto the ground and receive more damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+80%&8)",
-            "  &8(&2✤ &8Earth: &8+20%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+80%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &8+20%&8)",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1496,7 +1496,7 @@
         "name": "&6&lIntoxicating Blood",
         "coordinates": {
             "x": 1,
-            "y": 28
+            "y": 25
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1528,7 +1528,7 @@
         "name": "&d&lRagnarokkr",
         "coordinates": {
             "x": 4,
-            "y": 29
+            "y": 26
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1541,7 +1541,7 @@
             " ",
             "&b✺ &7Mana Cost: &c+10",
             "&e🛡 &7Effect: &f20% &7Damage Bonus (&a⚔&7) to Players",
-            "&d⌛ &7Duration: &f+15s",
+            "&d⌛À &7Duration: &f+15s",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1569,7 +1569,7 @@
         "name": "&d&lSacred Surge",
         "coordinates": {
             "x": 9,
-            "y": 26
+            "y": 23
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1586,8 +1586,8 @@
             "&7with holy energy, dealing extra damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8100%&8)",
-            "  &8(&e✦ &8Thunder: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -1610,7 +1610,7 @@
         "name": "&f&lStronger Bash",
         "coordinates": {
             "x": 9,
-            "y": 28
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1621,7 +1621,7 @@
             "&7Increase the damage of &nBash&7.",
             " ",
             "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+30%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+30%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1645,7 +1645,7 @@
         "name": "&c&lRejuvenating Skin",
         "coordinates": {
             "x": 8,
-            "y": 29
+            "y": 26
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1678,7 +1678,7 @@
         "name": "&6&lShield Strike",
         "coordinates": {
             "x": 7,
-            "y": 33
+            "y": 30
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1690,8 +1690,8 @@
             "&7when &nMantle of the Bovemist&7 loses all charges.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS, per mantle lost)",
-            "  &8(&6✢ &8Damage: &870%&8)",
-            "  &8(&e✦ &8Thunder: &830%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &870%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &830%&8)",
             "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
             "",
             "&b&lPaladin Archetype",
@@ -1715,7 +1715,7 @@
         "name": "&f&lAxe Kick",
         "coordinates": {
             "x": 4,
-            "y": 35
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1728,7 +1728,7 @@
             " ",
             "&b✺ &7Mana Cost: &c+15",
             "&c⚔ &7Total Damage: &f+150% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+150%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+150%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1752,7 +1752,7 @@
         "name": "&d&lRadiance",
         "coordinates": {
             "x": 6,
-            "y": 35
+            "y": 32
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1766,8 +1766,8 @@
             "&8XP Bonus, Loot Bonus, Loot Quality,",
             "&8Gather XP Bonus, and Gather Speed Bonus)",
             " ",
-            "&e🛡 &7Effect: &f+20% &7ID Effectiveness (&6❈&7) to Allies",
-            "&d⌛ &7Duration: &f8s",
+            "&e🛡 &7Effect: &f+20% &7ID Effectiveness (&6�?�&7) to Allies",
+            "&d⌛À &7Duration: &f8s",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -1795,7 +1795,7 @@
         "name": "&d&lMassive Bash",
         "coordinates": {
             "x": 1,
-            "y": 34
+            "y": 31
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1833,7 +1833,7 @@
         "name": "&6&lMassacre",
         "coordinates": {
             "x": 2,
-            "y": 35
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1869,7 +1869,7 @@
         "name": "&f&lSpirit of the Rabbit",
         "coordinates": {
             "x": 5,
-            "y": 34
+            "y": 31
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1908,7 +1908,7 @@
         "name": "&d&lArmour Breaker",
         "coordinates": {
             "x": 2,
-            "y": 33
+            "y": 30
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1921,7 +1921,7 @@
             "&7defense stats.",
             " ",
             "&e🛡 &7Effect: &f-30% &7Resistance Bonus (&c✃&7) to Enemies",
-            "&d⌛ &7Duration: &f8s",
+            "&d⌛À &7Duration: &f8s",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1941,7 +1941,7 @@
         "name": "&6&lTempest",
         "coordinates": {
             "x": 3,
-            "y": 34
+            "y": 31
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1954,9 +1954,9 @@
             "&7over a large area.",
             "",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS, per ripple)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&2✤ &8Earth: &810%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &810%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBattle Monk Archetype",
@@ -1982,7 +1982,7 @@
         "name": "&f&lUncontainable Corruption",
         "coordinates": {
             "x": 1,
-            "y": 32
+            "y": 29
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2018,7 +2018,7 @@
         "name": "&f&lRadiant Devotee",
         "coordinates": {
             "x": 3,
-            "y": 32
+            "y": 29
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2051,7 +2051,7 @@
         "name": "&d&lSparkling Hope",
         "coordinates": {
             "x": 9,
-            "y": 33
+            "y": 30
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2063,8 +2063,8 @@
             "&7time you heal &f5% &7of your max health.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &840%&8)",
-            "  &8(&e✦ &8Thunder: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
             "&3☀ &7Area of Effect: &f6 Blocks &7(Circle-Shaped)",
             " ",
             "&b&lPaladin Archetype",
@@ -2091,7 +2091,7 @@
         "name": "&6&lMythril Skin",
         "coordinates": {
             "x": 8,
-            "y": 32
+            "y": 29
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2124,7 +2124,7 @@
         "name": "&f&lCheaper Bash",
         "coordinates": {
             "x": 8,
-            "y": 35
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2160,7 +2160,7 @@
         "name": "&c&lWhirlwind Strike",
         "coordinates": {
             "x": 5,
-            "y": 32
+            "y": 29
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2173,8 +2173,8 @@
             "&8(Hold shift to stay grounded)",
             " ",
             "&c⚔ &7Total Damage: &f+10% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8-20%&8)",
-            "  &8(&f❋ &8Air: &8+30%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-20%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8+30%&8)",
             "&3☀ &7Area of Effect: &fCircle-Shaped",
             "&2➼ &7Range: &f+1 Blocks",
             " ",
@@ -2201,7 +2201,7 @@
         "name": "&f&lCheaper War Scream",
         "coordinates": {
             "x": 1,
-            "y": 38
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2237,7 +2237,7 @@
         "name": "&6&lThunderclap",
         "coordinates": {
             "x": 6,
-            "y": 39
+            "y": 35
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2249,7 +2249,7 @@
             "&7double the speed and with an increased area of effect.",
             " ",
             "&c⚔ &7Total Damage: &f+25% &8(of your DPS, per bash)",
-            "  &8(&e✦ &8Thunder: &8+25%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+25%&8)",
             "&3☀ &7Area of Effect: &f+3 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBattle Monk Archetype",
@@ -2277,7 +2277,7 @@
         "name": "&c&lBlood Pact",
         "coordinates": {
             "x": 1,
-            "y": 40
+            "y": 36
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2312,7 +2312,7 @@
         "name": "&f&lBetter Enraged Blow",
         "coordinates": {
             "x": 2,
-            "y": 39
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2340,7 +2340,7 @@
         "name": "&6&lMartyr",
         "coordinates": {
             "x": 9,
-            "y": 41
+            "y": 37
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2352,7 +2352,7 @@
             "&7nearby allies become invincible&7.",
             " ",
             "&e🛡 &7Effect: &fInvincibility (&b☗&f) to Allies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             "",
             "&7Ability Points: &f2"
@@ -2370,7 +2370,7 @@
         "name": "&6&lCyclone",
         "coordinates": {
             "x": 5,
-            "y": 38
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2382,10 +2382,10 @@
             "&7a vortex that damages nearby enemies every &f0.5s&7. ",
             " ",
             "&c⚔ &7Total Damage: &f25% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &810%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
-            "  &8(&c✹ &8Fire: &85%&8)",
-            "&d⌛ &7Duration: &f20s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &810%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &85%&8)",
+            "&d⌛À &7Duration: &f20s",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             "",
             "&e&lBattle Monk Archetype",
@@ -2412,7 +2412,7 @@
         "name": "&c&lDiscombobulate",
         "coordinates": {
             "x": 3,
-            "y": 38
+            "y": 34
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2451,7 +2451,7 @@
         "name": "&c&lSecond Chance",
         "coordinates": {
             "x": 8,
-            "y": 40
+            "y": 36
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2484,7 +2484,7 @@
         "name": "&f&lCheaper Uppercut",
         "coordinates": {
             "x": 7,
-            "y": 41
+            "y": 37
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2521,7 +2521,7 @@
         "name": "&f&lStronger Sacred Surge",
         "coordinates": {
             "x": 8,
-            "y": 38
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2532,8 +2532,8 @@
             "&7Increases the damage of &bSacred Surge &6&l✧&7.",
             " ",
             "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+70%&8)",
-            "  &8(&e✦ &8Thunder: &8+10%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+70%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+10%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -2556,7 +2556,7 @@
         "name": "&d&lBrink of Madness",
         "coordinates": {
             "x": 5,
-            "y": 41
+            "y": 37
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2586,7 +2586,7 @@
         "name": "&f&lHaemorrhage",
         "coordinates": {
             "x": 3,
-            "y": 41
+            "y": 37
         },
         "sprite": {
             "normal": "275_45.svg",

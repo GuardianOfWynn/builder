@@ -1,7 +1,7 @@
 [
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lMeteor",
@@ -38,7 +38,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lWand Proficiency I",
@@ -71,7 +71,7 @@
     {
         "requirements": {
             "NODE": "meteor",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Meteor",
@@ -101,7 +101,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lShooting Star",
@@ -129,7 +129,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lIce Snake",
@@ -170,7 +170,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Teleport",
@@ -203,7 +203,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "blitz",
         "name": "&f&lWand Proficiency II",
@@ -241,7 +241,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lTeleport",
@@ -274,7 +274,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lHeal",
@@ -311,7 +311,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lWisdom",
@@ -346,7 +346,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lBurning Sigil",
@@ -382,7 +382,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "blitz",
         "name": "&6&lWind Slash",
@@ -419,7 +419,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "blitz",
         "name": "&f&lThunder Mastery",
@@ -453,7 +453,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lFire Mastery",
@@ -488,7 +488,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lWater Mastery",
@@ -522,7 +522,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "priest",
         "name": "&6&lSunshower",
@@ -560,7 +560,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lThunderstorm",
@@ -599,7 +599,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "blitz",
         "name": "&f&lAir Mastery",
@@ -634,7 +634,7 @@
     {
         "requirements": {
             "NODE": "meteor",
-            "ABILITY_POINTS": 1,
+            "abilityPoints": 1,
             "ARCHETYPE": {
                 "amount": 2,
                 "name": "arcane"
@@ -673,7 +673,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lEarth Mastery",
@@ -708,7 +708,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 3,
                 "name": "blitz"
@@ -754,7 +754,7 @@
     {
         "requirements": {
             "NODE": "meteor",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 2,
                 "name": "priest"
@@ -809,7 +809,7 @@
     {
         "requirements": {
             "NODE": "windSweeper",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "blitz",
         "name": "&6&lBreathless",
@@ -851,7 +851,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Heal",
@@ -884,7 +884,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lEye Piercer",
@@ -917,7 +917,7 @@
     {
         "requirements": {
             "NODE": "arcaneTransfer",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lLarger Mana Bank",
@@ -948,7 +948,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lPurification",
@@ -982,7 +982,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lLarger Heal",
@@ -1020,7 +1020,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lSentient Snake",
@@ -1057,7 +1057,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 2,
                 "name": "arcane"
@@ -1107,7 +1107,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Teleport",
@@ -1139,7 +1139,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 4,
                 "name": "arcane"
@@ -1182,7 +1182,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "blitz",
         "name": "&6&lBlink",
@@ -1214,7 +1214,7 @@
     {
         "requirements": {
             "NODE": "ophanim",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lStronger Ophanim",
@@ -1245,7 +1245,7 @@
     {
         "requirements": {
             "NODE": "windSweeper",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 5,
                 "name": "blitz"
@@ -1287,7 +1287,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "priest",
         "name": "&6&lFluid Healing",
@@ -1321,7 +1321,7 @@
     {
         "requirements": {
             "NODE": "pyrokinesis",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "arcane",
         "name": "&6&lArcane Restoration",
@@ -1356,7 +1356,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Ice Snake",
@@ -1389,7 +1389,7 @@
     {
         "requirements": {
             "NODE": "ophanim",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lHealthier Ophanim I",
@@ -1423,7 +1423,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lSeance",
@@ -1454,7 +1454,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lSnake Nest",
@@ -1489,7 +1489,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 2,
                 "name": "priest"
@@ -1532,7 +1532,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 5,
                 "name": "priest"
@@ -1579,7 +1579,7 @@
     {
         "requirements": {
             "NODE": "meteor",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 5,
                 "name": "arcane"
@@ -1620,7 +1620,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lArctic Snake",
@@ -1653,7 +1653,7 @@
     {
         "requirements": {
             "NODE": "windSweeper",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "blitz",
         "name": "&f&lMore Winded",
@@ -1682,7 +1682,7 @@
     {
         "requirements": {
             "NODE": "teleport",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lExplosive Entrance",
@@ -1720,7 +1720,7 @@
     {
         "requirements": {
             "NODE": "meteor",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Meteor",
@@ -1752,7 +1752,7 @@
     {
         "requirements": {
             "NODE": "icesnake",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Ice Snake",
@@ -1784,7 +1784,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 7,
                 "name": "priest"
@@ -1828,7 +1828,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 6,
                 "name": "blitz"
@@ -1869,7 +1869,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "arcane",
         "name": "&6&lArcane Speed",
@@ -1904,7 +1904,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 5,
                 "name": "blitz"
@@ -1946,7 +1946,7 @@
     {
         "requirements": {
             "NODE": "arcaneTransfer",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lLarger Mana Bank",
@@ -1980,7 +1980,7 @@
     {
         "requirements": {
             "NODE": "ophanim",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lBetter Ophanim",
@@ -2013,7 +2013,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 8,
                 "name": "arcane"
@@ -2050,7 +2050,7 @@
     {
         "requirements": {
             "NODE": "windSweeper",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 7,
                 "name": "blitz"
@@ -2092,7 +2092,7 @@
     {
         "requirements": {
             "NODE": "sunshower",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lStronger Sunshower",
@@ -2126,7 +2126,7 @@
     {
         "requirements": {
             "NODE": "arcaneTransfer",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lArcane Power",
@@ -2157,7 +2157,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 12,
                 "name": "blitz"
@@ -2207,7 +2207,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lDynamic Faith",
@@ -2240,7 +2240,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 5,
                 "name": "blitz"
@@ -2276,7 +2276,7 @@
     {
         "requirements": {
             "NODE": "windSweeper",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "blitz",
         "name": "&f&lMore Winded",
@@ -2309,7 +2309,7 @@
     {
         "requirements": {
             "NODE": "ophanim",
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "priest",
         "name": "&d&lDivination",
@@ -2347,7 +2347,7 @@
     {
         "requirements": {
             "NODE": "chaosExplosion",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lMemory Recollection",
@@ -2373,7 +2373,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 4,
                 "name": "arcane"
@@ -2411,7 +2411,7 @@
     {
         "requirements": {
             "NODE": "healthierOphanim1",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lHealthier Ophanim II",
@@ -2445,7 +2445,7 @@
     {
         "requirements": {
             "NODE": "heal",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Heal",
@@ -2477,7 +2477,7 @@
     {
         "requirements": {
             "NODE": "arcaneTransfer",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "arcane",
         "name": "&f&lLarger Mana Bank",
@@ -2508,7 +2508,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 11,
                 "name": "priest"
@@ -2550,7 +2550,7 @@
     {
         "requirements": {
             "NODE": "lightDance",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "priest",
         "name": "&f&lBetter Lightweaver",
@@ -2582,7 +2582,7 @@
     {
         "requirements": {
             "NODE": "arcaneTransfer",
-            "ABILITY_POINTS": 2,
+            "abilityPoints": 2,
             "ARCHETYPE": {
                 "amount": 12,
                 "name": "arcane"

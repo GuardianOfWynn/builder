@@ -1,0 +1,890 @@
+[
+    {
+        "x": 5,
+        "y": 2,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 3,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 4,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 6,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 7,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 7,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 8,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 8,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_right_down.svg",
+            "activated": "connector_right_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 9,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 10,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 11,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 12,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 10,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 11,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 12,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 13,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 10,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 11,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 12,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 13,
+        "sprite": {
+            "normal": "connector_up_right_down_left.svg",
+            "activated": "connector_up_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 13,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 10,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 11,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 12,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 10,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 11,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 12,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 14,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 14,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 14,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 14,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 15,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 15,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 15,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 16,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 17,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 17,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 17,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 18,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 18,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 19,
+        "sprite": {
+            "normal": "connector_right_down.svg",
+            "activated": "connector_right_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 19,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 19,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 20,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 20,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 20,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 20,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 21,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 21,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 21,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 20,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 21,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 22,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 22,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 22,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 23,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 23,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 23,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 23,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 24,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 24,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 24,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 24,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 24,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 25,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 25,
+        "sprite": {
+            "normal": "connector_up_right_down.svg",
+            "activated": "connector_up_right_down_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 25,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 25,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 26,
+        "sprite": {
+            "normal": "connector_right_down.svg",
+            "activated": "connector_right_down_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 26,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 26,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 27,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 27,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 27,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 28,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 28,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 28,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 29,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 29,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 29,
+        "sprite": {
+            "normal": "connector_right_down.svg",
+            "activated": "connector_right_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 29,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 30,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 30,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 30,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 31,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 31,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 31,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 31,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 32,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 32,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 32,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 33,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 33,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 33,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 34,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 34,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 34,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 1,
+        "y": 35,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 8,
+        "y": 35,
+        "sprite": {
+            "normal": "connector_up_down.svg",
+            "activated": "connector_up_down_1.png"
+        }
+    },
+    {
+        "x": 2,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 3,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_right_down_left.svg",
+            "activated": "connector_right_down_left_1.png"
+        }
+    },
+    {
+        "x": 4,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    },
+    {
+        "x": 5,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 7,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_right_down.svg",
+            "activated": "connector_right_down_1.png"
+        }
+    },
+    {
+        "x": 9,
+        "y": 36,
+        "sprite": {
+            "normal": "connector_down_left.svg",
+            "activated": "connector_down_left_1.png"
+        }
+    },
+    {
+        "x": 6,
+        "y": 37,
+        "sprite": {
+            "normal": "connector_right_left.svg",
+            "activated": "connector_right_left_1.png"
+        }
+    }
+]
