@@ -14,6 +14,10 @@ export class AbilityNode {
             name: string;
         }
     };
+    coordinates: {
+        x: number;
+        y: number;
+    }
     archetype: string;
     name: string;
     sprite: {

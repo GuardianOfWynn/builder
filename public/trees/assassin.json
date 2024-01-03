@@ -131,11 +131,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lPoisoned Blade",
         "coordinates": {
             "x": 3,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -174,7 +174,7 @@
         "name": "&a&lMultihit",
         "coordinates": {
             "x": 7,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_67.svg",
@@ -211,7 +211,7 @@
         "name": "&a&lSmoke Bomb",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_67.svg",
@@ -252,7 +252,7 @@
         "name": "&f&lCheaper Dash",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -282,11 +282,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lDouble Slice",
         "coordinates": {
             "x": 7,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -321,7 +321,7 @@
         "name": "&a&lDash",
         "coordinates": {
             "x": 5,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_67.svg",
@@ -354,11 +354,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lBackstab",
         "coordinates": {
             "x": 2,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -399,11 +399,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 9,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -433,11 +433,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 1,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -467,11 +467,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 7,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -503,11 +503,11 @@
             "NODE": "smokebomb",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lSticky Bomb",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 17
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -538,11 +538,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 3,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -578,7 +578,7 @@
         "name": "&6&lFatality",
         "coordinates": {
             "x": 8,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -613,11 +613,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 5,
-            "y": 9
+            "y": 15
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -652,7 +652,7 @@
         "name": "&d&lVanish",
         "coordinates": {
             "x": 3,
-            "y": 15
+            "y": 17
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -682,11 +682,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lRighting Reflex",
         "coordinates": {
             "x": 7,
-            "y": 15
+            "y": 17
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -717,7 +717,7 @@
         "name": "&d&lSilent Killer",
         "coordinates": {
             "x": 2,
-            "y": 12
+            "y": 21
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -744,11 +744,11 @@
             "NODE": "shadowClones",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lLast Laugh",
         "coordinates": {
             "x": 4,
-            "y": 12
+            "y": 21
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -775,11 +775,11 @@
         "requirements": {
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lShenanigans",
         "coordinates": {
             "x": 5,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -810,7 +810,7 @@
         "name": "&f&lPsithurism",
         "coordinates": {
             "x": 8,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -840,7 +840,7 @@
         "name": "&f&lCheaper Multihit",
         "coordinates": {
             "x": 6,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -872,7 +872,7 @@
             "NODE": "shadowClones",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lBamboozle",
         "coordinates": {
             "x": 5,
@@ -911,11 +911,11 @@
             "NODE": "vanish",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lShadow Travel",
         "coordinates": {
             "x": 3,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -950,11 +950,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lSurprise Strike",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -987,7 +987,7 @@
         "name": "&6&lWall of Smoke",
         "coordinates": {
             "x": 9,
-            "y": 12
+            "y": 21
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1020,11 +1020,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lMirror Image",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1062,7 +1062,7 @@
         "name": "&f&lDagger Proficiency II",
         "coordinates": {
             "x": 9,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1091,7 +1091,7 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lDistraction",
         "coordinates": {
             "x": 7,
@@ -1127,7 +1127,7 @@
         "name": "&f&lBetter Smoke Bomb",
         "coordinates": {
             "x": 1,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1160,11 +1160,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lLacerate",
         "coordinates": {
             "x": 8,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1205,11 +1205,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lMarked",
         "coordinates": {
             "x": 2,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1242,11 +1242,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lViolent Vortex",
         "coordinates": {
             "x": 1,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1280,7 +1280,7 @@
         "name": "&6&lBlazing Powder",
         "coordinates": {
             "x": 4,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1311,11 +1311,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lHop",
         "coordinates": {
             "x": 7,
-            "y": 15
+            "y": 27
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1345,11 +1345,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lFlow State",
         "coordinates": {
             "x": 9,
-            "y": 15
+            "y": 27
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1381,11 +1381,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lShurikens",
         "coordinates": {
             "x": 7,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1423,7 +1423,7 @@
         "name": "&f&lStronger Multihit",
         "coordinates": {
             "x": 6,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1453,11 +1453,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lSandbagging",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 27
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1493,11 +1493,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lEcho",
         "coordinates": {
             "x": 5,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1539,7 +1539,7 @@
         "name": "&f&lCheaper Smoke Bomb",
         "coordinates": {
             "x": 1,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1572,11 +1572,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lWeightless",
         "coordinates": {
             "x": 8,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1610,7 +1610,7 @@
         "name": "&6&lBlack Hole",
         "coordinates": {
             "x": 2,
-            "y": 15
+            "y": 27
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1638,7 +1638,7 @@
         "name": "&f&lFar Reach",
         "coordinates": {
             "x": 9,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1667,7 +1667,7 @@
             "NODE": "dash",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lDancing Blade",
         "coordinates": {
             "x": 8,
@@ -1704,11 +1704,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lDelirious Gas",
         "coordinates": {
             "x": 4,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1746,11 +1746,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lFatal Spin",
         "coordinates": {
             "x": 2,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1785,7 +1785,7 @@
             "NODE": "bigHit",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lStronger Vortex",
         "coordinates": {
             "x": 1,
@@ -1822,7 +1822,7 @@
         "name": "&f&lCheaper Dash",
         "coordinates": {
             "x": 5,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1855,7 +1855,7 @@
         "name": "&f&lCheaper Multihit",
         "coordinates": {
             "x": 3,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1889,7 +1889,7 @@
         "name": "&f&lCheaper Spin Attack",
         "coordinates": {
             "x": 9,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1922,11 +1922,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lHoodwink",
         "coordinates": {
             "x": 5,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1967,11 +1967,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lWall Jump",
         "coordinates": {
             "x": 9,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2006,11 +2006,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lParry",
         "coordinates": {
             "x": 7,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2043,11 +2043,11 @@
             "NODE": "marked",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lDeath Magnet",
         "coordinates": {
             "x": 3,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2083,11 +2083,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lDissolution",
         "coordinates": {
             "x": 4,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2120,11 +2120,11 @@
             "NODE": "lacerate",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lStronger Lacerate",
         "coordinates": {
             "x": 8,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2153,11 +2153,11 @@
             "NODE": "marked",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&d&lNightcloak Knife",
         "coordinates": {
             "x": 1,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2200,7 +2200,7 @@
         "name": "&f&lPirouette",
         "coordinates": {
             "x": 6,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2236,7 +2236,7 @@
         "name": "&f&lAmbush",
         "coordinates": {
             "x": 1,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2261,11 +2261,11 @@
         "requirements": {
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lChoke Bomb",
         "coordinates": {
             "x": 7,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2298,11 +2298,11 @@
             "NODE": "marked",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&d&lHarvester",
         "coordinates": {
             "x": 2,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2332,11 +2332,11 @@
             "NODE": "marked",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lMore Marks",
         "coordinates": {
             "x": 3,
-            "y": 21
+            "y": 39
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2367,11 +2367,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lForbidden Art",
         "coordinates": {
             "x": 5,
-            "y": 28
+            "y": 40
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2403,7 +2403,7 @@
             "NODE": "darkArts",
             "ABILITY_POINTS": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lEven Stronger Clones",
         "coordinates": {
             "x": 5,
@@ -2464,11 +2464,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lJasmine Bloom",
         "coordinates": {
             "x": 8,
-            "y": 28
+            "y": 40
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2511,7 +2511,7 @@
         "name": "&f&lBetter Weightless",
         "coordinates": {
             "x": 9,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2538,11 +2538,11 @@
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lRicochets",
         "coordinates": {
             "x": 9,
-            "y": 21
+            "y": 39
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2577,11 +2577,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lDiversion",
         "coordinates": {
             "x": 6,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2617,7 +2617,7 @@
         "name": "&f&lCheaper Smoke Bomb",
         "coordinates": {
             "x": 5,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2652,11 +2652,11 @@
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lStronger Clones",
         "coordinates": {
             "x": 6,
-            "y": 21
+            "y": 39
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2717,11 +2717,11 @@
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lSatsujin",
         "coordinates": {
             "x": 2,
-            "y": 28
+            "y": 40
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2751,11 +2751,11 @@
             "NODE": "multihit",
             "ABILITY_POINTS": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lBlade Fury",
         "coordinates": {
             "x": 8,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_49.svg",

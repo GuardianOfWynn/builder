@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <AbilityTree/>
+            <AbilityTree :tree="WARRIOR_ABILITY_TREE"/>
         </div>
     </div>
 </template>
@@ -49,6 +49,7 @@ import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
 import ItemSelector from "./ItemSelector.vue";
 import AbilityTree from "./AbilityTree.vue";
+import { WARRIOR_ABILITY_TREE } from "../../model/abilitytree";
 
 export default {
     name: 'Builder',
@@ -86,7 +87,7 @@ export default {
 
         }
 
-        return { router }
+        return { router, WARRIOR_ABILITY_TREE }
     },
     components: { AppsSidebar, ItemSelector, AbilityTree }
 }

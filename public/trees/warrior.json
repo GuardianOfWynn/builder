@@ -1,7 +1,7 @@
 [
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lSpear Proficiency I",
@@ -33,7 +33,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lDouble Bash",
@@ -65,7 +65,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lBash",
@@ -101,8 +101,8 @@
     },
     {
         "requirements": {
-            "NODE": "bash",
-            "ABILITY_POINTS": 1
+            "node": "bash",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Bash",
@@ -130,13 +130,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&f&lVehement",
         "coordinates": {
             "x": 3,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -168,13 +168,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lCharge",
         "coordinates": {
             "x": 5,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -200,13 +200,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lWar Scream",
         "coordinates": {
             "x": 7,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -240,13 +240,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lUppercut",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_61.svg",
@@ -280,14 +280,14 @@
     },
     {
         "requirements": {
-            "NODE": "charge",
-            "ABILITY_POINTS": 1
+            "node": "charge",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Charge",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 10
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -315,13 +315,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lTougher Skin",
         "coordinates": {
             "x": 7,
-            "y": 4
+            "y": 8
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -353,13 +353,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lHeavy Impact",
         "coordinates": {
             "x": 2,
-            "y": 10
+            "y": 11
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -383,14 +383,14 @@
     },
     {
         "requirements": {
-            "NODE": "bash",
-            "ABILITY_POINTS": 2
+            "node": "bash",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&6&lQuadruple Bash",
         "coordinates": {
             "x": 1,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -420,13 +420,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 9,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -453,13 +453,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 1,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -486,13 +486,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lFlyby Jab",
         "coordinates": {
             "x": 7,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -520,13 +520,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 7,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -555,14 +555,14 @@
     },
     {
         "requirements": {
-            "NODE": "uppercut",
-            "ABILITY_POINTS": 2
+            "node": "uppercut",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&6&lFlaming Uppercut",
         "coordinates": {
             "x": 9,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -592,13 +592,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&6&lFireworks",
         "coordinates": {
             "x": 3,
-            "y": 12
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -627,18 +627,18 @@
     },
     {
         "requirements": {
-            "NODE": "uppercut",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "uppercut",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 1,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lHalf-Moon Swipe",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 17
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -670,13 +670,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 3,
-            "y": 6
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -705,13 +705,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 5,
-            "y": 9
+            "y": 15
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -738,14 +738,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 1
+            "node": "warScream",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lIron Lungs",
         "coordinates": {
             "x": 8,
-            "y": 15
+            "y": 17
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -777,18 +777,18 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "warScream",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&c&lMantle of the Bovemists",
         "coordinates": {
             "x": 8,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -815,13 +815,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lAerodynamics",
         "coordinates": {
             "x": 6,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -848,18 +848,18 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "warScream",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "berserker"
             }
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&c&lBak'al's Grasp",
         "coordinates": {
             "x": 2,
-            "y": 12
+            "y": 21
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -890,14 +890,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 2
+            "node": "warScream",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lProvoke",
         "coordinates": {
             "x": 8,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -926,17 +926,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&c&lGeneralist",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -959,13 +959,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lSpear Proficiency II",
         "coordinates": {
             "x": 1,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -992,14 +992,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 2
+            "node": "warScream",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lAir Shout",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 20
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1031,14 +1031,14 @@
     },
     {
         "requirements": {
-            "NODE": "uppercut",
-            "ABILITY_POINTS": 1
+            "node": "uppercut",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Uppercut",
         "coordinates": {
             "x": 4,
-            "y": 16
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1066,13 +1066,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lPrecise Strikes",
         "coordinates": {
             "x": 2,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1091,13 +1091,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lCounter",
         "coordinates": {
             "x": 5,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1127,17 +1127,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&d&lManachism",
         "coordinates": {
             "x": 7,
-            "y": 20
+            "y": 23
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1162,13 +1162,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lBoiling Blood",
         "coordinates": {
             "x": 2,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1200,14 +1200,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 1
+            "node": "warScream",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper War Scream",
         "coordinates": {
             "x": 5,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1234,18 +1234,18 @@
     },
     {
         "requirements": {
-            "NODE": "tackle",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "tackle",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lCollide",
         "coordinates": {
             "x": 6,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1274,14 +1274,14 @@
     },
     {
         "requirements": {
-            "NODE": "shield",
-            "ABILITY_POINTS": 1
+            "node": "shield",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lStronger Mantle",
         "coordinates": {
             "x": 7,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1310,13 +1310,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lCleansing Breeze",
         "coordinates": {
             "x": 7,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1346,14 +1346,14 @@
     },
     {
         "requirements": {
-            "NODE": "counter",
-            "ABILITY_POINTS": 1
+            "node": "counter",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lRiposte",
         "coordinates": {
             "x": 6,
-            "y": 15
+            "y": 27
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1374,14 +1374,14 @@
     },
     {
         "requirements": {
-            "NODE": "roarOfTheBerserker",
-            "ABILITY_POINTS": 2
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&d&lEnraged Blow",
         "coordinates": {
             "x": 1,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1408,17 +1408,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 1,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lFlying Kick",
         "coordinates": {
             "x": 4,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1451,10 +1451,10 @@
     },
     {
         "requirements": {
-            "NODE": "uppercutGrade2",
-            "ABILITY_POINTS": 2
+            "node": "uppercutGrade2",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&6&lComet",
         "coordinates": {
             "x": 3,
@@ -1485,18 +1485,18 @@
     },
     {
         "requirements": {
-            "NODE": "roarOfTheBerserker",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "berserker"
             }
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&6&lIntoxicating Blood",
         "coordinates": {
             "x": 1,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1521,14 +1521,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 2
+            "node": "warScream",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&d&lRagnarokkr",
         "coordinates": {
             "x": 4,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1559,17 +1559,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&d&lSacred Surge",
         "coordinates": {
             "x": 9,
-            "y": 10
+            "y": 26
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1604,13 +1604,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lStronger Bash",
         "coordinates": {
             "x": 9,
-            "y": 20
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1635,17 +1635,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&c&lRejuvenating Skin",
         "coordinates": {
             "x": 8,
-            "y": 25
+            "y": 29
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1671,14 +1671,14 @@
     },
     {
         "requirements": {
-            "NODE": "shield",
-            "ABILITY_POINTS": 2
+            "node": "shield",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&6&lShield Strike",
         "coordinates": {
             "x": 7,
-            "y": 18
+            "y": 33
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1709,13 +1709,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lAxe Kick",
         "coordinates": {
             "x": 4,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1742,17 +1742,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&d&lRadiance",
         "coordinates": {
             "x": 6,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1785,17 +1785,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 7,
                 "name": "berserker"
             }
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&d&lMassive Bash",
         "coordinates": {
             "x": 1,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1823,17 +1823,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "berserker"
             }
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&6&lMassacre",
         "coordinates": {
             "x": 2,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1858,18 +1858,18 @@
     },
     {
         "requirements": {
-            "NODE": "charge",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "charge",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 5,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&f&lSpirit of the Rabbit",
         "coordinates": {
             "x": 5,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1901,14 +1901,14 @@
     },
     {
         "requirements": {
-            "NODE": "roarOfTheBerserker",
-            "ABILITY_POINTS": 2
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&d&lArmour Breaker",
         "coordinates": {
             "x": 2,
-            "y": 18
+            "y": 33
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1935,13 +1935,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lTempest",
         "coordinates": {
             "x": 3,
-            "y": 24
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1975,14 +1975,14 @@
     },
     {
         "requirements": {
-            "NODE": "roarOfTheBerserker",
-            "ABILITY_POINTS": 1
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lUncontainable Corruption",
         "coordinates": {
             "x": 1,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2008,17 +2008,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 1,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&f&lRadiant Devotee",
         "coordinates": {
             "x": 3,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2045,13 +2045,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&d&lSparkling Hope",
         "coordinates": {
             "x": 9,
-            "y": 18
+            "y": 33
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2081,17 +2081,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 6,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&6&lMythril Skin",
         "coordinates": {
             "x": 8,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2117,14 +2117,14 @@
     },
     {
         "requirements": {
-            "NODE": "bash",
-            "ABILITY_POINTS": 1
+            "node": "bash",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Bash",
         "coordinates": {
             "x": 8,
-            "y": 30
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2149,18 +2149,18 @@
     },
     {
         "requirements": {
-            "NODE": "uppercut",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "uppercut",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 6,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&c&lWhirlwind Strike",
         "coordinates": {
             "x": 5,
-            "y": 12
+            "y": 32
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2194,14 +2194,14 @@
     },
     {
         "requirements": {
-            "NODE": "warScream",
-            "ABILITY_POINTS": 1
+            "node": "warScream",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper War Scream",
         "coordinates": {
             "x": 1,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2226,18 +2226,18 @@
     },
     {
         "requirements": {
-            "NODE": "bash",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "bash",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 8,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lThunderclap",
         "coordinates": {
             "x": 6,
-            "y": 21
+            "y": 39
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2267,17 +2267,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 10,
                 "name": "berserker"
             }
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&c&lBlood Pact",
         "coordinates": {
             "x": 1,
-            "y": 28
+            "y": 40
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2305,14 +2305,14 @@
     },
     {
         "requirements": {
-            "NODE": "enragedBlow",
-            "ABILITY_POINTS": 1
+            "node": "enragedBlow",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Enraged Blow",
         "coordinates": {
             "x": 2,
-            "y": 21
+            "y": 39
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2334,13 +2334,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lMartyr",
         "coordinates": {
             "x": 9,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2364,13 +2364,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&6&lCyclone",
         "coordinates": {
             "x": 5,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2402,17 +2402,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 11,
                 "name": "monk"
             }
         },
-        "archetype": "",
+        "archetype": "monk",
         "name": "&c&lDiscombobulate",
         "coordinates": {
             "x": 3,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2441,17 +2441,17 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 12,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&c&lSecond Chance",
         "coordinates": {
             "x": 8,
-            "y": 28
+            "y": 40
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2477,14 +2477,14 @@
     },
     {
         "requirements": {
-            "NODE": "uppercut",
-            "ABILITY_POINTS": 1
+            "node": "uppercut",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Uppercut",
         "coordinates": {
             "x": 7,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2510,18 +2510,18 @@
     },
     {
         "requirements": {
-            "NODE": "sacredSurge",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "sacredSurge",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 8,
                 "name": "tank"
             }
         },
-        "archetype": "",
+        "archetype": "tank",
         "name": "&f&lStronger Sacred Surge",
         "coordinates": {
             "x": 8,
-            "y": 14
+            "y": 38
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2550,13 +2550,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lBrink of Madness",
         "coordinates": {
             "x": 5,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2579,14 +2579,14 @@
     },
     {
         "requirements": {
-            "NODE": "altruism",
-            "ABILITY_POINTS": 1
+            "node": "altruism",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "berserker",
         "name": "&f&lHaemorrhage",
         "coordinates": {
             "x": 3,
-            "y": 35
+            "y": 41
         },
         "sprite": {
             "normal": "275_45.svg",
