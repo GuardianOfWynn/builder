@@ -93,7 +93,6 @@ export default {
 
 
         function handleWeaponChanged(weapon: WynnBaseItem) {
-            console.log(weapon.type)
             switch(weapon.type) {
                 case ItemType.BOW: 
                     abilityTree.value = ARCHER_ABILITY_TREE; 

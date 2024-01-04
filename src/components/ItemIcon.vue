@@ -24,7 +24,6 @@ export default {
     
     function getSprite() {
         if(isArmour(item.value?.type!)) {
-          console.log(item.value?.armorType + "_" + item.value?.type + ".webp")
             return item.value?.armorType + "_" + item.value?.type + ".webp";
         }
         return item.value?.sprite;
