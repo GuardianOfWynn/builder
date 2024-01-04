@@ -146,36 +146,36 @@ export function findPath(root: AbilityNode, target: AbilityNode, connectors: Abi
     let downConnector = getConnectorAt(root.coordinates.x, root.coordinates.y+1, connectors);
     let leftConnector = getConnectorAt(root.coordinates.x-1, root.coordinates.y, connectors);
     let rightConnector = getConnectorAt(root.coordinates.x+1, root.coordinates.y, connectors);
-    console.log(leftConnector);
 
-    if(upConnector !== undefined) {
+    if(upConnector !== undefined && isDirectionAllowed(upConnector.type as ConnectorType, Direction.DOWN)) {
         let resultUp = expand(upConnector!, target, connectors, tree, []);
         if(resultUp.first) {
             return resultUp.second
         }
     }
 
-    if(downConnector !== undefined) {
-        let resultDown = expand(downConnector!, target, connectors, tree, []);
-        if(resultDown.first) {
-            return resultDown.second
-        }
-    }
-
-    if(leftConnector !== undefined) {
+    if(leftConnector !== undefined && isDirectionAllowed(leftConnector.type as ConnectorType, Direction.RIGHT)) {
         let resultLeft = expand(leftConnector!, target, connectors, tree, []);
         if(resultLeft.first) {
             return resultLeft.second
         }
     }
 
-    if(rightConnector !== undefined) {
+    if(rightConnector !== undefined && isDirectionAllowed(rightConnector.type as ConnectorType, Direction.LEFT)) {
         let resultRight = expand(rightConnector!, target, connectors, tree, []);
         if(resultRight.first) {
             return resultRight.second
         }
 
     }
+
+    if(downConnector !== undefined && isDirectionAllowed(downConnector.type as ConnectorType, Direction.UP)) {
+        let resultDown = expand(downConnector!, target, connectors, tree, []);
+        if(resultDown.first) {
+            return resultDown.second
+        }
+    }
+
     return [];
 }
 
@@ -184,16 +184,17 @@ function expand(from: AbilityNodeConnector, target: AbilityNode, connectors: Abi
         return {first: false, second: visited}
     }
     visited.push(from);
-    console.log(visited);
     let upNode = getNodeAt(from.x, from.y-1, tree);
     let downNode = getNodeAt(from.x, from.y+1, tree);
     let leftNode = getNodeAt(from.x-1, from.y, tree);
     let rightNode = getNodeAt(from.x+1, from.y, tree);
 
-    if((upNode !== undefined && upNode.id === target.id) 
-        || (downNode !== undefined && downNode.id === target.id)
-        || (leftNode !== undefined && leftNode.id === target.id)
-        || (rightNode !== undefined && rightNode.id === target.id)) {
+    let connectorType = from.type as ConnectorType;
+
+    if((upNode !== undefined && upNode.id === target.id && isDirectionAllowed(connectorType, Direction.UP)) 
+        || (downNode !== undefined && downNode.id === target.id && isDirectionAllowed(connectorType, Direction.DOWN))
+        || (leftNode !== undefined && leftNode.id === target.id && isDirectionAllowed(connectorType, Direction.LEFT))
+        || (rightNode !== undefined && rightNode.id === target.id && isDirectionAllowed(connectorType, Direction.RIGHT))) {
         return {first: true, second: visited};
     }
 
@@ -211,13 +212,6 @@ function expand(from: AbilityNodeConnector, target: AbilityNode, connectors: Abi
         }
     }
 
-    if(downConnector !== undefined && isDirectionAllowed(downConnector.type as ConnectorType, Direction.UP) && !wasVisited(downConnector, visited)) {
-        let result = expand(downConnector!, target, connectors, tree, visited);
-        if(result.first) {
-            return result;
-        }
-    }
-
     if(rightConnector !== undefined && isDirectionAllowed(rightConnector.type as ConnectorType, Direction.LEFT) && !wasVisited(rightConnector, visited)){
         let result = expand(rightConnector!, target, connectors, tree, visited);
         if(result.first) {
@@ -227,6 +221,14 @@ function expand(from: AbilityNodeConnector, target: AbilityNode, connectors: Abi
 
     if(leftConnector !== undefined && isDirectionAllowed(leftConnector.type as ConnectorType, Direction.RIGHT) && !wasVisited(leftConnector, visited)) {
         let result = expand(leftConnector!, target, connectors, tree, visited);
+        if(result.first) {
+            return result;
+        }
+    }
+
+
+    if(downConnector !== undefined && isDirectionAllowed(downConnector.type as ConnectorType, Direction.UP) && !wasVisited(downConnector, visited)) {
+        let result = expand(downConnector!, target, connectors, tree, visited);
         if(result.first) {
             return result;
         }

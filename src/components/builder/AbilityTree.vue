@@ -2,7 +2,7 @@
     <div v-if="abilityTree === undefined">
         
     </div>
-    <div  v-else class="overflow-y-scroll h-1/3 w-fit">
+    <div  v-else class="overflow-y-auto h-1/3 w-fit hide-scroll">
         <div class="bg-ability-tree border-solid font-minecraft border-gray-800 border-[4px] bg-center bg-local">
         <div class="text-white text-center py-1 border-b-[4px] border-gray-800">
             Ability tree
@@ -70,6 +70,10 @@ export default {
         const assemble = () => {
             let tree = makeTree(selectedNodes.value, props.tree!, props.connectors!);
             activeConnectors.value = tree.connectors;
+        }
+
+        const getConnectorSprite = () => {
+            
         }
 
         watchEffect(() => {
