@@ -1,4 +1,5 @@
 import { Pair } from "../scripts/util";
+import { Archetype } from "../model/archetype"
 
 export const BASE_ABILITY_POINTS = 45;
 
@@ -10,24 +11,6 @@ export const ARCHER_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/t
 export const SHAMAN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/shaman.json")).json();
 export const ASSASSIN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/assassin.json")).json();
 
-export enum Archetype {
-    ACOLYTE = "bloodmagik",
-    SUMMONER = "summoner",
-    RITUALIST = "ritualist",
-    RIFTWALKER = "blitz",
-    LIGHT_BENDER = "priest",
-    ARCANIST = "arcane",
-    BATTLE_MONK = "monk",
-    FALLEN = "berserker",
-    PALADIN = "tank",
-    TRAPPER = "trapper",
-    SHARPSHOOTER = "sniper",
-    BOLTSLINGER = "boltslinger",
-    SHADESTEPPER = "shadestepper",
-    TRICKSTER = "trickster",
-    ACROBAT = "acrobat"
-}
-
 export enum ConnectorType {
     DOWN_LEFT = "connector_down_left",
     DOWN_RIGHT = "connector_right_down",
@@ -36,7 +19,6 @@ export enum ConnectorType {
     UP_DOWN = "connector_up_down",
     UP_RIGHT_DOWN = "connector_up_right_down",
     CROSS = "connector_up_right_down_left"
-
 }
 
 export enum Direction {
@@ -89,6 +71,15 @@ export class AbilityTree {
             }
         }))
         return locked;
+    }
+
+    getAvailableNodes(): AbilityNode[] {
+        return Array.from(new Set(this.nodes.flatMap(x => x.links)))
+            .filter(x => x !== null && x !== undefined && x.trim() !== "")
+            .map(x => getAbilityNode(x,this.baseTree))
+            .filter(x => x !== undefined)
+            .filter(x => !this.nodes.includes(x))
+            .filter(node => this.isNodeAvailable(node));
     }
 
     isNodeAvailable(node: AbilityNode): boolean {

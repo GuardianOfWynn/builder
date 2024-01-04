@@ -6,8 +6,8 @@
 
 <script lang="ts">
 
-import {PropType, ref,watchEffect} from 'vue';
-import { WynnBaseItem, WynnItem } from '../model/item';
+import {PropType, ref, watchEffect} from 'vue';
+import { WynnBaseItem } from '../model/item';
 import { isArmour } from '../scripts/crafter';
 
 export default {
