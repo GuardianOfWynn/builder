@@ -4,6 +4,42 @@
             "abilityPoints": 1
         },
         "archetype": "",
+        "name": "&a&lBash",
+        "coordinates": {
+            "x": 5,
+            "y": 1
+        },
+        "sprite": {
+            "normal": "275_61.svg",
+            "activated": "275_61_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lRIGHT",
+            " ",
+            "&7Violently bash the ground, dealing",
+            "&7high damage in a large area.",
+            " ",
+            "&b✺ &7Mana Cost: &f40",
+            "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &830%&8)",
+            "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
+            "&2➼ &7Range: &f3 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "spearProficiency"
+        ],
+        "slot": 4,
+        "id": "bash",
+        "locks": []
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
         "name": "&f&lSpear Proficiency I",
         "coordinates": {
             "x": 5,
@@ -61,42 +97,6 @@
         ],
         "slot": 40,
         "id": "doubleBash",
-        "locks": []
-    },
-    {
-        "requirements": {
-            "abilityPoints": 1
-        },
-        "archetype": "",
-        "name": "&a&lBash",
-        "coordinates": {
-            "x": 5,
-            "y": 1
-        },
-        "sprite": {
-            "normal": "275_61.svg",
-            "activated": "275_61_1.svg"
-        },
-        "description": [
-            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lRIGHT",
-            " ",
-            "&7Violently bash the ground, dealing",
-            "&7high damage in a large area.",
-            " ",
-            "&b✺ &7Mana Cost: &f40",
-            "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &830%&8)",
-            "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
-            "&2➼ &7Range: &f3 Blocks",
-            " ",
-            "&7Ability Points: &f1"
-        ],
-        "links": [
-            "spearProficiency"
-        ],
-        "slot": 4,
-        "id": "bash",
         "locks": []
     },
     {

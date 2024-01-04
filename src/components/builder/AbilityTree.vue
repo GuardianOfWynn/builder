@@ -20,7 +20,7 @@
                                     v-if="abilityTree.nodes.some(a => a.coordinates.x == j && a.coordinates.y == i)"
                                     :src="'/builder/sprites/abilitytree/' + getNodeFor(j, i)!.sprite.activated" />
                                 <img class="w-10 h-10 object-fill scale-125"
-                                    :class="[availableNodes.includes(getNodeFor(j, i)!) ? 'opacity-100' : 'opacity-50']"
+                                    :class="[availableNodes.some(a => a.coordinates.x === j && a.coordinates.y === i) ? 'opacity-100' : 'opacity-50']"
                                     v-else :src="'/builder/sprites/abilitytree/' + getNodeFor(j, i)!.sprite.normal" />
                             </div>
                             <div v-else-if="hasConnector(j, i)">
@@ -36,16 +36,22 @@
                 </div>
             </div>
         </div>
-        <div class="text-white border-[1px] border-mc-aqua p-4 flex w-1/3 h-fit justify-center gap-x-4">
-            <div v-for="arch in archetypes.get(clazz!)" class="text-center w-1/3">
-                <p
-                    :class="'text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
+        <div class="w-1/3 flex flex-col gap-y-8">
+            <div class="text-white border-[1px] rounded-md border-mc-aqua p-4 flex h-fit justify-center gap-x-4">
+                <div v-for="arch in archetypes.get(clazz!)" class="text-center w-1/3">
+                    <p :class="'text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
                         {{ ARCHETYPE_DATA.get(arch as Archetype)!.name }}
-                </p>
-                <p class="mb-2">
-                    {{ abilityTree!.getNodesOfArchetype(arch as Archetype).length }} / {{ baseTree!.filter(x => x.archetype !== undefined && x.archetype == arch).length }}
-                </p>
-                <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto"/>
+                    </p>
+                    <p class="mb-2">
+                        {{ abilityTree!.getNodesOfArchetype(arch as Archetype).length }} / {{ baseTree!.filter(x =>
+                            x.archetype !== undefined && x.archetype == arch).length }}
+                    </p>
+                    <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto" />
+                </div>
+            </div>
+            <div v-if="currentHovered !== undefined" class="rounded-sm bg-ability-tree border-[1px] p-4 border-mc-aqua">
+                <p>{{ currentHovered.name }}</p><br/>
+                <p v-for="line in currentHovered.description">{{ line }}</p>
             </div>
         </div>
     </div>
@@ -54,7 +60,7 @@
 
 <script lang="ts">
 
-import { Ref, ref, watchEffect } from 'vue';
+import { Ref, onMounted, ref, watchEffect } from 'vue';
 import { AbilityNode, AbilityTree, AbilityNodeConnector, ConnectorType, makeTree } from '../../model/abilitytree'
 import { WynnClass } from '../../scripts/util';
 import { ARCHETYPE_DATA, Archetype } from '../../model/archetype';
@@ -82,6 +88,10 @@ export default {
             ['Shaman/Skyseer', ['summoner', 'ritualist', 'bloodmagik']],
         ]);
 
+        onMounted(() => {
+            assemble();
+        })
+
         const getNodeFor = (x: number, y: number): AbilityNode | undefined => props.tree?.filter(a => a.coordinates.x === x && a.coordinates.y === y)[0];
         const hasNode = (x: number, y: number): boolean => getNodeFor(x, y) !== undefined;
 
@@ -108,6 +118,10 @@ export default {
             availableNodes.value = tree.getAvailableNodes();
             selectedNodes.value = tree.nodes;
             abilityTree.value = tree;
+            if (baseTree !== undefined && selectedNodes.value.length === 0) {
+                availableNodes.value = [baseTree.value![0]]
+            }
+            console.log(availableNodes.value)
         }
 
         const getConnectorSpriteVariant = (connector: AbilityNodeConnector) => {
