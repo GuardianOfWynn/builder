@@ -93,10 +93,10 @@
           </div>
           <div>
             <div class="grid grid-cols-7 md:mt-0 mt-4 gap-x-1 gap-y-1 text-mc-gray">
-              <p class="my-auto col-span-3">{{ recipe.material1 }} tier: </p>
+              <p class="my-auto col-span-3">{{recipe.material1Amount + 'x ' + recipe.material1 }}: </p>
               <MaterialTierSelector @updade-tier="value => handleMaterial1TierChanged(value)" class="my-auto col-span-4"
                 :tier="material1Tier" />
-              <p class="my-auto col-span-3">{{ recipe.material2 }} tier: </p>
+              <p class="my-auto col-span-3">{{recipe.material2Amount + 'x ' + recipe.material2 }}: </p>
               <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4"
                 :tier="material2Tier" />
               <p v-if="isWeapon(craftType)" class="col-span-3">Attack Speed: </p>
