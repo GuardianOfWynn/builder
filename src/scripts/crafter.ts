@@ -108,7 +108,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnCraftedItem, string[]> {
       }
     }
 
-    if(!ingredient.skills.includes(targetProf)) {
+    if(!ingredient.skills.includes(targetProf.toLowerCase())) {
       let warning = "WARNING: " + ingredient.name + " cannot be used for " + targetProf;
       if(!warnings.includes(warning)) {
         warnings.push(warning);
