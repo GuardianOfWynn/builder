@@ -732,7 +732,7 @@
       "material2":"Starfish Oil",
       "material1":"Voidstone Gem",
       "material2Amount":6,
-      "name":"Voidstone Gem + Dernic Oil (Lvl. 100 - 103)",
+      "name":"Voidstone Gem + Starfish Oil (Lvl. 100 - 103)",
       "material1Amount":6,"levelRange": {
          "minimum": 100,
          "maximum": 103
