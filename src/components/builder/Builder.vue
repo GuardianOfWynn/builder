@@ -38,7 +38,9 @@
                     </div>
                 </div>
             </div>
-            <AbilityTree :clazz="'Archer/Hunter'" :connectors="ARCHER_CONNECTORS" :tree="ARCHER_ABILITY_TREE"/>
+            <div class="mt-10 h-1/3">
+                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="abilityTree"/>
+            </div>
         </div>
     </div>
 </template>
@@ -97,18 +99,22 @@ export default {
             switch(weapon.type) {
                 case ItemType.BOW: 
                     abilityTree.value = ARCHER_ABILITY_TREE; 
+                    treeConnectors.value = ARCHER_CONNECTORS;
                     clazz.value = WynnClass.ARCHER;
                     break;
                 case ItemType.DAGGER: 
                     abilityTree.value = ASSASSIN_ABILITY_TREE;
+                    treeConnectors.value = ASSASSIN_CONNECTORS;
                     clazz.value = WynnClass.ASSASSIN;
                     break;
                 case ItemType.RELIK: 
                     abilityTree.value = SHAMAN_ABILITY_TREE;
+                    treeConnectors.value = SHAMAN_CONNECTORS;
                     clazz.value = WynnClass.SHAMAN;
                     break;
                 case ItemType.WAND: 
                     abilityTree.value = MAGE_ABILITY_TREE;
+                    treeConnectors.value = MAGE_CONNECTORS;
                     clazz.value = WynnClass.MAGE;
                     break;
                 case ItemType.SPEAR:

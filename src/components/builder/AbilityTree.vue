@@ -2,9 +2,9 @@
     <div v-if="abilityTree === undefined">
 
     </div>
-    <div v-else class="flex gap-x-8 h-1/3">
-        <div
-            class="overflow-y-auto relative font-minecraft bg-local bg-ability-tree border-solid h-FULL w-fit hide-scroll border-mc-aqua border-[4px]">
+    <div v-else class="flex gap-x-8 h-full">
+        <div :class="[tree === undefined? 'w-1/3' : 'w-fit']"
+            class="overflow-y-scroll relative font-minecraft bg-local bg-ability-tree border-solid h-full hide-scroll border-mc-aqua border-[4px]">
             <div
                 class="text-white sticky top-0 left-0 right-0 mb-2 text-center py-1 border-b-[4px] bg-ability-tree z-10 border-mc-aqua">
                 Ability tree
@@ -52,7 +52,7 @@
                 </div>
                 <p class="mt-4 text-center">Ability Points: {{ abilityTree.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
             </div>
-            <div v-if="currentHovered !== undefined" class="text-sm w-fit rounded-sm border-[1px] p-4 border-mc-aqua">
+            <div v-if="currentHovered !== undefined" class="text-sm w-1/2 rounded-sm border-[1px] p-4 border-mc-aqua">
                 <div class="text-lg">
                     <MinecraftTranslatedText :text="currentHovered.name" />
                 </div>
@@ -73,7 +73,6 @@ import { AbilityNode, AbilityTree, AbilityNodeConnector, ConnectorType, makeTree
 import { WynnClass } from '../../scripts/util';
 import { ARCHETYPE_DATA, Archetype, CLASS_ARCHETYPES } from '../../model/archetype';
 import MinecraftTranslatedText from '../MinecraftTranslatedText.vue';
-import { stripColorCodes } from '../../scripts/color_code_translator';
 
 export default {
     name: 'AbilityTree',
@@ -100,7 +99,12 @@ export default {
         const getConnectorFor = (x: number, y: number): AbilityNodeConnector | undefined => props.connectors?.filter(a => a.x === x && a.y === y)[0]
         const hasConnector = (x: number, y: number): boolean => getConnectorFor(x, y) !== undefined;
 
-        const getDepth = (): number => Math.max(...props.tree!.map(x => x.coordinates.y))
+        const getDepth = (): number => {
+            if(props.tree === undefined) {
+                return 0;
+            }
+            return Math.max(...props.tree.map(x => x.coordinates.y))
+        }
 
         const toggleNode = (abilityNode: AbilityNode) => {
             if (selectedNodes.value.some(x => x.id === abilityNode.id)) {
@@ -120,7 +124,7 @@ export default {
             availableNodes.value = tree.getAvailableNodes();
             selectedNodes.value = tree.nodes;
             abilityTree.value = tree;
-            if (baseTree !== undefined && selectedNodes.value.length === 0) {
+            if (baseTree.value !== undefined && selectedNodes.value.length === 0) {
                 availableNodes.value = [baseTree.value![0]]
             }
             warns.value = [];
