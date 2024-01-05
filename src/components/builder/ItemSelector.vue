@@ -21,7 +21,7 @@
             :displayValue="(item: any) => {
               return item === null || item === undefined || item.name === undefined ? '' : item.name
             }"/>
-          <ComboboxOptions class="absolute z-10 flex flex-col align-middle">
+          <ComboboxOptions class="absolute z-30 flex flex-col align-middle">
             <ComboboxOption
               v-for="(item, i) in filteredItems"
               :key="item.id"
