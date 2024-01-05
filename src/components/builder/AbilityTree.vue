@@ -52,7 +52,7 @@
                 </div>
                 <p class="mt-4 text-center">Ability Points: {{ abilityTree.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
             </div>
-            <div v-if="currentHovered !== undefined" class="text-sm w-1/2 rounded-sm border-[1px] p-4 border-mc-aqua">
+            <div v-if="currentHovered !== undefined" class="text-sm w-fit rounded-sm border-[1px] p-4 border-mc-aqua">
                 <div class="text-lg">
                     <MinecraftTranslatedText :text="currentHovered.name" />
                 </div>

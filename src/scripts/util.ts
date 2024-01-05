@@ -11,6 +11,10 @@ export enum CraftedAttackSpeed {
     FAST = "fast",
 }
 
+export enum ItemRollType {
+    GENERIC = 'generic', CRAFTED = 'crafted', SPECIFIC = 'specific'
+}
+
 export enum ItemType {
     BOW = "bow",
     SPEAR = "spear",

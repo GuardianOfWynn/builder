@@ -1,5 +1,5 @@
 <template>
-    <div class="flex relative font-minecraft bg-mc-bg min-h-screen">
+    <div class="flex relative font-minecraft bg-mc-bg min-h-full">
         <div class="fixed z-20">
             <AppsSidebar />
         </div>
@@ -14,14 +14,14 @@
             </div>
             <div class="flex w-full gap-x-4">
                 <div class="flex w-2/3 gap-x-12 justify-between">
-                    <div class="flex flex-col gap-y-2">
+                    <div class="flex flex-col gap-y-4">
                         <ItemSelector @update-item="val => helmet = val" :item-type="'helmet'" />
                         <ItemSelector @update-item="val => chestplate = val" :item-type="'chestplate'" />
                         <ItemSelector @update-item="val => leggings = val" :item-type="'leggings'" />
                         <ItemSelector @update-item="val => boots = val" :item-type="'boots'" />
                         <ItemSelector @update-item="val => handleWeaponChanged(val)" :item-type="'weapon'" />
                     </div>
-                    <div class="flex flex-col gap-y-2">
+                    <div class="flex flex-col gap-y-4">
                         <ItemSelector :item-type="'ring'" />
                         <ItemSelector :item-type="'ring'" />
                         <ItemSelector :item-type="'bracelet'" />
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="mt-10 h-1/3">
-                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="abilityTree"/>
+                <AbilityTree :clazz="'Archer/Hunter'" :connectors="ARCHER_CONNECTORS" :tree="ARCHER_ABILITY_TREE"/>
             </div>
         </div>
     </div>

@@ -1,37 +1,7 @@
 [
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
-        },
-        "archetype": "",
-        "name": "&f&lCheaper Arrow Bomb",
-        "coordinates": {
-            "x": 7,
-            "y": 3
-        },
-        "sprite": {
-            "normal": "275_45.svg",
-            "activated": "275_45_1.svg"
-        },
-        "description": [
-            " ",
-            "&7Reduce the Mana cost of &nArrow Bomb&7.",
-            " ",
-            "&b✺ &7Mana Cost: &f-10",
-            " ",
-            "&7Ability Points: &f1",
-            "&7Required Ability: &fArrow Bomb"
-        ],
-        "links": null,
-        "slot": 24,
-        "id": "arrowBombCost1",
-        "locks": [],
-        "uniqueId": "aa"
-    },
-    {
-        "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lArrow Bomb",
@@ -69,7 +39,37 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "node": "arrowbomb",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Arrow Bomb",
+        "coordinates": {
+            "x": 7,
+            "y": 3
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nArrow Bomb&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-10",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fArrow Bomb"
+        ],
+        "links": null,
+        "slot": 24,
+        "id": "arrowBombCost1",
+        "locks": [],
+        "uniqueId": "aa"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lHeart Shatter",
@@ -101,7 +101,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBow Proficiency",
@@ -134,7 +134,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lDouble Shots",
@@ -170,7 +170,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lArrow Storm",
@@ -210,7 +210,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lArrow Shield",
@@ -249,7 +249,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lWindy Feet",
@@ -280,8 +280,8 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
-            "ABILITY_POINTS": 1
+            "node": "escape",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
@@ -314,7 +314,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lEscape",
@@ -347,7 +347,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lPower Shots",
@@ -383,7 +383,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lAir Mastery",
@@ -417,7 +417,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lFire Mastery",
@@ -453,7 +453,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lWater Mastery",
@@ -487,8 +487,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lNimble String",
@@ -528,8 +528,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lPhantom Ray",
@@ -576,9 +576,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 5,
@@ -611,7 +611,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lThunder Mastery",
@@ -647,8 +647,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lArrow Rain",
@@ -683,8 +683,8 @@
     },
     {
         "requirements": {
-            "NODE": "hastyShots",
-            "ABILITY_POINTS": 1
+            "node": "hastyShots",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lTriple Shots",
@@ -719,7 +719,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFrenzy",
@@ -752,14 +752,14 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowstorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 1,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lBryophyte Roots",
         "coordinates": {
             "x": 5,
@@ -799,7 +799,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lFire Creep",
@@ -835,8 +835,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 1
+            "node": "focus",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
@@ -867,8 +867,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 1
+            "node": "arrowstorm",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
@@ -901,13 +901,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lBasaltic Trap",
         "coordinates": {
             "x": 5,
@@ -945,9 +945,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lGrappling Hook",
         "coordinates": {
             "x": 7,
@@ -985,10 +985,10 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 2
+            "node": "arrowshield",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&d&lCall of the Hound",
         "coordinates": {
             "x": 4,
@@ -1022,8 +1022,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lMore Shields",
@@ -1059,8 +1059,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1098,8 +1098,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lWindstorm",
@@ -1141,10 +1141,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2
+            "node": "explodingTrap",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lPatient Hunter",
         "coordinates": {
             "x": 5,
@@ -1176,8 +1176,8 @@
     },
     {
         "requirements": {
-            "NODE": "windyfeet",
-            "ABILITY_POINTS": 1
+            "node": "windyfeet",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lStormy Feet",
@@ -1210,9 +1210,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowshield",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "boltslinger"
             }
@@ -1256,9 +1256,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lImplosion",
         "coordinates": {
             "x": 6,
@@ -1295,14 +1295,14 @@
     },
     {
         "requirements": {
-            "NODE": "mossyArrowStorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "mossyArrowStorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lIvyroot Mamba",
         "coordinates": {
             "x": 7,
@@ -1346,8 +1346,8 @@
     },
     {
         "requirements": {
-            "NODE": "fireCreep",
-            "ABILITY_POINTS": 1
+            "node": "fireCreep",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lScorched Earth",
@@ -1383,8 +1383,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Arrow Shield",
@@ -1425,7 +1425,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lTraveler",
@@ -1457,8 +1457,8 @@
     },
     {
         "requirements": {
-            "NODE": "leap",
-            "ABILITY_POINTS": 1
+            "node": "leap",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Leap",
@@ -1487,9 +1487,9 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "focus",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1533,8 +1533,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
+            "node": "arrowbomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lRocket Jump",
@@ -1562,7 +1562,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lBouncing Bomb",
@@ -1594,9 +1594,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowbomb",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1637,7 +1637,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lRefined Gunpowder",
@@ -1670,8 +1670,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1704,10 +1704,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 1
+            "node": "explodingTrap",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lMore Traps",
         "coordinates": {
             "x": 4,
@@ -1737,7 +1737,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFierce Stomp",
@@ -1776,8 +1776,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "boltslinger"
             }
@@ -1813,8 +1813,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
@@ -1848,7 +1848,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lEscape Artist",
@@ -1888,14 +1888,14 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "explodingTrap",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lMurder Flock",
         "coordinates": {
             "x": 5,
@@ -1934,8 +1934,8 @@
     },
     {
         "requirements": {
-            "NODE": "concentration",
-            "ABILITY_POINTS": 2
+            "node": "concentration",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&6&lPhasing Beam",
@@ -1973,13 +1973,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 6,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lMana Trap",
         "coordinates": {
             "x": 4,
@@ -2014,8 +2014,8 @@
     },
     {
         "requirements": {
-            "NODE": "shockingBomb",
-            "ABILITY_POINTS": 2
+            "node": "shockingBomb",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&d&lCoursing Restraints",
@@ -2050,8 +2050,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 2
+            "node": "focus",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&d&lInitiator",
@@ -2086,8 +2086,8 @@
     },
     {
         "requirements": {
-            "NODE": "phantomDarts",
-            "ABILITY_POINTS": 2
+            "node": "phantomDarts",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&6&lDecimator",
@@ -2120,7 +2120,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lRecycling",
@@ -2151,8 +2151,8 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
-            "ABILITY_POINTS": 1
+            "node": "guardianAngels",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Guardian Angels",
@@ -2187,8 +2187,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 1
+            "node": "arrowstorm",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
@@ -2222,14 +2222,14 @@
     },
     {
         "requirements": {
-            "NODE": "grapplingHook",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "grapplingHook",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lStronger Hook",
         "coordinates": {
             "x": 6,
@@ -2263,8 +2263,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
@@ -2298,8 +2298,8 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
-            "ABILITY_POINTS": 1
+            "node": "escape",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
@@ -2333,8 +2333,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "boltslinger"
             }
@@ -2376,10 +2376,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2
+            "node": "explodingTrap",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lTangled Traps",
         "coordinates": {
             "x": 4,
@@ -2414,8 +2414,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
+            "node": "arrowbomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Bomb",
@@ -2446,8 +2446,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 1
+            "node": "focus",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
@@ -2480,8 +2480,8 @@
     },
     {
         "requirements": {
-            "NODE": "fiercystomp",
-            "ABILITY_POINTS": 2
+            "node": "fiercystomp",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lGeyser Stomp",
@@ -2516,7 +2516,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lSnow Storm",
@@ -2548,10 +2548,10 @@
     },
     {
         "requirements": {
-            "NODE": "timeBomb",
-            "ABILITY_POINTS": 1
+            "node": "timeBomb",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lStronger Patient Hunter",
         "coordinates": {
             "x": 4,
@@ -2581,9 +2581,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowstorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 10,
                 "name": "sniper"
             }
@@ -2629,14 +2629,14 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "explodingTrap",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 11,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lMinefield",
         "coordinates": {
             "x": 5,
@@ -2672,7 +2672,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lElusive",
@@ -2705,8 +2705,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 10,
                 "name": "boltslinger"
             }
@@ -2752,7 +2752,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lGrape Bomb",
@@ -2787,8 +2787,8 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
-            "ABILITY_POINTS": 2
+            "node": "guardianAngels",
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lAll-Seeing Panoptes",
@@ -2827,14 +2827,14 @@
     },
     {
         "requirements": {
-            "NODE": "wolfSummon",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "wolfSummon",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 7,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lBeast Lore",
         "coordinates": {
             "x": 6,

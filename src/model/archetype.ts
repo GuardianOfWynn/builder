@@ -33,7 +33,7 @@ export const ARCHETYPE_DATA = new Map<Archetype, ArchetypeData>([
         name: 'Acolyte'
     }],
     [Archetype.SUMMONER, {
-        color: 'mc-green',
+        color: 'mc-dark-green',
         id: 'summoner',
         name: 'Summoner'
     }],
@@ -78,7 +78,7 @@ export const ARCHETYPE_DATA = new Map<Archetype, ArchetypeData>([
         name: 'Boltslinger'
     }],
     [Archetype.TRAPPER, {
-        color: 'mc-green',
+        color: 'mc-dark-green',
         id: 'trapper',
         name: 'Trapper'
     }],
