@@ -1,15 +1,13 @@
-<template>
-   
-  </template>
+<template></template>
   
-  <script lang="ts">
-  
-  
-  export default {
+<script lang="ts">
+
+
+export default {
     name: 'ItemSelector',
     props: {
-      skill: String,
+        skill: String,
     },
     components: {}
-  }
-  </script>
+}
+</script>
