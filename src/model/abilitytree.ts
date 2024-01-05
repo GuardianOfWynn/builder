@@ -8,7 +8,9 @@ export const WARRIOR_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/b
 
 export const MAGE_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/mage.json")).json();
 export const ARCHER_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/archer.json")).json();
+
 export const SHAMAN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/shaman.json")).json();
+export const SHAMAN_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/shaman_connectors.json")).json();
 
 export const ASSASSIN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/assassin.json")).json();
 export const ASSASSIN_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/assassin_connectors.json")).json();
@@ -95,7 +97,8 @@ export class AbilityTree {
             return { first: false, second: "Not enough ability points"};
         }
         if(node.requirements.node !== undefined && !this.nodes.some(x => x.id === node.requirements.node)) {
-            return { first: false, second: `Required node not found (${node.requirements.node})` };
+            console.log(node.requirements.node)
+            return { first: false, second: `Required node not found` };
         }
         if(this.getLockedAbilities().some(x => x.id === node.id)) {
             return { first: false, second: `Node locked` };

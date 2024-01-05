@@ -1,7 +1,7 @@
 [
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lSpin Attack",
@@ -21,8 +21,8 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f150% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8120%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &830%&8)",
+            "  &8(&6✢ &8Damage: &8120%&8)",
+            "  &8(&e✦ &8Thunder: &830%&8)",
             "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -37,8 +37,8 @@
     },
     {
         "requirements": {
-            "NODE": "spinattack",
-            "ABILITY_POINTS": 1
+            "node": "spinattack",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Spin Attack",
@@ -70,7 +70,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lDouble Spin",
@@ -88,7 +88,7 @@
             "&7larger area of effect on the second hit.",
             " ",
             "&c⚔ &7Total Damage: &c-40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-40%&8)",
+            "  &8(&6✢ &8Damage: &8-40%&8)",
             "&3☀ &7Area of Effect: &f+2 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -103,7 +103,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lDagger Proficiency I",
@@ -133,9 +133,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lPoisoned Blade",
         "coordinates": {
             "x": 3,
@@ -173,7 +173,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lMultihit",
@@ -193,8 +193,8 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS, per hit)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &810%&8)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&b❉ &8Water: &810%&8)",
             "&2➼ &7Range: &f3 Blocks &7(Cone-Shaped)",
             "",
             "&7Ability Points: &f1"
@@ -211,7 +211,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lSmoke Bomb",
@@ -231,11 +231,11 @@
             " ",
             "&b✺ &7Mana Cost: &f35",
             "&c⚔ &7Total Damage: &f35% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &85%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &85%&8)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&f❋ &8Air: &85%&8)",
+            "  &8(&2✤ &8Earth: &85%&8)",
             "&2➼ &7Range: &f10 Blocks",
-            "&d⌛À &7Duration: &f5s",
+            "&d⌛ &7Duration: &f5s",
             "&3☀ &7Area of Effect: &f3 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -252,8 +252,8 @@
     },
     {
         "requirements": {
-            "NODE": "dash",
-            "ABILITY_POINTS": 1
+            "node": "dash",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Dash",
@@ -288,9 +288,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lDouble Slice",
         "coordinates": {
             "x": 7,
@@ -324,7 +324,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lDash",
@@ -357,14 +357,14 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "multihit",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lBackstab",
         "coordinates": {
             "x": 2,
@@ -382,8 +382,8 @@
             " ",
             "&b✺ &7Mana Cost: &f-5",
             "&c⚔ &7Total Damage: &f250% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8200%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &850%&8)",
+            "  &8(&6✢ &8Damage: &8200%&8)",
+            "  &8(&2✤ &8Earth: &850%&8)",
             "",
             "&cUnlocking will block:",
             "&c- &7Stronger Multihit",
@@ -408,9 +408,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 9,
@@ -425,8 +425,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f�?� &7Air Damage: &f+3-4",
-            "&f�?� &7Air Damage: &f+15%",
+            "&f❋ &7Air Damage: &f+3-4",
+            "&f❋ &7Air Damage: &f+15%",
             " ",
             "&f&lAcrobat Archetype",
             " ",
@@ -443,9 +443,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 1,
@@ -478,9 +478,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 7,
@@ -495,8 +495,8 @@
             "Increase your base damage",
             "from all Water attacks.",
             " ",
-            "&b�?� &7Water Damage: &f+2-4",
-            "&b�?� &7Water Damage: &f+15%",
+            "&b❉ &7Water Damage: &f+2-4",
+            "&b❉ &7Water Damage: &f+15%",
             " ",
             "&f&lAcrobat Archetype",
             " ",
@@ -514,10 +514,10 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 2
+            "node": "smokebomb",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lSticky Bomb",
         "coordinates": {
             "x": 5,
@@ -533,7 +533,7 @@
             "&7and deal additional damage.",
             "",
             "&c⚔ &7Total Damage: &f+10% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+10%&8)",
+            "  &8(&c✹ &8Fire: &8+10%&8)",
             " ",
             "&d&lTrickster Archetype",
             " ",
@@ -551,9 +551,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 3,
@@ -587,8 +587,8 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 2
+            "node": "multihit",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lFatality",
@@ -606,8 +606,8 @@
             "&7additional final slash.",
             "",
             "&c⚔ &7Total Damage: &f+150% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+100%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+50%&8)",
+            "  &8(&6✢ &8Damage: &8+100%&8)",
+            "  &8(&f❋ &8Air: &8+50%&8)",
             "",
             "&cUnlocking will block:",
             "&c- &7Backstab",
@@ -628,9 +628,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 5,
@@ -663,8 +663,8 @@
     },
     {
         "requirements": {
-            "NODE": "dash",
-            "ABILITY_POINTS": 2
+            "node": "dash",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lVanish",
@@ -683,7 +683,7 @@
             "&8(Attack or get hit to cancel)",
             " ",
             "&e🛡 &7Effect: &fInvisibility to Self",
-            "&d⌛À &7Duration: &f5s",
+            "&d⌛ &7Duration: &f5s",
             " ",
             "&7Ability Points: &f2",
             "&7Required Ability: &fDash"
@@ -699,9 +699,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lRighting Reflex",
         "coordinates": {
             "x": 7,
@@ -730,8 +730,8 @@
     },
     {
         "requirements": {
-            "NODE": "vanish",
-            "ABILITY_POINTS": 2
+            "node": "vanish",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lSilent Killer",
@@ -762,10 +762,10 @@
     },
     {
         "requirements": {
-            "NODE": "shadowClones",
-            "ABILITY_POINTS": 1
+            "node": "shadowClones",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lLast Laugh",
         "coordinates": {
             "x": 4,
@@ -795,9 +795,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lShenanigans",
         "coordinates": {
             "x": 5,
@@ -827,7 +827,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lPsithurism",
@@ -857,8 +857,8 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 1
+            "node": "multihit",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Multihit",
@@ -894,10 +894,10 @@
     },
     {
         "requirements": {
-            "NODE": "shadowClones",
-            "ABILITY_POINTS": 2
+            "node": "shadowClones",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lBamboozle",
         "coordinates": {
             "x": 5,
@@ -914,8 +914,8 @@
             "&7teleport you forwards with a brutal fiery slash.",
             " ",
             "&c⚔ &7Total Damage: &f400% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8360%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &840%&8)",
+            "  &8(&6✢ &8Damage: &8360%&8)",
+            "  &8(&c✹ &8Fire: &840%&8)",
             "&2➼ &7Range: &f6 Blocks",
             "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
             " ",
@@ -934,10 +934,10 @@
     },
     {
         "requirements": {
-            "NODE": "vanish",
-            "ABILITY_POINTS": 2
+            "node": "vanish",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lShadow Travel",
         "coordinates": {
             "x": 3,
@@ -970,14 +970,14 @@
     },
     {
         "requirements": {
-            "NODE": "vanish",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "vanish",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lSurprise Strike",
         "coordinates": {
             "x": 3,
@@ -1008,8 +1008,8 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 2
+            "node": "smokebomb",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lWall of Smoke",
@@ -1026,7 +1026,7 @@
             "&7&nSmoke Bomb&7 will throw &f+2&7 bombs.",
             " ",
             "&c⚔ &7Total Damage: &c-10% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-10%&8)",
+            "  &8(&6✢ &8Damage: &8-10%&8)",
             " ",
             "&7Ability Points: &f2",
             "&7Required Ability: &fSmoke Bomb"
@@ -1042,14 +1042,14 @@
     },
     {
         "requirements": {
-            "NODE": "vanish",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "vanish",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lMirror Image",
         "coordinates": {
             "x": 5,
@@ -1086,7 +1086,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lDagger Proficiency II",
@@ -1120,9 +1120,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lDistraction",
         "coordinates": {
             "x": 7,
@@ -1152,8 +1152,8 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 1
+            "node": "smokebomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Smoke Bomb",
@@ -1187,13 +1187,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lLacerate",
         "coordinates": {
             "x": 8,
@@ -1209,9 +1209,9 @@
             "&7deal &f3 &7strikes and then lunge you upward.",
             " ",
             "&c⚔ &7Total Damage: &f90% &8(of your DPS, per strike)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &810%&8)",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
+            "  &8(&b❉ &8Water: &810%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Echo",
@@ -1233,13 +1233,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lMarked",
         "coordinates": {
             "x": 2,
@@ -1275,9 +1275,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lViolent Vortex",
         "coordinates": {
             "x": 1,
@@ -1310,7 +1310,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lBlazing Powder",
@@ -1328,9 +1328,9 @@
             "&7enemies and deal additional damage.",
             "",
             "&c⚔ &7Total Damage: &f+20% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+20%&8)",
+            "  &8(&c✹ &8Fire: &8+20%&8)",
             "&e🛡 &7Effect: &fBlindness (&c⬣&f) to Enemies",
-            "&d⌛À &7Duration: &f1s",
+            "&d⌛ &7Duration: &f1s",
             " ",
             "&7Ability Points: &f2"
         ],
@@ -1346,9 +1346,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lHop",
         "coordinates": {
             "x": 7,
@@ -1377,13 +1377,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lFlow State",
         "coordinates": {
             "x": 9,
@@ -1400,7 +1400,7 @@
             "&7damage for a short time. (10s Cooldown)",
             " ",
             "&e🛡 &7Effect: &f+50% &7Damage Bonus (&f☀&7) to Self",
-            "&d⌛À &7Duration: &f5s",
+            "&d⌛ &7Duration: &f5s",
             " ",
             "&f&lAcrobat Archetype",
             " ",
@@ -1418,9 +1418,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lShurikens",
         "coordinates": {
             "x": 7,
@@ -1436,8 +1436,8 @@
             "&7&nMain Attack&7 will throw &f3 &7shurikens.",
             "",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS, per shuriken)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
             "&2➼ &7Range: &f50 Blocks",
             " ",
             "&f&lAcrobat Archetype",
@@ -1456,8 +1456,8 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 1
+            "node": "multihit",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lStronger Multihit",
@@ -1492,9 +1492,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lSandbagging",
         "coordinates": {
             "x": 5,
@@ -1528,14 +1528,14 @@
     },
     {
         "requirements": {
-            "NODE": "shadowClones",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "shadowClones",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 6,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lEcho",
         "coordinates": {
             "x": 5,
@@ -1575,8 +1575,8 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 1
+            "node": "smokebomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Smoke Bomb",
@@ -1610,13 +1610,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lWeightless",
         "coordinates": {
             "x": 8,
@@ -1649,7 +1649,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lBlack Hole",
@@ -1677,8 +1677,8 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 1
+            "node": "multihit",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lFar Reach",
@@ -1711,10 +1711,10 @@
     },
     {
         "requirements": {
-            "NODE": "dash",
-            "ABILITY_POINTS": 1
+            "node": "dash",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lDancing Blade",
         "coordinates": {
             "x": 8,
@@ -1729,8 +1729,8 @@
             "&7Deal damage to enemies you &nDash&7 through.",
             " ",
             "&c⚔ &7Total Damage: &f80% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &870%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  &8(&6✢ &8Damage: &870%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
             "",
             "&f&lAcrobat Archetype",
             " ",
@@ -1745,14 +1745,14 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "smokebomb",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lDelirious Gas",
         "coordinates": {
             "x": 4,
@@ -1766,10 +1766,10 @@
             " ",
             "&7While you're inside &nSmoke Bomb&7,",
             "&7increase your damage by &f+40%&7",
-            "&7and gain &bLuring &d�?� &7for &f20s&7.",
+            "&7and gain &bLuring &d❤ &7for &f20s&7.",
             " ",
-            "&7While under &bLuring &d�?�&7, enemies within a &f16 &7block",
-            "&7radius of you will become &bLured &d�?�&7, causing",
+            "&7While under &bLuring &d❤&7, enemies within a &f16 &7block",
+            "&7radius of you will become &bLured &d❥&7, causing",
             "&7them to move &f30% &7faster and target only you.",
             " ",
             "&d&lTrickster Archetype",
@@ -1788,14 +1788,14 @@
     },
     {
         "requirements": {
-            "NODE": "marked",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "marked",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 8,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lFatal Spin",
         "coordinates": {
             "x": 2,
@@ -1811,7 +1811,7 @@
             "&7and damage, and adds &b+1 &bMark &c✜ &7to enemies hit.",
             " ",
             "&c⚔ &7Total Damage: &f+20% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+20%&8)",
+            "  &8(&6✢ &8Damage: &8+20%&8)",
             "&3☀ &7Area of Effect: &f+1 Block &7(Circle-Shaped)",
             " ",
             "&4&lShadestepper Archetype",
@@ -1832,10 +1832,10 @@
     },
     {
         "requirements": {
-            "NODE": "bigHit",
-            "ABILITY_POINTS": 1
+            "node": "bigHit",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lStronger Vortex",
         "coordinates": {
             "x": 1,
@@ -1866,8 +1866,8 @@
     },
     {
         "requirements": {
-            "NODE": "dash",
-            "ABILITY_POINTS": 1
+            "node": "dash",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Dash",
@@ -1900,8 +1900,8 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 1
+            "node": "multihit",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Multihit",
@@ -1935,8 +1935,8 @@
     },
     {
         "requirements": {
-            "NODE": "spinattack",
-            "ABILITY_POINTS": 1
+            "node": "spinattack",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Spin Attack",
@@ -1969,14 +1969,14 @@
     },
     {
         "requirements": {
-            "NODE": "spinattack",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "spinattack",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 1,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lHoodwink",
         "coordinates": {
             "x": 5,
@@ -1992,7 +1992,7 @@
             "the duration of your negative effects by",
             "&f30%&7 per hit and transfer them onto enemies.",
             "",
-            "&bLuring &d�?� &7can be transferred to most enemies.",
+            "&bLuring &d❤ &7can be transferred to most enemies.",
             "&8(Bosses and special enemies are immune)",
             " ",
             "&d&lTrickster Archetype",
@@ -2015,14 +2015,14 @@
     },
     {
         "requirements": {
-            "NODE": "hop",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "hop",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lWall Jump",
         "coordinates": {
             "x": 9,
@@ -2056,13 +2056,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&d&lParry",
         "coordinates": {
             "x": 7,
@@ -2079,7 +2079,7 @@
             "&7spell within &f1.5s &7free. (3s Cooldown)",
             " ",
             "&e🛡 &7Effect: &f+30% &7Damage Bonus (&f⚔&7) to Self",
-            "&d⌛À &7Duration: &f1.5s",
+            "&d⌛ &7Duration: &f1.5s",
             " ",
             "&f&lAcrobat Archetype",
             " ",
@@ -2097,10 +2097,10 @@
     },
     {
         "requirements": {
-            "NODE": "marked",
-            "ABILITY_POINTS": 2
+            "node": "marked",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&6&lDeath Magnet",
         "coordinates": {
             "x": 3,
@@ -2134,14 +2134,14 @@
     },
     {
         "requirements": {
-            "NODE": "vanish",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "vanish",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 2,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lDissolution",
         "coordinates": {
             "x": 4,
@@ -2157,7 +2157,7 @@
             "&7and gain resistance for a brief moment.",
             " ",
             "&e🛡 &7Effect: &f+75% &7Resistance Bonus (&8✾&7) to Self",
-            "&d⌛À &7Duration: &f0.5s",
+            "&d⌛ &7Duration: &f0.5s",
             " ",
             "&4&lShadestepper Archetype",
             " ",
@@ -2176,10 +2176,10 @@
     },
     {
         "requirements": {
-            "NODE": "lacerate",
-            "ABILITY_POINTS": 1
+            "node": "lacerate",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&f&lStronger Lacerate",
         "coordinates": {
             "x": 8,
@@ -2210,10 +2210,10 @@
     },
     {
         "requirements": {
-            "NODE": "marked",
-            "ABILITY_POINTS": 2
+            "node": "marked",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&d&lNightcloak Knife",
         "coordinates": {
             "x": 1,
@@ -2236,7 +2236,7 @@
             "&7&b1 &bMark &c✜ &7consumed. (Max 10 Marks)",
             " ",
             "&2➼ &7Range: &f6 Blocks &7(Circle-Shaped)",
-            "&d⌛À &7Duration: &f40s",
+            "&d⌛ &7Duration: &f40s",
             " ",
             "&4&lShadestepper Archetype",
             " ",
@@ -2254,8 +2254,8 @@
     },
     {
         "requirements": {
-            "NODE": "dashSlash",
-            "ABILITY_POINTS": 1
+            "node": "dashSlash",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lPirouette",
@@ -2274,8 +2274,8 @@
             "&7resetting &nDash&7 as if you touched the ground.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+30%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+10%&8)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
+            "  &8(&f❋ &8Air: &8+10%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fDancing Blade"
@@ -2291,8 +2291,8 @@
     },
     {
         "requirements": {
-            "NODE": "fatalstrike",
-            "ABILITY_POINTS": 1
+            "node": "fatalstrike",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lAmbush",
@@ -2322,9 +2322,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lChoke Bomb",
         "coordinates": {
             "x": 7,
@@ -2340,7 +2340,7 @@
             "&7enemies while in the smoke.",
             " ",
             "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛À &7Duration: &f1s",
+            "&d⌛ &7Duration: &f1s",
             "",
             "&d&lTrickster Archetype",
             " ",
@@ -2359,10 +2359,10 @@
     },
     {
         "requirements": {
-            "NODE": "marked",
-            "ABILITY_POINTS": 2
+            "node": "marked",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&d&lHarvester",
         "coordinates": {
             "x": 2,
@@ -2394,10 +2394,10 @@
     },
     {
         "requirements": {
-            "NODE": "marked",
-            "ABILITY_POINTS": 1
+            "node": "marked",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&f&lMore Marks",
         "coordinates": {
             "x": 3,
@@ -2426,14 +2426,14 @@
     },
     {
         "requirements": {
-            "NODE": "shadowClones",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "shadowClones",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 8,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&d&lForbidden Art",
         "coordinates": {
             "x": 5,
@@ -2467,10 +2467,10 @@
     },
     {
         "requirements": {
-            "NODE": "darkArts",
-            "ABILITY_POINTS": 1
+            "node": "darkArts",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&f&lEven Stronger Clones",
         "coordinates": {
             "x": 5,
@@ -2500,7 +2500,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Marked",
@@ -2527,13 +2527,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 12,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&c&lJasmine Bloom",
         "coordinates": {
             "x": 8,
@@ -2552,10 +2552,10 @@
             "&7increased after every bloom. (Max 10 Blocks)",
             " ",
             "&c⚔ &7Total Damage: &f80% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &815%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &85%&8)",
-            "&d⌛À &7Duration: &f5s",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&b❉ &8Water: &815%&8)",
+            "  &8(&2✤ &8Earth: &85%&8)",
+            "&d⌛ &7Duration: &f5s",
             "&3☀ &7Area of Effect: &f+2 Blocks &8(per bloom)",
             "",
             "&f&lAcrobat Archetype",
@@ -2574,8 +2574,8 @@
     },
     {
         "requirements": {
-            "NODE": "weightless",
-            "ABILITY_POINTS": 1
+            "node": "weightless",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Weightless",
@@ -2602,14 +2602,14 @@
     },
     {
         "requirements": {
-            "NODE": "stanceChange",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "stanceChange",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 8,
                 "name": "acrobat"
             }
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lRicochets",
         "coordinates": {
             "x": 9,
@@ -2642,14 +2642,14 @@
     },
     {
         "requirements": {
-            "NODE": "vulnerableBomb",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "vulnerableBomb",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 12,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&c&lDiversion",
         "coordinates": {
             "x": 6,
@@ -2661,8 +2661,8 @@
         },
         "description": [
             " ",
-            "&7Grants allies within &f16 &7blocks &f+10%&7 &bOverhealth &6�?�",
-            "&7whenever you hit a &bLured &d�?� &7enemy. (9s Cooldown)",
+            "&7Grants allies within &f16 &7blocks &f+10%&7 &bOverhealth &6❤",
+            "&7whenever you hit a &bLured &d❥ &7enemy. (9s Cooldown)",
             "&7The bonus health decays over &f10s&7.",
             " ",
             "&d&lTrickster Archetype",
@@ -2683,8 +2683,8 @@
     },
     {
         "requirements": {
-            "NODE": "smokebomb",
-            "ABILITY_POINTS": 1
+            "node": "smokebomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Smoke Bomb",
@@ -2719,14 +2719,14 @@
     },
     {
         "requirements": {
-            "NODE": "darkArts",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "darkArts",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 7,
                 "name": "trickster"
             }
         },
-        "archetype": "",
+        "archetype": "trickster",
         "name": "&6&lStronger Clones",
         "coordinates": {
             "x": 6,
@@ -2757,8 +2757,8 @@
     },
     {
         "requirements": {
-            "NODE": "markedMana",
-            "ABILITY_POINTS": 1
+            "node": "markedMana",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lDevour",
@@ -2787,13 +2787,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 12,
                 "name": "shadestepper"
             }
         },
-        "archetype": "",
+        "archetype": "shadestepper",
         "name": "&c&lSatsujin",
         "coordinates": {
             "x": 2,
@@ -2825,10 +2825,10 @@
     },
     {
         "requirements": {
-            "NODE": "multihit",
-            "ABILITY_POINTS": 2
+            "node": "multihit",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "acrobat",
         "name": "&6&lBlade Fury",
         "coordinates": {
             "x": 8,
@@ -2847,7 +2847,7 @@
             "&7can be aimed in all directions.",
             "",
             "&c⚔ &7Total Damage: &f+15% &8(of your DPS, per hit)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+15%&8)",
+            "  &8(&e✦ &8Thunder: &8+15%&8)",
             "",
             "&f&lAcrobat Archetype",
             " ",
