@@ -25,7 +25,8 @@ export enum ConnectorType {
     RIGHT_LEFT = "connector_right_left",
     UP_DOWN = "connector_up_down",
     UP_RIGHT_DOWN = "connector_up_right_down",
-    CROSS = "connector_up_right_down_left"
+    CROSS = "connector_up_right_down_left",
+    UP_LEFT_DOWN = "connector_up_down_left"
 }
 
 export enum Direction {
@@ -42,7 +43,8 @@ export const CONNECTOR_TYPE_DIRECTIONS = new Map<ConnectorType, Direction[]>([
     [ConnectorType.RIGHT_DOWN_LEFT, [Direction.RIGHT, Direction.DOWN, Direction.LEFT]],
     [ConnectorType.RIGHT_LEFT, [Direction.RIGHT, Direction.LEFT]],
     [ConnectorType.UP_DOWN, [Direction.UP, Direction.DOWN]],
-    [ConnectorType.UP_RIGHT_DOWN, [Direction.RIGHT, Direction.DOWN, Direction.UP]]
+    [ConnectorType.UP_RIGHT_DOWN, [Direction.RIGHT, Direction.DOWN, Direction.UP]],
+    [ConnectorType.UP_LEFT_DOWN, [Direction.UP, Direction.LEFT, Direction.DOWN]]
 ]);
 
 export function isDirectionAllowed(connector: ConnectorType, direction: Direction): boolean {

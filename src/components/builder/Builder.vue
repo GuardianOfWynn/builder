@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="mt-10 h-1/3">
-                <AbilityTree :clazz="'Shaman/Skyseer'" :connectors="SHAMAN_CONNECTORS" :tree="SHAMAN_ABILITY_TREE"/>
+                <AbilityTree :clazz="'Mage/Dark Wizard'" :connectors="MAGE_CONNECTORS" :tree="MAGE_ABILITY_TREE"/>
             </div>
         </div>
     </div>
