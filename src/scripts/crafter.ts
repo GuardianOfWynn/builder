@@ -1,8 +1,9 @@
-import Ingredient, { Identification } from "../model/ingredient";
+import Ingredient from "../model/ingredient";
 import { ArmourLevelRanges, ArmourRecipePrototype, ConsumableLevelRanges, ConsumableRecipePrototype, LevelRanges, Recipe, RecipePrototype, WeaponLevelRanges, WeaponRecipePrototype, getRecipePrototypeFor } from "../model/recipe";
 import { ItemType, CraftedAttackSpeed, NumberRange, isBetween, WynnClass, MaterialTier, AttackSpeed, Pair, getProfessionForItemType, sum, multiplyRange } from "./util";
-import { WynnCraftedItem, WynnItem } from "../model/item";
+import { WynnCraftedItem} from "../model/item";
 import { calculateDamage, calculateMaterialMultiplier } from "./math";
+import {RangeableIdentification } from "../model/identification";
 
 export const isWeapon = (craftType: ItemType) => [ItemType.WAND, ItemType.BOW, ItemType.RELIK, ItemType.SPEAR, ItemType.DAGGER].includes(craftType);
 export const isArmour = (craftType: ItemType) => [ItemType.HELMET, ItemType.CHESTPLATE, ItemType.LEGGINGS, ItemType.BOOTS].includes(craftType);
@@ -90,7 +91,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnCraftedItem, string[]> {
 
   item.type = recipe.craftType;
 
-  let identifications: Identification[] = [];
+  let identifications: RangeableIdentification[] = [];
   recipe.ingredients.forEach(slot => {
 
     if (slot.ingredient === undefined || slot.ingredient === null) {
@@ -140,11 +141,8 @@ export function assembleCraft(recipe: Recipe): Pair<WynnCraftedItem, string[]> {
       if (index === -1) {
         identifications.push({
           id: identification.id,
-          name: identification.name,
-          isRaw: identification.id.includes("raw"),
-          raw: 0,
           maximum: Math.floor(identification.maximum * effectivenessMultiplier),
-          minimum: Math.floor(identification.minimum * effectivenessMultiplier)
+          minimum: Math.floor(identification.minimum * effectivenessMultiplier),
         })
       } else {
         identifications[index].maximum += Math.floor(identification.maximum * effectivenessMultiplier);

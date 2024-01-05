@@ -1,5 +1,5 @@
 <template>
-    <Combobox :defaultValue="undefined" nullable @update:modelValue="value => $emit('update-ing', value)" v-model="selectedIng" name="assignee" class="">
+    <Combobox immediate :defaultValue="undefined" nullable @update:modelValue="value => $emit('update-ing', value)" v-model="selectedIng" name="assignee" class="">
         <div class="font-minecraft relative">
           <ComboboxButton v-if="selectedIng != undefined" class="top-2 absolute mx-auto left-0 right-0 flex inset-y-0 justify-center">
             <div class="flex">

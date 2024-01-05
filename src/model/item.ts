@@ -1,14 +1,18 @@
 import { DamageBounds } from "../scripts/math";
 import { ArmorType, AttackSpeed, ItemTier, ItemType, NumberRange, WynnClass } from "../scripts/util";
-import { Identification } from "./ingredient";
+import { RangeableIdentification } from "./ingredient";
+
+export const ITEMS: WynnItem[] = await (await fetch("/builder/items.json")).json();
 
 export class WynnBaseItem {
     name: string;
+    sprite?: string;
+    armorType: ArmorType;
     powderSlots: number;
     type: ItemType;
     attackSpeed?: AttackSpeed;
     isCrafted: boolean;
-    identifications: Identification[];
+    identifications: RangeableIdentification[];
     requirements: {
         quest: string;
         dexterity: number;
@@ -45,6 +49,7 @@ export class WynnCraftedItem extends WynnBaseItem {
 }
 
 export class WynnItem extends WynnBaseItem{
+    id: string;
     health: Number;
     tier: ItemTier;
     set: string | null;

@@ -49,7 +49,11 @@ module.exports = {
         'professions-dec': "url('/sprites/ProfessionIconDec.webp')",
         'wynn-icons': "url('/sprites/WynnIcons.png')",
         'accessories': "url('/sprites/AccessorySprites.gif')",
-        'armours': "url('/sprites/ArmourSprites.png')"
+        'armours': "url('/sprites/ArmourSprites.png')",
+        'ability-tree': "url('/sprites/abilitytree/ability_page_no_border.png')"
+      },
+      borderImage: {
+        'ability-tree': "url('/sprites/abilitytree/ability_page.svg')"
       }
      },
    },

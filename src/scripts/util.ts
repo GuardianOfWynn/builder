@@ -1,4 +1,7 @@
+import { Identification } from '../model/identification';
 import Ingredient from '../model/ingredient'
+import { ITEMS, WynnItem } from '../model/item';
+import { isWeapon } from './crafter';
 
 export const crafter_url = ''
 
@@ -80,40 +83,58 @@ export enum Element {
     EARTH = "Earth"
 }
 
+export enum ArmorType {
+    LEATHER = "leather",
+    CHAIN = "chain",
+    IRON = "iron",
+    GOLDEN = "golden",
+    DIAMOND = "diamond"
+}
+
 export function getWynnClass(itemType: ItemType): WynnClass | undefined {
-    switch(itemType) {
-        case ItemType.BOW : return WynnClass.ARCHER;
-        case ItemType.RELIK : return WynnClass.SHAMAN;
-        case ItemType.WAND : return WynnClass.MAGE;
-        case ItemType.SPEAR : return WynnClass.WARRIOR;
-        case ItemType.DAGGER : return WynnClass.ASSASSIN;
+    switch (itemType) {
+        case ItemType.BOW: return WynnClass.ARCHER;
+        case ItemType.RELIK: return WynnClass.SHAMAN;
+        case ItemType.WAND: return WynnClass.MAGE;
+        case ItemType.SPEAR: return WynnClass.WARRIOR;
+        case ItemType.DAGGER: return WynnClass.ASSASSIN;
         default: return undefined;
     }
+}
+
+export function getItemsOf(type: ItemType): WynnItem[] {
+    return ITEMS.filter(x => x.type === type);
+}
+
+export function getWeapons(): WynnItem[] {
+    return ITEMS.filter(x => isWeapon(x.type));
 }
 
 export function format(value: number, id: String): string {
     if (id === "POISON") {
         return value + "/3s"
-      }
+    }
 
-      switch (id) {
-        case "POISON": case "MANASTEAL": case "LIFESTEAL": return value + "/3s";
-        case "MANAREGEN": return value + "/5s";
-        case "ATTACKSPEED": return value + " tier";
+    let identification = Identification.identifications.get(id);
+
+    switch (id) {
+        case "poison": case "manaSteal": case "lifeSteal": return value + "/3s";
+        case "manaRegen": return value + "/5s";
+        case "rawAttackSpeed": return value + " tier";
         default:
-      }
+    }
 
-      if (!id.includes("RAW") && !id.includes("POINTS") && !id.includes("HEALTHBONUS") && !id.includes("JUMP")) {
+    if (!identification!.isRaw()) {
         return value + "%";
-      }
-      return value.toString();
+    }
+    return value.toString();
 }
 
 export function getPowderElement(ingredient: Ingredient): Element | undefined {
-    if(!ingredient.isPowder) {
+    if (!ingredient.isPowder) {
         return undefined
     }
-    switch(ingredient.name.split(" ")[0]) {
+    switch (ingredient.name.split(" ")[0]) {
         case "Water": Element.WATER;
         case "Fire": Element.FIRE;
         case "Earth": Element.EARTH;
@@ -123,7 +144,7 @@ export function getPowderElement(ingredient: Ingredient): Element | undefined {
 }
 
 export function getProfessionForItemType(itemType: ItemType) {
-    switch(itemType) {
+    switch (itemType) {
         case ItemType.BOOTS: case ItemType.LEGGINGS: return Profession.TAILORING;
         case ItemType.CHESTPLATE: case ItemType.HELMET: return Profession.ARMOURING;
         case ItemType.NECKLACE: case ItemType.RING: case ItemType.BRACELET: return Profession.JEWELING;
@@ -173,7 +194,7 @@ export function sum(range: NumberRange, value: number): NumberRange {
 }
 
 export function multiplyRange(range: NumberRange, value: number): NumberRange {
-    return new NumberRange(range.minimum*value, range.maximum*value);
+    return new NumberRange(range.minimum * value, range.maximum * value);
 }
 
 export function isEmpty(range: NumberRange): boolean {

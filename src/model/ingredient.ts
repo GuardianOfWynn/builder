@@ -1,3 +1,5 @@
+import { RangeableIdentification } from "./identification";
+
 export default class Ingredient {
     name: string;
     id: string;
@@ -10,7 +12,7 @@ export default class Ingredient {
     requirements: Requirements;
     modifiers: Modifiers;
     effectivenessModifiers: EffectivenessModifiers;
-    identifications: Identification[];
+    identifications: RangeableIdentification[];
 }
 
 export class Requirements {
@@ -34,13 +36,4 @@ export class EffectivenessModifiers {
   notTouching: number;
   left: number;
   right: number;
-}
-
-export class Identification {
-  id: string;
-  name: string;
-  isRaw: boolean;
-  raw?: number;
-  minimum: number;
-  maximum: number;
 }
