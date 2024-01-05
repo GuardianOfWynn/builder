@@ -1,7 +1,9 @@
 <template>
   <div class="flex">
-    <AppsSidebar/>
-    <div class="p-4 md:p-8 font-minecraft md:w-4/5 mx-auto">
+    <div class="fixed z-20">
+      <AppsSidebar />
+    </div>
+    <div class="p-4 ml-24 md:p-8 font-minecraft md:w-full mx-auto">
       <div class="w-full">
         <div class="flex flex-row justify-between mb-8">
           <p class="text-3xl text-mc-light-purple">GsWCrafter</p>

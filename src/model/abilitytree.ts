@@ -100,7 +100,6 @@ export class AbilityTree {
             return { first: false, second: "Not enough ability points"};
         }
         if(node.requirements.node !== undefined && !this.nodes.some(x => x.id === node.requirements.node)) {
-            console.log(node.requirements.node)
             return { first: false, second: `Required node not found` };
         }
         if(this.getLockedAbilities().some(x => x.id === node.id)) {
