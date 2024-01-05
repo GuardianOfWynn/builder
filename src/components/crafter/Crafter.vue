@@ -229,7 +229,7 @@ export default {
 
     const clipboardRecipe = async () => {
       try {
-        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/' + (result.value === undefined ? '' : result.value!.name));
+        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/crafter/' + (result.value === undefined ? '' : result.value!.name));
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
@@ -285,6 +285,6 @@ export default {
 
     return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, handleAttackSpeedChanged, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector, AppsSidebar, ItemTypeIcon }
+  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, AttackSpeedSelector, AppsSidebar, ItemTypeIcon }
 }
 </script>

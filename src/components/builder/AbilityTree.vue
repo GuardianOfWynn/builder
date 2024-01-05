@@ -25,7 +25,7 @@
                             </div>
                             <div v-else-if="hasConnector(j, i)">
                                 <img class="w-10 h-10 object-fill pixelated"
-                                    v-if="abilityTree.connectors.some(a => a.x == j && a.y == i)"
+                                    v-if="abilityTree!.connectors.some(a => a.x == j && a.y == i)"
                                     :src="'/builder/sprites/abilitytree/' + getConnectorFor(j, i)!.type + '_' + getConnectorSpriteVariant(getConnectorFor(j, i)!) + '.png'" />
                                 <img class="w-10 h-10 object-fill" v-else
                                     :src="'/builder/sprites/abilitytree/' + getConnectorFor(j, i)!.type + '.svg'" />
@@ -50,7 +50,7 @@
                         <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto" />
                     </div>
                 </div>
-                <p class="mt-4 text-center">Ability Points: {{ abilityTree.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
+                <p class="mt-4 text-center">Ability Points: {{ abilityTree!.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
             </div>
             <div v-if="currentHovered !== undefined" class="text-sm w-fit rounded-sm border-[1px] p-4 border-mc-aqua">
                 <div class="text-lg">

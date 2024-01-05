@@ -128,6 +128,6 @@ export default {
 
         return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged}
     },
-    components: { AppsSidebar, ItemSelector, AbilityTree, AbilityTree }
+    components: { AppsSidebar, ItemSelector, AbilityTree }
 }
 </script>
