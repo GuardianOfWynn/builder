@@ -2,6 +2,7 @@
 import { AbilityNode } from "./ability";
 import { FixedIdentification } from "./identification";
 import { WynnItem } from "./item";
+import { DamageModifier, Skill } from "./skill";
 
 export class Build {
     weapon: WynnItem;
@@ -15,6 +16,8 @@ export class Build {
     necklace: WynnItem;
     abilityTree: AbilityNode[];
     stats: BuildStats;
+    skills: Skill[];
+    baseDamageModifiers: DamageModifier;
 }
 
 export class BuildStats {
