@@ -7,7 +7,10 @@ export const WARRIOR_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/
 export const WARRIOR_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/warrior_connectors.json")).json() ;
 
 export const MAGE_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/mage.json")).json();
+export const MAGE_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/mage_connectors.json")).json();
+
 export const ARCHER_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/archer.json")).json();
+export const ARCHER_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/archer_connectors.json")).json();
 
 export const SHAMAN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/shaman.json")).json();
 export const SHAMAN_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/shaman_connectors.json")).json();

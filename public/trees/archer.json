@@ -1,8 +1,8 @@
 [
     {
         "requirements": {
-            "node": "arrowbomb",
-            "abilityPoints": 1
+            "NODE": "arrowbomb",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Bomb",
@@ -26,11 +26,12 @@
         "links": null,
         "slot": 24,
         "id": "arrowBombCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aa"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lArrow Bomb",
@@ -51,8 +52,8 @@
             " ",
             "&b✺ &7Mana Cost: &f45",
             "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8160%&8)",
-            "  &8(&c✹ &8Fire: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8160%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
             "&2➼ &7Range: &f±26 Blocks",
             "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
             " ",
@@ -63,11 +64,12 @@
         ],
         "slot": 4,
         "id": "arrowbomb",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ab"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&6&lHeart Shatter",
@@ -85,7 +87,7 @@
             "will shatter its heart and deal additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+100%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+100%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -94,11 +96,12 @@
         ],
         "slot": 40,
         "id": "directHit",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ac"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lBow Proficiency",
@@ -126,17 +129,18 @@
         ],
         "slot": 22,
         "id": "bowProficiency",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ad"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lDouble Shots",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -161,17 +165,18 @@
         "id": "hastyShots",
         "locks": [
             "powershots"
-        ]
+        ],
+        "uniqueId": "ae"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lArrow Storm",
         "coordinates": {
             "x": 3,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_64.svg",
@@ -186,8 +191,8 @@
             " ",
             "&b✺ &7Mana Cost: &f35",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&e✦ &8Thunder: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &810%&8)",
             "&2➼ &7Range: &f±16 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -200,17 +205,18 @@
         ],
         "slot": 29,
         "id": "arrowstorm",
-        "locks": []
+        "locks": [],
+        "uniqueId": "af"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lArrow Shield",
         "coordinates": {
             "x": 7,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_64.svg",
@@ -224,10 +230,10 @@
             " ",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &890%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &890%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f2.3 Blocks &7(Circle-Shaped)",
-            "&d⌛ &7Duration: &f60s",
+            "&d⌛À &7Duration: &f60s",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -238,17 +244,18 @@
         ],
         "slot": 33,
         "id": "arrowshield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ag"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&6&lWindy Feet",
         "coordinates": {
             "x": 2,
-            "y": 11
+            "y": 10
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -260,7 +267,7 @@
             "&7to you and nearby players.",
             " ",
             "&e🛡 &7Effect: &f+20% &7Walk Speed to Allies",
-            "&d⌛ &7Duration: &f120s",
+            "&d⌛À &7Duration: &f120s",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -268,18 +275,19 @@
         "links": null,
         "slot": 37,
         "id": "windyfeet",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ah"
     },
     {
         "requirements": {
-            "node": "escape",
-            "abilityPoints": 1
+            "NODE": "escape",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
         "coordinates": {
             "x": 5,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -301,17 +309,18 @@
         ],
         "slot": 31,
         "id": "escapeCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ai"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lEscape",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_64.svg",
@@ -333,17 +342,18 @@
         ],
         "slot": 13,
         "id": "escape",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aj"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lPower Shots",
         "coordinates": {
             "x": 7,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -368,17 +378,18 @@
         "id": "powerShots",
         "locks": [
             "hastyShots"
-        ]
+        ],
+        "uniqueId": "ak"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 1,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -389,8 +400,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f❋ &7Air Damage: &f+3-4",
-            "&f❋ &7Air Damage: &f+15%",
+            "&f�?� &7Air Damage: &f+3-4",
+            "&f�?� &7Air Damage: &f+15%",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -401,17 +412,18 @@
         ],
         "slot": 9,
         "id": "archerAirPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "al"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 7,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -436,17 +448,18 @@
         ],
         "slot": 15,
         "id": "archerFirePath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "am"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 9,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -457,8 +470,8 @@
             "Increase your base damage",
             "from all Water attacks.",
             " ",
-            "&b❉ &7Water Damage: &f+2-4",
-            "&b❉ &7Water Damage: &f+15%",
+            "&b�?� &7Water Damage: &f+2-4",
+            "&b�?� &7Water Damage: &f+15%",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -469,18 +482,19 @@
         ],
         "slot": 17,
         "id": "archerWaterPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "an"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 2
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lNimble String",
         "coordinates": {
             "x": 1,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -492,8 +506,8 @@
             "&7shoots &f+6&7 arrows per stream.",
             " ",
             "&c⚔ &7Total Damage: &c-10% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8-5%&8)",
-            "  &8(&e✦ &8Thunder: &8-5%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-5%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-5%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -509,18 +523,19 @@
         "id": "nimbleString",
         "locks": [
             "phantomDarts"
-        ]
+        ],
+        "uniqueId": "ao"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 2
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lPhantom Ray",
         "coordinates": {
             "x": 9,
-            "y": 17
+            "y": 16
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -533,10 +548,10 @@
             " ",
             "&b✺ &7Mana Cost: &f-5",
             "&c⚔ &7Total Damage: &f30% &8(of your DPS, per hit)",
-            "  &8(&6✢ &8Damage: &825%&8)",
-            "  &8(&b❉ &8Water: &85%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &85%&8)",
             "&2➼ &7Range: &f16 Blocks",
-            "&d⌛ &7Duration: &f1.2s",
+            "&d⌛À &7Duration: &f1.2s",
             " ",
             "&cUnlocking will block:",
             "&c- &7Nimble String",
@@ -556,17 +571,18 @@
             "nimbleString",
             "windstorm",
             "helicopter"
-        ]
+        ],
+        "uniqueId": "ap"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 14
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -590,17 +606,18 @@
         ],
         "slot": 22,
         "id": "archerEarthPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aq"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 3,
-            "y": 14
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -625,18 +642,19 @@
         ],
         "slot": 11,
         "id": "archerThunderPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ar"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 1
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lArrow Rain",
         "coordinates": {
             "x": 3,
-            "y": 16
+            "y": 15
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -648,8 +666,8 @@
             "&f150&7 arrows around you to rain down on enemies.",
             " ",
             "&c⚔ &7Total Damage: &f250% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&f❋ &8Air: &8100%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8100%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -660,18 +678,19 @@
         ],
         "slot": 29,
         "id": "arrowrain",
-        "locks": []
+        "locks": [],
+        "uniqueId": "as"
     },
     {
         "requirements": {
-            "node": "hastyShots",
-            "abilityPoints": 1
+            "NODE": "hastyShots",
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lTriple Shots",
         "coordinates": {
             "x": 1,
-            "y": 18
+            "y": 17
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -695,17 +714,18 @@
         ],
         "slot": 45,
         "id": "tripleShots",
-        "locks": []
+        "locks": [],
+        "uniqueId": "at"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFrenzy",
         "coordinates": {
             "x": 3,
-            "y": 18
+            "y": 17
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -727,22 +747,23 @@
         ],
         "slot": 47,
         "id": "hitToRename",
-        "locks": []
+        "locks": [],
+        "uniqueId": "au"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 1,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&6&lBryophyte Roots",
         "coordinates": {
             "x": 5,
-            "y": 17
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -755,10 +776,10 @@
             "&7down and deals damage every &f0.4s&7.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&2✤ &8Earth: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &810%&8)",
             "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛ &7Duration: &f5s",
+            "&d⌛À &7Duration: &f5s",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             " ",
             "&2&lTrapper Archetype",
@@ -773,17 +794,18 @@
         ],
         "slot": 40,
         "id": "mossyArrowStorm",
-        "locks": []
+        "locks": [],
+        "uniqueId": "av"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lFire Creep",
         "coordinates": {
             "x": 7,
-            "y": 17
+            "y": 16
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -796,9 +818,9 @@
             "walk into it take damage every &f0.4s&7.",
             " ",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&c✹ &8Fire: &820%&8)",
-            "&d⌛ &7Duration: &f6s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
+            "&d⌛À &7Duration: &f6s",
             " ",
             "&7Ability Points: &f2"
         ],
@@ -808,18 +830,19 @@
         ],
         "slot": 42,
         "id": "fireCreep",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aw"
     },
     {
         "requirements": {
-            "node": "focus",
-            "abilityPoints": 1
+            "NODE": "focus",
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
         "coordinates": {
             "x": 9,
-            "y": 23
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -839,18 +862,19 @@
         ],
         "slot": 44,
         "id": "moreFocus",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ax"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 1
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
         "coordinates": {
             "x": 4,
-            "y": 22
+            "y": 21
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -872,21 +896,22 @@
         ],
         "slot": 30,
         "id": "arrowStormCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ay"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&c&lBasaltic Trap",
         "coordinates": {
             "x": 5,
-            "y": 20
+            "y": 19
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -898,9 +923,9 @@
             "&7a &bTrap&7 that damages enemies. &7(Max 2 Traps)",
             " ",
             "&c⚔ &7Total Damage: &f250% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8210%&8)",
-            "  &8(&2✤ &8Earth: &820%&8)",
-            "  &8(&c✹ &8Fire: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8210%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &820%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
             "&2➼ &7Range: &f2 Blocks &7(Circle-Shaped)",
             "&3☀ &7Area of Effect: &f7 Blocks &7(Circle-Shaped)",
             " ",
@@ -915,17 +940,18 @@
         ],
         "slot": 13,
         "id": "explodingTrap",
-        "locks": []
+        "locks": [],
+        "uniqueId": "az"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lGrappling Hook",
         "coordinates": {
             "x": 7,
-            "y": 23
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -954,18 +980,19 @@
         "id": "grapplingHook",
         "locks": [
             "escapeArtist"
-        ]
+        ],
+        "uniqueId": "ba"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 2
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 2
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&d&lCall of the Hound",
         "coordinates": {
             "x": 4,
-            "y": 24
+            "y": 23
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -978,9 +1005,9 @@
             "&7and drag them towards your traps.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &840%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
             "&3☀ &7Vision: &f18 Blocks &7(Circle-Shaped)",
-            "&d⌛ &7Duration: &f60s",
+            "&d⌛À &7Duration: &f60s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -990,18 +1017,19 @@
         "links": null,
         "slot": 48,
         "id": "wolfSummon",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bb"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 1
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lMore Shields",
         "coordinates": {
             "x": 8,
-            "y": 22
+            "y": 21
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1013,8 +1041,8 @@
             "&7Reduces &nGuardian Angels&7' damage.",
             " ",
             "&c⚔ &7Total Damage: &c-18% &8(of your DPS, for &nGuardian Angels&8, per arrow)",
-            "  &8(&6✢ &8Damage: &8-13%&8)",
-            "  &8(&f❋ &8Air: &8-5%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-13%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8-5%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -1026,12 +1054,13 @@
         ],
         "slot": 34,
         "id": "tripleshield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bc"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1040,7 +1069,7 @@
         "name": "&c&lFocus",
         "coordinates": {
             "x": 9,
-            "y": 20
+            "y": 19
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1064,18 +1093,19 @@
         ],
         "slot": 17,
         "id": "focus",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bd"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 2
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lWindstorm",
         "coordinates": {
             "x": 2,
-            "y": 22
+            "y": 21
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1087,9 +1117,9 @@
             "of arrows and &f+2&7 extra arrows per stream.",
             " ",
             "&c⚔ &7Total Damage: &c-10% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8-9%&8)",
-            "  &8(&e✦ &8Thunder: &8-3%&8)",
-            "  &8(&f❋ &8Air: &8+2%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-9%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-3%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8+2%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -1106,18 +1136,19 @@
         "id": "windstorm",
         "locks": [
             "phantomDarts"
-        ]
+        ],
+        "uniqueId": "be"
     },
     {
         "requirements": {
-            "node": "explodingTrap",
-            "abilityPoints": 2
+            "NODE": "explodingTrap",
+            "ABILITY_POINTS": 2
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&6&lPatient Hunter",
         "coordinates": {
             "x": 5,
-            "y": 23
+            "y": 22
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1140,18 +1171,19 @@
         ],
         "slot": 40,
         "id": "timeBomb",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bf"
     },
     {
         "requirements": {
-            "node": "windyfeet",
-            "abilityPoints": 1
+            "NODE": "windyfeet",
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lStormy Feet",
         "coordinates": {
             "x": 2,
-            "y": 24
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1163,7 +1195,7 @@
             "&7speed buff.",
             "",
             "&e🛡 &7Effect: &f+20% &7Walk Speed to Allies",
-            "&d⌛ &7Duration: &f+60s",
+            "&d⌛À &7Duration: &f+60s",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -1173,13 +1205,14 @@
         "links": null,
         "slot": 46,
         "id": "betterWindyFeet",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bg"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "boltslinger"
             }
@@ -1188,7 +1221,7 @@
         "name": "&c&lGuardian Angels",
         "coordinates": {
             "x": 2,
-            "y": 20
+            "y": 19
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1201,10 +1234,10 @@
             "&8(Arrow Shield will no longer knock mobs away)",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
             "&2➼ &7Range: &f6 Blocks",
-            "&d⌛ &7Duration: &f60s",
+            "&d⌛À &7Duration: &f60s",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -1218,17 +1251,18 @@
         ],
         "slot": 10,
         "id": "guardianAngels",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bh"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lImplosion",
         "coordinates": {
             "x": 6,
-            "y": 22
+            "y": 21
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1242,7 +1276,7 @@
             "&7Increases &nHeart Shatter&7's damage.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+40%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1256,22 +1290,23 @@
         ],
         "slot": 32,
         "id": "implosion",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bi"
     },
     {
         "requirements": {
-            "node": "mossyArrowStorm",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "mossyArrowStorm",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&6&lIvyroot Mamba",
         "coordinates": {
             "x": 7,
-            "y": 26
+            "y": 25
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1285,11 +1320,11 @@
             "&7Enemies will be weakened for &f1.5s&7.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &880%&8)",
-            "  &8(&2✤ &8Earth: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &880%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &820%&8)",
             "&e🛡 &7Effects: &f-15%&f &7Damage Bonus (&c⚔&7) to Enemies",
             "&3☀ &7Vision: &f12 Blocks &7(Circle-Shaped)",
-            "&d⌛ &7Duration: &f18s",
+            "&d⌛À &7Duration: &f18s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1306,18 +1341,19 @@
         ],
         "slot": 15,
         "id": "ivyrootMamba",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bj"
     },
     {
         "requirements": {
-            "node": "fireCreep",
-            "abilityPoints": 1
+            "NODE": "fireCreep",
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lScorched Earth",
         "coordinates": {
             "x": 8,
-            "y": 27
+            "y": 26
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1328,9 +1364,9 @@
             "&7&nFire Creep&7 becomes much stronger.",
             " ",
             "&c⚔ &7Total Damage: &f+15% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+10%&8)",
-            "  &8(&c✹ &8Fire: &8+5%&8)",
-            "&d⌛ &7Duration: &f+2s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+10%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+5%&8)",
+            "&d⌛À &7Duration: &f+2s",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1342,18 +1378,19 @@
         ],
         "slot": 25,
         "id": "scorchedEarth",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bk"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 1
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lBetter Arrow Shield",
         "coordinates": {
             "x": 7,
-            "y": 29
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1366,11 +1403,11 @@
             "&7&nGuardian Angels&7' damage is increased.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS, for &nArrow Shield&8)",
-            "  &8(&6✢ &8Damage: &8+40%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
             "&3☀ &7Area of Effect: &f+1 Blocks &7(Circle-Shaped)",
             " ",
             "&c⚔ &7Total Damage: &f+3% &8(of your DPS, for &nGuardian Angels&8, per arrow)",
-            "  &8(&6✢ &8Damage: &8+3%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+3%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -1383,17 +1420,18 @@
         ],
         "slot": 42,
         "id": "betterArrowShield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bl"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lTraveler",
         "coordinates": {
             "x": 3,
-            "y": 26
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1414,18 +1452,19 @@
         ],
         "slot": 11,
         "id": "traveler",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bm"
     },
     {
         "requirements": {
-            "node": "leap",
-            "abilityPoints": 1
+            "NODE": "leap",
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Leap",
         "coordinates": {
             "x": 2,
-            "y": 30
+            "y": 29
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1443,13 +1482,14 @@
         "links": null,
         "slot": 46,
         "id": "betterLeap",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bn"
     },
     {
         "requirements": {
-            "node": "focus",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "focus",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1458,7 +1498,7 @@
         "name": "&d&lTwain's Arc",
         "coordinates": {
             "x": 9,
-            "y": 26
+            "y": 25
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1472,7 +1512,7 @@
             "&8(Damage is dealt as &nMain Attack&8 Damage)",
             " ",
             "&c⚔ &7Total Damage: &f220%",
-            "  &8(&6✢ &8Damage: &8220%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8220%&8)",
             "&2➼ &7Range: &f64 Blocks",
             " ",
             "&d&lSharpshooter Archetype",
@@ -1488,18 +1528,19 @@
         ],
         "slot": 17,
         "id": "concentration",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bo"
     },
     {
         "requirements": {
-            "node": "arrowbomb",
-            "abilityPoints": 1
+            "NODE": "arrowbomb",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lRocket Jump",
         "coordinates": {
             "x": 6,
-            "y": 27
+            "y": 26
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1516,17 +1557,18 @@
         "links": null,
         "slot": 23,
         "id": "rocketJump",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bp"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lBouncing Bomb",
         "coordinates": {
             "x": 5,
-            "y": 26
+            "y": 25
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1547,13 +1589,14 @@
         ],
         "slot": 13,
         "id": "bouncing",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bq"
     },
     {
         "requirements": {
-            "node": "arrowbomb",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "arrowbomb",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1562,7 +1605,7 @@
         "name": "&6&lShocking Bomb",
         "coordinates": {
             "x": 9,
-            "y": 29
+            "y": 28
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1574,8 +1617,8 @@
             "&7gravity and increase its explosion damage.",
             "",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+20%&8)",
-            "  &8(&e✦ &8Thunder: &8+20%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+20%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+20%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1589,17 +1632,18 @@
         ],
         "slot": 44,
         "id": "shockingBomb",
-        "locks": []
+        "locks": [],
+        "uniqueId": "br"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lRefined Gunpowder",
         "coordinates": {
             "x": 1,
-            "y": 29
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1610,7 +1654,7 @@
             "&7Increase the damage of &nArrow Bomb&7.",
             " ",
             "&c⚔ &7Total Damage: &f+50% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+50%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+50%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1621,12 +1665,13 @@
         ],
         "slot": 36,
         "id": "arrowBombDamage1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bs"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1635,7 +1680,7 @@
         "name": "&d&lHoming Shots",
         "coordinates": {
             "x": 6,
-            "y": 30
+            "y": 29
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1654,18 +1699,19 @@
         "links": null,
         "slot": 50,
         "id": "homingarrows",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bt"
     },
     {
         "requirements": {
-            "node": "explodingTrap",
-            "abilityPoints": 1
+            "NODE": "explodingTrap",
+            "ABILITY_POINTS": 1
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lMore Traps",
         "coordinates": {
             "x": 4,
-            "y": 28
+            "y": 27
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1686,17 +1732,18 @@
         ],
         "slot": 30,
         "id": "moreTraps1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bu"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFierce Stomp",
         "coordinates": {
             "x": 3,
-            "y": 29
+            "y": 28
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1708,7 +1755,7 @@
             "quickly drop down and deal damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8120%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8120%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBoltslinger Archetype",
@@ -1724,12 +1771,13 @@
         ],
         "slot": 38,
         "id": "fiercystomp",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bv"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 4,
                 "name": "boltslinger"
             }
@@ -1738,7 +1786,7 @@
         "name": "&6&lLeap",
         "coordinates": {
             "x": 1,
-            "y": 26
+            "y": 25
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1760,18 +1808,19 @@
         ],
         "slot": 9,
         "id": "leap",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bw"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 1
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
         "coordinates": {
             "x": 5,
-            "y": 29
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1794,17 +1843,18 @@
         ],
         "slot": 40,
         "id": "arrowShieldCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bx"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lEscape Artist",
         "coordinates": {
             "x": 3,
-            "y": 33
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1816,8 +1866,8 @@
             "&f100&7 arrows towards the ground.",
             " ",
             "&c⚔ &7Total Damage: &f150% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8100%&8)",
-            "  &8(&e✦ &8Thunder: &850%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &850%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Grappling Hook",
@@ -1833,22 +1883,23 @@
         "id": "escapeArtist",
         "locks": [
             "grapplingHook"
-        ]
+        ],
+        "uniqueId": "by"
     },
     {
         "requirements": {
-            "node": "explodingTrap",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "explodingTrap",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 5,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&6&lMurder Flock",
         "coordinates": {
             "x": 5,
-            "y": 33
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1861,10 +1912,10 @@
             "&7Damaged enemies will be distracted for &f0.2s&7.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &860%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
             "&e🛡 &7Effect: &fBlindness (&c⬣&f) to Enemies",
             "&3☀ &7Vision: &f18 Blocks &7(Circle-Shaped)",
-            "&d⌛ &7Duration: &f12s",
+            "&d⌛À &7Duration: &f12s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1878,18 +1929,19 @@
         ],
         "slot": 22,
         "id": "murderFlock",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bz"
     },
     {
         "requirements": {
-            "node": "concentration",
-            "abilityPoints": 2
+            "NODE": "concentration",
+            "ABILITY_POINTS": 2
         },
         "archetype": "sniper",
         "name": "&6&lPhasing Beam",
         "coordinates": {
             "x": 9,
-            "y": 33
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1903,7 +1955,7 @@
             "&8(Damage is dealt as &nMain Attack&8 Damage)",
             " ",
             "&c⚔ &7Total Damage: &c-110% &8(after piercing)",
-            "  &8(&6✢ &8Damage: &8-110%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-110%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1916,21 +1968,22 @@
         ],
         "slot": 26,
         "id": "phasingBeam",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ca"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 6,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&c&lMana Trap",
         "coordinates": {
             "x": 4,
-            "y": 32
+            "y": 31
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1956,18 +2009,19 @@
         ],
         "slot": 12,
         "id": "manaTrap",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cb"
     },
     {
         "requirements": {
-            "node": "shockingBomb",
-            "abilityPoints": 2
+            "NODE": "shockingBomb",
+            "ABILITY_POINTS": 2
         },
         "archetype": "sniper",
         "name": "&d&lCoursing Restraints",
         "coordinates": {
             "x": 9,
-            "y": 36
+            "y": 35
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1979,7 +2033,7 @@
             "&7reducing their defences. (12s Cooldown)",
             "",
             "&e🛡 &7Effect: &f-15% &7Resistance Bonus (&c✃&7) to Enemies",
-            "&d⌛ &7Duration: &f6s",
+            "&d⌛À &7Duration: &f6s",
             "",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1991,18 +2045,19 @@
         ],
         "slot": 53,
         "id": "coursingRestraints",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cc"
     },
     {
         "requirements": {
-            "node": "focus",
-            "abilityPoints": 2
+            "NODE": "focus",
+            "ABILITY_POINTS": 2
         },
         "archetype": "sniper",
         "name": "&d&lInitiator",
         "coordinates": {
             "x": 8,
-            "y": 32
+            "y": 31
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2026,18 +2081,19 @@
         ],
         "slot": 16,
         "id": "initiator",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cd"
     },
     {
         "requirements": {
-            "node": "phantomDarts",
-            "abilityPoints": 2
+            "NODE": "phantomDarts",
+            "ABILITY_POINTS": 2
         },
         "archetype": "sniper",
         "name": "&6&lDecimator",
         "coordinates": {
             "x": 7,
-            "y": 33
+            "y": 32
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2059,17 +2115,18 @@
         ],
         "slot": 24,
         "id": "decimator",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ce"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lRecycling",
         "coordinates": {
             "x": 1,
-            "y": 35
+            "y": 34
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2089,18 +2146,19 @@
         ],
         "slot": 36,
         "id": "recycling",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cf"
     },
     {
         "requirements": {
-            "node": "guardianAngels",
-            "abilityPoints": 1
+            "NODE": "guardianAngels",
+            "ABILITY_POINTS": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Guardian Angels",
         "coordinates": {
             "x": 1,
-            "y": 33
+            "y": 32
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2124,18 +2182,19 @@
         ],
         "slot": 18,
         "id": "betterGuardianAngels",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cg"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 1
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
         "coordinates": {
             "x": 6,
-            "y": 32
+            "y": 31
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2158,22 +2217,23 @@
         ],
         "slot": 14,
         "id": "arrowStormCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ch"
     },
     {
         "requirements": {
-            "node": "grapplingHook",
-            "abilityPoints": 1,
-            "archetype": {
+            "NODE": "grapplingHook",
+            "ABILITY_POINTS": 1,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lStronger Hook",
         "coordinates": {
             "x": 6,
-            "y": 36
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2198,18 +2258,19 @@
         ],
         "slot": 50,
         "id": "strongerHook",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ci"
     },
     {
         "requirements": {
-            "node": "arrowshield",
-            "abilityPoints": 1
+            "NODE": "arrowshield",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
         "coordinates": {
             "x": 8,
-            "y": 35
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2232,18 +2293,19 @@
         ],
         "slot": 43,
         "id": "arrowShieldCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cj"
     },
     {
         "requirements": {
-            "node": "escape",
-            "abilityPoints": 1
+            "NODE": "escape",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
         "coordinates": {
             "x": 5,
-            "y": 35
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2266,12 +2328,13 @@
         ],
         "slot": 40,
         "id": "escapeCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ck"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "boltslinger"
             }
@@ -2280,7 +2343,7 @@
         "name": "&6&lShrapnel Bomb",
         "coordinates": {
             "x": 3,
-            "y": 35
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2292,8 +2355,8 @@
             "shrapnel, dealing damage in a large area.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS, per shrapnel)",
-            "  &8(&6✢ &8Damage: &840%&8)",
-            "  &8(&c✹ &8Fire: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -2308,18 +2371,19 @@
         ],
         "slot": 38,
         "id": "shrapnelBomb",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cl"
     },
     {
         "requirements": {
-            "node": "explodingTrap",
-            "abilityPoints": 2
+            "NODE": "explodingTrap",
+            "ABILITY_POINTS": 2
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&6&lTangled Traps",
         "coordinates": {
             "x": 4,
-            "y": 38
+            "y": 37
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2331,8 +2395,8 @@
             "&7that deals damage to enemies every &f0.2s&7.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &820%&8)",
-            "  &8(&f❋ &8Air: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &820%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -2345,18 +2409,19 @@
         ],
         "slot": 12,
         "id": "triangulation",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cm"
     },
     {
         "requirements": {
-            "node": "arrowbomb",
-            "abilityPoints": 1
+            "NODE": "arrowbomb",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Bomb",
         "coordinates": {
             "x": 7,
-            "y": 42
+            "y": 41
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2376,18 +2441,19 @@
         ],
         "slot": 51,
         "id": "arrowBombCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cn"
     },
     {
         "requirements": {
-            "node": "focus",
-            "abilityPoints": 1
+            "NODE": "focus",
+            "ABILITY_POINTS": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
         "coordinates": {
             "x": 8,
-            "y": 40
+            "y": 39
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2409,18 +2475,19 @@
         ],
         "slot": 34,
         "id": "moreFocus2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "co"
     },
     {
         "requirements": {
-            "node": "fiercystomp",
-            "abilityPoints": 2
+            "NODE": "fiercystomp",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lGeyser Stomp",
         "coordinates": {
             "x": 2,
-            "y": 42
+            "y": 41
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2432,8 +2499,8 @@
             "&7more damage and pushing enemies away vertically.",
             " ",
             "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+50%&8)",
-            "  &8(&b❉ &8Water: &8+30%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+50%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &8+30%&8)",
             "&3☀ &7Area of Effect: &f+1 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f2",
@@ -2444,17 +2511,18 @@
         ],
         "slot": 46,
         "id": "geyserstomp",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cp"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lSnow Storm",
         "coordinates": {
             "x": 4,
-            "y": 42
+            "y": 41
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2475,18 +2543,19 @@
         ],
         "slot": 48,
         "id": "snowStorm",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cq"
     },
     {
         "requirements": {
-            "node": "timeBomb",
-            "abilityPoints": 1
+            "NODE": "timeBomb",
+            "ABILITY_POINTS": 1
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lStronger Patient Hunter",
         "coordinates": {
             "x": 4,
-            "y": 40
+            "y": 39
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2507,13 +2576,14 @@
         ],
         "slot": 30,
         "id": "timeBombMaxDamage",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cr"
     },
     {
         "requirements": {
-            "node": "arrowstorm",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "arrowstorm",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 10,
                 "name": "sniper"
             }
@@ -2522,7 +2592,7 @@
         "name": "&c&lCrepuscular Ray",
         "coordinates": {
             "x": 8,
-            "y": 38
+            "y": 37
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2540,8 +2610,8 @@
             "&7lose &b1 Focus &e➽ &7per second.",
             " ",
             "&c⚔ &7Total Damage: &f45% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &835%&8)",
-            "  &8(&b❉ &8Water: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &835%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &810%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -2554,22 +2624,23 @@
         ],
         "slot": 16,
         "id": "theAscendedOne",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cs"
     },
     {
         "requirements": {
-            "node": "explodingTrap",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "explodingTrap",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 11,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&c&lMinefield",
         "coordinates": {
             "x": 5,
-            "y": 39
+            "y": 38
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2581,7 +2652,7 @@
             "&7but with reduced range and damage.",
             " ",
             "&c⚔ &7Total Damage: &c-50% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8-50%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-50%&8)",
             "&3☀ &7Area of Effect: &f&c-1 Blocks &7(Circle-Shaped)",
             " ",
             "&2&lTrapper Archetype",
@@ -2596,17 +2667,18 @@
         ],
         "slot": 22,
         "id": "minefield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ct"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lElusive",
         "coordinates": {
             "x": 3,
-            "y": 41
+            "y": 40
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2628,12 +2700,13 @@
         ],
         "slot": 38,
         "id": "dontGetHit",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cu"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 10,
                 "name": "boltslinger"
             }
@@ -2642,7 +2715,7 @@
         "name": "&c&lArrow Hurricane",
         "coordinates": {
             "x": 2,
-            "y": 38
+            "y": 37
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2653,9 +2726,9 @@
             "&7&nArrow Storm&7 will shoot &f+2&7 extra streams of arrows.",
             " ",
             "&c⚔ &7Total Damage: &c-5% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8-3%&8)",
-            "  &8(&e✦ &8Thunder: &8-1%&8)",
-            "  &8(&f❋ &8Air: &8-1%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-3%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-1%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8-1%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -2674,17 +2747,18 @@
         "id": "helicopter",
         "locks": [
             "phantomDarts"
-        ]
+        ],
+        "uniqueId": "cv"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lGrape Bomb",
         "coordinates": {
             "x": 6,
-            "y": 40
+            "y": 39
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2696,8 +2770,8 @@
             "&7smaller bombs when exploding.",
             " ",
             "&c⚔ &7Total Damage: &f80% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &860%&8)",
-            "  &8(&c✹ &8Fire: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f2"
@@ -2708,18 +2782,19 @@
         ],
         "slot": 32,
         "id": "grapeBomb",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cw"
     },
     {
         "requirements": {
-            "node": "guardianAngels",
-            "abilityPoints": 2
+            "NODE": "guardianAngels",
+            "ABILITY_POINTS": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lAll-Seeing Panoptes",
         "coordinates": {
             "x": 1,
-            "y": 40
+            "y": 39
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2732,8 +2807,8 @@
             "&7letting them shoot up to &f+4&7 times each.",
             " ",
             "&c⚔ &7Total Damage: &f+7% &8(of your DPS, per arrow)",
-            "  &8(&6✢ &8Damage: &8+2%&8)",
-            "  &8(&c✹ &8Fire: &8+5%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+2%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+5%&8)",
             "&2➼ &7Range: &f+4 Blocks",
             " ",
             "&e&lBoltslinger Archetype",
@@ -2747,22 +2822,23 @@
         ],
         "slot": 27,
         "id": "allSeeingPanoptes",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cx"
     },
     {
         "requirements": {
-            "node": "wolfSummon",
-            "abilityPoints": 1,
-            "archetype": {
+            "NODE": "wolfSummon",
+            "ABILITY_POINTS": 1,
+            "ARCHETYPE": {
                 "amount": 7,
                 "name": "trapper"
             }
         },
-        "archetype": "trapper",
+        "archetype": "",
         "name": "&f&lBeast Lore",
         "coordinates": {
             "x": 6,
-            "y": 38
+            "y": 37
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2775,7 +2851,7 @@
             "&7Increase the damage of your &bHound&7.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+40%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -2788,6 +2864,7 @@
         ],
         "slot": 14,
         "id": "beastLore",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cy"
     }
 ]

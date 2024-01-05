@@ -1,7 +1,7 @@
 [
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lRelik Proficiency I",
@@ -28,11 +28,12 @@
         ],
         "slot": 22,
         "id": "relikProficiency",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aa"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&6&lTotemic Smash",
@@ -49,8 +50,8 @@
             "&7Your &nTotem&7 will deal damage where it lands.",
             "",
             "&c⚔ &7Total Damage: &f130% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8100%&8)",
-            "  &8(&c✹ &8Fire: &830%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &830%&8)",
             "&3☀ &7Area of Effect: &f3.5 Blocks &7(Circle-Shaped)",
             "",
             "&7Ability Points: &f1"
@@ -60,12 +61,13 @@
         ],
         "slot": 40,
         "id": "totemicsmash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ab"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 1
+            "NODE": "totem",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Totem",
@@ -89,11 +91,12 @@
         "links": null,
         "slot": 24,
         "id": "totemCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ac"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lTotem",
@@ -113,9 +116,9 @@
             "",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f12% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &86%&8)",
-            "  &8(&f❋ &8Air: &86%&8)",
-            "&d⌛ &7Duration: &f30s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &86%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &86%&8)",
+            "&d⌛À &7Duration: &f30s",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -125,17 +128,18 @@
         ],
         "slot": 4,
         "id": "totem",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ad"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lHaul",
         "coordinates": {
             "x": 5,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_73.svg",
@@ -156,17 +160,18 @@
         ],
         "slot": 13,
         "id": "haul",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ae"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lHand of the Shaman",
         "coordinates": {
             "x": 7,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -191,18 +196,19 @@
         "id": "relikBeams",
         "locks": [
             "relikSpread"
-        ]
+        ],
+        "uniqueId": "af"
     },
     {
         "requirements": {
-            "node": "haul",
-            "abilityPoints": 1
+            "NODE": "haul",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Haul",
         "coordinates": {
             "x": 5,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -224,17 +230,18 @@
         ],
         "slot": 31,
         "id": "haulCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ag"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "summoner",
         "name": "&f&lDistant Grasp",
         "coordinates": {
             "x": 3,
-            "y": 8
+            "y": 7
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -259,17 +266,18 @@
         "id": "relikSpread",
         "locks": [
             "relikBeams"
-        ]
+        ],
+        "uniqueId": "ah"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lUproot",
         "coordinates": {
             "x": 3,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_73.svg",
@@ -284,9 +292,9 @@
             "",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f130% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &880%&8)",
-            "  &8(&2✤ &8Earth: &830%&8)",
-            "  &8(&e✦ &8Thunder: &820%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &880%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &830%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
             "&2➼ &7Range: &f18 Blocks",
             "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
             " ",
@@ -299,17 +307,18 @@
         ],
         "slot": 29,
         "id": "uproot",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ai"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&a&lAura",
         "coordinates": {
             "x": 7,
-            "y": 10
+            "y": 9
         },
         "sprite": {
             "normal": "275_73.svg",
@@ -323,8 +332,8 @@
             "",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&b❉ &8Water: &830%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &830%&8)",
             "&2➼ &7Range: &f16 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -336,17 +345,18 @@
         ],
         "slot": 33,
         "id": "aura",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aj"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "summoner",
         "name": "&f&lAir Mastery",
         "coordinates": {
             "x": 3,
-            "y": 14
+            "y": 12
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -357,8 +367,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f❋ &7Air Damage: &f+3-4",
-            "&f❋ &7Air Damage: &f+15%",
+            "&f�?� &7Air Damage: &f+3-4",
+            "&f�?� &7Air Damage: &f+15%",
             " ",
             "&6&lSummoner Archetype",
             " ",
@@ -372,17 +382,18 @@
         ],
         "slot": 11,
         "id": "shamanAirPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ak"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lThunder Mastery",
         "coordinates": {
             "x": 7,
-            "y": 14
+            "y": 12
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -407,18 +418,19 @@
         ],
         "slot": 15,
         "id": "shamanThunderPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "al"
     },
     {
         "requirements": {
-            "node": "haul",
-            "abilityPoints": 2
+            "NODE": "haul",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lNature's Jolt",
         "coordinates": {
             "x": 2,
-            "y": 15
+            "y": 13
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -430,8 +442,8 @@
             "&7will deal damage around you.",
             "",
             "&c⚔ &7Total Damage: &f150% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8110%&8)",
-            "  &8(&2✤ &8Earth: &840%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8110%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &840%&8)",
             "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
             "",
             "&7Ability Points: &f2",
@@ -442,18 +454,19 @@
         ],
         "slot": 19,
         "id": "naturejolt",
-        "locks": []
+        "locks": [],
+        "uniqueId": "am"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 2
+            "NODE": "aura",
+            "ABILITY_POINTS": 2
         },
         "archetype": "bloodmagik",
         "name": "&6&lShocking Aura",
         "coordinates": {
             "x": 7,
-            "y": 16
+            "y": 14
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -465,7 +478,7 @@
             "&7deal additional damage.",
             "",
             "&c⚔ &7Total Damage: &f+20% &8(of your DPS)",
-            "  &8(&e✦ &8Thunder: &8+20%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+20%&8)",
             "",
             "&c&lAcolyte Archetype",
             " ",
@@ -478,17 +491,18 @@
         ],
         "slot": 33,
         "id": "shockingAura",
-        "locks": []
+        "locks": [],
+        "uniqueId": "an"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "summoner",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 1,
-            "y": 14
+            "y": 12
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -512,18 +526,19 @@
         ],
         "slot": 9,
         "id": "shamanEarthPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ao"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2
         },
         "archetype": "summoner",
         "name": "&6&lOverseer",
         "coordinates": {
             "x": 2,
-            "y": 17
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -548,17 +563,18 @@
         ],
         "slot": 37,
         "id": "overseer",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ap"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "ritualist",
         "name": "&f&lWater Mastery",
         "coordinates": {
             "x": 5,
-            "y": 15
+            "y": 13
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -569,8 +585,8 @@
             "Increase your damage",
             "from all Water attacks.",
             " ",
-            "&b❉ &7Water Damage: &f+2-4",
-            "&b❉ &7Water Damage: &f+15%",
+            "&b�?� &7Water Damage: &f+2-4",
+            "&b�?� &7Water Damage: &f+15%",
             " ",
             "&a&lRitualist Archetype",
             " ",
@@ -581,18 +597,19 @@
         ],
         "slot": 22,
         "id": "shamanWaterPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aq"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2
         },
         "archetype": "bloodmagik",
         "name": "&6&lFlaming Tongue",
         "coordinates": {
             "x": 9,
-            "y": 16
+            "y": 14
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -605,10 +622,10 @@
             "&7explode or knockback enemies.",
             "",
             "&c⚔ &7Total Damage: &c-50% &8(of your DPS, for &nUproot&8, per hit)",
-            "  &8(&6✢ &8Damage: &8-15%&8)",
-            "  &8(&2✤ &8Earth: &8-30%&8)",
-            "  &8(&e✦ &8Thunder: &8-15%&8)",
-            "  &8(&c✹ &8Fire: &8+10%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-15%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &8-30%&8)",
+            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-15%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+10%&8)",
             " ",
             "&c&lAcolyte Archetype",
             " ",
@@ -621,17 +638,18 @@
         ],
         "slot": 35,
         "id": "flamingTongue",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ar"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lFire Mastery",
         "coordinates": {
             "x": 9,
-            "y": 14
+            "y": 12
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -654,17 +672,18 @@
         ],
         "slot": 17,
         "id": "shamanFirePath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "as"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&6&lRain Dance",
         "coordinates": {
             "x": 5,
-            "y": 17
+            "y": 15
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -677,9 +696,9 @@
             "enemies under it every &f0.4s&7.",
             "",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &830%&8)",
-            "  &8(&b❉ &8Water: &830%&8)",
-            "&d⌛ &7Duration: &f6s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &830%&8)",
+            "&d⌛À &7Duration: &f6s",
             "&3☀ &7Area of Effect: &f3.5 Blocks &7(Line-Shaped)",
             "",
             "&a&lRitualist Archetype",
@@ -691,13 +710,14 @@
         ],
         "slot": 40,
         "id": "danceOfTheRain",
-        "locks": []
+        "locks": [],
+        "uniqueId": "at"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "totem",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "bloodmagik"
             }
@@ -706,7 +726,7 @@
         "name": "&c&lSacrificial Shrine",
         "coordinates": {
             "x": 8,
-            "y": 20
+            "y": 17
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -720,7 +740,7 @@
             "&7&nAura&7 will spend &f15&7 points of &bBlood Pool &4&l⚕",
             "&7to deal &f+35%&7 damage and heal all allies.",
             "",
-            "&c❤ &7Total Heal: &f25% &8(of your max health)",
+            "&c�?� &7Total Heal: &f25% &8(of your max health)",
             "",
             "&cUnlocking will block:",
             "&c- &7Regeneration",
@@ -738,18 +758,19 @@
         "id": "bloodPool",
         "locks": [
             "regeneration"
-        ]
+        ],
+        "uniqueId": "au"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 2
+            "NODE": "aura",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&d&lRebound",
         "coordinates": {
             "x": 8,
-            "y": 22
+            "y": 19
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -775,18 +796,19 @@
         ],
         "slot": 34,
         "id": "rebound",
-        "locks": []
+        "locks": [],
+        "uniqueId": "av"
     },
     {
         "requirements": {
-            "node": "naturejolt",
-            "abilityPoints": 2
+            "NODE": "naturejolt",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lStagnation",
         "coordinates": {
             "x": 1,
-            "y": 22
+            "y": 19
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -798,7 +820,7 @@
             "&7will be slowed down.",
             "",
             "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             "",
             "&7Ability Points: &f2",
             "&7Required Ability: &fNature's Jolt"
@@ -809,18 +831,19 @@
         ],
         "slot": 27,
         "id": "stagnation",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aw"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 1
+            "NODE": "aura",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Aura",
         "coordinates": {
             "x": 3,
-            "y": 22
+            "y": 19
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -843,18 +866,19 @@
         ],
         "slot": 29,
         "id": "auraCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ax"
     },
     {
         "requirements": {
-            "node": "maskOfTheLunatic",
-            "abilityPoints": 2
+            "NODE": "maskOfTheLunatic",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&d&lHaunting Memory",
         "coordinates": {
             "x": 4,
-            "y": 23
+            "y": 20
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -868,12 +892,12 @@
             "&7the effects of your &bMask&7 until it returns.",
             " ",
             "&c⚔ &7Total Damage: &f240% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8240%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8240%&8)",
             "&2➼ &7Range: &f14 Blocks",
             "&e🛡 &7Effects: &f-15%&f &7Damage Bonus (&c⚔&7) to Enemies &8(from Lunatic)",
-            "   &f-15% &7Resistance Bonus (&c✃&7) to Enemies &8(from Fanatic)",
-            "   &f+30% &7Slowness (&c⬤&7) to Enemies &8(from Coward)",
-            "&d⌛ &7Duration: &f4s",
+            "  ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ &f-15% &7Resistance Bonus (&c✃&7) to Enemies &8(from Fanatic)",
+            "  ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ &f+30% &7Slowness (&c⬤&7) to Enemies &8(from Coward)",
+            "&d⌛À &7Duration: &f4s",
             " ",
             "&a&lRitualist Archetype",
             " ",
@@ -883,13 +907,14 @@
         "links": null,
         "slot": 39,
         "id": "hauntingMemory",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ay"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "ritualist"
             }
@@ -898,7 +923,7 @@
         "name": "&c&lMask of the Lunatic",
         "coordinates": {
             "x": 5,
-            "y": 20
+            "y": 17
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -916,7 +941,7 @@
             "",
             "&b✺ &7Mana Cost: &f-30%",
             "&e🛡 &7Effects: &f+35% &7Damage Bonus to Self",
-            "   &c-20%&f &7Resistance Bonus to Self",
+            "  ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ &c-20%&f &7Resistance Bonus to Self",
             "",
             "&a&lRitualist Archetype",
             " ",
@@ -929,18 +954,19 @@
         ],
         "slot": 13,
         "id": "maskOfTheLunatic",
-        "locks": []
+        "locks": [],
+        "uniqueId": "az"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 1
+            "NODE": "uproot",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Uproot",
         "coordinates": {
             "x": 5,
-            "y": 22
+            "y": 19
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -964,18 +990,19 @@
         ],
         "slot": 31,
         "id": "uprootCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ba"
     },
     {
         "requirements": {
-            "node": "puppetMaster",
-            "abilityPoints": 1
+            "NODE": "puppetMaster",
+            "ABILITY_POINTS": 1
         },
         "archetype": "summoner",
         "name": "&f&lMore Puppets",
         "coordinates": {
             "x": 2,
-            "y": 23
+            "y": 20
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -995,18 +1022,19 @@
         ],
         "slot": 37,
         "id": "morePuppets",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bb"
     },
     {
         "requirements": {
-            "node": "haul",
-            "abilityPoints": 2
+            "NODE": "haul",
+            "ABILITY_POINTS": 2
         },
         "archetype": "bloodmagik",
         "name": "&6&lBlood Connection",
         "coordinates": {
             "x": 9,
-            "y": 23
+            "y": 20
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1027,13 +1055,14 @@
         ],
         "slot": 44,
         "id": "bloodConnection",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bc"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "totem",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "summoner"
             }
@@ -1042,7 +1071,7 @@
         "name": "&c&lPuppet Master",
         "coordinates": {
             "x": 2,
-            "y": 20
+            "y": 17
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1055,10 +1084,10 @@
             "at nearby enemies every &f0.5s&7.",
             "",
             "&c⚔ &7Total Damage: &f20% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &816%&8)",
-            "  &8(&f❋ &8Air: &82%&8)",
-            "  &8(&2✤ &8Earth: &82%&8)",
-            "&d⌛ &7Duration: &f30s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &816%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &82%&8)",
+            "  ÀÀÀÀ&8(&2✤ &8Earth: &82%&8)",
+            "&d⌛À &7Duration: &f30s",
             "&2➼ &7Range: &f16 Blocks",
             " ",
             "&6&lSummoner Archetype",
@@ -1072,18 +1101,19 @@
         ],
         "slot": 10,
         "id": "puppetMaster",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bd"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 1
+            "NODE": "totem",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lBetter Totem",
         "coordinates": {
             "x": 6,
-            "y": 23
+            "y": 20
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1101,17 +1131,18 @@
         "links": null,
         "slot": 41,
         "id": "totemRange",
-        "locks": []
+        "locks": [],
+        "uniqueId": "be"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lRegeneration",
         "coordinates": {
             "x": 4,
-            "y": 30
+            "y": 26
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1122,7 +1153,7 @@
             "&7Every &f0.4s&7, your &nTotem&7 will heal",
             "&7every player within its range.",
             " ",
-            "&c❤ &7Total Heal: &f1% &8(of your max health)",
+            "&c�?� &7Total Heal: &f1% &8(of your max health)",
             "",
             "&cUnlocking will block:",
             "&c- &7Sacrificial Shrine",
@@ -1136,13 +1167,14 @@
         "id": "regeneration",
         "locks": [
             "bloodPool"
-        ]
+        ],
+        "uniqueId": "bf"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "aura",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 2,
                 "name": "summoner"
             }
@@ -1151,7 +1183,7 @@
         "name": "&6&lDouble Totem",
         "coordinates": {
             "x": 1,
-            "y": 29
+            "y": 25
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1177,18 +1209,19 @@
         ],
         "slot": 36,
         "id": "doubleTotem",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bg"
     },
     {
         "requirements": {
-            "node": "bloodPool",
-            "abilityPoints": 1
+            "NODE": "bloodPool",
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lLarger Blood Pool",
         "coordinates": {
             "x": 8,
-            "y": 26
+            "y": 22
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1210,17 +1243,18 @@
         ],
         "slot": 16,
         "id": "moreBloodPool",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bh"
     },
     {
         "requirements": {
-            "abilityPoints": 1
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lBlood Moon",
         "coordinates": {
             "x": 9,
-            "y": 29
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1240,18 +1274,19 @@
         ],
         "slot": 44,
         "id": "bloodMoon",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bi"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2
         },
         "archetype": "summoner",
         "name": "&d&lBullwhip",
         "coordinates": {
             "x": 1,
-            "y": 27
+            "y": 23
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1266,7 +1301,7 @@
             "&7additional damage to them.",
             "",
             "&e🛡 &7Effect: &f+20% &7Damage Bonus to Summons",
-            "&d⌛ &7Duration: &f10s",
+            "&d⌛À &7Duration: &f10s",
             "",
             "&6&lSummoner Archetype",
             " ",
@@ -1278,18 +1313,19 @@
         ],
         "slot": 18,
         "id": "summonFocus",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bj"
     },
     {
         "requirements": {
-            "node": "puppetMaster",
-            "abilityPoints": 2
+            "NODE": "puppetMaster",
+            "ABILITY_POINTS": 2
         },
         "archetype": "summoner",
         "name": "&6&lExploding Puppets",
         "coordinates": {
             "x": 2,
-            "y": 26
+            "y": 22
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1302,8 +1338,8 @@
             "&7at high speed and explode.",
             "",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8150%&8)",
-            "  &8(&c✹ &8Fire: &850%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
+            "  ÀÀÀÀ&8(&c✹ &8Fire: &850%&8)",
             "&3☀ &7Area of Effect: &f3 Blocks &7(Circle-Shaped)",
             "",
             "&6&lSummoner Archetype",
@@ -1317,18 +1353,19 @@
         ],
         "slot": 10,
         "id": "explodingPuppet",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bk"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 1
+            "NODE": "totem",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Totem",
         "coordinates": {
             "x": 3,
-            "y": 29
+            "y": 25
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1352,18 +1389,19 @@
         ],
         "slot": 38,
         "id": "totemCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bl"
     },
     {
         "requirements": {
-            "node": "haul",
-            "abilityPoints": 1
+            "NODE": "haul",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Haul",
         "coordinates": {
             "x": 7,
-            "y": 30
+            "y": 26
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1381,17 +1419,18 @@
         "links": null,
         "slot": 51,
         "id": "haulCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bm"
     },
     {
         "requirements": {
-            "abilityPoints": 2
+            "ABILITY_POINTS": 2
         },
         "archetype": "bloodmagik",
         "name": "&6&lVengeful Spirit",
         "coordinates": {
             "x": 9,
-            "y": 27
+            "y": 23
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1414,18 +1453,19 @@
         ],
         "slot": 26,
         "id": "vengefulspirit",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bn"
     },
     {
         "requirements": {
-            "node": "morePuppets",
-            "abilityPoints": 1
+            "NODE": "morePuppets",
+            "ABILITY_POINTS": 1
         },
         "archetype": "summoner",
         "name": "&f&lMore Puppets",
         "coordinates": {
             "x": 3,
-            "y": 27
+            "y": 23
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1445,18 +1485,19 @@
         ],
         "slot": 20,
         "id": "morePuppets2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bo"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 2
+            "NODE": "aura",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&6&lStorm Dance",
         "coordinates": {
             "x": 6,
-            "y": 29
+            "y": 25
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1468,7 +1509,7 @@
             "&7pulled towards your totem.",
             "",
             "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
-            "  &8(&f❋ &8Air: &8+30%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &8+30%&8)",
             "",
             "&a&lRitualist Archetype",
             " ",
@@ -1485,18 +1526,19 @@
         ],
         "slot": 41,
         "id": "auraPull",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bp"
     },
     {
         "requirements": {
-            "node": "maskOfTheLunatic",
-            "abilityPoints": 2
+            "NODE": "maskOfTheLunatic",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&d&lHymn of Hate",
         "coordinates": {
             "x": 5,
-            "y": 26
+            "y": 22
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1519,12 +1561,13 @@
         ],
         "slot": 13,
         "id": "hymnOfHate",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bq"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "ritualist"
             }
@@ -1533,7 +1576,7 @@
         "name": "&c&lMask of the Fanatic",
         "coordinates": {
             "x": 6,
-            "y": 27
+            "y": 23
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1551,7 +1594,7 @@
             "",
             "&b✺ &7Mana Cost: &f-65%",
             "&e🛡 &7Effects: &f+35% &7Resistance to Self",
-            "   &c-35%&7 Walk Speed to Self",
+            "  ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ &c-35%&7 Walk Speed to Self",
             "",
             "&a&lRitualist Archetype",
             " ",
@@ -1565,18 +1608,19 @@
         ],
         "slot": 23,
         "id": "maskOfTheFanatic",
-        "locks": []
+        "locks": [],
+        "uniqueId": "br"
     },
     {
         "requirements": {
-            "node": "maskOfTheLunatic",
-            "abilityPoints": 1
+            "NODE": "maskOfTheLunatic",
+            "ABILITY_POINTS": 1
         },
         "archetype": "ritualist",
         "name": "&f&lMasquerade",
         "coordinates": {
             "x": 5,
-            "y": 28
+            "y": 24
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1598,18 +1642,19 @@
         ],
         "slot": 31,
         "id": "maskRotation",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bs"
     },
     {
         "requirements": {
-            "node": "totem",
-            "abilityPoints": 1
+            "NODE": "totem",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lStronger Totem",
         "coordinates": {
             "x": 5,
-            "y": 32
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1620,7 +1665,7 @@
             "&7Increase &nTotem&7's damage.",
             "",
             "&c⚔ &7Total Damage: &f+4% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+4%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+4%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fTotem"
@@ -1633,18 +1678,19 @@
         ],
         "slot": 13,
         "id": "auraDamage1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bt"
     },
     {
         "requirements": {
-            "node": "maskOfTheFanatic",
-            "abilityPoints": 2
+            "NODE": "maskOfTheFanatic",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&d&lTotemic Shatter",
         "coordinates": {
             "x": 4,
-            "y": 33
+            "y": 29
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1668,12 +1714,13 @@
         "links": null,
         "slot": 21,
         "id": "totemicShatter",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bu"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 7,
                 "name": "ritualist"
             }
@@ -1682,7 +1729,7 @@
         "name": "&c&lMask of the Coward",
         "coordinates": {
             "x": 5,
-            "y": 34
+            "y": 30
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1700,7 +1747,7 @@
             "",
             "&b✺ &7Mana Cost: &f-50%",
             "&e🛡 &7Effects: &f+80% &7Walk Speed to Self",
-            "   &c-10%&f &7Damage Bonus to Self",
+            "  ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ &c-10%&f &7Damage Bonus to Self",
             "",
             "&a&lRitualist Archetype",
             " ",
@@ -1714,13 +1761,14 @@
         ],
         "slot": 31,
         "id": "maskOfTheCoward",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bv"
     },
     {
         "requirements": {
-            "node": "bloodPool",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "bloodPool",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 9,
                 "name": "bloodmagik"
             }
@@ -1729,7 +1777,7 @@
         "name": "&d&lBlood Rite",
         "coordinates": {
             "x": 8,
-            "y": 35
+            "y": 31
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -1754,18 +1802,19 @@
         ],
         "slot": 43,
         "id": "tankBloodPool",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bw"
     },
     {
         "requirements": {
-            "node": "maskOfTheCoward",
-            "abilityPoints": 2
+            "NODE": "maskOfTheCoward",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&6&lChant of the Coward",
         "coordinates": {
             "x": 6,
-            "y": 35
+            "y": 31
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -1777,7 +1826,7 @@
             "&7damage and knock nearby enemies away.",
             "",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8200%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8200%&8)",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             "",
             "&a&lRitualist Archetype",
@@ -1791,12 +1840,13 @@
         ],
         "slot": 41,
         "id": "chantOfTheCoward",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bx"
     },
     {
         "requirements": {
-            "abilityPoints": 2,
-            "archetype": {
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 7,
                 "name": "bloodmagik"
             }
@@ -1805,7 +1855,7 @@
         "name": "&c&lTwisted Tether",
         "coordinates": {
             "x": 8,
-            "y": 32
+            "y": 28
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1821,10 +1871,10 @@
             "&7every &f2%&7 Health you lose. (Max 20%)",
             " ",
             "&c⚔ &7Total Damage: &f35% &8(of your DPS, per 2% health)",
-            "  &8(&6✢ &8Damage: &825%&8)",
-            "  &8(&f❋ &8Air: &810%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
             "&2➼ &7Range: &f24 Blocks",
-            "&d⌛ &7Duration: &f5s",
+            "&d⌛À &7Duration: &f5s",
             "",
             "&c&lAcolyte Archetype",
             " ",
@@ -1838,18 +1888,19 @@
         ],
         "slot": 16,
         "id": "tether",
-        "locks": []
+        "locks": [],
+        "uniqueId": "by"
     },
     {
         "requirements": {
-            "node": "bloodPool",
-            "abilityPoints": 1
+            "NODE": "bloodPool",
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lLarger Blood Pool",
         "coordinates": {
             "x": 9,
-            "y": 34
+            "y": 30
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1870,13 +1921,14 @@
         ],
         "slot": 35,
         "id": "moreBloodPool2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bz"
     },
     {
         "requirements": {
-            "node": "maskRotation",
-            "abilityPoints": 1,
-            "archetype": {
+            "NODE": "maskRotation",
+            "ABILITY_POINTS": 1,
+            "ARCHETYPE": {
                 "amount": 6,
                 "name": "ritualist"
             }
@@ -1885,7 +1937,7 @@
         "name": "&f&lDepersonalization",
         "coordinates": {
             "x": 6,
-            "y": 33
+            "y": 29
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1909,18 +1961,19 @@
         ],
         "slot": 23,
         "id": "betterMasquerade",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ca"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 1
+            "NODE": "aura",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Aura",
         "coordinates": {
             "x": 2,
-            "y": 32
+            "y": 28
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -1942,13 +1995,14 @@
         ],
         "slot": 10,
         "id": "auraCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cb"
     },
     {
         "requirements": {
-            "node": "overseer",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "overseer",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 8,
                 "name": "summoner"
             }
@@ -1957,7 +2011,7 @@
         "name": "&c&lCrimson Effigy",
         "coordinates": {
             "x": 2,
-            "y": 34
+            "y": 30
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -1971,9 +2025,9 @@
             "&7and push them towards your &7&nTotem&7.",
             "",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &875%&8)",
-            "  &8(&b❉ &8Water: &825%&8)",
-            "&d⌛ &7Duration: &f60s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &875%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &825%&8)",
+            "&d⌛À &7Duration: &f60s",
             "",
             "&6&lSummoner Archetype",
             " ",
@@ -1987,18 +2041,19 @@
         ],
         "slot": 28,
         "id": "jungleSlayer",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cc"
     },
     {
         "requirements": {
-            "node": "bloodPool",
-            "abilityPoints": 2
+            "NODE": "bloodPool",
+            "ABILITY_POINTS": 2
         },
         "archetype": "",
         "name": "&6&lFluid Healing",
         "coordinates": {
             "x": 7,
-            "y": 34
+            "y": 30
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2007,7 +2062,7 @@
         "description": [
             " ",
             "&7Increases &nAura&7's healing by &f+0.3%&7 for",
-            "&7every &f1% &b❉ &7Water Damage Bonus you",
+            "&7every &f1% &b�?� &7Water Damage Bonus you",
             "&7have from items.",
             " ",
             "&7Ability Points: &f2",
@@ -2020,18 +2075,19 @@
         ],
         "slot": 33,
         "id": "sharpHealing",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cd"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2
         },
         "archetype": "summoner",
         "name": "&6&lMaddening Roots",
         "coordinates": {
             "x": 1,
-            "y": 35
+            "y": 31
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2042,7 +2098,7 @@
             "&7&nUproot&7 will slow down enemies.",
             "",
             "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             "",
             "&6&lSummoner Archetype",
             " ",
@@ -2054,18 +2110,19 @@
         ],
         "slot": 36,
         "id": "maddeningRoots",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ce"
     },
     {
         "requirements": {
-            "node": "tether",
-            "abilityPoints": 1
+            "NODE": "tether",
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lStronger Tether",
         "coordinates": {
             "x": 8,
-            "y": 38
+            "y": 33
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2076,7 +2133,7 @@
             "&7Increase &nTwisted Tether&7's damage.",
             " ",
             "&c⚔ &7Total Damage: &f+15% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8+15%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+15%&8)",
             "",
             "&c&lAcolyte Archetype",
             " ",
@@ -2089,18 +2146,19 @@
         ],
         "slot": 16,
         "id": "strongerTether",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cf"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 1
+            "NODE": "uproot",
+            "ABILITY_POINTS": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Uproot",
         "coordinates": {
             "x": 4,
-            "y": 42
+            "y": 37
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2120,13 +2178,14 @@
         ],
         "slot": 48,
         "id": "uprootCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cg"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 11,
                 "name": "ritualist"
             }
@@ -2135,7 +2194,7 @@
         "name": "&d&lAwakened",
         "coordinates": {
             "x": 6,
-            "y": 42
+            "y": 37
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2162,18 +2221,19 @@
         ],
         "slot": 50,
         "id": "maskOfTheAwakened",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ch"
     },
     {
         "requirements": {
-            "node": "bloodPool",
-            "abilityPoints": 1
+            "NODE": "bloodPool",
+            "ABILITY_POINTS": 1
         },
         "archetype": "bloodmagik",
         "name": "&f&lLarger Blood Pool",
         "coordinates": {
             "x": 9,
-            "y": 40
+            "y": 35
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2193,18 +2253,19 @@
         ],
         "slot": 35,
         "id": "moreBloodPool3",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ci"
     },
     {
         "requirements": {
-            "node": "maskOfTheCoward",
-            "abilityPoints": 1
+            "NODE": "maskOfTheCoward",
+            "ABILITY_POINTS": 1
         },
         "archetype": "ritualist",
         "name": "&f&lSeeking Totem",
         "coordinates": {
             "x": 5,
-            "y": 39
+            "y": 34
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2226,13 +2287,14 @@
         ],
         "slot": 22,
         "id": "seekingTotem",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cj"
     },
     {
         "requirements": {
-            "node": "puppetMaster",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "puppetMaster",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 12,
                 "name": "summoner"
             }
@@ -2241,7 +2303,7 @@
         "name": "&c&lShepherd",
         "coordinates": {
             "x": 2,
-            "y": 41
+            "y": 36
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2263,13 +2325,14 @@
         ],
         "slot": 37,
         "id": "shepherd",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ck"
     },
     {
         "requirements": {
-            "node": "uproot",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "uproot",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 12,
                 "name": "bloodmagik"
             }
@@ -2278,7 +2341,7 @@
         "name": "&c&lBlood Sorrow",
         "coordinates": {
             "x": 8,
-            "y": 41
+            "y": 36
         },
         "sprite": {
             "normal": "275_57.svg",
@@ -2296,13 +2359,13 @@
             "&8while in this state)",
             "",
             "&7You and any allies within the beam will",
-            "&7receive &f+2%&7 &bOverhealth &6❤ &7per hit.",
+            "&7receive &f+2%&7 &bOverhealth &6�?� &7per hit.",
             "&7Bonus health decays over &f10s&7.",
             "",
             "&c⚔ &7Total Damage: &f160% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8130%&8)",
-            "  &8(&b❉ &8Water: &830%&8)",
-            "&d⌛ &7Duration: &f4s",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8130%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &830%&8)",
+            "&d⌛À &7Duration: &f4s",
             "&2➼ &7Range: &f24 Blocks",
             "",
             "&c&lAcolyte Archetype",
@@ -2316,13 +2379,14 @@
         ],
         "slot": 43,
         "id": "bloodLament",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cl"
     },
     {
         "requirements": {
-            "node": "maskOfTheFanatic",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "maskOfTheFanatic",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 9,
                 "name": "ritualist"
             }
@@ -2331,7 +2395,7 @@
         "name": "&6&lChant of the Fanatic",
         "coordinates": {
             "x": 6,
-            "y": 38
+            "y": 33
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2344,7 +2408,7 @@
             "&7resistance buff. (8s Cooldown)",
             "",
             "&e🛡 &7Effect: &f70% &7Resistance Bonus to Allies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             "",
             "&a&lRitualist Archetype",
@@ -2360,13 +2424,14 @@
         ],
         "slot": 14,
         "id": "chantOfTheFanatic",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cm"
     },
     {
         "requirements": {
-            "node": "aura",
-            "abilityPoints": 2,
-            "archetype": {
+            "NODE": "aura",
+            "ABILITY_POINTS": 2,
+            "ARCHETYPE": {
                 "amount": 3,
                 "name": "summoner"
             }
@@ -2375,7 +2440,7 @@
         "name": "&d&lInvigorating Wave",
         "coordinates": {
             "x": 3,
-            "y": 39
+            "y": 34
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2388,7 +2453,7 @@
             "&7Players hit will gain &f+5&7 mana.",
             "",
             "&e🛡 &7Effect: &f+30% &7Attack Speed to Summons",
-            "&d⌛ &7Duration: &f2.5s",
+            "&d⌛À &7Duration: &f2.5s",
             "",
             "&6&lSummoner Archetype",
             " ",
@@ -2403,13 +2468,14 @@
         ],
         "slot": 20,
         "id": "invigoratingWave",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cn"
     },
     {
         "requirements": {
-            "node": "jungleSlayer",
-            "abilityPoints": 1,
-            "archetype": {
+            "NODE": "jungleSlayer",
+            "ABILITY_POINTS": 1,
+            "ARCHETYPE": {
                 "amount": 8,
                 "name": "summoner"
             }
@@ -2418,7 +2484,7 @@
         "name": "&f&lMore Effigies",
         "coordinates": {
             "x": 2,
-            "y": 38
+            "y": 33
         },
         "sprite": {
             "normal": "275_45.svg",
@@ -2429,8 +2495,8 @@
             "&7Increase your maximum &bEffigies&7 by &f+1&7.",
             "",
             "&c⚔ &7Total Damage: &c-20% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8-10%&8)",
-            "  &8(&b❉ &8Water: &8-10%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-10%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &8-10%&8)",
             "",
             "&6&lSummoner Archetype",
             " ",
@@ -2444,18 +2510,19 @@
         ],
         "slot": 10,
         "id": "moreJungleSlayer",
-        "locks": []
+        "locks": [],
+        "uniqueId": "co"
     },
     {
         "requirements": {
-            "node": "maskOfTheLunatic",
-            "abilityPoints": 2
+            "NODE": "maskOfTheLunatic",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&6&lChant of the Lunatic",
         "coordinates": {
             "x": 5,
-            "y": 41
+            "y": 36
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2467,7 +2534,7 @@
             "&7the defenses of nearby enemies. (8s Cooldown)",
             "",
             "&e🛡 &7Effect: &f-15% &7Resistance Bonus (&c✃&7) to Enemies",
-            "&d⌛ &7Duration: &f3s",
+            "&d⌛À &7Duration: &f3s",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             "",
             "&a&lRitualist Archetype",
@@ -2478,18 +2545,19 @@
         "links": null,
         "slot": 40,
         "id": "chantOfTheLunatic",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cp"
     },
     {
         "requirements": {
-            "node": "doubleTotem",
-            "abilityPoints": 2
+            "NODE": "doubleTotem",
+            "ABILITY_POINTS": 2
         },
         "archetype": "summoner",
         "name": "&6&lTriple Totem",
         "coordinates": {
             "x": 1,
-            "y": 39
+            "y": 34
         },
         "sprite": {
             "normal": "275_49.svg",
@@ -2513,18 +2581,19 @@
         ],
         "slot": 18,
         "id": "tripleTotem",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cq"
     },
     {
         "requirements": {
-            "node": "maskOfTheCoward",
-            "abilityPoints": 2
+            "NODE": "maskOfTheCoward",
+            "ABILITY_POINTS": 2
         },
         "archetype": "ritualist",
         "name": "&d&lFrog Dance",
         "coordinates": {
             "x": 6,
-            "y": 40
+            "y": 35
         },
         "sprite": {
             "normal": "275_53.svg",
@@ -2538,8 +2607,8 @@
             "&7will deal damage to nearby enemies.",
             "",
             "&c⚔ &7Total Damage: &f150% &8(of your DPS)",
-            "  &8(&6✢ &8Damage: &8110%&8)",
-            "  &8(&b❉ &8Water: &840%&8)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &8110%&8)",
+            "  ÀÀÀÀ&8(&b�?� &8Water: &840%&8)",
             "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
             "",
             "&a&lRitualist Archetype",
@@ -2553,6 +2622,7 @@
         ],
         "slot": 32,
         "id": "hymnOfFreedom",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cr"
     }
 ]
