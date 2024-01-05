@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="mt-10 h-1/3">
-                <AbilityTree :clazz="'Mage/Dark Wizard'" :connectors="MAGE_CONNECTORS" :tree="MAGE_ABILITY_TREE"/>
+                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="abilityTree"/>
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@ export default {
 
         }
 
-        return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, MAGE_CONNECTORS,MAGE_ABILITY_TREE,SHAMAN_ABILITY_TREE,ARCHER_CONNECTORS,SHAMAN_CONNECTORS, WARRIOR_ABILITY_TREE, ARCHER_ABILITY_TREE,ASSASSIN_CONNECTORS,ASSASSIN_ABILITY_TREE, WARRIOR_CONNECTORS, abilityTree, treeConnectors, handleWeaponChanged}
+        return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged}
     },
     components: { AppsSidebar, ItemSelector, AbilityTree, AbilityTree }
 }

@@ -25,11 +25,14 @@
               @change="query = $event.target.value" :displayValue="(item: any) => {
                 return item === null || item === undefined || item.name === undefined ? '' : item.name
               }" />
-            <ComboboxOptions class="absolute z-30 flex flex-col align-middle">
+            <ComboboxOptions class="absolute overflow-y-scroll hide-scroll h-96 z-30 flex flex-col align-middle">
               <ComboboxOption v-for="(item, i) in filteredItems" :key="item.id" :value="item">
                 <div v-bind:class="{ 'border-b-0': i != filteredItems.length - 1, 'border-t-0': i != 0 }"
-                  class="cursor-pointer p-1 px-2 bg-mc-bg text-white w-full border-[1px] border-purple-600 hover:bg-purple-900">
-                  {{ item.name }}
+                  class="flex gap-x-2 cursor-pointer p-1 px-2 bg-mc-bg text-white w-full border-[1px] border-purple-600 hover:bg-purple-900">
+                  <div class="w-6 h-6 my-auto">
+                    <ItemIcon :item="item" />
+                  </div>
+                  <span>{{ item.name }}</span>
                 </div>
               </ComboboxOption>
             </ComboboxOptions>
@@ -39,11 +42,11 @@
           class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "/>
         <input v-else-if="rollType == 'specific'" :v-model="specificRoll" 
           class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "/>
-        <div>
-          <input :v-model="powders" class="outline-none bg-mc-bg text-white text-sm px-2 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
+        <div v-if="!isAccessory(type as ItemType)">
+          <input :v-model="powders" placeholder="Powder pattern: t6 f5 w4 a3 e2" class="outline-none bg-mc-bg text-white text-sm px-2 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
         </div>
         <div class="w-fit mt-2">
-          <RadioGroup v-model="rollType" class="text-white w-full gap-x-4 flex text-xs">
+          <RadioGroup  v-model="rollType" class="text-white w-full gap-x-4 flex text-xs">
             <RadioGroupOption v-for="type in Object.values(ItemRollType)" v-slot="{ checked }" :value="type">
               <div class="flex gap-x-2">
                 <div class="h-[16px] w-[16px] border-mc-aqua border-[1px]">
@@ -61,12 +64,13 @@
 
 <script lang="ts">
 
-import { Ref, computed, ref } from 'vue';
+import { Ref, computed, ref, watch } from 'vue';
 import ItemTypeIcon from '../ItemTypeIcon.vue';
 import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions, RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue';
 import { ItemRollType, ItemType, getItemsOf, getWeapons } from '../../scripts/util';
 import { WynnBaseItem, WynnItem } from '../../model/item';
 import ItemIcon from '../ItemIcon.vue';
+import { isAccessory } from '../../scripts/crafter';
 
 export default {
   name: 'ItemSelector',
@@ -97,7 +101,11 @@ export default {
           return i.name.toLowerCase().includes(query.value.toLowerCase())
         }).slice(0, 20));
 
-    return { selectedItem, filteredItems, query, type, rollType,specificRoll, emit,powders,recipeHash, ItemRollType, handleUpdate }
+    watch(rollType, () => {
+      selectedItem.value = null;
+    })
+
+    return { selectedItem, filteredItems, query, type, rollType,specificRoll, emit,isAccessory,powders,recipeHash, ItemRollType, handleUpdate }
   },
   components: { ItemTypeIcon, Combobox, ComboboxInput, ComboboxOptions, ComboboxOption, ItemIcon, RadioGroup, RadioGroupLabel, RadioGroupOption }
 }

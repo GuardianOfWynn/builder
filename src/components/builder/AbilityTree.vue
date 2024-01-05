@@ -1,6 +1,6 @@
 <template>
-    <div v-if="abilityTree === undefined">
-
+    <div v-if="baseTree === undefined" class="text-white text-2xl">
+        Ability tree unavailable: No weapon selected
     </div>
     <div v-else class="flex gap-x-8 h-full">
         <div :class="[tree === undefined? 'w-1/3' : 'w-fit']"
@@ -17,7 +17,7 @@
                                 @mouseleave="onHover(undefined)" @click="toggleNode(getNodeFor(j, i)!)"
                                 class="cursor-pointer">
                                 <img class="w-10 h-10 object-fill scale-125 pixelated"
-                                    v-if="abilityTree.nodes.some(a => a.coordinates.x == j && a.coordinates.y == i)"
+                                    v-if="abilityTree!.nodes.some(a => a.coordinates.x == j && a.coordinates.y == i)"
                                     :src="'/builder/sprites/abilitytree/' + getNodeFor(j, i)!.sprite.activated" />
                                 <img class="w-10 h-10 object-fill scale-125"
                                     :class="[availableNodes.some(a => a.coordinates.x === j && a.coordinates.y === i) ? 'opacity-100' : 'opacity-50']"
