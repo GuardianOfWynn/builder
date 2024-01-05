@@ -1,878 +1,2685 @@
 [
     {
-        "id": 0,
-        "cost": 1,
-        "sprite": 0,
-        "name": "Bash",
-        "child": [1],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 1
+        "name": "&a&lBash",
+        "coordinates": {
+            "x": 5,
+            "y": 1
+        },
+        "sprite": {
+            "normal": "275_61.svg",
+            "activated": "275_61_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lRIGHT",
+            " ",
+            "&7Violently bash the ground, dealing",
+            "&7high damage in a large area.",
+            " ",
+            "&b✺ &7Mana Cost: &f40",
+            "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&2✤ &8Earth: &830%&8)",
+            "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
+            "&2➼ &7Range: &f3 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "spearProficiency"
+        ],
+        "slot": 4,
+        "id": "bash",
+        "locks": [],
+        "uniqueId": "ac"
     },
     {
-        "id": 1,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Spear Proficiency I",
-        "child": [0,2,3],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 2
+        "name": "&f&lSpear Proficiency I",
+        "coordinates": {
+            "x": 5,
+            "y": 3
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Improve your &nMain Attack&7's damage",
+            "&7and range when using a spear.",
+            " ",
+            "&c⚔ &7Main Attack Damage: &f+5%",
+            "&2➼ &7Main Attack Range: &f+1 Block",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "bashCost1",
+            "doubleBash"
+        ],
+        "slot": 22,
+        "id": "spearProficiency",
+        "locks": [],
+        "uniqueId": "aa"
     },
     {
-        "id": 2,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper Bash",
-        "child": [1],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 2
+        "name": "&6&lDouble Bash",
+        "coordinates": {
+            "x": 5,
+            "y": 5
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nBash&7 will hit a second",
+            "&7time at a farther range.",
+            " ",
+            "&c⚔ &7Total Damage: &c-40% &8(of your DPS, per bash)",
+            "  &8(&6✢ &8Damage: &8-40%&8)",
+            "&2➼ &7Range: &f+3 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "charge"
+        ],
+        "slot": 40,
+        "id": "doubleBash",
+        "locks": [],
+        "uniqueId": "ab"
     },
     {
-        "id": 3,
-        "cost": 1,
-        "sprite": 2,
-        "name": "Double Bash",
-        "child": [1,4],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "bash",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 3
+        "name": "&f&lCheaper Bash",
+        "coordinates": {
+            "x": 3,
+            "y": 3
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nBash&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-10",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fBash"
+        ],
+        "links": null,
+        "slot": 20,
+        "id": "bashCost1",
+        "locks": [],
+        "uniqueId": "ad"
     },
     {
-        "id": 4,
-        "cost": 1,
-        "sprite": 0,
-        "name": "Charge",
-        "child": [3,5,6],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "berserker",
+        "name": "&f&lVehement",
+        "coordinates": {
+            "x": 3,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "For every &f1%&7 or &f1 Raw&7 Main",
+            "Attack Damage you have from items,",
+            "gain &f+2%&7 Walk Speed (Max 20%)",
+            "",
+            "&c⚔ &7Damage Bonus: &f+5 &7(Raw)",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Tougher Skin",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "uppercut"
+        ],
+        "slot": 11,
+        "id": "chaser",
+        "locks": [
+            "tougherSkin"
+        ],
+        "uniqueId": "ae"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 4
+        "name": "&a&lCharge",
+        "coordinates": {
+            "x": 5,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_61.svg",
+            "activated": "275_61_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lRIGHT&7-&d&lRIGHT",
+            " ",
+            "Charge forward at a high speed.",
+            "&8(Hold shift while charging to cancel)",
+            " ",
+            "&b✺ &7Mana Cost: &f25",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "chaser",
+            "tougherSkin"
+        ],
+        "slot": 13,
+        "id": "charge",
+        "locks": [],
+        "uniqueId": "af"
     },
     {
-        "id": 5,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Tougher Skin",
-        "child": [4,7],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 4
+        "name": "&a&lWar Scream",
+        "coordinates": {
+            "x": 7,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_61.svg",
+            "activated": "275_61_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lRIGHT&7-&d&lLEFT",
+            " ",
+            "Emits a roar that deals damage, pulls",
+            "nearby enemies and gives you and",
+            "nearby players resistance.",
+            " ",
+            "&b✺ &7Mana Cost: &f30",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &875%&8)",
+            "  &8(&c✹ &8Fire: &825%&8)",
+            "&e🛡 &7Effect: &f20% &7Resistance Bonus (&a❁&7) to Allies",
+            "&d⌛ &7Duration: &f30s",
+            "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "chargeCost1",
+            "warriorFirePath",
+            "warriorAirPath"
+        ],
+        "slot": 33,
+        "id": "warScream",
+        "locks": [],
+        "uniqueId": "ag"
     },
     {
-        "id": 6,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Vehement",
-        "child": [4,9],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 4
+        "name": "&a&lUppercut",
+        "coordinates": {
+            "x": 3,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_61.svg",
+            "activated": "275_61_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lLEFT",
+            " ",
+            "Hurls enemies upwards and",
+            "deal massive damage.",
+            " ",
+            "&b✺ &7Mana Cost: &f40",
+            "&c⚔ &7Total Damage: &f280% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8200%&8)",
+            "  &8(&2✤ &8Earth: &840%&8)",
+            "  &8(&e✦ &8Thunder: &840%&8)",
+            "&3☀ &7Area of Effect: &f1-3 Blocks &7(Cone-Shaped)",
+            "&2➼ &7Range: &f5 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "chargeCost1",
+            "warriorEarthPath",
+            "warriorThunderPath",
+            "heavyImpact"
+        ],
+        "slot": 29,
+        "id": "uppercut",
+        "locks": [],
+        "uniqueId": "ah"
     },
     {
-        "id": 7,
-        "cost": 1,
-        "sprite": 0,
-        "name": "War Scream",
-        "child": [5,8,13,14],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "charge",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 5
+        "name": "&f&lCheaper Charge",
+        "coordinates": {
+            "x": 5,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nCharge&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fCharge"
+        ],
+        "links": [
+            "warScream",
+            "warriorAirPath",
+            "warriorThunderPath",
+            "warriorWaterPath",
+            "uppercut"
+        ],
+        "slot": 31,
+        "id": "chargeCost1",
+        "locks": [],
+        "uniqueId": "ai"
     },
     {
-        "id": 8,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper Charge",
-        "child": [7,9,15],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "tank",
+        "name": "&f&lTougher Skin",
+        "coordinates": {
+            "x": 7,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Harden your skin and gain",
+            "&f+5% &7Base Defence.",
+            " ",
+            "&7For every &f1%&7 or &f1 Raw&7 Health Regen you have",
+            "from items, gain &f+10&7 Health (Max 100)",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Vehement",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "warScream"
+        ],
+        "slot": 15,
+        "id": "tougherSkin",
+        "locks": [
+            "chaser"
+        ],
+        "uniqueId": "aj"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 5
+        "name": "&6&lHeavy Impact",
+        "coordinates": {
+            "x": 2,
+            "y": 10
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7After using &nCharge&7, violently crash",
+            "&7down unto the ground and deal damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8120%&8)",
+            "&3☀ &7Area of Effect: &f4 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": null,
+        "slot": 37,
+        "id": "heavyImpact",
+        "locks": [],
+        "uniqueId": "ak"
     },
     {
-        "id": 9,
-        "cost": 1,
-        "sprite": 0,
-        "name": "Uppercut",
-        "child": [6,8,10,11,12],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "bash",
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&6&lQuadruple Bash",
+        "coordinates": {
+            "x": 1,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nBash&7 will cast 4 times consecutively",
+            "&7at double the speed.",
+            " ",
+            "&c⚔ &7Total Damage: &c-20% &8(of your DPS, per bash)",
+            "  &8(&6✢ &8Damage: &8-20%&8)",
+            "&2➼ &7Range: &f+6 Blocks",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fBash"
+        ],
+        "links": [
+            "uppercutGrade2",
+            "roarOfTheBerserker"
+        ],
+        "slot": 27,
+        "id": "quintupleBash",
+        "locks": [],
+        "uniqueId": "al"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "tank",
+        "name": "&f&lFire Mastery",
+        "coordinates": {
+            "x": 9,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Fire attacks.",
+            " ",
+            "&c✹ &7Fire Damage: &f+3-5",
+            "&c✹ &7Fire Damage: &f+15%",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "fireUppercut"
+        ],
+        "slot": 17,
+        "id": "warriorFirePath",
+        "locks": [],
+        "uniqueId": "am"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "berserker",
+        "name": "&f&lEarth Mastery",
+        "coordinates": {
+            "x": 1,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Earth attacks.",
+            " ",
+            "&2✤ &7Earth Damage: &f+2-4",
+            "&2✤ &7Earth Damage: &f+20%",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "quintupleBash"
+        ],
+        "slot": 9,
+        "id": "warriorEarthPath",
+        "locks": [],
+        "uniqueId": "an"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 5
+        "name": "&f&lFlyby Jab",
+        "coordinates": {
+            "x": 7,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Damages enemies in your",
+            "&7way when using &nCharge&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f120%",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
+            "&3☀ &7Area of Effect: &f2 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "gust",
+            "fireUppercut"
+        ],
+        "slot": 33,
+        "id": "flyby",
+        "locks": [],
+        "uniqueId": "ao"
     },
     {
-        "id": 10,
-        "cost": 1,
-        "sprite": 2,
-        "name": "Heavy Impact",
-        "child": [9,11],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "monk",
+        "name": "&f&lAir Mastery",
+        "coordinates": {
+            "x": 7,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Air attacks.",
+            " ",
+            "&f❋ &7Air Damage: &f+3-4",
+            "&f❋ &7Air Damage: &f+15%",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "flyby",
+            "warriorWaterPath",
+            "warriorThunderPath"
+        ],
+        "slot": 15,
+        "id": "warriorAirPath",
+        "locks": [],
+        "uniqueId": "ap"
+    },
+    {
+        "requirements": {
+            "node": "uppercut",
+            "abilityPoints": 2
+        },
+        "archetype": "tank",
+        "name": "&6&lFlaming Uppercut",
+        "coordinates": {
+            "x": 9,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nUppercut&7 will light mobs on fire,",
+            "&7dealing damage every &f0.6&7 seconds.",
+            " ",
+            "&c⚔ &7Total Damage: &f50% &8(of your DPS)",
+            "  &8(&c✹ &8Fire: &850%&8)",
+            "&d⌛ &7Duration: &f3s",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fUppercut"
+        ],
+        "links": [
+            "gust",
+            "flyby"
+        ],
+        "slot": 35,
+        "id": "fireUppercut",
+        "locks": [],
+        "uniqueId": "aq"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&6&lFireworks",
+        "coordinates": {
+            "x": 3,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Mobs hit by &nUppercut&7 will explode",
+            "&7mid-air and receive additional damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+80%&8)",
+            "  &8(&e✦ &8Thunder: &8+20%&8)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "quintupleBash",
+            "roarOfTheBerserker"
+        ],
+        "slot": 29,
+        "id": "uppercutGrade2",
+        "locks": [],
+        "uniqueId": "ar"
+    },
+    {
+        "requirements": {
+            "node": "uppercut",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 1,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&6&lHalf-Moon Swipe",
+        "coordinates": {
+            "x": 5,
+            "y": 16
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nUppercut&7 will deal a footsweep",
+            "&7attack at a longer and wider angle.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            "&c⚔ &7Total Damage: &c-40% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8-70%&8)",
+            "  &8(&b❉ &8Water: &8+30%&8)",
+            "&2➼ &7Range: &f+1.5 Blocks",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Battle Monk Archetype: &f1",
+            "&7Required Ability: &fUppercut"
+        ],
+        "links": [
+            "warscreamGrade2"
+        ],
+        "slot": 40,
+        "id": "worship",
+        "locks": [],
+        "uniqueId": "as"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "berserker",
+        "name": "&f&lThunder Mastery",
+        "coordinates": {
+            "x": 3,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Thunder attacks.",
+            " ",
+            "&e✦ &7Thunder Damage: &f+1-8",
+            "&e✦ &7Thunder Damage: &f+10%",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "uppercutGrade2",
+            "warriorWaterPath",
+            "warriorAirPath"
+        ],
+        "slot": 11,
+        "id": "warriorThunderPath",
+        "locks": [],
+        "uniqueId": "at"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "monk",
+        "name": "&f&lWater Mastery",
+        "coordinates": {
+            "x": 5,
+            "y": 14
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your damage",
+            "from all Water attacks.",
+            " ",
+            "&b❉ &7Water Damage: &f+2-4",
+            "&b❉ &7Water Damage: &f+15%",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "worship"
+        ],
+        "slot": 22,
+        "id": "warriorWaterPath",
+        "locks": [],
+        "uniqueId": "au"
+    },
+    {
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 1
+        },
+        "archetype": "tank",
+        "name": "&f&lIron Lungs",
+        "coordinates": {
+            "x": 8,
+            "y": 16
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nWar Scream&7 and &7&nAir Shout&7 will deal more damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f+60% &8(of your DPS, for &nWar Scream&8)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
+            "  &8(&f❋ &8Air: &8+30%&8)",
+            " ",
+            "&c⚔ &7Total Damage: &f+30% &8(of your DPS, for &nAir Shout&8)",
+            "  &8(&6✢ &8Damage: &8+15%&8)",
+            "  &8(&f❋ &8Air: &8+15%&8)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "shield"
+        ],
+        "slot": 43,
+        "id": "gust",
+        "locks": [],
+        "uniqueId": "av"
+    },
+    {
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 3,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&c&lMantle of the Bovemists",
+        "coordinates": {
+            "x": 8,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When casting &nWar Scream&7, create a holy",
+            "&7shield around you that reduces all incoming",
+            "&7damage by &f-70%&7 for &f3&7 hits. (25s Cooldown)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWar Scream",
+            "&7Min Paladin Archetype: &f3"
+        ],
+        "links": [
+            "provoke"
+        ],
+        "slot": 16,
+        "id": "shield",
+        "locks": [],
+        "uniqueId": "aw"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "monk",
+        "name": "&6&lAerodynamics",
+        "coordinates": {
+            "x": 6,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7During &nCharge&7, you can",
+            "steer and change direction.",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "uppercutCost1",
+            "provoke",
+            "counter",
+            "manachism"
+        ],
+        "slot": 32,
+        "id": "aerodynamics",
+        "locks": [],
+        "uniqueId": "ax"
+    },
+    {
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 2,
+                "name": "berserker"
+            }
+        },
+        "archetype": "berserker",
+        "name": "&c&lBak'al's Grasp",
+        "coordinates": {
+            "x": 2,
+            "y": 19
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Casting War Scream will make you",
+            "&bCorrupted &4☠&7. (15s Cooldown)",
+            "&8(Shift + War Scream to cancel)",
+            " ",
+            "&7While &bCorrupted &4☠&7, &7you lose the ability ",
+            "&7to &fheal, &7and every &f2% &7health you lose will",
+            "&7grant you &f+4&7 Raw Damage (Max 120)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Fallen Archetype: &f2",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "spearProficiency2"
+        ],
+        "slot": 19,
+        "id": "roarOfTheBerserker",
+        "locks": [],
+        "uniqueId": "ay"
+    },
+    {
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 2
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 6
+        "name": "&6&lProvoke",
+        "coordinates": {
+            "x": 8,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Mobs damaged by &nWar Scream&7 will target",
+            "&7only you for at least &f8s&7. (10s Cooldown)",
+            " ",
+            "&7Reduce the Mana cost of &nWar Scream&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "aerodynamics",
+            "manachism",
+            "sacredSurge"
+        ],
+        "slot": 34,
+        "id": "provoke",
+        "locks": [],
+        "uniqueId": "az"
     },
     {
-        "id": 11,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Earth Mastery",
-        "child": [9,10,16],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 7
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 3,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&c&lGeneralist",
+        "coordinates": {
+            "x": 3,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7After casting &f3&7 different spells",
+            "&7in a row, your next spell will cost &f1 &7Mana.",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Battle Monk Archetype: &f3"
+        ],
+        "links": null,
+        "slot": 11,
+        "id": "generalist",
+        "locks": [],
+        "uniqueId": "ba"
     },
     {
-        "id": 12,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Thunder Mastery",
-        "child": [9,11,13,15,46],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 7
-    },
-    {
-        "id": 13,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Air Mastery",
-        "child": [7,15,17],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 7
-    },
-    {
-        "id": 14,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Fire Mastery",
-        "child": [7,18],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 7
-    },
-    {
-        "id": 15,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Water Mastery",
-        "child": [8,12,13,19],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 8
-    },
-    {
-        "id": 16,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Quadruple Bash",
-        "child": [11,46,24],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 9
-    },
-    {
-        "id": 46,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Fireworks",
-        "child": [12,16,24],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 9
-    },
-    {
-        "id": 17,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Flyby Jab",
-        "child": [13,18,20],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 9
+        "name": "&f&lSpear Proficiency II",
+        "coordinates": {
+            "x": 1,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Improve your &nMain Attack&7's damage",
+            "&7and range when using a spear.",
+            " ",
+            "&c⚔ &7Main Attack Damage: &f+5%",
+            "&2➼ &7Range: &f+1 Block",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "enragedBlow",
+            "uppercutCost1",
+            "criticalHitDamage"
+        ],
+        "slot": 27,
+        "id": "spearProficiency2",
+        "locks": [],
+        "uniqueId": "bb"
     },
     {
-        "id": 18,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Flaming Uppercut",
-        "child": [14,17,20],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 9
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 2
+        },
+        "archetype": "monk",
+        "name": "&6&lAir Shout",
+        "coordinates": {
+            "x": 5,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nWar Scream&7 will fire a projectile that can",
+            "&7go through walls and deal damage multiple times.",
+            " ",
+            "&c⚔ &7Total Damage: &f50%",
+            "  &8(&6✢ &8Damage: &840%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
+            "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
+            "&2➼ &7Range: &f32 Blocks",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "generalist",
+            "uppercutCost1"
+        ],
+        "slot": 13,
+        "id": "warscreamGrade2",
+        "locks": [],
+        "uniqueId": "bc"
     },
     {
-        "id": 19,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Half-Moon Swipe",
-        "child": [15,22],
-        "blocks": [],
-        "required": [9],
-        "archetype": "Battle Monk",
-        "minArchetype": 1,
-        "depth": 10
-    },
-    {
-        "id": 20,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Iron Lungs",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 10
-    },
-    {
-        "id": 21,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Generalist",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 3,
-        "depth": 11
-    },
-    {
-        "id": 22,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Air Shout",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 11
-    },
-    {
-        "id": 23,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Mantle of the Bovemists",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 3,
-        "depth": 11
-    },
-    {
-        "id": 24,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Bak'al's Grasp",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 2,
-        "depth": 11
-    },
-    {
-        "id": 25,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Spear Proficiency II",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "uppercut",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 12
+        "name": "&f&lCheaper Uppercut",
+        "coordinates": {
+            "x": 4,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nUppercut&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fUppercut"
+        ],
+        "links": [
+            "spearProficiency2",
+            "counter",
+            "aerodynamics",
+            "tackle",
+            "criticalHitDamage"
+        ],
+        "slot": 30,
+        "id": "uppercutCost1",
+        "locks": [],
+        "uniqueId": "bd"
     },
     {
-        "id": 26,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper Uppercut",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 12
+        "name": "&f&lPrecise Strikes",
+        "coordinates": {
+            "x": 2,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&f+15% &7Critical Hit Damage",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": null,
+        "slot": 37,
+        "id": "criticalHitDamage",
+        "locks": [],
+        "uniqueId": "be"
     },
     {
-        "id": 27,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Aerodynamics",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 12
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "monk",
+        "name": "&6&lCounter",
+        "coordinates": {
+            "x": 5,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Gain a &f30%&7 chance to take no",
+            "&7damage and instantly attack back when",
+            "&7dodging an enemy attack with Agility.",
+            " ",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "manachism"
+        ],
+        "slot": 40,
+        "id": "counter",
+        "locks": [],
+        "uniqueId": "bf"
     },
     {
-        "id": 28,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Provoke",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 12
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 3,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&d&lManachism",
+        "coordinates": {
+            "x": 7,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7If you receive a hit that's less than &f5%&7",
+            "&7of your max HP, gain &f10&7 Mana. (1s Cooldown)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f3"
+        ],
+        "links": [
+            "counter"
+        ],
+        "slot": 42,
+        "id": "manachism",
+        "locks": [],
+        "uniqueId": "bg"
     },
     {
-        "id": 29,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Precise Strikes",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 2
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 13
+        "name": "&6&lBoiling Blood",
+        "coordinates": {
+            "x": 2,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nBash&7 will leave a puddle of boiling blood",
+            "&7after its first explosion, slowing down and",
+            "&7damaging enemies on it every &f0.4 &7seconds.",
+            " ",
+            "&c⚔ &7Total Damage: &f30% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&c✹ &8Fire: &85%&8)",
+            "&e🛡 &7Effect: &f20% &7Slowness (&c⬤&7) to Enemies",
+            "&d⌛ &7Duration: &f3s",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "fasterRoarOfTheBerserker",
+            "warscreamGrade3",
+            "uppercutGrade3",
+            " "
+        ],
+        "slot": 37,
+        "id": "boilingBlood",
+        "locks": [],
+        "uniqueId": "bh"
     },
     {
-        "id": 30,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Counter",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 13
-    },
-    {
-        "id": 31,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Manachism",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 3,
-        "depth": 13
-    },
-    {
-        "id": 32,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Enraged Blow",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 14
-    },
-    {
-        "id": 33,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Flying Kick",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 1,
-        "depth": 14
-    },
-    {
-        "id": 34,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Stronger Mantle",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 14
-    },
-    {
-        "id": 35,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Sacred Surge",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 5,
-        "depth": 14
-    },
-    {
-        "id": 36,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Riposte",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 15
+        "name": "&f&lCheaper War Scream",
+        "coordinates": {
+            "x": 5,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nWar Scream&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "collide",
+            "cleansingBreeze",
+            "roundabout",
+            "warscreamGrade3"
+        ],
+        "slot": 31,
+        "id": "warscreamCost1",
+        "locks": [],
+        "uniqueId": "bi"
     },
     {
-        "id": 37,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Intoxicating Blood",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 5,
-        "depth": 16
+        "requirements": {
+            "node": "tackle",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 4,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&6&lCollide",
+        "coordinates": {
+            "x": 6,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Enemies thrown into walls from &nFlying Kick&7",
+            "&7will explode and receive additional damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&c✹ &8Fire: &850%&8)",
+            "&3☀ &7Area of Effect: &f4 Blocks",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fFlying Kick",
+            "&7Min Battle Monk Archetype: &f4"
+        ],
+        "links": null,
+        "slot": 41,
+        "id": "collide",
+        "locks": [],
+        "uniqueId": "bj"
     },
     {
-        "id": 38,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper War Scream I",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "shield",
+            "abilityPoints": 1
+        },
+        "archetype": "tank",
+        "name": "&f&lStronger Mantle",
+        "coordinates": {
+            "x": 7,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Add &f+2&7 additional charges",
+            "&7to &nMantle of the Bovemists&7",
+            "&7and reduce its cooldown by -5s&7.",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fMantle of the Bovemists"
+        ],
+        "links": [
+            "tackle",
+            "warscreamCost1",
+            "sacredSurge",
+            "ambidextrous"
+        ],
+        "slot": 15,
+        "id": "strongerShield",
+        "locks": [],
+        "uniqueId": "bk"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "tank",
+        "name": "&f&lCleansing Breeze",
+        "coordinates": {
+            "x": 7,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nCharge&7 will cleanse you of all negative",
+            "&7effects and fire, as well as any allies",
+            "&7you pass through. (3s Cooldown)",
+            " ",
+            "&3☀ &7Area of Effect: &f3 Blocks",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "warscreamCost1",
+            "bashDamage1",
+            "collide",
+            "rejuvenatingSkin"
+        ],
+        "slot": 33,
+        "id": "cleansingBreeze",
+        "locks": [],
+        "uniqueId": "bl"
+    },
+    {
+        "requirements": {
+            "node": "counter",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 16
+        "name": "&f&lRiposte",
+        "coordinates": {
+            "x": 6,
+            "y": 24
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your chance to attack",
+            "with &nCounter&7 by &f+30%&7.",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fCounter"
+        ],
+        "links": null,
+        "slot": 23,
+        "id": "ambidextrous",
+        "locks": [],
+        "uniqueId": "bm"
     },
     {
-        "id": 39,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cleansing Breeze",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 16
+        "requirements": {
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&d&lEnraged Blow",
+        "coordinates": {
+            "x": 1,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7While &bCorrupted &4☠&7, every &f1%&7 of",
+            "&7Health you lose will increase your",
+            "&7damage by &f+1.5%&7. (Max 80%)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fBak'al's Grasp"
+        ],
+        "links": [
+            "boilingBlood",
+            "firewater"
+        ],
+        "slot": 9,
+        "id": "enragedBlow",
+        "locks": [],
+        "uniqueId": "bn"
     },
     {
-        "id": 40,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Stronger Bash",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 1,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&6&lFlying Kick",
+        "coordinates": {
+            "x": 4,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Hitting mobs with &nCharge&7 will halt your",
+            "&7momentum and knock them away.",
+            " ",
+            "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&f❋ &8Air: &830%&8)",
+            "  &8(&b❉ &8Water: &820%&8)",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Battle Monk Archetype: &f1"
+        ],
+        "links": [
+            "warscreamCost1",
+            "warscreamGrade3",
+            "strongerShield",
+            "ambidextrous"
+        ],
+        "slot": 12,
+        "id": "tackle",
+        "locks": [],
+        "uniqueId": "bo"
+    },
+    {
+        "requirements": {
+            "node": "uppercutGrade2",
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&6&lComet",
+        "coordinates": {
+            "x": 3,
+            "y": 27
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7After being hit by &nFireworks&7, enemies will crash",
+            "&7unto the ground and receive more damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+80%&8)",
+            "  &8(&2✤ &8Earth: &8+20%&8)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fFireworks"
+        ],
+        "links": null,
+        "slot": 47,
+        "id": "uppercutGrade3",
+        "locks": [],
+        "uniqueId": "bp"
+    },
+    {
+        "requirements": {
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "berserker"
+            }
+        },
+        "archetype": "berserker",
+        "name": "&6&lIntoxicating Blood",
+        "coordinates": {
+            "x": 1,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7After leaving &bCorrupted &4☠&7, gain &f5%&7",
+            "&7of the health lost back for each",
+            "&7enemy killed while &bCorrupted &4☠&7.",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fBak'al's Grasp",
+            "&7Min Fallen Archetype: &f5"
+        ],
+        "links": null,
+        "slot": 27,
+        "id": "firewater",
+        "locks": [],
+        "uniqueId": "bq"
+    },
+    {
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&d&lRagnarokkr",
+        "coordinates": {
+            "x": 4,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nWar Scream&7 becomes deafening, increasing its",
+            "&7duration and granting players a damage bonus.",
+            " ",
+            "&b✺ &7Mana Cost: &c+10",
+            "&e🛡 &7Effect: &f20% &7Damage Bonus (&a⚔&7) to Players",
+            "&d⌛ &7Duration: &f+15s",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "uppercutGrade3",
+            "boilingBlood",
+            ""
+        ],
+        "slot": 39,
+        "id": "warscreamGrade3",
+        "locks": [],
+        "uniqueId": "br"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&d&lSacred Surge",
+        "coordinates": {
+            "x": 9,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Gain the ability to unleash a &bSacred Surge &6&l✧&7.",
+            "&7Whenever any of your spells or abilities are",
+            "&7triggered, increase your holy power by &f1%&7.",
+            " ",
+            "&7&nBash&7 and &7&nUppercut&7 will spend &f25%",
+            "&7of &bSacred Surge &6&l✧&7 to smite hit enemies",
+            "&7with holy energy, dealing extra damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f5"
+        ],
+        "links": [
+            "strongerShield",
+            "bashDamage1"
+        ],
+        "slot": 17,
+        "id": "sacredSurge",
+        "locks": [],
+        "uniqueId": "bs"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 16
+        "name": "&f&lStronger Bash",
+        "coordinates": {
+            "x": 9,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase the damage of &nBash&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "rejuvenatingSkin",
+            "cleansingBreeze"
+        ],
+        "slot": 35,
+        "id": "bashDamage1",
+        "locks": [],
+        "uniqueId": "bt"
     },
     {
-        "id": 41,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Boiling Blood",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&c&lRejuvenating Skin",
+        "coordinates": {
+            "x": 8,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7For any damage you take,",
+            "&7regenerate &f30% &7of the",
+            "&7damage over the next &f30s&7.",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f5"
+        ],
+        "links": [
+            "brickwall"
+        ],
+        "slot": 43,
+        "id": "rejuvenatingSkin",
+        "locks": [],
+        "uniqueId": "bu"
+    },
+    {
+        "requirements": {
+            "node": "shield",
+            "abilityPoints": 2
+        },
+        "archetype": "tank",
+        "name": "&6&lShield Strike",
+        "coordinates": {
+            "x": 7,
+            "y": 30
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Deals damage around you for each mantle lost",
+            "&7when &nMantle of the Bovemist&7 loses all charges.",
+            " ",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS, per mantle lost)",
+            "  &8(&6✢ &8Damage: &870%&8)",
+            "  &8(&e✦ &8Thunder: &830%&8)",
+            "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
+            "",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fMantle of the Bovemists"
+        ],
+        "links": [
+            "sparklingHope",
+            "bashCost2"
+        ],
+        "slot": 24,
+        "id": "shieldexplosion",
+        "locks": [],
+        "uniqueId": "bv"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 17
+        "name": "&f&lAxe Kick",
+        "coordinates": {
+            "x": 4,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increases the damage and mana cost",
+            "&7of &nUppercut&7.",
+            " ",
+            "&b✺ &7Mana Cost: &c+15",
+            "&c⚔ &7Total Damage: &f+150% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+150%&8)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "",
+            ""
+        ],
+        "slot": 39,
+        "id": "uppercutDamage1",
+        "locks": [],
+        "uniqueId": "bw"
     },
     {
-        "id": 42,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Ragnarokkr",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 17
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 3,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&d&lRadiance",
+        "coordinates": {
+            "x": 6,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nBash&7 will buff positive IDs of",
+            "&7yourself and allies. (15s Cooldown)",
+            "&8(Tomes are excluded, as well as",
+            "&8XP Bonus, Loot Bonus, Loot Quality,",
+            "&8Gather XP Bonus, and Gather Speed Bonus)",
+            " ",
+            "&e🛡 &7Effect: &f+20% &7ID Effectiveness (&6❈&7) to Allies",
+            "&d⌛ &7Duration: &f8s",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f3"
+        ],
+        "links": [
+            "bashCost2",
+            "",
+            " "
+        ],
+        "slot": 41,
+        "id": "protectiveBash",
+        "locks": [],
+        "uniqueId": "bx"
     },
     {
-        "id": 43,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Collide",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 4,
-        "depth": 17
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 7,
+                "name": "berserker"
+            }
+        },
+        "archetype": "berserker",
+        "name": "&d&lMassive Bash",
+        "coordinates": {
+            "x": 1,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7While &bCorrupted &4☠&7, every &f3%&7 Health you",
+            "&7lose will increase &nBash&7's area of effect",
+            "&7radius by &f+1&7. (Max 10)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Fallen Archetype: &f7"
+        ],
+        "links": [
+            "tempest",
+            "warscreamCost2",
+            "furiousBlow"
+        ],
+        "slot": 27,
+        "id": "massiveBash",
+        "locks": [],
+        "uniqueId": "by"
     },
     {
-        "id": 44,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Rejuvenating Skin",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 5,
-        "depth": 17
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "berserker"
+            }
+        },
+        "archetype": "berserker",
+        "name": "&6&lMassacre",
+        "coordinates": {
+            "x": 2,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7While &bCorrupted &4☠&7, if your attack speed (affected by IDs)",
+            "&7is Slow or lower, hitting an enemy with your",
+            "&7Main Attack will add &f+4%&7 &bCorruption &4☠ &7to",
+            "&7your &bCorrupted &4☠ &7bar. (2s Cooldown)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Fallen Archetype: &f5"
+        ],
+        "links": null,
+        "slot": 37,
+        "id": "furiousBlow",
+        "locks": [],
+        "uniqueId": "bz"
     },
     {
-        "id": 45,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Comet",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 18
+        "requirements": {
+            "node": "charge",
+            "abilityPoints": 1,
+            "archetype": {
+                "amount": 5,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&f&lSpirit of the Rabbit",
+        "coordinates": {
+            "x": 5,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nCharge&7",
+            "&7and increase your Walk Speed by &f+20%&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fCharge",
+            "&7Min Battle Monk Archetype: &f5"
+        ],
+        "links": [
+            "tempest",
+            "uppercutDamage1",
+            "protectiveBash",
+            "cyclone",
+            "pushWarscream"
+        ],
+        "slot": 31,
+        "id": "chargeCost2",
+        "locks": [],
+        "uniqueId": "ca"
     },
     {
-        "id": 47,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Uncontainable Corruption",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 2
+        },
+        "archetype": "berserker",
+        "name": "&d&lArmour Breaker",
+        "coordinates": {
+            "x": 2,
+            "y": 30
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7While &bCorrupted &4☠&7, losing &f30%&7 Health will make",
+            "&7your next &nUppercut&7 reduce the enemies'",
+            "&7defense stats.",
+            " ",
+            "&e🛡 &7Effect: &f-30% &7Resistance Bonus (&c✃&7) to Enemies",
+            "&d⌛ &7Duration: &f8s",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fBak'al's Grasp"
+        ],
+        "links": null,
+        "slot": 19,
+        "id": "armourbreaker",
+        "locks": [],
+        "uniqueId": "cb"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "monk",
+        "name": "&6&lTempest",
+        "coordinates": {
+            "x": 3,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nWar Scream&7 will ripple the ground and",
+            "&7deal damage to enemies &f3 &7times",
+            "&7over a large area.",
+            "",
+            "&c⚔ &7Total Damage: &f50% &8(of your DPS, per ripple)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&2✤ &8Earth: &810%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
+            "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "massiveBash",
+            "chargeCost2",
+            "uppercutDamage1",
+            "furiousBlow"
+        ],
+        "slot": 29,
+        "id": "tempest",
+        "locks": [],
+        "uniqueId": "cc"
+    },
+    {
+        "requirements": {
+            "node": "roarOfTheBerserker",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 19
+        "name": "&f&lUncontainable Corruption",
+        "coordinates": {
+            "x": 1,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduces the cooldown of &nBak'al's Grasp&7",
+            "&7by &f-5s&7, &7and increases the raw damage",
+            "&7gained for every &f2% &7of health lost by &f+1&7.",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fBak'al's Grasp"
+        ],
+        "links": [
+            "armourbreaker",
+            "massiveBash",
+            "radiantDevotee"
+        ],
+        "slot": 9,
+        "id": "fasterRoarOfTheBerserker",
+        "locks": [],
+        "uniqueId": "cd"
     },
     {
-        "id": 48,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Radiant Devotee",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 1,
-        "depth": 19
+        "requirements": {
+            "abilityPoints": 1,
+            "archetype": {
+                "amount": 1,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&f&lRadiant Devotee",
+        "coordinates": {
+            "x": 3,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7For every &f4%&7 Reflection you have from",
+            "items, gain &f+1/5s&7 Mana Regen (Max 10/5s)",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Min Battle Monk Archetype: &f1"
+        ],
+        "links": [
+            "roundabout",
+            "armourbreaker",
+            "fasterRoarOfTheBerserker"
+        ],
+        "slot": 11,
+        "id": "radiantDevotee",
+        "locks": [],
+        "uniqueId": "ce"
     },
     {
-        "id": 49,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Whirlwind Strike",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 6,
-        "depth": 19
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "tank",
+        "name": "&d&lSparkling Hope",
+        "coordinates": {
+            "x": 9,
+            "y": 30
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Deals damage to all nearby enemies every",
+            "&7time you heal &f5% &7of your max health.",
+            " ",
+            "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &840%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
+            "&3☀ &7Area of Effect: &f6 Blocks &7(Circle-Shaped)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "shieldexplosion",
+            "bashCost2"
+        ],
+        "slot": 26,
+        "id": "sparklingHope",
+        "locks": [],
+        "uniqueId": "cf"
     },
     {
-        "id": 49,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Mythril Skin",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 6,
-        "depth": 19
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 6,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&6&lMythril Skin",
+        "coordinates": {
+            "x": 8,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Gain &f+5% &7Base Resistance and",
+            "&7become immune to knockback.",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f6"
+        ],
+        "links": [
+            "shieldexplosion",
+            "sparklingHope"
+        ],
+        "slot": 16,
+        "id": "brickwall",
+        "locks": [],
+        "uniqueId": "cg"
     },
     {
-        "id": 50,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Armour Breaker",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 20
-    },
-    {
-        "id": 51,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Shield Strike",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 20
-    },
-    {
-        "id": 52,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Sparkling Hope",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 20
-    },
-    {
-        "id": 53,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Massive Bash",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 7,
-        "depth": 21
-    },
-    {
-        "id": 54,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Tempest",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 7,
-        "depth": 21
-    },
-    {
-        "id": 55,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Spirit of the Rabbit",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 5,
-        "depth": 21
-    },
-    {
-        "id": 56,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Massacre",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 5,
-        "depth": 22
-    },
-    {
-        "id": 57,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Axe Kick",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "bash",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 22
+        "name": "&f&lCheaper Bash",
+        "coordinates": {
+            "x": 8,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nBash&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fBash"
+        ],
+        "links": [
+            "protectiveBash",
+            "strongerSacredSurge"
+        ],
+        "slot": 43,
+        "id": "bashCost2",
+        "locks": [],
+        "uniqueId": "ch"
     },
     {
-        "id": 58,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Radiance",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 3,
-        "depth": 22
+        "requirements": {
+            "node": "uppercut",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 6,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&c&lWhirlwind Strike",
+        "coordinates": {
+            "x": 5,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nUppercut&7 will create a strong gust of air,",
+            "&7launching you upward with enemies.",
+            "&8(Hold shift to stay grounded)",
+            " ",
+            "&c⚔ &7Total Damage: &f+10% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8-20%&8)",
+            "  &8(&f❋ &8Air: &8+30%&8)",
+            "&3☀ &7Area of Effect: &fCircle-Shaped",
+            "&2➼ &7Range: &f+1 Blocks",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fUppercut",
+            "&7Min Battle Monk Archetype: &f6"
+        ],
+        "links": [
+            "chargeCost2",
+            "radiantDevotee"
+        ],
+        "slot": 13,
+        "id": "roundabout",
+        "locks": [],
+        "uniqueId": "ci"
     },
     {
-        "id": 59,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper Bash II",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "warScream",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 22
+        "name": "&f&lCheaper War Scream",
+        "coordinates": {
+            "x": 1,
+            "y": 34
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nWar Scream&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fWar Scream"
+        ],
+        "links": [
+            "altruism",
+            "betterEnragedBlow"
+        ],
+        "slot": 9,
+        "id": "warscreamCost2",
+        "locks": [],
+        "uniqueId": "cj"
     },
     {
-        "id": 60,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper War Scream II",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "bash",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 8,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&6&lThunderclap",
+        "coordinates": {
+            "x": 6,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nBash&7 will cast at the player's position at",
+            "&7double the speed and with an increased area of effect.",
+            " ",
+            "&c⚔ &7Total Damage: &f+25% &8(of your DPS, per bash)",
+            "  &8(&e✦ &8Thunder: &8+25%&8)",
+            "&3☀ &7Area of Effect: &f+3 Blocks &7(Circle-Shaped)",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fBash",
+            "&7Min Battle Monk Archetype: &f8"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 23,
+        "id": "thunderclap",
+        "locks": [],
+        "uniqueId": "ck"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 10,
+                "name": "berserker"
+            }
+        },
+        "archetype": "berserker",
+        "name": "&c&lBlood Pact",
+        "coordinates": {
+            "x": 1,
+            "y": 36
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7If you do not have enough mana to",
+            "&7cast a spell, spend health instead.",
+            "(&f0.4% &7health per mana)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Fallen Archetype: &f10"
+        ],
+        "links": [
+            "brinkOfMadness",
+            "betterAltruism",
+            "warScreamCost2"
+        ],
+        "slot": 27,
+        "id": "altruism",
+        "locks": [],
+        "uniqueId": "cl"
+    },
+    {
+        "requirements": {
+            "node": "enragedBlow",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 23
+        "name": "&f&lBetter Enraged Blow",
+        "coordinates": {
+            "x": 2,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increases the cap of &nEnraged Blow&7 by &f+60%&7.",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fEnraged Blow"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 19,
+        "id": "betterEnragedBlow",
+        "locks": [],
+        "uniqueId": "cm"
     },
     {
-        "id": 61,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Discombobulate",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 11,
-        "depth": 23
-    },
-    {
-        "id": 62,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Cyclone",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 0,
-        "depth": 23
-    },
-    {
-        "id": 63,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Thunderclap",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Battle Monk",
-        "minArchetype": 8,
-        "depth": 23
-    },
-    {
-        "id": 64,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Stronger Sacred Surge",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 8,
-        "depth": 23
-    },
-    {
-        "id": 65,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Better Enraged Blow",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "abilityPoints": 2
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 23
+        "name": "&6&lMartyr",
+        "coordinates": {
+            "x": 9,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When you receive a fatal blow, all",
+            "&7nearby allies become invincible&7.",
+            " ",
+            "&e🛡 &7Effect: &fInvincibility (&b☗&f) to Allies",
+            "&d⌛ &7Duration: &f3s",
+            "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
+            "",
+            "&7Ability Points: &f2"
+        ],
+        "links": null,
+        "slot": 44,
+        "id": "lastStand",
+        "locks": [],
+        "uniqueId": "cn"
     },
     {
-        "id": 66,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Blood Pact",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 10,
-        "depth": 24
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "monk",
+        "name": "&6&lCyclone",
+        "coordinates": {
+            "x": 5,
+            "y": 34
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7After casting &nWar Scream&7, envelop yourself with",
+            "&7a vortex that damages nearby enemies every &f0.5s&7. ",
+            " ",
+            "&c⚔ &7Total Damage: &f25% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &810%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
+            "  &8(&c✹ &8Fire: &85%&8)",
+            "&d⌛ &7Duration: &f20s",
+            "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
+            "",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "thunderclap",
+            "holystrikes"
+        ],
+        "slot": 13,
+        "id": "pushWarscream",
+        "locks": [],
+        "uniqueId": "co"
     },
     {
-        "id": 67,
-        "cost": 2,
-        "sprite": 4,
-        "name": "Second Chance",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 12,
-        "depth": 24
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 11,
+                "name": "monk"
+            }
+        },
+        "archetype": "monk",
+        "name": "&c&lDiscombobulate",
+        "coordinates": {
+            "x": 3,
+            "y": 34
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Damaging enemies will inflict them",
+            "&7with &b+5 Discombobulated &e⚙&7. (Max 100)",
+            " ",
+            "&7You will deal &f+1 &7neutral and elemental damage to",
+            "&7enemies for every &bDiscombobulated &e⚙ &7they have.",
+            "&f-5 &7of the bonus decays every second.",
+            " ",
+            "&e&lBattle Monk Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Battle Monk Archetype: &f11"
+        ],
+        "links": [
+            " "
+        ],
+        "slot": 11,
+        "id": "holystrikes",
+        "locks": [],
+        "uniqueId": "cp"
     },
     {
-        "id": 68,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Haemorrhage",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Fallen",
-        "minArchetype": 0,
-        "depth": 25
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 12,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&c&lSecond Chance",
+        "coordinates": {
+            "x": 8,
+            "y": 36
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Keeps you alive with &f30%&7 of your health remaining",
+            "&7after receiving a fatal blow. (10m Cooldown)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Paladin Archetype: &f12"
+        ],
+        "links": [
+            "lastStand",
+            "uppercutCost2"
+        ],
+        "slot": 34,
+        "id": "secondchance",
+        "locks": [],
+        "uniqueId": "cq"
     },
     {
-        "id": 69,
-        "cost": 2,
-        "sprite": 3,
-        "name": "Brink of Madness",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "uppercut",
+            "abilityPoints": 1
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 25
+        "name": "&f&lCheaper Uppercut",
+        "coordinates": {
+            "x": 7,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the Mana cost of &nUppercut&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fUppercut"
+        ],
+        "links": [
+            "brinkOfMadness",
+            "",
+            ""
+        ],
+        "slot": 42,
+        "id": "uppercutCost2",
+        "locks": [],
+        "uniqueId": "cr"
     },
     {
-        "id": 70,
-        "cost": 1,
-        "sprite": 1,
-        "name": "Cheaper Uppercut II",
-        "child": [],
-        "blocks": [],
-        "required": [],
+        "requirements": {
+            "node": "sacredSurge",
+            "abilityPoints": 1,
+            "archetype": {
+                "amount": 8,
+                "name": "tank"
+            }
+        },
+        "archetype": "tank",
+        "name": "&f&lStronger Sacred Surge",
+        "coordinates": {
+            "x": 8,
+            "y": 34
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increases the damage of &bSacred Surge &6&l✧&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+70%&8)",
+            "  &8(&e✦ &8Thunder: &8+10%&8)",
+            " ",
+            "&b&lPaladin Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Min Paladin Archetype: &f8",
+            "&7Required Ability: &fSacred Surge"
+        ],
+        "links": [
+            "secondchance"
+        ],
+        "slot": 16,
+        "id": "strongerSacredSurge",
+        "locks": [],
+        "uniqueId": "cs"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
         "archetype": "",
-        "minArchetype": 0,
-        "depth": 25
+        "name": "&d&lBrink of Madness",
+        "coordinates": {
+            "x": 5,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7You gain a &f+40%&7 Resistance buff",
+            "&7if your health is at &f25%&7 or less.",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "uppercutCost2",
+            "warScreamCost2"
+        ],
+        "slot": 40,
+        "id": "brinkOfMadness",
+        "locks": [],
+        "uniqueId": "ct"
     },
     {
-        "id": 71,
-        "cost": 2,
-        "sprite": 2,
-        "name": "Martyr",
-        "child": [],
-        "blocks": [],
-        "required": [],
-        "archetype": "Paladin",
-        "minArchetype": 0,
-        "depth": 25
+        "requirements": {
+            "node": "altruism",
+            "abilityPoints": 1
+        },
+        "archetype": "berserker",
+        "name": "&f&lHaemorrhage",
+        "coordinates": {
+            "x": 3,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce &nBlood Pact&7's health cost.",
+            "(&f0.25% &7health per mana)",
+            " ",
+            "&c&lFallen Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fBlood Pact"
+        ],
+        "links": [
+            " "
+        ],
+        "slot": 38,
+        "id": "betterAltruism",
+        "locks": [],
+        "uniqueId": "cu"
     }
 ]
