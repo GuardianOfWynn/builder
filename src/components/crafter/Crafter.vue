@@ -182,7 +182,11 @@ export default {
         return;
       }
       recipeRolls.value = getRecipePrototypeFor(val);
-      recipe.value = recipeRolls.value[0];
+      let recipeIndex = recipeRolls.value.findIndex(x => x.levels.some(x => x.id === level.value.id));
+      if(recipeIndex >= recipeRolls.value.length) {
+        recipeIndex = 0;
+      }
+      recipe.value = recipeRolls.value[recipeIndex];
       levelRolls.value = recipe.value.levels;
       craftType.value = val;
       level.value = recipe.value.levels[0];
