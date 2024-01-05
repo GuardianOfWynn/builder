@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="flex w-full gap-x-4">
-                <div class="flex w-1/2 gap-x-12 justify-between">
+                <div class="flex w-2/3 gap-x-12 justify-between">
                     <div class="flex flex-col gap-y-2">
                         <ItemSelector @update-item="val => helmet = val" :item-type="'helmet'" />
                         <ItemSelector @update-item="val => chestplate = val" :item-type="'chestplate'" />
@@ -28,14 +28,8 @@
                         <ItemSelector :item-type="'necklace'" />
                     </div>
                 </div>
-                <div class="text-white h-fit w-1/4 border-[1px] border-mc-light-purple">
-                    <p class="bg-mc-dark-purple p-2">Base stats</p>
-                </div>
-                <div class="text-white h-fit w-1/4 border-[1px] border-mc-light-purple">
+                <div class="text-white h-fit w-1/3 border-[1px] border-mc-light-purple">
                     <p class="bg-mc-dark-purple p-2">Stats</p>
-                    <div class="p-2">
-                        
-                    </div>
                 </div>
             </div>
             <div class="mt-10 h-1/3">
