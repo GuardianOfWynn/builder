@@ -1,7 +1,7 @@
 <template>
   <div class="flex gap-x-2">
     <div class="relative">
-      <div class="border-[1px] my-auto pixel-corners flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] to-mc-bg h-20 w-20 p-2"
+      <div class="scale-90 border-[1px] my-auto pixel-corners flex items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] to-mc-bg h-20 w-20 p-2"
         :class="selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'mythic' ? 'from-mc-dark-purple' 
         : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'legendary' ? 'from-mc-aqua'
         : selectedItem !== null && !selectedItem?.isCrafted && (<WynnItem><unknown>selectedItem).tier == 'fabled' ? 'from-mc-red'

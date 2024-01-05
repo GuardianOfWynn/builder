@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="flex w-full gap-x-4">
-                <div class="flex w-1/2 justify-between">
+                <div class="flex w-1/2 gap-x-12 justify-between">
                     <div class="flex flex-col gap-y-2">
                         <ItemSelector @update-item="val => helmet = val" :item-type="'helmet'" />
                         <ItemSelector @update-item="val => chestplate = val" :item-type="'chestplate'" />
