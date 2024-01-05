@@ -4,6 +4,43 @@
             "abilityPoints": 1
         },
         "archetype": "",
+        "name": "&a&lTotem",
+        "coordinates": {
+            "x": 5,
+            "y": 1
+        },
+        "sprite": {
+            "normal": "275_73.svg",
+            "activated": "275_73_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT-LEFT-RIGHT",
+            " ",
+            "&7Summon a Totem that damages",
+            "enemies around it every &f0.4s&7.",
+            "",
+            "&b✺ &7Mana Cost: &f30",
+            "&c⚔ &7Total Damage: &f12% &8(of your DPS)",
+            "  ÀÀÀÀ&8(&6✢ &8Damage: &86%&8)",
+            "  ÀÀÀÀ&8(&f�?� &8Air: &86%&8)",
+            "&d⌛À &7Duration: &f30s",
+            "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "relikProficiency"
+        ],
+        "slot": 4,
+        "id": "totem",
+        "locks": [],
+        "uniqueId": "ad"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
         "name": "&f&lRelik Proficiency I",
         "coordinates": {
             "x": 5,
@@ -93,43 +130,6 @@
         "id": "totemCost1",
         "locks": [],
         "uniqueId": "ac"
-    },
-    {
-        "requirements": {
-            "abilityPoints": 1
-        },
-        "archetype": "",
-        "name": "&a&lTotem",
-        "coordinates": {
-            "x": 5,
-            "y": 1
-        },
-        "sprite": {
-            "normal": "275_73.svg",
-            "activated": "275_73_1.svg"
-        },
-        "description": [
-            "&6Click Combo: &d&lRIGHT-LEFT-RIGHT",
-            " ",
-            "&7Summon a Totem that damages",
-            "enemies around it every &f0.4s&7.",
-            "",
-            "&b✺ &7Mana Cost: &f30",
-            "&c⚔ &7Total Damage: &f12% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &86%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &86%&8)",
-            "&d⌛À &7Duration: &f30s",
-            "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
-            " ",
-            "&7Ability Points: &f1"
-        ],
-        "links": [
-            "relikProficiency"
-        ],
-        "slot": 4,
-        "id": "totem",
-        "locks": [],
-        "uniqueId": "ad"
     },
     {
         "requirements": {
