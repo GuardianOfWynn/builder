@@ -47,6 +47,22 @@ export class MinecraftTextComponent {
     style: Style;
 }
 
+export function stripColorCodes(input: String): String {
+    let text = "";
+    for(let i = 0; i < input.length; i++) {
+        let ignored: number[] = [];
+        let currentChar = input[i];
+        if(currentChar == '&') {
+            ignored.push(i + 1);
+        }   else {
+            if(!ignored.includes(i)) {
+                text+=currentChar;
+            }
+        }
+    }
+    return text;
+}
+
 export function parseStyleToComponents(input: String): MinecraftTextComponent[] {
     let components: MinecraftTextComponent[] = [];
 
@@ -132,7 +148,7 @@ export function parseStyleToComponents(input: String): MinecraftTextComponent[] 
             
         } else{
             if(!ignored.includes(i)) {
-                currentText += currentChar;
+                    currentText += currentChar;
                 formingStyle = false;
             }
         }

@@ -1,7 +1,7 @@
 [
     {
         "requirements": {
-            "NODE": "arrowbomb",
+            "node": "arrowbomb",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -272,7 +272,7 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
+            "node": "escape",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -473,7 +473,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -513,7 +513,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -629,7 +629,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -664,7 +664,7 @@
     },
     {
         "requirements": {
-            "NODE": "hastyShots",
+            "node": "hastyShots",
             "abilityPoints": 1
         },
         "archetype": "boltslinger",
@@ -731,9 +731,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 1,
                 "name": "trapper"
             }
@@ -812,7 +812,7 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
+            "node": "focus",
             "abilityPoints": 1
         },
         "archetype": "sniper",
@@ -843,7 +843,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -877,7 +877,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
@@ -958,7 +958,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 2
         },
         "archetype": "trapper",
@@ -994,7 +994,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1031,7 +1031,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1068,7 +1068,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -1110,7 +1110,7 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
+            "node": "explodingTrap",
             "abilityPoints": 2
         },
         "archetype": "trapper",
@@ -1144,7 +1144,7 @@
     },
     {
         "requirements": {
-            "NODE": "windyfeet",
+            "node": "windyfeet",
             "abilityPoints": 1
         },
         "archetype": "boltslinger",
@@ -1177,9 +1177,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "boltslinger"
             }
@@ -1260,9 +1260,9 @@
     },
     {
         "requirements": {
-            "NODE": "mossyArrowStorm",
+            "node": "mossyArrowStorm",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "trapper"
             }
@@ -1310,7 +1310,7 @@
     },
     {
         "requirements": {
-            "NODE": "fireCreep",
+            "node": "fireCreep",
             "abilityPoints": 1
         },
         "archetype": "sniper",
@@ -1346,7 +1346,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1418,7 +1418,7 @@
     },
     {
         "requirements": {
-            "NODE": "leap",
+            "node": "leap",
             "abilityPoints": 1
         },
         "archetype": "boltslinger",
@@ -1447,9 +1447,9 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
+            "node": "focus",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1492,7 +1492,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
+            "node": "arrowbomb",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1551,9 +1551,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
+            "node": "arrowbomb",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1626,7 +1626,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1658,7 +1658,7 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
+            "node": "explodingTrap",
             "abilityPoints": 1
         },
         "archetype": "trapper",
@@ -1729,7 +1729,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 4,
                 "name": "boltslinger"
             }
@@ -1764,7 +1764,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1837,9 +1837,9 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
+            "node": "explodingTrap",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "trapper"
             }
@@ -1882,7 +1882,7 @@
     },
     {
         "requirements": {
-            "NODE": "concentration",
+            "node": "concentration",
             "abilityPoints": 2
         },
         "archetype": "sniper",
@@ -1921,7 +1921,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 6,
                 "name": "trapper"
             }
@@ -1960,7 +1960,7 @@
     },
     {
         "requirements": {
-            "NODE": "shockingBomb",
+            "node": "shockingBomb",
             "abilityPoints": 2
         },
         "archetype": "sniper",
@@ -1995,7 +1995,7 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
+            "node": "focus",
             "abilityPoints": 2
         },
         "archetype": "sniper",
@@ -2030,7 +2030,7 @@
     },
     {
         "requirements": {
-            "NODE": "phantomDarts",
+            "node": "phantomDarts",
             "abilityPoints": 2
         },
         "archetype": "sniper",
@@ -2093,7 +2093,7 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
+            "node": "guardianAngels",
             "abilityPoints": 1
         },
         "archetype": "boltslinger",
@@ -2128,7 +2128,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2162,9 +2162,9 @@
     },
     {
         "requirements": {
-            "NODE": "grapplingHook",
+            "node": "grapplingHook",
             "abilityPoints": 1,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
@@ -2202,7 +2202,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
+            "node": "arrowshield",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2236,7 +2236,7 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
+            "node": "escape",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2271,7 +2271,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "boltslinger"
             }
@@ -2312,7 +2312,7 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
+            "node": "explodingTrap",
             "abilityPoints": 2
         },
         "archetype": "trapper",
@@ -2349,7 +2349,7 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
+            "node": "arrowbomb",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2380,7 +2380,7 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
+            "node": "focus",
             "abilityPoints": 1
         },
         "archetype": "sniper",
@@ -2413,7 +2413,7 @@
     },
     {
         "requirements": {
-            "NODE": "fiercystomp",
+            "node": "fiercystomp",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -2479,7 +2479,7 @@
     },
     {
         "requirements": {
-            "NODE": "timeBomb",
+            "node": "timeBomb",
             "abilityPoints": 1
         },
         "archetype": "trapper",
@@ -2511,9 +2511,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
+            "node": "arrowstorm",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 10,
                 "name": "sniper"
             }
@@ -2558,9 +2558,9 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
+            "node": "explodingTrap",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 11,
                 "name": "trapper"
             }
@@ -2633,7 +2633,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 10,
                 "name": "boltslinger"
             }
@@ -2712,7 +2712,7 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
+            "node": "guardianAngels",
             "abilityPoints": 2
         },
         "archetype": "boltslinger",
@@ -2751,9 +2751,9 @@
     },
     {
         "requirements": {
-            "NODE": "wolfSummon",
+            "node": "wolfSummon",
             "abilityPoints": 1,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 7,
                 "name": "trapper"
             }

@@ -21,8 +21,8 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &830%&8)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&2✤ &8Earth: &830%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             "&2➼ &7Range: &f3 Blocks",
             " ",
@@ -33,7 +33,8 @@
         ],
         "slot": 4,
         "id": "bash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ac"
     },
     {
         "requirements": {
@@ -65,7 +66,8 @@
         ],
         "slot": 22,
         "id": "spearProficiency",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aa"
     },
     {
         "requirements": {
@@ -87,7 +89,7 @@
             "&7time at a farther range.",
             " ",
             "&c⚔ &7Total Damage: &c-40% &8(of your DPS, per bash)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-40%&8)",
+            "  &8(&6✢ &8Damage: &8-40%&8)",
             "&2➼ &7Range: &f+3 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -97,7 +99,8 @@
         ],
         "slot": 40,
         "id": "doubleBash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ab"
     },
     {
         "requirements": {
@@ -126,7 +129,8 @@
         "links": null,
         "slot": 20,
         "id": "bashCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ad"
     },
     {
         "requirements": {
@@ -164,7 +168,8 @@
         "id": "chaser",
         "locks": [
             "tougherSkin"
-        ]
+        ],
+        "uniqueId": "ae"
     },
     {
         "requirements": {
@@ -196,7 +201,8 @@
         ],
         "slot": 13,
         "id": "charge",
-        "locks": []
+        "locks": [],
+        "uniqueId": "af"
     },
     {
         "requirements": {
@@ -221,10 +227,10 @@
             " ",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &875%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &825%&8)",
-            "&e🛡 &7Effect: &f20% &7Resistance Bonus (&a�??&7) to Allies",
-            "&d⌛À &7Duration: &f30s",
+            "  &8(&6✢ &8Damage: &875%&8)",
+            "  &8(&c✹ &8Fire: &825%&8)",
+            "&e🛡 &7Effect: &f20% &7Resistance Bonus (&a❁&7) to Allies",
+            "&d⌛ &7Duration: &f30s",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -236,7 +242,8 @@
         ],
         "slot": 33,
         "id": "warScream",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ag"
     },
     {
         "requirements": {
@@ -260,9 +267,9 @@
             " ",
             "&b✺ &7Mana Cost: &f40",
             "&c⚔ &7Total Damage: &f280% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8200%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &840%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &840%&8)",
+            "  &8(&6✢ &8Damage: &8200%&8)",
+            "  &8(&2✤ &8Earth: &840%&8)",
+            "  &8(&e✦ &8Thunder: &840%&8)",
             "&3☀ &7Area of Effect: &f1-3 Blocks &7(Cone-Shaped)",
             "&2➼ &7Range: &f5 Blocks",
             " ",
@@ -276,7 +283,8 @@
         ],
         "slot": 29,
         "id": "uppercut",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ah"
     },
     {
         "requirements": {
@@ -311,7 +319,8 @@
         ],
         "slot": 31,
         "id": "chargeCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ai"
     },
     {
         "requirements": {
@@ -349,7 +358,8 @@
         "id": "tougherSkin",
         "locks": [
             "chaser"
-        ]
+        ],
+        "uniqueId": "aj"
     },
     {
         "requirements": {
@@ -371,7 +381,7 @@
             "&7down unto the ground and deal damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8120%&8)",
+            "  &8(&6✢ &8Damage: &8120%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -379,7 +389,8 @@
         "links": null,
         "slot": 37,
         "id": "heavyImpact",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ak"
     },
     {
         "requirements": {
@@ -402,7 +413,7 @@
             "&7at double the speed.",
             " ",
             "&c⚔ &7Total Damage: &c-20% &8(of your DPS, per bash)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-20%&8)",
+            "  &8(&6✢ &8Damage: &8-20%&8)",
             "&2➼ &7Range: &f+6 Blocks",
             " ",
             "&c&lFallen Archetype",
@@ -416,7 +427,8 @@
         ],
         "slot": 27,
         "id": "quintupleBash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "al"
     },
     {
         "requirements": {
@@ -449,7 +461,8 @@
         ],
         "slot": 17,
         "id": "warriorFirePath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "am"
     },
     {
         "requirements": {
@@ -482,7 +495,8 @@
         ],
         "slot": 9,
         "id": "warriorEarthPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "an"
     },
     {
         "requirements": {
@@ -504,8 +518,8 @@
             "&7way when using &nCharge&7.",
             " ",
             "&c⚔ &7Total Damage: &f120%",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -516,7 +530,8 @@
         ],
         "slot": 33,
         "id": "flyby",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ao"
     },
     {
         "requirements": {
@@ -537,8 +552,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f�?� &7Air Damage: &f+3-4",
-            "&f�?� &7Air Damage: &f+15%",
+            "&f❋ &7Air Damage: &f+3-4",
+            "&f❋ &7Air Damage: &f+15%",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -551,7 +566,8 @@
         ],
         "slot": 15,
         "id": "warriorAirPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ap"
     },
     {
         "requirements": {
@@ -574,8 +590,8 @@
             "&7dealing damage every &f0.6&7 seconds.",
             " ",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &850%&8)",
-            "&d⌛À &7Duration: &f3s",
+            "  &8(&c✹ &8Fire: &850%&8)",
+            "&d⌛ &7Duration: &f3s",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -588,7 +604,8 @@
         ],
         "slot": 35,
         "id": "fireUppercut",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aq"
     },
     {
         "requirements": {
@@ -610,8 +627,8 @@
             "&7mid-air and receive additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+80%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+20%&8)",
+            "  &8(&6✢ &8Damage: &8+80%&8)",
+            "  &8(&e✦ &8Thunder: &8+20%&8)",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -623,7 +640,8 @@
         ],
         "slot": 29,
         "id": "uppercutGrade2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ar"
     },
     {
         "requirements": {
@@ -651,8 +669,8 @@
             " ",
             "&b✺ &7Mana Cost: &f-5",
             "&c⚔ &7Total Damage: &c-40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-70%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &8+30%&8)",
+            "  &8(&6✢ &8Damage: &8-70%&8)",
+            "  &8(&b❉ &8Water: &8+30%&8)",
             "&2➼ &7Range: &f+1.5 Blocks",
             " ",
             "&e&lBattle Monk Archetype",
@@ -666,7 +684,8 @@
         ],
         "slot": 40,
         "id": "worship",
-        "locks": []
+        "locks": [],
+        "uniqueId": "as"
     },
     {
         "requirements": {
@@ -701,7 +720,8 @@
         ],
         "slot": 11,
         "id": "warriorThunderPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "at"
     },
     {
         "requirements": {
@@ -722,8 +742,8 @@
             "Increase your damage",
             "from all Water attacks.",
             " ",
-            "&b�?� &7Water Damage: &f+2-4",
-            "&b�?� &7Water Damage: &f+15%",
+            "&b❉ &7Water Damage: &f+2-4",
+            "&b❉ &7Water Damage: &f+15%",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -734,7 +754,8 @@
         ],
         "slot": 22,
         "id": "warriorWaterPath",
-        "locks": []
+        "locks": [],
+        "uniqueId": "au"
     },
     {
         "requirements": {
@@ -756,12 +777,12 @@
             "&7&nWar Scream&7 and &7&nAir Shout&7 will deal more damage.",
             " ",
             "&c⚔ &7Total Damage: &f+60% &8(of your DPS, for &nWar Scream&8)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+30%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+30%&8)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
+            "  &8(&f❋ &8Air: &8+30%&8)",
             " ",
             "&c⚔ &7Total Damage: &f+30% &8(of your DPS, for &nAir Shout&8)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+15%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+15%&8)",
+            "  &8(&6✢ &8Damage: &8+15%&8)",
+            "  &8(&f❋ &8Air: &8+15%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -773,7 +794,8 @@
         ],
         "slot": 43,
         "id": "gust",
-        "locks": []
+        "locks": [],
+        "uniqueId": "av"
     },
     {
         "requirements": {
@@ -811,7 +833,8 @@
         ],
         "slot": 16,
         "id": "shield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "aw"
     },
     {
         "requirements": {
@@ -844,7 +867,8 @@
         ],
         "slot": 32,
         "id": "aerodynamics",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ax"
     },
     {
         "requirements": {
@@ -886,7 +910,8 @@
         ],
         "slot": 19,
         "id": "roarOfTheBerserker",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ay"
     },
     {
         "requirements": {
@@ -922,7 +947,8 @@
         ],
         "slot": 34,
         "id": "provoke",
-        "locks": []
+        "locks": [],
+        "uniqueId": "az"
     },
     {
         "requirements": {
@@ -955,7 +981,8 @@
         "links": null,
         "slot": 11,
         "id": "generalist",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ba"
     },
     {
         "requirements": {
@@ -988,7 +1015,8 @@
         ],
         "slot": 27,
         "id": "spearProficiency2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bb"
     },
     {
         "requirements": {
@@ -1011,8 +1039,8 @@
             "&7go through walls and deal damage multiple times.",
             " ",
             "&c⚔ &7Total Damage: &f50%",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  &8(&6✢ &8Damage: &840%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             "&2➼ &7Range: &f32 Blocks",
             " ",
@@ -1027,7 +1055,8 @@
         ],
         "slot": 13,
         "id": "warscreamGrade2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bc"
     },
     {
         "requirements": {
@@ -1062,7 +1091,8 @@
         ],
         "slot": 30,
         "id": "uppercutCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bd"
     },
     {
         "requirements": {
@@ -1087,7 +1117,8 @@
         "links": null,
         "slot": 37,
         "id": "criticalHitDamage",
-        "locks": []
+        "locks": [],
+        "uniqueId": "be"
     },
     {
         "requirements": {
@@ -1110,9 +1141,9 @@
             "&7dodging an enemy attack with Agility.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -1123,7 +1154,8 @@
         ],
         "slot": 40,
         "id": "counter",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bf"
     },
     {
         "requirements": {
@@ -1158,7 +1190,8 @@
         ],
         "slot": 42,
         "id": "manachism",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bg"
     },
     {
         "requirements": {
@@ -1181,10 +1214,10 @@
             "&7damaging enemies on it every &f0.4 &7seconds.",
             " ",
             "&c⚔ &7Total Damage: &f30% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &85%&8)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&c✹ &8Fire: &85%&8)",
             "&e🛡 &7Effect: &f20% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛À &7Duration: &f3s",
+            "&d⌛ &7Duration: &f3s",
             " ",
             "&7Ability Points: &f2"
         ],
@@ -1196,7 +1229,8 @@
         ],
         "slot": 37,
         "id": "boilingBlood",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bh"
     },
     {
         "requirements": {
@@ -1230,7 +1264,8 @@
         ],
         "slot": 31,
         "id": "warscreamCost1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bi"
     },
     {
         "requirements": {
@@ -1257,8 +1292,8 @@
             "&7will explode and receive additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &850%&8)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&c✹ &8Fire: &850%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks",
             " ",
             "&e&lBattle Monk Archetype",
@@ -1270,7 +1305,8 @@
         "links": null,
         "slot": 41,
         "id": "collide",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bj"
     },
     {
         "requirements": {
@@ -1306,7 +1342,8 @@
         ],
         "slot": 15,
         "id": "strongerShield",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bk"
     },
     {
         "requirements": {
@@ -1342,7 +1379,8 @@
         ],
         "slot": 33,
         "id": "cleansingBreeze",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bl"
     },
     {
         "requirements": {
@@ -1370,7 +1408,8 @@
         "links": null,
         "slot": 23,
         "id": "ambidextrous",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bm"
     },
     {
         "requirements": {
@@ -1404,7 +1443,8 @@
         ],
         "slot": 9,
         "id": "enragedBlow",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bn"
     },
     {
         "requirements": {
@@ -1430,9 +1470,9 @@
             "&7momentum and knock them away.",
             " ",
             "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &830%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &820%&8)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&f❋ &8Air: &830%&8)",
+            "  &8(&b❉ &8Water: &820%&8)",
             " ",
             "&e&lBattle Monk Archetype",
             " ",
@@ -1447,7 +1487,8 @@
         ],
         "slot": 12,
         "id": "tackle",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bo"
     },
     {
         "requirements": {
@@ -1470,8 +1511,8 @@
             "&7unto the ground and receive more damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+80%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &8+20%&8)",
+            "  &8(&6✢ &8Damage: &8+80%&8)",
+            "  &8(&2✤ &8Earth: &8+20%&8)",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1481,7 +1522,8 @@
         "links": null,
         "slot": 47,
         "id": "uppercutGrade3",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bp"
     },
     {
         "requirements": {
@@ -1517,7 +1559,8 @@
         "links": null,
         "slot": 27,
         "id": "firewater",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bq"
     },
     {
         "requirements": {
@@ -1541,7 +1584,7 @@
             " ",
             "&b✺ &7Mana Cost: &c+10",
             "&e🛡 &7Effect: &f20% &7Damage Bonus (&a⚔&7) to Players",
-            "&d⌛À &7Duration: &f+15s",
+            "&d⌛ &7Duration: &f+15s",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1555,7 +1598,8 @@
         ],
         "slot": 39,
         "id": "warscreamGrade3",
-        "locks": []
+        "locks": [],
+        "uniqueId": "br"
     },
     {
         "requirements": {
@@ -1586,8 +1630,8 @@
             "&7with holy energy, dealing extra damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -1600,7 +1644,8 @@
         ],
         "slot": 17,
         "id": "sacredSurge",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bs"
     },
     {
         "requirements": {
@@ -1621,7 +1666,7 @@
             "&7Increase the damage of &nBash&7.",
             " ",
             "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+30%&8)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1631,7 +1676,8 @@
         ],
         "slot": 35,
         "id": "bashDamage1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bt"
     },
     {
         "requirements": {
@@ -1667,7 +1713,8 @@
         ],
         "slot": 43,
         "id": "rejuvenatingSkin",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bu"
     },
     {
         "requirements": {
@@ -1690,8 +1737,8 @@
             "&7when &nMantle of the Bovemist&7 loses all charges.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS, per mantle lost)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &870%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &830%&8)",
+            "  &8(&6✢ &8Damage: &870%&8)",
+            "  &8(&e✦ &8Thunder: &830%&8)",
             "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
             "",
             "&b&lPaladin Archetype",
@@ -1705,7 +1752,8 @@
         ],
         "slot": 24,
         "id": "shieldexplosion",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bv"
     },
     {
         "requirements": {
@@ -1728,7 +1776,7 @@
             " ",
             "&b✺ &7Mana Cost: &c+15",
             "&c⚔ &7Total Damage: &f+150% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+150%&8)",
+            "  &8(&6✢ &8Damage: &8+150%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1738,7 +1786,8 @@
         ],
         "slot": 39,
         "id": "uppercutDamage1",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bw"
     },
     {
         "requirements": {
@@ -1766,8 +1815,8 @@
             "&8XP Bonus, Loot Bonus, Loot Quality,",
             "&8Gather XP Bonus, and Gather Speed Bonus)",
             " ",
-            "&e🛡 &7Effect: &f+20% &7ID Effectiveness (&6�?�&7) to Allies",
-            "&d⌛À &7Duration: &f8s",
+            "&e🛡 &7Effect: &f+20% &7ID Effectiveness (&6❈&7) to Allies",
+            "&d⌛ &7Duration: &f8s",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -1781,7 +1830,8 @@
         ],
         "slot": 41,
         "id": "protectiveBash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bx"
     },
     {
         "requirements": {
@@ -1819,7 +1869,8 @@
         ],
         "slot": 27,
         "id": "massiveBash",
-        "locks": []
+        "locks": [],
+        "uniqueId": "by"
     },
     {
         "requirements": {
@@ -1854,7 +1905,8 @@
         "links": null,
         "slot": 37,
         "id": "furiousBlow",
-        "locks": []
+        "locks": [],
+        "uniqueId": "bz"
     },
     {
         "requirements": {
@@ -1897,7 +1949,8 @@
         ],
         "slot": 31,
         "id": "chargeCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ca"
     },
     {
         "requirements": {
@@ -1921,7 +1974,7 @@
             "&7defense stats.",
             " ",
             "&e🛡 &7Effect: &f-30% &7Resistance Bonus (&c✃&7) to Enemies",
-            "&d⌛À &7Duration: &f8s",
+            "&d⌛ &7Duration: &f8s",
             " ",
             "&c&lFallen Archetype",
             " ",
@@ -1931,7 +1984,8 @@
         "links": null,
         "slot": 19,
         "id": "armourbreaker",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cb"
     },
     {
         "requirements": {
@@ -1954,9 +2008,9 @@
             "&7over a large area.",
             "",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS, per ripple)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &810%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&2✤ &8Earth: &810%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBattle Monk Archetype",
@@ -1971,7 +2025,8 @@
         ],
         "slot": 29,
         "id": "tempest",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cc"
     },
     {
         "requirements": {
@@ -2004,7 +2059,8 @@
         ],
         "slot": 9,
         "id": "fasterRoarOfTheBerserker",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cd"
     },
     {
         "requirements": {
@@ -2041,7 +2097,8 @@
         ],
         "slot": 11,
         "id": "radiantDevotee",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ce"
     },
     {
         "requirements": {
@@ -2063,8 +2120,8 @@
             "&7time you heal &f5% &7of your max health.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &820%&8)",
+            "  &8(&6✢ &8Damage: &840%&8)",
+            "  &8(&e✦ &8Thunder: &820%&8)",
             "&3☀ &7Area of Effect: &f6 Blocks &7(Circle-Shaped)",
             " ",
             "&b&lPaladin Archetype",
@@ -2077,7 +2134,8 @@
         ],
         "slot": 26,
         "id": "sparklingHope",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cf"
     },
     {
         "requirements": {
@@ -2113,7 +2171,8 @@
         ],
         "slot": 16,
         "id": "brickwall",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cg"
     },
     {
         "requirements": {
@@ -2145,7 +2204,8 @@
         ],
         "slot": 43,
         "id": "bashCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ch"
     },
     {
         "requirements": {
@@ -2173,8 +2233,8 @@
             "&8(Hold shift to stay grounded)",
             " ",
             "&c⚔ &7Total Damage: &f+10% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-20%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+30%&8)",
+            "  &8(&6✢ &8Damage: &8-20%&8)",
+            "  &8(&f❋ &8Air: &8+30%&8)",
             "&3☀ &7Area of Effect: &fCircle-Shaped",
             "&2➼ &7Range: &f+1 Blocks",
             " ",
@@ -2190,7 +2250,8 @@
         ],
         "slot": 13,
         "id": "roundabout",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ci"
     },
     {
         "requirements": {
@@ -2222,7 +2283,8 @@
         ],
         "slot": 9,
         "id": "warscreamCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cj"
     },
     {
         "requirements": {
@@ -2249,7 +2311,7 @@
             "&7double the speed and with an increased area of effect.",
             " ",
             "&c⚔ &7Total Damage: &f+25% &8(of your DPS, per bash)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+25%&8)",
+            "  &8(&e✦ &8Thunder: &8+25%&8)",
             "&3☀ &7Area of Effect: &f+3 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBattle Monk Archetype",
@@ -2263,7 +2325,8 @@
         ],
         "slot": 23,
         "id": "thunderclap",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ck"
     },
     {
         "requirements": {
@@ -2301,7 +2364,8 @@
         ],
         "slot": 27,
         "id": "altruism",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cl"
     },
     {
         "requirements": {
@@ -2330,7 +2394,8 @@
         ],
         "slot": 19,
         "id": "betterEnragedBlow",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cm"
     },
     {
         "requirements": {
@@ -2352,7 +2417,7 @@
             "&7nearby allies become invincible&7.",
             " ",
             "&e🛡 &7Effect: &fInvincibility (&b☗&f) to Allies",
-            "&d⌛À &7Duration: &f3s",
+            "&d⌛ &7Duration: &f3s",
             "&3☀ &7Area of Effect: &f12 Blocks &7(Circle-Shaped)",
             "",
             "&7Ability Points: &f2"
@@ -2360,7 +2425,8 @@
         "links": null,
         "slot": 44,
         "id": "lastStand",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cn"
     },
     {
         "requirements": {
@@ -2382,10 +2448,10 @@
             "&7a vortex that damages nearby enemies every &f0.5s&7. ",
             " ",
             "&c⚔ &7Total Damage: &f25% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &810%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &85%&8)",
-            "&d⌛À &7Duration: &f20s",
+            "  &8(&6✢ &8Damage: &810%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
+            "  &8(&c✹ &8Fire: &85%&8)",
+            "&d⌛ &7Duration: &f20s",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             "",
             "&e&lBattle Monk Archetype",
@@ -2398,7 +2464,8 @@
         ],
         "slot": 13,
         "id": "pushWarscream",
-        "locks": []
+        "locks": [],
+        "uniqueId": "co"
     },
     {
         "requirements": {
@@ -2437,7 +2504,8 @@
         ],
         "slot": 11,
         "id": "holystrikes",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cp"
     },
     {
         "requirements": {
@@ -2473,7 +2541,8 @@
         ],
         "slot": 34,
         "id": "secondchance",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cq"
     },
     {
         "requirements": {
@@ -2506,7 +2575,8 @@
         ],
         "slot": 42,
         "id": "uppercutCost2",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cr"
     },
     {
         "requirements": {
@@ -2532,8 +2602,8 @@
             "&7Increases the damage of &bSacred Surge &6&l✧&7.",
             " ",
             "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+70%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+10%&8)",
+            "  &8(&6✢ &8Damage: &8+70%&8)",
+            "  &8(&e✦ &8Thunder: &8+10%&8)",
             " ",
             "&b&lPaladin Archetype",
             " ",
@@ -2546,7 +2616,8 @@
         ],
         "slot": 16,
         "id": "strongerSacredSurge",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cs"
     },
     {
         "requirements": {
@@ -2575,7 +2646,8 @@
         ],
         "slot": 40,
         "id": "brinkOfMadness",
-        "locks": []
+        "locks": [],
+        "uniqueId": "ct"
     },
     {
         "requirements": {
@@ -2607,6 +2679,7 @@
         ],
         "slot": 38,
         "id": "betterAltruism",
-        "locks": []
+        "locks": [],
+        "uniqueId": "cu"
     }
 ]

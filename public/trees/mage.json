@@ -70,7 +70,7 @@
     },
     {
         "requirements": {
-            "NODE": "meteor",
+            "node": "meteor",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -169,7 +169,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -381,7 +381,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 2
         },
         "archetype": "blitz",
@@ -521,7 +521,7 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 2
         },
         "archetype": "priest",
@@ -633,9 +633,9 @@
     },
     {
         "requirements": {
-            "NODE": "meteor",
+            "node": "meteor",
             "abilityPoints": 1,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "arcane"
             }
@@ -707,9 +707,9 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "blitz"
             }
@@ -753,9 +753,9 @@
     },
     {
         "requirements": {
-            "NODE": "meteor",
+            "node": "meteor",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "priest"
             }
@@ -808,7 +808,7 @@
     },
     {
         "requirements": {
-            "NODE": "windSweeper",
+            "node": "windSweeper",
             "abilityPoints": 2
         },
         "archetype": "blitz",
@@ -850,7 +850,7 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -883,7 +883,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -916,7 +916,7 @@
     },
     {
         "requirements": {
-            "NODE": "arcaneTransfer",
+            "node": "arcaneTransfer",
             "abilityPoints": 1
         },
         "archetype": "arcane",
@@ -981,7 +981,7 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -1019,7 +1019,7 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -1056,9 +1056,9 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "arcane"
             }
@@ -1106,7 +1106,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1140,7 +1140,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 4,
                 "name": "arcane"
             }
@@ -1181,7 +1181,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 2
         },
         "archetype": "blitz",
@@ -1213,7 +1213,7 @@
     },
     {
         "requirements": {
-            "NODE": "ophanim",
+            "node": "ophanim",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1244,9 +1244,9 @@
     },
     {
         "requirements": {
-            "NODE": "windSweeper",
+            "node": "windSweeper",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "blitz"
             }
@@ -1320,7 +1320,7 @@
     },
     {
         "requirements": {
-            "NODE": "pyrokinesis",
+            "node": "pyrokinesis",
             "abilityPoints": 2
         },
         "archetype": "arcane",
@@ -1355,7 +1355,7 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1388,7 +1388,7 @@
     },
     {
         "requirements": {
-            "NODE": "ophanim",
+            "node": "ophanim",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -1453,7 +1453,7 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -1490,7 +1490,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "priest"
             }
@@ -1531,9 +1531,9 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "priest"
             }
@@ -1578,9 +1578,9 @@
     },
     {
         "requirements": {
-            "NODE": "meteor",
+            "node": "meteor",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "arcane"
             }
@@ -1619,7 +1619,7 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -1652,7 +1652,7 @@
     },
     {
         "requirements": {
-            "NODE": "windSweeper",
+            "node": "windSweeper",
             "abilityPoints": 1
         },
         "archetype": "blitz",
@@ -1681,7 +1681,7 @@
     },
     {
         "requirements": {
-            "NODE": "teleport",
+            "node": "teleport",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -1719,7 +1719,7 @@
     },
     {
         "requirements": {
-            "NODE": "meteor",
+            "node": "meteor",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1751,7 +1751,7 @@
     },
     {
         "requirements": {
-            "NODE": "icesnake",
+            "node": "icesnake",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1785,7 +1785,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 7,
                 "name": "priest"
             }
@@ -1829,7 +1829,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 6,
                 "name": "blitz"
             }
@@ -1868,7 +1868,7 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 2
         },
         "archetype": "arcane",
@@ -1905,7 +1905,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "blitz"
             }
@@ -1945,7 +1945,7 @@
     },
     {
         "requirements": {
-            "NODE": "arcaneTransfer",
+            "node": "arcaneTransfer",
             "abilityPoints": 1
         },
         "archetype": "arcane",
@@ -1979,7 +1979,7 @@
     },
     {
         "requirements": {
-            "NODE": "ophanim",
+            "node": "ophanim",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -2014,7 +2014,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 8,
                 "name": "arcane"
             }
@@ -2049,9 +2049,9 @@
     },
     {
         "requirements": {
-            "NODE": "windSweeper",
+            "node": "windSweeper",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 7,
                 "name": "blitz"
             }
@@ -2091,7 +2091,7 @@
     },
     {
         "requirements": {
-            "NODE": "sunshower",
+            "node": "sunshower",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -2125,7 +2125,7 @@
     },
     {
         "requirements": {
-            "NODE": "arcaneTransfer",
+            "node": "arcaneTransfer",
             "abilityPoints": 1
         },
         "archetype": "arcane",
@@ -2158,7 +2158,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 12,
                 "name": "blitz"
             }
@@ -2241,7 +2241,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 5,
                 "name": "blitz"
             }
@@ -2275,7 +2275,7 @@
     },
     {
         "requirements": {
-            "NODE": "windSweeper",
+            "node": "windSweeper",
             "abilityPoints": 1
         },
         "archetype": "blitz",
@@ -2308,7 +2308,7 @@
     },
     {
         "requirements": {
-            "NODE": "ophanim",
+            "node": "ophanim",
             "abilityPoints": 2
         },
         "archetype": "priest",
@@ -2346,7 +2346,7 @@
     },
     {
         "requirements": {
-            "NODE": "chaosExplosion",
+            "node": "chaosExplosion",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2374,7 +2374,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 4,
                 "name": "arcane"
             }
@@ -2410,7 +2410,7 @@
     },
     {
         "requirements": {
-            "NODE": "healthierOphanim1",
+            "node": "healthierOphanim1",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -2444,7 +2444,7 @@
     },
     {
         "requirements": {
-            "NODE": "heal",
+            "node": "heal",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2476,7 +2476,7 @@
     },
     {
         "requirements": {
-            "NODE": "arcaneTransfer",
+            "node": "arcaneTransfer",
             "abilityPoints": 1
         },
         "archetype": "arcane",
@@ -2509,7 +2509,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 11,
                 "name": "priest"
             }
@@ -2549,7 +2549,7 @@
     },
     {
         "requirements": {
-            "NODE": "lightDance",
+            "node": "lightDance",
             "abilityPoints": 1
         },
         "archetype": "priest",
@@ -2581,9 +2581,9 @@
     },
     {
         "requirements": {
-            "NODE": "arcaneTransfer",
+            "node": "arcaneTransfer",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 12,
                 "name": "arcane"
             }

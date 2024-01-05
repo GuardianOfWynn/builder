@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <AbilityTree :clazz="'Warrior/Knight'" :connectors="WARRIOR_CONNECTORS" :tree="WARRIOR_ABILITY_TREE"/>
+            <AbilityTree :clazz="'Assassin/Ninja'" :connectors="ASSASSIN_CONNECTORS" :tree="ASSASSIN_ABILITY_TREE"/>
         </div>
     </div>
 </template>
@@ -48,7 +48,7 @@ import { Ref, ref } from "vue";
 import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
 import ItemSelector from "./ItemSelector.vue";
-import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, AbilityNode, AbilityNodeConnector, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS } from "../../model/abilitytree";
+import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, ASSASSIN_CONNECTORS, AbilityNode, AbilityNodeConnector, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS } from "../../model/abilitytree";
 import { WynnBaseItem } from "../../model/item";
 import { ItemType, WynnClass } from "../../scripts/util";
 import AbilityTree from "./AbilityTree.vue";
@@ -126,7 +126,7 @@ export default {
 
         }
 
-        return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, WARRIOR_ABILITY_TREE, ARCHER_ABILITY_TREE, WARRIOR_CONNECTORS, abilityTree, treeConnectors, handleWeaponChanged}
+        return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, WARRIOR_ABILITY_TREE, ARCHER_ABILITY_TREE,ASSASSIN_CONNECTORS,ASSASSIN_ABILITY_TREE, WARRIOR_CONNECTORS, abilityTree, treeConnectors, handleWeaponChanged}
     },
     components: { AppsSidebar, ItemSelector, AbilityTree, AbilityTree }
 }

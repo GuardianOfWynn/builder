@@ -37,21 +37,29 @@
             </div>
         </div>
         <div class="w-1/3 flex flex-col gap-y-8">
-            <div class="text-white border-[1px] rounded-md border-mc-aqua p-4 flex h-fit justify-center gap-x-4">
-                <div v-for="arch in archetypes.get(clazz!)" class="text-center w-1/3">
-                    <p :class="'text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
-                        {{ ARCHETYPE_DATA.get(arch as Archetype)!.name }}
-                    </p>
-                    <p class="mb-2">
-                        {{ abilityTree!.getNodesOfArchetype(arch as Archetype).length }} / {{ baseTree!.filter(x =>
-                            x.archetype !== undefined && x.archetype == arch).length }}
-                    </p>
-                    <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto" />
+            <div class="text-white border-[1px] rounded-md border-mc-aqua p-4 h-fit">
+                <div class=" justify-center gap-x-4 flex">
+                    <div v-for="arch in CLASS_ARCHETYPES.get(clazz! as WynnClass)" class="text-center w-1/3">
+                        <p :class="'text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
+                            {{ ARCHETYPE_DATA.get(arch as Archetype)!.name }}
+                        </p>
+                        <p class="mb-2">
+                            {{ abilityTree!.getNodesOfArchetype(arch as Archetype).length }} / {{ baseTree!.filter(x =>
+                                x.archetype !== undefined && x.archetype == arch).length }}
+                        </p>
+                        <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto" />
+                    </div>
                 </div>
+                <p class="mt-4 text-center">Ability Points: {{ abilityTree.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
             </div>
-            <div v-if="currentHovered !== undefined" class="rounded-sm bg-ability-tree border-[1px] p-4 border-mc-aqua">
-                <p>{{ currentHovered.name }}</p><br/>
-                <p v-for="line in currentHovered.description">{{ line }}</p>
+            <div v-if="currentHovered !== undefined" class="text-sm w-fit rounded-sm border-[1px] p-4 border-mc-aqua">
+                <div class="text-lg">
+                    <MinecraftTranslatedText :text="currentHovered.name" />
+                </div>
+                <MinecraftTranslatedText v-for="line in currentHovered.description" :text="line" />
+            </div>
+            <div>
+                <MinecraftTranslatedText v-for="msg in warns" :text="msg" />
             </div>
         </div>
     </div>
@@ -61,9 +69,11 @@
 <script lang="ts">
 
 import { Ref, onMounted, ref, watchEffect } from 'vue';
-import { AbilityNode, AbilityTree, AbilityNodeConnector, ConnectorType, makeTree } from '../../model/abilitytree'
+import { AbilityNode, AbilityTree, AbilityNodeConnector, ConnectorType, makeTree, BASE_ABILITY_POINTS } from '../../model/abilitytree'
 import { WynnClass } from '../../scripts/util';
-import { ARCHETYPE_DATA, Archetype } from '../../model/archetype';
+import { ARCHETYPE_DATA, Archetype, CLASS_ARCHETYPES } from '../../model/archetype';
+import MinecraftTranslatedText from '../MinecraftTranslatedText.vue';
+import { stripColorCodes } from '../../scripts/color_code_translator';
 
 export default {
     name: 'AbilityTree',
@@ -76,18 +86,10 @@ export default {
         const abilityTree: Ref<AbilityTree | undefined> = ref(undefined);
         const currentHovered: Ref<AbilityNode | undefined> = ref(undefined)
         const baseTree: Ref<AbilityNode[] | undefined> = ref(props.tree);
+        const warns: Ref<string[]> = ref([]);
 
         const selectedNodes: Ref<AbilityNode[]> = ref([]);
         const availableNodes: Ref<AbilityNode[]> = ref([]);
-
-        const archetypes = new Map([
-            ['Warrior/Knight', ['berserker', 'monk', 'tank']],
-            ['Archer/Hunter', ['boltslinger', 'trapper', 'sniper']],
-            ['Mage/Dark Wizard', ['blitz', 'priest', 'arcane']],
-            ['Assassin/Ninja', ['shadestepper', 'trickster', 'acrobat']],
-            ['Shaman/Skyseer', ['summoner', 'ritualist', 'bloodmagik']],
-        ]);
-
         onMounted(() => {
             assemble();
         })
@@ -121,7 +123,16 @@ export default {
             if (baseTree !== undefined && selectedNodes.value.length === 0) {
                 availableNodes.value = [baseTree.value![0]]
             }
-            console.log(availableNodes.value)
+            warns.value = [];
+            if(tree.getAvailableAbilityPoints() < 0) {
+                warns.value.push("&cIllegal ability tree: too many ability points assigned");
+            }
+            selectedNodes.value.forEach(x => {
+                let result = tree.isNodeAvailable(x);
+                if (!result.first) {
+                    warns.value.push("&cIllegal node &n" + x.name + "&c: " + result.second);
+                }
+            })
         }
 
         const getConnectorSpriteVariant = (connector: AbilityNodeConnector) => {
@@ -203,9 +214,9 @@ export default {
         })
 
         return {
-            abilityTree, availableNodes, currentHovered, archetypes, ARCHETYPE_DATA, baseTree, onHover, getDepth, getNodeFor, toggleNode, getConnectorFor, hasNode, hasConnector, getConnectorSpriteVariant, selectedNodes
+            abilityTree, availableNodes, currentHovered, ARCHETYPE_DATA, baseTree, CLASS_ARCHETYPES, warns, BASE_ABILITY_POINTS, onHover, getDepth, getNodeFor, toggleNode, getConnectorFor, hasNode, hasConnector, getConnectorSpriteVariant, selectedNodes
         }
     },
-    components: {}
+    components: { MinecraftTranslatedText }
 }
 </script>

@@ -9,7 +9,9 @@ export const WARRIOR_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/b
 export const MAGE_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/mage.json")).json();
 export const ARCHER_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/archer.json")).json();
 export const SHAMAN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/shaman.json")).json();
+
 export const ASSASSIN_ABILITY_TREE: AbilityNode[] = await (await fetch("/builder/trees/assassin.json")).json();
+export const ASSASSIN_CONNECTORS: AbilityNodeConnector[] = await (await fetch("/builder/trees/assassin_connectors.json")).json();
 
 export enum ConnectorType {
     DOWN_LEFT = "connector_down_left",
@@ -79,23 +81,26 @@ export class AbilityTree {
             .map(x => getAbilityNode(x,this.baseTree))
             .filter(x => x !== undefined)
             .filter(x => !this.nodes.includes(x))
-            .filter(node => this.isNodeAvailable(node));
+            .filter(node => this.isNodeAvailable(node).first);
     }
 
-    isNodeAvailable(node: AbilityNode): boolean {
-        if(node.requirements.archetype !== undefined && this.getNodesOfArchetype(node.requirements.archetype.name as Archetype).length < node.requirements.archetype.amount) {
-            return false;
+    isNodeAvailable(node: AbilityNode): Pair<boolean, string> {
+        if(!Array.from(new Set(this.nodes.flatMap(x => x.links))).some(x => x === node.id) && node.id !== this.baseTree[0].id) {
+            return { first: false, second: `Node unreachable` };
         }
-        if(node.requirements.abilityPoints > this.getAvailableAbilityPoints()) {
-            return false;
+        if(node.requirements.archetype !== undefined && this.getNodesOfArchetype(node.requirements.archetype.name as Archetype).length < node.requirements.archetype.amount) {
+            return { first: false, second: "Not enough archetype required nodes"};
+        }
+        if(node.requirements.abilityPoints > this.getAvailableAbilityPoints() && !this.nodes.some(x => x.id === node.id)) {
+            return { first: false, second: "Not enough ability points"};
         }
         if(node.requirements.node !== undefined && !this.nodes.some(x => x.id === node.requirements.node)) {
-            return false;
+            return { first: false, second: `Required node not found (${node.requirements.node})` };
         }
         if(this.getLockedAbilities().some(x => x.id === node.id)) {
-            return false;
+            return { first: false, second: `Node locked` };
         }
-        return true;
+        return { first: true, second: "" };
     }
 }
 
@@ -107,6 +112,7 @@ export class AbilityNodeConnector {
 
 export class AbilityNode {
     id: string;
+    uniqueId: string;
     requirements: {
         node: string;
         abilityPoints: number;
@@ -127,7 +133,6 @@ export class AbilityNode {
     };
     description: string[];
     links: string[];
-    required: number[];
     slot: number;
     locks: string[];
 }
@@ -211,7 +216,6 @@ function expand(from: AbilityNodeConnector, target: AbilityNode, connectors: Abi
     if(leftConnector !== undefined && isDirectionAllowed(leftConnector.type as ConnectorType, Direction.RIGHT) && !wasVisited(leftConnector, visited)) {
         let result = expand(leftConnector!, target, connectors, tree, visited);
         if(result.first) {
-
             return result;
         }
     }

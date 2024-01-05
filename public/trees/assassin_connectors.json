@@ -1,0 +1,52 @@
+[
+    {
+        "x": 5,
+        "y": 2,
+        "type": "connector_up_down"
+    },
+    {
+        "x": 4,
+        "y": 3,
+        "type": "connector_right_left"
+    },
+    {
+        "x": 5,
+        "y": 4,
+        "type": "connector_up_down"
+    },
+    {
+        "x": 5,
+        "y": 6,
+        "type": "connector_up_down"
+    },
+    {
+        "x": 4,
+        "y": 7,
+        "type": "connector_right_left"
+    },
+    {
+        "x":6,
+        "y": 7,
+        "type": "connector_right_left"
+    },
+    {
+        "x": 3,
+        "y": 8,
+        "type": "connector_up_down"
+    },
+    {
+        "x": 7,
+        "y": 8,
+        "type": "connector_up_down"
+    },
+    {
+        "x": 4,
+        "y": 9,
+        "type": "connector_right_left"
+    },
+    {
+        "x":6,
+        "y": 9,
+        "type": "connector_right_left"
+    }
+]

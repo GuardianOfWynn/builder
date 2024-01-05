@@ -1,3 +1,4 @@
+import { WynnClass } from "../scripts/util";
 
 export enum Archetype {
     ACOLYTE = "bloodmagik",
@@ -16,6 +17,14 @@ export enum Archetype {
     TRICKSTER = "trickster",
     ACROBAT = "acrobat"
 }
+
+export const CLASS_ARCHETYPES = new Map<WynnClass, Archetype[]>([
+    [WynnClass.ARCHER, [Archetype.BOLTSLINGER, Archetype.TRAPPER, Archetype.SHARPSHOOTER]],
+    [WynnClass.ASSASSIN, [Archetype.TRICKSTER, Archetype.SHADESTEPPER, Archetype.ACROBAT]],
+    [WynnClass.MAGE, [Archetype.RIFTWALKER, Archetype.ARCANIST, Archetype.LIGHT_BENDER]],
+    [WynnClass.SHAMAN, [Archetype.SUMMONER, Archetype.ACOLYTE, Archetype.RITUALIST]],
+    [WynnClass.WARRIOR, [Archetype.PALADIN, Archetype.BATTLE_MONK, Archetype.FALLEN]],
+]);
 
 export const ARCHETYPE_DATA = new Map<Archetype, ArchetypeData>([
     [Archetype.ACOLYTE, {

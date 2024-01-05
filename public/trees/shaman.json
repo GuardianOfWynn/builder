@@ -64,7 +64,7 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -195,7 +195,7 @@
     },
     {
         "requirements": {
-            "NODE": "haul",
+            "node": "haul",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -411,7 +411,7 @@
     },
     {
         "requirements": {
-            "NODE": "haul",
+            "node": "haul",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -446,7 +446,7 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 2
         },
         "archetype": "bloodmagik",
@@ -516,7 +516,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2
         },
         "archetype": "summoner",
@@ -585,7 +585,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2
         },
         "archetype": "bloodmagik",
@@ -695,9 +695,9 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "bloodmagik"
             }
@@ -742,7 +742,7 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -779,7 +779,7 @@
     },
     {
         "requirements": {
-            "NODE": "naturejolt",
+            "node": "naturejolt",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -813,7 +813,7 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -847,7 +847,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheLunatic",
+            "node": "maskOfTheLunatic",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -887,9 +887,9 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "ritualist"
             }
@@ -933,7 +933,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -968,7 +968,7 @@
     },
     {
         "requirements": {
-            "NODE": "puppetMaster",
+            "node": "puppetMaster",
             "abilityPoints": 1
         },
         "archetype": "summoner",
@@ -999,7 +999,7 @@
     },
     {
         "requirements": {
-            "NODE": "haul",
+            "node": "haul",
             "abilityPoints": 2
         },
         "archetype": "bloodmagik",
@@ -1031,9 +1031,9 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "summoner"
             }
@@ -1076,7 +1076,7 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1140,9 +1140,9 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 2,
                 "name": "summoner"
             }
@@ -1181,7 +1181,7 @@
     },
     {
         "requirements": {
-            "NODE": "bloodPool",
+            "node": "bloodPool",
             "abilityPoints": 1
         },
         "archetype": "bloodmagik",
@@ -1244,7 +1244,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2
         },
         "archetype": "summoner",
@@ -1282,7 +1282,7 @@
     },
     {
         "requirements": {
-            "NODE": "puppetMaster",
+            "node": "puppetMaster",
             "abilityPoints": 2
         },
         "archetype": "summoner",
@@ -1321,7 +1321,7 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1356,7 +1356,7 @@
     },
     {
         "requirements": {
-            "NODE": "haul",
+            "node": "haul",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1418,7 +1418,7 @@
     },
     {
         "requirements": {
-            "NODE": "morePuppets",
+            "node": "morePuppets",
             "abilityPoints": 1
         },
         "archetype": "summoner",
@@ -1449,7 +1449,7 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -1489,7 +1489,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheLunatic",
+            "node": "maskOfTheLunatic",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -1524,7 +1524,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "ritualist"
             }
@@ -1569,7 +1569,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheLunatic",
+            "node": "maskOfTheLunatic",
             "abilityPoints": 1
         },
         "archetype": "ritualist",
@@ -1602,7 +1602,7 @@
     },
     {
         "requirements": {
-            "NODE": "totem",
+            "node": "totem",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1637,7 +1637,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheFanatic",
+            "node": "maskOfTheFanatic",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -1673,7 +1673,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 7,
                 "name": "ritualist"
             }
@@ -1718,9 +1718,9 @@
     },
     {
         "requirements": {
-            "NODE": "bloodPool",
+            "node": "bloodPool",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 9,
                 "name": "bloodmagik"
             }
@@ -1758,7 +1758,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheCoward",
+            "node": "maskOfTheCoward",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -1796,7 +1796,7 @@
     {
         "requirements": {
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 7,
                 "name": "bloodmagik"
             }
@@ -1842,7 +1842,7 @@
     },
     {
         "requirements": {
-            "NODE": "bloodPool",
+            "node": "bloodPool",
             "abilityPoints": 1
         },
         "archetype": "bloodmagik",
@@ -1874,9 +1874,9 @@
     },
     {
         "requirements": {
-            "NODE": "maskRotation",
+            "node": "maskRotation",
             "abilityPoints": 1,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 6,
                 "name": "ritualist"
             }
@@ -1913,7 +1913,7 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -1946,9 +1946,9 @@
     },
     {
         "requirements": {
-            "NODE": "overseer",
+            "node": "overseer",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 8,
                 "name": "summoner"
             }
@@ -1991,7 +1991,7 @@
     },
     {
         "requirements": {
-            "NODE": "bloodPool",
+            "node": "bloodPool",
             "abilityPoints": 2
         },
         "archetype": "",
@@ -2024,7 +2024,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2
         },
         "archetype": "summoner",
@@ -2058,7 +2058,7 @@
     },
     {
         "requirements": {
-            "NODE": "tether",
+            "node": "tether",
             "abilityPoints": 1
         },
         "archetype": "bloodmagik",
@@ -2093,7 +2093,7 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 1
         },
         "archetype": "",
@@ -2124,9 +2124,9 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 11,
                 "name": "ritualist"
             }
@@ -2166,7 +2166,7 @@
     },
     {
         "requirements": {
-            "NODE": "bloodPool",
+            "node": "bloodPool",
             "abilityPoints": 1
         },
         "archetype": "bloodmagik",
@@ -2197,7 +2197,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheCoward",
+            "node": "maskOfTheCoward",
             "abilityPoints": 1
         },
         "archetype": "ritualist",
@@ -2230,9 +2230,9 @@
     },
     {
         "requirements": {
-            "NODE": "puppetMaster",
+            "node": "puppetMaster",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 12,
                 "name": "summoner"
             }
@@ -2267,9 +2267,9 @@
     },
     {
         "requirements": {
-            "NODE": "uproot",
+            "node": "uproot",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 12,
                 "name": "bloodmagik"
             }
@@ -2320,9 +2320,9 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheFanatic",
+            "node": "maskOfTheFanatic",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 9,
                 "name": "ritualist"
             }
@@ -2364,9 +2364,9 @@
     },
     {
         "requirements": {
-            "NODE": "aura",
+            "node": "aura",
             "abilityPoints": 2,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 3,
                 "name": "summoner"
             }
@@ -2407,9 +2407,9 @@
     },
     {
         "requirements": {
-            "NODE": "jungleSlayer",
+            "node": "jungleSlayer",
             "abilityPoints": 1,
-            "ARCHETYPE": {
+            "archetype": {
                 "amount": 8,
                 "name": "summoner"
             }
@@ -2448,7 +2448,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheLunatic",
+            "node": "maskOfTheLunatic",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
@@ -2482,7 +2482,7 @@
     },
     {
         "requirements": {
-            "NODE": "doubleTotem",
+            "node": "doubleTotem",
             "abilityPoints": 2
         },
         "archetype": "summoner",
@@ -2517,7 +2517,7 @@
     },
     {
         "requirements": {
-            "NODE": "maskOfTheCoward",
+            "node": "maskOfTheCoward",
             "abilityPoints": 2
         },
         "archetype": "ritualist",
