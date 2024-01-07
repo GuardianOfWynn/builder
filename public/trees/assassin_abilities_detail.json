@@ -1,0 +1,665 @@
+[
+    {
+        "ability": "spinattack",
+        "primary": true,
+        "manaCost": 40,
+        "damageBoost": {
+            "neutral": 1.2,
+            "thunder": 0.3
+        },
+        "dealedHits": 1
+    },
+    {
+        "ability": "spinAttackCost1",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -10
+    },
+    {
+        "ability": "doubleSpin",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost",
+            "dealedHits"
+        ],
+        "damageBoost": {
+            "neutral": -0.4
+        },
+        "dealedHits": 2
+    },
+    {
+        "ability": "daggerProficiency",
+        "boosts": {
+            "identifications": [
+                {
+                    "id": "walkSpeed",
+                    "amount": 5
+                },
+                {
+                    "id": "mainAttackDamage",
+                    "amount": 5
+                }
+            ]
+        }
+    },
+    {
+        "ability": "poisonedBlade",
+        "identificationTransforming": {
+            "transformedIds": [
+                {
+                    "id": "rawMainAttackDamage",
+                    "amount": 2
+                },
+                {
+                    "id": "mainAttackDamage",
+                    "amount": 2
+                }
+            ],
+            "targetId": "poison",
+            "targetAmount": 5,
+            "targetCap": 50
+        }
+    },
+    {
+        "ability": "multihit",
+        "primary": true,
+        "manaCost": 40,
+        "damageBoost": {
+            "neutral": 0.3,
+            "water": 0.1
+        },
+        "dealedHits": 8
+    },
+    {
+        "ability": "smokebomb",
+        "primary": true,
+        "manaCost": 35,
+        "damageBoost": {
+            "neutral": 0.25,
+            "air": 0.05,
+            "earth": 0.05
+        },
+        "dealedHits": 30
+    },
+    {
+        "ability": "dashCost1",
+        "parentAbility": [
+            "dash"
+        ],
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "doubleSlice",
+        "parentAbility": [
+            "mainattack"
+        ],
+        "damageBoost": {
+            "neutral": -0.4,
+            "mainAttack": true
+        },
+        "dealedHits": 2
+    },
+    {
+        "ability": "dash",
+        "primary": true,
+        "manaCost": 20
+    },
+    {
+        "ability": "backstab",
+        "parentAbility": [
+            "multihit"
+        ],
+        "damageBoost": {
+            "neutral": 2,
+            "earth": 0.5
+        },
+        "dealedHits": 1,
+        "parentOverridedStats": [
+            "dealedHits",
+            "damageBoost"
+        ]
+    },
+    {
+        "ability": "assassinAirPath",
+        "damageBoosts": {
+            "airRaw": {
+                "minimum": 3,
+                "maximum": 4
+            },
+            "air": 0.15
+        }
+    },
+    {
+        "ability": "assassinEarthPath",
+        "damageBoosts": {
+            "earthRaw": {
+                "minimum": 2,
+                "maximum": 4
+            },
+            "earth": 0.2
+        }
+    },
+    {
+        "ability": "assassinWaterPath",
+        "damageBoosts": {
+            "waterRaw": {
+                "minimum": 2,
+                "maximum": 4
+            },
+            "water": 0.15
+        }
+    },
+    {
+        "ability": "stickyBomb",
+        "parentAbility": [
+            "smokebomb"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoosts": {
+            "fire": 0.1
+        }
+    },
+    {
+        "ability": "assassinThunderPath",
+        "damageBoosts": {
+            "thunderRaw": {
+                "minimum": 1,
+                "maximum": 8
+            },
+            "thunder": 0.1
+        }
+    },
+    {
+        "ability": "fatality",
+        "primary": true,
+        "dealedHits": 1,
+        "damageBoost": {
+            "neutral": 1,
+            "air": 0.5
+        }
+    },
+    {
+        "ability": "assassinFirePath",
+        "damageBoosts": {
+            "fireRaw": {
+                "minimum": 3,
+                "maximum": 5
+            },
+            "fire": 0.15
+        }
+    },
+    {
+        "ability": "vanish",
+        "parentAbility": [
+            "dash"
+        ]
+    },
+    {
+        "ability": "shenanigans",
+        "identificationTransforming": {
+            "transformedIds": [
+                {
+                    "id": "stealing",
+                    "amount": 2
+                }
+            ],
+            "targetId": "manaSteal",
+            "targetAmount": 2,
+            "targetCap": 8
+        }
+    },
+    {
+        "ability": "psithurism",
+        "boosts": [
+            {
+                "identification": "jumpHeight",
+                "amount": 1
+            },
+            {
+                "identification": "walkSpeed",
+                "amount": 20
+            }
+        ]
+    },
+    {
+        "ability": "multihitCost1",
+        "parentAbility": [
+            "multihit"
+        ],
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "bamboozle",
+        "primary": true,
+        "damageBoost": {
+            "neutral": 3.6,
+            "fire": 4
+        }
+    },
+    {
+        "ability": "shadowtravel",
+        "toggleable": true,
+        "boosts": [
+            {
+                "identification": "walkSpeed",
+                "amount": 120
+            }
+        ]
+    },
+    {
+        "ability": "fatalstrike",
+        "toggleable": true,
+        "parentAbility": [
+            "dash",
+            "multihit",
+            "smokebomb",
+            "spinattack"
+        ],
+        "damageBoost": {
+            "overall": 0.8
+        }
+    },
+    {
+        "ability": "wallOfSmoke",
+        "parentAbility": "smokeBomb",
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "parentOverridedStats": [
+            "dealedHits"
+        ],
+        "dealedHits": 50,
+        "damageBoost": {
+            "neutral": -0.1
+        }
+    },
+    {
+        "ability": "shadowClones",
+        "toggleable": true,
+        "boosts": {
+            "resistance": 0.6
+        },
+        "incrementalDetails": {
+            "minimum": 0,
+            "maximum": 3
+        }
+    },
+    {
+        "ability": "daggerProficiency2",
+        "damageBoosts": {
+            "overallRaw": {
+                "minimum": 5,
+                "maximum": 5
+            }
+        }
+    },
+    {
+        "ability": "distraction",
+        "affectOtherPlayers": true,
+        "boosts": {
+            "mobDamageReduction": -0.1
+        },
+        "incrementalSkillId": "distraction",
+        "incrementalDetails": {
+            "minimum": 1,
+            "maximum": 150,
+            "multipliedStats": [
+                "boosts.mobDamageReduction"
+            ]
+        }
+    },
+    {
+        "ability": "lacerate",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "neutral": 0.6,
+            "air": 0.2,
+            "water": 0.1
+        }
+    },
+    {
+        "ability": "marked",
+        "damageBoost": {
+            "overall": 0.06
+        },
+        "incrementalSkillId": "marked",
+        "incrementalDetails": {
+            "minimum": 1,
+            "maximum": 4,
+            "multipliedStats": [
+                "boosts.damageBoost"
+            ]
+        }
+    },
+    {
+        "ability": "discombobulate",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "fire": 0.2
+        }
+    },
+    {
+        "ability": "flowState",
+        "toggleable": true,
+        "damageBoost": {
+            "overall": 0.5
+        }
+    },
+    {
+        "ability": "stanceChange",
+        "primary": true,
+        "damageBoost": {
+            "overall": 1,
+            "fire": 0.2
+        }
+    },
+    {
+        "ability": "betterMultihit",
+        "parentAbility": [
+            "multihit"
+        ],
+        "parentBoostedStats": [
+            "dealedHits"
+        ],
+        "dealedHits": 3
+    },
+    {
+        "ability": "darkArts",
+        "applyWhenToggled": "shadowClones",
+        "parentAbility": [
+            "smokebomb",
+            "multihit",
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": -0.65
+        }
+    },
+    {
+        "ability": "smokeBombCost1",
+        "parentAbility": [
+            "smokebomb"
+        ],
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "dashSlash",
+        "parentAbility": [
+            "dash"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.7,
+            "air": 0.1
+        }
+    },
+    {
+        "ability": "vulnerableBomb",
+        "toggleable": true,
+        "parentAbility": [
+            "multihit",
+            "spinattack",
+            "dash"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.4
+        }
+    },
+    {
+        "ability": "spinAttackmarked",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.2
+        }
+    },
+    {
+        "ability": "dashCost2",
+        "parentAbility": "dash",
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "multihitCost2",
+        "parentAbility": "multihit",
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "spinAttackCost2",
+        "parentAbility": "spinattack",
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "shadowDash",
+        "toggleable": true,
+        "parentAbility": [
+            "dash"
+        ],
+        "boosts": {
+            "resistance": 0.75
+        }
+    },
+    {
+        "ability": "betterLacerate",
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": "dealedHits",
+        "dealedHits": 1
+    },
+    {
+        "ability": "nightcloakKnives",
+        "toggleable": true,
+        "parentAbility": [
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "incrementalSkillMultiplier": "marked",
+        "damageBoost": {
+            "overall": 0.04
+        }
+    },
+    {
+        "ability": "goombaStomp",
+        "parentAbility": [
+            "dash"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.3,
+            "air": 0.1
+        }
+    },
+    {
+        "ability": "betterFatalstrike",
+        "applyWhenToggled": "fatalstrike",
+        "parentAbility": [
+            "dash",
+            "multihit",
+            "smokebomb",
+            "spinattack"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.4
+        }
+    },
+    {
+        "ability": "chokebomb",
+        "toggleable": true,
+        "parentAbility": "smokeBomb",
+        "boosts": {
+            "enemySlowness": 0.4
+        }
+    },
+    {
+        "ability": "moreMarks",
+        "parentAbility": [
+            "marked"
+        ],
+        "parentBoostedStats": [
+            "incrementalDetails.maximum"
+        ],
+        "incrementalDetails": {
+            "maximum": 2
+        }
+    },
+    {
+        "ability": "forbiddenArt",
+        "applyWhenToggled": "shadowClones",
+        "parentAbility": [
+            "shadowClones"
+        ],
+        "parentBoostedStats": [
+            "incrementalDetails.maximum"
+        ],
+        "incrementalDetails": {
+            "maximum": 3
+        },
+        "damageBoost": {
+            "overall": -0.1
+        }
+    },
+    {
+        "ability": "betterClones2",
+        "applyWhenToggled": "shadowClones",
+        "parentAbility": [
+            "darkArts"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": -0.1
+        }
+    },
+    {
+        "ability": "markedDamage",
+        "parentAbility": [
+            "marked"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.04
+        }
+    },
+    {
+        "ability": "jasminBloom",
+        "primary": true,
+        "damageBoost": {
+            "overall": 0.6,
+            "water": 0.15,
+            "earth": 0.05
+        },
+        "dealedHits": 16
+    },
+    {
+        "ability": "diversion",
+        "toggleable": true,
+        "boosts": {
+            "overhealth": 0.1
+        }
+    },
+    {
+        "ability": "smokeBombCost2",
+        "parentAbility": [
+            "smokebomb"
+        ],
+        "parentBoostedStats": [
+            "manaCost"
+        ],
+        "manaCost": -5
+    },
+    {
+        "ability": "betterClones",
+        "parentAbility": [
+            "darkArts"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 0.05
+        }
+    },
+    {
+        "ability": "shindeiru",
+        "parentAbility": [
+            "multihit",
+            "powderSpecial"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "overall": 1
+        }
+    },
+    {
+        "ability": "multiTeleportation",
+        "parentAbility": [
+            "multihit"
+        ],
+        "parentBoostedStats": [
+            "damageBoost"
+        ],
+        "damageBoost": {
+            "thunder": 0.15
+        }
+    }
+]

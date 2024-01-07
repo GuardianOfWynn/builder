@@ -1,5 +1,6 @@
 import { Pair } from "../scripts/util";
 import { Archetype } from "../model/archetype"
+import { AbilityDetail } from "./skill";
 
 export const BASE_ABILITY_POINTS = 45;
 
@@ -53,6 +54,8 @@ export function isDirectionAllowed(connector: ConnectorType, direction: Directio
 
 export class AbilityTree {
     baseTree: AbilityNode[];
+    toggledBuffs: AbilityNode[];
+    baseTreeDetails: AbilityDetail[];
     nodes: AbilityNode[];
     connectors: AbilityNodeConnector[];
     availableNodes: AbilityNode[];
@@ -120,6 +123,8 @@ export class AbilityNodeConnector {
 export class AbilityNode {
     id: string;
     uniqueId: string;
+    archetype: string;
+    name: string;
     requirements: {
         node: string;
         abilityPoints: number;
@@ -131,9 +136,7 @@ export class AbilityNode {
     coordinates: {
         x: number;
         y: number;
-    }
-    archetype: string;
-    name: string;
+    };
     sprite: {
         normal: string;
         activated: string;
