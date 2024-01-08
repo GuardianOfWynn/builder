@@ -238,7 +238,8 @@ export default {
     const assemble = () => {
       if (first) {
         if (route.path !== "/" && isValidHash(route.path.slice(1))) {
-          let recipeStr = route.path.slice(1);
+          let recipeStr = route.path.slice(6);
+          console.log(recipeStr);
           let decoded = decodeRecipe(recipeStr, ingredientList);
           recipe.value = decoded.prototype;
           ingredients[0].ingredient = decoded.ingredients[0].ingredient;

@@ -59,6 +59,7 @@ export class AbilityTree {
     nodes: AbilityNode[];
     connectors: AbilityNodeConnector[];
     availableNodes: AbilityNode[];
+    
 
     constructor(baseTree: AbilityNode[], nodes: AbilityNode[], connectors: AbilityNodeConnector[], availableNodes: AbilityNode[]) {
         this.baseTree = baseTree;

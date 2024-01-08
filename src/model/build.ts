@@ -1,5 +1,4 @@
 
-import { AbilityNode } from "./ability";
 import { AbilityTree } from "./abilitytree";
 import { FixedIdentification } from "./identification";
 import { WynnItem } from "./item";

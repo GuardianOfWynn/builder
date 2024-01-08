@@ -160,6 +160,37 @@ export function getProfessionForItemType(itemType: ItemType) {
     }
 }
 
+export function pathValue<T>(path: string, object: any): T {
+    let nodes = path.split(".");
+    let currentNode = undefined;
+    for(let i = 0; i < nodes.length; i++) {
+        if(currentNode === undefined) {
+            currentNode = object[nodes[i]];
+        } else {
+            currentNode = currentNode[nodes[i]];
+        }
+    }
+    return currentNode as T
+}
+
+export function replacePathValue<U>(path: string, object: any, value: any): U {
+    let nodes = path.split(".");
+    let currentNode = JSON.parse;
+    for(let i = 0; i < nodes.length-1; i++) {
+        if(currentNode === undefined) {
+            currentNode = object[nodes[i]];
+        } else {
+            currentNode = currentNode[nodes[i]];
+        }
+    }
+    if(currentNode === undefined) {
+        return currentNode as U;
+    }
+    currentNode[nodes[nodes.length - 1]] = value;
+    return currentNode as U
+}
+
+
 export enum MaterialTier {
     TIER_3 = 3,
     TIER_2 = 2,

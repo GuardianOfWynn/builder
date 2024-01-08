@@ -20,9 +20,10 @@ export interface DamageModifier {
 }
 
 export class AbilityDetail {
+    ability: string; 
     parent?: string[];
-    parentBoostedStats: string[];
-    parentOverridedStats: string[];
+    parentBoostedStats?: string[];
+    parentOverridedStats?: string[];
     primary?: boolean;
     toggleable?: boolean;
     affectOtherPlayers?: boolean;
@@ -70,7 +71,31 @@ export class Skill {
 }
 
 export function parseSkills(tree: AbilityTree): Skill[] {
+    let applied: string[] = [];
+
+    let rootSkills = tree.nodes.filter(x => !tree.baseTreeDetails.flatMap(x => x.parent).includes(x.id) && applied.includes(x.id));
+
+
+    while(applied.length < tree.nodes.length) {
+
+        // Get skills that are not parents
+        
+
+    }
+    let firstSkills: AbilityDetail[] = tree.baseTree.filter
 
     let parentSkills: AbilityDetail[] = tree.baseTreeDetails.filter(x => x.primary);
+    parentSkills.forEach(parent => {
+        tree.baseTreeDetails.filter(child => child.parent !== undefined && child.parent.includes(parent.ability)).forEach(child => {
+            if(child.toggleable && tree.toggledBuffs.some(x => x.id === child.ability)) {
+                // neutral: 30 - 120 * (1.2)
+                // thunder: 45 - 295 * (0.22 + 0.3)
+            }
+        })
+    })
     return [];
+}
+
+export function mergeAbilities(child: AbilityDetail, parent: AbilityDetail): AbilityDetail {
+    if(child.)
 }
