@@ -122,5 +122,5 @@ export class RangeableIdentification {
 
 export class FixedIdentification {
     identification: Identification
-    value: Number;
+    value: number;
 }

@@ -1,6 +1,6 @@
 import { DamageBounds } from "../scripts/math";
 import { ArmorType, AttackSpeed, ItemTier, ItemType, NumberRange, WynnClass } from "../scripts/util";
-import { RangeableIdentification } from "./ingredient";
+import { RangeableIdentification } from "./identification";
 
 export const ITEMS: WynnItem[] = await (await fetch("/builder/items.json")).json();
 

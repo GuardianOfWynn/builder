@@ -15,10 +15,10 @@
             <div class="flex w-full gap-x-4">
                 <div class="flex w-2/3 gap-x-12 justify-between">
                     <div class="flex flex-col gap-y-4">
-                        <ItemSelector @update-item="val => helmet = val" :item-type="'helmet'" />
-                        <ItemSelector @update-item="val => chestplate = val" :item-type="'chestplate'" />
-                        <ItemSelector @update-item="val => leggings = val" :item-type="'leggings'" />
-                        <ItemSelector @update-item="val => boots = val" :item-type="'boots'" />
+                        <ItemSelector @update-item="val => {helmet = val; assemble();}" :item-type="'helmet'" />
+                        <ItemSelector @update-item="val => {chestplate = val; assemble();}" :item-type="'chestplate'" />
+                        <ItemSelector @update-item="val => {leggings = val; assemble();}" :item-type="'leggings'" />
+                        <ItemSelector @update-item="val => {boots = val; assemble();}" :item-type="'boots'" />
                         <ItemSelector @update-item="val => handleWeaponChanged(val)" :item-type="'weapon'" />
                     </div>
                     <div class="flex flex-col gap-y-4">
@@ -30,10 +30,15 @@
                 </div>
                 <div class="text-white h-fit w-1/3 border-[1px] border-mc-light-purple">
                     <p class="bg-mc-dark-purple p-2">Stats</p>
+                    <div v-if="build !== undefined">
+                        <p v-for="stat in build.getBuildStats().stats">
+                            {{ stat.identification.getTranslatedName() }}: {{ stat.value }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="mt-10 h-1/3">
-                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="abilityTree"/>
+                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="baseTree"/>
             </div>
         </div>
     </div>
@@ -44,10 +49,11 @@ import { Ref, ref } from "vue";
 import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
 import ItemSelector from "./ItemSelector.vue";
-import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, ASSASSIN_CONNECTORS,MAGE_CONNECTORS, ARCHER_CONNECTORS, AbilityNode, AbilityNodeConnector,SHAMAN_CONNECTORS, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS } from "../../model/abilitytree";
+import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, ASSASSIN_CONNECTORS,MAGE_CONNECTORS, ARCHER_CONNECTORS, AbilityNode, AbilityNodeConnector,SHAMAN_CONNECTORS, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS, AbilityTree } from "../../model/abilitytree";
 import { WynnBaseItem } from "../../model/item";
 import { ItemType, WynnClass } from "../../scripts/util";
 import AbilityTree from "./AbilityTree.vue";
+import { Build } from "../../model/build";
 
 export default {
     name: 'Builder',
@@ -55,78 +61,96 @@ export default {
     },
     setup() {
 
+        const abilityTree: Ref<AbilityTree|undefined> = ref(undefined);
+
         const clazz: Ref<WynnClass | undefined> = ref(undefined);
-        const abilityTree: Ref<AbilityNode[] | undefined> = ref(undefined);
+        const baseTree: Ref<AbilityNode[] | undefined> = ref(undefined);
         const treeConnectors: Ref<AbilityNodeConnector[] | undefined> = ref(undefined);
 
         const router = useRouter()
 
-        const helmet = ref(null);
+        const helmet: Ref<WynnBaseItem | null> = ref(null);
         const helmetPowders = ref("");
 
-        const chestplate = ref(null);
+        const chestplate: Ref<WynnBaseItem | null> = ref(null);
         const chestplatePowders = ref("");
 
-        const leggings = ref(null);
+        const leggings: Ref<WynnBaseItem | null> = ref(null);
         const leggingsPowders = ref("");
 
-        const boots = ref(null);
+        const boots: Ref<WynnBaseItem | null> = ref(null);
         const bootsPowders = ref("");
 
-        const necklace = ref(null);
+        const necklace: Ref<WynnBaseItem | null> = ref(null);
         const necklacePowders = ref("");
 
-        const bracelet = ref(null);
+        const bracelet: Ref<WynnBaseItem | null> = ref(null);
         const braceletPowders = ref("");
 
-        const ring1 = ref(null);
+        const ring1: Ref<WynnBaseItem | null> = ref(null);
         const ring1Powders = ref("");
 
-        const ring2 = ref(null);
+        const ring2: Ref<WynnBaseItem | null> = ref(null);
         const ring2Powders = ref("");
 
-        const weapon = ref(null);
+        const weapon: Ref<WynnBaseItem | null> = ref(null);
         const weaponPowders = ref("");
 
+        const build: Ref<Build | undefined> = ref(undefined); 
 
-        function handleWeaponChanged(weapon: WynnBaseItem) {
-            switch(weapon.type) {
+
+        function handleWeaponChanged(w: WynnBaseItem) {
+            weapon.value = w;
+            switch(w.type) {
                 case ItemType.BOW: 
-                    abilityTree.value = ARCHER_ABILITY_TREE; 
+                    baseTree.value = ARCHER_ABILITY_TREE; 
                     treeConnectors.value = ARCHER_CONNECTORS;
                     clazz.value = WynnClass.ARCHER;
                     break;
                 case ItemType.DAGGER: 
-                    abilityTree.value = ASSASSIN_ABILITY_TREE;
+                    baseTree.value = ASSASSIN_ABILITY_TREE;
                     treeConnectors.value = ASSASSIN_CONNECTORS;
                     clazz.value = WynnClass.ASSASSIN;
                     break;
                 case ItemType.RELIK: 
-                    abilityTree.value = SHAMAN_ABILITY_TREE;
+                baseTree.value = SHAMAN_ABILITY_TREE;
                     treeConnectors.value = SHAMAN_CONNECTORS;
                     clazz.value = WynnClass.SHAMAN;
                     break;
                 case ItemType.WAND: 
-                    abilityTree.value = MAGE_ABILITY_TREE;
+                baseTree.value = MAGE_ABILITY_TREE;
                     treeConnectors.value = MAGE_CONNECTORS;
                     clazz.value = WynnClass.MAGE;
                     break;
                 case ItemType.SPEAR:
-                    abilityTree.value = WARRIOR_ABILITY_TREE;
+                baseTree.value = WARRIOR_ABILITY_TREE;
                     treeConnectors.value = WARRIOR_CONNECTORS;
                     clazz.value = WynnClass.WARRIOR;
                     break;
                 default: 
                     abilityTree.value = undefined;
             }
+            assemble();
         }
 
 
         function assemble() {
-
+            build.value = new Build(
+                abilityTree.value,
+                weapon.value,
+                helmet.value,
+                chestplate.value,
+                leggings.value,
+                boots.value,
+                ring1.value,
+                ring2.value,
+                bracelet.value,
+                necklace.value
+            );
+            console.log(build.value.getBuildStats().stats);
         }
 
-        return { router, helmet, chestplate, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged}
+        return { router, helmet, build, chestplate,assemble, baseTree, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged}
     },
     components: { AppsSidebar, ItemSelector, AbilityTree }
 }
