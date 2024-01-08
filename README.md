@@ -1,7 +1,6 @@
 
 # GsW Builder
 GsW Builder works like hppeng WynnBuilder, but we intend bring updates more often.
-- Identifications like Healing Efficiency and Elemental Damage that are missing in WynnBuilder are present in GsWBuilder.
 
 ### Attention:
 - By now, GsWBuilder only brings the Crafter app, but we intend to bring Builder and Atlas apps.
