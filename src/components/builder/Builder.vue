@@ -15,10 +15,10 @@
             <div class="flex w-full gap-x-4">
                 <div class="flex w-2/3 gap-x-12 justify-between">
                     <div class="flex flex-col gap-y-4">
-                        <ItemSelector @update-item="val => {helmet = val; assemble();}" :item-type="'helmet'" />
-                        <ItemSelector @update-item="val => {chestplate = val; assemble();}" :item-type="'chestplate'" />
-                        <ItemSelector @update-item="val => {leggings = val; assemble();}" :item-type="'leggings'" />
-                        <ItemSelector @update-item="val => {boots = val; assemble();}" :item-type="'boots'" />
+                        <ItemSelector @update-item="val => { helmet = val; assemble(); }" :item-type="'helmet'" />
+                        <ItemSelector @update-item="val => { chestplate = val; assemble(); }" :item-type="'chestplate'" />
+                        <ItemSelector @update-item="val => { leggings = val; assemble(); }" :item-type="'leggings'" />
+                        <ItemSelector @update-item="val => { boots = val; assemble(); }" :item-type="'boots'" />
                         <ItemSelector @update-item="val => handleWeaponChanged(val)" :item-type="'weapon'" />
                     </div>
                     <div class="flex flex-col gap-y-4">
@@ -30,15 +30,58 @@
                 </div>
                 <div class="text-white h-fit w-1/3 border-[1px] border-mc-light-purple">
                     <p class="bg-mc-dark-purple p-2">Stats</p>
-                    <div v-if="build !== undefined">
-                        <p v-for="stat in build.getBuildStats().stats">
-                            {{ stat.identification.getTranslatedName() }}: {{ stat.value }}
+                    <div v-if="build !== undefined" class="p-2">
+
+                        <p v-if="build.getRawDefences().air != 0" :class="[build.getRawDefences().air > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                            <span class="text-white">Air defence:</span> {{ build.getRawDefences().air > 0 ? '+' : '' }}{{ build.getRawDefences().air }}
                         </p>
+                        <p v-if="build.getRawDefences().thunder != 0" :class="[build.getRawDefences().thunder > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                            <span class="text-white">Thunder defence:</span> {{ build.getRawDefences().thunder > 0 ? '+' : '' }}{{ build.getRawDefences().thunder }}
+                        </p>
+                        <p v-if="build.getRawDefences().water != 0" :class="[build.getRawDefences().water > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                            <span class="text-white">Water defence:</span> {{ build.getRawDefences().water > 0 ? '+' : '' }}{{ build.getRawDefences().water }}
+                        </p>
+                        <p v-if="build.getRawDefences().earth != 0" :class="[build.getRawDefences().earth > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                            <span class="text-white">Earth defence:</span> {{ build.getRawDefences().earth > 0 ? '+' : '' }}{{ build.getRawDefences().earth }}
+                        </p>
+                        <p v-if="build.getRawDefences().fire != 0" :class="[build.getRawDefences().fire > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                            <span class="text-white">Fire defence:</span> {{ build.getRawDefences().fire > 0 ? '+' : '' }}{{ build.getRawDefences().fire }}
+                        </p>
+                        <br/>
+
+                        <div v-if="build.getDamages().length > 0">
+                            <p v-for="stat in build.getDamages()">
+                                {{ stat.identification.getTranslatedName() }}:
+                                <span :class="[stat.value > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                                    {{ stat.value > 0 ? '+' : '' }}{{ format(stat.value, stat.identification.getId()) }}
+                                </span>
+                            </p>
+                            <br/>
+                        </div>
+
+                        <div v-if="build.getRawDamages().length > 0">
+                            <p v-for="stat in build.getRawDamages()">
+                                {{ stat.identification.getTranslatedName() }}:
+                                <span :class="[stat.value > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                                    {{ stat.value > 0 ? '+' : '' }}{{ format(stat.value, stat.identification.getId()) }}
+                                </span>
+                            </p>
+                            <br/>
+                        </div>
+
+                        <div v-if="build.getBuildStats().length > 0">
+                            <p v-for="stat in build.getBuildStats()">
+                                {{ stat.identification.getTranslatedName() }}:
+                                <span :class="[stat.value > 0 ? 'text-mc-lime' : 'text-mc-red']">
+                                    {{ stat.value > 0 ? '+' : '' }}{{ format(stat.value, stat.identification.getId()) }}
+                                </span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="mt-10 h-1/3">
-                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="baseTree"/>
+                <AbilityTree :clazz="clazz" :connectors="treeConnectors" :tree="baseTree" />
             </div>
         </div>
     </div>
@@ -49,9 +92,9 @@ import { Ref, ref } from "vue";
 import { useRouter } from 'vue-router'
 import AppsSidebar from "../AppsSidebar.vue";
 import ItemSelector from "./ItemSelector.vue";
-import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, ASSASSIN_CONNECTORS,MAGE_CONNECTORS, ARCHER_CONNECTORS, AbilityNode, AbilityNodeConnector,SHAMAN_CONNECTORS, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS, AbilityTree } from "../../model/abilitytree";
+import { ARCHER_ABILITY_TREE, ASSASSIN_ABILITY_TREE, ASSASSIN_CONNECTORS, MAGE_CONNECTORS, ARCHER_CONNECTORS, AbilityNode, AbilityNodeConnector, SHAMAN_CONNECTORS, MAGE_ABILITY_TREE, SHAMAN_ABILITY_TREE, WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS, AbilityTree } from "../../model/abilitytree";
 import { WynnBaseItem } from "../../model/item";
-import { ItemType, WynnClass } from "../../scripts/util";
+import { ItemType, WynnClass, format } from "../../scripts/util";
 import AbilityTree from "./AbilityTree.vue";
 import { Build } from "../../model/build";
 
@@ -61,7 +104,7 @@ export default {
     },
     setup() {
 
-        const abilityTree: Ref<AbilityTree|undefined> = ref(undefined);
+        const abilityTree: Ref<AbilityTree | undefined> = ref(undefined);
 
         const clazz: Ref<WynnClass | undefined> = ref(undefined);
         const baseTree: Ref<AbilityNode[] | undefined> = ref(undefined);
@@ -96,38 +139,38 @@ export default {
         const weapon: Ref<WynnBaseItem | null> = ref(null);
         const weaponPowders = ref("");
 
-        const build: Ref<Build | undefined> = ref(undefined); 
+        const build: Ref<Build | undefined> = ref(undefined);
 
 
         function handleWeaponChanged(w: WynnBaseItem) {
             weapon.value = w;
-            switch(w.type) {
-                case ItemType.BOW: 
-                    baseTree.value = ARCHER_ABILITY_TREE; 
+            switch (w.type) {
+                case ItemType.BOW:
+                    baseTree.value = ARCHER_ABILITY_TREE;
                     treeConnectors.value = ARCHER_CONNECTORS;
                     clazz.value = WynnClass.ARCHER;
                     break;
-                case ItemType.DAGGER: 
+                case ItemType.DAGGER:
                     baseTree.value = ASSASSIN_ABILITY_TREE;
                     treeConnectors.value = ASSASSIN_CONNECTORS;
                     clazz.value = WynnClass.ASSASSIN;
                     break;
-                case ItemType.RELIK: 
-                baseTree.value = SHAMAN_ABILITY_TREE;
+                case ItemType.RELIK:
+                    baseTree.value = SHAMAN_ABILITY_TREE;
                     treeConnectors.value = SHAMAN_CONNECTORS;
                     clazz.value = WynnClass.SHAMAN;
                     break;
-                case ItemType.WAND: 
-                baseTree.value = MAGE_ABILITY_TREE;
+                case ItemType.WAND:
+                    baseTree.value = MAGE_ABILITY_TREE;
                     treeConnectors.value = MAGE_CONNECTORS;
                     clazz.value = WynnClass.MAGE;
                     break;
                 case ItemType.SPEAR:
-                baseTree.value = WARRIOR_ABILITY_TREE;
+                    baseTree.value = WARRIOR_ABILITY_TREE;
                     treeConnectors.value = WARRIOR_CONNECTORS;
                     clazz.value = WynnClass.WARRIOR;
                     break;
-                default: 
+                default:
                     abilityTree.value = undefined;
             }
             assemble();
@@ -147,10 +190,9 @@ export default {
                 bracelet.value,
                 necklace.value
             );
-            console.log(build.value.getBuildStats().stats);
         }
 
-        return { router, helmet, build, chestplate,assemble, baseTree, leggings, boots, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged}
+        return { router, helmet, build, chestplate, assemble, baseTree, leggings, boots, format, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged }
     },
     components: { AppsSidebar, ItemSelector, AbilityTree }
 }

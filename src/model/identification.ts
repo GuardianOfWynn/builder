@@ -90,8 +90,8 @@ export class Identification {
     static readonly WATER_MAIN_ATTACK_DAMAGE_RAW = new Identification("rawWaterMainAttackDamage", "Water Main Attack Damage", true);
 
     private raw: boolean;
-    private translatedName: String;
-    private id: String;
+    private translatedName: string;
+    private id: string;
 
     private constructor(id: string, translated: string, raw: boolean) {
         this.id = id;
@@ -123,4 +123,9 @@ export class RangeableIdentification {
 export class FixedIdentification {
     identification: Identification
     value: number;
+
+    constructor(id: Identification, value: number) {
+        this.identification = id;
+        this.value = value;
+    }
 }

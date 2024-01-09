@@ -1,6 +1,6 @@
 import { AbilityTree } from "./abilitytree";
 import { FixedIdentification, Identification } from "./identification";
-import { WynnBaseItem, WynnItem } from "./item";
+import { WynnBaseItem, WynnCraftedItem, WynnItem, WynnSpecificItem } from "./item";
 import { DamageModifier, Skill } from "./skill";
 
 export class SkillPoints {
@@ -10,6 +10,15 @@ export class SkillPoints {
     defence: number;
     strength: number;
 }
+
+export interface RawDefense {
+    air: number, thunder: number, earth: number, fire: number, water: number
+}
+
+export interface RawDamage {
+    air: number, thunder: number, earth: number, fire: number, water: number, neutral: number;
+}
+
 
 export class Build {
     weapon: WynnBaseItem | null;
@@ -36,48 +45,144 @@ export class Build {
         this.abilityTree = abilityTree;
     }
 
-    getBuildStats(): BuildStats {
-        let stats: BuildStats = {
-            stats: []
-        };
+    private getFixedIdentifications(item: WynnBaseItem): FixedIdentification[] {
+        if(item.isCrafted) return (item as WynnCraftedItem).identifications.map(x => new FixedIdentification(Identification.identifications.get(x.id)!, x.maximum))
+        if(item.isSpecific) return (item as WynnSpecificItem).identifications;
+        return (item as WynnItem).identifications.map(x => new FixedIdentification(Identification.identifications.get(x.id)!, x.maximum))
 
-        stats = mergeItemIdentifications(this.weapon, stats);
-        stats = mergeItemIdentifications(this.helmet, stats);
-        stats = mergeItemIdentifications(this.chestplate, stats);
-        stats = mergeItemIdentifications(this.leggings, stats);
-        stats = mergeItemIdentifications(this.boots, stats);
-        stats = mergeItemIdentifications(this.ring1, stats);
-        stats = mergeItemIdentifications(this.ring2, stats);
-        stats = mergeItemIdentifications(this.bracelet, stats);
-        stats = mergeItemIdentifications(this.necklace, stats);
+    }
+
+    getBuildStats(): FixedIdentification[] {
+        let stats: FixedIdentification[] = [];
+
+        [this.weapon, this.helmet, this.chestplate, this.leggings, this.boots, this.ring1, this.ring2, this.bracelet, this.necklace]
+            .forEach(x => {
+                if (x === null) {
+                    return;
+                }
+                let identifications: FixedIdentification[] = this.getFixedIdentifications(x)
+                identifications.forEach(id => {
+                    let idName = id.identification.getId().toLowerCase();
+                    if(idName.includes("defence") || idName.includes("damage") ||
+                        ["rawintelligence", "rawdefence", "rawagility", "rawstrength", "rawdexterity"].includes(idName)) {
+                        return;
+                    }
+                    this.merge(id, stats);
+                })
+            });
 
         return stats;
+    }
 
+    getRawDefences(): RawDefense {
+        let rawDefs: RawDefense = {
+            air: 0,
+            thunder: 0,
+            earth: 0,
+            fire: 0,
+            water: 0
+        };
+
+        [this.weapon, this.helmet, this.chestplate, this.leggings, this.boots, this.ring1, this.ring2, this.bracelet, this.necklace]
+            .forEach(x => {
+                if(x !== null) {
+                    if(x.isCrafted) {
+                        let craftedItem = x as WynnCraftedItem;
+                        rawDefs.air = rawDefs.air + craftedItem.defenses.air.maximum;
+                        rawDefs.thunder = rawDefs.thunder + craftedItem.defenses.thunder.maximum;
+                        rawDefs.earth = rawDefs.earth + craftedItem.defenses.earth.maximum;
+                        rawDefs.fire = rawDefs.fire + craftedItem.defenses.fire.maximum;
+                        rawDefs.water = rawDefs.water + craftedItem.defenses.water.maximum;
+                    } else if(x.isSpecific) {
+                        let specificItem = x as WynnSpecificItem;
+                        rawDefs.air = rawDefs.air + specificItem.defenses.air;
+                        rawDefs.thunder = rawDefs.thunder + specificItem.defenses.thunder;
+                        rawDefs.earth = rawDefs.earth + specificItem.defenses.earth;
+                        rawDefs.fire = rawDefs.fire + specificItem.defenses.fire;
+                        rawDefs.water = rawDefs.water + specificItem.defenses.water;
+                    } else {
+                        let item = x as WynnItem;
+                        rawDefs.air = rawDefs.air + item.defenses.air;
+                        rawDefs.thunder = rawDefs.thunder + item.defenses.thunder;
+                        rawDefs.earth = rawDefs.earth + item.defenses.earth;
+                        rawDefs.fire = rawDefs.fire + item.defenses.fire;
+                        rawDefs.water = rawDefs.water + item.defenses.water;
+                    }
+                }
+            });
+            return rawDefs;
+    }
+
+    getDefences(): FixedIdentification[] {
+        let stats: FixedIdentification[] = [];
+
+        [this.weapon, this.helmet, this.chestplate, this.leggings, this.boots, this.ring1, this.ring2, this.bracelet, this.necklace]
+            .forEach(x => {
+                if (x === null) {
+                    return;
+                }
+                let identifications: FixedIdentification[] = this.getFixedIdentifications(x)
+                identifications.forEach(id => {
+                    if(id.identification.getId().toLowerCase().includes("defence")) {
+                        this.merge(id, stats);
+                    }
+                })
+            });
+        return stats;
+    }
+
+    getDamages(): FixedIdentification[] {
+        let stats: FixedIdentification[] = [];
+
+        [this.weapon, this.helmet, this.chestplate, this.leggings, this.boots, this.ring1, this.ring2, this.bracelet, this.necklace]
+            .forEach(x => {
+                if (x === null) {
+                    return;
+                }
+                let identifications: FixedIdentification[] = this.getFixedIdentifications(x)
+                identifications.forEach(id => {
+                    let idName = id.identification.getId().toLowerCase();
+                    if(idName.includes("damage") && !idName.includes("raw")) {
+                        this.merge(id, stats);
+                    }
+                })
+            });
+        return stats;
+    }
+
+    getRawDamages(): FixedIdentification[] {
+        let stats: FixedIdentification[] = [];
+
+        [this.weapon, this.helmet, this.chestplate, this.leggings, this.boots, this.ring1, this.ring2, this.bracelet, this.necklace]
+            .forEach(x => {
+                if (x === null) {
+                    return;
+                }
+                let identifications: FixedIdentification[] = this.getFixedIdentifications(x)
+                identifications.forEach(id => {
+                    let idName = id.identification.getId().toLowerCase();
+                    if(idName.includes("damage") && idName.includes("raw")) {
+                        this.merge(id, stats);
+                    }
+                })
+            });
+        return stats;
+    }
+
+    merge(incoming: FixedIdentification, stats: FixedIdentification[]) {
+        let previous = incoming;
+        if (stats.some(x => x.identification.getId() == incoming.identification.getId())) {
+            let index = stats.findIndex(x => x.identification.getId() === incoming.identification.getId())
+            previous = stats[index];
+            previous.value = previous.value + incoming.value;
+            stats.splice(index, 1);
+        }
+        stats.push(previous);
     }
 }
 
 export class BuildStats {
     stats: FixedIdentification[];
-}
-
-function mergeItemIdentifications(item: WynnBaseItem | null, stats: BuildStats): BuildStats {
-    if (item === null) {
-        return stats;
-    }
-    item.identifications.forEach(id => {
-        let previous: FixedIdentification = {
-            identification: Identification.identifications.get(id.id)!,
-            value: 0
-        };
-        if (stats.stats.some(x => x.identification.getId() == id.id)) {
-            let index = stats.stats.findIndex(x => x.identification.getId() === id.id)
-            previous = stats.stats[index];
-            previous.value = previous.value + id.maximum;
-            stats.stats[index] = previous;
-        }
-        stats.stats.push(previous);
-    })
-    return stats;
 }
 
 function mergeItemSkillPoints(item: WynnBaseItem, skillPoints: SkillPoints) {
