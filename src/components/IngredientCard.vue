@@ -31,7 +31,7 @@
                     <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.minimum <= 0 ? format(identification.minimum, identification.id) : '+' + format(identification.minimum, identification.id) }}</span>
                     <span :class="identification.minimum <= 0 ? 'text-mc-dark-red' : 'text-mc-dark-green'"> to </span>
                     <span :class="identification.minimum <= 0 ? 'text-mc-red' : 'text-mc-lime'">{{ identification.maximum <= 0 ? format(identification.maximum, identification.id) : '+' + format(identification.maximum, identification.id) }}</span>
-                    <span class="text-sm text-mc-gray ml-2">{{ identification.name }}</span>
+                    <span class="text-sm text-mc-gray ml-2">{{ Identification.identifications.get(identification.id)!.getTranslatedName() }}</span>
                 </p>
             </div>
 
@@ -98,6 +98,7 @@
 import { ref, watchEffect } from "vue";
 import Ingredient from "../model/ingredient";
 import {format} from "../scripts/util";
+import { Identification } from "../model/identification";
   
   export default {
       name: 'IngredientCard',
@@ -111,7 +112,7 @@ import {format} from "../scripts/util";
         watchEffect(() => {
             ing.value = props.ingredient;
         })
-        return {ing,format}
+        return {ing,format, Identification}
       },
       components: { }
   }

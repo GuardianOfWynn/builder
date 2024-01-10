@@ -9,8 +9,9 @@ GsW Builder works like hppeng WynnBuilder, but we intend bring updates more ofte
 - Pull requests are welcomed!
 
 ### Before opening an issue, keep in mind:
-- WIP: Powders in crafted armour and weapons.
-- Future: Builder and Atlas app. 
+- WIP: Builder app.
+- Future: Powders in crafted armour and weapons.
+- Future: Atlas app
 
 #### Special thanks to:
 - 1nfinity

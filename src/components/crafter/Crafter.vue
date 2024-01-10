@@ -231,7 +231,7 @@ export default {
 
     const clipboardRecipe = async () => {
       try {
-        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/' + (result.value === undefined ? '' : result.value!.name));
+        await navigator.clipboard.writeText('https://guardianofwynn.github.io/builder/#/crafter/' + (result.value === undefined ? '' : result.value!.name));
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
@@ -239,8 +239,9 @@ export default {
 
     const assemble = () => {
       if (first) {
-        if (route.path !== "/" && isValidHash(route.path.slice(1))) {
-          let recipeStr = route.path.slice(1);
+        if (route.path !== "/crafter/" && isValidHash(route.path.slice(9))) {
+          let recipeStr = route.path.slice(9);
+          console.log(recipeStr);
           let decoded = decodeRecipe(recipeStr, ingredientList);
           recipe.value = decoded.prototype;
           ingredients[0].ingredient = decoded.ingredients[0].ingredient;
@@ -287,6 +288,6 @@ export default {
 
     return { ingredientList, warnings, ingredients, attackSpeed, isWeapon, handleAttackSpeedChanged, clipboardRecipe, handleMaterial1TierChanged, handleMaterial2TierChanged, material1Tier, level, material2Tier, result, recipe, craftType, recipeRolls, levelRolls, assemble, handleCraftLevelChanged, handleMaterialsChanged, handleIngredientUpdated, handleItemTypeChange }
   },
-  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, MaterialTierSelector, AttackSpeedSelector, AppsSidebar, ItemTypeIcon }
+  components: { CraftLevelCombobox, MaterialsCombobox, EffectivenessCard, CraftTypeCombobox, IngredientCombobox, IngredientCard, ItemCard, MaterialTierSelector, AttackSpeedSelector, AppsSidebar, ItemTypeIcon }
 }
 </script>
