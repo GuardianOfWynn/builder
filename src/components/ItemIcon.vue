@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-center h-20 z-10 w-20">
+    <div class="flex items-center justify-center h-full z-10 w-full">
         <img class="pixelated w-full h-full object-contain" v-if="item !== null && item != undefined" :src="'/builder/sprites/' + getSprite()"/>    
     </div>
 </template>

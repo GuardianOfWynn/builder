@@ -63,6 +63,10 @@
             "",
             ""
         ],
+        "cheaperAbility": {
+            "ability": "spinattack",
+            "costIncrease": -10
+        },
         "slot": 20,
         "id": "spinAttackCost1",
         "locks": [],
@@ -185,6 +189,7 @@
             "normal": "275_67.svg",
             "activated": "275_67_1.svg"
         },
+        "primarySkill": true,
         "description": [
             "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lLEFT",
             " ",
@@ -887,6 +892,10 @@
             "bamboozle",
             "distraction"
         ],
+        "cheaperAbility": {
+            "ability": "multihit",
+            "costIncrease": -5
+        },
         "slot": 41,
         "id": "multihitCost1",
         "locks": [],
@@ -1602,7 +1611,11 @@
             "bigHit",
             "blackHole",
             ""
-        ],
+        ], 
+        "cheaperAbility": {
+            "ability": "smokebomb",
+            "costIncrease": -5
+        },
         "slot": 9,
         "id": "smokeBombCost1",
         "locks": [],
@@ -1892,7 +1905,11 @@
             "markPulls",
             "infectiveblow",
             ""
-        ],
+        ], 
+        "cheaperAbility": {
+            "ability": "dash",
+            "costIncrease": -5
+        },
         "slot": 13,
         "id": "dashCost2",
         "locks": [],
@@ -1928,6 +1945,10 @@
             "shadowDash",
             "nightcloakKnives"
         ],
+        "cheaperAbility": {
+            "ability": "multihit",
+            "costIncrease": -5
+        },
         "slot": 29,
         "id": "multihitCost2",
         "locks": [],
@@ -1962,6 +1983,10 @@
             "walljump",
             ""
         ],
+        "cheaperAbility": {
+            "ability": "spinattack",
+            "costIncrease": -5
+        },
         "slot": 17,
         "id": "spinAttackCost2",
         "locks": [],
@@ -2169,6 +2194,8 @@
             "spinAttackmarked",
             ""
         ],
+        "resistanceBoost": 75,
+        "momentary": true,
         "slot": 39,
         "id": "shadowDash",
         "locks": [],
@@ -2356,6 +2383,7 @@
         "id": "chokebomb",
         "locks": [],
         "uniqueId": "cl"
+        
     },
     {
         "requirements": {
@@ -2712,6 +2740,10 @@
             "markedMana",
             "moreMarks"
         ],
+        "cheaperAbility": {
+            "ability": "smokebomb",
+            "costIncrease": -5
+        },
         "slot": 13,
         "id": "smokeBombCost2",
         "locks": [],

@@ -1,6 +1,6 @@
 <template>
-    <div v-if="abilityTree === undefined">
-
+    <div v-if="baseTree === undefined" class="text-white text-2xl">
+        Ability tree unavailable: No weapon selected
     </div>
     <div v-else class="flex gap-x-8 h-full">
         <div :class="[tree === undefined? 'w-1/3' : 'w-fit']"
@@ -9,7 +9,7 @@
                 class="text-white sticky top-0 left-0 right-0 mb-2 text-center py-1 border-b-[4px] bg-ability-tree z-10 border-mc-aqua">
                 Ability tree
             </div>
-            <div class="p-4">
+            <div class="p-4 w-1/2">
                 <div v-for="i in getDepth()" class="flex">
                     <div v-for="j in 9">
                         <div class="w-10 h-10">
@@ -17,7 +17,7 @@
                                 @mouseleave="onHover(undefined)" @click="toggleNode(getNodeFor(j, i)!)"
                                 class="cursor-pointer">
                                 <img class="w-10 h-10 object-fill scale-125 pixelated"
-                                    v-if="abilityTree.nodes.some(a => a.coordinates.x == j && a.coordinates.y == i)"
+                                    v-if="abilityTree!.nodes.some(a => a.coordinates.x == j && a.coordinates.y == i)"
                                     :src="'/builder/sprites/abilitytree/' + getNodeFor(j, i)!.sprite.activated" />
                                 <img class="w-10 h-10 object-fill scale-125"
                                     :class="[availableNodes.some(a => a.coordinates.x === j && a.coordinates.y === i) ? 'opacity-100' : 'opacity-50']"
@@ -25,7 +25,7 @@
                             </div>
                             <div v-else-if="hasConnector(j, i)">
                                 <img class="w-10 h-10 object-fill pixelated"
-                                    v-if="abilityTree.connectors.some(a => a.x == j && a.y == i)"
+                                    v-if="abilityTree!.connectors.some(a => a.x == j && a.y == i)"
                                     :src="'/builder/sprites/abilitytree/' + getConnectorFor(j, i)!.type + '_' + getConnectorSpriteVariant(getConnectorFor(j, i)!) + '.png'" />
                                 <img class="w-10 h-10 object-fill" v-else
                                     :src="'/builder/sprites/abilitytree/' + getConnectorFor(j, i)!.type + '.svg'" />
@@ -36,29 +36,34 @@
                 </div>
             </div>
         </div>
-        <div class="w-1/3 flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-8 w-fit">
             <div class="text-white border-[1px] rounded-md border-mc-aqua p-4 h-fit">
                 <div class=" justify-center gap-x-4 flex">
                     <div v-for="arch in CLASS_ARCHETYPES.get(clazz! as WynnClass)" class="text-center w-1/3">
-                        <p :class="'text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
+                        <p :class="'text-xs text-' + ARCHETYPE_DATA.get(arch as Archetype)!.color">
                             {{ ARCHETYPE_DATA.get(arch as Archetype)!.name }}
                         </p>
                         <p class="mb-2">
                             {{ abilityTree!.getNodesOfArchetype(arch as Archetype).length }} / {{ baseTree!.filter(x =>
                                 x.archetype !== undefined && x.archetype == arch).length }}
                         </p>
-                        <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-10 w-10 mx-auto" />
+                        <img :src="'/builder/sprites/abilitytree/' + arch + '.svg'" class="pixelated h-6 w-6 mx-auto" />
                     </div>
                 </div>
-                <p class="mt-4 text-center">Ability Points: {{ abilityTree.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
+                <p class="mt-4 text-center">Ability Points: {{ abilityTree!.getAvailableAbilityPoints() }} / {{ BASE_ABILITY_POINTS }}</p>
             </div>
+<<<<<<< HEAD
             <div v-if="currentHovered !== undefined" class=" text-sm w-1/2 rounded-sm border-[1px] p-4 border-mc-aqua">
                 <div class="text-lg">
+=======
+            <div v-if="currentHovered !== undefined" class="text-sm w-fit rounded-sm border-[1px] p-4 border-mc-aqua">
+                <div class="text-sm">
+>>>>>>> builder-app
                     <MinecraftTranslatedText :text="currentHovered.name" />
                 </div>
                 <MinecraftTranslatedText v-for="line in currentHovered.description" :text="line" />
             </div>
-            <div>
+            <div class="text-xs">
                 <MinecraftTranslatedText v-for="msg in warns" :text="msg" />
             </div>
         </div>

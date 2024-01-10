@@ -1,8 +1,46 @@
 [
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&a&lArrow Bomb",
+        "coordinates": {
+            "x": 5,
+            "y": 1
+        },
+        "sprite": {
+            "normal": "275_64.svg",
+            "activated": "275_64_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lLEFT&7-&d&lRIGHT&7-&d&lRIGHT",
+            " ",
+            "&7Shoots a long-ranged arrow that explodes",
+            "&7and deals high damage over a large area.",
+            "&8(Self-damage for 10% of your DPS)",
+            " ",
+            "&b✺ &7Mana Cost: &f45",
+            "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8160%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
+            "&2➼ &7Range: &f±26 Blocks",
+            "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "bowProficiency"
+        ],
+        "slot": 4,
+        "id": "arrowbomb",
+        "locks": [],
+        "uniqueId": "ab"
+    },
+    {
+        "requirements": {
+            "node": "arrowbomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Bomb",
@@ -31,45 +69,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
-        },
-        "archetype": "",
-        "name": "&a&lArrow Bomb",
-        "coordinates": {
-            "x": 5,
-            "y": 1
-        },
-        "sprite": {
-            "normal": "275_64.svg",
-            "activated": "275_64_1.svg"
-        },
-        "description": [
-            "&6Click Combo: &d&lLEFT&7-&d&lRIGHT&7-&d&lRIGHT",
-            " ",
-            "&7Shoots a long-ranged arrow that explodes",
-            "&7and deals high damage over a large area.",
-            "&8(Self-damage for 10% of your DPS)",
-            " ",
-            "&b✺ &7Mana Cost: &f45",
-            "&c⚔ &7Total Damage: &f180% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8160%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
-            "&2➼ &7Range: &f±26 Blocks",
-            "&3☀ &7Area of Effect: &f4.5 Blocks &7(Circle-Shaped)",
-            " ",
-            "&7Ability Points: &f1"
-        ],
-        "links": [
-            "bowProficiency"
-        ],
-        "slot": 4,
-        "id": "arrowbomb",
-        "locks": [],
-        "uniqueId": "ab"
-    },
-    {
-        "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lHeart Shatter",
@@ -87,7 +87,7 @@
             "will shatter its heart and deal additional damage.",
             " ",
             "&c⚔ &7Total Damage: &f+100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+100%&8)",
+            "  &8(&6✢ &8Damage: &8+100%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -101,7 +101,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBow Proficiency",
@@ -134,7 +134,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lDouble Shots",
@@ -170,7 +170,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lArrow Storm",
@@ -191,8 +191,8 @@
             " ",
             "&b✺ &7Mana Cost: &f35",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &810%&8)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&e✦ &8Thunder: &810%&8)",
             "&2➼ &7Range: &f±16 Blocks",
             " ",
             "&7Ability Points: &f1"
@@ -210,7 +210,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lArrow Shield",
@@ -230,10 +230,10 @@
             " ",
             "&b✺ &7Mana Cost: &f30",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &890%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  &8(&6✢ &8Damage: &890%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
             "&3☀ &7Area of Effect: &f2.3 Blocks &7(Circle-Shaped)",
-            "&d⌛À &7Duration: &f60s",
+            "&d⌛ &7Duration: &f60s",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -249,7 +249,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&6&lWindy Feet",
@@ -267,7 +267,7 @@
             "&7to you and nearby players.",
             " ",
             "&e🛡 &7Effect: &f+20% &7Walk Speed to Allies",
-            "&d⌛À &7Duration: &f120s",
+            "&d⌛ &7Duration: &f120s",
             "&3☀ &7Area of Effect: &f8 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f1"
@@ -280,8 +280,8 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
-            "ABILITY_POINTS": 1
+            "node": "escape",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
@@ -314,7 +314,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&a&lEscape",
@@ -347,7 +347,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lPower Shots",
@@ -383,7 +383,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lAir Mastery",
@@ -400,8 +400,8 @@
             "Increase your base damage",
             "from all Air attacks.",
             " ",
-            "&f�?� &7Air Damage: &f+3-4",
-            "&f�?� &7Air Damage: &f+15%",
+            "&f❋ &7Air Damage: &f+3-4",
+            "&f❋ &7Air Damage: &f+15%",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -417,7 +417,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lFire Mastery",
@@ -453,7 +453,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lWater Mastery",
@@ -470,8 +470,8 @@
             "Increase your base damage",
             "from all Water attacks.",
             " ",
-            "&b�?� &7Water Damage: &f+2-4",
-            "&b�?� &7Water Damage: &f+15%",
+            "&b❉ &7Water Damage: &f+2-4",
+            "&b❉ &7Water Damage: &f+15%",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -487,8 +487,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lNimble String",
@@ -506,8 +506,8 @@
             "&7shoots &f+6&7 arrows per stream.",
             " ",
             "&c⚔ &7Total Damage: &c-10% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-5%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-5%&8)",
+            "  &8(&6✢ &8Damage: &8-5%&8)",
+            "  &8(&e✦ &8Thunder: &8-5%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -528,8 +528,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lPhantom Ray",
@@ -548,10 +548,10 @@
             " ",
             "&b✺ &7Mana Cost: &f-5",
             "&c⚔ &7Total Damage: &f30% &8(of your DPS, per hit)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &825%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &85%&8)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&b❉ &8Water: &85%&8)",
             "&2➼ &7Range: &f16 Blocks",
-            "&d⌛À &7Duration: &f1.2s",
+            "&d⌛ &7Duration: &f1.2s",
             " ",
             "&cUnlocking will block:",
             "&c- &7Nimble String",
@@ -576,9 +576,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lEarth Mastery",
         "coordinates": {
             "x": 5,
@@ -611,7 +611,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lThunder Mastery",
@@ -647,8 +647,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lArrow Rain",
@@ -666,8 +666,8 @@
             "&f150&7 arrows around you to rain down on enemies.",
             " ",
             "&c⚔ &7Total Damage: &f250% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8150%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8100%&8)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&f❋ &8Air: &8100%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -683,8 +683,8 @@
     },
     {
         "requirements": {
-            "NODE": "hastyShots",
-            "ABILITY_POINTS": 1
+            "node": "hastyShots",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lTriple Shots",
@@ -719,7 +719,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFrenzy",
@@ -752,14 +752,14 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowstorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 1,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lBryophyte Roots",
         "coordinates": {
             "x": 5,
@@ -776,10 +776,10 @@
             "&7down and deals damage every &f0.4s&7.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &810%&8)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&2✤ &8Earth: &810%&8)",
             "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
-            "&d⌛À &7Duration: &f5s",
+            "&d⌛ &7Duration: &f5s",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             " ",
             "&2&lTrapper Archetype",
@@ -799,7 +799,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lFire Creep",
@@ -818,9 +818,9 @@
             "walk into it take damage every &f0.4s&7.",
             " ",
             "&c⚔ &7Total Damage: &f50% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
-            "&d⌛À &7Duration: &f6s",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
+            "&d⌛ &7Duration: &f6s",
             " ",
             "&7Ability Points: &f2"
         ],
@@ -835,8 +835,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 1
+            "node": "focus",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
@@ -867,8 +867,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 1
+            "node": "arrowstorm",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
@@ -901,13 +901,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lBasaltic Trap",
         "coordinates": {
             "x": 5,
@@ -923,9 +923,9 @@
             "&7a &bTrap&7 that damages enemies. &7(Max 2 Traps)",
             " ",
             "&c⚔ &7Total Damage: &f250% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8210%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &820%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
+            "  &8(&6✢ &8Damage: &8210%&8)",
+            "  &8(&2✤ &8Earth: &820%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
             "&2➼ &7Range: &f2 Blocks &7(Circle-Shaped)",
             "&3☀ &7Area of Effect: &f7 Blocks &7(Circle-Shaped)",
             " ",
@@ -945,9 +945,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lGrappling Hook",
         "coordinates": {
             "x": 7,
@@ -985,10 +985,10 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 2
+            "node": "arrowshield",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&d&lCall of the Hound",
         "coordinates": {
             "x": 4,
@@ -1005,9 +1005,9 @@
             "&7and drag them towards your traps.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
+            "  &8(&6✢ &8Damage: &840%&8)",
             "&3☀ &7Vision: &f18 Blocks &7(Circle-Shaped)",
-            "&d⌛À &7Duration: &f60s",
+            "&d⌛ &7Duration: &f60s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1022,8 +1022,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lMore Shields",
@@ -1041,8 +1041,8 @@
             "&7Reduces &nGuardian Angels&7' damage.",
             " ",
             "&c⚔ &7Total Damage: &c-18% &8(of your DPS, for &nGuardian Angels&8, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-13%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8-5%&8)",
+            "  &8(&6✢ &8Damage: &8-13%&8)",
+            "  &8(&f❋ &8Air: &8-5%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -1059,8 +1059,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1098,8 +1098,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2
+            "node": "arrowstorm",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lWindstorm",
@@ -1117,9 +1117,9 @@
             "of arrows and &f+2&7 extra arrows per stream.",
             " ",
             "&c⚔ &7Total Damage: &c-10% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-9%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-3%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8+2%&8)",
+            "  &8(&6✢ &8Damage: &8-9%&8)",
+            "  &8(&e✦ &8Thunder: &8-3%&8)",
+            "  &8(&f❋ &8Air: &8+2%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -1141,10 +1141,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2
+            "node": "explodingTrap",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lPatient Hunter",
         "coordinates": {
             "x": 5,
@@ -1176,8 +1176,8 @@
     },
     {
         "requirements": {
-            "NODE": "windyfeet",
-            "ABILITY_POINTS": 1
+            "node": "windyfeet",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lStormy Feet",
@@ -1195,7 +1195,7 @@
             "&7speed buff.",
             "",
             "&e🛡 &7Effect: &f+20% &7Walk Speed to Allies",
-            "&d⌛À &7Duration: &f+60s",
+            "&d⌛ &7Duration: &f+60s",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -1210,9 +1210,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowshield",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "boltslinger"
             }
@@ -1234,10 +1234,10 @@
             "&8(Arrow Shield will no longer knock mobs away)",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &830%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &810%&8)",
+            "  &8(&6✢ &8Damage: &830%&8)",
+            "  &8(&f❋ &8Air: &810%&8)",
             "&2➼ &7Range: &f6 Blocks",
-            "&d⌛À &7Duration: &f60s",
+            "&d⌛ &7Duration: &f60s",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -1256,9 +1256,9 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lImplosion",
         "coordinates": {
             "x": 6,
@@ -1276,7 +1276,7 @@
             "&7Increases &nHeart Shatter&7's damage.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
+            "  &8(&6✢ &8Damage: &8+40%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1295,14 +1295,14 @@
     },
     {
         "requirements": {
-            "NODE": "mossyArrowStorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "mossyArrowStorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 3,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lIvyroot Mamba",
         "coordinates": {
             "x": 7,
@@ -1320,11 +1320,11 @@
             "&7Enemies will be weakened for &f1.5s&7.",
             " ",
             "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &880%&8)",
-            "  ÀÀÀÀ&8(&2✤ &8Earth: &820%&8)",
+            "  &8(&6✢ &8Damage: &880%&8)",
+            "  &8(&2✤ &8Earth: &820%&8)",
             "&e🛡 &7Effects: &f-15%&f &7Damage Bonus (&c⚔&7) to Enemies",
             "&3☀ &7Vision: &f12 Blocks &7(Circle-Shaped)",
-            "&d⌛À &7Duration: &f18s",
+            "&d⌛ &7Duration: &f18s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1346,8 +1346,8 @@
     },
     {
         "requirements": {
-            "NODE": "fireCreep",
-            "ABILITY_POINTS": 1
+            "node": "fireCreep",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lScorched Earth",
@@ -1364,9 +1364,9 @@
             "&7&nFire Creep&7 becomes much stronger.",
             " ",
             "&c⚔ &7Total Damage: &f+15% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+10%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+5%&8)",
-            "&d⌛À &7Duration: &f+2s",
+            "  &8(&6✢ &8Damage: &8+10%&8)",
+            "  &8(&c✹ &8Fire: &8+5%&8)",
+            "&d⌛ &7Duration: &f+2s",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1383,8 +1383,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lBetter Arrow Shield",
@@ -1403,11 +1403,11 @@
             "&7&nGuardian Angels&7' damage is increased.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS, for &nArrow Shield&8)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
+            "  &8(&6✢ &8Damage: &8+40%&8)",
             "&3☀ &7Area of Effect: &f+1 Blocks &7(Circle-Shaped)",
             " ",
             "&c⚔ &7Total Damage: &f+3% &8(of your DPS, for &nGuardian Angels&8, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+3%&8)",
+            "  &8(&6✢ &8Damage: &8+3%&8)",
             " ",
             "&7Ability Points: &f1",
             "&7Required Ability: &fArrow Shield"
@@ -1425,7 +1425,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lTraveler",
@@ -1457,8 +1457,8 @@
     },
     {
         "requirements": {
-            "NODE": "leap",
-            "ABILITY_POINTS": 1
+            "node": "leap",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Leap",
@@ -1487,9 +1487,9 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "focus",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1512,7 +1512,7 @@
             "&8(Damage is dealt as &nMain Attack&8 Damage)",
             " ",
             "&c⚔ &7Total Damage: &f220%",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8220%&8)",
+            "  &8(&6✢ &8Damage: &8220%&8)",
             "&2➼ &7Range: &f64 Blocks",
             " ",
             "&d&lSharpshooter Archetype",
@@ -1533,8 +1533,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
+            "node": "arrowbomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lRocket Jump",
@@ -1562,7 +1562,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lBouncing Bomb",
@@ -1594,9 +1594,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowbomb",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "sniper"
             }
@@ -1617,8 +1617,8 @@
             "&7gravity and increase its explosion damage.",
             "",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+20%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8+20%&8)",
+            "  &8(&6✢ &8Damage: &8+20%&8)",
+            "  &8(&e✦ &8Thunder: &8+20%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1637,7 +1637,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lRefined Gunpowder",
@@ -1654,7 +1654,7 @@
             "&7Increase the damage of &nArrow Bomb&7.",
             " ",
             "&c⚔ &7Total Damage: &f+50% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+50%&8)",
+            "  &8(&6✢ &8Damage: &8+50%&8)",
             " ",
             "&7Ability Points: &f1"
         ],
@@ -1670,8 +1670,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "sniper"
             }
@@ -1704,10 +1704,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 1
+            "node": "explodingTrap",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lMore Traps",
         "coordinates": {
             "x": 4,
@@ -1737,7 +1737,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lFierce Stomp",
@@ -1755,7 +1755,7 @@
             "quickly drop down and deal damage.",
             " ",
             "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8120%&8)",
+            "  &8(&6✢ &8Damage: &8120%&8)",
             "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
             " ",
             "&e&lBoltslinger Archetype",
@@ -1776,8 +1776,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 4,
                 "name": "boltslinger"
             }
@@ -1813,8 +1813,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
@@ -1848,7 +1848,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 1
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lEscape Artist",
@@ -1866,8 +1866,8 @@
             "&f100&7 arrows towards the ground.",
             " ",
             "&c⚔ &7Total Damage: &f150% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8100%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &850%&8)",
+            "  &8(&6✢ &8Damage: &8100%&8)",
+            "  &8(&e✦ &8Thunder: &850%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Grappling Hook",
@@ -1888,14 +1888,14 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "explodingTrap",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 5,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lMurder Flock",
         "coordinates": {
             "x": 5,
@@ -1912,10 +1912,10 @@
             "&7Damaged enemies will be distracted for &f0.2s&7.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
+            "  &8(&6✢ &8Damage: &860%&8)",
             "&e🛡 &7Effect: &fBlindness (&c⬣&f) to Enemies",
             "&3☀ &7Vision: &f18 Blocks &7(Circle-Shaped)",
-            "&d⌛À &7Duration: &f12s",
+            "&d⌛ &7Duration: &f12s",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -1934,8 +1934,8 @@
     },
     {
         "requirements": {
-            "NODE": "concentration",
-            "ABILITY_POINTS": 2
+            "node": "concentration",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&6&lPhasing Beam",
@@ -1955,7 +1955,7 @@
             "&8(Damage is dealt as &nMain Attack&8 Damage)",
             " ",
             "&c⚔ &7Total Damage: &c-110% &8(after piercing)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-110%&8)",
+            "  &8(&6✢ &8Damage: &8-110%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -1973,13 +1973,13 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 6,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lMana Trap",
         "coordinates": {
             "x": 4,
@@ -2014,8 +2014,8 @@
     },
     {
         "requirements": {
-            "NODE": "shockingBomb",
-            "ABILITY_POINTS": 2
+            "node": "shockingBomb",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&d&lCoursing Restraints",
@@ -2033,7 +2033,7 @@
             "&7reducing their defences. (12s Cooldown)",
             "",
             "&e🛡 &7Effect: &f-15% &7Resistance Bonus (&c✃&7) to Enemies",
-            "&d⌛À &7Duration: &f6s",
+            "&d⌛ &7Duration: &f6s",
             "",
             "&d&lSharpshooter Archetype",
             " ",
@@ -2050,8 +2050,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 2
+            "node": "focus",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&d&lInitiator",
@@ -2086,8 +2086,8 @@
     },
     {
         "requirements": {
-            "NODE": "phantomDarts",
-            "ABILITY_POINTS": 2
+            "node": "phantomDarts",
+            "abilityPoints": 2
         },
         "archetype": "sniper",
         "name": "&6&lDecimator",
@@ -2120,7 +2120,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lRecycling",
@@ -2151,8 +2151,8 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
-            "ABILITY_POINTS": 1
+            "node": "guardianAngels",
+            "abilityPoints": 1
         },
         "archetype": "boltslinger",
         "name": "&f&lBetter Guardian Angels",
@@ -2187,8 +2187,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 1
+            "node": "arrowstorm",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Storm",
@@ -2222,14 +2222,14 @@
     },
     {
         "requirements": {
-            "NODE": "grapplingHook",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "grapplingHook",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 2,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lStronger Hook",
         "coordinates": {
             "x": 6,
@@ -2263,8 +2263,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowshield",
-            "ABILITY_POINTS": 1
+            "node": "arrowshield",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Shield",
@@ -2298,8 +2298,8 @@
     },
     {
         "requirements": {
-            "NODE": "escape",
-            "ABILITY_POINTS": 1
+            "node": "escape",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Escape",
@@ -2333,8 +2333,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 2,
                 "name": "boltslinger"
             }
@@ -2355,8 +2355,8 @@
             "shrapnel, dealing damage in a large area.",
             " ",
             "&c⚔ &7Total Damage: &f60% &8(of your DPS, per shrapnel)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &840%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
+            "  &8(&6✢ &8Damage: &840%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
             " ",
             "&e&lBoltslinger Archetype",
             " ",
@@ -2376,10 +2376,10 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2
+            "node": "explodingTrap",
+            "abilityPoints": 2
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&6&lTangled Traps",
         "coordinates": {
             "x": 4,
@@ -2395,8 +2395,8 @@
             "&7that deals damage to enemies every &f0.2s&7.",
             " ",
             "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &820%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &820%&8)",
+            "  &8(&6✢ &8Damage: &820%&8)",
+            "  &8(&f❋ &8Air: &820%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",
@@ -2414,8 +2414,8 @@
     },
     {
         "requirements": {
-            "NODE": "arrowbomb",
-            "ABILITY_POINTS": 1
+            "node": "arrowbomb",
+            "abilityPoints": 1
         },
         "archetype": "",
         "name": "&f&lCheaper Arrow Bomb",
@@ -2446,8 +2446,8 @@
     },
     {
         "requirements": {
-            "NODE": "focus",
-            "ABILITY_POINTS": 1
+            "node": "focus",
+            "abilityPoints": 1
         },
         "archetype": "sniper",
         "name": "&f&lMore Focus",
@@ -2480,8 +2480,8 @@
     },
     {
         "requirements": {
-            "NODE": "fiercystomp",
-            "ABILITY_POINTS": 2
+            "node": "fiercystomp",
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&6&lGeyser Stomp",
@@ -2499,8 +2499,8 @@
             "&7more damage and pushing enemies away vertically.",
             " ",
             "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+50%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &8+30%&8)",
+            "  &8(&6✢ &8Damage: &8+50%&8)",
+            "  &8(&b❉ &8Water: &8+30%&8)",
             "&3☀ &7Area of Effect: &f+1 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f2",
@@ -2516,7 +2516,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lSnow Storm",
@@ -2548,10 +2548,10 @@
     },
     {
         "requirements": {
-            "NODE": "timeBomb",
-            "ABILITY_POINTS": 1
+            "node": "timeBomb",
+            "abilityPoints": 1
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lStronger Patient Hunter",
         "coordinates": {
             "x": 4,
@@ -2581,9 +2581,9 @@
     },
     {
         "requirements": {
-            "NODE": "arrowstorm",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "arrowstorm",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 10,
                 "name": "sniper"
             }
@@ -2610,8 +2610,8 @@
             "&7lose &b1 Focus &e➽ &7per second.",
             " ",
             "&c⚔ &7Total Damage: &f45% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &835%&8)",
-            "  ÀÀÀÀ&8(&b�?� &8Water: &810%&8)",
+            "  &8(&6✢ &8Damage: &835%&8)",
+            "  &8(&b❉ &8Water: &810%&8)",
             " ",
             "&d&lSharpshooter Archetype",
             " ",
@@ -2629,14 +2629,14 @@
     },
     {
         "requirements": {
-            "NODE": "explodingTrap",
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "node": "explodingTrap",
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 11,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&c&lMinefield",
         "coordinates": {
             "x": 5,
@@ -2652,7 +2652,7 @@
             "&7but with reduced range and damage.",
             " ",
             "&c⚔ &7Total Damage: &c-50% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-50%&8)",
+            "  &8(&6✢ &8Damage: &8-50%&8)",
             "&3☀ &7Area of Effect: &f&c-1 Blocks &7(Circle-Shaped)",
             " ",
             "&2&lTrapper Archetype",
@@ -2672,7 +2672,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&6&lElusive",
@@ -2705,8 +2705,8 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2,
-            "ARCHETYPE": {
+            "abilityPoints": 2,
+            "archetype": {
                 "amount": 10,
                 "name": "boltslinger"
             }
@@ -2726,9 +2726,9 @@
             "&7&nArrow Storm&7 will shoot &f+2&7 extra streams of arrows.",
             " ",
             "&c⚔ &7Total Damage: &c-5% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8-3%&8)",
-            "  ÀÀÀÀ&8(&e✦ &8Thunder: &8-1%&8)",
-            "  ÀÀÀÀ&8(&f�?� &8Air: &8-1%&8)",
+            "  &8(&6✢ &8Damage: &8-3%&8)",
+            "  &8(&e✦ &8Thunder: &8-1%&8)",
+            "  &8(&f❋ &8Air: &8-1%&8)",
             " ",
             "&cUnlocking will block:",
             "&c- &7Phantom Ray",
@@ -2752,7 +2752,7 @@
     },
     {
         "requirements": {
-            "ABILITY_POINTS": 2
+            "abilityPoints": 2
         },
         "archetype": "",
         "name": "&d&lGrape Bomb",
@@ -2770,8 +2770,8 @@
             "&7smaller bombs when exploding.",
             " ",
             "&c⚔ &7Total Damage: &f80% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &860%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &820%&8)",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
             "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
             " ",
             "&7Ability Points: &f2"
@@ -2787,8 +2787,8 @@
     },
     {
         "requirements": {
-            "NODE": "guardianAngels",
-            "ABILITY_POINTS": 2
+            "node": "guardianAngels",
+            "abilityPoints": 2
         },
         "archetype": "boltslinger",
         "name": "&d&lAll-Seeing Panoptes",
@@ -2807,8 +2807,8 @@
             "&7letting them shoot up to &f+4&7 times each.",
             " ",
             "&c⚔ &7Total Damage: &f+7% &8(of your DPS, per arrow)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+2%&8)",
-            "  ÀÀÀÀ&8(&c✹ &8Fire: &8+5%&8)",
+            "  &8(&6✢ &8Damage: &8+2%&8)",
+            "  &8(&c✹ &8Fire: &8+5%&8)",
             "&2➼ &7Range: &f+4 Blocks",
             " ",
             "&e&lBoltslinger Archetype",
@@ -2827,14 +2827,14 @@
     },
     {
         "requirements": {
-            "NODE": "wolfSummon",
-            "ABILITY_POINTS": 1,
-            "ARCHETYPE": {
+            "node": "wolfSummon",
+            "abilityPoints": 1,
+            "archetype": {
                 "amount": 7,
                 "name": "trapper"
             }
         },
-        "archetype": "",
+        "archetype": "trapper",
         "name": "&f&lBeast Lore",
         "coordinates": {
             "x": 6,
@@ -2851,7 +2851,7 @@
             "&7Increase the damage of your &bHound&7.",
             " ",
             "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
-            "  ÀÀÀÀ&8(&6✢ &8Damage: &8+40%&8)",
+            "  &8(&6✢ &8Damage: &8+40%&8)",
             " ",
             "&2&lTrapper Archetype",
             " ",

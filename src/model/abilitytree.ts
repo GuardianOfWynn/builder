@@ -1,5 +1,6 @@
 import { Pair } from "../scripts/util";
 import { Archetype } from "../model/archetype"
+import { AbilityDetail } from "./skill";
 
 export const BASE_ABILITY_POINTS = 45;
 
@@ -25,7 +26,8 @@ export enum ConnectorType {
     RIGHT_LEFT = "connector_right_left",
     UP_DOWN = "connector_up_down",
     UP_RIGHT_DOWN = "connector_up_right_down",
-    CROSS = "connector_up_right_down_left"
+    CROSS = "connector_up_right_down_left",
+    UP_LEFT_DOWN = "connector_up_down_left"
 }
 
 export enum Direction {
@@ -42,7 +44,8 @@ export const CONNECTOR_TYPE_DIRECTIONS = new Map<ConnectorType, Direction[]>([
     [ConnectorType.RIGHT_DOWN_LEFT, [Direction.RIGHT, Direction.DOWN, Direction.LEFT]],
     [ConnectorType.RIGHT_LEFT, [Direction.RIGHT, Direction.LEFT]],
     [ConnectorType.UP_DOWN, [Direction.UP, Direction.DOWN]],
-    [ConnectorType.UP_RIGHT_DOWN, [Direction.RIGHT, Direction.DOWN, Direction.UP]]
+    [ConnectorType.UP_RIGHT_DOWN, [Direction.RIGHT, Direction.DOWN, Direction.UP]],
+    [ConnectorType.UP_LEFT_DOWN, [Direction.UP, Direction.LEFT, Direction.DOWN]]
 ]);
 
 export function isDirectionAllowed(connector: ConnectorType, direction: Direction): boolean {
@@ -51,6 +54,8 @@ export function isDirectionAllowed(connector: ConnectorType, direction: Directio
 
 export class AbilityTree {
     baseTree: AbilityNode[];
+    toggledBuffs: AbilityNode[];
+    baseTreeDetails: AbilityDetail[];
     nodes: AbilityNode[];
     connectors: AbilityNodeConnector[];
     availableNodes: AbilityNode[];
@@ -118,6 +123,8 @@ export class AbilityNodeConnector {
 export class AbilityNode {
     id: string;
     uniqueId: string;
+    archetype: string;
+    name: string;
     requirements: {
         node: string;
         abilityPoints: number;
@@ -129,9 +136,7 @@ export class AbilityNode {
     coordinates: {
         x: number;
         y: number;
-    }
-    archetype: string;
-    name: string;
+    };
     sprite: {
         normal: string;
         activated: string;
