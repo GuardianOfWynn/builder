@@ -16,7 +16,7 @@
           <div class="flex flex-col gap-x-2">
             <div class="flex gap-x-2">
               <div class="border-[1px] flex items-center justify-center h-24 w-24 p-2 rounded-md border-purple-600">
-                <ItemTypeIcon :item-type="craftType"/>
+                <ItemTypeIcon :item-type="craftType" />
               </div>
               <div class="grid grid-cols-5 grid-rows-3 w-fit gap-x-2 gap-y-1">
                 <p class="my-auto text-white">Type</p>
@@ -61,10 +61,10 @@
           </div>
           <div>
             <div class="grid grid-cols-7 md:mt-0 mt-4 gap-x-1 gap-y-1 text-mc-gray">
-              <p class="my-auto col-span-3">{{recipe.material1Amount + 'x ' + recipe.material1 }}: </p>
+              <p class="my-auto col-span-3">{{ recipe.material1Amount + 'x ' + recipe.material1 }}: </p>
               <MaterialTierSelector @updade-tier="value => handleMaterial1TierChanged(value)" class="my-auto col-span-4"
                 :tier="material1Tier" />
-              <p class="my-auto col-span-3">{{recipe.material2Amount + 'x ' + recipe.material2 }}: </p>
+              <p class="my-auto col-span-3">{{ recipe.material2Amount + 'x ' + recipe.material2 }}: </p>
               <MaterialTierSelector @updade-tier="value => handleMaterial2TierChanged(value)" class="my-auto col-span-4"
                 :tier="material2Tier" />
               <p v-if="isWeapon(craftType)" class="col-span-3">Attack Speed: </p>
@@ -90,9 +90,14 @@
           </div>
         </div>
       </div>
-      <div @click="clipboardRecipe()"
-        class="rounded-md md:mt-24 text-center w-64 mt-8 border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit mx-auto my-auto cursor-pointer">
-        Copy recipe link
+      <div class="flex md:mt-24 justify-center gap-x-4">
+        <div @click="clipboardRecipe()" class="rounded-md text-center w-64
+           border-mc-aqua border-[1px] text-mc-light-purple px-3 p-2 h-fit my-auto cursor-pointer">
+          Copy recipe link
+        </div>
+        <div class="cursor-pointer text-mc-lime h-fit w-64 p-2 rounded-md border-mc-gold border-[1px] text-center">
+Save to Workspace
+        </div>
       </div>
       <div class="mt-24 w-full" v-show="warnings.length > 0">
         <p class="text-center text-mc-red" v-for="warn in warnings">
@@ -110,8 +115,8 @@
       <div class="text-center pb-4 text-mc-dark-gray font-minecraft">
         <p>Made with &#9829; by victuwu #GswOnTop</p>
         <p>Please report any issue <a class="text-mc-aqua decoration-mc-aqua" target="_blank"
-                href="https://github.com/GuardianOfWynn/builder/issues">here</a></p>
-    </div>
+            href="https://github.com/GuardianOfWynn/builder/issues">here</a></p>
+      </div>
     </div>
   </div>
 </template>
@@ -185,7 +190,7 @@ export default {
       }
       recipeRolls.value = getRecipePrototypeFor(val);
       let recipeIndex = recipeRolls.value.findIndex(x => x.levels.some(x => x.id === level.value.id));
-      if(recipeIndex >= recipeRolls.value.length) {
+      if (recipeIndex >= recipeRolls.value.length) {
         recipeIndex = 0;
       }
       recipe.value = recipeRolls.value[recipeIndex];
@@ -235,6 +240,10 @@ export default {
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
+    }
+
+    const saveRecipeToWorkspace = () => {
+      
     }
 
     const assemble = () => {
