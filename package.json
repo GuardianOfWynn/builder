@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/vue": "0.0.0-insiders.c2096b0",
     "@heroicons/vue": "^2.0.18",
+    "uuid": "^9.0.1",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
