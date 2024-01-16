@@ -9,10 +9,15 @@
             <div class="w-8 h-8 bg-professions-dec bg-builder"></div>
             <p v-show="hovered" class="text-white my-auto text-xs ml-2">Builder</p>
         </div>
+        <div :class="[hovered ? 'justify-normal' : 'justify-center']" class="flex p-2 cursor-pointer hover:bg-mc-dark-green">
+            <img class="w-8 h-8" :src="'/builder/sprites/liquid_emerald.webp'"/>
+            <p v-show="hovered" class="text-white my-auto text-xs ml-2">Eco Engine</p>
+        </div>
         <div :class="[hovered ? 'justify-normal' : 'justify-center']" class="flex p-2 cursor-pointer hover:bg-mc-gold">
             <div class="w-8 h-8 bg-professions-dec bg-workspace"></div>
             <p v-show="hovered" class="text-white my-auto text-xs ml-2">My Workspace</p>
         </div>
+        
     </div>
 </template>
   
