@@ -5,11 +5,6 @@ import {createRouter, createWebHashHistory} from "vue-router"
 import Crafter from './components/crafter/Crafter.vue'
 import Builder from './components/builder/Builder.vue'
 import Workspace from './components/workspace/Workspace.vue'
-import Ingredient from './model/ingredient'
-import {ITEMS, WynnItem} from './model/item'
-import { WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS, findPath } from './model/abilitytree'
-import { parseStyleToComponents } from './scripts/color_code_translator'
-import { StartEcoEngine } from './wasm/eco-engine'
 
 const routes = [
     { path: '/crafter/:recipe?', component: Crafter },
@@ -22,6 +17,9 @@ const router = createRouter({
     routes,
 })
 
-var worker = new Worker('eco_engine_worker.js');
-worker.postMessage({ cmd:"ecoEngine"})
+var worker = new Worker(
+    new URL('./eco_engine_worker', import.meta.url),
+    {type: 'module'}
+  );
+
 createApp(App).use(router).mount('#app')
