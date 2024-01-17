@@ -21,5 +21,6 @@ var worker = new Worker(
     new URL('./eco_engine_worker', import.meta.url),
     {type: 'module'}
   );
+worker.postMessage("")
 
 createApp(App).use(router).mount('#app')
