@@ -326,7 +326,7 @@ export const KEY_BONUS_EFFICIENT_EMERALDS = "efficient_emerald";
 export const KEY_BONUS_RESOURCE_RATE = "resource_rate";
 export const KEY_BONUS_EMERALD_RATE = "emerald_rate";
 
-export const BONUSES: Map<string, TerritoryBonus> = new Map<string, TerritoryBonus>([
+export const BONUSES_MAP: Map<string, TerritoryBonus> = new Map<string, TerritoryBonus>([
     [KEY_BONUS_STRONGER_MINIONS, STRONGER_MINIONS],
     [KEY_BONUS_MULTIHIT, MULTI_HIT],
     [KEY_BONUS_TOWER_AURA, TOWER_AURA],
@@ -343,7 +343,7 @@ export const BONUSES: Map<string, TerritoryBonus> = new Map<string, TerritoryBon
     [KEY_BONUS_EFFICIENT_RESOURCES, EFFICIENT_RESOURCES],
     [KEY_BONUS_EFFICIENT_EMERALDS, EFFICIENT_EMERALDS],
     [KEY_BONUS_RESOURCE_RATE, RESOURCE_RATE],
-    [KEY_BONUS_EMERALD_RATE, EMERALD_RATE],
+    [KEY_BONUS_EMERALD_RATE, EMERALD_RATE]
 ]);
 
 export {

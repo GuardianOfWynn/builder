@@ -1,13 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
-import { ResourceStorage, Territory, TransferDirection } from './territory'
+import { BorderStyle, ResourceStorage, RouteStyle, Territory, TransferDirection, Treasury } from './territory'
 import { GuildMap } from './guild_map';
-
-type RouteStyle = any; // Replace with actual RouteStyle type definition
-type BorderStyle = any; // Replace with actual BorderStyle type definition
-type Treasury = any; // Replace with actual Treasury type definition
-type Storage = any; // Replace with actual Storage type definition
-type ResourceTransference = any; // Replace with actual ResourceTransference type definition
-const HQ_TO_TERRITORY = 'HQ_TO_TERRITORY'; // Replace with actual constant if needed
 
 export class Claim {
   globalTax: number;
@@ -52,10 +45,13 @@ export class Claim {
   }
 
   askForResources(asking: Territory, res: ResourceStorage): void {
+    console.log(asking.name + " pediu recurso")
     const hq = this.getHQ();
     if (hq) {
       hq.passingResource.push({
         id: uuidv4(),
+        currentTerritory: hq,
+        origin: hq,
         direction: TransferDirection.HQ_TO_TERRITORY,
         storage: res,
         target: asking,
@@ -65,60 +61,60 @@ export class Claim {
 }
 
 export class ClaimPreset {
-  Name: string;
-  HQ: string;
-  GlobalStyle: RouteStyle;
-  GlobalBorders: BorderStyle;
-  GlobalTax: number;
-  AllyTax: number;
-  Territories: {
-    Territory: string;
-    Boosts: {
-      Bonuses: { [key: string]: number };
-      Upgrades: { [key: string]: number };
+  name: string;
+  hq: string;
+  globalStyle: RouteStyle;
+  globalBorders: BorderStyle;
+  globalTax: number;
+  allyTax: number;
+  territories: {
+    territory: string;
+    boosts: {
+      bonuses: { [key: string]: number };
+      upgrades: { [key: string]: number };
     };
-    Style: RouteStyle;
-    Border: BorderStyle;
-    Treasury: Treasury;
-    Tax: number;
-    AllyTax: number;
+    style: RouteStyle;
+    border: BorderStyle;
+    treasury: Treasury;
+    tax: number;
+    allyTax: number;
   }[];
+}
 
-  Parse(guildMap: GuildMap): Claim {
-    const claim = new Claim();
-    claim.globalTax = Math.round(this.GlobalTax);
-    claim.allyTax = Math.round(this.AllyTax);
-    claim.globalStyle = this.GlobalStyle;
-    claim.globalBorders = this.GlobalBorders;
+export function parseClaimPreset(preset: ClaimPreset, guildMap: GuildMap): Claim {
+  const claim = new Claim();
+  claim.globalTax = Math.round(preset.globalTax);
+  claim.allyTax = Math.round(preset.allyTax);
+  claim.globalStyle = preset.globalStyle;
+  claim.globalBorders = preset.globalBorders;
 
-    guildMap.claims.push(claim);
+  guildMap.claims.push(claim);
 
-    for (const v of this.Territories) {
-      const territory = guildMap.getTerritory(v.Territory)!;
-      territory.Reset();
-      territory.claim = claim;
-      if (v.Territory.toLowerCase() === this.HQ.toLowerCase()) {
-        territory.HQ = true;
-      }
-      for (const [k, val] of Object.entries(v.Boosts.Bonuses)) {
-        territory.bonuses[k] = {
-          level: val,
-          activated: true
-        };
-      }
-      for (const [k, val] of Object.entries(v.Boosts.Upgrades)) {
-        territory.upgrades[k] = {
-          level: val,
-          activated: true
-        };
-      }
-      territory.borders = v.Border;
-      territory.treasury = v.Treasury;
-      territory.tax = v.Tax;
-      territory.allyTax = v.AllyTax;
-      guildMap.transferTerritory(territory, claim);
+  for (const v of preset.territories) {
+    const territory = guildMap.getTerritory(v.territory)!;
+    territory.reset();
+    territory.claim = claim;
+    if (v.territory.toLowerCase() === preset.hq.toLowerCase()) {
+      territory.HQ = true;
     }
-
-    return claim;
+    for (const [k, val] of Object.entries(v.boosts.bonuses)) {
+      territory.bonuses[k] = {
+        level: val,
+        activated: true
+      };
+    }
+    for (const [k, val] of Object.entries(v.boosts.upgrades)) {
+      territory.upgrades[k] = {
+        level: val,
+        activated: true
+      };
+    }
+    territory.borders = v.border;
+    territory.treasury = v.treasury;
+    territory.tax = v.tax;
+    territory.allyTax = v.allyTax;
+    guildMap.transferTerritory(territory, claim);
   }
+
+  return claim;
 }

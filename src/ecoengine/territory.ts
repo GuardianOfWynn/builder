@@ -1,10 +1,12 @@
-import { BONUSES, BonusLevel, KEY_BONUS_EFFICIENT_EMERALDS, KEY_BONUS_EFFICIENT_RESOURCES, KEY_BONUS_EMERALD_RATE, KEY_BONUS_LARGE_EMERALD_STORAGE, KEY_BONUS_LARGE_RESOURCE_STORAGE, KEY_BONUS_RESOURCE_RATE, LARGER_RESOURCE_STORAGE, TerritoryBonus } from "./bonuses";
+import { BonusLevel, KEY_BONUS_EFFICIENT_EMERALDS, KEY_BONUS_EFFICIENT_RESOURCES, KEY_BONUS_EMERALD_RATE, KEY_BONUS_LARGE_EMERALD_STORAGE, KEY_BONUS_LARGE_RESOURCE_STORAGE, KEY_BONUS_RESOURCE_RATE, LARGER_RESOURCE_STORAGE, TerritoryBonus } from "./bonuses";
 import { Claim } from "./claim";
 import { Engine, EngineInstance } from "./engine";
 import { Pathfinder } from "./pathfinding/pathfinder";
 import { ResourceType } from "./resource";
 import { v4 as uuidv4 } from 'uuid';
 import { TerritoryUpgrade, UPGRADES, UpgradeLevel } from "./upgrades";
+import * as bonuses from "./bonuses"
+import * as upgrades from "./upgrades"
 
 export enum RouteStyle {
     CHEAPEST = "cheapest",
@@ -39,6 +41,8 @@ export type ResourceStorage = Map<ResourceType, number>
 export type ResourceTransference = {
     id: string
     direction: TransferDirection
+    currentTerritory: Territory
+    origin: Territory
     storage: ResourceStorage
     target: Territory
 }
@@ -62,7 +66,7 @@ export class Territory {
     borders: BorderStyle
     tax: number
     allyTax: number
-    storage: ResourceStorage
+    storage: Map<ResourceType, number>
     productionMultipliers: Map<ResourceType, number>
     passingResource: ResourceTransference[]
     lastResourceProduced: number
@@ -76,11 +80,11 @@ export class Territory {
     connections: string[]
 
     getResourceRate(): number {
-        return BONUSES[KEY_BONUS_EMERALD_RATE].Levels[this.bonuses[KEY_BONUS_RESOURCE_RATE]].Value
+        return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.level)!.Value
     }
 
     getEmeraldRate(): number {
-        return BONUSES[KEY_BONUS_EMERALD_RATE].Levels[this.bonuses[KEY_BONUS_EMERALD_RATE]].Value
+        return bonuses.BONUSES_MAP.get(KEY_BONUS_EMERALD_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.level)!.Value
     }
 
     getTreasuryBonus(): number {
@@ -112,24 +116,24 @@ export class Territory {
 
     getProducedEmerald(): number {
         let multiplier = 1
-        if (this.bonuses[KEY_BONUS_EFFICIENT_EMERALDS].activated) {
-            multiplier += BONUSES[KEY_BONUS_EFFICIENT_EMERALDS].Levels[this.bonuses[KEY_BONUS_EFFICIENT_EMERALDS]].Value / 100
+        if (this.bonuses.get(KEY_BONUS_EFFICIENT_EMERALDS)!.activated) {
+            multiplier += bonuses.BONUSES_MAP.get(KEY_BONUS_EFFICIENT_EMERALDS)!.Levels.get(this.bonuses.get(KEY_BONUS_EFFICIENT_EMERALDS)!.level)!.Value / 100
         }
         return multiplier * BASE_EMERALD_PRODUCTION * (1 + this.getTreasuryBonus())
     }
 
     getProducedResource(): number {
         let multiplier = 1;
-        if (this.bonuses[KEY_BONUS_EFFICIENT_RESOURCES].activated) {
-            multiplier += BONUSES[KEY_BONUS_EFFICIENT_RESOURCES].Levels[this.bonuses[KEY_BONUS_EFFICIENT_RESOURCES]].Value / 100
+        if (this.bonuses.get(KEY_BONUS_EFFICIENT_RESOURCES)!.activated) {
+            multiplier += bonuses.BONUSES_MAP.get(KEY_BONUS_EFFICIENT_RESOURCES)!.Levels.get(this.bonuses.get(KEY_BONUS_EFFICIENT_RESOURCES)!.level)!.Value / 100
         }
         return multiplier * BASE_RESOURCE_PRODUCTION * (1 + this.getTreasuryBonus())
     }
 
     getEmeraldStorageSize(): number {
         let multiplier = 1;
-        if (this.bonuses[KEY_BONUS_LARGE_EMERALD_STORAGE].activated) {
-            multiplier += BONUSES[KEY_BONUS_LARGE_EMERALD_STORAGE].Levels[this.bonuses[KEY_BONUS_LARGE_EMERALD_STORAGE]].Value / 100
+        if (this.bonuses.get(KEY_BONUS_LARGE_EMERALD_STORAGE)!.activated) {
+            multiplier += bonuses.BONUSES_MAP.get(KEY_BONUS_LARGE_EMERALD_STORAGE)!.Levels.get(this.bonuses.get(KEY_BONUS_LARGE_EMERALD_STORAGE)!.level)!.Value / 100
         }
         if (this.HQ) {
             return Math.ceil(multiplier * BASE_EMERALD_STORAGE * HQ_EMERALD_STORAGE_BOOST)
@@ -139,8 +143,8 @@ export class Territory {
 
     getResourceStorageSize(): number {
         let multiplier = 1;
-        if (this.bonuses[KEY_BONUS_LARGE_RESOURCE_STORAGE].activated) {
-            multiplier += BONUSES[KEY_BONUS_LARGE_RESOURCE_STORAGE].Levels[this.bonuses[KEY_BONUS_LARGE_RESOURCE_STORAGE]].Value / 100
+        if (this.bonuses.get(KEY_BONUS_LARGE_RESOURCE_STORAGE)!.activated) {
+            multiplier += bonuses.BONUSES_MAP.get(KEY_BONUS_LARGE_RESOURCE_STORAGE)!.Levels.get(this.bonuses.get(KEY_BONUS_LARGE_RESOURCE_STORAGE)!.level)!.Value / 100
         }
         if (this.HQ) {
             return Math.ceil(multiplier * BASE_RESOURCE_STORAGE * HQ_RESOURCE_STORAGE_BOOST)
@@ -169,11 +173,11 @@ export class Territory {
             [ResourceType.FISH, 0],
             [ResourceType.EMERALD, 0]
         ]);
-        this.bonuses.entries.apply((x, y) => {
-            let bonus: TerritoryBonus = BONUSES[x]
-            let level: BonusLevel = bonus.Levels[y]
-            costs[bonus.UsedResorce] = costs[bonus.UsedResorce] + level.Cost / 60;
-        })
+        for (let [bonus, status] of this.bonuses) {
+            let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
+            let level: BonusLevel = b.Levels.get(status.level)!
+            costs.set(b.UsedResorce, costs.get(b.UsedResorce)! + level.Cost/60);
+        }
         return costs
     }
 
@@ -187,14 +191,14 @@ export class Territory {
             }
         }
 
-        for (let conn in this.connections) {
-            if (conn == target.name) {
+        for (let conn of this.connections) {
+            if (conn === target.name) {
                 target.receiveResource(transf);
                 return;
             }
         }
 
-        if (this.name == target.name) {
+        if (this.name === target.name) {
             this.receiveResource(transf);
             return;
         }
@@ -207,10 +211,11 @@ export class Territory {
     }
 
     receiveResource(transference: ResourceTransference) {
-        if (this.name == transference.target.name) {
+        if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
         } else {
             this.passingResource.push(transference);
+            transference.currentTerritory = this;
         }
     }
 
@@ -222,31 +227,48 @@ export class Territory {
             } else {
                 storageSize = this.getResourceStorageSize();
             }
-            let stored = this.storage[resType];
+            let stored = this.storage.get(resType)!;
             if (stored + qty > storageSize) {
-                this.storage[resType] = storageSize;
+                this.storage.set(resType, storageSize);
                 this.resourceOverflow = true;
             } else {
                 this.resourceOverflow = false;
-                this.storage[resType] = stored + qty;
+                this.storage.set(resType, stored + qty);
             }
         }
     }
 
-    consumeResources() {
-        let consume = function (cost: number, usedResource: ResourceType): boolean {
-            let costPerSecond = cost / 3600;
-            if (this.storage[usedResource] >= costPerSecond) {
-                this.storage[usedResource] = this.storage[usedResource] - cost;
-                return true;
+    private consume (cost: number, usedResource: ResourceType): boolean {
+        let costPerSecond = cost / 3600;
+        let left = costPerSecond; 
+        if (this.storage.get(usedResource)! >= costPerSecond) {
+            this.storage.set(usedResource, this.storage.get(usedResource)! - cost);
+            return true;
+        } else {
+            this.storage.set(usedResource, 0);
+            for (let passing of this.passingResource) {
+                for (let [res, qty] of passing.storage) {
+                    if(res === usedResource){
+                        if(left - qty <= 0) {
+                            left = 0;
+                            passing.storage.set(res, 0)
+                            return true;
+                        } else {
+                            passing.storage.set(res, left - qty);
+                            left = left - qty;
+                        }
+                    } 
+                }
             }
-            return false;
         }
+        return false;
+    }
 
+    consumeResources() {
         for (let [upgrade, status] of this.upgrades) {
-            let upg: TerritoryUpgrade = UPGRADES[upgrade]
+            let upg: TerritoryUpgrade = UPGRADES.get(upgrade)!
             let lvl: UpgradeLevel = upg.Levels[status.level];
-            if (consume(lvl.Cost, upg.UsedResource)) {
+            if (this.consume(lvl.Cost, upg.UsedResource)) {
                 status.activated = false;
             } else {
                 status.activated = true;
@@ -254,9 +276,9 @@ export class Territory {
         }
 
         for (let [bonus, status] of this.bonuses) {
-            let b: TerritoryBonus = BONUSES[bonus]
-            let lvl: BonusLevel = b.Levels[status.level];
-            if (consume(lvl.Cost, b.UsedResorce)) {
+            let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
+            let lvl: BonusLevel = b.Levels.get(status.level)!;
+            if (this.consume(lvl.Cost, b.UsedResorce)) {
                 status.activated = false;
             } else {
                 status.activated = true;
@@ -267,18 +289,22 @@ export class Territory {
 
     tick() {
         let currentTimeMillis = new Date().getTime()
+        
         if (this.claim !== null) {
             // Produce emerald
             if (currentTimeMillis - this.lastEmeraldProduced >= this.getEmeraldRate() * 1000) {
                 this.lastEmeraldProduced = currentTimeMillis;
-                this.storage[ResourceType.EMERALD] = this.storage[ResourceType.EMERALD] + this.getProducedEmerald() * this.productionMultipliers[ResourceType.EMERALD];
+                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)!);
             }
 
             // Produce resource
             if (currentTimeMillis - this.lastResourceProduced >= this.getResourceRate() * 1000) {
                 this.lastResourceProduced = currentTimeMillis;
                 for (let [resType, multiplier] of this.productionMultipliers) {
-                    this.storage[resType] = this.storage[resType] + this.getProducedResource() * multiplier;
+                    if(resType === ResourceType.EMERALD) {
+                        continue
+                    }
+                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier);
                 }
             }
 
@@ -287,18 +313,14 @@ export class Territory {
                 this.lastConsumedResource = currentTimeMillis
                 this.consumeResources();
             }
-
-            // Ask for resource
-            if(currentTimeMillis - this.lastResourceTransfer >= 60000) {
-                let costsMinutes = this.getResourceCostsMinute();
-                this.claim.askForResources(this, costsMinutes);
-            }
         }
 
         // Transfer resource
         if (currentTimeMillis - this.lastResourceTransfer >= 60000) {
             this.lastResourceTransfer = currentTimeMillis
             if (this.claim !== null && !this.HQ) {
+                let costMinute = this.getResourceCostsMinute();
+                let needRes = false;
                 let askFor = new Map<ResourceType, number>([
                     [ResourceType.CROP, 0],
                     [ResourceType.EMERALD, 0],
@@ -306,35 +328,95 @@ export class Territory {
                     [ResourceType.ORE, 0],
                     [ResourceType.WOOD, 0],
                 ])
-                let ignore = true;
-                
-                let costMinute = this.getResourceCostsMinute();
-                for (let [prod, multi] of this.productionMultipliers) {
-                    if(multi > 0) {
-                        let offset = costMinute[prod] - (prod == ResourceType.EMERALD ? 
-                            this.getProducedResource() : this.getProducedResource())
-                        if(offset < 0) {
-                            askFor[prod] = askFor[prod] - offset
-                            ignore = false;
-                        } 
+                let transfer = new Map<ResourceType, number>([
+                    [ResourceType.CROP, 0],
+                    [ResourceType.EMERALD, 0],
+                    [ResourceType.FISH, 0],
+                    [ResourceType.ORE, 0],
+                    [ResourceType.WOOD, 0],
+                ])
+                for (let [res, cost] of costMinute) {
+                    if(this.productionMultipliers.get(res)! > 0) {
+                        let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
+                        if(produced > cost) {
+                            transfer.set(res, transfer.get(res)! + produced - cost);
+                        } else {
+                            askFor.set(res, askFor.get(res)! + cost - produced);
+                            needRes = true;
+                        }
+                    } else {
+                        if(cost > 0) {
+                            askFor.set(res, askFor.get(res)! + cost);
+                            needRes = true;
+                        }
                     }
                 }
 
                 let transference: ResourceTransference = {
                     id: uuidv4(),
+                    currentTerritory: this,
+                    origin: this,
                     target: this.claim.getHQ()!,
                     direction: TransferDirection.TERRITORY_TO_HQ,
-                    storage: askFor
+                    storage: transfer
+                }
+                if(needRes) {
+                    this.claim.askForResources(this, askFor);
                 }
                 this.transferResource(transference);
-                this.storage
             }
             this.passingResource.forEach(x => this.transferResource(x))
             this.passingResource = []
-            if (this.HQ) {
-                console.log(JSON.stringify(this.storage))
-            }
         }
 
+    }
+
+    reset() {
+        this.HQ = false;
+        this.claim = null;
+        this.treasury = Treasury.VERY_LOW;
+        this.routeStyle = RouteStyle.CHEAPEST;
+        this.borders = BorderStyle.OPEN;
+        this.tax = 0.05;
+        this.allyTax = 0.05;
+        this.storage = new Map<ResourceType, number>([
+            [ResourceType.CROP, 0],
+            [ResourceType.ORE, 0],
+            [ResourceType.WOOD, 0],
+            [ResourceType.FISH, 0],
+            [ResourceType.EMERALD, 0]
+        ]);
+        this.passingResource = [];
+        this.lastResourceProduced = 0;
+        this.lastEmeraldProduced = 0;
+        this.lastConsumedResource = 0;
+        this.lastResourceTransfer = 0;
+        this.resourceGap = false;
+        this.resourceOverflow = false;
+        this.bonuses = new Map<string, UpgradeBonusStatus>([
+            [bonuses.KEY_BONUS_STRONGER_MINIONS, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_MULTIHIT, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_TOWER_AURA, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_TOWER_VOLLEY, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_GATHER_XP, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_MOB_XP, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_MOB_DAMAGE, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_PVP_DAMAGE, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_XP_SEEKING, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_TOME_SEEKING, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_EMERALD_SEEKING, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_LARGE_RESOURCE_STORAGE, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_LARGE_EMERALD_STORAGE, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_EFFICIENT_RESOURCES, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_EFFICIENT_EMERALDS, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_RESOURCE_RATE, { activated: false, level: 0 }],
+            [bonuses.KEY_BONUS_EMERALD_RATE, { activated: false, level: 0 }],
+        ]);
+        this.upgrades = new Map<string, UpgradeBonusStatus>([
+            [upgrades.KEY_UPGRADE_ATTACK_SPEED, { activated: true, level: 0 }],
+            [upgrades.KEY_UPGRADE_DAMAGE, { activated: true, level: 0 }],
+            [upgrades.KEY_UPGRADE_DEFENSE, { activated: true, level: 0 }],
+            [upgrades.KEY_UPGRADE_HEALTH, { activated: true, level: 0 }]
+        ]);
     }
 }

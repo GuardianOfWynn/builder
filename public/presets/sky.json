@@ -2,10 +2,10 @@
     {
         "name": "Sky Claim",
         "hq": "Central Islands",
-        "global_style": 0,
-        "global_borders": 0,
-        "global_tax": 0.6,
-        "ally_tax": 0.05,
+        "globalStyle": 0,
+        "globalBorders": 0,
+        "globalTax": 0.6,
+        "allyTax": 0.05,
         "territories": [
             {
                 "territory": "Molten Reach",
@@ -13,9 +13,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },
@@ -25,9 +25,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },
@@ -37,9 +37,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },
@@ -49,9 +49,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -60,9 +60,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -71,9 +71,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -82,9 +82,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -93,9 +93,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -104,9 +104,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -115,9 +115,9 @@
                     "bonuses": {},
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             },{
@@ -127,9 +127,9 @@
                     },
                     "upgrades": {}
                 },
-                "style": 0,
-                "borders": 0,
-                "treasury": 0,
+                "style": "fastest",
+                "borders": "open",
+                "treasury": "very_low",
                 "tax": 0.6,
                 "ally_tax": 0.05
             }

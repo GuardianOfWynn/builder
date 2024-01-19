@@ -1,5 +1,5 @@
-import { BaseTerritory } from "./base_territory"
-import { ClaimPreset } from "./claim"
+import { BaseTerritory, createTerritoryInstance } from "./base_territory"
+import { ClaimPreset, parseClaimPreset } from "./claim"
 import { GuildMap } from "./guild_map"
 import { Territory } from "./territory"
 
@@ -25,11 +25,11 @@ export class Engine {
     }
 }
 
-function createEngine(territories: BaseTerritory[], preset: ClaimPreset) {
+export function createEngine(territories: BaseTerritory[], preset: ClaimPreset) {
     let terrs: Territory[] = []
-    territories.forEach(x => terrs.push(x.createTerritoryInstance()))
+    territories.forEach(x => terrs.push(createTerritoryInstance(x)))
 
     let guildMap = new GuildMap([], terrs);
-    preset.Parse(guildMap)
+    parseClaimPreset(preset, guildMap)
     EngineInstance = new Engine(guildMap);
 }
