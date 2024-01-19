@@ -6,8 +6,7 @@ import Crafter from './components/crafter/Crafter.vue'
 import Builder from './components/builder/Builder.vue'
 import Workspace from './components/workspace/Workspace.vue'
 import EcoEngine from './components/ecoengine/EcoEngine.vue'
-import { EngineInstance, createEngine } from './ecoengine/engine'
-import { SKY_CLAIM_PRESET, TERRITORIES } from './model/ecoengine/ecoengine'
+import VueDragscroll from "vue-dragscroll";
 
 const routes = [
     { path: '/crafter/:recipe?', component: Crafter },
@@ -21,4 +20,4 @@ const router = createRouter({
     routes,
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(VueDragscroll).use(router).mount('#app')

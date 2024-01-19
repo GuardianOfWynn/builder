@@ -85,6 +85,14 @@ export class Territory {
     };
     connections: string[]
 
+    getTerritoryWidth(): number {
+        return Math.abs(Math.abs(this.position.startX) - Math.abs(this.position.endX))
+    }
+
+    getTerritoryHeight(): number {
+        return Math.abs(Math.abs(this.position.startX) - Math.abs(this.position.endX))
+    }
+
     getResourceRate(): number {
         return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.level)!.Value
     }
