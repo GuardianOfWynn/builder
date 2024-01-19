@@ -77,6 +77,12 @@ export class Territory {
     resourceGap: boolean
     bonuses: Map<string, UpgradeBonusStatus>
     upgrades: Map<string, UpgradeBonusStatus>
+    position: {
+        startX: number;
+        startZ: number;
+        endX: number;
+        endZ: number;
+    };
     connections: string[]
 
     getResourceRate(): number {

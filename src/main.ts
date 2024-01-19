@@ -21,7 +21,4 @@ const router = createRouter({
     routes,
 })
 
-createEngine(TERRITORIES, SKY_CLAIM_PRESET)
-EngineInstance!.Start()
-
 createApp(App).use(router).mount('#app')

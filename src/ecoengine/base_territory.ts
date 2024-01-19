@@ -8,6 +8,12 @@ export class BaseTerritory {
     wood: number;
     fish: number;
     emerald: number;
+    position: {
+        startX: number;
+        startZ: number;
+        endX: number;
+        endZ: number;
+    };
     conns: string[];
 }
 
@@ -22,6 +28,7 @@ export function createTerritoryInstance(terr: BaseTerritory): Territory {
         [ResourceType.FISH, terr.fish],
         [ResourceType.EMERALD, terr.emerald]
     ]);
+    territory.position = terr.position;
     territory.reset();
     return territory
 }

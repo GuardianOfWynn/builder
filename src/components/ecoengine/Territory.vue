@@ -8,12 +8,18 @@
   </template>
     
   <script lang="ts">
+import { Territory } from '../../ecoengine/territory';
+
     
     export default {
         name: 'Territory',
         props: {
+          territory: Territory
         },
         setup(props) {
+
+          
+
         },
         components: { }
     }
