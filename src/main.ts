@@ -4,18 +4,20 @@ import App from './App.vue'
 import {createRouter, createWebHashHistory} from "vue-router"
 import Crafter from './components/crafter/Crafter.vue'
 import Builder from './components/builder/Builder.vue'
-import Ingredient from './model/ingredient'
-import {ITEMS, WynnItem} from './model/item'
-import { WARRIOR_ABILITY_TREE, WARRIOR_CONNECTORS, findPath } from './model/abilitytree'
-import { parseStyleToComponents } from './scripts/color_code_translator'
+import Workspace from './components/workspace/Workspace.vue'
+import EcoEngine from './components/ecoengine/EcoEngine.vue'
+import VueDragscroll from "vue-dragscroll";
 
 const routes = [
     { path: '/crafter/:recipe?', component: Crafter },
-    { path: '/builder', component: Builder}
+    { path: '/builder', component: Builder},
+    { path: '/workspace', component: Workspace},
+    { path: '/ecoengine', component: EcoEngine}
 ]
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
 })
-createApp(App).use(router).mount('#app')
+
+createApp(App).use(VueDragscroll).use(router).mount('#app')

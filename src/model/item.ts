@@ -1,6 +1,6 @@
 import { DamageBounds } from "../scripts/math";
 import { ArmorType, AttackSpeed, ItemTier, ItemType, NumberRange, WynnClass } from "../scripts/util";
-import { RangeableIdentification } from "./ingredient";
+import { FixedIdentification, RangeableIdentification } from "./identification";
 
 export const ITEMS: WynnItem[] = await (await fetch("/builder/items.json")).json();
 
@@ -12,7 +12,7 @@ export class WynnBaseItem {
     type: ItemType;
     attackSpeed?: AttackSpeed;
     isCrafted: boolean;
-    identifications: RangeableIdentification[];
+    isSpecific: boolean;
     requirements: {
         quest: string;
         dexterity: number;
@@ -26,6 +26,7 @@ export class WynnBaseItem {
 export class WynnCraftedItem extends WynnBaseItem {
     health: NumberRange;
     level: NumberRange;
+    identifications: RangeableIdentification[];
     craftedStatus: {
         durability: NumberRange;
         duration: NumberRange;
@@ -49,6 +50,40 @@ export class WynnCraftedItem extends WynnBaseItem {
 }
 
 export class WynnItem extends WynnBaseItem{
+    id: string;
+    health: Number;
+    tier: ItemTier;
+    set: string | null;
+    armorType: ArmorType;
+    isQuestItem: boolean;
+    isUntradable: boolean;
+    identifications: RangeableIdentification[];
+    lore: string;
+    level: number;
+    damages: {
+        average: number;
+        neutral: NumberRange;
+        fire: NumberRange;
+        water: NumberRange;
+        thunder: NumberRange;
+        air: NumberRange;
+        earth: NumberRange;
+    };
+    defenses: {
+        fire: number;
+        water: number;
+        thunder: number;
+        air: number;
+        earth: number;
+    };
+    majorId?: {
+        name: string;
+        description: string;
+    }
+}
+
+export class WynnSpecificItem extends WynnBaseItem{
+    identifications: FixedIdentification[];
     id: string;
     health: Number;
     tier: ItemTier;

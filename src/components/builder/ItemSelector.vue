@@ -43,7 +43,7 @@
         <input v-else-if="rollType == 'specific'" :v-model="specificRoll" 
           class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "/>
         <div v-if="!isAccessory(type as ItemType)">
-          <input :v-model="powders" placeholder="Powder pattern: t6 f5 w4 a3 e2" class="outline-none bg-mc-bg text-white text-sm px-2 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
+          <input :v-model="powders" :placeholder="selectedItem == null? 'Powder pattern: t6f5w4a3e2' : selectedItem.powderSlots + ' powder slot(s)'" class="outline-none bg-mc-bg text-white text-sm px-2 pt-1 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
         </div>
         <div class="w-fit mt-2">
           <RadioGroup  v-model="rollType" class="text-white w-full gap-x-4 flex text-xs">

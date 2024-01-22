@@ -50,7 +50,26 @@ module.exports = {
         'wynn-icons': "url('/sprites/WynnIcons.png')",
         'accessories': "url('/sprites/AccessorySprites.gif')",
         'armours': "url('/sprites/ArmourSprites.png')",
-        'ability-tree': "url('/sprites/abilitytree/ability_page_no_border.png')"
+        'ability-tree': "url('/sprites/abilitytree/ability_page_no_border.png')",
+        'map11': "url('/maps/1_1.png')",
+        'map21': "url('/maps/2_1.png')",
+        'map22': "url('/maps/2_2.png')",
+        'map23': "url('/maps/2_3.png')",
+        'map31': "url('/maps/3_1.png')",
+        'map32': "url('/maps/3_2.png')",
+        'map33': "url('/maps/3_3.png')",
+        'map41': "url('/maps/4_1.png')",
+        'map42': "url('/maps/4_2.png')",
+        'map43': "url('/maps/4_3.png')",
+        'map51': "url('/maps/5_1.png')",
+        'map52': "url('/maps/5_2.png')",
+        'map53': "url('/maps/5_3.png')",
+        'map61': "url('/maps/6_1.png')",
+        'map62': "url('/maps/6_2.png')",
+        'map63': "url('/maps/6_3.png')",
+        'map71': "url('/maps/7_1.png')",
+        'map72': "url('/maps/7_2.png')",
+        'map73': "url('/maps/7_3.png')"
       },
       borderImage: {
         'ability-tree': "url('/sprites/abilitytree/ability_page.svg')"

@@ -108,7 +108,7 @@ export function assembleCraft(recipe: Recipe): Pair<WynnCraftedItem, string[]> {
       }
     }
 
-    if(!ingredient.skills.includes(targetProf)) {
+    if(!ingredient.skills.includes(targetProf.toLowerCase())) {
       let warning = "WARNING: " + ingredient.name + " cannot be used for " + targetProf;
       if(!warnings.includes(warning)) {
         warnings.push(warning);
@@ -260,7 +260,7 @@ export function getBaseHealth<T extends RecipePrototype>(craftType: ItemType, re
 export function encodeRecipe(recipe: Recipe): string {
   let ingredients = recipe.ingredients.reduce((accumulator, value) => {
     if (value.ingredient === undefined || value.ingredient === null) {
-      return accumulator + "00";
+      return accumulator + "000";
     }
     return accumulator + value.ingredient.id;
   }, "");
@@ -275,7 +275,7 @@ export function isValidHash(encoded: string): boolean {
   let splited = encoded.split("-")
   return encoded.startsWith("CR") && splited.length === 7 // Encoded recipe must have 6 sections
     && !isNaN(parseInt(splited[1])) && parseInt(splited[1]) >= 0 && parseInt(splited[1]) <= 14 // ItemType
-    && splited[2].length === 12 // Six ingredients, each ingredient ID has 2 characters
+    && splited[2].length === 18 // Six ingredients, each ingredient ID has 3 characters
     && !isNaN(parseInt(splited[3])) && parseInt(splited[3]) >= 1 && parseInt(splited[3]) <= 3 // Attack speed: Fast (1), Normal (2), Slow (3)
     && !isNaN(parseInt(splited[4])) && parseInt(splited[4]) >= 0 || parseInt(splited[4]) <= 11 // Prototype index
     && !isNaN(parseInt(splited[5])) && parseInt(splited[5]) >= 0 || parseInt(splited[5]) <= 3 //  Level index
@@ -309,16 +309,16 @@ export function decodeRecipe(encoded: string, ingredients: Ingredient[]): Recipe
     level: prototype.levels[lvlIndex]
   }
   let positions = [
-    { id: ingredientsStr.substring(0, 2), x: 0, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(2, 4), x: 1, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(4, 6), x: 0, y: 1, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(6, 8), x: 1, y: 1, effectiveness: 100,ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(8, 10), x: 0, y: 2, ieffectiveness: 100 , ingredient: <Ingredient | undefined>undefined },
-    { id: ingredientsStr.substring(10, 12), x: 1, y: 2, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(0, 3), x: 0, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(3, 6), x: 1, y: 0, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(6, 9), x: 0, y: 1, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(9, 12), x: 1, y: 1, effectiveness: 100,ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(12, 15), x: 0, y: 2, ieffectiveness: 100 , ingredient: <Ingredient | undefined>undefined },
+    { id: ingredientsStr.substring(15, 18), x: 1, y: 2, effectiveness: 100, ingredient: <Ingredient | undefined>undefined },
   ]
   positions.forEach(pos => {
     ingredients.filter(ing => {
-      if (pos.id === "00") {
+      if (pos.id === "000") {
         return undefined;
       }
       return ing.id === pos.id
