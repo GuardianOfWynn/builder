@@ -12,10 +12,11 @@
     "@headlessui/vue": "0.0.0-insiders.c2096b0",
     "@heroicons/vue": "^2.0.18",
     "@tyriar/fibonacci-heap": "^2.0.9",
+    "dragscroll": "^0.0.8",
     "uuid": "^9.0.1",
     "vue": "^3.3.11",
-    "vue-router": "^4.2.5",
-    "worker-loader": "^3.0.8"
+    "vue-dragscroll": "^4.0.5",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.6.2",

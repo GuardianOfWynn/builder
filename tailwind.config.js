@@ -51,6 +51,7 @@ module.exports = {
         'accessories': "url('/sprites/AccessorySprites.gif')",
         'armours': "url('/sprites/ArmourSprites.png')",
         'ability-tree': "url('/sprites/abilitytree/ability_page_no_border.png')",
+        'wynn-map': "url('/maps/map.png')",
         'map11': "url('/maps/1_1.png')",
         'map21': "url('/maps/2_1.png')",
         'map22': "url('/maps/2_2.png')",

@@ -3,6 +3,6 @@
 
 <template>
 <Suspense>
-  <RouterView class="bg-mc-bg min-h-screen"/>
+  <RouterView class="hide-scroll bg-mc-bg min-h-screen"/>
 </Suspense> 
 </template>

@@ -18,6 +18,7 @@
 
   .hide-scroll::-webkit-scrollbar {
     display: none;
+    overflow: hidden;
   }
 
   .pixel-corners,

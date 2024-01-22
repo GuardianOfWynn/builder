@@ -6,8 +6,7 @@ import Crafter from './components/crafter/Crafter.vue'
 import Builder from './components/builder/Builder.vue'
 import Workspace from './components/workspace/Workspace.vue'
 import EcoEngine from './components/ecoengine/EcoEngine.vue'
-import VueDragscroll from "vue-dragscroll";
-
+import VueDragscroll from 'vue-dragscroll';
 const routes = [
     { path: '/crafter/:recipe?', component: Crafter },
     { path: '/builder', component: Builder},

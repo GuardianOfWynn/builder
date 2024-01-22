@@ -90,7 +90,7 @@ export class Territory {
     }
 
     getTerritoryHeight(): number {
-        return Math.abs(Math.abs(this.position.startX) - Math.abs(this.position.endX))
+        return Math.abs(Math.abs(this.position.startZ) - Math.abs(this.position.endZ))
     }
 
     getResourceRate(): number {
