@@ -85,6 +85,17 @@ export class Territory {
     };
     connections: string[]
 
+    getTerritoryStartX(): number {
+        // [4343] [562] -> [-1997 -4470]
+        return 0
+    }
+
+    getTerritoryStartZ(): number {
+        // [4343] [562] -> [-1997 -4470]
+        return 0
+    }
+
+
     getTerritoryWidth(): number {
         return Math.abs(Math.abs(this.position.startX) - Math.abs(this.position.endX))
     }

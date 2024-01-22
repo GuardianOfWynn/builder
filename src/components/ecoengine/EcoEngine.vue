@@ -1,8 +1,8 @@
 <template>
-  <div class="min-w-max">
+  <div class="min-w-max flex justify-center">
     <div class="relative">
       <div>
-        <div class="grid grid-cols-9 grid-rows-6 w-fit">
+        <div class="grid grid-cols-9 grid-rows-6 w-fit ">
           <div class=" col-span-3 bg-no-repeat bg-cover bg-map21 w-[1536px] h-[1024px] pixelated"></div>
           <div class=" col-span-4 bg-no-repeat bg-cover bg-map22 w-[2048px] h-[1024px] pixelated"></div>
           <div class="  col-span-2 bg-no-repeat bg-cover bg-map23 w-[1024px] h-[1024px] pixelated"></div>
