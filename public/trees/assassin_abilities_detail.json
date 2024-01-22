@@ -11,7 +11,7 @@
     },
     {
         "ability": "spinAttackCost1",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -21,7 +21,7 @@
     },
     {
         "ability": "doubleSpin",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -89,7 +89,7 @@
     },
     {
         "ability": "dashCost1",
-        "parentAbility": [
+        "parent": [
             "dash"
         ],
         "parentBoostedStats": [
@@ -99,7 +99,7 @@
     },
     {
         "ability": "doubleSlice",
-        "parentAbility": [
+        "parent": [
             "mainattack"
         ],
         "damageBoost": {
@@ -115,7 +115,7 @@
     },
     {
         "ability": "backstab",
-        "parentAbility": [
+        "parent": [
             "multihit"
         ],
         "damageBoost": {
@@ -160,7 +160,7 @@
     },
     {
         "ability": "stickyBomb",
-        "parentAbility": [
+        "parent": [
             "smokebomb"
         ],
         "parentBoostedStats": [
@@ -201,7 +201,7 @@
     },
     {
         "ability": "vanish",
-        "parentAbility": [
+        "parent": [
             "dash"
         ]
     },
@@ -234,7 +234,7 @@
     },
     {
         "ability": "multihitCost1",
-        "parentAbility": [
+        "parent": [
             "multihit"
         ],
         "parentBoostedStats": [
@@ -263,7 +263,7 @@
     {
         "ability": "fatalstrike",
         "toggleable": true,
-        "parentAbility": [
+        "parent": [
             "dash",
             "multihit",
             "smokebomb",
@@ -275,7 +275,7 @@
     },
     {
         "ability": "wallOfSmoke",
-        "parentAbility": "smokeBomb",
+        "parent": "smokeBomb",
         "parentBoostedStats": [
             "damageBoost"
         ],
@@ -324,7 +324,7 @@
     },
     {
         "ability": "lacerate",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -352,7 +352,7 @@
     },
     {
         "ability": "discombobulate",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -379,7 +379,7 @@
     },
     {
         "ability": "betterMultihit",
-        "parentAbility": [
+        "parent": [
             "multihit"
         ],
         "parentBoostedStats": [
@@ -390,7 +390,7 @@
     {
         "ability": "darkArts",
         "applyWhenToggled": "shadowClones",
-        "parentAbility": [
+        "parent": [
             "smokebomb",
             "multihit",
             "spinattack"
@@ -404,7 +404,7 @@
     },
     {
         "ability": "smokeBombCost1",
-        "parentAbility": [
+        "parent": [
             "smokebomb"
         ],
         "parentBoostedStats": [
@@ -414,7 +414,7 @@
     },
     {
         "ability": "dashSlash",
-        "parentAbility": [
+        "parent": [
             "dash"
         ],
         "parentBoostedStats": [
@@ -428,7 +428,7 @@
     {
         "ability": "vulnerableBomb",
         "toggleable": true,
-        "parentAbility": [
+        "parent": [
             "multihit",
             "spinattack",
             "dash"
@@ -442,7 +442,7 @@
     },
     {
         "ability": "spinAttackmarked",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -454,7 +454,7 @@
     },
     {
         "ability": "dashCost2",
-        "parentAbility": "dash",
+        "parent": "dash",
         "parentBoostedStats": [
             "manaCost"
         ],
@@ -462,7 +462,7 @@
     },
     {
         "ability": "multihitCost2",
-        "parentAbility": "multihit",
+        "parent": "multihit",
         "parentBoostedStats": [
             "manaCost"
         ],
@@ -470,7 +470,7 @@
     },
     {
         "ability": "spinAttackCost2",
-        "parentAbility": "spinattack",
+        "parent": "spinattack",
         "parentBoostedStats": [
             "manaCost"
         ],
@@ -479,7 +479,7 @@
     {
         "ability": "shadowDash",
         "toggleable": true,
-        "parentAbility": [
+        "parent": [
             "dash"
         ],
         "boosts": {
@@ -488,7 +488,7 @@
     },
     {
         "ability": "betterLacerate",
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": "dealedHits",
@@ -497,7 +497,7 @@
     {
         "ability": "nightcloakKnives",
         "toggleable": true,
-        "parentAbility": [
+        "parent": [
             "spinattack"
         ],
         "parentBoostedStats": [
@@ -510,7 +510,7 @@
     },
     {
         "ability": "goombaStomp",
-        "parentAbility": [
+        "parent": [
             "dash"
         ],
         "parentBoostedStats": [
@@ -524,7 +524,7 @@
     {
         "ability": "betterFatalstrike",
         "applyWhenToggled": "fatalstrike",
-        "parentAbility": [
+        "parent": [
             "dash",
             "multihit",
             "smokebomb",
@@ -540,14 +540,14 @@
     {
         "ability": "chokebomb",
         "toggleable": true,
-        "parentAbility": "smokeBomb",
+        "parent": "smokeBomb",
         "boosts": {
             "enemySlowness": 0.4
         }
     },
     {
         "ability": "moreMarks",
-        "parentAbility": [
+        "parent": [
             "marked"
         ],
         "parentBoostedStats": [
@@ -560,7 +560,7 @@
     {
         "ability": "forbiddenArt",
         "applyWhenToggled": "shadowClones",
-        "parentAbility": [
+        "parent": [
             "shadowClones"
         ],
         "parentBoostedStats": [
@@ -576,7 +576,7 @@
     {
         "ability": "betterClones2",
         "applyWhenToggled": "shadowClones",
-        "parentAbility": [
+        "parent": [
             "darkArts"
         ],
         "parentBoostedStats": [
@@ -588,7 +588,7 @@
     },
     {
         "ability": "markedDamage",
-        "parentAbility": [
+        "parent": [
             "marked"
         ],
         "parentBoostedStats": [
@@ -617,7 +617,7 @@
     },
     {
         "ability": "smokeBombCost2",
-        "parentAbility": [
+        "parent": [
             "smokebomb"
         ],
         "parentBoostedStats": [
@@ -627,7 +627,7 @@
     },
     {
         "ability": "betterClones",
-        "parentAbility": [
+        "parent": [
             "darkArts"
         ],
         "parentBoostedStats": [
@@ -639,7 +639,7 @@
     },
     {
         "ability": "shindeiru",
-        "parentAbility": [
+        "parent": [
             "multihit",
             "powderSpecial"
         ],
@@ -652,7 +652,7 @@
     },
     {
         "ability": "multiTeleportation",
-        "parentAbility": [
+        "parent": [
             "multihit"
         ],
         "parentBoostedStats": [
