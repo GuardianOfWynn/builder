@@ -2622,10 +2622,10 @@
             "Swamp East Mid-Upper"
         ],
         "position": {
-            "startX": -1955,
-            "startZ": -5311,
-            "endX": -2059,
-            "endZ": -5419
+            "endX": -1955,
+            "endZ": -5419,
+            "startX": -2059,
+            "startZ": -5311
         }
     },
     {

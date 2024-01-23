@@ -87,12 +87,15 @@ export class Territory {
 
     getTerritoryStartX(): number {
         // [4343] [562] -> [-1997 -4470]
-        return 0
+        let west = this.position.startX < this.position.endX
+        let x = west ? this.position.startX : this.position.startX - this.getTerritoryWidth();
+        return 2560 + x
     }
 
     getTerritoryStartZ(): number {
-        // [4343] [562] -> [-1997 -4470]
-        return 0
+        let lower = this.position.startZ > this.position.endZ
+        let z = lower ? this.position.startZ : this.position.startZ + this.getTerritoryHeight()
+        return -z
     }
 
 
