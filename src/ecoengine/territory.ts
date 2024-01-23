@@ -66,6 +66,7 @@ export class Territory {
     borders: BorderStyle
     tax: number
     allyTax: number
+    acquired: Date
     storage: Map<ResourceType, number>
     productionMultipliers: Map<ResourceType, number>
     passingResource: ResourceTransference[]
@@ -439,6 +440,7 @@ export class Territory {
         this.borders = BorderStyle.OPEN;
         this.tax = 0.05;
         this.allyTax = 0.05;
+        this.acquired = new Date();
         this.storage = new Map<ResourceType, number>([
             [ResourceType.CROP, 0],
             [ResourceType.ORE, 0],

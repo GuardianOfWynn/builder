@@ -1,9 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 import { BorderStyle, ResourceStorage, RouteStyle, Territory, TransferDirection, Treasury } from './territory'
 import { GuildMap } from './guild_map';
+import { Guild } from './guild';
 
 export class Claim {
   globalTax: number;
+  guild: Guild;
   allyTax: number;
   globalStyle: RouteStyle;
   globalBorders: BorderStyle;

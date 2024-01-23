@@ -29,7 +29,11 @@
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px' }">
         GsW
       </span>
-      <TerritoryCard class="ml-8 mt-8" v-if="hoveredTerritory !== null" :territory="hoveredTerritory"/>
+      <span class="fixed right-4 top-4 cursor-pointer border-mc-aqua text-sm bg-slate-800 text-mc-lime flex gap-x-4 rounded-md border-2 p-2 px-4">
+        <img src="/builder/wynncraft.png" class="w-6 h-6"/>
+        <p class="my-auto">Import from WynnCraft</p>
+      </span>
+      <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory"/>
 
     </div>
   </div>
