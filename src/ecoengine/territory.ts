@@ -85,8 +85,12 @@ export class Territory {
     };
     connections: string[]
 
+    getProducedResourceType(res: ResourceType): number {
+        return this.productionMultipliers.get(res)! * (res === ResourceType.EMERALD
+            ? this.getProducedEmerald() : this.getProducedResource())
+    }
+
     getTerritoryStartX(): number {
-        // [4343] [562] -> [-1997 -4470]
         let west = this.position.startX < this.position.endX
         let x = west ? this.position.startX : this.position.startX - this.getTerritoryWidth();
         return 2560 + x
@@ -196,6 +200,14 @@ export class Territory {
         return multiplier * BASE_RESOURCE_STORAGE
     }
 
+    getStoredResource(res: ResourceType): number {
+        let sum = this.storage.get(res)!;
+        for(let transf of this.passingResource) {
+            sum += transf.storage.get(res)!;
+        }
+        return Math.floor(sum) 
+    }
+
     findExternals(): Territory[] {
         // OPTIMIZE THIS SHIT
         let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
@@ -220,7 +232,7 @@ export class Territory {
         for (let [bonus, status] of this.bonuses) {
             let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
             let level: BonusLevel = b.Levels.get(status.level)!
-            costs.set(b.UsedResorce, costs.get(b.UsedResorce)! + level.Cost/60);
+            costs.set(b.UsedResorce, costs.get(b.UsedResorce)! + level.Cost / 60);
         }
         return costs
     }
@@ -282,9 +294,9 @@ export class Territory {
         }
     }
 
-    private consume (cost: number, usedResource: ResourceType): boolean {
+    private consume(cost: number, usedResource: ResourceType): boolean {
         let costPerSecond = cost / 3600;
-        let left = costPerSecond; 
+        let left = costPerSecond;
         if (this.storage.get(usedResource)! >= costPerSecond) {
             this.storage.set(usedResource, this.storage.get(usedResource)! - cost);
             return true;
@@ -292,8 +304,8 @@ export class Territory {
             this.storage.set(usedResource, 0);
             for (let passing of this.passingResource) {
                 for (let [res, qty] of passing.storage) {
-                    if(res === usedResource){
-                        if(left - qty <= 0) {
+                    if (res === usedResource) {
+                        if (left - qty <= 0) {
                             left = 0;
                             passing.storage.set(res, 0)
                             return true;
@@ -301,7 +313,7 @@ export class Territory {
                             passing.storage.set(res, left - qty);
                             left = left - qty;
                         }
-                    } 
+                    }
                 }
             }
         }
@@ -333,7 +345,7 @@ export class Territory {
 
     tick() {
         let currentTimeMillis = new Date().getTime()
-        
+
         if (this.claim !== null) {
             // Produce emerald
             if (currentTimeMillis - this.lastEmeraldProduced >= this.getEmeraldRate() * 1000) {
@@ -345,7 +357,7 @@ export class Territory {
             if (currentTimeMillis - this.lastResourceProduced >= this.getResourceRate() * 1000) {
                 this.lastResourceProduced = currentTimeMillis;
                 for (let [resType, multiplier] of this.productionMultipliers) {
-                    if(resType === ResourceType.EMERALD) {
+                    if (resType === ResourceType.EMERALD) {
                         continue
                     }
                     this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier);
@@ -380,20 +392,24 @@ export class Territory {
                     [ResourceType.WOOD, 0],
                 ])
                 for (let [res, cost] of costMinute) {
-                    if(this.productionMultipliers.get(res)! > 0) {
-                        let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
-                        if(produced > cost) {
-                            transfer.set(res, transfer.get(res)! + produced - cost);
-                        } else {
-                            askFor.set(res, askFor.get(res)! + cost - produced);
-                            needRes = true;
-                        }
+                    if (this.storage.get(res)! > cost) {
+                        transfer.set(res, transfer.get(res)! + this.storage.get(res)! - cost);
                     } else {
-                        if(cost > 0) {
+                        if (this.productionMultipliers.get(res)! > 0) {
+                            let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
+                            if (produced < cost) {
+                                askFor.set(res, askFor.get(res)! + cost - produced);
+                                needRes = true;
+                            }
+                        } else if (cost > 0) {
                             askFor.set(res, askFor.get(res)! + cost);
                             needRes = true;
                         }
                     }
+                }
+
+                for (let [res, qty] of this.storage) {
+                    this.storage.set(res, qty - transfer.get(res)!)
                 }
 
                 let transference: ResourceTransference = {
@@ -404,7 +420,7 @@ export class Territory {
                     direction: TransferDirection.TERRITORY_TO_HQ,
                     storage: transfer
                 }
-                if(needRes) {
+                if (needRes) {
                     this.claim.askForResources(this, askFor);
                 }
                 this.transferResource(transference);

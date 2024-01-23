@@ -23,20 +23,26 @@
           <div class="col-span-2 bg-no-repeat bg-cover bg-map73 w-[1024px] h-[1024px] pixelated"></div>
         </div>
       </div>
-      <span v-for="terr in territories"
-      class="text-center text-lg text-white my-auto bg-yellow-400 bg-opacity-30 border-2 border-yellow-400 absolute"
-      :style="{left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px'}">
+      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr"
+        @mouseleave="hoveredTerritory = null"
+        class="cursor-pointer text-center text-lg text-white my-auto bg-yellow-400 bg-opacity-30 border-2 border-yellow-400 absolute"
+        :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px' }">
         GsW
       </span>
-    </div>
+      <TerritoryCard class="ml-8 mt-8" v-if="hoveredTerritory !== null" :territory="hoveredTerritory"/>
 
+    </div>
   </div>
 </template>
   
 <script lang="ts">
 
+import { Ref, ref } from "vue";
 import { EngineInstance, createEngine } from "../../ecoengine/engine"
 import { SKY_CLAIM_PRESET, TERRITORIES } from "../../model/ecoengine/ecoengine"
+import { Territory } from "../../ecoengine/territory";
+import TerritoryCard from "../ecoengine/TerritoryCard.vue"
+import { ResourceType } from "../../ecoengine/resource";
 
 export default {
   name: 'EcoEngine',
@@ -49,8 +55,11 @@ export default {
 
     EngineInstance!.Start();
 
+    const hoveredTerritory: Ref<Territory | null> = ref(null);
     const territories = EngineInstance?.guildMap.territories;
     const connections: any[] = []
+
+
     territories?.forEach(x => {
       let c = x.connections.map(y => EngineInstance!.guildMap.getTerritory(y))
       c.forEach(a => {
@@ -65,9 +74,9 @@ export default {
       })
     })
 
-    return { territories }
+    return { territories, hoveredTerritory, ResourceType }
   },
-  components: {}
+  components: {TerritoryCard}
 }
 </script>
   

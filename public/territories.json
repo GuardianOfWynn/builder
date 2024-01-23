@@ -4034,7 +4034,9 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Pirate Town",
+            "The Bear Zoo",
+            "Legendary Island"
         ],
         "position": {
             "startX": -727,
@@ -4051,7 +4053,9 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Rodoroc",
+            "Eltom",
+            "Thesead Suburbs"
         ],
         "position": {
             "startX": 854,
@@ -4068,7 +4072,8 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Entrance to Rodoroc",
+            "Ranol's Farm"
         ],
         "position": {
             "startX": 1029,
@@ -4085,7 +4090,10 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Lost Atoll",
+            "Zhight Island",
+            "Volcano Upper",
+            "Bloody Beach"
         ],
         "position": {
             "startX": -750,
@@ -4102,7 +4110,11 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Lost Atoll",
+            "Pirate Town",
+            "Tree Island",
+            "Light Peninsula",
+            "Volcano Lower"
         ],
         "position": {
             "startX": -929,
@@ -4119,7 +4131,10 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [
-            ""
+            "Hobbit River",
+            "Tree Island",
+            "Volcano Upper",
+            "Volcano Lower"
         ],
         "position": {
             "startX": -951,
