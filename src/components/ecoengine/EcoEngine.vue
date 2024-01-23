@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-max flex justify-center">
+  <div class="font-minecraft min-w-max flex justify-center">
     <div class="relative">
       <div>
         <div class="grid grid-cols-9 grid-rows-6 w-fit ">
@@ -24,9 +24,9 @@
         </div>
       </div>
       <span v-for="terr in territories"
-      class="bg-yellow-400 bg-opacity-30 border-2 border-yellow-400 absolute"
+      class="text-center text-lg text-white my-auto bg-yellow-400 bg-opacity-30 border-2 border-yellow-400 absolute"
       :style="{left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px'}">
-        {{terr.name}}
+        GsW
       </span>
     </div>
 
@@ -50,15 +50,22 @@ export default {
     EngineInstance!.Start();
 
     const territories = EngineInstance?.guildMap.territories;
-    const nTerrs: any[] = []
+    const connections: any[] = []
     territories?.forEach(x => {
-      nTerrs.push({
-        clazz: 'absolute bottom-[' + x.getTerritoryStartZ() + 'px] left-[' + x.getTerritoryStartX() + 'px] bg-yellow-500 w-[' + x.getTerritoryWidth() + 'px] h-[' + x.getTerritoryHeight() + 'px]',
-        terr: x
+      let c = x.connections.map(y => EngineInstance!.guildMap.getTerritory(y))
+      c.forEach(a => {
+        connections.push({
+          fromX: x.getTerritoryCenterX(),
+          toX: a!.getTerritoryCenterX(),
+          fromZ: x.getTerritoryCenterZ(),
+          toZ: a!.getTerritoryCenterZ(),
+          from: x,
+          to: a!
+        })
       })
     })
 
-    return { territories, nTerrs }
+    return { territories }
   },
   components: {}
 }
