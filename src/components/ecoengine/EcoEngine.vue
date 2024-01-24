@@ -23,8 +23,8 @@
           <div class="col-span-2 bg-no-repeat bg-cover bg-map73 w-[1024px] h-[1024px] pixelated"></div>
         </div>
       </div>
-      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
-        class="cursor-pointer text-center text-lg text-white my-auto border-4 absolute"
+      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null" @click="selectedTerritory = terr"
+        class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
         <div class="absolute top-4 bottom-4 left-4 right-4">
@@ -36,7 +36,7 @@
         </div>
       </span>
       <span v-once v-for="conn in connections"
-        class="w-[2px] bg-yellow-400 absolute z-30"
+        class="w-[1.5px] bg-black absolute"
         :style="{transform: 'rotate(' + getConnectionAngle(conn) + 'rad)', transformOrigin: 'bottom left', height: getConnectionHeight(conn) + 'px', bottom: conn.from!.getTerritoryCenterZ() + 'px', left: conn.from!.getTerritoryCenterX() + 'px'}">
         
       </span>
@@ -44,6 +44,9 @@
         class="fixed right-4 top-4 cursor-pointer border-mc-aqua text-sm bg-slate-800 text-mc-lime flex gap-x-4 rounded-md border-2 p-2 px-4">
         <img src="/builder/wynncraft.png" class="w-6 h-6" />
         <p class="my-auto">Import from WynnCraft</p>
+      </span>
+      <span v-if="selectedTerritory != null">
+        {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
       <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
 
@@ -72,6 +75,7 @@ export default {
     }
     EngineInstance!.Start();
 
+    const selectedTerritory: Ref<Territory | null> = ref(null);
     const hoveredTerritory: Ref<Territory | null> = ref(null);
     const territories = EngineInstance?.guildMap.territories;
     const connections: Ref<any[]> = ref([])
@@ -99,7 +103,7 @@ export default {
       return Math.sqrt(Math.pow(conn.fromX-conn.toX, 2) + Math.pow(conn.fromZ-conn.toZ, 2))
     }
 
-    return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight }
+    return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight, selectedTerritory }
   },
   components: { TerritoryCard }
 }
