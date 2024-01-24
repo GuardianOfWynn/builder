@@ -1,5 +1,5 @@
 <template>
-  <div class="font-minecraft min-w-max flex justify-center">
+  <div class="font-minecraft min-w-max flex justify-center" @click="selectedTerritory = null">
     <div class="relative">
       <div>
         <div class="grid grid-cols-9 grid-rows-6 w-fit ">
@@ -23,7 +23,7 @@
           <div class="col-span-2 bg-no-repeat bg-cover bg-map73 w-[1024px] h-[1024px] pixelated"></div>
         </div>
       </div>
-      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null" @click="selectedTerritory = terr"
+      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null" @click.stop="selectedTerritory = terr;"
         class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>

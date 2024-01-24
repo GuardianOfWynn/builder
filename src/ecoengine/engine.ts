@@ -11,14 +11,6 @@ export class Engine {
 
     constructor(guildMap: GuildMap) {
         this.guildMap = guildMap;
-        for(let t of guildMap.territories) {
-            for(let cin of t.connections) {
-                let conn = guildMap.getTerritory(cin);
-                if(!conn?.connections.includes(t.name)) {
-                    console.log("INCOSISTENTE: " + t.name + " e " + cin);
-                }
-            }
-        }
     }
 
     Start() {

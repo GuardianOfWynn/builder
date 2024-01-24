@@ -21,7 +21,7 @@ const STRONGER_MINIONS: TerritoryBonus = {
     Id: "stronger_minions",
     Name: "Stronger Minions",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/skull.png",
     UsedResorce: ResourceType.WOOD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -37,7 +37,7 @@ const MULTI_HIT: TerritoryBonus = {
     Id: "multihit",
     Name: "Tower Multi-Attacks",
     Format: "Targets",
-    Sprite: "",
+    Sprite: "sprites/arrow.png",
     UsedResorce: ResourceType.FISH,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 1, MaxTerritories: 5 }],
@@ -50,7 +50,7 @@ const TOWER_AURA: TerritoryBonus = {
     Id: "tower_aura",
     Name: "Tower Aura",
     Format: "s",
-    Sprite: "",
+    Sprite: "sprites/368_0.webp",
     UsedResorce: ResourceType.CROP,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -65,7 +65,7 @@ const TOWER_VOLLEY: TerritoryBonus = {
     Id: "tower_volley",
     Name: "Tower Volley",
     Format: "s",
-    Sprite: "",
+    Sprite: "sprites/385_0.webp",
     UsedResorce: ResourceType.ORE,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -80,7 +80,7 @@ const GATHERING_XP: TerritoryBonus = {
     Id: "gather_xp",
     Name: "Gathering Experience",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/carrot.png",
     UsedResorce: ResourceType.WOOD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -100,7 +100,7 @@ const MOB_XP: TerritoryBonus = {
     Id: "mob_xp",
     Name: "Mob Experience",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/175_0.webp",
     MaxTerritories: 5,
     UsedResorce: ResourceType.FISH,
     Levels: new Map<number, BonusLevel>([
@@ -160,7 +160,7 @@ const XP_SEEKING: TerritoryBonus = {
     Id: "xp_seeking",
     Name: "XP Seeking",
     Format: "/h",
-    Sprite: "",
+    Sprite: "sprites/348_0.webp",
     UsedResorce: ResourceType.EMERALD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -181,7 +181,7 @@ const TOME_SEEKING: TerritoryBonus = {
     Id: "tome_seeking",
     Name: "Tome Seeking",
     Format: "%/h",
-    Sprite: "",
+    Sprite: "sprites/tome.png",
     UsedResorce: ResourceType.FISH,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -196,7 +196,7 @@ const EMERALD_SEEKING: TerritoryBonus = {
     Id: "emerald_seeking",
     Name: "Emerald Seeking",
     Format: "%/h",
-    Sprite: "",
+    Sprite: "sprites/129_0.webp",
     UsedResorce: ResourceType.WOOD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -213,7 +213,7 @@ const LARGER_RESOURCE_STORAGE: TerritoryBonus = {
     Id: "larger_resource_storage",
     Name: "Larger Resource Storage",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/bread.png",
     UsedResorce: ResourceType.EMERALD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -231,7 +231,7 @@ const LARGER_EMERALD_STORAGE: TerritoryBonus = {
     Id: "larger_emerald_storage",
     Name: "Larger Emerald Storage",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/emerald_block.png",
     UsedResorce: ResourceType.WOOD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -249,7 +249,7 @@ const EFFICIENT_RESOURCES: TerritoryBonus = {
     Id: "efficient_resource",
     Name: "Efficient Resources",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/golden_pickaxe.png",
     UsedResorce: ResourceType.EMERALD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -267,7 +267,7 @@ const EFFICIENT_EMERALDS: TerritoryBonus = {
     Id: "efficient_emerald",
     Name: "Efficient Emeralds",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/emerald.png",
     UsedResorce: ResourceType.ORE,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 0, MaxTerritories: 0 }],
@@ -282,7 +282,7 @@ const RESOURCE_RATE: TerritoryBonus = {
     Id: "resource_rate",
     Name: "Resource Rate",
     Format: "s",
-    Sprite: "",
+    Sprite: "sprites/282_0.webp",
     UsedResorce: ResourceType.EMERALD,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 4, MaxTerritories: 0 }],
@@ -297,7 +297,7 @@ const EMERALD_RATE: TerritoryBonus = {
     Id: "emerald_rate",
     Name: "Emerald Rate",
     Format: "s",
-    Sprite: "",
+    Sprite: "sprites/liquid_emerald.webp",
     UsedResorce: ResourceType.CROP,
     Levels: new Map<number, BonusLevel>([
         [0, { Level: 0, Cost: 0, Value: 4, MaxTerritories: 0 }],
