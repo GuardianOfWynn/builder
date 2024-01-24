@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-mc-bg text-mc-light-purple z-40 border-mc-aqua border-2 w-fit h-fit fixed left-0 top-0"
+  <div class="bg-mc-bg text-mc-light-purple border-mc-aqua border-2 w-fit h-fit"
     v-if="territory != null">
     <div class="p-4">
+      <p class="text-md text-mc-light-purple mb-2">[{{territory.claim?.guild.tag}}] {{territory.claim?.guild.name}}</p>
       <div :key="count" v-for="res in resourcesFormat">
         <p :class="'text-' + res.color" v-if="terr!.getProducedResourceType(res.type) > 0">
           +{{ terr!.getProducedResourceType(res.type) * 3600 }} {{ res.name }} per hour
@@ -11,6 +12,7 @@
             terr!.getEmeraldStorageSize() : terr!.getResourceStorageSize() }} {{ res.name }} stored
         </p>
       </div>
+      <p v-if="territory.HQ" class="text-mc-dark-red mt-4">Guild Headquarters</p>
     </div>
     <div class="border-t-2 border-mc-aqua p-2">
       <p>{{ terr!.name }}</p>

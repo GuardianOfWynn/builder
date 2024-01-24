@@ -333,9 +333,9 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "Burning Airship",
-            "Cinfras County Mid-Upper",
-            "Path To Thanos",
+            "Cinfras Thanos Transition",
+            "Thanos",
+            "Cinfras County Upper",
             "Path To Ozoth's Spire Upper"
         ],
         "position": {
@@ -890,7 +890,9 @@
         "emerald": 1,
         "conns": [
             "Canyon Path South East",
-            "Canyon Survivor"
+            "Canyon Survivor",
+            "Canyon Upper North West",
+            "Canyon Path South West"
         ],
         "position": {
             "startX": 265,
@@ -1352,7 +1354,7 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "Cinfras County Upper",
+            "Gylia Lake South East",
             "Path To Thanos",
             "Cinfras County Mid-Upper"
         ],
@@ -1448,8 +1450,8 @@
         "emerald": 1,
         "conns": [
             "Cinfras County Mid-Lower",
+            "Cinfras County Lower",
             "Aldorei Valley South Entrance",
-            "Aldorei's North Exit",
             "Aldorei Lowlands"
         ],
         "position": {
@@ -1618,8 +1620,10 @@
         "emerald": 1,
         "conns": [
             "Mushroom Hill",
-            "Cinfras Outskirts",
-            "Gylia Lake South West"
+            "Gylia Lake North West",
+            "Dark Forest Cinfras Transition",
+            "Fungal Grove"
+
         ],
         "position": {
             "startX": -288,
@@ -1836,7 +1840,8 @@
         "conns": [
             "Path to Talor",
             "Cinfras Outskirts",
-            "Kander Mines"
+            "Kander Mines",
+            "Old Crossroads South"
         ],
         "position": {
             "startX": -723,
@@ -1853,8 +1858,8 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "Cinfras County Lower",
             "Mesquis Tower",
+            "Cinfras",
             "Path to Cinfras",
             "Light Forest North Exit"
         ],
@@ -2857,7 +2862,7 @@
         "conns": [
             "Swamp East Upper",
             "Swamp Mountain Transition Mid",
-            "Swamp East Mid-Upper",
+            "Swamp Mountain Transition Mid-Upper",
             "Swamp West Mid-Upper"
         ],
         "position": {
@@ -3827,7 +3832,8 @@
         "emerald": 1,
         "conns": [
             "Corkus Statue",
-            "Road To Mine"
+            "Road To Mine",
+            "Corkus Sea Cove"
         ],
         "position": {
             "startX": -1394,
@@ -4365,6 +4371,7 @@
         "emerald": 1,
         "conns": [
             "Nemract Town",
+            "Selchar",
             "The Bear Zoo",
             "Durum Isles Lower"
         ],
@@ -5083,7 +5090,8 @@
             "Nesaak Village",
             "Nesaak Plains South East",
             "Nesaak Bridge Transition",
-            "Icy Descent"
+            "Icy Descent",
+            "Nesaak Plains Lower North West"
         ],
         "position": {
             "startX": 70,
@@ -5516,7 +5524,9 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "Dernel Jungle Upper"
+            "Dernel Jungle Upper",
+            "Dernel Jungle Lower",
+            "Jungle Upper"
         ],
         "position": {
             "startX": -744,
@@ -5687,7 +5697,7 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "South Pigmen Ravines",
+            "Pigmen Ravines Entrance",
             "Abandoned Farm"
         ],
         "position": {
@@ -5761,7 +5771,7 @@
         "fish": 0,
         "emerald": 1,
         "conns": [
-            "Ragni Main Entrance",
+            "Ragni North Entrance",
             "Ragni North Suburbs"
         ],
         "position": {
@@ -6138,7 +6148,8 @@
         "conns": [
             "North Nivla Woods",
             "Nivla Woods",
-            "Nivla Woods Edge"
+            "Nivla Woods Edge",
+            "South Nivla Woods"
         ],
         "position": {
             "startX": -175,

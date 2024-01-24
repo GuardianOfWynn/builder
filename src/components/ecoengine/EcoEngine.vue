@@ -48,8 +48,12 @@
       <span v-if="selectedTerritory != null">
         {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
-      <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
-
+      <div class="fixed z-40 left-0 top-0">
+        <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
+      </div>
+      <TerritoryBonuses v-if="selectedTerritory !== null" class="absolute z-50"
+      :style="{bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px'}"
+      :territory="selectedTerritory"/>
     </div>
   </div>
 </template>
@@ -61,6 +65,7 @@ import { EngineInstance, createEngineFromMap } from "../../ecoengine/engine"
 import { SKY_CLAIM_PRESET, TERRITORIES } from "../../model/ecoengine/ecoengine"
 import { Territory } from "../../ecoengine/territory";
 import TerritoryCard from "../ecoengine/TerritoryCard.vue"
+import TerritoryBonuses from "./TerritoryBonuses.vue";
 import { ResourceType } from "../../ecoengine/resource";
 import { importGuildMap } from "../../ecoengine/wynncraft";
 
@@ -105,7 +110,7 @@ export default {
 
     return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight, selectedTerritory }
   },
-  components: { TerritoryCard }
+  components: { TerritoryCard, TerritoryBonuses }
 }
 </script>
   
