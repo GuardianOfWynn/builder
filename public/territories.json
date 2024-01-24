@@ -4525,8 +4525,8 @@
         "fish": 0.25,
         "emerald": 0.25,
         "conns": [
-            "Durum Isles Center",
-            "Mage Island"
+            "Dead Island South West",
+            "Dead Island North East"
         ],
         "position": {
             "startX": 870,
@@ -6138,8 +6138,7 @@
         "conns": [
             "North Nivla Woods",
             "Nivla Woods",
-            "Nivla Woods Edge",
-            "Elkurn Fields"
+            "Nivla Woods Edge"
         ],
         "position": {
             "startX": -175,
@@ -7850,6 +7849,7 @@
         "conns": [
             "Field of Life",
             "Path to Light",
+            "Nexus of Light",
             "Otherwordly Monolith"
         ],
         "position": {

@@ -250,7 +250,6 @@ export default {
       if (first) {
         if (route.path !== "/crafter/" && isValidHash(route.path.slice(9))) {
           let recipeStr = route.path.slice(9);
-          console.log(recipeStr);
           let decoded = decodeRecipe(recipeStr, ingredientList);
           recipe.value = decoded.prototype;
           ingredients[0].ingredient = decoded.ingredients[0].ingredient;

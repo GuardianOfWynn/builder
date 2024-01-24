@@ -1,5 +1,6 @@
 import { BaseTerritory, createTerritoryInstance } from "./base_territory"
 import { ClaimPreset, parseClaimPreset } from "./claim"
+import { Guild } from "./guild"
 import { GuildMap } from "./guild_map"
 import { Territory } from "./territory"
 
@@ -31,5 +32,9 @@ export function createEngine(territories: BaseTerritory[], preset: ClaimPreset) 
 
     let guildMap = new GuildMap([], terrs);
     parseClaimPreset(preset, guildMap)
+    EngineInstance = new Engine(guildMap);
+}
+
+export function createEngineFromMap(guildMap: GuildMap) {
     EngineInstance = new Engine(guildMap);
 }

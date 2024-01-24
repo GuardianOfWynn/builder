@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-mc-bg text-mc-light-purple border-mc-aqua border-2 w-fit h-fit fixed left-0 top-0"
+  <div class="bg-mc-bg text-mc-light-purple z-40 border-mc-aqua border-2 w-fit h-fit fixed left-0 top-0"
     v-if="territory != null">
     <div class="p-4">
       <div :key="count" v-for="res in resourcesFormat">

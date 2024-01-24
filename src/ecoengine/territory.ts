@@ -112,11 +112,11 @@ export class Territory {
     }
 
     getTerritoryCenterX(): number {
-        return (this.getTerritoryStartZ() + this.getTerritoryEndZ()) / 2
+        return this.getTerritoryStartX() + this.getTerritoryWidth()/2
     }
 
     getTerritoryCenterZ(): number {
-        return (this.getTerritoryStartX() + this.getTerritoryEndX()) / 2
+        return (this.getTerritoryStartZ() + this.getTerritoryHeight()/2)
     }
 
 

@@ -11,8 +11,11 @@ export class Claim {
   globalBorders: BorderStyle;
   territories: Territory[];
 
-  constructor() {
+  constructor(guild: Guild) {
     this.territories = [];
+    this.globalStyle = RouteStyle.CHEAPEST;
+    this.globalBorders = BorderStyle.OPEN;
+    this.guild = guild;
   }
 
   tick(): void {
@@ -47,7 +50,6 @@ export class Claim {
   }
 
   askForResources(asking: Territory, res: ResourceStorage): void {
-    console.log(asking.name + " pediu recurso")
     const hq = this.getHQ();
     if (hq) {
       hq.passingResource.push({
@@ -65,6 +67,7 @@ export class Claim {
 export class ClaimPreset {
   name: string;
   hq: string;
+  guild: Guild;
   globalStyle: RouteStyle;
   globalBorders: BorderStyle;
   globalTax: number;
@@ -84,7 +87,7 @@ export class ClaimPreset {
 }
 
 export function parseClaimPreset(preset: ClaimPreset, guildMap: GuildMap): Claim {
-  const claim = new Claim();
+  const claim = new Claim(preset.guild);
   claim.globalTax = Math.round(preset.globalTax);
   claim.allyTax = Math.round(preset.allyTax);
   claim.globalStyle = preset.globalStyle;
