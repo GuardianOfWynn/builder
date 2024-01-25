@@ -1,8 +1,11 @@
 <template>
-  <div class="font-minecraft min-w-max flex justify-center" @click="selectedTerritory = null">
+  <div class="font-minecraft min-w-max flex justify-center p-32" @click="selectedTerritory = null">
     <div class="relative">
       <div>
         <div class="grid grid-cols-9 grid-rows-6 w-fit ">
+          <div class="col-span-2"></div>
+          <div class="col-span-4 bg-no-repeat bg-cover bg-map11 w-[1024px] h-[1024px] pixelated "></div>
+          <div class="col-span-2"></div>
           <div class="col-span-3 bg-no-repeat bg-cover bg-map21 w-[1536px] h-[1024px] pixelated"></div>
           <div class="col-span-4 bg-no-repeat bg-cover bg-map22 w-[2048px] h-[1024px] pixelated"></div>
           <div class="col-span-2 bg-no-repeat bg-cover bg-map23 w-[1024px] h-[1024px] pixelated"></div>
@@ -23,7 +26,8 @@
           <div class="col-span-2 bg-no-repeat bg-cover bg-map73 w-[1024px] h-[1024px] pixelated"></div>
         </div>
       </div>
-      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null" @click.stop="selectedTerritory = terr;"
+      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
+        @click.stop="selectedTerritory = terr;"
         class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
@@ -35,10 +39,9 @@
           </p>
         </div>
       </span>
-      <span v-once v-for="conn in connections"
-        class="w-[1.5px] bg-black absolute"
-        :style="{transform: 'rotate(' + getConnectionAngle(conn) + 'rad)', transformOrigin: 'bottom left', height: getConnectionHeight(conn) + 'px', bottom: conn.from!.getTerritoryCenterZ() + 'px', left: conn.from!.getTerritoryCenterX() + 'px'}">
-        
+      <span v-once v-for="conn in connections" class="w-[1.5px] bg-black absolute"
+        :style="{ transform: 'rotate(' + getConnectionAngle(conn) + 'rad)', transformOrigin: 'bottom left', height: getConnectionHeight(conn) + 'px', bottom: conn.from!.getTerritoryCenterZ() + 'px', left: conn.from!.getTerritoryCenterX() + 'px' }">
+
       </span>
       <!--span
         class="fixed right-4 top-4 cursor-pointer border-mc-aqua text-sm bg-slate-800 text-mc-lime flex gap-x-4 rounded-md border-2 p-2 px-4">
@@ -51,9 +54,9 @@
       <div class="fixed z-40 left-0 top-0">
         <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
       </div>
-      <TerritoryBonuses v-if="selectedTerritory !== null" class="absolute z-50"
-      :style="{bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px'}"
-      :territory="selectedTerritory"/>
+      <TerritoryBonuses @hq-changed="" v-if="selectedTerritory !== null" class="absolute z-50"
+        :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
+        :territory="selectedTerritory" />
     </div>
   </div>
 </template>
@@ -84,7 +87,8 @@ export default {
     const selectedTerritory: Ref<Territory | null> = ref(null);
     const hoveredTerritory: Ref<Territory | null> = ref(null);
     const territories = EngineInstance?.guildMap.territories;
-    const connections: Ref<any[]> = ref([])
+    const count = ref(0);
+    const connections: Ref<any[]> = ref([]);
 
 
     territories?.forEach(x => {
@@ -102,14 +106,18 @@ export default {
     })
 
     function getConnectionAngle(conn: any): number {
-      return Math.atan2(conn.toX-conn.fromX,conn.toZ-conn.fromZ)
+      return Math.atan2(conn.toX - conn.fromX, conn.toZ - conn.fromZ)
     }
 
     function getConnectionHeight(conn: any): number {
-      return Math.sqrt(Math.pow(conn.fromX-conn.toX, 2) + Math.pow(conn.fromZ-conn.toZ, 2))
+      return Math.sqrt(Math.pow(conn.fromX - conn.toX, 2) + Math.pow(conn.fromZ - conn.toZ, 2))
     }
 
-    return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight, selectedTerritory }
+    function triggerHQChanged() {
+
+    }
+
+    return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight, selectedTerritory, count }
   },
   components: { TerritoryCard, TerritoryBonuses }
 }

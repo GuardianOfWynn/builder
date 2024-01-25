@@ -5,7 +5,7 @@
       <p class="text-sm text-mc-light-purple mb-2">[{{territory.claim?.guild.tag}}] {{territory.claim?.guild.name}}</p>
       <div class="text-sm" :key="count" v-for="res in resourcesFormat">
         <p :class="'text-' + res.color" v-if="terr!.getProducedResourceType(res.type) > 0">
-          +{{ terr!.getProducedResourceType(res.type) * 3600 }} {{ res.name }} per hour
+          +{{ terr!.getProducedResourceType(res.type) * 3600 * (5 - (res.type == ResourceType.EMERALD ? terr!.getEmeraldRate() : terr!.getResourceRate() )) }} {{ res.name }} per hour
         </p>
         <p :class="'text-' + res.color" v-if="terr!.getStoredResource(res.type) > 0">
           {{ terr!.getStoredResource(res.type) }}/{{ res.type === ResourceType.EMERALD ?
