@@ -75,12 +75,6 @@ export default {
   },
   async setup() {
 
-    onMounted(() => {
-      let script = document.createElement('script');
-      script.setAttribute('src', '/builder/dragscroll.js')
-      document.head.appendChild(script)
-    })
-
     const gMap = await importGuildMap();
     if (EngineInstance === null) {
       createEngineFromMap(gMap)
