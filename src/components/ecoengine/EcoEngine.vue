@@ -60,7 +60,7 @@
   
 <script lang="ts">
 
-import { Ref, ref } from "vue";
+import { Ref, ref, onMounted } from "vue";
 import { EngineInstance, createEngineFromMap } from "../../ecoengine/engine"
 import { SKY_CLAIM_PRESET, TERRITORIES } from "../../model/ecoengine/ecoengine"
 import { Territory } from "../../ecoengine/territory";
@@ -74,6 +74,13 @@ export default {
   props: {
   },
   async setup() {
+
+    onMounted(() => {
+      let script = document.createElement('script');
+      script.setAttribute('src', '/builder/dragscroll.js')
+      document.head.appendChild(script)
+    })
+
     const gMap = await importGuildMap();
     if (EngineInstance === null) {
       createEngineFromMap(gMap)
