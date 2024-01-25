@@ -8,9 +8,11 @@ export var EngineInstance: Engine | null = null
 
 export class Engine {
     guildMap: GuildMap
+    currentTransferenceId: number;
 
     constructor(guildMap: GuildMap) {
         this.guildMap = guildMap;
+        this.currentTransferenceId = 0;
     }
 
     Start() {
@@ -20,6 +22,9 @@ export class Engine {
                 EngineInstance!.guildMap.territories.forEach(terr => {
                     terr.tick()
                 })
+            }, 3000)
+            setInterval(() => {
+                EngineInstance!.currentTransferenceId++;
             })
         }
         fn()

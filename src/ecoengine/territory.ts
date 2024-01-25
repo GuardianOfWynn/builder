@@ -40,6 +40,7 @@ export type ResourceStorage = Map<ResourceType, number>
 
 export type ResourceTransference = {
     id: string
+    transferenceGroup: number;
     direction: TransferDirection
     currentTerritory: Territory
     origin: Territory
@@ -86,6 +87,10 @@ export class Territory {
     };
     connections: string[]
 
+    clearTransferencesOfPreviousGroup() {
+        this.passingResource = this.passingResource.filter(x => x.transferenceGroup === EngineInstance!.currentTransferenceId);
+    }
+
     getProducedResourceType(res: ResourceType): number {
         return this.productionMultipliers.get(res)! * (res === ResourceType.EMERALD
             ? this.getProducedEmerald() : this.getProducedResource())
@@ -129,10 +134,16 @@ export class Territory {
     }
 
     getResourceRate(): number {
+        if(!this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.activated) {
+            return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(0)!.Value;
+        }
         return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.level)!.Value
     }
 
     getEmeraldRate(): number {
+        if(!this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.activated) {
+            return bonuses.BONUSES_MAP.get(KEY_BONUS_EMERALD_RATE)!.Levels.get(0)!.Value;
+        }
         return bonuses.BONUSES_MAP.get(KEY_BONUS_EMERALD_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.level)!.Value
     }
 
@@ -268,6 +279,9 @@ export class Territory {
     }
 
     receiveResource(transference: ResourceTransference) {
+        if(transference.origin.name == 'Hive' || transference.target.name == 'Hive') {
+            console.log(transference);
+        }
         if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
         } else {
@@ -326,9 +340,9 @@ export class Territory {
             let upg: TerritoryUpgrade = UPGRADES.get(upgrade)!
             let lvl: UpgradeLevel = upg.Levels[status.level];
             if (this.consume(lvl.Cost, upg.UsedResource)) {
-                status.activated = false;
+                this.upgrades.get(upgrade)!.activated = true;
             } else {
-                status.activated = true;
+                this.upgrades.get(upgrade)!.activated = false;
             }
         }
 
@@ -336,9 +350,9 @@ export class Territory {
             let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
             let lvl: BonusLevel = b.Levels.get(status.level)!;
             if (this.consume(lvl.Cost, b.UsedResorce)) {
-                status.activated = false;
+                this.bonuses.get(bonus)!.activated = true;
             } else {
-                status.activated = true;
+                this.bonuses.get(bonus)!.activated = false;
             }
         }
 
@@ -419,7 +433,8 @@ export class Territory {
                     origin: this,
                     target: this.claim.getHQ()!,
                     direction: TransferDirection.TERRITORY_TO_HQ,
-                    storage: transfer
+                    storage: transfer,
+                    transferenceGroup: EngineInstance!.currentTransferenceId
                 }
                 if (needRes) {
                     this.claim.askForResources(this, askFor);

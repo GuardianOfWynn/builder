@@ -26,12 +26,12 @@
       <p class="text-mc-light-purple mt-2">Upgrades</p>
       <p class="text-mc-light-purple text-xs" v-for="[upg, lvl] in territory.upgrades">
         - <span class="text-white">{{ UPGRADES.get(upg)!.Name }}</span> 
-        <span class="text-mc-dark-gray ">[Lv. {{ !lvl.activated ? '1' : lvl.level }}]</span>
+        <span class="text-mc-dark-gray "> [Lv. {{ !lvl.activated ? '1' : lvl.level }}]</span>
         <span class="text-mc-red" v-if="!lvl.activated"> (Unavailable)</span>
       </p>
-      <p class="text-mc-light-purple text-xs" v-for="[bon, lvl] in territory.bonuses" v-show="lvl.activated && lvl.level > 0">
+      <p class="text-mc-light-purple text-xs" v-for="[bon, lvl] in territory.bonuses" v-show="lvl.level > 0">
         - <span class="text-white">{{ BONUSES_MAP.get(bon)!.Name }}</span>
-        <span class="text-mc-dark-gray ">[Lv. {{ lvl.level }}]</span>
+        <span class="text-mc-dark-gray"> [Lv. {{ lvl.level }}]</span>
         <span class="text-mc-red" v-if="!lvl.activated"> (Unavailable)</span>
       </p>
     </div>
