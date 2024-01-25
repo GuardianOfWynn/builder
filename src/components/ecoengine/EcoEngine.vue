@@ -28,7 +28,7 @@
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
         <div class="absolute top-4 bottom-4 left-4 right-4">
-          <img class="mx-auto pixelated mb-4 w-8" v-if="terr.HQ" src="/builder/guild_headquarters.png" />
+          <img class="mx-auto pixelated mb-4 w-8" v-if="terr.HQ" :src="'/builder/guild_headquarters.png'" />
           <p class="text-xl"
             :style="{ color: terr.claim?.guild.color, textShadow: '2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000' }">
             {{ terr.claim?.guild.tag }}
@@ -40,11 +40,11 @@
         :style="{transform: 'rotate(' + getConnectionAngle(conn) + 'rad)', transformOrigin: 'bottom left', height: getConnectionHeight(conn) + 'px', bottom: conn.from!.getTerritoryCenterZ() + 'px', left: conn.from!.getTerritoryCenterX() + 'px'}">
         
       </span>
-      <span
+      <!--span
         class="fixed right-4 top-4 cursor-pointer border-mc-aqua text-sm bg-slate-800 text-mc-lime flex gap-x-4 rounded-md border-2 p-2 px-4">
         <img src="/builder/wynncraft.png" class="w-6 h-6" />
         <p class="my-auto">Import from WynnCraft</p>
-      </span>
+      </span-->
       <span v-if="selectedTerritory != null">
         {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
