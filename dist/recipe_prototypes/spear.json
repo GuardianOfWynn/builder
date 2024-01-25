@@ -1,0 +1,784 @@
+[
+    {
+        "material2": "Oak Wood",
+        "material1": "Copper Ingot",
+        "material2Amount": 2,
+        "name": "Copper Ingot + Oak Wood (Lvl. 1 - 9)",
+        "material1Amount": 1,
+        "levelRange": {
+            "minimum": 1,
+            "maximum": 9
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 3,
+                    "minimum": 1
+                },
+                "damageRange": {
+                    "maximum": 6,
+                    "minimum": 4
+                },
+                "id": "1-3",
+                "durabilityRange": {
+                    "maximum": 182,
+                    "minimum": 175
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 5,
+                    "minimum": 3
+                },
+                "damageRange": {
+                    "maximum": 9,
+                    "minimum": 7
+                },
+                "id": "3-5",
+                "durabilityRange": {
+                    "maximum": 189,
+                    "minimum": 182
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 7,
+                    "minimum": 5
+                },
+                "damageRange": {
+                    "maximum": 13,
+                    "minimum": 10
+                },
+                "id": "5-7",
+                "durabilityRange": {
+                    "maximum": 196,
+                    "minimum": 189
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 9,
+                    "minimum": 7
+                },
+                "damageRange": {
+                    "maximum": 15,
+                    "minimum": 13
+                },
+                "id": "7-9",
+                "durabilityRange": {
+                    "maximum": 203,
+                    "minimum": 196
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Birch Wood",
+        "material1": "Granite Ingot",
+        "material2Amount": 4,
+        "name": "Granite Ingot + Birch Wood (Lvl. 10 - 19)",
+        "material1Amount": 2,
+        "levelRange": {
+            "minimum": 10,
+            "maximum": 19
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 13,
+                    "minimum": 10
+                },
+                "damageRange": {
+                    "maximum": 17,
+                    "minimum": 14
+                },
+                "id": "10-13",
+                "durabilityRange": {
+                    "maximum": 217,
+                    "minimum": 207
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 15,
+                    "minimum": 13
+                },
+                "damageRange": {
+                    "maximum": 20,
+                    "minimum": 17
+                },
+                "id": "13-15",
+                "durabilityRange": {
+                    "maximum": 224,
+                    "minimum": 217
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 17,
+                    "minimum": 15
+                },
+                "damageRange": {
+                    "maximum": 24,
+                    "minimum": 20
+                },
+                "id": "15-17",
+                "durabilityRange": {
+                    "maximum": 231,
+                    "minimum": 224
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 19,
+                    "minimum": 17
+                },
+                "damageRange": {
+                    "maximum": 26,
+                    "minimum": 24
+                },
+                "id": "17-19",
+                "durabilityRange": {
+                    "maximum": 238,
+                    "minimum": 231
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Willow Wood",
+        "material1": "Gold Ingot",
+        "material2Amount": 4,
+        "name": "Gold Ingot + Willow Wood (Lvl. 20 - 29)",
+        "material1Amount": 2,
+        "levelRange": {
+            "minimum": 20,
+            "maximum": 29
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 23,
+                    "minimum": 20
+                },
+                "damageRange": {
+                    "maximum": 28,
+                    "minimum": 26
+                },
+                "id": "20-23",
+                "durabilityRange": {
+                    "maximum": 252,
+                    "minimum": 242
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 25,
+                    "minimum": 23
+                },
+                "damageRange": {
+                    "maximum": 29,
+                    "minimum": 27
+                },
+                "id": "23-25",
+                "durabilityRange": {
+                    "maximum": 259,
+                    "minimum": 252
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 27,
+                    "minimum": 25
+                },
+                "damageRange": {
+                    "maximum": 30,
+                    "minimum": 28
+                },
+                "id": "25-27",
+                "durabilityRange": {
+                    "maximum": 266,
+                    "minimum": 259
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 29,
+                    "minimum": 27
+                },
+                "damageRange": {
+                    "maximum": 32,
+                    "minimum": 29
+                },
+                "id": "27-29",
+                "durabilityRange": {
+                    "maximum": 273,
+                    "minimum": 266
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Acacia Wood",
+        "material1": "Sandstone Ingot",
+        "material2Amount": 6,
+        "name": "Sandstone Ingot + Acacia Wood (Lvl. 30 - 39)",
+        "material1Amount": 3,
+        "levelRange": {
+            "minimum": 30,
+            "maximum": 39
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 33,
+                    "minimum": 30
+                },
+                "damageRange": {
+                    "maximum": 37,
+                    "minimum": 32
+                },
+                "id": "30-33",
+                "durabilityRange": {
+                    "maximum": 287,
+                    "minimum": 277
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 35,
+                    "minimum": 33
+                },
+                "damageRange": {
+                    "maximum": 41,
+                    "minimum": 37
+                },
+                "id": "33-35",
+                "durabilityRange": {
+                    "maximum": 294,
+                    "minimum": 287
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 37,
+                    "minimum": 35
+                },
+                "damageRange": {
+                    "maximum": 44,
+                    "minimum": 41
+                },
+                "id": "35-37",
+                "durabilityRange": {
+                    "maximum": 301,
+                    "minimum": 294
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 39,
+                    "minimum": 37
+                },
+                "damageRange": {
+                    "maximum": 48,
+                    "minimum": 44
+                },
+                "id": "37-39",
+                "durabilityRange": {
+                    "maximum": 308,
+                    "minimum": 301
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Spruce Wood",
+        "material1": "Iron Ingot",
+        "material2Amount": 6,
+        "name": "Iron Ingot + Spruce Wood (Lvl. 40 - 49)",
+        "material1Amount": 3,
+        "levelRange": {
+            "minimum": 40,
+            "maximum": 49
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 43,
+                    "minimum": 40
+                },
+                "damageRange": {
+                    "maximum": 54,
+                    "minimum": 49
+                },
+                "id": "40-43",
+                "durabilityRange": {
+                    "maximum": 322,
+                    "minimum": 312
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 45,
+                    "minimum": 43
+                },
+                "damageRange": {
+                    "maximum": 59,
+                    "minimum": 54
+                },
+                "id": "43-45",
+                "durabilityRange": {
+                    "maximum": 329,
+                    "minimum": 322
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 47,
+                    "minimum": 45
+                },
+                "damageRange": {
+                    "maximum": 65,
+                    "minimum": 59
+                },
+                "id": "45-47",
+                "durabilityRange": {
+                    "maximum": 336,
+                    "minimum": 329
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 49,
+                    "minimum": 47
+                },
+                "damageRange": {
+                    "maximum": 70,
+                    "minimum": 65
+                },
+                "id": "47-49",
+                "durabilityRange": {
+                    "maximum": 343,
+                    "minimum": 336
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Jungle Wood",
+        "material1": "Silver Ingot",
+        "material2Amount": 8,
+        "name": "Silver Ingot + Jungle Wood (Lvl. 50 - 59)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 50,
+            "maximum": 59
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 53,
+                    "minimum": 50
+                },
+                "damageRange": {
+                    "maximum": 78,
+                    "minimum": 71
+                },
+                "id": "50-53",
+                "durabilityRange": {
+                    "maximum": 357,
+                    "minimum": 347
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 55,
+                    "minimum": 53
+                },
+                "damageRange": {
+                    "maximum": 85,
+                    "minimum": 78
+                },
+                "id": "53-55",
+                "durabilityRange": {
+                    "maximum": 364,
+                    "minimum": 357
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 57,
+                    "minimum": 55
+                },
+                "damageRange": {
+                    "maximum": 92,
+                    "minimum": 85
+                },
+                "id": "55-57",
+                "durabilityRange": {
+                    "maximum": 371,
+                    "minimum": 364
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 59,
+                    "minimum": 57
+                },
+                "damageRange": {
+                    "maximum": 99,
+                    "minimum": 92
+                },
+                "id": "57-59",
+                "durabilityRange": {
+                    "maximum": 378,
+                    "minimum": 371
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Dark Wood",
+        "material1": "Cobalt Ingot",
+        "material2Amount": 8,
+        "name": "Cobalt Ingot + Dark Wood (Lvl. 60 - 69)",
+        "material1Amount": 4,
+        "levelRange": {
+            "minimum": 60,
+            "maximum": 69
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 63,
+                    "minimum": 60
+                },
+                "damageRange": {
+                    "maximum": 108,
+                    "minimum": 100
+                },
+                "id": "60-63",
+                "durabilityRange": {
+                    "maximum": 392,
+                    "minimum": 382
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 65,
+                    "minimum": 63
+                },
+                "damageRange": {
+                    "maximum": 116,
+                    "minimum": 108
+                },
+                "id": "63-65",
+                "durabilityRange": {
+                    "maximum": 399,
+                    "minimum": 392
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 67,
+                    "minimum": 65
+                },
+                "damageRange": {
+                    "maximum": 124,
+                    "minimum": 116
+                },
+                "id": "65-67",
+                "durabilityRange": {
+                    "maximum": 406,
+                    "minimum": 399
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 69,
+                    "minimum": 67
+                },
+                "damageRange": {
+                    "maximum": 132,
+                    "minimum": 124
+                },
+                "id": "67-69",
+                "durabilityRange": {
+                    "maximum": 413,
+                    "minimum": 406
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Light Wood",
+        "material1": "Kanderstone Ingot",
+        "material2Amount": 10,
+        "name": "Kanderstone Ingot + Light Wood (Lvl. 70 - 79)",
+        "material1Amount": 5,
+        "levelRange": {
+            "minimum": 70,
+            "maximum": 79
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 73,
+                    "minimum": 70
+                },
+                "damageRange": {
+                    "maximum": 144,
+                    "minimum": 138
+                },
+                "id": "70-73",
+                "durabilityRange": {
+                    "maximum": 427,
+                    "minimum": 417
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 75,
+                    "minimum": 73
+                },
+                "damageRange": {
+                    "maximum": 147,
+                    "minimum": 144
+                },
+                "id": "73-75",
+                "durabilityRange": {
+                    "maximum": 434,
+                    "minimum": 427
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 77,
+                    "minimum": 75
+                },
+                "damageRange": {
+                    "maximum": 151,
+                    "minimum": 147
+                },
+                "id": "75-77",
+                "durabilityRange": {
+                    "maximum": 441,
+                    "minimum": 434
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 79,
+                    "minimum": 77
+                },
+                "damageRange": {
+                    "maximum": 152,
+                    "minimum": 151
+                },
+                "id": "77-79",
+                "durabilityRange": {
+                    "maximum": 448,
+                    "minimum": 441
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Pine Wood",
+        "material1": "Diamond Ingot",
+        "material2Amount": 10,
+        "name": "Diamond Ingot + Pine Wood (Lvl. 80 - 89)",
+        "material1Amount": 5,"levelRange": {
+            "minimum": 80,
+            "maximum": 89
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 83,
+                    "minimum": 80
+                },
+                "damageRange": {
+                    "maximum": 159,
+                    "minimum": 154
+                },
+                "id": "80-83",
+                "durabilityRange": {
+                    "maximum": 462,
+                    "minimum": 452
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 85,
+                    "minimum": 83
+                },
+                "damageRange": {
+                    "maximum": 162,
+                    "minimum": 159
+                },
+                "id": "83-85",
+                "durabilityRange": {
+                    "maximum": 469,
+                    "minimum": 462
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 87,
+                    "minimum": 85
+                },
+                "damageRange": {
+                    "maximum": 165,
+                    "minimum": 162
+                },
+                "id": "85-87",
+                "durabilityRange": {
+                    "maximum": 476,
+                    "minimum": 469
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 89,
+                    "minimum": 87
+                },
+                "damageRange": {
+                    "maximum": 166,
+                    "minimum": 165
+                },
+                "id": "87-89",
+                "durabilityRange": {
+                    "maximum": 483,
+                    "minimum": 476
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Avo Wood",
+        "material1": "Molten Ingot",
+        "material2Amount": 12,
+        "name": "Molten Ingot + Avo Wood (Lvl. 90 - 99)",
+        "material1Amount": 6,"levelRange": {
+            "minimum": 90,
+            "maximum": 99
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 93,
+                    "minimum": 90
+                },
+                "damageRange": {
+                    "maximum": 170,
+                    "minimum": 167
+                },
+                "id": "90-93",
+                "durabilityRange": {
+                    "maximum": 497,
+                    "minimum": 487
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 95,
+                    "minimum": 93
+                },
+                "damageRange": {
+                    "maximum": 172,
+                    "minimum": 170
+                },
+                "id": "93-95",
+                "durabilityRange": {
+                    "maximum": 504,
+                    "minimum": 497
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 97,
+                    "minimum": 95
+                },
+                "damageRange": {
+                    "maximum": 173,
+                    "minimum": 172
+                },
+                "id": "95-97",
+                "durabilityRange": {
+                    "maximum": 511,
+                    "minimum": 504
+                }
+            },
+            {
+                "levelRange": {
+                    "maximum": 99,
+                    "minimum": 97
+                },
+                "damageRange": {
+                    "maximum": 175,
+                    "minimum": 173
+                },
+                "id": "97-99",
+                "durabilityRange": {
+                    "maximum": 518,
+                    "minimum": 511
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Sky Wood",
+        "material1": "Voidstone Ingot",
+        "material2Amount": 12,
+        "name": "Voidstone Ingot + Sky Wood (Lvl. 100 - 103)",
+        "material1Amount": 6,"levelRange": {
+            "minimum": 100,
+            "maximum": 103
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 103,
+                    "minimum": 100
+                },
+                "damageRange": {
+                    "maximum": 176,
+                    "minimum": 175
+                },
+                "id": "100-103",
+                "durabilityRange": {
+                    "maximum": 529,
+                    "minimum": 522
+                }
+            }
+        ]
+    },
+    {
+        "material2": "Dernic Wood",
+        "material1": "Dernic Ingot",
+        "material2Amount": 12,
+        "name": "Dernic Ingot + Dernic Wood (Lvl. 103 - 105)",
+        "material1Amount": 6,"levelRange": {
+            "minimum": 103,
+            "maximum": 105
+        },
+        "levels": [
+            {
+                "levelRange": {
+                    "maximum": 105,
+                    "minimum": 103
+                },
+                "damageRange": {
+                    "minimum": 176,
+                    "maximum": 177
+                },
+                "id": "103-105",
+                "durabilityRange": {
+                    "minimum": 529,
+                    "maximum": 532
+                }
+            }
+        ]
+    }
+]

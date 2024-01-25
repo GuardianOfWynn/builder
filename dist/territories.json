@@ -1,0 +1,7946 @@
+[
+    {
+        "territory": "Hive",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Hive South",
+            "Thanos Exit Upper"
+        ],
+        "position": {
+            "startX": 381,
+            "startZ": -5413,
+            "endX": 286,
+            "endZ": -5593
+        }
+    },
+    {
+        "territory": "Hive South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Hive",
+            "Thanos Exit Upper",
+            "Canyon High Path",
+            "Chained House",
+            "Cherry Blossom Forest"
+        ],
+        "position": {
+            "startX": 440,
+            "startZ": -5315,
+            "endX": 560,
+            "endZ": -5449
+        }
+    },
+    {
+        "territory": "Cherry Blossom Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Hive South",
+            "Ranol's Farm",
+            "Chained House"
+        ],
+        "position": {
+            "startX": 699,
+            "startZ": -5378,
+            "endX": 575,
+            "endZ": -5551
+        }
+    },
+    {
+        "territory": "Ranol's Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Eltom",
+            "Thesead Suburbs",
+            "Cherry Blossom Forest"
+        ],
+        "position": {
+            "startX": 810,
+            "startZ": -5551,
+            "endX": 701,
+            "endZ": -5377
+        }
+    },
+    {
+        "territory": "Thesead Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Chained House",
+            "Ranol's Farm",
+            "Entrance to Rodoroc",
+            "Thesead"
+        ],
+        "position": {
+            "startX": 703,
+            "startZ": -5374,
+            "endX": 810,
+            "endZ": -5216
+        }
+    },
+    {
+        "territory": "Thesead",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Entrance to Thesead South",
+            "Thesead Suburbs"
+        ],
+        "position": {
+            "startX": 747,
+            "startZ": -5104,
+            "endX": 872,
+            "endZ": -4964
+        }
+    },
+    {
+        "territory": "Thanos Exit",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos Exit Upper"
+        ],
+        "position": {
+            "startX": 338,
+            "startZ": -5310,
+            "endX": 262,
+            "endZ": -5168
+        }
+    },
+    {
+        "territory": "Thanos Exit Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos Exit",
+            "Bandits Toll",
+            "Canyon High Path",
+            "Hive South",
+            "Hive"
+        ],
+        "position": {
+            "startX": 347,
+            "startZ": -5313,
+            "endX": 438,
+            "endZ": -5183
+        }
+    },
+    {
+        "territory": "Canyon High Path",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos Exit Upper",
+            "Cliffside Waterfall",
+            "Hive South"
+        ],
+        "position": {
+            "startX": 562,
+            "startZ": -5313,
+            "endX": 440,
+            "endZ": -5191
+        }
+    },
+    {
+        "territory": "Chained House",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thesead Suburbs",
+            "Entrance to Thesead South",
+            "Cherry Blossom Forest",
+            "Hive South"
+        ],
+        "position": {
+            "startX": 574,
+            "startZ": -5375,
+            "endX": 699,
+            "endZ": -5242
+        }
+    },
+    {
+        "territory": "Path To Ozoth's Spire Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path To Thanos",
+            "Bandit Cave Lower",
+            "Cinfras Thanos Transition",
+            "Path To Ozoth's Spire Mid"
+        ],
+        "position": {
+            "startX": 194,
+            "startZ": -5165,
+            "endX": 111,
+            "endZ": -5045
+        }
+    },
+    {
+        "territory": "Path To Ozoth's Spire Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path To Ozoth's Spire Upper",
+            "Canyon Walk Way"
+        ],
+        "position": {
+            "startX": 199,
+            "startZ": -5164,
+            "endX": 260,
+            "endZ": -5042
+        }
+    },
+    {
+        "territory": "Canyon Walk Way",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bandits Toll",
+            "Canyon Mountain East",
+            "Path To Ozoth's Spire Mid"
+        ],
+        "position": {
+            "startX": 271,
+            "startZ": -5165,
+            "endX": 338,
+            "endZ": -5041
+        }
+    },
+    {
+        "territory": "Bandits Toll",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos Exit Upper",
+            "Canyon Walk Way",
+            "Cliffside Valley",
+            "Wizard Tower North"
+        ],
+        "position": {
+            "startX": 439,
+            "startZ": -5038,
+            "endX": 345,
+            "endZ": -5181
+        }
+    },
+    {
+        "territory": "Cliffside Waterfall",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Canyon High Path"
+        ],
+        "position": {
+            "startX": 440,
+            "startZ": -5183,
+            "endX": 563,
+            "endZ": -5080
+        }
+    },
+    {
+        "territory": "Entrance to Thesead South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thesead",
+            "Cliffside Valley",
+            "Chained House",
+            "Entrance to Thesead North"
+        ],
+        "position": {
+            "startX": 700,
+            "startZ": -5030,
+            "endX": 574,
+            "endZ": -5181
+        }
+    },
+    {
+        "territory": "Cinfras Thanos Transition",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Burning Airship",
+            "Cinfras County Mid-Upper",
+            "Path To Thanos",
+            "Path To Ozoth's Spire Upper"
+        ],
+        "position": {
+            "startX": 98,
+            "startZ": -4957,
+            "endX": 35,
+            "endZ": -5046
+        }
+    },
+    {
+        "territory": "Path To Thanos",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Thanos Transition",
+            "Thanos",
+            "Cinfras County Upper",
+            "Path To Ozoth's Spire Upper"
+        ],
+        "position": {
+            "startX": 98,
+            "startZ": -5049,
+            "endX": 35,
+            "endZ": -5149
+        }
+    },
+    {
+        "territory": "Bandit Cave Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path To Ozoth's Spire Upper",
+            "Canyon Valley South"
+        ],
+        "position": {
+            "startX": 111,
+            "startZ": -5043,
+            "endX": 194,
+            "endZ": -4958
+        }
+    },
+    {
+        "territory": "Canyon Valley South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bandit Cave Lower",
+            "Bandit Camp Exit",
+            "Canyon Mountain East"
+        ],
+        "position": {
+            "startX": 263,
+            "startZ": -4973,
+            "endX": 199,
+            "endZ": -5035
+        }
+    },
+    {
+        "territory": "Bandit Camp Exit",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Valley South",
+            "Canyon Path North Mid"
+        ],
+        "position": {
+            "startX": 264,
+            "startZ": -4877,
+            "endX": 203,
+            "endZ": -4971
+        }
+    },
+    {
+        "territory": "Canyon Mountain East",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Walk Way",
+            "Canyon Valley South"
+        ],
+        "position": {
+            "startX": 271,
+            "startZ": -5039,
+            "endX": 337,
+            "endZ": -4948
+        }
+    },
+    {
+        "territory": "Wizard Tower North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bandits Toll",
+            "Krolton's Cave"
+        ],
+        "position": {
+            "startX": 438,
+            "startZ": -5037,
+            "endX": 345,
+            "endZ": -4966
+        }
+    },
+    {
+        "territory": "Wizard Tower North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bandits Toll",
+            "Krolton's Cave"
+        ],
+        "position": {
+            "startX": 438,
+            "startZ": -5037,
+            "endX": 345,
+            "endZ": -4966
+        }
+    },
+    {
+        "territory": "Cliffside Valley",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bandits Toll",
+            "Air Temple Lower",
+            "Entrance to Thesead North",
+            "Entrance to Thesead South"
+        ],
+        "position": {
+            "startX": 563,
+            "startZ": -5079,
+            "endX": 440,
+            "endZ": -4975
+        }
+    },
+    {
+        "territory": "Entrance to Thesead North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliffside Valley",
+            "Entrance to Thesead South",
+            "Cliffside Passage North"
+        ],
+        "position": {
+            "startX": 572,
+            "startZ": -4935,
+            "endX": 700,
+            "endZ": -5028
+        }
+    },
+    {
+        "territory": "Burning Airship",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Thanos Transition",
+            "Bandit Cave Upper",
+            "Burning Farm"
+        ],
+        "position": {
+            "startX": 35,
+            "startZ": -4859,
+            "endX": 107,
+            "endZ": -4955
+        }
+    },
+    {
+        "territory": "Bandit Cave Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Burning Airship"
+        ],
+        "position": {
+            "startX": 194,
+            "startZ": -4956,
+            "endX": 111,
+            "endZ": -4872
+        }
+    },
+    {
+        "territory": "Canyon Mountain South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Krolton's Cave",
+            "Canyon Waterfall Mid North"
+        ],
+        "position": {
+            "startX": 271,
+            "startZ": -4946,
+            "endX": 337,
+            "endZ": -4857
+        }
+    },
+    {
+        "territory": "Krolton's Cave",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Canyon Mountain South",
+            "Wizard Tower North",
+            "Air Temple Lower",
+            "Temple of the Lost East"
+        ],
+        "position": {
+            "startX": 341,
+            "startZ": -4841,
+            "endX": 438,
+            "endZ": -4962
+        }
+    },
+    {
+        "territory": "Air Temple Lower",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Krolton's Cave",
+            "Air Temple Upper",
+            "Cliffside Valley"
+        ],
+        "position": {
+            "startX": 445,
+            "startZ": -4972,
+            "endX": 563,
+            "endZ": -4835
+        }
+    },
+    {
+        "territory": "Cliffside Passage North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliffside Passage",
+            "Entrance to Thesead North"
+        ],
+        "position": {
+            "startX": 572,
+            "startZ": -4818,
+            "endX": 700,
+            "endZ": -4933
+        }
+    },
+    {
+        "territory": "Burning Farm",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Burning Airship",
+            "Ghostly Path"
+        ],
+        "position": {
+            "startX": 107,
+            "startZ": -4755,
+            "endX": 35,
+            "endZ": -4857
+        }
+    },
+    {
+        "territory": "Canyon Entrance Waterfall",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Path North Mid",
+            "Canyon Path North West"
+        ],
+        "position": {
+            "startX": 110,
+            "startZ": -4869,
+            "endX": 194,
+            "endZ": -4741
+        }
+    },
+    {
+        "territory": "Canyon Path North Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Entrance Waterfall",
+            "Bandit Camp Exit",
+            "Canyon Waterfall Mid North",
+            "Canyon Path South West"
+        ],
+        "position": {
+            "startX": 200,
+            "startZ": -4743,
+            "endX": 264,
+            "endZ": -4875
+        }
+    },
+    {
+        "territory": "Canyon Waterfall Mid North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Path North Mid",
+            "Canyon Mountain South",
+            "Canyon Fortress"
+        ],
+        "position": {
+            "startX": 337,
+            "startZ": -4855,
+            "endX": 271,
+            "endZ": -4741
+        }
+    },
+    {
+        "territory": "Temple of the Lost East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Krolton's Cave",
+            "Valley of the Lost"
+        ],
+        "position": {
+            "startX": 440,
+            "startZ": -4672,
+            "endX": 341,
+            "endZ": -4838
+        }
+    },
+    {
+        "territory": "Air Temple Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Air Temple Lower"
+        ],
+        "position": {
+            "startX": 570,
+            "startZ": -4833,
+            "endX": 445,
+            "endZ": -4692
+        }
+    },
+    {
+        "territory": "Cliffside Passage",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliffside Passage North",
+            "Cliffside Lake"
+        ],
+        "position": {
+            "startX": 699,
+            "startZ": -4817,
+            "endX": 572,
+            "endZ": -4691
+        }
+    },
+    {
+        "territory": "Ghostly Path",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Burning Farm",
+            "Path To The Arch"
+        ],
+        "position": {
+            "startX": 35,
+            "startZ": -4643,
+            "endX": 107,
+            "endZ": -4753
+        }
+    },
+    {
+        "territory": "Canyon Path North West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Entrance Waterfall",
+            "Canyon Path South West",
+            "Canyon Path South East"
+        ],
+        "position": {
+            "startX": 110,
+            "startZ": -4736,
+            "endX": 194,
+            "endZ": -4651
+        }
+    },
+    {
+        "territory": "Canyon Path South West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Path North West",
+            "Canyon Path North Mid",
+            "Canyon Lower South East"
+        ],
+        "position": {
+            "startX": 265,
+            "startZ": -4652,
+            "endX": 200,
+            "endZ": -4741
+        }
+    },
+    {
+        "territory": "Canyon Fortress",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Canyon Waterfall Mid North",
+            "Valley of the Lost"
+        ],
+        "position": {
+            "startX": 271,
+            "startZ": -4739,
+            "endX": 338,
+            "endZ": -4630
+        }
+    },
+    {
+        "territory": "Valley of the Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Fortress",
+            "Temple of the Lost East",
+            "Cliff Side of the Lost",
+            "Canyon Of The Lost"
+        ],
+        "position": {
+            "startX": 435,
+            "startZ": -4511,
+            "endX": 341,
+            "endZ": -4670
+        }
+    },
+    {
+        "territory": "Cliffside Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Canyon Of The Lost",
+            "Cliffside Passage"
+        ],
+        "position": {
+            "startX": 445,
+            "startZ": -4689,
+            "endX": 570,
+            "endZ": -4568
+        }
+    },
+    {
+        "territory": "Path To The Arch",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei's North Exit",
+            "Aldorei's Arch",
+            "Ghostly Path"
+        ],
+        "position": {
+            "startX": 35,
+            "startZ": -4521,
+            "endX": 107,
+            "endZ": -4641
+        }
+    },
+    {
+        "territory": "Canyon Path South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Path North West",
+            "Canyon Lower South East"
+        ],
+        "position": {
+            "startX": 194,
+            "startZ": -4649,
+            "endX": 115,
+            "endZ": -4521
+        }
+    },
+    {
+        "territory": "Canyon Lower South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Path South East",
+            "Canyon Survivor",
+            "Canyon Upper North West",
+            "Canyon Path South West"
+        ],
+        "position": {
+            "startX": 265,
+            "startZ": -4521,
+            "endX": 199,
+            "endZ": -4649
+        }
+    },
+    {
+        "territory": "Canyon Survivor",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Lower South East",
+            "Cliff Side of the Lost"
+        ],
+        "position": {
+            "startX": 338,
+            "startZ": -4628,
+            "endX": 269,
+            "endZ": -4522
+        }
+    },
+    {
+        "territory": "Aldorei's Arch",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Waterfall North",
+            "Path To The Arch"
+        ],
+        "position": {
+            "startX": 33,
+            "startZ": -4367,
+            "endX": 107,
+            "endZ": -4519
+        }
+    },
+    {
+        "territory": "Canyon Waterfall North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei's Arch",
+            "Canyon Upper North West"
+        ],
+        "position": {
+            "startX": 115,
+            "startZ": -4380,
+            "endX": 194,
+            "endZ": -4518
+        }
+    },
+    {
+        "territory": "Canyon Upper North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Waterfall North",
+            "Canyon Lower South East"
+        ],
+        "position": {
+            "startX": 200,
+            "startZ": -4380,
+            "endX": 265,
+            "endZ": -4518
+        }
+    },
+    {
+        "territory": "Canyon Dropoff",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliff Side of the Lost",
+            "Mountain Path"
+        ],
+        "position": {
+            "startX": 334,
+            "startZ": -4518,
+            "endX": 269,
+            "endZ": -4395
+        }
+    },
+    {
+        "territory": "Cliff Side of the Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Dropoff",
+            "Canyon Of The Lost",
+            "Canyon Survivor",
+            "Valley of the Lost",
+            "Mountain Edge"
+        ],
+        "position": {
+            "startX": 340,
+            "startZ": -4395,
+            "endX": 437,
+            "endZ": -4508
+        }
+    },
+    {
+        "territory": "Canyon Of The Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliff Side of the Lost",
+            "Valley of the Lost",
+            "Cliffside Lake",
+            "Kandon-Beda"
+        ],
+        "position": {
+            "startX": 443,
+            "startZ": -4566,
+            "endX": 570,
+            "endZ": -4392
+        }
+    },
+    {
+        "territory": "Kandon-Beda",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Canyon Of The Lost"
+        ],
+        "position": {
+            "startX": 607,
+            "startZ": -4579,
+            "endX": 760,
+            "endZ": -4372
+        }
+    },
+    {
+        "territory": "Mountain Path",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Canyon Dropoff"
+        ],
+        "position": {
+            "startX": 334,
+            "startZ": -4393,
+            "endX": 276,
+            "endZ": -4314
+        }
+    },
+    {
+        "territory": "Mountain Edge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cliff Side of the Lost"
+        ],
+        "position": {
+            "startX": 437,
+            "startZ": -4314,
+            "endX": 336,
+            "endZ": -4392
+        }
+    },
+    {
+        "territory": "Ghostly Path",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path To The Arch",
+            "Burning Farm"
+        ],
+        "position": {
+            "startX": 35,
+            "startZ": -4643,
+            "endX": 107,
+            "endZ": -4753
+        }
+    },
+    {
+        "territory": "Thanos Valley West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Military Base Lower"
+        ],
+        "position": {
+            "startX": 250,
+            "startZ": -5401,
+            "endX": 311,
+            "endZ": -5315
+        }
+    },
+    {
+        "territory": "Military Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Military Base Lower",
+            "Military Base"
+        ],
+        "position": {
+            "startX": 168,
+            "startZ": -5408,
+            "endX": 250,
+            "endZ": -5518
+        }
+    },
+    {
+        "territory": "Military Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos Valley West",
+            "Path To Ozoth's Spire Lower",
+            "Military Base Upper"
+        ],
+        "position": {
+            "startX": 244,
+            "startZ": -5407,
+            "endX": 168,
+            "endZ": -5315
+        }
+    },
+    {
+        "territory": "Military Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Military Base Upper",
+            "Path To Military Base",
+            "Gylia Lake North East"
+        ],
+        "position": {
+            "startX": 104,
+            "startZ": -5393,
+            "endX": 166,
+            "endZ": -5518
+        }
+    },
+    {
+        "territory": "Path To Military Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Military Base",
+            "Thanos"
+        ],
+        "position": {
+            "startX": 51,
+            "startZ": -5297,
+            "endX": 166,
+            "endZ": -5391
+        }
+    },
+    {
+        "territory": "Path To Ozoth's Spire Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Thanos",
+            "Military Base Lower"
+        ],
+        "position": {
+            "startX": 260,
+            "startZ": -5298,
+            "endX": 199,
+            "endZ": -5169
+        }
+    },
+    {
+        "territory": "Thanos",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Path To Ozoth's Spire Lower",
+            "Path To Military Base",
+            "Gylia Lake South East",
+            "Path To Thanos"
+        ],
+        "position": {
+            "startX": 51,
+            "startZ": -5189,
+            "endX": 194,
+            "endZ": -5295
+        }
+    },
+    {
+        "territory": "Gert Camp",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jitak's Farm",
+            "Gylia Lake North East"
+        ],
+        "position": {
+            "startX": 30,
+            "startZ": -5447,
+            "endX": -83,
+            "endZ": -5605
+        }
+    },
+    {
+        "territory": "Jitak's Farm",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Gert Camp",
+            "Gylia Lake North West",
+            "Mushroom Hill"
+        ],
+        "position": {
+            "startX": -122,
+            "startZ": -5430,
+            "endX": -218,
+            "endZ": -5567
+        }
+    },
+    {
+        "territory": "Gylia Lake North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Gylia Lake North East",
+            "Jitak's Farm",
+            "Gylia Lake South West",
+            "Fallen Village"
+        ],
+        "position": {
+            "startX": -218,
+            "startZ": -5427,
+            "endX": -130,
+            "endZ": -5273
+        }
+    },
+    {
+        "territory": "Gylia Lake North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Gylia Lake North West",
+            "Gert Camp",
+            "Gylia Lake South East",
+            "Military Base"
+        ],
+        "position": {
+            "startX": -128,
+            "startZ": -5416,
+            "endX": 21,
+            "endZ": -5273
+        }
+    },
+    {
+        "territory": "Gylia Lake South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Gylia Lake North West",
+            "Gylia Lake South East",
+            "Dark Forest Cinfras Transition"
+        ],
+        "position": {
+            "startX": -130,
+            "startZ": -5173,
+            "endX": -241,
+            "endZ": -5271
+        }
+    },
+    {
+        "territory": "Gylia Lake South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Gylia Lake South West",
+            "Gylia Lake North East",
+            "Cinfras County Upper",
+            "Thanos"
+        ],
+        "position": {
+            "startX": 30,
+            "startZ": -5157,
+            "endX": -127,
+            "endZ": -5271
+        }
+    },
+    {
+        "territory": "Cinfras County Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Gylia Lake South East",
+            "Path To Thanos",
+            "Cinfras County Mid-Upper"
+        ],
+        "position": {
+            "startX": -127,
+            "startZ": -5155,
+            "endX": 3,
+            "endZ": -5051
+        }
+    },
+    {
+        "territory": "Cinfras County Mid-Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Thanos Transition",
+            "Cinfras County Upper",
+            "Cinfras County Mid-Lower"
+        ],
+        "position": {
+            "startX": -127,
+            "startZ": -4896,
+            "endX": 3,
+            "endZ": -5050
+        }
+    },
+    {
+        "territory": "Cinfras County Mid-Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras County Lower",
+            "Cinfras County Mid-Upper",
+            "Cinfras's Small Farm"
+        ],
+        "position": {
+            "startX": -127,
+            "startZ": -4761,
+            "endX": 3,
+            "endZ": -4895
+        }
+    },
+    {
+        "territory": "Cinfras County Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras County Mid-Lower",
+            "Cinfras's Small Farm",
+            "Aldorei's North Exit"
+        ],
+        "position": {
+            "startX": 3,
+            "startZ": -4760,
+            "endX": -127,
+            "endZ": -4640
+        }
+    },
+    {
+        "territory": "Aldorei's North Exit",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Aldorei Valley South Entrance",
+            "Path To The Arch",
+            "Cinfras County Lower"
+        ],
+        "position": {
+            "startX": -127,
+            "startZ": -4639,
+            "endX": 3,
+            "endZ": -4509
+        }
+    },
+    {
+        "territory": "Cinfras's Small Farm",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras County Mid-Lower",
+            "Cinfras County Lower",
+            "Aldorei Valley South Entrance",
+            "Aldorei Lowlands"
+        ],
+        "position": {
+            "startX": -224,
+            "startZ": -4793,
+            "endX": -130,
+            "endZ": -4643
+        }
+    },
+    {
+        "territory": "Aldorei Valley South Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei's North Exit",
+            "Aldorei's Waterfall",
+            "Cinfras's Small Farm"
+        ],
+        "position": {
+            "startX": -130,
+            "startZ": -4641,
+            "endX": -222,
+            "endZ": -4509
+        }
+    },
+    {
+        "territory": "Aldorei Lowlands",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei's River",
+            "Cinfras's Small Farm",
+            "Aldorei's Waterfall"
+        ],
+        "position": {
+            "startX": -337,
+            "startZ": -4756,
+            "endX": -225,
+            "endZ": -4657
+        }
+    },
+    {
+        "territory": "Aldorei's River",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras",
+            "Aldorei Lowlands"
+        ],
+        "position": {
+            "startX": -437,
+            "startZ": -4656,
+            "endX": -338,
+            "endZ": -4756
+        }
+    },
+    {
+        "territory": "Aldorei's Waterfall",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei Valley South Entrance",
+            "Aldorei Lowlands",
+            "Aldorei Valley Upper"
+        ],
+        "position": {
+            "startX": -237,
+            "startZ": -4514,
+            "endX": -321,
+            "endZ": -4648
+        }
+    },
+    {
+        "territory": "Aldorei Valley Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei Valley Mid",
+            "Aldorei's Waterfall"
+        ],
+        "position": {
+            "startX": -557,
+            "startZ": -4501,
+            "endX": -322,
+            "endZ": -4656
+        }
+    },
+    {
+        "territory": "Aldorei Valley Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei Valley Lower",
+            "Aldorei Valley Upper"
+        ],
+        "position": {
+            "startX": -322,
+            "startZ": -4499,
+            "endX": -557,
+            "endZ": -4395
+        }
+    },
+    {
+        "territory": "Aldorei Valley Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei Valley Mid",
+            "Mantis Nest",
+            "Aldorei Valley West Entrance"
+        ],
+        "position": {
+            "startX": -714,
+            "startZ": -4395,
+            "endX": -559,
+            "endZ": -4499
+        }
+    },
+    {
+        "territory": "Mushroom Hill",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Heart of Decay",
+            "Decayed Basin",
+            "Fallen Village",
+            "Jitak's Farm"
+        ],
+        "position": {
+            "startX": -288,
+            "startZ": -5411,
+            "endX": -392,
+            "endZ": -5601
+        }
+    },
+    {
+        "territory": "Fallen Village",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mushroom Hill",
+            "Gylia Lake North West",
+            "Dark Forest Cinfras Transition",
+            "Fungal Grove"
+
+        ],
+        "position": {
+            "startX": -288,
+            "startZ": -5409,
+            "endX": -392,
+            "endZ": -5294
+        }
+    },
+    {
+        "territory": "Dark Forest Cinfras Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Outskirts",
+            "Fallen Village",
+            "Gylia Lake South West"
+        ],
+        "position": {
+            "startX": -290,
+            "startZ": -5292,
+            "endX": -392,
+            "endZ": -5116
+        }
+    },
+    {
+        "territory": "Guild Hall",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras"
+        ],
+        "position": {
+            "startX": -349,
+            "startZ": -5093,
+            "endX": -137,
+            "endZ": -4814
+        }
+    },
+    {
+        "territory": "Heart of Decay",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mushroom Hill",
+            "Decayed Basin",
+            "Lexdale"
+        ],
+        "position": {
+            "startX": -598,
+            "startZ": -5580,
+            "endX": -454,
+            "endZ": -5518
+        }
+    },
+    {
+        "territory": "Decayed Basin",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Heart of Decay",
+            "Lexdale",
+            "Mushroom Hill",
+            "Fungal Grove"
+        ],
+        "position": {
+            "startX": -471,
+            "startZ": -5405,
+            "endX": -549,
+            "endZ": -5512
+        }
+    },
+    {
+        "territory": "Fungal Grove",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Decayed Basin",
+            "Old Crossroads North",
+            "Old Crossroads South",
+            "Cinfras Outskirts",
+            "Fallen Village"
+        ],
+        "position": {
+            "startX": -489,
+            "startZ": -5279,
+            "endX": -549,
+            "endZ": -5398
+        }
+    },
+    {
+        "territory": "Cinfras Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras",
+            "Dark Forest Cinfras Transition",
+            "Fungal Grove",
+            "Old Crossroads South",
+            "Dark Forest Village"
+        ],
+        "position": {
+            "startX": -392,
+            "startZ": -5116,
+            "endX": -534,
+            "endZ": -5278
+        }
+    },
+    {
+        "territory": "Cinfras",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Guild Hall",
+            "Cinfras Entrance",
+            "Aldorei's River",
+            "Cinfras Outskirts"
+        ],
+        "position": {
+            "startX": -534,
+            "startZ": -4807,
+            "endX": -375,
+            "endZ": -5088
+        }
+    },
+    {
+        "territory": "Lexdale",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Viscera Pits East",
+            "Old Crossroads North",
+            "Heart of Decay",
+            "Decayed Basin"
+        ],
+        "position": {
+            "startX": -650,
+            "startZ": -5511,
+            "endX": -562,
+            "endZ": -5406
+        }
+    },
+    {
+        "territory": "Old Crossroads North",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Talor",
+            "Old Crossroads South",
+            "Lexdale",
+            "Fungal Grove"
+        ],
+        "position": {
+            "startX": -648,
+            "startZ": -5314,
+            "endX": -567,
+            "endZ": -5400
+        }
+    },
+    {
+        "territory": "Old Crossroads South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Old Crossroads North",
+            "Fungal Grove",
+            "Cinfras Outskirts",
+            "Path to Talor",
+            "Dark Forest Village"
+        ],
+        "position": {
+            "startX": -648,
+            "startZ": -5311,
+            "endX": -567,
+            "endZ": -5234
+        }
+    },
+    {
+        "territory": "Dark Forest Village",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Talor",
+            "Cinfras Outskirts",
+            "Kander Mines",
+            "Old Crossroads South"
+        ],
+        "position": {
+            "startX": -723,
+            "startZ": -5229,
+            "endX": -574,
+            "endZ": -5147
+        }
+    },
+    {
+        "territory": "Cinfras Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mesquis Tower",
+            "Cinfras",
+            "Path to Cinfras",
+            "Light Forest North Exit"
+        ],
+        "position": {
+            "startX": -555,
+            "startZ": -4996,
+            "endX": -717,
+            "endZ": -4868
+        }
+    },
+    {
+        "territory": "Light Forest North Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Entrance",
+            "Light Forest South Exit",
+            "Light Forest Canyon"
+        ],
+        "position": {
+            "startX": -733,
+            "startZ": -4707,
+            "endX": -654,
+            "endZ": -4848
+        }
+    },
+    {
+        "territory": "Light Forest South Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest North Exit",
+            "Mantis Nest"
+        ],
+        "position": {
+            "startX": -646,
+            "startZ": -4699,
+            "endX": -733,
+            "endZ": -4559
+        }
+    },
+    {
+        "territory": "Viscera Pits East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Talor",
+            "Viscera Pits West",
+            "Lexdale"
+        ],
+        "position": {
+            "startX": -659,
+            "startZ": -5424,
+            "endX": -766,
+            "endZ": -5508
+        }
+    },
+    {
+        "territory": "Path to Talor",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Viscera Pits East",
+            "Old Crossroads North",
+            "Old Crossroads South",
+            "Entrance to Kander",
+            "Kander Mines",
+            "Dark Forest Village"
+        ],
+        "position": {
+            "startX": -653,
+            "startZ": -5231,
+            "endX": -785,
+            "endZ": -5401
+        }
+    },
+    {
+        "territory": "Kander Mines",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Talor",
+            "Dark Forest Village",
+            "Mesquis Tower",
+            "Abandoned Manor"
+        ],
+        "position": {
+            "startX": -785,
+            "startZ": -5229,
+            "endX": -725,
+            "endZ": -5102
+        }
+    },
+    {
+        "territory": "Mesquis Tower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Cinfras Entrance",
+            "Kander Mines",
+            "Abandoned Manor",
+            "Path to Cinfras"
+        ],
+        "position": {
+            "startX": -834,
+            "startZ": -5078,
+            "endX": -727,
+            "endZ": -4999
+        }
+    },
+    {
+        "territory": "Path to Cinfras",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest East Upper",
+            "Cinfras Entrance",
+            "Mesquis Tower"
+        ],
+        "position": {
+            "startX": -734,
+            "startZ": -4842,
+            "endX": -818,
+            "endZ": -4953
+        }
+    },
+    {
+        "territory": "Light Forest Canyon",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest North Exit",
+            "Light Forest East Mid",
+            "Mantis Nest"
+        ],
+        "position": {
+            "startX": -738,
+            "startZ": -4708,
+            "endX": -818,
+            "endZ": -4840
+        }
+    },
+    {
+        "territory": "Mantis Nest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest South Exit",
+            "Light Forest Canyon",
+            "Light Forest East Lower",
+            "Aldorei Valley West Entrance",
+            "Aldorei Valley Lower"
+        ],
+        "position": {
+            "startX": -736,
+            "startZ": -4559,
+            "endX": -802,
+            "endZ": -4698
+        }
+    },
+    {
+        "territory": "Lexdales Prison",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Twisted Ridge",
+            "Viscera Pits West"
+        ],
+        "position": {
+            "startX": -873,
+            "startZ": -5518,
+            "endX": -772,
+            "endZ": -5585
+        }
+    },
+    {
+        "territory": "Viscera Pits West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Twisted Ridge",
+            "Viscera Pits East",
+            "Entrance to Kander",
+            "Lexdales Prison"
+        ],
+        "position": {
+            "startX": -771,
+            "startZ": -5504,
+            "endX": -899,
+            "endZ": -5412
+        }
+    },
+    {
+        "territory": "Entrance to Kander",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Talor",
+            "Twisted Ridge",
+            "Gelibord",
+            "Abandoned Manor",
+            "Viscera Pits West"
+        ],
+        "position": {
+            "startX": -896,
+            "startZ": -5408,
+            "endX": -792,
+            "endZ": -5233
+        }
+    },
+    {
+        "territory": "Abandoned Manor",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mesquis Tower",
+            "Lone Farmstead",
+            "Entrance to Kander",
+            "Kander Mines"
+        ],
+        "position": {
+            "startX": -896,
+            "startZ": -5232,
+            "endX": -802,
+            "endZ": -5102
+        }
+    },
+    {
+        "territory": "Light Forest East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Cinfras",
+            "Efilim South East Plains"
+        ],
+        "position": {
+            "startX": -926,
+            "startZ": -4842,
+            "endX": -831,
+            "endZ": -4945
+        }
+    },
+    {
+        "territory": "Light Forest East Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Light Forest Canyon",
+            "Light Forest East Lower",
+            "Light Forest West Upper"
+        ],
+        "position": {
+            "startX": -834,
+            "startZ": -4839,
+            "endX": -926,
+            "endZ": -4708
+        }
+    },
+    {
+        "territory": "Light Forest East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest West Mid",
+            "Mantis Nest",
+            "Hobbit River",
+            "Light Forest East Mid"
+        ],
+        "position": {
+            "startX": -926,
+            "startZ": -4700,
+            "endX": -805,
+            "endZ": -4552
+        }
+    },
+    {
+        "territory": "Twisted Ridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Lexdales Prison",
+            "Viscera Pits West",
+            "Entrance to Kander"
+        ],
+        "position": {
+            "startX": -1020,
+            "startZ": -5603,
+            "endX": -910,
+            "endZ": -5343
+        }
+    },
+    {
+        "territory": "Gelibord",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Entrance to Kander",
+            "Lone Farmstead",
+            "Gelibord Corrupted Farm",
+            "Twisted Housing"
+        ],
+        "position": {
+            "startX": -1050,
+            "startZ": -5244,
+            "endX": -958,
+            "endZ": -5342
+        }
+    },
+    {
+        "territory": "Lone Farmstead",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Twisted Housing",
+            "Abandoned Manor",
+            "Gelibord"
+        ],
+        "position": {
+            "startX": -942,
+            "startZ": -5227,
+            "endX": -1050,
+            "endZ": -5116
+        }
+    },
+    {
+        "territory": "Efilim East Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Efilim Village",
+            "Efilim South East Plains"
+        ],
+        "position": {
+            "startX": -1014,
+            "startZ": -4944,
+            "endX": -949,
+            "endZ": -5079
+        }
+    },
+    {
+        "territory": "Efilim Village",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Efilim East Plains",
+            "Efilim South Plains",
+            "Twisted Housing"
+        ],
+        "position": {
+            "startX": -1134,
+            "startZ": -5078,
+            "endX": -1020,
+            "endZ": -4943
+        }
+    },
+    {
+        "territory": "Efilim South Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Efilim Village",
+            "Efilim South East Plains",
+            "Light Forest North Entrance"
+        ],
+        "position": {
+            "startX": -1030,
+            "startZ": -4940,
+            "endX": -1134,
+            "endZ": -4847
+        }
+    },
+    {
+        "territory": "Efilim South East Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Efilim South Plains",
+            "Light Forest East Upper",
+            "Light Forest West Upper",
+            "Efilim East Plains"
+        ],
+        "position": {
+            "startX": -949,
+            "startZ": -4942,
+            "endX": -1014,
+            "endZ": -4847
+        }
+    },
+    {
+        "territory": "Light Forest West Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest North Entrance",
+            "Light Forest East Mid",
+            "Efilim South East Plains",
+            "Light Forest West Mid"
+        ],
+        "position": {
+            "startX": -1014,
+            "startZ": -4708,
+            "endX": -935,
+            "endZ": -4845
+        }
+    },
+    {
+        "territory": "Light Forest West Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest Entrance",
+            "Light Forest West Lower",
+            "Light Forest East Lower",
+            "Light Forest West Upper"
+        ],
+        "position": {
+            "startX": -929,
+            "startZ": -4552,
+            "endX": -1014,
+            "endZ": -4706
+        }
+    },
+    {
+        "territory": "Swamp Mountain Transition Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Transition Mid"
+        ],
+        "position": {
+            "startX": -2173,
+            "startZ": -5466,
+            "endX": -2128,
+            "endZ": -5603
+        }
+    },
+    {
+        "territory": "Swamp Mountain Transition Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Transition Lower",
+            "Swamp Mountain Transition Mid-Upper",
+            "Swamp West Upper"
+        ],
+        "position": {
+            "startX": -2127,
+            "startZ": -5466,
+            "endX": -2066,
+            "endZ": -5603
+        }
+    },
+    {
+        "territory": "Swamp Mountain Transition Mid-Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Transition Mid",
+            "Swamp West Upper",
+            "Swamp East Upper",
+            "Swamp Mountain Transition Upper"
+        ],
+        "position": {
+            "startX": -2065,
+            "startZ": -5466,
+            "endX": -1982,
+            "endZ": -5603
+        }
+    },
+    {
+        "territory": "Swamp Mountain Transition Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Transition Mid-Upper",
+            "Swamp East Upper",
+            "Olux"
+        ],
+        "position": {
+            "startX": -1981,
+            "startZ": -5466,
+            "endX": -1889,
+            "endZ": -5603
+        }
+    },
+    {
+        "territory": "Olux",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Swamp Mountain Transition Upper",
+            "Entrance to Olux",
+            "Swamp Dark Forest Transition Mid",
+            "Swamp Dark Forest Transition Upper"
+        ],
+        "position": {
+            "startX": -1810,
+            "startZ": -5397,
+            "endX": -1668,
+            "endZ": -5597
+        }
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Olux",
+            "Swamp Dark Forest Transition Mid",
+            "Taproot Descent"
+        ],
+        "position": {
+            "startX": -1519,
+            "startZ": -5492,
+            "endX": -1626,
+            "endZ": -5607
+        }
+    },
+    {
+        "territory": "Taproot Descent",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Dark Forest Transition Upper",
+            "Swamp Dark Forest Transition Mid",
+            "Fortress North",
+            "Gelibord Corrupted Farm",
+            "Gelibord Castle"
+        ],
+        "position": {
+            "startX": -1425,
+            "startZ": -5407,
+            "endX": -1194,
+            "endZ": -5589
+        }
+    },
+    {
+        "territory": "Gelibord Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Taproot Descent",
+            "Gelibord Corrupted Farm"
+        ],
+        "position": {
+            "startX": -1027,
+            "startZ": -5470,
+            "endX": -1180,
+            "endZ": -5600
+        }
+    },
+    {
+        "territory": "Gelibord Corrupted Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Gelibord Castle",
+            "Taproot Descent",
+            "Twisted Housing",
+            "Gelibord"
+        ],
+        "position": {
+            "startX": -1056,
+            "startZ": -5355,
+            "endX": -1179,
+            "endZ": -5448
+        }
+    },
+    {
+        "territory": "Fortress North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Fortress South",
+            "Taproot Descent",
+            "Mansion of Insanity",
+            "Swamp Dark Forest Transition Lower"
+        ],
+        "position": {
+            "startX": -1452,
+            "startZ": -5211,
+            "endX": -1272,
+            "endZ": -5395
+        }
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Taproot Descent",
+            "Swamp Dark Forest Transition Upper",
+            "Olux",
+            "Entrance to Olux",
+            "Swamp Dark Forest Transition Lower"
+        ],
+        "position": {
+            "startX": -1519,
+            "startZ": -5291,
+            "endX": -1626,
+            "endZ": -5492
+        }
+    },
+    {
+        "territory": "Entrance to Olux",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Olux",
+            "Swamp Dark Forest Transition Mid",
+            "Swamp Lower",
+            "Swamp Dark Forest Transition Lower",
+            "Swamp Plains Basin"
+        ],
+        "position": {
+            "startX": -1649,
+            "startZ": -5246,
+            "endX": -1764,
+            "endZ": -5396
+        }
+    },
+    {
+        "territory": "Swamp Plains Basin",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Entrance to Olux",
+            "Swamp Mountain Base",
+            "Swamp East Mid-Upper",
+            "Swamp East Upper"
+        ],
+        "position": {
+            "startX": -1776,
+            "startZ": -5246,
+            "endX": -1898,
+            "endZ": -5396
+        }
+    },
+    {
+        "territory": "Swamp East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Transition Upper",
+            "Swamp Plains Basin",
+            "Swamp Mountain Transition Mid-Upper",
+            "Swamp West Upper",
+            "Swamp East Mid-Upper"
+        ],
+        "position": {
+            "endX": -1955,
+            "endZ": -5419,
+            "startX": -2059,
+            "startZ": -5311
+        }
+    },
+    {
+        "territory": "Swamp West Mid-Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Swamp West Upper",
+            "Swamp East Mid-Upper",
+            "Swamp West Mid"
+        ],
+        "position": {
+            "startX": -2171,
+            "startZ": -5190,
+            "endX": -2060,
+            "endZ": -5309
+        }
+    },
+    {
+        "territory": "Swamp East Mid-Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp East Mid",
+            "Swamp West Mid-Upper",
+            "Swamp East Upper",
+            "Swamp Plains Basin"
+        ],
+        "position": {
+            "startX": -2059,
+            "startZ": -5188,
+            "endX": -1955,
+            "endZ": -5309
+        }
+    },
+    {
+        "territory": "Swamp Mountain Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Plains Basin",
+            "Swamp Lower",
+            "Sunspark Camp",
+            "Swamp East Mid"
+        ],
+        "position": {
+            "startX": -1776,
+            "startZ": -5134,
+            "endX": -1898,
+            "endZ": -5240
+        }
+    },
+    {
+        "territory": "Swamp Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Entrance to Olux",
+            "Swamp Mountain Base",
+            "Swamp Dark Forest Transition Lower",
+            "Iron Road"
+        ],
+        "position": {
+            "startX": -1649,
+            "startZ": -5134,
+            "endX": -1763,
+            "endZ": -5241
+        }
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Fortress North",
+            "Fortress South",
+            "Entrance to Olux",
+            "Swamp Dark Forest Transition Mid",
+            "Forgotten Path",
+            "Swamp Lower"
+        ],
+        "position": {
+            "startX": -1519,
+            "startZ": -5134,
+            "endX": -1631,
+            "endZ": -5288
+        }
+    },
+    {
+        "territory": "Fortress South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Fortress North",
+            "Mansion of Insanity",
+            "Orc Battlegrounds",
+            "Swamp Dark Forest Transition Lower"
+        ],
+        "position": {
+            "startX": -1460,
+            "startZ": -5025,
+            "endX": -1272,
+            "endZ": -5210
+        }
+    },
+    {
+        "territory": "Mansion of Insanity",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Twisted Housing",
+            "Fortress South",
+            "Fortress North"
+        ],
+        "position": {
+            "startX": -1237,
+            "startZ": -5116,
+            "endX": -1144,
+            "endZ": -5268
+        }
+    },
+    {
+        "territory": "Twisted Housing",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Mansion of Insanity",
+            "Efilim Village",
+            "Gelibord Corrupted Farm",
+            "Gelibord",
+            "Lone Farmstead"
+        ],
+        "position": {
+            "startX": -1133,
+            "startZ": -5116,
+            "endX": -1053,
+            "endZ": -5272
+        }
+    },
+    {
+        "territory": "Swamp West Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp East Mid",
+            "Swamp West Mid-Upper",
+            "Swamp West Lower"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -5082,
+            "endX": -2171,
+            "endZ": -5186
+        }
+    },
+    {
+        "territory": "Swamp East Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp East Lower",
+            "Swamp West Mid",
+            "Swamp East Mid-Upper",
+            "Swamp Mountain Base"
+        ],
+        "position": {
+            "startX": -1955,
+            "startZ": -5081,
+            "endX": -2059,
+            "endZ": -5186
+        }
+    },
+    {
+        "territory": "Swamp West Lower",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp West Mid",
+            "Swamp East Lower",
+            "Llevigar Plains West Upper"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -5003,
+            "endX": -2171,
+            "endZ": -5075
+        }
+    },
+    {
+        "territory": "Swamp West Upper",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp East Upper",
+            "Swamp Mountain Transition Mid",
+            "Swamp Mountain Transition Mid-Upper",
+            "Swamp West Mid-Upper"
+        ],
+        "position": {
+            "startX": -2171,
+            "startZ": -5312,
+            "endX": -2060,
+            "endZ": -5419
+        }
+    },
+    {
+        "territory": "Swamp East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sunspark Camp",
+            "Llevigar Plains East Upper",
+            "Swamp West Lower",
+            "Swamp East Mid"
+        ],
+        "position": {
+            "startX": -2059,
+            "startZ": -5003,
+            "endX": -1956,
+            "endZ": -5074
+        }
+    },
+    {
+        "territory": "Sunspark Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Mountain Base",
+            "Swamp East Lower",
+            "Llevigar Plains East Upper",
+            "Orc Lake",
+            "Meteor Crater"
+        ],
+        "position": {
+            "startX": -1930,
+            "startZ": -5099,
+            "endX": -1816,
+            "endZ": -4968
+        }
+    },
+    {
+        "territory": "Meteor Crater",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sunspark Camp",
+            "Sablestone Camp",
+            "Iron Road"
+        ],
+        "position": {
+            "startX": -1800,
+            "startZ": -5099,
+            "endX": -1690,
+            "endZ": -4969
+        }
+    },
+    {
+        "territory": "Iron Road",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Forgotten Path",
+            "Swamp Lower",
+            "Meteor Crater",
+            "Goblin Plains West"
+        ],
+        "position": {
+            "startX": -1688,
+            "startZ": -5099,
+            "endX": -1608,
+            "endZ": -4969
+        }
+    },
+    {
+        "territory": "Forgotten Path",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Dark Forest Transition Lower",
+            "Iron Road",
+            "Goblin Plains East"
+        ],
+        "position": {
+            "startX": -1603,
+            "startZ": -4969,
+            "endX": -1529,
+            "endZ": -5100
+        }
+    },
+    {
+        "territory": "Llevigar Plains West Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp West Lower",
+            "Llevigar Plains East Upper",
+            "Llevigar Plains West Lower"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -4912,
+            "endX": -2171,
+            "endZ": -5000
+        }
+    },
+    {
+        "territory": "Llevigar Plains East Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sunspark Camp",
+            "Swamp East Lower",
+            "Llevigar Plains West Upper",
+            "Llevigar Plains East Lower",
+            "Orc Lake"
+        ],
+        "position": {
+            "startX": -2059,
+            "startZ": -4912,
+            "endX": -1940,
+            "endZ": -5000
+        }
+    },
+    {
+        "territory": "Llevigar Plains West Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Plains West Upper",
+            "Llevigar Plains East Lower",
+            "Llevigar Farm Plains West"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -4831,
+            "endX": -2171,
+            "endZ": -4909
+        }
+    },
+    {
+        "territory": "Llevigar Plains East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Plains East Upper",
+            "Llevigar Plains West Lower",
+            "Llevigar Farm Plains East",
+            "Orc Lake"
+        ],
+        "position": {
+            "startX": -2059,
+            "startZ": -4831,
+            "endX": -1937,
+            "endZ": -4909
+        }
+    },
+    {
+        "territory": "Orc Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Plains East Lower",
+            "Llevigar Plains East Upper",
+            "Sunspark Camp",
+            "Orc Road",
+            "Sablestone Camp"
+        ],
+        "position": {
+            "startX": -1933,
+            "startZ": -4962,
+            "endX": -1816,
+            "endZ": -4854
+        }
+    },
+    {
+        "territory": "Sablestone Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Meteor Crater",
+            "Orc Lake",
+            "Loamsprout Camp",
+            "Goblin Plains West"
+        ],
+        "position": {
+            "startX": -1800,
+            "startZ": -4962,
+            "endX": -1695,
+            "endZ": -4854
+        }
+    },
+    {
+        "territory": "Goblin Plains West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Iron Road",
+            "Sablestone Camp",
+            "Llevigar Farm",
+            "Goblin Plains East"
+        ],
+        "position": {
+            "startX": -1688,
+            "startZ": -4962,
+            "endX": -1611,
+            "endZ": -4854
+        }
+    },
+    {
+        "territory": "Goblin Plains East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Forgotten Path",
+            "Goblin Plains West",
+            "Llevigar Farm",
+            "Pre-Light Forest Transition"
+        ],
+        "position": {
+            "startX": -1603,
+            "startZ": -4963,
+            "endX": -1527,
+            "endZ": -4853
+        }
+    },
+    {
+        "territory": "Orc Battlegrounds",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Fortress South",
+            "Leadin Fortress"
+        ],
+        "position": {
+            "startX": -1460,
+            "startZ": -5024,
+            "endX": -1282,
+            "endZ": -4870
+        }
+    },
+    {
+        "territory": "Llevigar Farm Plains West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Plains West Lower",
+            "Llevigar Farm Plains East",
+            "Llevigar Gate West"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -4746,
+            "endX": -2171,
+            "endZ": -4828
+        }
+    },
+    {
+        "territory": "Llevigar Farm Plains East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Orc Road",
+            "Llevigar Gate East",
+            "Llevigar Farm Plains West",
+            "Llevigar Plains East Lower"
+        ],
+        "position": {
+            "startX": -2059,
+            "startZ": -4747,
+            "endX": -1931,
+            "endZ": -4828
+        }
+    },
+    {
+        "territory": "Llevigar Gate West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Gate East",
+            "Llevigar Farm Plains West"
+        ],
+        "position": {
+            "startX": -2060,
+            "startZ": -4746,
+            "endX": -2171,
+            "endZ": -4644
+        }
+    },
+    {
+        "territory": "Llevigar Gate East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar",
+            "Llevigar Gate West",
+            "Llevigar Farm Plains East",
+            "Orc Road"
+        ],
+        "position": {
+            "startX": -1932,
+            "startZ": -4648,
+            "endX": -2059,
+            "endZ": -4746
+        }
+    },
+    {
+        "territory": "Orc Road",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Gate East",
+            "Llevigar Farm Plains East",
+            "Orc Lake",
+            "Loamsprout Camp"
+        ],
+        "position": {
+            "startX": -1927,
+            "startZ": -4852,
+            "endX": -1815,
+            "endZ": -4700
+        }
+    },
+    {
+        "territory": "Loamsprout Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Orc Road",
+            "Sablestone Camp",
+            "Quartz Mines North West",
+            "Llevigar Farm"
+        ],
+        "position": {
+            "startX": -1800,
+            "startZ": -4852,
+            "endX": -1670,
+            "endZ": -4684
+        }
+    },
+    {
+        "territory": "Llevigar Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Loamsprout Camp",
+            "Quartz Mines North West",
+            "Quartz Mines North East",
+            "Pre-Light Forest Transition",
+            "Goblin Plains East",
+            "Goblin Plains West"
+        ],
+        "position": {
+            "startX": -1663,
+            "startZ": -4849,
+            "endX": -1556,
+            "endZ": -4714
+        }
+    },
+    {
+        "territory": "Pre-Light Forest Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Leadin Fortress",
+            "Goblin Plains East",
+            "Llevigar Farm",
+            "Quartz Mines North East"
+        ],
+        "position": {
+            "startX": -1553,
+            "startZ": -4850,
+            "endX": -1476,
+            "endZ": -4719
+        }
+    },
+    {
+        "territory": "Leadin Fortress",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Orc Battlegrounds",
+            "Pre-Light Forest Transition",
+            "Road To Light Forest"
+        ],
+        "position": {
+            "startX": -1403,
+            "startZ": -4869,
+            "endX": -1284,
+            "endZ": -4748
+        }
+    },
+    {
+        "territory": "Llevigar",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Llevigar Entrance",
+            "Llevigar Gate East",
+            "Quartz Mines South West"
+        ],
+        "position": {
+            "startX": -1800,
+            "startZ": -4643,
+            "endX": -2171,
+            "endZ": -4405
+        }
+    },
+    {
+        "territory": "Quartz Mines North West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Loamsprout Camp",
+            "Llevigar Farm",
+            "Quartz Mines South West",
+            "Quartz Mines North East"
+        ],
+        "position": {
+            "startX": -1776,
+            "startZ": -4664,
+            "endX": -1609,
+            "endZ": -4526
+        }
+    },
+    {
+        "territory": "Quartz Mines North East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Quartz Mines South East",
+            "Pre-Light Forest Transition",
+            "Llevigar Farm",
+            "Quartz Mines North West"
+        ],
+        "position": {
+            "startX": -1391,
+            "startZ": -4664,
+            "endX": -1607,
+            "endZ": -4526
+        }
+    },
+    {
+        "territory": "Quartz Mines South West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar",
+            "Quartz Mines North West",
+            "Quartz Mines South East"
+        ],
+        "position": {
+            "startX": -1776,
+            "startZ": -4352,
+            "endX": -1609,
+            "endZ": -4524
+        }
+    },
+    {
+        "territory": "Quartz Mines South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Quartz Mines South West",
+            "Quartz Mines North East"
+        ],
+        "position": {
+            "startX": -1391,
+            "startZ": -4352,
+            "endX": -1607,
+            "endZ": -4524
+        }
+    },
+    {
+        "territory": "Road To Light Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Leadin Fortress",
+            "Fleris Trail",
+            "Light Forest Entrance"
+        ],
+        "position": {
+            "startX": -1387,
+            "startZ": -4595,
+            "endX": -1252,
+            "endZ": -4713
+        }
+    },
+    {
+        "territory": "Fleris Trail",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Road To Light Forest"
+        ],
+        "position": {
+            "startX": -1390,
+            "startZ": -4594,
+            "endX": -1254,
+            "endZ": -4351
+        }
+    },
+    {
+        "territory": "Light Forest North Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest Entrance",
+            "Light Forest West Upper",
+            "Efilim South Plains"
+        ],
+        "position": {
+            "startX": -1134,
+            "startZ": -4708,
+            "endX": -1030,
+            "endZ": -4845
+        }
+    },
+    {
+        "territory": "Light Forest Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest North Entrance",
+            "Road To Light Forest",
+            "Light Forest West Mid",
+            "Light Forest South Entrance"
+        ],
+        "position": {
+            "startX": -1040,
+            "startZ": -4706,
+            "endX": -1134,
+            "endZ": -4552
+        }
+    },
+    {
+        "territory": "Light Forest South Entrance",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Light Forest Entrance",
+            "Light Forest West Lower",
+            "Heavenly Ingress"
+        ],
+        "position": {
+            "startX": -1134,
+            "startZ": -4548,
+            "endX": -1038,
+            "endZ": -4426
+        }
+    },
+    {
+        "territory": "Llevigar Entrance",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar",
+            "Volcano Lower"
+        ],
+        "position": {
+            "startX": -2048,
+            "startZ": -4250,
+            "endX": -1932,
+            "endZ": -4403
+        }
+    },
+    {
+        "territory": "Volcano Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Llevigar Entrance",
+            "Bloody Beach",
+            "Volcano Upper",
+            "Light Peninsula"
+        ],
+        "position": {
+            "startX": -1164,
+            "startZ": -3831,
+            "endX": -930,
+            "endZ": -3530
+        }
+    },
+    {
+        "territory": "Bloody Beach",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Volcano Lower",
+            "Avos Temple",
+            "Corkus Outskirts",
+            "Pirate Town"
+        ],
+        "position": {
+            "startX": -1376,
+            "startZ": -3225,
+            "endX": -1097,
+            "endZ": -3426
+        }
+    },
+    {
+        "territory": "Avos Temple",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Bloody Beach",
+            "Avos Workshop",
+            "Corkus Countryside"
+        ],
+        "position": {
+            "startX": -1526,
+            "startZ": -3225,
+            "endX": -1378,
+            "endZ": -3426
+        }
+    },
+    {
+        "territory": "Avos Workshop",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Avos Temple"
+        ],
+        "position": {
+            "startX": -1681,
+            "startZ": -3178,
+            "endX": -1888,
+            "endZ": -3375
+        }
+    },
+    {
+        "territory": "Corkus Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Countryside",
+            "Bloody Beach",
+            "Corkus Statue"
+        ],
+        "position": {
+            "startX": -1502,
+            "startZ": -2976,
+            "endX": -1230,
+            "endZ": -3224
+        }
+    },
+    {
+        "territory": "Corkus Countryside",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus Outskirts",
+            "Avos Temple",
+            "Corkus Mountain",
+            "Corkus City"
+        ],
+        "position": {
+            "startX": -1503,
+            "startZ": -3191,
+            "endX": -1680,
+            "endZ": -3012
+        }
+    },
+    {
+        "territory": "Corkus Mountain",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Countryside",
+            "Corkus Docks",
+            "Corkus Forest North"
+        ],
+        "position": {
+            "startX": -1888,
+            "startZ": -2997,
+            "endX": -1683,
+            "endZ": -3175
+        }
+    },
+    {
+        "territory": "Corkus Docks",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Mountain"
+        ],
+        "position": {
+            "startX": -1891,
+            "startZ": -2997,
+            "endX": -2022,
+            "endZ": -3274
+        }
+    },
+    {
+        "territory": "Corkus Forest North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus City",
+            "Corkus Forest South",
+            "Corkus City South",
+            "Corkus Mountain"
+        ],
+        "position": {
+            "startX": -1888,
+            "startZ": -2862,
+            "endX": -1682,
+            "endZ": -2995
+        }
+    },
+    {
+        "territory": "Corkus City",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": [
+            "Corkus Forest North",
+            "Corkus Forest South",
+            "Corkus Countryside",
+            "Corkus City South",
+            "Corkus Castle"
+        ],
+        "position": {
+            "startX": -1557,
+            "startZ": -2835,
+            "endX": -1680,
+            "endZ": -3010
+        }
+    },
+    {
+        "territory": "Corkus Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus City"
+        ],
+        "position": {
+            "startX": -1555,
+            "startZ": -2968,
+            "endX": -1452,
+            "endZ": -2835
+        }
+    },
+    {
+        "territory": "Corkus Statue",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Outskirts",
+            "Corkus City Mine"
+        ],
+        "position": {
+            "startX": -1322,
+            "startZ": -2917,
+            "endX": -1393,
+            "endZ": -2836
+        }
+    },
+    {
+        "territory": "Corkus Forest South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus City",
+            "Corkus City South",
+            "Corkus Forest North",
+            "Factory Entrance"
+        ],
+        "position": {
+            "startX": -1681,
+            "startZ": -2732,
+            "endX": -1883,
+            "endZ": -2861
+        }
+    },
+    {
+        "territory": "Corkus City South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus City",
+            "Corkus Forest South",
+            "Corkus Forest North",
+            "Road To Mine",
+            "Factory Entrance",
+            "Fallen Factory"
+        ],
+        "position": {
+            "startX": -1559,
+            "startZ": -2662,
+            "endX": -1679,
+            "endZ": -2833
+        }
+    },
+    {
+        "territory": "Road To Mine",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus Sea Cove",
+            "Corkus City South",
+            "Corkus City Mine"
+        ],
+        "position": {
+            "startX": -1467,
+            "startZ": -2834,
+            "endX": -1557,
+            "endZ": -2691
+        }
+    },
+    {
+        "territory": "Corkus City Mine",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus Statue",
+            "Road To Mine",
+            "Corkus Sea Cove"
+        ],
+        "position": {
+            "startX": -1394,
+            "startZ": -2750,
+            "endX": -1466,
+            "endZ": -2831
+        }
+    },
+    {
+        "territory": "Factory Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Forest South",
+            "Corkus City South",
+            "Fallen Factory",
+            "Ruined Houses"
+        ],
+        "position": {
+            "startX": -1683,
+            "startZ": -2571,
+            "endX": -1798,
+            "endZ": -2730
+        }
+    },
+    {
+        "territory": "Fallen Factory",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus City South",
+            "Factory Entrance",
+            "Ruined Houses",
+            "Corkus Sea Cove",
+            "Corkus Sea Port"
+        ],
+        "position": {
+            "startX": -1579,
+            "startZ": -2662,
+            "endX": -1681,
+            "endZ": -2518
+        }
+    },
+    {
+        "territory": "Corkus Sea Cove",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus City Mine",
+            "Road To Mine",
+            "Fallen Factory",
+            "Corkus Sea Port"
+        ],
+        "position": {
+            "startX": -1578,
+            "startZ": -2662,
+            "endX": -1330,
+            "endZ": -2513
+        }
+    },
+    {
+        "territory": "Ruined Houses",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Corkus Sea Port",
+            "Factory Entrance",
+            "Fallen Factory"
+        ],
+        "position": {
+            "startX": -1684,
+            "startZ": -2569,
+            "endX": -1793,
+            "endZ": -2453
+        }
+    },
+    {
+        "territory": "Corkus Sea Port",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Ruined Houses",
+            "Fallen Factory",
+            "Corkus Sea Cove",
+            "Lighthouse Plateau"
+        ],
+        "position": {
+            "startX": -1680,
+            "startZ": -2512,
+            "endX": -1437,
+            "endZ": -2307
+        }
+    },
+    {
+        "territory": "Lighthouse Plateau",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Corkus Sea Port",
+            "Southern Outpost",
+            "Phinas Farm"
+        ],
+        "position": {
+            "startX": -1633,
+            "startZ": -2162,
+            "endX": -1445,
+            "endZ": -2306
+        }
+    },
+    {
+        "territory": "Phinas Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lighthouse Plateau",
+            "Royal Gate"
+        ],
+        "position": {
+            "startX": -1633,
+            "startZ": -2162,
+            "endX": -1842,
+            "endZ": -2058
+        }
+    },
+    {
+        "territory": "Royal Gate",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 2,
+        "emerald": 1,
+        "conns": [
+            "Phinas Farm"
+        ],
+        "position": {
+            "startX": -1822,
+            "startZ": -1995,
+            "endX": -2015,
+            "endZ": -1725
+        }
+    },
+    {
+        "territory": "Southern Outpost",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Lighthouse Plateau",
+            "Legendary Island"
+        ],
+        "position": {
+            "startX": -1258,
+            "startZ": -2204,
+            "endX": -1444,
+            "endZ": -2306
+        }
+    },
+    {
+        "territory": "Legendary Island",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Southern Outpost",
+            "Zhight Island"
+        ],
+        "position": {
+            "startX": -1212,
+            "startZ": -2576,
+            "endX": -1001,
+            "endZ": -2342
+        }
+    },
+    {
+        "territory": "Zhight Island",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Pirate Town",
+            "The Bear Zoo",
+            "Legendary Island"
+        ],
+        "position": {
+            "startX": -727,
+            "startZ": -2846,
+            "endX": -440,
+            "endZ": -2629
+        }
+    },
+    {
+        "territory": "Entrance to Rodoroc",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Rodoroc",
+            "Eltom",
+            "Thesead Suburbs"
+        ],
+        "position": {
+            "startX": 854,
+            "startZ": -5257,
+            "endX": 1113,
+            "endZ": -5367
+        }
+    },
+    {
+        "territory": "Eltom",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Entrance to Rodoroc",
+            "Ranol's Farm"
+        ],
+        "position": {
+            "startX": 1029,
+            "startZ": -5581,
+            "endX": 828,
+            "endZ": -5376
+        }
+    },
+    {
+        "territory": "Pirate Town",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Lost Atoll",
+            "Zhight Island",
+            "Volcano Upper",
+            "Bloody Beach"
+        ],
+        "position": {
+            "startX": -750,
+            "startZ": -3251,
+            "endX": -580,
+            "endZ": -3006
+        }
+    },
+    {
+        "territory": "Volcano Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Lost Atoll",
+            "Pirate Town",
+            "Tree Island",
+            "Light Peninsula",
+            "Volcano Lower"
+        ],
+        "position": {
+            "startX": -929,
+            "startZ": -3831,
+            "endX": -722,
+            "endZ": -3530
+        }
+    },
+    {
+        "territory": "Light Peninsula",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Hobbit River",
+            "Tree Island",
+            "Volcano Upper",
+            "Volcano Lower"
+        ],
+        "position": {
+            "startX": -951,
+            "startZ": -4421,
+            "endX": -802,
+            "endZ": -4108
+        }
+    },
+    {
+        "territory": "Lost Atoll",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 2,
+        "emerald": 1,
+        "conns": [
+            "Volcano Upper",
+            "Tree Island",
+            "Pirate Town"
+        ],
+        "position": {
+            "startX": -472,
+            "startZ": -3590,
+            "endX": -688,
+            "endZ": -3385
+        }
+    },
+    {
+        "territory": "Light Peninsula",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Hobbit River",
+            "Volcano Lower",
+            "Volcano Upper",
+            "Tree Island"
+        ],
+        "position": {
+            "startX": -951,
+            "startZ": -4421,
+            "endX": -802,
+            "endZ": -4108
+        }
+    },
+    {
+        "territory": "Light Forest West Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Hobbit River",
+            "Light Forest West Mid",
+            "Light Forest South Entrance"
+        ],
+        "position": {
+            "startX": -1014,
+            "startZ": -4428,
+            "endX": -929,
+            "endZ": -4549
+        }
+    },
+    {
+        "territory": "Aldorei Valley West Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Aldorei Valley Lower",
+            "Mantis Nest",
+            "Hobbit River"
+        ],
+        "position": {
+            "startX": -736,
+            "startZ": -4428,
+            "endX": -802,
+            "endZ": -4553
+        }
+    },
+    {
+        "territory": "Hobbit River",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest West Lower",
+            "Light Forest East Lower",
+            "Aldorei Valley West Entrance",
+            "Light Peninsula"
+        ],
+        "position": {
+            "startX": -926,
+            "startZ": -4550,
+            "endX": -806,
+            "endZ": -4428
+        }
+    },
+    {
+        "territory": "Volcano Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Volcano Lower",
+            "Tree Island",
+            "Pirate Town",
+            "Lost Atoll",
+            "Light Peninsula"
+        ],
+        "position": {
+            "startX": -929,
+            "startZ": -3831,
+            "endX": -722,
+            "endZ": -3530
+        }
+    },
+    {
+        "territory": "Tree Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Peninsula",
+            "Volcano Upper",
+            "Maro Peaks",
+            "Lost Atoll"
+        ],
+        "position": {
+            "startX": -454,
+            "startZ": -3905,
+            "endX": -323,
+            "endZ": -3766
+        }
+    },
+    {
+        "territory": "Maro Peaks",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Tree Island",
+            "Skiens Island"
+        ],
+        "position": {
+            "startX": -41,
+            "startZ": -4174,
+            "endX": 453,
+            "endZ": -3793
+        }
+    },
+    {
+        "territory": "Pirate Town",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Volcano Upper",
+            "Lost Atoll",
+            "Zhight Island",
+            "Bloody Beach"
+        ],
+        "position": {
+            "startX": -750,
+            "startZ": -3251,
+            "endX": -580,
+            "endZ": -3006
+        }
+    },
+    {
+        "territory": "Zhight Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Pirate Town",
+            "The Bear Zoo",
+            "Legendary Island"
+        ],
+        "position": {
+            "startX": -727,
+            "startZ": -2846,
+            "endX": -440,
+            "endZ": -2629
+        }
+    },
+    {
+        "territory": "The Bear Zoo",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Zhight Island",
+            "Rooster Island"
+        ],
+        "position": {
+            "startX": -409,
+            "startZ": -2539,
+            "endX": -283,
+            "endZ": -2414
+        }
+    },
+    {
+        "territory": "Rooster Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nemract Town",
+            "Selchar",
+            "The Bear Zoo",
+            "Durum Isles Lower"
+        ],
+        "position": {
+            "startX": -128,
+            "startZ": -2448,
+            "endX": -30,
+            "endZ": -2538
+        }
+    },
+    {
+        "territory": "Selchar",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": [
+            "Skiens Island",
+            "Rooster Island",
+            "Durum Isles Lower",
+            "Durum Isles Center",
+            "Durum Isles Upper"
+        ],
+        "position": {
+            "startX": -100,
+            "startZ": -3070,
+            "endX": 210,
+            "endZ": -3270
+        }
+    },
+    {
+        "territory": "Nodguj Nation",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Durum Isles Upper",
+            "Skiens Island",
+            "Mage Island",
+            "Icy Island",
+            "Santa's Hideout",
+            "Dujgon Nation"
+        ],
+        "position": {
+            "startX": 695,
+            "startZ": -3210,
+            "endX": 880,
+            "endZ": -3440
+        }
+    },
+    {
+        "territory": "Skiens Island",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Maro Peaks",
+            "Nodguj Nation",
+            "Selchar",
+            "Dead Island South West"
+        ],
+        "position": {
+            "startX": 527,
+            "startZ": -3386,
+            "endX": 297,
+            "endZ": -3644
+        }
+    },
+    {
+        "territory": "Durum Isles Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rooster Island",
+            "Selchar",
+            "Durum Isles Center",
+            "Cathedral Harbour"
+        ],
+        "position": {
+            "startX": 390,
+            "startZ": -2851,
+            "endX": 347,
+            "endZ": -2791
+        }
+    },
+    {
+        "territory": "Durum Isles Center",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Durum Isles Lower",
+            "Durum Isles East",
+            "Durum Isles Upper",
+            "Selchar"
+        ],
+        "position": {
+            "startX": 405,
+            "startZ": -2846,
+            "endX": 504,
+            "endZ": -2972
+        }
+    },
+    {
+        "territory": "Durum Isles Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nodguj Nation",
+            "Mage Island",
+            "Selchar",
+            "Durum Isles Center"
+        ],
+        "position": {
+            "startX": 537,
+            "startZ": -2994,
+            "endX": 595,
+            "endZ": -2924
+        }
+    },
+    {
+        "territory": "Durum Isles East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Durum Isles Center",
+            "Mage Island",
+            "Cathedral Harbour"
+        ],
+        "position": {
+            "startX": 482,
+            "startZ": -2841,
+            "endX": 548,
+            "endZ": -2785
+        }
+    },
+    {
+        "territory": "Dead Island North West",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.25,
+        "conns": [
+            "Dead Island South West",
+            "Dead Island North East"
+        ],
+        "position": {
+            "startX": 870,
+            "startZ": -3920,
+            "endX": 745,
+            "endZ": -4040
+        }
+    },
+    {
+        "territory": "Dead Island North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Dead Island South East",
+            "Dead Island North West",
+            "Jofash Docks"
+        ],
+        "position": {
+            "startX": 870,
+            "startZ": -3920,
+            "endX": 1000,
+            "endZ": -4040
+        }
+    },
+    {
+        "territory": "Dead Island South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Dujgon Nation",
+            "Skiens Island",
+            "Dead Island North West",
+            "Dead Island South East"
+        ],
+        "position": {
+            "startX": 870,
+            "startZ": -3920,
+            "endX": 745,
+            "endZ": -3810
+        }
+    },
+    {
+        "territory": "Dead Island South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Dujgon Nation",
+            "Regular Island",
+            "Dead Island South West",
+            "Dead Island North East"
+        ],
+        "position": {
+            "startX": 870,
+            "startZ": -3920,
+            "endX": 1000,
+            "endZ": -3810
+        }
+    },
+    {
+        "territory": "Jofash Docks",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Jofash Tunnel",
+            "Regular Island",
+            "Dead Island North East"
+        ],
+        "position": {
+            "startX": 1178,
+            "startZ": -4175,
+            "endX": 1445,
+            "endZ": -4012
+        }
+    },
+    {
+        "territory": "Jofash Tunnel",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jofash Docks",
+            "Sky Island Ascent"
+        ],
+        "position": {
+            "startX": 1304,
+            "startZ": -4354,
+            "endX": 1126,
+            "endZ": -4176
+        }
+    },
+    {
+        "territory": "Regular Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jofash Docks",
+            "Dead Island South East",
+            "Dujgon Nation",
+            "Icy Island"
+        ],
+        "position": {
+            "startX": 1202,
+            "startZ": -3764,
+            "endX": 1458,
+            "endZ": -3597
+        }
+    },
+    {
+        "territory": "Dujgon Nation",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Dead Island South East",
+            "Dead Island South West",
+            "Nodguj Nation",
+            "Regular Island",
+            "Icy Island"
+        ],
+        "position": {
+            "startX": 1000,
+            "startZ": -3550,
+            "endX": 925,
+            "endZ": -3380
+        }
+    },
+    {
+        "territory": "Icy Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nodguj Nation",
+            "Dujgon Nation",
+            "Santa's Hideout",
+            "Regular Island"
+        ],
+        "position": {
+            "startX": 1001,
+            "startZ": -3274,
+            "endX": 1172,
+            "endZ": -3430
+        }
+    },
+    {
+        "territory": "Santa's Hideout",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Nodguj Nation",
+            "Icy Island",
+            "Mage Island"
+        ],
+        "position": {
+            "startX": 1057,
+            "startZ": -3077,
+            "endX": 1221,
+            "endZ": -3209
+        }
+    },
+    {
+        "territory": "Mage Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Half Moon Island",
+            "Santa's Hideout",
+            "Nodguj Nation",
+            "Durum Isles East",
+            "Durum Isles Upper"
+        ],
+        "position": {
+            "startX": 805,
+            "startZ": -2960,
+            "endX": 983,
+            "endZ": -2787
+        }
+    },
+    {
+        "territory": "Half Moon Island",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mage Island"
+        ],
+        "position": {
+            "startX": 900,
+            "startZ": -2660,
+            "endX": 1100,
+            "endZ": -2480
+        }
+    },
+    {
+        "territory": "The Silent Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mine Base Plains",
+            "The Broken Road"
+        ],
+        "position": {
+            "startX": 540,
+            "startZ": -1088,
+            "endX": 704,
+            "endZ": -961
+        }
+    },
+    {
+        "territory": "The Broken Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "The Silent Road",
+            "Worm Tunnel"
+        ],
+        "position": {
+            "startX": 686,
+            "startZ": -923,
+            "endX": 493,
+            "endZ": -783
+        }
+    },
+    {
+        "territory": "Worm Tunnel",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "The Broken Road",
+            "Grey Ruins"
+        ],
+        "position": {
+            "startX": 641,
+            "startZ": -767,
+            "endX": 543,
+            "endZ": -640
+        }
+    },
+    {
+        "territory": "Grey Ruins",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Worm Tunnel",
+            "Forgotten Town"
+        ],
+        "position": {
+            "startX": 683,
+            "startZ": -619,
+            "endX": 462,
+            "endZ": -515
+        }
+    },
+    {
+        "territory": "Forgotten Town",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Grey Ruins",
+            "Forest of Eyes"
+        ],
+        "position": {
+            "startX": 480,
+            "startZ": -493,
+            "endX": 734,
+            "endZ": -355
+        }
+    },
+    {
+        "territory": "Forest of Eyes",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Forgotten Town",
+            "Sinister Forest"
+        ],
+        "position": {
+            "startX": 813,
+            "startZ": -333,
+            "endX": 1043,
+            "endZ": -504
+        }
+    },
+    {
+        "territory": "Sinister Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Forest of Eyes",
+            "Lutho"
+        ],
+        "position": {
+            "startX": 815,
+            "startZ": -506,
+            "endX": 1059,
+            "endZ": -629
+        }
+    },
+    {
+        "territory": "Lutho",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Sinister Forest",
+            "Paths of Sludge"
+        ],
+        "position": {
+            "startX": 936,
+            "startZ": -654,
+            "endX": 1027,
+            "endZ": -754
+        }
+    },
+    {
+        "territory": "Paths of Sludge",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lutho",
+            "Toxic Drip"
+        ],
+        "position": {
+            "startX": 1040,
+            "startZ": -767,
+            "endX": 892,
+            "endZ": -870
+        }
+    },
+    {
+        "territory": "Toxic Drip",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Paths of Sludge",
+            "Toxic Caves",
+            "Gateway to Nothing"
+        ],
+        "position": {
+            "startX": 893,
+            "startZ": -876,
+            "endX": 1086,
+            "endZ": -992
+        }
+    },
+    {
+        "territory": "Toxic Caves",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Toxic Drip"
+        ],
+        "position": {
+            "startX": 1017,
+            "startZ": -1146,
+            "endX": 844,
+            "endZ": -993
+        }
+    },
+    {
+        "territory": "Void Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Gateway to Nothing"
+        ],
+        "position": {
+            "startX": 1082,
+            "startZ": -1161,
+            "endX": 1250,
+            "endZ": -1078
+        }
+    },
+    {
+        "territory": "Gateway to Nothing",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Void Valley",
+            "Final Step",
+            "Toxic Drip"
+        ],
+        "position": {
+            "startX": 1120,
+            "startZ": -882,
+            "endX": 1244,
+            "endZ": -1058
+        }
+    },
+    {
+        "territory": "Final Step",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Gateway to Nothing",
+            "Bizarre Passage"
+        ],
+        "position": {
+            "startX": 1388,
+            "startZ": -869,
+            "endX": 1254,
+            "endZ": -932
+        }
+    },
+    {
+        "territory": "Bizarre Passage",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Final Step",
+            "The Gate"
+        ],
+        "position": {
+            "startX": 1187,
+            "startZ": -680,
+            "endX": 1388,
+            "endZ": -530
+        }
+    },
+    {
+        "territory": "The Gate",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bizarre Passage"
+        ],
+        "position": {
+            "startX": 1350,
+            "startZ": -520,
+            "endX": 1265,
+            "endZ": -410
+        }
+    },
+    {
+        "territory": "Twain Mansion",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 2,
+        "conns": [
+            "Twain Lake"
+        ],
+        "position": {
+            "startX": 95,
+            "startZ": -407,
+            "endX": 140,
+            "endZ": -310
+        }
+    },
+    {
+        "territory": "Twain Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Twain Mansion",
+            "Nesaak Plains South West"
+        ],
+        "position": {
+            "startX": 0,
+            "startZ": -330,
+            "endX": 80,
+            "endZ": -530
+        }
+    },
+    {
+        "territory": "Nesaak Plains South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Twain Lake",
+            "Nesaak Village",
+            "Nesaak Plains South East",
+            "Nesaak Bridge Transition",
+            "Icy Descent",
+            "Nesaak Plains Lower North West"
+        ],
+        "position": {
+            "startX": 70,
+            "startZ": -820,
+            "endX": -110,
+            "endZ": -625
+        }
+    },
+    {
+        "territory": "Icy Descent",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lusuco",
+            "Tower of Ascension",
+            "Nesaak Plains South West"
+        ],
+        "position": {
+            "startX": -311,
+            "startZ": -358,
+            "endX": -104,
+            "endZ": -496
+        }
+    },
+    {
+        "territory": "Lusuco",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Icy Descent"
+        ],
+        "position": {
+            "startX": -267,
+            "startZ": -348,
+            "endX": -91,
+            "endZ": -250
+        }
+    },
+    {
+        "territory": "Tower of Ascension",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Icy Descent"
+        ],
+        "position": {
+            "startX": -400,
+            "startZ": -450,
+            "endX": -315,
+            "endZ": -330
+        }
+    },
+    {
+        "territory": "Great Bridge Nesaak",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Great Bridge Jungle",
+            "Nesaak Bridge Transition"
+        ],
+        "position": {
+            "startX": -275,
+            "startZ": -620,
+            "endX": -390,
+            "endZ": -790
+        }
+    },
+    {
+        "territory": "Nesaak Bridge Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Great Bridge Nesaak",
+            "Nesaak Plains South West"
+        ],
+        "position": {
+            "startX": -115,
+            "startZ": -630,
+            "endX": -240,
+            "endZ": -780
+        }
+    },
+    {
+        "territory": "Nesaak Village",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": [
+            "Nesaak Plains South West",
+            "Nesaak Plains South East",
+            "Nesaak Plains North East",
+            "Bob's Tomb",
+            "Nesaak Plains Lower North West"
+        ],
+        "position": {
+            "startX": 75,
+            "startZ": -850,
+            "endX": 160,
+            "endZ": -760
+        }
+    },
+    {
+        "territory": "Nesaak Plains South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Plains South West",
+            "Nesaak Village",
+            "Bob's Tomb"
+        ],
+        "position": {
+            "startX": 76,
+            "startZ": -757,
+            "endX": 230,
+            "endZ": -660
+        }
+    },
+    {
+        "territory": "Bob's Tomb",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Plains North East",
+            "Nesaak Village",
+            "Nesaak Plains South East"
+        ],
+        "position": {
+            "startX": 246,
+            "startZ": -747,
+            "endX": 380,
+            "endZ": -867
+        }
+    },
+    {
+        "territory": "Nesaak Plains North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Transition",
+            "Nesaak Plains Upper North West",
+            "Nesaak Village",
+            "Bob's Tomb",
+            "Nesaak Plains Lower North West"
+        ],
+        "position": {
+            "startX": 110,
+            "startZ": -873,
+            "endX": 240,
+            "endZ": -1035
+        }
+    },
+    {
+        "territory": "Nesaak Transition",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Elkurn",
+            "Nether Plains Lower",
+            "Desolate Valley",
+            "Nesaak Plains North East"
+        ],
+        "position": {
+            "startX": 330,
+            "startZ": -1040,
+            "endX": 75,
+            "endZ": -1145
+        }
+    },
+    {
+        "territory": "Nesaak Plains Upper North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Plains North East",
+            "Elkurn",
+            "Sanctuary Bridge",
+            "Nesaak Plains Mid North West",
+            "Nesaak Plains Lower North West"
+        ],
+        "position": {
+            "startX": 70,
+            "startZ": -950,
+            "endX": -140,
+            "endZ": -1060
+        }
+    },
+    {
+        "territory": "Nesaak Plains Lower North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Plains Mid North West",
+            "Nesaak Plains Upper North West",
+            "Nesaak Plains South West",
+            "Nesaak Village",
+            "Nesaak Plains North East"
+        ],
+        "position": {
+            "startX": 70,
+            "startZ": -834,
+            "endX": -120,
+            "endZ": -910
+        }
+    },
+    {
+        "territory": "Nesaak Plains Mid North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Plains Upper North West",
+            "Nesaak Plains Lower North West"
+        ],
+        "position": {
+            "startX": -140,
+            "startZ": -860,
+            "endX": -180,
+            "endZ": -980
+        }
+    },
+    {
+        "territory": "Temple of Legends",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "City of Troms",
+            "Jungle Lake"
+        ],
+        "position": {
+            "startX": -631,
+            "startZ": -973,
+            "endX": -745,
+            "endZ": -1093
+        }
+    },
+    {
+        "territory": "City of Troms",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "South Pigmen Ravines",
+            "Temple of Legends",
+            "Jungle Lake"
+        ],
+        "position": {
+            "startX": -726,
+            "startZ": -970,
+            "endX": -899,
+            "endZ": -826
+        }
+    },
+    {
+        "territory": "Jungle Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Temple of Legends",
+            "City of Troms",
+            "Herb Cave",
+            "Jungle Mid"
+        ],
+        "position": {
+            "startX": -601,
+            "startZ": -791,
+            "endX": -680,
+            "endZ": -940
+        }
+    },
+    {
+        "territory": "Herb Cave",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jungle Lake",
+            "Great Bridge Jungle"
+        ],
+        "position": {
+            "startX": -448,
+            "startZ": -813,
+            "endX": -557,
+            "endZ": -876
+        }
+    },
+    {
+        "territory": "Dernel Jungle Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Dernel Jungle Mid"
+        ],
+        "position": {
+            "startX": -970,
+            "startZ": -795,
+            "endX": -900,
+            "endZ": -547
+        }
+    },
+    {
+        "territory": "Jungle Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Jungle Mid",
+            "Dernel Jungle Mid"
+        ],
+        "position": {
+            "startX": -671,
+            "startZ": -779,
+            "endX": -810,
+            "endZ": -630
+        }
+    },
+    {
+        "territory": "Jungle Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jungle Upper",
+            "Jungle Lower",
+            "Jungle Lake"
+        ],
+        "position": {
+            "startX": -600,
+            "startZ": -610,
+            "endX": -670,
+            "endZ": -780
+        }
+    },
+    {
+        "territory": "Jungle Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jungle Mid",
+            "Great Bridge Jungle",
+            "Dernel Jungle Lower"
+        ],
+        "position": {
+            "startX": -515,
+            "startZ": -610,
+            "endX": -600,
+            "endZ": -790
+        }
+    },
+    {
+        "territory": "Great Bridge Jungle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Jungle Lower",
+            "Herb Cave",
+            "Great Bridge Nesaak"
+        ],
+        "position": {
+            "startX": -395,
+            "startZ": -790,
+            "endX": -515,
+            "endZ": -610
+        }
+    },
+    {
+        "territory": "Dernel Jungle Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Dernel Jungle Upper",
+            "Dernel Jungle Lower",
+            "Jungle Upper"
+        ],
+        "position": {
+            "startX": -744,
+            "startZ": -528,
+            "endX": -965,
+            "endZ": -264
+        }
+    },
+    {
+        "territory": "Dernel Jungle Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Jungle Lower",
+            "Dernel Jungle Mid"
+        ],
+        "position": {
+            "startX": -737,
+            "startZ": -317,
+            "endX": -502,
+            "endZ": -530
+        }
+    },
+    {
+        "territory": "Little Wood",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Time Valley",
+            "South Pigmen Ravines"
+        ],
+        "position": {
+            "startX": -812,
+            "startZ": -1177,
+            "endX": -636,
+            "endZ": -1094
+        }
+    },
+    {
+        "territory": "Time Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Elkurn Fields",
+            "Sanctuary Bridge",
+            "Abandoned Farm",
+            "Little Wood"
+        ],
+        "position": {
+            "startX": -563,
+            "startZ": -1261,
+            "endX": -406,
+            "endZ": -1006
+        }
+    },
+    {
+        "territory": "Sanctuary Bridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Time Valley",
+            "Nesaak Plains Upper North West"
+        ],
+        "position": {
+            "startX": -324,
+            "startZ": -1130,
+            "endX": -192,
+            "endZ": -993
+        }
+    },
+    {
+        "territory": "Elkurn Fields",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Road to Elkurn",
+            "Elkurn",
+            "South Nivla Woods",
+            "Time Valley"
+        ],
+        "position": {
+            "startX": -357,
+            "startZ": -1325,
+            "endX": -99,
+            "endZ": -1141
+        }
+    },
+    {
+        "territory": "Elkurn",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Elkurn Fields",
+            "Nesaak Plains Upper North West",
+            "Road to Elkurn",
+            "Nether Plains Lower",
+            "Nesaak Transition",
+            "Corrupted Road"
+        ],
+        "position": {
+            "startX": -98,
+            "startZ": -1250,
+            "endX": 62,
+            "endZ": -1080
+        }
+    },
+    {
+        "territory": "South Pigmen Ravines",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Pigmen Ravines Entrance",
+            "Little Wood",
+            "City of Troms"
+        ],
+        "position": {
+            "startX": -898,
+            "startZ": -1298,
+            "endX": -678,
+            "endZ": -1221
+        }
+    },
+    {
+        "territory": "Pigmen Ravines Entrance",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Pigmen Ravines",
+            "Ragni",
+            "South Pigmen Ravines"
+        ],
+        "position": {
+            "startX": -924,
+            "startZ": -1398,
+            "endX": -784,
+            "endZ": -1307
+        }
+    },
+    {
+        "territory": "Pigmen Ravines",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Pigmen Ravines Entrance",
+            "Abandoned Farm"
+        ],
+        "position": {
+            "startX": -784,
+            "startZ": -1398,
+            "endX": -617,
+            "endZ": -1317
+        }
+    },
+    {
+        "territory": "Abandoned Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Pigmen Ravines",
+            "Time Valley"
+        ],
+        "position": {
+            "startX": -577,
+            "startZ": -1395,
+            "endX": -478,
+            "endZ": -1335
+        }
+    },
+    {
+        "territory": "Ragni",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Pigmen Ravines Entrance",
+            "Ragni Main Entrance",
+            "Ragni North Entrance"
+        ],
+        "position": {
+            "startX": -955,
+            "startZ": -1415,
+            "endX": -756,
+            "endZ": -1748
+        }
+    },
+    {
+        "territory": "Ragni North Entrance",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni",
+            "Katoa Ranch",
+            "Ragni North Suburbs"
+        ],
+        "position": {
+            "startX": -944,
+            "startZ": -1761,
+            "endX": -818,
+            "endZ": -1859
+        }
+    },
+    {
+        "territory": "Katoa Ranch",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni North Entrance",
+            "Ragni North Suburbs"
+        ],
+        "position": {
+            "startX": -914,
+            "startZ": -1860,
+            "endX": -748,
+            "endZ": -1955
+        }
+    },
+    {
+        "territory": "Ragni North Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni North Entrance",
+            "Katoa Ranch",
+            "Ragni Plains"
+        ],
+        "position": {
+            "startX": -817,
+            "startZ": -1859,
+            "endX": -762,
+            "endZ": -1761
+        }
+    },
+    {
+        "territory": "Coastal Trail",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni Plains",
+            "Maltic Coast",
+            "Maltic"
+        ],
+        "position": {
+            "startX": -747,
+            "startZ": -1946,
+            "endX": -565,
+            "endZ": -2059
+        }
+    },
+    {
+        "territory": "Ragni Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Maltic",
+            "Ragni North Suburbs",
+            "Coastal Trail",
+            "Ragni East Suburbs"
+        ],
+        "position": {
+            "startX": -747,
+            "startZ": -1776,
+            "endX": -605,
+            "endZ": -1945
+        }
+    },
+    {
+        "territory": "Ragni East Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni Main Entrance",
+            "Maltic Plains",
+            "Ragni Plains"
+        ],
+        "position": {
+            "startX": -747,
+            "startZ": -1653,
+            "endX": -616,
+            "endZ": -1776
+        }
+    },
+    {
+        "territory": "Ragni Main Entrance",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni",
+            "Ragni East Suburbs",
+            "Emerald Trail"
+        ],
+        "position": {
+            "startX": -747,
+            "startZ": -1530,
+            "endX": -616,
+            "endZ": -1652
+        }
+    },
+    {
+        "territory": "Maltic Coast",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Coastal Trail",
+            "Maltic",
+            "South Farmers Valley",
+            "North Farmers Valley"
+        ],
+        "position": {
+            "startX": -564,
+            "startZ": -2059,
+            "endX": -400,
+            "endZ": -1946
+        }
+    },
+    {
+        "territory": "Maltic",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "South Farmers Valley",
+            "Maltic Coast",
+            "Coastal Trail",
+            "Ragni Plains",
+            "Maltic Plains"
+        ],
+        "position": {
+            "startX": -604,
+            "startZ": -1945,
+            "endX": -475,
+            "endZ": -1884
+        }
+    },
+    {
+        "territory": "Maltic Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Plains",
+            "Ragni East Suburbs",
+            "Maltic",
+            "Emerald Trail",
+            "South Farmers Valley"
+        ],
+        "position": {
+            "startX": -564,
+            "startZ": -1883,
+            "endX": -436,
+            "endZ": -1653
+        }
+    },
+    {
+        "territory": "Emerald Trail",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ragni Main Entrance",
+            "Nivla Woods Entrance",
+            "Maltic Plains"
+        ],
+        "position": {
+            "startX": -615,
+            "startZ": -1530,
+            "endX": -436,
+            "endZ": -1652
+        }
+    },
+    {
+        "territory": "South Farmers Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "North Farmers Valley",
+            "Plains",
+            "Maltic",
+            "Maltic Coast",
+            "Maltic Plains"
+        ],
+        "position": {
+            "startX": -472,
+            "startZ": -1944,
+            "endX": -255,
+            "endZ": -1887
+        }
+    },
+    {
+        "territory": "Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Maltic Plains",
+            "South Farmers Valley",
+            "Arachnid Route",
+            "North Nivla Woods",
+            "Nivla Woods Entrance"
+        ],
+        "position": {
+            "startX": -435,
+            "startZ": -1883,
+            "endX": -270,
+            "endZ": -1653
+        }
+    },
+    {
+        "territory": "Nivla Woods Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Road to Time Valley",
+            "Emerald Trail",
+            "Nivla Woods",
+            "Plains"
+        ],
+        "position": {
+            "startX": -435,
+            "startZ": -1530,
+            "endX": -372,
+            "endZ": -1652
+        }
+    },
+    {
+        "territory": "Road to Time Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "South Nivla Woods",
+            "Nivla Woods Entrance",
+            "Nivla Woods"
+        ],
+        "position": {
+            "startX": -461,
+            "startZ": -1525,
+            "endX": -359,
+            "endZ": -1412
+        }
+    },
+    {
+        "territory": "North Farmers Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "South Farmers Valley",
+            "Plains Coast",
+            "Maltic Coast"
+        ],
+        "position": {
+            "startX": -348,
+            "startZ": -2060,
+            "endX": -254,
+            "endZ": -1954
+        }
+    },
+    {
+        "territory": "Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nivla Woods Entrance",
+            "South Nivla Woods",
+            "Nivla Woods Exit",
+            "Road to Time Valley"
+        ],
+        "position": {
+            "startX": -325,
+            "startZ": -1624,
+            "endX": -196,
+            "endZ": -1460
+        }
+    },
+    {
+        "territory": "South Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Elkurn Fields",
+            "Road to Elkurn",
+            "Road to Time Valley",
+            "Nivla Woods",
+            "Nivla Woods Exit"
+        ],
+        "position": {
+            "startX": -350,
+            "startZ": -1440,
+            "endX": -99,
+            "endZ": -1330
+        }
+    },
+    {
+        "territory": "Arachnid Route",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Plains",
+            "Nemract Plains West",
+            "North Nivla Woods"
+        ],
+        "position": {
+            "startX": -261,
+            "startZ": -1881,
+            "endX": -109,
+            "endZ": -1808
+        }
+    },
+    {
+        "territory": "North Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Arachnid Route",
+            "Plains",
+            "Nivla Woods Edge",
+            "Nivla Woods Exit"
+        ],
+        "position": {
+            "startX": -194,
+            "startZ": -1632,
+            "endX": -86,
+            "endZ": -1800
+        }
+    },
+    {
+        "territory": "Nivla Woods Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "North Nivla Woods",
+            "Nivla Woods",
+            "Nivla Woods Edge",
+            "South Nivla Woods"
+        ],
+        "position": {
+            "startX": -175,
+            "startZ": -1630,
+            "endX": -105,
+            "endZ": -1514
+        }
+    },
+    {
+        "territory": "Plains Coast",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nemract Town",
+            "Nemract Quarry",
+            "North Farmers Valley"
+        ],
+        "position": {
+            "startX": 5,
+            "startZ": -2270,
+            "endX": -320,
+            "endZ": -2090
+        }
+    },
+    {
+        "territory": "Nemract Quarry",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Plains Coast",
+            "Nemract Road",
+            "Nemract Plains West"
+        ],
+        "position": {
+            "startX": -105,
+            "startZ": -2069,
+            "endX": 20,
+            "endZ": -1960
+        }
+    },
+    {
+        "territory": "Nemract Plains West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Arachnid Route",
+            "Nivla Woods Edge",
+            "Nemract Road",
+            "Nemract Quarry"
+        ],
+        "position": {
+            "startX": 5,
+            "startZ": -1960,
+            "endX": -100,
+            "endZ": -1810
+        }
+    },
+    {
+        "territory": "Nivla Woods Edge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "North Nivla Woods",
+            "Nivla Woods Exit",
+            "Detlas Far Suburbs",
+            "Road to Elkurn",
+            "Nemract Plains West"
+        ],
+        "position": {
+            "startX": -74,
+            "startZ": -1777,
+            "endX": -3,
+            "endZ": -1485
+        }
+    },
+    {
+        "territory": "Road to Elkurn",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "South Nivla Woods",
+            "Elkurn Fields",
+            "Elkurn",
+            "Nivla Woods Edge"
+        ],
+        "position": {
+            "startX": -89,
+            "startZ": -1481,
+            "endX": 2,
+            "endZ": -1267
+        }
+    },
+    {
+        "territory": "Nemract Town",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Plains Coast",
+            "Nemract Road",
+            "Nemract Cathedral",
+            "Rooster Island"
+        ],
+        "position": {
+            "startX": 10,
+            "startZ": -2070,
+            "endX": 210,
+            "endZ": -2270
+        }
+    },
+    {
+        "territory": "Nemract Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ancient Nemract",
+            "Nemract Town",
+            "Nemract Cathedral",
+            "Nemract Quarry",
+            "Nemract Plains West",
+            "Nemract Plains East"
+        ],
+        "position": {
+            "startX": 20,
+            "startZ": -2065,
+            "endX": 151,
+            "endZ": -1871
+        }
+    },
+    {
+        "territory": "Nemract Plains East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nemract Road",
+            "Detlas Trail West Plains"
+        ],
+        "position": {
+            "startX": 151,
+            "startZ": -1870,
+            "endX": 20,
+            "endZ": -1810
+        }
+    },
+    {
+        "territory": "Detlas Trail West Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nemract Plains East",
+            "Ancient Nemract",
+            "Detlas Suburbs",
+            "Detlas Far Suburbs"
+        ],
+        "position": {
+            "startX": 25,
+            "startZ": -1660,
+            "endX": 200,
+            "endZ": -1800
+        }
+    },
+    {
+        "territory": "Detlas Far Suburbs",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Corrupted Road",
+            "Nether Plains Upper",
+            "Detlas Suburbs",
+            "Detlas Trail West Plains",
+            "Nivla Woods Edge"
+        ],
+        "position": {
+            "startX": 29,
+            "startZ": -1657,
+            "endX": 188,
+            "endZ": -1500
+        }
+    },
+    {
+        "territory": "Corrupted Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Far Suburbs",
+            "Nether Plains Upper",
+            "Elkurn",
+            "Nether Gate"
+        ],
+        "position": {
+            "startX": 22,
+            "startZ": -1479,
+            "endX": 96,
+            "endZ": -1261
+        }
+    },
+    {
+        "territory": "Nemract Cathedral",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nemract Town",
+            "Ancient Nemract",
+            "Nemract Road",
+            "Cathedral Harbour"
+        ],
+        "position": {
+            "startX": 385,
+            "startZ": -2180,
+            "endX": 270,
+            "endZ": -2030
+        }
+    },
+    {
+        "territory": "Ancient Nemract",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nemract Cathedral",
+            "Cathedral Harbour",
+            "Nemract Road",
+            "Detlas Trail East Plains",
+            "Detlas Trail West Plains"
+        ],
+        "position": {
+            "startX": 152,
+            "startZ": -1832,
+            "endX": 290,
+            "endZ": -1999
+        }
+    },
+    {
+        "territory": "Desert East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert East Mid"
+        ],
+        "position": {
+            "startX": 1260,
+            "startZ": -2170,
+            "endX": 1450,
+            "endZ": -2370
+        }
+    },
+    {
+        "territory": "Desert East Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Desert East Upper",
+            "Desert Mid-Upper",
+            "Desert East Lower"
+        ],
+        "position": {
+            "startX": 1260,
+            "startZ": -2170,
+            "endX": 1450,
+            "endZ": -2020
+        }
+    },
+    {
+        "territory": "Desert East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert East Mid",
+            "Desert Mid-Lower",
+            "Rymek East Upper"
+        ],
+        "position": {
+            "startX": 1450,
+            "startZ": -2020,
+            "endX": 1270,
+            "endZ": -1785
+        }
+    },
+    {
+        "territory": "Rymek East Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rymek West Upper",
+            "Rymek East Mid",
+            "Desert East Lower"
+        ],
+        "position": {
+            "startX": 1479,
+            "startZ": -1579,
+            "endX": 1210,
+            "endZ": -1780
+        }
+    },
+    {
+        "territory": "Rymek East Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rymek East Upper",
+            "Rymek East Lower",
+            "Rymek West Mid"
+        ],
+        "position": {
+            "startX": 1211,
+            "startZ": -1410,
+            "endX": 1480,
+            "endZ": -1578
+        }
+    },
+    {
+        "territory": "Rymek East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rymek West Lower",
+            "Rymek East Mid"
+        ],
+        "position": {
+            "startX": 1210,
+            "startZ": -1270,
+            "endX": 1400,
+            "endZ": -1390
+        }
+    },
+    {
+        "territory": "Mummy's Tomb",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert Upper"
+        ],
+        "position": {
+            "startX": 990,
+            "startZ": -2270,
+            "endX": 1120,
+            "endZ": -2400
+        }
+    },
+    {
+        "territory": "Desert Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mummy's Tomb",
+            "Desert West Upper",
+            "Desert Mid-Upper"
+        ],
+        "position": {
+            "startX": 990,
+            "startZ": -2270,
+            "endX": 1195,
+            "endZ": -2120
+        }
+    },
+    {
+        "territory": "Desert Mid-Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Almuj City",
+            "Desert Upper",
+            "Desert Mid-Lower",
+            "Desert East Mid"
+        ],
+        "position": {
+            "startX": 1195,
+            "startZ": -2120,
+            "endX": 1060,
+            "endZ": -1935
+        }
+    },
+    {
+        "territory": "Desert Mid-Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert West Lower",
+            "Desert Mid-Upper",
+            "Almuj City",
+            "Desert Lower",
+            "Desert East Lower"
+        ],
+        "position": {
+            "startX": 1060,
+            "startZ": -1935,
+            "endX": 1210,
+            "endZ": -1810
+        }
+    },
+    {
+        "territory": "Desert Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert West Lower",
+            "Desert Mid-Lower",
+            "Rymek West Upper"
+        ],
+        "position": {
+            "startX": 1210,
+            "startZ": -1810,
+            "endX": 1040,
+            "endZ": -1680
+        }
+    },
+    {
+        "territory": "Rymek West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert West Lower",
+            "Desert Lower",
+            "Rymek East Upper",
+            "Rymek West Mid"
+        ],
+        "position": {
+            "startX": 1190,
+            "startZ": -1665,
+            "endX": 975,
+            "endZ": -1540
+        }
+    },
+    {
+        "territory": "Rymek West Mid",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Rymek West Upper",
+            "Rymek East Mid",
+            "Rymek West Lower"
+        ],
+        "position": {
+            "startX": 1211,
+            "startZ": -1410,
+            "endX": 1000,
+            "endZ": -1530
+        }
+    },
+    {
+        "territory": "Rymek West Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rymek East Lower",
+            "Rymek West Mid"
+        ],
+        "position": {
+            "startX": 1209,
+            "startZ": -1269,
+            "endX": 1020,
+            "endZ": -1380
+        }
+    },
+    {
+        "territory": "Desert West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Almuj City",
+            "Desert Upper"
+        ],
+        "position": {
+            "startX": 990,
+            "startZ": -2270,
+            "endX": 895,
+            "endZ": -2140
+        }
+    },
+    {
+        "territory": "Almuj City",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Savannah East Upper",
+            "Desert West Upper",
+            "Desert Mid-Upper",
+            "Desert Mid-Lower",
+            "Desert West Lower"
+        ],
+        "position": {
+            "startX": 1050,
+            "startZ": -1900,
+            "endX": 840,
+            "endZ": -2060
+        }
+    },
+    {
+        "territory": "Desert West Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Desert Mid-Lower",
+            "Desert Lower",
+            "Almuj City",
+            "Rymek West Upper"
+        ],
+        "position": {
+            "startX": 1040,
+            "startZ": -1681,
+            "endX": 900,
+            "endZ": -1870
+        }
+    },
+    {
+        "territory": "Lion Lair",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Bremminglar"
+        ],
+        "position": {
+            "startX": 890,
+            "startZ": -2140,
+            "endX": 790,
+            "endZ": -2320
+        }
+    },
+    {
+        "territory": "Bremminglar",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lion Lair",
+            "Savannah West Upper"
+        ],
+        "position": {
+            "startX": 760,
+            "startZ": -2070,
+            "endX": 615,
+            "endZ": -2120
+        }
+    },
+    {
+        "territory": "Savannah East Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Almuj City",
+            "Savannah East Lower",
+            "Savannah West Upper"
+        ],
+        "position": {
+            "startX": 750,
+            "startZ": -2060,
+            "endX": 820,
+            "endZ": -1895
+        }
+    },
+    {
+        "territory": "Savannah West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Savannah East Upper",
+            "Bremminglar",
+            "Savannah West Lower",
+            "Cathedral Harbour"
+        ],
+        "position": {
+            "startX": 750,
+            "startZ": -2060,
+            "endX": 570,
+            "endZ": -1870
+        }
+    },
+    {
+        "territory": "Savannah West Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Savannah East Lower",
+            "Savannah West Upper",
+            "Ternaves Plains Upper",
+            "Detlas Savannah Transition"
+        ],
+        "position": {
+            "startX": 775,
+            "startZ": -1675,
+            "endX": 630,
+            "endZ": -1830
+        }
+    },
+    {
+        "territory": "Savannah East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Savannah West Lower",
+            "Ternaves",
+            "Savannah East Upper"
+        ],
+        "position": {
+            "startX": 775,
+            "startZ": -1675,
+            "endX": 890,
+            "endZ": -1860
+        }
+    },
+    {
+        "territory": "Ternaves Plains Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ternaves",
+            "Savannah West Lower",
+            "Detlas Savannah Transition",
+            "Ternaves Plains Lower"
+        ],
+        "position": {
+            "startX": 770,
+            "startZ": -1675,
+            "endX": 655,
+            "endZ": -1430
+        }
+    },
+    {
+        "territory": "Ternaves",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ternaves Plains Upper",
+            "Ternaves Plains Lower",
+            "Savannah East Lower"
+        ],
+        "position": {
+            "startX": 770,
+            "startZ": -1675,
+            "endX": 880,
+            "endZ": -1540
+        }
+    },
+    {
+        "territory": "Ternaves Plains Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mining Base Upper",
+            "Mine Base Plains",
+            "Ternaves",
+            "Ternaves Plains Upper",
+            "Abandoned Pass"
+        ],
+        "position": {
+            "startX": 655,
+            "startZ": -1430,
+            "endX": 880,
+            "endZ": -1330
+        }
+    },
+    {
+        "territory": "Mining Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mine Base Plains",
+            "Abandoned Pass",
+            "Mining Base Lower",
+            "Ternaves Plains Lower"
+        ],
+        "position": {
+            "startX": 880,
+            "startZ": -1330,
+            "endX": 670,
+            "endZ": -1225
+        }
+    },
+    {
+        "territory": "Abandoned Pass",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ternaves Plains Lower",
+            "Mining Base Upper"
+        ],
+        "position": {
+            "startX": 881,
+            "startZ": -1225,
+            "endX": 1019,
+            "endZ": -1380
+        }
+    },
+    {
+        "territory": "Mining Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mining Base Upper",
+            "Mine Base Plains"
+        ],
+        "position": {
+            "startX": 870,
+            "startZ": -1130,
+            "endX": 670,
+            "endZ": -1225
+        }
+    },
+    {
+        "territory": "Cathedral Harbour",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nemract Cathedral",
+            "Ancient Nemract",
+            "Detlas Trail East Plains",
+            "Savannah West Upper",
+            "Durum Isles Lower",
+            "Durum Isles East"
+        ],
+        "position": {
+            "startX": 385,
+            "startZ": -2180,
+            "endX": 570,
+            "endZ": -1950
+        }
+    },
+    {
+        "territory": "Detlas Trail East Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Suburbs",
+            "Detlas",
+            "Detlas Close Suburbs",
+            "Ancient Nemract",
+            "Cathedral Harbour"
+        ],
+        "position": {
+            "startX": 200,
+            "startZ": -1820,
+            "endX": 510,
+            "endZ": -1675
+        }
+    },
+    {
+        "territory": "Detlas",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Detlas Trail East Plains",
+            "Detlas Savannah Transition",
+            "Detlas Close Suburbs"
+        ],
+        "position": {
+            "startX": 402,
+            "startZ": -1657,
+            "endX": 536,
+            "endZ": -1518
+        }
+    },
+    {
+        "territory": "Plains Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Nether Plains Upper",
+            "Nether Gate",
+            "Desolate Valley",
+            "Mine Base Plains"
+        ],
+        "position": {
+            "startX": 395,
+            "startZ": -1365,
+            "endX": 550,
+            "endZ": -1190
+        }
+    },
+    {
+        "territory": "Desolate Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nether Plains Lower",
+            "Nesaak Transition",
+            "Plains Lake"
+        ],
+        "position": {
+            "startX": 330,
+            "startZ": -1040,
+            "endX": 450,
+            "endZ": -1170
+        }
+    },
+    {
+        "territory": "Detlas Savannah Transition",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Mine Base Plains",
+            "Ternaves Plains Upper",
+            "Savannah West Lower",
+            "Detlas"
+        ],
+        "position": {
+            "startX": 545,
+            "startZ": -1520,
+            "endX": 650,
+            "endZ": -1670
+        }
+    },
+    {
+        "territory": "Mine Base Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Savannah Transition",
+            "Ternaves Plains Lower",
+            "Mining Base Upper",
+            "Mining Base Lower",
+            "The Silent Road",
+            "Plains Lake"
+        ],
+        "position": {
+            "startX": 550,
+            "startZ": -1190,
+            "endX": 650,
+            "endZ": -1430
+        }
+    },
+    {
+        "territory": "Nether Plains Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Close Suburbs",
+            "Detlas Suburbs",
+            "Detlas Far Suburbs",
+            "Corrupted Road",
+            "Nether Gate",
+            "Plains Lake"
+        ],
+        "position": {
+            "startX": 115,
+            "startZ": -1360,
+            "endX": 390,
+            "endZ": -1495
+        }
+    },
+    {
+        "territory": "Detlas Close Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Suburbs",
+            "Detlas",
+            "Nether Plains Upper",
+            "Detlas Trail East Plains"
+        ],
+        "position": {
+            "startX": 300,
+            "startZ": -1657,
+            "endX": 389,
+            "endZ": -1500
+        }
+    },
+    {
+        "territory": "Detlas Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Detlas Close Suburbs",
+            "Detlas Far Suburbs",
+            "Nether Plains Upper",
+            "Detlas Trail West Plains",
+            "Detlas Trail East Plains"
+        ],
+        "position": {
+            "startX": 188,
+            "startZ": -1657,
+            "endX": 300,
+            "endZ": -1500
+        }
+    },
+    {
+        "territory": "Nether Gate",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nether Plains Upper",
+            "Plains Lake",
+            "Nether Plains Lower",
+            "Corrupted Road"
+        ],
+        "position": {
+            "startX": 106,
+            "startZ": -1341,
+            "endX": 342,
+            "endZ": -1222
+        }
+    },
+    {
+        "territory": "Nether Plains Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Nesaak Transition",
+            "Nether Gate",
+            "Desolate Valley",
+            "Elkurn"
+        ],
+        "position": {
+            "startX": 75,
+            "startZ": -1145,
+            "endX": 325,
+            "endZ": -1210
+        }
+    },
+    {
+        "territory": "Eltom",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ranol's Farm",
+            "Entrance to Rodoroc"
+        ],
+        "position": {
+            "startX": 1029,
+            "startZ": -5581,
+            "endX": 828,
+            "endZ": -5376
+        }
+    },
+    {
+        "territory": "Entrance to Rodoroc",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Eltom",
+            "Thesead Suburbs",
+            "Rodoroc"
+        ],
+        "position": {
+            "startX": 854,
+            "startZ": -5257,
+            "endX": 1113,
+            "endZ": -5367
+        }
+    },
+    {
+        "territory": "Rodoroc",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Entrance to Rodoroc",
+            "Crater Descent"
+        ],
+        "position": {
+            "startX": 1200,
+            "startZ": -5067,
+            "endX": 965,
+            "endZ": -5238
+        }
+    },
+    {
+        "territory": "Volcanic Slope",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Active Volcano",
+            "Lava Lake"
+        ],
+        "position": {
+            "startX": 1531,
+            "startZ": -5637,
+            "endX": 1221,
+            "endZ": -5555
+        }
+    },
+    {
+        "territory": "Active Volcano",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lava Lake",
+            "Volcanic Slope",
+            "Lava Lake Bridge"
+        ],
+        "position": {
+            "startX": 1233,
+            "startZ": -5553,
+            "endX": 1379,
+            "endZ": -5369
+        }
+    },
+    {
+        "territory": "Lava Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Active Volcano",
+            "Volcanic Slope",
+            "Molten Heights Portal"
+        ],
+        "position": {
+            "startX": 1531,
+            "startZ": -5553,
+            "endX": 1387,
+            "endZ": -5369
+        }
+    },
+    {
+        "territory": "Lava Lake Bridge",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Crater Descent",
+            "Molten Heights Portal",
+            "Active Volcano"
+        ],
+        "position": {
+            "startX": 1230,
+            "startZ": -5240,
+            "endX": 1379,
+            "endZ": -5366
+        }
+    },
+    {
+        "territory": "Crater Descent",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Rodoroc",
+            "Lava Lake Bridge",
+            "Molten Heights Portal"
+        ],
+        "position": {
+            "startX": 1383,
+            "startZ": -5238,
+            "endX": 1230,
+            "endZ": -5067
+        }
+    },
+    {
+        "territory": "Molten Reach",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Molten Heights Portal",
+            "Angel Refuge"
+        ],
+        "position": {
+            "startX": 1251,
+            "startZ": -4894,
+            "endX": 1500,
+            "endZ": -4964
+        }
+    },
+    {
+        "territory": "Molten Heights Portal",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Lava Lake",
+            "Lava Lake Bridge",
+            "Crater Descent",
+            "Molten Reach"
+        ],
+        "position": {
+            "startX": 1535,
+            "startZ": -5067,
+            "endX": 1387,
+            "endZ": -5366
+        }
+    },
+    {
+        "territory": "Astraulus' Tower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Dragonling Nests",
+            "Swamp Island"
+        ],
+        "position": {
+            "startX": 1102,
+            "startZ": -5016,
+            "endX": 1250,
+            "endZ": -4916
+        }
+    },
+    {
+        "territory": "Dragonling Nests",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Snail Island",
+            "Astraulus' Tower"
+        ],
+        "position": {
+            "startX": 925,
+            "startZ": -4916,
+            "endX": 1101,
+            "endZ": -5016
+        }
+    },
+    {
+        "territory": "Old Coal Mine",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Kandon Ridge"
+        ],
+        "position": {
+            "startX": 719,
+            "startZ": -4778,
+            "endX": 885,
+            "endZ": -4900
+        }
+    },
+    {
+        "territory": "Snail Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Dragonling Nests",
+            "Temple Island"
+        ],
+        "position": {
+            "startX": 949,
+            "startZ": -4885,
+            "endX": 1057,
+            "endZ": -4804
+        }
+    },
+    {
+        "territory": "Swamp Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ahmsord Outskirts",
+            "Temple Island",
+            "Astraulus' Tower"
+        ],
+        "position": {
+            "startX": 1178,
+            "startZ": -4754,
+            "endX": 1101,
+            "endZ": -4915
+        }
+    },
+    {
+        "territory": "Ahmsord Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Swamp Island",
+            "Angel Refuge",
+            "Wybel Island",
+            "Central Islands"
+        ],
+        "position": {
+            "startX": 1336,
+            "startZ": -4893,
+            "endX": 1179,
+            "endZ": -4730
+        }
+    },
+    {
+        "territory": "Angel Refuge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Molten Reach",
+            "Ahmsord Outskirts"
+        ],
+        "position": {
+            "startX": 1354,
+            "startZ": -4727,
+            "endX": 1484,
+            "endZ": -4877
+        }
+    },
+    {
+        "territory": "Kandon Ridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Old Coal Mine",
+            "Kandon Farm",
+            "Temple Island",
+            "Path to Ahmsord Upper"
+        ],
+        "position": {
+            "startX": 885,
+            "startZ": -4640,
+            "endX": 719,
+            "endZ": -4777
+        }
+    },
+    {
+        "territory": "Temple Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Snail Island",
+            "Swamp Island",
+            "Central Islands",
+            "Ahmsord",
+            "Kandon Ridge"
+        ],
+        "position": {
+            "startX": 991,
+            "startZ": -4643,
+            "endX": 1124,
+            "endZ": -4750
+        }
+    },
+    {
+        "territory": "Central Islands",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Ahmsord",
+            "Temple Island",
+            "Ahmsord Outskirts",
+            "Wybel Island",
+            "Sky Island Ascent"
+        ],
+        "position": {
+            "startX": 1250,
+            "startZ": -4718,
+            "endX": 1183,
+            "endZ": -4535
+        }
+    },
+    {
+        "territory": "Wybel Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Central Islands",
+            "Sky Falls",
+            "Ahmsord Outskirts"
+        ],
+        "position": {
+            "startX": 1355,
+            "startZ": -4700,
+            "endX": 1253,
+            "endZ": -4595
+        }
+    },
+    {
+        "territory": "Sky Falls",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Wybel Island",
+            "Frozen Fort",
+            "Sky Island Ascent"
+        ],
+        "position": {
+            "startX": 1380,
+            "startZ": -4458,
+            "endX": 1466,
+            "endZ": -4653
+        }
+    },
+    {
+        "territory": "Frozen Fort",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sky Falls"
+        ],
+        "position": {
+            "startX": 1501,
+            "startZ": -4513,
+            "endX": 1586,
+            "endZ": -4789
+        }
+    },
+    {
+        "territory": "Kandon Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Kandon Ridge"
+        ],
+        "position": {
+            "startX": 710,
+            "startZ": -4587,
+            "endX": 614,
+            "endZ": -4682
+        }
+    },
+    {
+        "territory": "Path to Ahmsord Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Kandon Ridge",
+            "Ahmsord",
+            "Path to Ahmsord Lower"
+        ],
+        "position": {
+            "startX": 885,
+            "startZ": -4571,
+            "endX": 779,
+            "endZ": -4639
+        }
+    },
+    {
+        "territory": "Ahmsord",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": [
+            "Sky Island Ascent",
+            "Path to Ahmsord Lower",
+            "Path to Ahmsord Upper",
+            "Temple Island",
+            "Central Islands"
+        ],
+        "position": {
+            "startX": 1163,
+            "startZ": -4462,
+            "endX": 942,
+            "endZ": -4604
+        }
+    },
+    {
+        "territory": "Sky Island Ascent",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sky Falls",
+            "Raider's Base Upper",
+            "Central Islands",
+            "Jofash Tunnel",
+            "Ahmsord"
+        ],
+        "position": {
+            "startX": 1180,
+            "startZ": -4524,
+            "endX": 1379,
+            "endZ": -4355
+        }
+    },
+    {
+        "territory": "Raider's Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Sky Island Ascent",
+            "Raider's Base Lower"
+        ],
+        "position": {
+            "startX": 1380,
+            "startZ": -4457,
+            "endX": 1551,
+            "endZ": -4316
+        }
+    },
+    {
+        "territory": "Raider's Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Raider's Base Upper"
+        ],
+        "position": {
+            "startX": 1558,
+            "startZ": -4316,
+            "endX": 1305,
+            "endZ": -4253
+        }
+    },
+    {
+        "territory": "Path to Ahmsord Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Ahmsord Upper",
+            "Ahmsord",
+            "Sky Castle"
+        ],
+        "position": {
+            "startX": 779,
+            "startZ": -4480,
+            "endX": 885,
+            "endZ": -4570
+        }
+    },
+    {
+        "territory": "Sky Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Path to Ahmsord Lower"
+        ],
+        "position": {
+            "startX": 954,
+            "startZ": -4425,
+            "endX": 854,
+            "endZ": -4340
+        }
+    },
+    {
+        "territory": "Heavenly Ingress",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Light Forest South Entrance",
+            "Field of Life"
+        ],
+        "position": {
+            "startX": -814,
+            "startZ": -6015,
+            "endX": -894,
+            "endZ": -5928
+        }
+    },
+    {
+        "territory": "Luminous Plateau",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Field of Life"
+        ],
+        "position": {
+            "startX": -894,
+            "startZ": -5957,
+            "endX": -962,
+            "endZ": -6066
+        }
+    },
+    {
+        "territory": "Primal Fen",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Field of Life"
+        ],
+        "position": {
+            "startX": -894,
+            "startZ": -6244,
+            "endX": -1026,
+            "endZ": -6066
+        }
+    },
+    {
+        "territory": "Azure Frontier",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Field of Life",
+            "Path to Light",
+            "Nexus of Light",
+            "Otherwordly Monolith"
+        ],
+        "position": {
+            "startX": -894,
+            "startZ": -6164,
+            "endX": -684,
+            "endZ": -6313
+        }
+    },
+    {
+        "territory": "Path to Light",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": [
+            "Otherwordly Monolith",
+            "Azure Frontier"
+        ],
+        "position": {
+            "startX": -775,
+            "startZ": -6164,
+            "endX": -827,
+            "endZ": -6010
+        }
+    },
+    {
+        "territory": "Field of Life",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Primal Fen",
+            "Luminous Plateau",
+            "Heavenly Ingress",
+            "Azure Frontier"
+        ],
+        "position": {
+            "startX": -894,
+            "startZ": -6010,
+            "endX": -827,
+            "endZ": -6164
+        }
+    },
+    {
+        "territory": "Nexus of Light",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [
+            "Azure Frontier"
+        ],
+        "position": {
+            "startX": -645,
+            "startZ": -6384,
+            "endX": -855,
+            "endZ": -6561
+        }
+    },
+    {
+        "territory": "Otherwordly Monolith",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": [
+            "Azure Frontier",
+            "Path to Light"
+        ],
+        "position": {
+            "startX": -775,
+            "startZ": -6164,
+            "endX": -662,
+            "endZ": -6003
+        }
+    }
+]
