@@ -313,7 +313,7 @@ export class Territory {
         let costPerSecond = cost / 3600;
         let left = costPerSecond;
         if (this.storage.get(usedResource)! >= costPerSecond) {
-            this.storage.set(usedResource, this.storage.get(usedResource)! - cost);
+            this.storage.set(usedResource, this.storage.get(usedResource)! - costPerSecond);
             return true;
         } else {
             this.storage.set(usedResource, 0);
