@@ -4071,24 +4071,6 @@
         }
     },
     {
-        "territory": "Eltom",
-        "ore": 0.25,
-        "crop": 0.25,
-        "wood": 0.25,
-        "fish": 0.25,
-        "emerald": 0.2,
-        "conns": [
-            "Entrance to Rodoroc",
-            "Ranol's Farm"
-        ],
-        "position": {
-            "startX": 1029,
-            "startZ": -5581,
-            "endX": 828,
-            "endZ": -5376
-        }
-    },
-    {
         "territory": "Pirate Town",
         "ore": 0.25,
         "crop": 0.25,
