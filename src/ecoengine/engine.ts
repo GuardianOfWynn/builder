@@ -24,8 +24,8 @@ export class Engine {
                 })
             }, 3000)
             setInterval(() => {
-                EngineInstance!.currentTransferenceId++;
-            })
+                EngineInstance!.currentTransferenceId++
+            }, 50000)
         }
         fn()
     }

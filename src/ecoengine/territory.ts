@@ -442,7 +442,7 @@ export class Territory {
                 this.transferResource(transference);
             }
             this.passingResource.forEach(x => this.transferResource(x))
-            this.passingResource = []
+            this.clearTransferencesOfPreviousGroup();
         }
 
     }
