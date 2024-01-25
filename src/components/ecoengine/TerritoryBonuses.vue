@@ -4,22 +4,27 @@
       <div class="p-2">
         <p class="p-2 border-b-[1px] border-mc-aqua mb-2 text-sm">{{ territory?.name }}: Bonuses</p>
         <div class=" grid grid-cols-6 grid-rows-3 gap-y-4 gap-x-4">
-          <div v-for="[key, bonus] in bonuses" class="flex cursor-pointer" @contextmenu="" @mouseenter="hoveredBonus = bonus" @mouseleave="hoveredBonus = null">
+          <div v-for="[key, bonus] in bonuses" class="flex cursor-pointer" 
+            @contextmenu="decreaseBonusLevel"
+            @click.stop="increaseBonusLevel" 
+            @mouseenter="hoveredBonus = bonus" 
+            @mouseleave="hoveredBonus = null">
             <img :src="'/builder/' + bonus.Sprite" class="w-8 h-8 pixelated"/>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="hoveredBonus !== null" 
-      @contextmenu.stop="decreaseBonusLevel"
-      @click.stop="increaseBonusLevel"
+    <div :key="count" v-if="hoveredBonus !== null" 
       class="text-sm border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
       <p class="text-sm"><span class="text-mc-light-purple">{{ hoveredBonus.Name }}</span>
         <span class="text-mc-gray"> [Lv. {{ territory!.bonuses.get(hoveredBonus.Id)!.level }}]</span>
 
-        <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level"></span>
+        <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level" class="text-mc-dark-gray"> (Max)</span>
       </p>
-
+      <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
+        {{ line }}
+      </p>
+      <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
       <p class="text-mc-lime mt-2">Cost (per hour):</p>
       <p class="text-mc-lime">- <span class="text-mc-gray">{{ hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{ translateResourceName(hoveredBonus.UsedResorce)}}</span></p>
 
@@ -29,9 +34,10 @@
       
 <script lang="ts">
 import { Territory } from '../../ecoengine/territory';
-import { BONUSES_MAP, TerritoryBonus } from '../../ecoengine/bonuses';
+import { BONUSES_MAP, TerritoryBonus, BonusLevel } from '../../ecoengine/bonuses';
 import { ref, Ref } from 'vue';
 import { ResourceType } from '../../ecoengine/resource';
+import { UpgradeLevel } from '../../ecoengine/upgrades';
 
 export default {
   name: 'TerritoryBonuses',
@@ -41,11 +47,30 @@ export default {
   setup(props) {
     const bonuses = ref(BONUSES_MAP);
     const hoveredBonus: Ref<TerritoryBonus | null> = ref(null);
+    const count = ref(0)
 
     function decreaseBonusLevel() {
+      let currentStats = props.territory!.bonuses.get(hoveredBonus.value!.Id)!
+      if(currentStats.level <= 0) {
+        return;
+      }
+      currentStats.level = currentStats.level - 1;
+      props.territory?.bonuses.set(hoveredBonus.value!.Id, currentStats)
+      count.value++;
     }
 
     function increaseBonusLevel() {
+      let currentStats = props.territory!.bonuses.get(hoveredBonus.value!.Id)!
+      if(currentStats.level >= hoveredBonus.value!.Levels.size - 1) {
+        return;
+      }
+      currentStats.level = currentStats.level + 1;
+      props.territory?.bonuses.set(hoveredBonus.value!.Id, currentStats)
+      count.value++;
+    }
+
+    function getLevelObject(): BonusLevel {
+      return hoveredBonus.value!.Levels.get(props.territory!.bonuses.get(hoveredBonus.value!.Id)!.level)!
     }
 
 
@@ -64,7 +89,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, decreaseBonusLevel, translateResourceName, increaseBonusLevel }
+    return { bonuses, hoveredBonus, decreaseBonusLevel, translateResourceName, increaseBonusLevel, getLevelObject, count }
   },
   components: {}
 }
