@@ -11,7 +11,7 @@
             </div>
           </div>
           <div>
-            <p class="border-b-[1px] border-mc-aqua mb-2">Bonuses</p>
+            <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
             <div class=" grid grid-cols-6 grid-rows-3 gap-y-4 gap-x-4">
               <div v-for="[key, bonus] in bonuses" class="flex cursor-pointer" @contextmenu="decreaseBonusLevel"
                 @click.stop="increaseBonusLevel" @mouseenter="hoveredBonus = bonus" @mouseleave="hoveredBonus = null">
