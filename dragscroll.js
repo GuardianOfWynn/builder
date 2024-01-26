@@ -25,7 +25,6 @@
     var addEventListener = 'add'+EventListener;
     var removeEventListener = 'remove'+EventListener;
     var newScrollX, newScrollY;
-
     var dragged = [];
     var reset = function(i, el) {
         for (i = 0; i < dragged.length;) {
@@ -35,7 +34,6 @@
             _window[removeEventListener](mouseup, el.mu, 0);
             _window[removeEventListener](mousemove, el.mm, 0);
         }
-
         // cloning into array since HTMLCollection is updated dynamically
         dragged = [].slice.call(_document.getElementsByClassName('dragscroll'));
         for (i = 0; i < dragged.length;) {

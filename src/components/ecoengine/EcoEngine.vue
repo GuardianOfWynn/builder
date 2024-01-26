@@ -77,7 +77,7 @@ export default {
   props: {
   },
   async setup() {
-
+    
     const gMap = await importGuildMap();
     if (EngineInstance === null) {
       createEngineFromMap(gMap)

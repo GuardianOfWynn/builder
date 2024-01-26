@@ -16,6 +16,9 @@
         factory((root.dragscroll = {}));
     }
 }(this, function (exports) {
+    if(!window.location.href.includes('ecoengine')) {
+        return
+    }
     var _window = window;
     var _document = document;
     var mousemove = 'mousemove';
