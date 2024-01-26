@@ -1,0 +1,2692 @@
+[
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&a&lMeteor",
+        "coordinates": {
+            "x": 5,
+            "y": 1
+        },
+        "sprite": {
+            "normal": "275_70.svg",
+            "activated": "275_70_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lLEFT",
+            " ",
+            "&7Summons a slow but powerful meteor",
+            "&7from the sky, dealing massive",
+            "&7damage over a large area.",
+            " ",
+            "&b✺ &7Mana Cost: &f50",
+            "&c⚔ &7Total Damage: &f400% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8330%&8)",
+            "  &8(&2✤ &8Earth: &870%&8)",
+            "&2➼ &7Range: &f18 Blocks",
+            "&3☀ &7Area of Effect: &f5 Blocks &7(Circle-Shaped)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "wandProficiency"
+        ],
+        "slot": 4,
+        "id": "meteor",
+        "locks": [],
+        "uniqueId": "aa"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lWand Proficiency I",
+        "coordinates": {
+            "x": 5,
+            "y": 3
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Improve your &nMain Attack&7's damage",
+            "&7and range when using a wand.",
+            " ",
+            "&c⚔ &7Main Attack Damage: &f+5%",
+            "&2➼ &7Main Attack Range: &f+2 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "shootingStar",
+            "meteorCost1"
+        ],
+        "slot": 22,
+        "id": "wandProficiency",
+        "locks": [],
+        "uniqueId": "ab"
+    },
+    {
+        "requirements": {
+            "node": "meteor",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Meteor",
+        "coordinates": {
+            "x": 7,
+            "y": 3
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nMeteor&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-10",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fMeteor"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 24,
+        "id": "meteorCost1",
+        "locks": [],
+        "uniqueId": "ac"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&6&lShooting Star",
+        "coordinates": {
+            "x": 5,
+            "y": 5
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Drastically increase the",
+            "speed of your &nMeteor&7 ability.",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "teleport"
+        ],
+        "slot": 40,
+        "id": "shootingStar",
+        "locks": [],
+        "uniqueId": "ad"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&a&lIce Snake",
+        "coordinates": {
+            "x": 7,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_70.svg",
+            "activated": "275_70_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lRIGHT&7-&d&lLEFT",
+            " ",
+            "&7Summons a fast-moving ice snake that",
+            "&7damages and slows enemies.",
+            " ",
+            "&b✺ &7Mana Cost: &f30",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &870%&8)",
+            "  &8(&b❉ &8Water: &830%&8)",
+            "&2➼ &7Range: &f18 Blocks",
+            "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
+            "&e🛡 &7Effect: &f40% &7Slowness (&c⬤&7) to Enemies",
+            "&d⌛ &7Duration: &f3s",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "teleportCost1",
+            "mageFirePath",
+            "mageEarthPath"
+        ],
+        "slot": 33,
+        "id": "icesnake",
+        "locks": [],
+        "uniqueId": "ae"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Teleport",
+        "coordinates": {
+            "x": 5,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nTeleport&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": [
+            "heal",
+            "icesnake",
+            "mageThunderPath",
+            "mageWaterPath"
+        ],
+        "slot": 31,
+        "id": "teleportCost1",
+        "locks": [],
+        "uniqueId": "af"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "blitz",
+        "name": "&f&lWand Proficiency II",
+        "coordinates": {
+            "x": 3,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Improve your &nMain Attack&7's damage",
+            "&7and range when using a wand.",
+            " ",
+            "&c⚔ &7Main Attack Damage: &f+5%",
+            "&2➼ &7Main Attack Range: &f+2 Blocks",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Wisdom",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "heal"
+        ],
+        "slot": 11,
+        "id": "touchOfLight",
+        "locks": [
+            "wisdom"
+        ],
+        "uniqueId": "ag"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&a&lTeleport",
+        "coordinates": {
+            "x": 5,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_70.svg",
+            "activated": "275_70_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lRIGHT&7-&d&lRIGHT",
+            " ",
+            "&7Instantly teleport in the",
+            "&7direction you're facing.",
+            " ",
+            "&b✺ &7Mana Cost: &f25",
+            "&2➼ &7Range: &f16 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "touchOfLight",
+            "wisdom"
+        ],
+        "slot": 13,
+        "id": "teleport",
+        "locks": [],
+        "uniqueId": "ah"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&a&lHeal",
+        "coordinates": {
+            "x": 3,
+            "y": 9
+        },
+        "sprite": {
+            "normal": "275_70.svg",
+            "activated": "275_70_1.svg"
+        },
+        "description": [
+            "&6Click Combo: &d&lRIGHT&7-&d&lLEFT&7-&d&lRIGHT",
+            " ",
+            "&7Heals you and nearby allies in ",
+            "&7a large area around you.",
+            "&8(When healing others, you can't heal",
+            "&8more than 30% of &ntheir&8 max health)",
+            " ",
+            "&b✺ &7Mana Cost: &f35",
+            "&c❤ &7Total Heal: &f15% &8(of your max health)",
+            "&2➼ &7Range: &f5 Blocks",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "teleportCost1",
+            "mageThunderPath",
+            "mageAirPath"
+        ],
+        "slot": 29,
+        "id": "heal",
+        "locks": [],
+        "uniqueId": "ai"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lWisdom",
+        "coordinates": {
+            "x": 7,
+            "y": 7
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "For every &f2%&7 or &f2 Raw &7Spell Damage you have",
+            "from items, gain &f+1/5s&7 Mana Regen (Max 5/5s)",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Wand Proficiency II",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "icesnake"
+        ],
+        "slot": 15,
+        "id": "wisdom",
+        "locks": [
+            "touchOfLight"
+        ],
+        "uniqueId": "aj"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lBurning Sigil",
+        "coordinates": {
+            "x": 8,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nMeteor&7 and &7&nOphanim&7 will leave a sigil of fire",
+            "&7on the ground that damages enemies every &f0.4s&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f40% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&c✹ &8Fire: &815%&8)",
+            "&3☀ &7Area of Effect: &f7 Blocks &7(Circle-Shaped)",
+            "&d⌛ &7Duration: &f5s",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "arcaneTransfer",
+            "meteorDamage1"
+        ],
+        "slot": 34,
+        "id": "burningSigil",
+        "locks": [],
+        "uniqueId": "ak"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 2
+        },
+        "archetype": "blitz",
+        "name": "&6&lWind Slash",
+        "coordinates": {
+            "x": 1,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When using &nTeleport&7, slash through the",
+            "&7air and deal damage to enemies you pierce.",
+            " ",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &875%&8)",
+            "  &8(&f❋ &8Air: &825%&8)",
+            "&3☀ &7Area of Effect: &f1.5 Blocks &7(Circle-Shaped)",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": [
+            "thunderstorm",
+            "windSweeper"
+        ],
+        "slot": 27,
+        "id": "windSlash",
+        "locks": [],
+        "uniqueId": "al"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "blitz",
+        "name": "&f&lThunder Mastery",
+        "coordinates": {
+            "x": 3,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Thunder attacks.",
+            " ",
+            "&e✦ &7Thunder Damage: &f+1-8",
+            "&e✦ &7Thunder Damage: &f+10%",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "mageWaterPath",
+            "thunderstorm"
+        ],
+        "slot": 11,
+        "id": "mageThunderPath",
+        "locks": [],
+        "uniqueId": "am"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lFire Mastery",
+        "coordinates": {
+            "x": 7,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Fire attacks.",
+            " ",
+            "&c✹ &7Fire Damage: &f+3-5",
+            "&c✹ &7Fire Damage: &f+15%",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "",
+            "mageEarthPath",
+            "burningSigil"
+        ],
+        "slot": 15,
+        "id": "mageFirePath",
+        "locks": [],
+        "uniqueId": "an"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lWater Mastery",
+        "coordinates": {
+            "x": 5,
+            "y": 14
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Water attacks.",
+            " ",
+            "&b❉ &7Water Damage: &f+2-4",
+            "&b❉ &7Water Damage: &f+15%",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "sunshower"
+        ],
+        "slot": 22,
+        "id": "mageWaterPath",
+        "locks": [],
+        "uniqueId": "ao"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 2
+        },
+        "archetype": "priest",
+        "name": "&6&lSunshower",
+        "coordinates": {
+            "x": 5,
+            "y": 16
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nHeal&7 emits a strong light,",
+            "damaging nearby enemies.",
+            " ",
+            "&7&nArcane Transfer&7 will damage nearby",
+            "&7enemies when transferring &f30+ &7Mana.",
+            " ",
+            "&c⚔ &7Total Damage: &f100% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &870%&8)",
+            "  &8(&b❉ &8Water: &830%&8)",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fHeal"
+        ],
+        "links": [
+            "ophanim"
+        ],
+        "slot": 40,
+        "id": "sunshower",
+        "locks": [],
+        "uniqueId": "ap"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lThunderstorm",
+        "coordinates": {
+            "x": 3,
+            "y": 15
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "After casting &7&nMeteor&7, summon &f3&7 lightning",
+            "&7strikes and deal additional damage.",
+            " ",
+            "&c⚔ &7Total Damage: &f+45% &8(of your DPS, per strike)",
+            "  &8(&6✢ &8Damage: &8+30%&8)",
+            "  &8(&e✦ &8Thunder: &8+15%&8)",
+            "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
+            "",
+            "&cUnlocking will block:",
+            "&c- &7Ophanim",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "windSlash",
+            "windSweeper"
+        ],
+        "slot": 29,
+        "id": "thunderstorm",
+        "locks": [
+            "ophanim"
+        ],
+        "uniqueId": "aq"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "blitz",
+        "name": "&f&lAir Mastery",
+        "coordinates": {
+            "x": 1,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Air attacks.",
+            " ",
+            "&f❋ &7Air Damage: &f+3-4",
+            "&f❋ &7Air Damage: &f+15%",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "windSlash",
+            ""
+        ],
+        "slot": 9,
+        "id": "mageAirPath",
+        "locks": [],
+        "uniqueId": "ar"
+    },
+    {
+        "requirements": {
+            "node": "meteor",
+            "abilityPoints": 1,
+            "archetype": {
+                "amount": 2,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&f&lStronger Meteor",
+        "coordinates": {
+            "x": 9,
+            "y": 16
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase the damage of &nMeteor&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f+120% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+90%&8)",
+            "  &8(&2✤ &8Earth: &8+30%&8)",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fMeteor",
+            "&7Min Arcanist Archetype: &f2"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 44,
+        "id": "meteorDamage1",
+        "locks": [],
+        "uniqueId": "as"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lEarth Mastery",
+        "coordinates": {
+            "x": 9,
+            "y": 13
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "Increase your base damage",
+            "from all Earth attacks.",
+            " ",
+            "&2✤ &7Earth Damage: &f+2-4",
+            "&2✤ &7Earth Damage: &f+20%",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "mageFirePath",
+            "burningSigil"
+        ],
+        "slot": 17,
+        "id": "mageEarthPath",
+        "locks": [],
+        "uniqueId": "at"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 3,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&c&lWindsweeper",
+        "coordinates": {
+            "x": 2,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Your &nMain Attack&7 will add &b+1 Winded ≈",
+            "&7to enemies you hit. (Max 10, 0.5s Cooldown)",
+            " ",
+            "&7&nIce Snake&7 will deal additional damage to",
+            "&7enemies for every &bWinded ≈&7 they have.",
+            " ",
+            "&bWinded ≈&7 will decay once every &f5s&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f15% &8(of your DPS, per Winded)",
+            "  &8(&6✢ &8Damage: &810%&8)",
+            "  &8(&b❉ &8Water: &85%&8)",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fIce Snake",
+            "&7Min Riftwalker Archetype: &f3"
+        ],
+        "links": [
+            "healCost1"
+        ],
+        "slot": 10,
+        "id": "windSweeper",
+        "locks": [],
+        "uniqueId": "au"
+    },
+    {
+        "requirements": {
+            "node": "meteor",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 2,
+                "name": "priest"
+            }
+        },
+        "archetype": "priest",
+        "name": "&c&lOphanim",
+        "coordinates": {
+            "x": 5,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When casting &nMeteor&7, instead summon",
+            "&f2 &7orbs of light with &f200 &7Health that will",
+            "&7attack when you use your &nMain Attack&7.",
+            "",
+            "&7When they damage an enemy, they lose &f20%&7",
+            "&7of their Health. They can be healed back.",
+            " ",
+            "&b✺ &7Mana Cost: &c+30",
+            "&c⚔ &7Total Damage: &f120% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &890%&8)",
+            "  &8(&b❉ &8Water: &815%&8)",
+            "  &8(&e✦ &8Thunder: &815%&8)",
+            "&2➼ &7Range: &f22 Blocks",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Thunderstorm",
+            "&c- &7Psychokinesis",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fMeteor",
+            "&7Min Light Bender Archetype: &f2"
+        ],
+        "links": [
+            "purification"
+        ],
+        "slot": 13,
+        "id": "ophanim",
+        "locks": [
+            "thunderstorm",
+            "psychokinesis"
+        ],
+        "uniqueId": "av"
+    },
+    {
+        "requirements": {
+            "node": "windSweeper",
+            "abilityPoints": 2
+        },
+        "archetype": "blitz",
+        "name": "&6&lBreathless",
+        "coordinates": {
+            "x": 3,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nMeteor&7 and &7&nOphanim&7 will deal additional damage",
+            "&7to enemies for every &bWinded ≈&7 they have.",
+            " ",
+            "&c⚔ &7Total Damage: &f30% &8(of your DPS, per Winded)",
+            "  &8(&6✢ &8Damage: &825%&8)",
+            "  &8(&2✤ &8Earth: &85%&8)",
+            " ",
+            "&c⚔ &7Total Damage: &f10% &8(of your DPS, with &8&nThunderstorm&8, per Winded)",
+            "  &8(&6✢ &8Damage: &88%&8)",
+            "  &8(&2✤ &8Earth: &82%&8)",
+            " ",
+            "&c⚔ &7Total Damage: &f4% &8(of your DPS, with &8&nOphanim&8, per Winded)",
+            "  &8(&6✢ &8Damage: &83%&8)",
+            "  &8(&2✤ &8Earth: &81%&8)",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWindsweeper"
+        ],
+        "links": null,
+        "slot": 38,
+        "id": "breathless",
+        "locks": [],
+        "uniqueId": "aw"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Heal",
+        "coordinates": {
+            "x": 2,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nHeal&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fHeal"
+        ],
+        "links": [
+            "eyePiercer",
+            "breathless",
+            "purification"
+        ],
+        "slot": 28,
+        "id": "healCost1",
+        "locks": [],
+        "uniqueId": "ax"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lEye Piercer",
+        "coordinates": {
+            "x": 1,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nTeleport&7 will blind enemies, confusing",
+            "&7them for a brief period of time.",
+            "",
+            "&e🛡 &7Effect: &fBlindness (&c⬣&f) to Enemies",
+            "&d⌛ &7Duration: &f1s",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": [
+            "icesnakeCost1"
+        ],
+        "slot": 36,
+        "id": "eyePiercer",
+        "locks": [],
+        "uniqueId": "ay"
+    },
+    {
+        "requirements": {
+            "node": "arcaneTransfer",
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lLarger Mana Bank",
+        "coordinates": {
+            "x": 9,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum",
+            "&bMana Bank ✺&7 by &f+30&7.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fArcane Transfer"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 44,
+        "id": "moreManaBank1",
+        "locks": [],
+        "uniqueId": "az"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&d&lPurification",
+        "coordinates": {
+            "x": 5,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nHeal&7 and &nArcane Transfer&7",
+            "&7will purify allies of all negative",
+            "effects and fire. (3s Cooldown)",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "healCost1",
+            "breathless",
+            "seekingsnake",
+            "teleportCost2",
+            "moreHealRange1"
+        ],
+        "slot": 31,
+        "id": "purification",
+        "locks": [],
+        "uniqueId": "ba"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lLarger Heal",
+        "coordinates": {
+            "x": 6,
+            "y": 21
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your &nHeal&7's range.",
+            " ",
+            "&2➼ &7Range: &f+2 Blocks",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Arcane Transfer",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fHeal"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 41,
+        "id": "moreHealRange1",
+        "locks": [
+            "arcaneTransfer"
+        ],
+        "uniqueId": "bb"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lSentient Snake",
+        "coordinates": {
+            "x": 7,
+            "y": 20
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nIce Snake&7 will follow the direction",
+            "&7you're facing, allowing you to control it.",
+            " ",
+            "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+20%&8)",
+            "  &8(&b❉ &8Water: &8+10%&8)",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fIce Snake"
+        ],
+        "links": [
+            "moreManaBank1",
+            "purification",
+            "pyrokinesis",
+            "moreHealRange1"
+        ],
+        "slot": 33,
+        "id": "seekingsnake",
+        "locks": [],
+        "uniqueId": "bc"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 2,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&c&lArcane Transfer",
+        "coordinates": {
+            "x": 8,
+            "y": 18
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nMeteor&7 and &nIce Snake&7 will add &f+5&7 Mana to a",
+            "&bMana Bank ✺&7 for every aggressive enemy you hit.",
+            " ",
+            "&7&nHeal&7 will now transfer the contents of your",
+            "&bMana Bank ✺&7 into usable Mana instead of healing.",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Orphion's Pulse",
+            "&c- &7Larger Heal",
+            "&c- &7Timelock",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fHeal",
+            "&7Min Arcanist Archetype: &f2"
+        ],
+        "links": [
+            "seekingsnake",
+            ""
+        ],
+        "slot": 16,
+        "id": "arcaneTransfer",
+        "locks": [
+            "orphionsPulse",
+            "moreHealRange1",
+            "timelock"
+        ],
+        "uniqueId": "bd"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Teleport",
+        "coordinates": {
+            "x": 5,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nTeleport&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": [
+            "lightBuff",
+            "healthierOphanim1",
+            "snakeNest"
+        ],
+        "slot": 13,
+        "id": "teleportCost2",
+        "locks": [],
+        "uniqueId": "be"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 4,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&d&lPyrokinesis",
+        "coordinates": {
+            "x": 8,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When your &bMana Bank ✺&7 reaches &f30&7,",
+            "&7your &nMain Attack&7 will explode",
+            "&7upon impact with enemies.",
+            "&8(Damage is dealt as &nMain Attack Damage&8)",
+            " ",
+            "&c⚔ &7Total Damage: &f150%",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "&3☀ &7Area of Effect: &f4 Blocks &7(Circle-Shaped)",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Arcanist Archetype: &f4"
+        ],
+        "links": [
+            "seance",
+            ""
+        ],
+        "slot": 16,
+        "id": "pyrokinesis",
+        "locks": [],
+        "uniqueId": "bf"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 2
+        },
+        "archetype": "blitz",
+        "name": "&6&lBlink",
+        "coordinates": {
+            "x": 2,
+            "y": 24
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nTeleport&7 will trigger &f2 &7times",
+            "&7in quick succession.",
+            " ",
+            "&2➼ &7Range: &c-4 Blocks",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": null,
+        "slot": 19,
+        "id": "blink",
+        "locks": [],
+        "uniqueId": "bg"
+    },
+    {
+        "requirements": {
+            "node": "ophanim",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lStronger Ophanim",
+        "coordinates": {
+            "x": 6,
+            "y": 27
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase the damage of &nOphanim&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f+30% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+20%&8)",
+            "  &8(&f❋ &8Air: &8+10%&8)",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fOphanim"
+        ],
+        "links": null,
+        "slot": 50,
+        "id": "strongerOphanim",
+        "locks": [],
+        "uniqueId": "bh"
+    },
+    {
+        "requirements": {
+            "node": "windSweeper",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&d&lTransonic Warp",
+        "coordinates": {
+            "x": 1,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nTeleport&7 will deal additional damage to",
+            "&7enemies for every &bWinded ≈&7 they have.",
+            " ",
+            "&c⚔ &7Total Damage: &f16% &8(of your DPS, per Winded)",
+            "  &8(&6✢ &8Damage: &810%&8)",
+            "  &8(&e✦ &8Thunder: &83%&8)",
+            "  &8(&f❋ &8Air: &83%&8)",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWindsweeper",
+            "&7Min Riftwalker Archetype: &f5"
+        ],
+        "links": [
+            "fluidHealing",
+            "airborne"
+        ],
+        "slot": 36,
+        "id": "transonicWarp",
+        "locks": [],
+        "uniqueId": "bi"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2
+        },
+        "archetype": "priest",
+        "name": "&6&lFluid Healing",
+        "coordinates": {
+            "x": 3,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7For every &f1% &b❉ &7Water Damage Bonus",
+            "&7you have from items, buff &nHeal&7's",
+            "&7healing power by &f+0.3%&7.",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2"
+        ],
+        "links": [
+            "airborne",
+            "transonicWarp",
+            "orphionsPulse"
+        ],
+        "slot": 38,
+        "id": "fluidHealing",
+        "locks": [],
+        "uniqueId": "bj"
+    },
+    {
+        "requirements": {
+            "node": "pyrokinesis",
+            "abilityPoints": 2
+        },
+        "archetype": "arcane",
+        "name": "&6&lArcane Restoration",
+        "coordinates": {
+            "x": 7,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nPyrokinesis&7 will add &f+1&7 Mana every",
+            "&f1s&7 to your &bMana Bank ✺&7 when",
+            "&7hitting an aggressive enemy.",
+            " ",
+            "&d⌛ &7Duration: &f4s",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fPyrokinesis"
+        ],
+        "links": [
+            "strongerOphanim"
+        ],
+        "slot": 42,
+        "id": "pyrokinesisMana",
+        "locks": [],
+        "uniqueId": "bk"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Ice Snake",
+        "coordinates": {
+            "x": 1,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nIce Snake&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fIce Snake"
+        ],
+        "links": [
+            "lightBuff",
+            "blink",
+            "transonicWarp"
+        ],
+        "slot": 9,
+        "id": "icesnakeCost1",
+        "locks": [],
+        "uniqueId": "bl"
+    },
+    {
+        "requirements": {
+            "node": "ophanim",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lHealthier Ophanim I",
+        "coordinates": {
+            "x": 4,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increases the health of &nOphanim&7's",
+            "orbs by &f+800&7 and reduces the",
+            "&7damage they take when attacking by &f-5%&7.",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fOphanim"
+        ],
+        "links": [
+            "fluidHealing",
+            "snakeNest",
+            "orphionsPulse"
+        ],
+        "slot": 30,
+        "id": "healthierOphanim1",
+        "locks": [],
+        "uniqueId": "bm"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lSeance",
+        "coordinates": {
+            "x": 8,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "For every &f5/3s&7 Lifesteal you have",
+            "from items, gain &f+1%&7 Spell Damage (Max 50%)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "pyrokinesisMana",
+            "snakeNest",
+            "moreManaBank2"
+        ],
+        "slot": 34,
+        "id": "seance",
+        "locks": [],
+        "uniqueId": "bn"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lSnake Nest",
+        "coordinates": {
+            "x": 6,
+            "y": 25
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nIce Snake&7 will summon &f3&7 snakes.",
+            " ",
+            "&c⚔ &7Total Damage: &f+50% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+35%&8)",
+            "  &8(&b❉ &8Water: &8+15%&8)",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fIce Snake"
+        ],
+        "links": [
+            "healthierOphanim1",
+            "pyrokinesisMana",
+            "seance",
+            "orphionsPulse"
+        ],
+        "slot": 32,
+        "id": "snakeNest",
+        "locks": [],
+        "uniqueId": "bo"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 2,
+                "name": "priest"
+            }
+        },
+        "archetype": "priest",
+        "name": "&d&lFortitude",
+        "coordinates": {
+            "x": 3,
+            "y": 23
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Healing &f120% &7of your max health",
+            "&7within &f10s&7 will apply a damage bonus",
+            "&7to every player you've healed. (15s Cooldown)",
+            " ",
+            "&e🛡 &7Effect: &f60% &7Damage Bonus (&a⚔&7) to Allies",
+            "&d⌛ &7Duration: &f5s",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Light Bender Archetype: &f2"
+        ],
+        "links": [
+            "healthierOphanim1",
+            "blink",
+            "icesnakeCost1",
+            "teleportCost2"
+        ],
+        "slot": 11,
+        "id": "lightBuff",
+        "locks": [],
+        "uniqueId": "bp"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "priest"
+            }
+        },
+        "archetype": "priest",
+        "name": "&d&lOrphion's Pulse",
+        "coordinates": {
+            "x": 5,
+            "y": 26
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nHeal&7 will trigger &f2&7 more times,",
+            "&7increasing your overall healing.",
+            " ",
+            "&c❤ &7Pulse Self Heal: &f20% &8(of your max health)",
+            "&d⌛ &7Delay: &f1.5s &8(per pulse)",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Arcane Transfer",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fHeal",
+            "&7Min Light Bender Archetype: &f5"
+        ],
+        "links": [
+            "lightDance",
+            "strongerOphanim",
+            "fluidHealing"
+        ],
+        "slot": 40,
+        "id": "orphionsPulse",
+        "locks": [
+            "arcaneTransfer"
+        ],
+        "uniqueId": "bq"
+    },
+    {
+        "requirements": {
+            "node": "meteor",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&6&lPsychokinesis",
+        "coordinates": {
+            "x": 8,
+            "y": 30
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Shoots &nMeteor&7 from you as a slow projectile",
+            "",
+            "&2➼ &7Range: &f+20 Blocks",
+            " ",
+            "&cUnlocking will block:",
+            "&c- &7Ophanim",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fMeteor",
+            "&7Min Arcanist Archetype: &f5"
+        ],
+        "links": null,
+        "slot": 25,
+        "id": "psychokinesis",
+        "locks": [
+            "ophanim"
+        ],
+        "uniqueId": "br"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lArctic Snake",
+        "coordinates": {
+            "x": 8,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nIce Snake&7 will freeze enemies for &f2s&7.",
+            "",
+            "&e🛡 &7Effect: &f100% &7Slowness (&c⬤&7) to Enemies",
+            "&d⌛ &7Duration: &f2s",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fIce Snake"
+        ],
+        "links": [
+            "moreManaBankCharges",
+            "moreManaBank3"
+        ],
+        "slot": 43,
+        "id": "slownessSnake",
+        "locks": [],
+        "uniqueId": "bs"
+    },
+    {
+        "requirements": {
+            "node": "windSweeper",
+            "abilityPoints": 1
+        },
+        "archetype": "blitz",
+        "name": "&f&lMore Winded",
+        "coordinates": {
+            "x": 1,
+            "y": 30
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum &bWinded ≈&7 by &f+10&7.",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fWindsweeper"
+        ],
+        "links": null,
+        "slot": 18,
+        "id": "betterWinded",
+        "locks": [],
+        "uniqueId": "bt"
+    },
+    {
+        "requirements": {
+            "node": "teleport",
+            "abilityPoints": 2
+        },
+        "archetype": "",
+        "name": "&6&lExplosive Entrance",
+        "coordinates": {
+            "x": 4,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Deal damage in an area on the",
+            "&7location you &nTeleport&7 to.",
+            " ",
+            "&c⚔ &7Total Damage: &f80% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &860%&8)",
+            "  &8(&c✹ &8Fire: &820%&8)",
+            "&3☀ &7Area of Effect: &f3 Blocks &7(Circle-Shaped)",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fTeleport"
+        ],
+        "links": [
+            "meteorCost2",
+            "icesnakeCost2",
+            "betterOphanim",
+            "geyserSnake"
+        ],
+        "slot": 30,
+        "id": "explosiveEntrance",
+        "locks": [],
+        "uniqueId": "bu"
+    },
+    {
+        "requirements": {
+            "node": "meteor",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Meteor",
+        "coordinates": {
+            "x": 6,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nMeteor&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fMeteor"
+        ],
+        "links": [
+            "explosiveEntrance",
+            "betterOphanim"
+        ],
+        "slot": 32,
+        "id": "meteorCost2",
+        "locks": [],
+        "uniqueId": "bv"
+    },
+    {
+        "requirements": {
+            "node": "icesnake",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Ice Snake",
+        "coordinates": {
+            "x": 2,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nIce Snake&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fIce Snake"
+        ],
+        "links": [
+            "geyserSnake",
+            "explosiveEntrance",
+            "timeDilation"
+        ],
+        "slot": 28,
+        "id": "icesnakeCost2",
+        "locks": [],
+        "uniqueId": "bw"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 7,
+                "name": "priest"
+            }
+        },
+        "archetype": "priest",
+        "name": "&c&lLightweaver",
+        "coordinates": {
+            "x": 5,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Healing &f50%&7 of your max health within",
+            "&7&f10s &7will summon a rotating orb that",
+            "&7damages enemies upon contact. (Max 3 orbs)",
+            "",
+            "&c⚔ &7Total Damage: &f200% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8150%&8)",
+            "  &8(&c✹ &8Fire: &850%&8)",
+            "&2➼ &7Range: &f7 Blocks",
+            "&3☀ &7Area of Effect: &f1 Block &7(Circle-Shaped)",
+            "&d⌛ &7Duration: &f20s",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Light Bender Archetype: &f7"
+        ],
+        "links": [
+            "arcaneSpeed",
+            "meteorCost2"
+        ],
+        "slot": 13,
+        "id": "lightDance",
+        "locks": [],
+        "uniqueId": "bx"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 6,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&c&lDiffusion",
+        "coordinates": {
+            "x": 2,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7If you kill an enemy with &bWinded ≈&7",
+            "&7on them, the leftover &bWinded ≈&7 will",
+            "&7spread to other nearby foes. (Max 10)",
+            " ",
+            "&2➼ &7Range: &f8 Blocks",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Riftwalker Archetype: &f6"
+        ],
+        "links": [
+            "iceSnakeCost2",
+            "betterWinded",
+            "icesnakeCost2"
+        ],
+        "slot": 10,
+        "id": "airborne",
+        "locks": [],
+        "uniqueId": "by"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 2
+        },
+        "archetype": "arcane",
+        "name": "&6&lArcane Speed",
+        "coordinates": {
+            "x": 7,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7You gain a &f+80% &7walk speed buff",
+            "&7for &f4s&7 after casting &nHeal&7 or",
+            "&nArcane Transfer&7. (8s Cooldown)",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fHeal"
+        ],
+        "links": [
+            "lightDance",
+            "moreManaBank2",
+            "psychokinesis",
+            "meteorCost2"
+        ],
+        "slot": 15,
+        "id": "arcaneSpeed",
+        "locks": [],
+        "uniqueId": "bz"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&d&lTime Dilation",
+        "coordinates": {
+            "x": 1,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Creates an area of effect when sprinting",
+            "&7that increases the walk speed of all",
+            "&7allies the longer they run in it.",
+            "&8(Step out or stop running to cancel)",
+            " ",
+            "&e🛡 &7Effect: &f+10% &7Speed Bonus (&3➡&7) to Allies &8(per 1s, +300% Max)",
+            "&3☀ &7Area of Effect: &f2 Blocks &7(Circle-Shaped)",
+            "",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Riftwalker Archetype: &f5"
+        ],
+        "links": [
+            "betterWinded2",
+            ""
+        ],
+        "slot": 36,
+        "id": "timeDilation",
+        "locks": [],
+        "uniqueId": "ca"
+    },
+    {
+        "requirements": {
+            "node": "arcaneTransfer",
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lLarger Mana Bank",
+        "coordinates": {
+            "x": 9,
+            "y": 29
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum",
+            "&bMana Bank ✺&7 by &f+30&7.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fArcane Transfer"
+        ],
+        "links": [
+            "arcaneSpeed",
+            "chaosExplosion",
+            "psychokinesis"
+        ],
+        "slot": 17,
+        "id": "moreManaBank2",
+        "locks": [],
+        "uniqueId": "cb"
+    },
+    {
+        "requirements": {
+            "node": "ophanim",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lBetter Ophanim",
+        "coordinates": {
+            "x": 5,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum orbs",
+            "from &nOphanim&7 by &f+1&7.",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fOphanim"
+        ],
+        "links": [
+            "healthierOphanim2",
+            "geyserSnake",
+            "strongerSunshower"
+        ],
+        "slot": 40,
+        "id": "betterOphanim",
+        "locks": [],
+        "uniqueId": "cc"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 8,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&c&lChaos Explosion",
+        "coordinates": {
+            "x": 9,
+            "y": 31
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7When your &bMana Bank ✺&7 reaches &f120&7,",
+            "&7casting &nArcane Transfer&7 will rapidly unleash",
+            "&7the last &f3 &7spells you've cast in order.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Arcanist Archetype: &f8"
+        ],
+        "links": [
+            "slownessSnake"
+        ],
+        "slot": 35,
+        "id": "chaosExplosion",
+        "locks": [],
+        "uniqueId": "cd"
+    },
+    {
+        "requirements": {
+            "node": "windSweeper",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 7,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&6&lGust",
+        "coordinates": {
+            "x": 3,
+            "y": 32
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nIce Snake&7 will add &b+1 Winded ≈&7",
+            "&7to enemies and deal more damage.",
+            "",
+            "&c⚔ &7Total Damage: &f+40% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+20%&8)",
+            "  &8(&f❋ &8Air: &8+20%&8)",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fWindsweeper",
+            "&7Min Riftwalker Archetype: &f7"
+        ],
+        "links": [
+            "betterOphanim",
+            "strongerSunshower"
+        ],
+        "slot": 38,
+        "id": "geyserSnake",
+        "locks": [],
+        "uniqueId": "ce"
+    },
+    {
+        "requirements": {
+            "node": "sunshower",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lStronger Sunshower",
+        "coordinates": {
+            "x": 4,
+            "y": 33
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase the damage of &nSunshower&7.",
+            " ",
+            "&c⚔ &7Total Damage: &f+80% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8+50%&8)",
+            "  &8(&b❉ &8Water: &8+20%&8)",
+            "  &8(&c✹ &8Fire: &8+10%&8)",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fSunshower"
+        ],
+        "links": null,
+        "slot": 48,
+        "id": "strongerSunshower",
+        "locks": [],
+        "uniqueId": "cf"
+    },
+    {
+        "requirements": {
+            "node": "arcaneTransfer",
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lArcane Power",
+        "coordinates": {
+            "x": 7,
+            "y": 33
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nMeteor&7 and &nIce Snake&7 will add &f+2&7 Mana to your",
+            "&bMana Bank ✺&7 for each aggressive mob you hit.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fArcane Transfer"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 51,
+        "id": "moreManaBankCharges",
+        "locks": [],
+        "uniqueId": "cg"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 12,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&c&lTimelock",
+        "coordinates": {
+            "x": 1,
+            "y": 38
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Holding shift and casting &nHeal&7 will absorb all &bWinded ≈",
+            "&7on nearby enemies and make you &bTimelocked &3⌚&7.",
+            "",
+            "&7While &bTimelocked &3⌚&7, your mana will not be",
+            "&7depleted and you become immovable from",
+            "&7external forces. All enemies will receive",
+            "&7damage as if they had the amount of &bWinded ≈",
+            "&7you absorbed. (Max 60)",
+            " ",
+            "&2➼ &7Range: &f12 Blocks",
+            "&d⌛ &7Duration: &f+1s &8(per 5 Winded absorbed, Max 6s)",
+            "",
+            "&cUnlocking will block:",
+            "&c- &7Arcane Transfer",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Riftwalker Archetype: &f12"
+        ],
+        "links": [
+            "healCost2",
+            "innervate"
+        ],
+        "slot": 36,
+        "id": "timelock",
+        "locks": [
+            "arcaneTransfer"
+        ],
+        "uniqueId": "ch"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lDynamic Faith",
+        "coordinates": {
+            "x": 3,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "For every &f2%&7 Sprint you have from",
+            "items, gain &f+1% &e✦ &7Thunder Damage (Max 40%)",
+            " ",
+            "&7Ability Points: &f1"
+        ],
+        "links": [
+            "devitalize",
+            "betterWinded2",
+            "betterOphanim2",
+            "healthierOphanim2"
+        ],
+        "slot": 11,
+        "id": "dynamicFaith",
+        "locks": [
+            ""
+        ],
+        "uniqueId": "ci"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 5,
+                "name": "blitz"
+            }
+        },
+        "archetype": "blitz",
+        "name": "&6&lDevitalize",
+        "coordinates": {
+            "x": 2,
+            "y": 36
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Enemies will deal &f-0.5%&7 damage",
+            "for every &bWinded ≈&7 they have.",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Riftwalker Archetype: &f5"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 19,
+        "id": "devitalize",
+        "locks": [],
+        "uniqueId": "cj"
+    },
+    {
+        "requirements": {
+            "node": "windSweeper",
+            "abilityPoints": 1
+        },
+        "archetype": "blitz",
+        "name": "&f&lMore Winded",
+        "coordinates": {
+            "x": 1,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum &bWinded ≈&7 by &f+10&7.",
+            " ",
+            "&b&lRiftwalker Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fWindsweeper"
+        ],
+        "links": [
+            "devitalize",
+            "dynamicFaith",
+            "timelock"
+        ],
+        "slot": 9,
+        "id": "betterWinded2",
+        "locks": [],
+        "uniqueId": "ck"
+    },
+    {
+        "requirements": {
+            "node": "ophanim",
+            "abilityPoints": 2
+        },
+        "archetype": "priest",
+        "name": "&d&lDivination",
+        "coordinates": {
+            "x": 4,
+            "y": 36
+        },
+        "sprite": {
+            "normal": "275_53.svg",
+            "activated": "275_53_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increases your maximum orbs",
+            "&7from &nOphanim&7 by &f+3&7 and",
+            "&7reduces their damage.",
+            " ",
+            "&c⚔ &7Total Damage: &c-30% &8(of your DPS)",
+            "  &8(&6✢ &8Damage: &8-20%&8)",
+            "  &8(&b❉ &8Water: &8-5%&8)",
+            "  &8(&e✦ &8Thunder: &8-5%&8)",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fOphanim"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 21,
+        "id": "betterOphanim2",
+        "locks": [],
+        "uniqueId": "cl"
+    },
+    {
+        "requirements": {
+            "node": "chaosExplosion",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lMemory Recollection",
+        "coordinates": {
+            "x": 9,
+            "y": 38
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nChaos Explosion&7 will cast &f+2 &7spells.",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fChaos Explosion"
+        ],
+        "links": null,
+        "slot": 44,
+        "id": "betterChaosExplosion",
+        "locks": [],
+        "uniqueId": "cm"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 4,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&6&lManastorm",
+        "coordinates": {
+            "x": 6,
+            "y": 38
+        },
+        "sprite": {
+            "normal": "275_49.svg",
+            "activated": "275_49_1.svg"
+        },
+        "description": [
+            " ",
+            "&7If you have more than &f100&7",
+            "&7Mana, casting a spell will give",
+            "&7you &f+10 &7Mana over &f5s&7.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Arcanist Archetype: &f4"
+        ],
+        "links": [
+            "healCost2",
+            ""
+        ],
+        "slot": 41,
+        "id": "manastorm",
+        "locks": [],
+        "uniqueId": "cn"
+    },
+    {
+        "requirements": {
+            "node": "healthierOphanim1",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lHealthier Ophanim II",
+        "coordinates": {
+            "x": 5,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase the health of your orbs",
+            "from &nOphanim&7 by &f+3000&7.",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fHealthier Ophanim I"
+        ],
+        "links": [
+            "betterOphanim2",
+            "massImmune",
+            "dynamicFaith"
+        ],
+        "slot": 13,
+        "id": "healthierOphanim2",
+        "locks": [],
+        "uniqueId": "co"
+    },
+    {
+        "requirements": {
+            "node": "heal",
+            "abilityPoints": 1
+        },
+        "archetype": "",
+        "name": "&f&lCheaper Heal",
+        "coordinates": {
+            "x": 3,
+            "y": 38
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Reduce the mana cost of &nHeal&7.",
+            " ",
+            "&b✺ &7Mana Cost: &f-5",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fHeal"
+        ],
+        "links": [
+            "manastorm",
+            "timelock"
+        ],
+        "slot": 38,
+        "id": "healCost2",
+        "locks": [],
+        "uniqueId": "cp"
+    },
+    {
+        "requirements": {
+            "node": "arcaneTransfer",
+            "abilityPoints": 1
+        },
+        "archetype": "arcane",
+        "name": "&f&lLarger Mana Bank",
+        "coordinates": {
+            "x": 8,
+            "y": 35
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your maximum",
+            "&bMana Bank ✺&7 by &f+30&7.",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fArcane Transfer"
+        ],
+        "links": [
+            "arcaneOverflow"
+        ],
+        "slot": 16,
+        "id": "moreManaBank3",
+        "locks": [],
+        "uniqueId": "cq"
+    },
+    {
+        "requirements": {
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 11,
+                "name": "priest"
+            }
+        },
+        "archetype": "priest",
+        "name": "&c&lSunflare",
+        "coordinates": {
+            "x": 6,
+            "y": 36
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Healing &f300%&7 of your max health within",
+            "&7&f10s&7 will make your next &nHeal&7 give every",
+            "&7nearby ally a temporary immunity buff. (20s Cooldown)",
+            " ",
+            "&2➼ &7Range: &f12 Blocks",
+            "&e🛡 &7Effect: &f100% &7Resistance Bonus (&a❁&7) to Allies",
+            "&d⌛ &7Duration: &f5s",
+            "",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Min Light Bender Archetype: &f11"
+        ],
+        "links": [
+            "manastorm",
+            "betterLightDance"
+        ],
+        "slot": 23,
+        "id": "massImmune",
+        "locks": [],
+        "uniqueId": "cr"
+    },
+    {
+        "requirements": {
+            "node": "lightDance",
+            "abilityPoints": 1
+        },
+        "archetype": "priest",
+        "name": "&f&lBetter Lightweaver",
+        "coordinates": {
+            "x": 5,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_45.svg",
+            "activated": "275_45_1.svg"
+        },
+        "description": [
+            " ",
+            "&7Increase your Max Orbs",
+            "&7from &nLightweaver&7 by &f+2&7.",
+            " ",
+            "&f&lLight Bender Archetype",
+            " ",
+            "&7Ability Points: &f1",
+            "&7Required Ability: &fLightweaver"
+        ],
+        "links": [
+            ""
+        ],
+        "slot": 31,
+        "id": "betterLightDance",
+        "locks": [],
+        "uniqueId": "cs"
+    },
+    {
+        "requirements": {
+            "node": "arcaneTransfer",
+            "abilityPoints": 2,
+            "archetype": {
+                "amount": 12,
+                "name": "arcane"
+            }
+        },
+        "archetype": "arcane",
+        "name": "&c&lArcane Overflow",
+        "coordinates": {
+            "x": 8,
+            "y": 37
+        },
+        "sprite": {
+            "normal": "275_57.svg",
+            "activated": "275_57_1.svg"
+        },
+        "description": [
+            " ",
+            "&7&nArcane Transfer&7 will allow you to overflow",
+            "&7your mana over its maximum limits. (Max 400)",
+            " ",
+            "&5&lArcanist Archetype",
+            " ",
+            "&7Ability Points: &f2",
+            "&7Required Ability: &fArcane Transfer",
+            "&7Min Arcanist Archetype: &f12"
+        ],
+        "links": [
+            "betterChaosExplosion",
+            "manastorm"
+        ],
+        "slot": 34,
+        "id": "arcaneOverflow",
+        "locks": [],
+        "uniqueId": "ct"
+    }
+]

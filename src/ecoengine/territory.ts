@@ -103,9 +103,13 @@ export class Territory {
     }
 
     getTerritoryStartZ(): number {
+        let delta = 0;
+        if(["Heavenly Ingress", "Field of Life", "Otherwordly Monolith", "Luminous Plateau", "Path to Light", "Primal Fen", "Nexus of Light", "Azure Frontier"].includes(this.name)) {
+            delta+=520
+        }
         let lower = this.position.startZ > this.position.endZ
         let z = lower ? this.position.startZ : this.position.startZ + this.getTerritoryHeight()
-        return -z
+        return -z + delta
     }
 
     getTerritoryEndZ(): number {
@@ -299,13 +303,12 @@ export class Territory {
                 storageSize = this.getResourceStorageSize();
             }
             let stored = this.storage.get(resType)!;
-            if (stored + qty > storageSize) {
-                this.storage.set(resType, storageSize);
+            if(stored >= storageSize) {
                 this.resourceOverflow = true;
-            } else {
-                this.resourceOverflow = false;
-                this.storage.set(resType, stored + qty);
+                continue;
             }
+            this.resourceOverflow = false;
+            this.storage.set(resType, stored + qty);
         }
     }
 
@@ -313,7 +316,7 @@ export class Territory {
         let costPerSecond = (cost / 3600) * times;
         let left = costPerSecond;
         if (this.storage.get(usedResource)! >= costPerSecond) {
-            this.storage.set(usedResource, this.storage.get(usedResource)! - cost);
+            this.storage.set(usedResource, this.storage.get(usedResource)! - costPerSecond);
             return true;
         } else {
             this.storage.set(usedResource, 0);

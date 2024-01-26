@@ -2,6 +2,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { BorderStyle, ResourceStorage, RouteStyle, Territory, TransferDirection, Treasury } from './territory'
 import { GuildMap } from './guild_map';
 import { Guild } from './guild';
+import { EngineInstance } from './engine';
+import { ResourceType } from './resource';
 
 export class Claim {
   globalTax: number;
@@ -33,13 +35,6 @@ export class Claim {
     return null;
   }
 
-  setAsHQ(territory: Territory): void {
-    for (const t of this.territories) {
-      t.HQ = false;
-    }
-    territory.HQ = true;
-  }
-
   getHQ(): Territory | null {
     for (const t of this.territories) {
       if (t.HQ) {
@@ -47,6 +42,38 @@ export class Claim {
       }
     }
     return null;
+  }
+
+  setAsHQ(territory: Territory): void {
+    if(territory.HQ) {
+      return;
+    }
+    let hq = this.getHQ()!
+    let storedResource = hq.storage
+    let costs = hq.getResourceCostsMinute()
+    let send = new Map<ResourceType, number>([
+      [ResourceType.CROP, 0],
+      [ResourceType.WOOD, 0],
+      [ResourceType.ORE, 0],
+      [ResourceType.FISH, 0],
+      [ResourceType.EMERALD, 0]
+    ])
+    for(let [res, num] of storedResource) {
+      send.set(res, (num - costs.get(res)!))
+    }
+    hq.passingResource.push({
+      id: uuidv4(),
+      currentTerritory: hq,
+      origin: hq,
+      direction: TransferDirection.HQ_TO_TERRITORY,
+      storage: send,
+      target: territory,
+      transferenceGroup: EngineInstance!.currentTransferenceId
+    });
+    for (const t of this.territories) {
+      t.HQ = false;
+    }
+    territory.HQ = true;
   }
 
   askForResources(asking: Territory, res: ResourceStorage): void {
@@ -59,6 +86,7 @@ export class Claim {
         direction: TransferDirection.HQ_TO_TERRITORY,
         storage: res,
         target: asking,
+        transferenceGroup: EngineInstance!.currentTransferenceId
       });
     }
   }
