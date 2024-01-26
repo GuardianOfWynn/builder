@@ -9,17 +9,28 @@ export var EngineInstance: Engine | null = null
 export class Engine {
     guildMap: GuildMap
     currentTransferenceId: number;
+    lastResourceTransference: number;
+    isTransferingResource: boolean;
 
     constructor(guildMap: GuildMap) {
         this.guildMap = guildMap;
         this.currentTransferenceId = 0;
+        this.lastResourceTransference = new Date().getTime();
+        this.isTransferingResource = false;
     }
 
     Start() {
         console.log("Starting EcoEngine...");
-        setInterval(() => {
+        setInterval(async () => {
             EngineInstance!.currentTransferenceId++
-        }, 50000)
+            let currentTimeMillis = new Date().getTime();
+            EngineInstance!.isTransferingResource = true;
+            EngineInstance!.guildMap.territories.forEach(terr => {
+                terr.startResourceTransfer()
+            })
+            EngineInstance!.isTransferingResource = false;
+            EngineInstance!.lastResourceTransference = currentTimeMillis;
+        }, 60000)
         const setIntervalAsync = (ms) => {
             EngineInstance!.guildMap.territories.forEach(terr => {
                 terr.tick()

@@ -51,8 +51,9 @@
       <span v-if="selectedTerritory != null">
         {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
-      <div class="fixed z-40 left-0 top-0">
+      <div class="fixed z-40 left-0 top-0 flex gap-x-4">
         <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
+        <p :key="transferTimer" class="text-xl outlined-text text-white">{{ EngineInstance!.isTransferingResource ? 'Transfering resource...' : 'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() - EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
       <TerritoryBonuses @hq-changed="" v-if="selectedTerritory !== null" class="absolute z-50"
         :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
@@ -89,6 +90,9 @@ export default {
     const territories = EngineInstance?.guildMap.territories;
     const count = ref(0);
     const connections: Ref<any[]> = ref([]);
+    const transferTimer = ref(0);
+
+    setInterval(() => transferTimer.value++, 1000)
 
 
     territories?.forEach(x => {
@@ -117,7 +121,7 @@ export default {
 
     }
 
-    return { territories, hoveredTerritory, ResourceType, connections, getConnectionAngle, getConnectionHeight, selectedTerritory, count }
+    return { territories, hoveredTerritory, ResourceType, connections, transferTimer, EngineInstance, getConnectionAngle, getConnectionHeight, selectedTerritory, count }
   },
   components: { TerritoryCard, TerritoryBonuses }
 }
