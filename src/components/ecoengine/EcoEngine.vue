@@ -27,14 +27,17 @@
         </div>
       </div>
       <div class="fixed right-4 top-4 z-50">
-        <p class="bg-mc-bg text-md text-mc-lime border-2 border-mc-light-purple px-4 py-2 rounded-md cursor-pointer" @click.stop="isSelectingRouteViewer = !isSelectingRouteViewer">{{ isSelectingRouteViewer ? 'Cancel routing overview':'Start route viewer'}}</p>
-        <div class="bg-mc-bg border-[1px] text-sm border-mc-aqua p-4 mt-2"  v-if="routeViewerFirstTerritory != null && routeViewerSecondTerritory != null">
+        <p class="bg-mc-bg text-md text-mc-lime border-2 border-mc-light-purple px-4 py-2 rounded-md cursor-pointer"
+          @click.stop="isSelectingRouteViewer = !isSelectingRouteViewer">{{ isSelectingRouteViewer ? 'Cancel routing overview':'Start route viewer'}}</p>
+        <div class="bg-mc-bg border-[1px] text-sm border-mc-aqua p-4 mt-2"
+          v-if="routeViewerFirstTerritory != null && routeViewerSecondTerritory != null">
           <p class="text-mc-aqua text-lg mb-2">Routing overview</p>
           <p class="text-mc-aqua">From: <span class="text-mc-gray">{{ routeViewerFirstTerritory!.name }}</span></p>
           <p class="text-mc-aqua mb-4">To: <span class="text-mc-gray">{{ routeViewerSecondTerritory!.name }}</span></p>
           <p class="text-mc-aqua mb-4">Style: <span class="text-mc-gray">FASTEST</span></p>
           <p class="text-mc-aqua mb-4">Total territories: <span class="text-mc-gray">{{ currentRoute!.length }}</span></p>
-          <div class="text-center bg-mc-red text-white p-2 px-4 w-full rounded-sm cursor-pointer" @click="clearRouteViewer">Clear</div>
+          <div class="text-center bg-mc-red text-white p-2 px-4 w-full rounded-sm cursor-pointer"
+            @click="clearRouteViewer">Clear</div>
         </div>
       </div>
       <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
@@ -62,9 +65,10 @@
       <span v-if="selectedTerritory != null">
         {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
-      <div class="fixed z-40 left-0 top-0 flex gap-x-4">
+      <div class="fixed z-40 left-0 top-0 flex">
         <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
-        <p :key="transferTimer" class="text-xl outlined-text text-white">{{ EngineInstance!.isTransferingResource ? 'Transfering resource...' : 'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() - EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
+        <p :key="transferTimer" class="text-xl outlined-text text-white p-4">{{'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
+            EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
       <TerritoryBonuses @hq-changed="" v-if="selectedTerritory !== null" class="absolute z-50"
         :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
@@ -75,8 +79,8 @@
   
 <script lang="ts">
 
-import { Ref, ref, onBeforeUpdate } from "vue";
-import { EngineInstance, createEngineFromMap } from "../../ecoengine/engine"
+import { Ref, ref, onBeforeUpdate, onMounted } from "vue";
+import { Engine, EngineInstance, createEngineFromMap } from "../../ecoengine/engine"
 import { RouteStyle, Territory } from "../../ecoengine/territory";
 import TerritoryCard from "../ecoengine/TerritoryCard.vue"
 import TerritoryBonuses from "./TerritoryBonuses.vue";
@@ -89,13 +93,12 @@ export default {
   props: {
   },
   async setup() {
-    const gMap = await importGuildMap();
-
     if (EngineInstance === null) {
-      createEngineFromMap(gMap)
-    }
+        const gMap = await importGuildMap();
+        createEngineFromMap(gMap)
+      }
 
-    EngineInstance!.Start();
+      EngineInstance!.Start();
 
     const connRefs: Ref<any> = ref({})
 
@@ -112,7 +115,7 @@ export default {
     const isSelectingRouteViewer = ref(false);
     const routeViewerFirstTerritory: Ref<Territory | null> = ref(null);
     const routeViewerSecondTerritory: Ref<Territory | null> = ref(null);
-      const currentRoute: Ref<Territory[]> = ref([])
+    const currentRoute: Ref<Territory[]> = ref([])
 
     function handleTerritoryClick(terr: Territory) {
       if (isSelectingRouteViewer.value) {
@@ -203,16 +206,16 @@ export default {
       routeViewerFirstTerritory,
       routeViewerSecondTerritory,
       connRefs,
+      EngineInstance,
       clearRouteViewer,
       selectRouteViewerTerritory,
       getConnectionAngle,
       getConnectionHeight,
       handleTerritoryClick,
+      transferTimer,
       currentRoute,
       clearHighlightedRoutes
     }
-
-    return { territories, hoveredTerritory, ResourceType, connections, transferTimer, EngineInstance, getConnectionAngle, getConnectionHeight, selectedTerritory, count }
   },
   components: { TerritoryCard, TerritoryBonuses }
 }

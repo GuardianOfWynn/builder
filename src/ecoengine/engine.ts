@@ -10,13 +10,11 @@ export class Engine {
     guildMap: GuildMap
     currentTransferenceId: number;
     lastResourceTransference: number;
-    isTransferingResource: boolean;
 
     constructor(guildMap: GuildMap) {
         this.guildMap = guildMap;
         this.currentTransferenceId = 0;
         this.lastResourceTransference = new Date().getTime();
-        this.isTransferingResource = false;
     }
 
     Start() {
@@ -24,11 +22,9 @@ export class Engine {
         setInterval(async () => {
             EngineInstance!.currentTransferenceId++
             let currentTimeMillis = new Date().getTime();
-            EngineInstance!.isTransferingResource = true;
             EngineInstance!.guildMap.territories.forEach(terr => {
                 terr.startResourceTransfer()
             })
-            EngineInstance!.isTransferingResource = false;
             EngineInstance!.lastResourceTransference = currentTimeMillis;
         }, 60000)
         const setIntervalAsync = (ms) => {
