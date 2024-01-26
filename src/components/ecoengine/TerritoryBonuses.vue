@@ -39,7 +39,7 @@
         hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
         translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
       <p class="text-mc-gray mt-2">Left-click to increase</p>
-      <p class="text-mc-gray mt-2">Right-click to decrease</p>
+      <p class="text-mc-gray">Right-click to decrease</p>
     </div>
     <div v-if="moveHqHovered" class="border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
       <p class="text-mc-aqua text-md">Set as HQ</p>
