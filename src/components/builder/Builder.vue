@@ -23,10 +23,10 @@
                             <ItemSelector @update-item="val => handleWeaponChanged(val)" :item-type="'weapon'" />
                         </div>
                         <div class="flex flex-col gap-y-4">
-                            <ItemSelector :item-type="'ring'" />
-                            <ItemSelector :item-type="'ring'" />
-                            <ItemSelector :item-type="'bracelet'" />
-                            <ItemSelector :item-type="'necklace'" />
+                            <ItemSelector @update-item="val => { ring1 = val; assemble(); }"  :item-type="'ring'" />
+                            <ItemSelector @update-item="val => { ring2 = val; assemble(); }"  :item-type="'ring'" />
+                            <ItemSelector @update-item="val => { bracelet = val; assemble(); }"  :item-type="'bracelet'" />
+                            <ItemSelector @update-item="val => { necklace = val; assemble(); }"  :item-type="'necklace'" />
                         </div>
                     </div>
                     <div class="text-white flex w-full mt-12">

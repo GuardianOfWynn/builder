@@ -17,8 +17,8 @@
         </div>
       </div>
       <div class="">
-        <Combobox v-if="rollType == 'generic'" placeholder="No item" immediate :defaultValue="undefined" nullable @update:modelValue="handleUpdate"
-          v-model="selectedItem" name="assignee" class="">
+        <Combobox v-if="rollType == 'generic'" placeholder="No item" immediate :defaultValue="undefined" nullable
+          @update:modelValue="handleUpdate" v-model="selectedItem" name="assignee" class="">
           <div class="font-minecraft relative">
             <ComboboxInput :spellcheck="false"
               class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "
@@ -38,15 +38,17 @@
             </ComboboxOptions>
           </div>
         </Combobox>
-        <input v-else-if="rollType == 'crafted'" :v-model="recipeHash" 
-          class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "/>
-        <input v-else-if="rollType == 'specific'" :v-model="specificRoll" 
-          class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none "/>
+        <input v-else-if="rollType == 'crafted'" :v-model="recipeHash"
+          class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none " />
+        <input v-else-if="rollType == 'specific'" :v-model="specificRoll"
+          class="text-md border-b-4 border-t-0 border-x-0 border-purple-600 border-[1px] h-7 text-white bg-mc-bg w-full outline-none " />
         <div v-if="!isAccessory(type as ItemType)">
-          <input :v-model="powders" :placeholder="selectedItem == null? 'Powder pattern: t6f5w4a3e2' : selectedItem.powderSlots + ' powder slot(s)'" class="outline-none bg-mc-bg text-white text-sm px-2 pt-1 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
+          <input :v-model="powders"
+            :placeholder="selectedItem == null ? 'Powder pattern: t6f5w4a3e2' : selectedItem.powderSlots + ' powder slot(s)'"
+            class="outline-none bg-mc-bg text-white text-sm px-2 pt-1 rounded-sm border-[1px] border-purple-600 text0white h-6 mt-2 w-full" />
         </div>
         <div class="w-fit mt-2">
-          <RadioGroup  v-model="rollType" class="text-white w-full gap-x-4 flex text-xs">
+          <RadioGroup v-model="rollType" class="text-white w-full gap-x-4 flex text-xs">
             <RadioGroupOption v-for="type in Object.values(ItemRollType)" v-slot="{ checked }" :value="type">
               <div class="flex gap-x-2">
                 <div class="h-[16px] w-[16px] border-mc-aqua border-[1px]">
@@ -90,7 +92,7 @@ export default {
     const selectedItem: Ref<WynnBaseItem | null> = ref(null);
 
     function handleUpdate(val: WynnItem) {
-      if(val === null) {
+      if (val === null) {
         return;
       }
       type.value = val.type;
@@ -108,7 +110,7 @@ export default {
       selectedItem.value = null;
     })
 
-    return { selectedItem, filteredItems, query, type, rollType,specificRoll, emit,isAccessory,powders,recipeHash, ItemRollType, handleUpdate }
+    return { selectedItem, filteredItems, query, type, rollType, specificRoll, emit, isAccessory, powders, recipeHash, ItemRollType, handleUpdate }
   },
   components: { ItemTypeIcon, Combobox, ComboboxInput, ComboboxOptions, ComboboxOption, ItemIcon, RadioGroup, RadioGroupLabel, RadioGroupOption }
 }

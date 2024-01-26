@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-y-8 w-fit">
+        <div class="flex flex-col gap-y-8 w-96">
             <div class="text-white border-[1px] rounded-md border-mc-aqua p-4 h-fit">
                 <div class=" justify-center gap-x-4 flex">
                     <div v-for="arch in CLASS_ARCHETYPES.get(clazz! as WynnClass)" class="text-center w-1/3">
