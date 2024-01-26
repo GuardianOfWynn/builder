@@ -206,6 +206,6 @@ export default {
 
         return { router, helmet, build, chestplate, assemble, baseTree, leggings, boots, format, clazz, ring1, ring2, bracelet, necklace, weapon, abilityTree, treeConnectors, handleWeaponChanged }
     },
-    components: { AppsSidebar, ItemSelector, AbilityTree, SkillPointAssign, SkillPointAssign }
+    components: { AppsSidebar, ItemSelector, AbilityTree, SkillPointAssign }
 }
 </script>

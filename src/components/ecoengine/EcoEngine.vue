@@ -38,7 +38,7 @@
         </div>
       </div>
       <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
-        @click.stop="handleTerritoryClick(terr!)"
+        @click.stop="handleTerritoryClick!(terr!)"
         class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
@@ -62,8 +62,9 @@
       <span v-if="selectedTerritory != null">
         {{ selectedTerritory.name }} Bonuses and upgrades
       </span>
-      <div class="fixed z-40 left-0 top-0">
+      <div class="fixed z-40 left-0 top-0 flex gap-x-4">
         <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
+        <p :key="transferTimer" class="text-xl outlined-text text-white">{{ EngineInstance!.isTransferingResource ? 'Transfering resource...' : 'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() - EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
       <TerritoryBonuses @hq-changed="" v-if="selectedTerritory !== null" class="absolute z-50"
         :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
@@ -104,6 +105,9 @@ export default {
 
     const count = ref(0);
     const connections: Ref<any[]> = ref([]);
+    const transferTimer = ref(0);
+
+    setInterval(() => transferTimer.value++, 1000)
 
     const isSelectingRouteViewer = ref(false);
     const routeViewerFirstTerritory: Ref<Territory | null> = ref(null);
@@ -207,6 +211,8 @@ export default {
       currentRoute,
       clearHighlightedRoutes
     }
+
+    return { territories, hoveredTerritory, ResourceType, connections, transferTimer, EngineInstance, getConnectionAngle, getConnectionHeight, selectedTerritory, count }
   },
   components: { TerritoryCard, TerritoryBonuses }
 }

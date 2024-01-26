@@ -309,8 +309,8 @@ export class Territory {
         }
     }
 
-    private consume(cost: number, usedResource: ResourceType): boolean {
-        let costPerSecond = cost / 3600;
+    private consume(times: number, cost: number, usedResource: ResourceType): boolean {
+        let costPerSecond = (cost / 3600) * times;
         let left = costPerSecond;
         if (this.storage.get(usedResource)! >= costPerSecond) {
             this.storage.set(usedResource, this.storage.get(usedResource)! - costPerSecond);
@@ -335,11 +335,11 @@ export class Territory {
         return false;
     }
 
-    consumeResources() {
+    consumeResources(times: number) {
         for (let [upgrade, status] of this.upgrades) {
             let upg: TerritoryUpgrade = UPGRADES.get(upgrade)!
             let lvl: UpgradeLevel = upg.Levels[status.level];
-            if (this.consume(lvl.Cost, upg.UsedResource)) {
+            if (this.consume(times, lvl.Cost, upg.UsedResource)) {
                 this.upgrades.get(upgrade)!.activated = true;
             } else {
                 this.upgrades.get(upgrade)!.activated = false;
@@ -349,7 +349,7 @@ export class Territory {
         for (let [bonus, status] of this.bonuses) {
             let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
             let lvl: BonusLevel = b.Levels.get(status.level)!;
-            if (this.consume(lvl.Cost, b.UsedResorce)) {
+            if (this.consume(times, lvl.Cost, b.UsedResorce)) {
                 this.bonuses.get(bonus)!.activated = true;
             } else {
                 this.bonuses.get(bonus)!.activated = false;
@@ -358,93 +358,97 @@ export class Territory {
 
     }
 
+    startResourceTransfer() {
+        this.lastResourceTransfer = new Date().getTime();
+        if (this.claim !== null && !this.HQ) {
+            let costMinute = this.getResourceCostsMinute();
+            let needRes = false;
+            let askFor = new Map<ResourceType, number>([
+                [ResourceType.CROP, 0],
+                [ResourceType.EMERALD, 0],
+                [ResourceType.FISH, 0],
+                [ResourceType.ORE, 0],
+                [ResourceType.WOOD, 0],
+            ])
+            let transfer = new Map<ResourceType, number>([
+                [ResourceType.CROP, 0],
+                [ResourceType.EMERALD, 0],
+                [ResourceType.FISH, 0],
+                [ResourceType.ORE, 0],
+                [ResourceType.WOOD, 0],
+            ])
+            for (let [res, cost] of costMinute) {
+                if (this.storage.get(res)! > cost) {
+                    transfer.set(res, transfer.get(res)! + this.storage.get(res)! - cost);
+                } else {
+                    if (this.productionMultipliers.get(res)! > 0) {
+                        let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
+                        if (produced < cost) {
+                            askFor.set(res, askFor.get(res)! + cost - produced);
+                            needRes = true;
+                        }
+                    } else if (cost > 0) {
+                        askFor.set(res, askFor.get(res)! + cost);
+                        needRes = true;
+                    }
+                }
+            }
+
+            for (let [res, qty] of this.storage) {
+                this.storage.set(res, qty - transfer.get(res)!)
+            }
+
+            let transference: ResourceTransference = {
+                id: uuidv4(),
+                currentTerritory: this,
+                origin: this,
+                target: this.claim.getHQ()!,
+                direction: TransferDirection.TERRITORY_TO_HQ,
+                storage: transfer,
+                transferenceGroup: EngineInstance!.currentTransferenceId
+            }
+            if (needRes) {
+                this.claim.askForResources(this, askFor);
+            }
+            this.transferResource(transference);
+        }
+        this.passingResource.forEach(x => this.transferResource(x))
+        this.clearTransferencesOfPreviousGroup();
+        EngineInstance!.isTransferingResource = false
+    
+    }
+
     tick() {
         let currentTimeMillis = new Date().getTime()
 
         if (this.claim !== null) {
             // Produce emerald
             if (currentTimeMillis - this.lastEmeraldProduced >= this.getEmeraldRate() * 1000) {
+                let delta = (currentTimeMillis - this.lastEmeraldProduced) / 1000
                 this.lastEmeraldProduced = currentTimeMillis;
-                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)!);
+                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)! * delta);
             }
 
             // Produce resource
             if (currentTimeMillis - this.lastResourceProduced >= this.getResourceRate() * 1000) {
+                let delta = (currentTimeMillis - this.lastResourceProduced) / 1000
                 this.lastResourceProduced = currentTimeMillis;
                 for (let [resType, multiplier] of this.productionMultipliers) {
                     if (resType === ResourceType.EMERALD) {
                         continue
                     }
-                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier);
+                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier * delta);
                 }
             }
 
             // Consume resources
             if (currentTimeMillis - this.lastConsumedResource >= 1000) {
+                let delta = (currentTimeMillis - this.lastConsumedResource) / 1000;
                 this.lastConsumedResource = currentTimeMillis
-                this.consumeResources();
+                this.consumeResources(delta);
             }
         }
-
-        // Transfer resource
-        if (currentTimeMillis - this.lastResourceTransfer >= 60000) {
-            this.lastResourceTransfer = currentTimeMillis
-            if (this.claim !== null && !this.HQ) {
-                let costMinute = this.getResourceCostsMinute();
-                let needRes = false;
-                let askFor = new Map<ResourceType, number>([
-                    [ResourceType.CROP, 0],
-                    [ResourceType.EMERALD, 0],
-                    [ResourceType.FISH, 0],
-                    [ResourceType.ORE, 0],
-                    [ResourceType.WOOD, 0],
-                ])
-                let transfer = new Map<ResourceType, number>([
-                    [ResourceType.CROP, 0],
-                    [ResourceType.EMERALD, 0],
-                    [ResourceType.FISH, 0],
-                    [ResourceType.ORE, 0],
-                    [ResourceType.WOOD, 0],
-                ])
-                for (let [res, cost] of costMinute) {
-                    if (this.storage.get(res)! > cost) {
-                        transfer.set(res, transfer.get(res)! + this.storage.get(res)! - cost);
-                    } else {
-                        if (this.productionMultipliers.get(res)! > 0) {
-                            let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
-                            if (produced < cost) {
-                                askFor.set(res, askFor.get(res)! + cost - produced);
-                                needRes = true;
-                            }
-                        } else if (cost > 0) {
-                            askFor.set(res, askFor.get(res)! + cost);
-                            needRes = true;
-                        }
-                    }
-                }
-
-                for (let [res, qty] of this.storage) {
-                    this.storage.set(res, qty - transfer.get(res)!)
-                }
-
-                let transference: ResourceTransference = {
-                    id: uuidv4(),
-                    currentTerritory: this,
-                    origin: this,
-                    target: this.claim.getHQ()!,
-                    direction: TransferDirection.TERRITORY_TO_HQ,
-                    storage: transfer,
-                    transferenceGroup: EngineInstance!.currentTransferenceId
-                }
-                if (needRes) {
-                    this.claim.askForResources(this, askFor);
-                }
-                this.transferResource(transference);
-            }
-            this.passingResource.forEach(x => this.transferResource(x))
-            this.clearTransferencesOfPreviousGroup();
-        }
-
+            
     }
 
     reset() {
@@ -464,10 +468,11 @@ export class Territory {
             [ResourceType.EMERALD, 0]
         ]);
         this.passingResource = [];
-        this.lastResourceProduced = 0;
-        this.lastEmeraldProduced = 0;
-        this.lastConsumedResource = 0;
-        this.lastResourceTransfer = 0;
+        let now = new Date().getTime();
+        this.lastResourceProduced = now;
+        this.lastEmeraldProduced = now;
+        this.lastConsumedResource = now;
+        this.lastResourceTransfer = now;
         this.resourceGap = false;
         this.resourceOverflow = false;
         this.bonuses = new Map<string, UpgradeBonusStatus>([

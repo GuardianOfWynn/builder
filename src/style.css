@@ -21,6 +21,10 @@
     overflow: hidden;
   }
 
+  .outlined-text {
+    text-shadow:  0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000
+  }
+
   .pixel-corners,
   .pixel-corners--wrapper {
     clip-path: polygon(0px calc(100% - 30px),
