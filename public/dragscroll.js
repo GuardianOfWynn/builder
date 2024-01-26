@@ -16,9 +16,6 @@
         factory((root.dragscroll = {}));
     }
 }(this, function (exports) {
-    if(!window.location.href.includes('ecoengine')) {
-        return
-    }
     var _window = window;
     var _document = document;
     var mousemove = 'mousemove';
@@ -31,6 +28,9 @@
 
     var dragged = [];
     var reset = function(i, el) {
+        if(!window.location.href.includes('ecoengine')) {
+            return
+        }
         for (i = 0; i < dragged.length;) {
             el = dragged[i++];
             el = el.container || el;
@@ -46,6 +46,9 @@
                 (cont = el.container || el)[addEventListener](
                     mousedown,
                     cont.md = function(e) {
+                        if(!window.location.href.includes('ecoengine')) {
+                            return
+                        }
                         if (!el.hasAttribute('nochilddrag') ||
                             _document.elementFromPoint(
                                 e.pageX, e.pageY
@@ -61,12 +64,19 @@
                 );
 
                 _window[addEventListener](
-                    mouseup, cont.mu = function() {pushed = 0;}, 0
+                    mouseup, cont.mu = function() {
+                        if(!window.location.href.includes('ecoengine')) {
+                            return
+                        }
+                        pushed = 0;}, 0
                 );
 
                 _window[addEventListener](
                     mousemove,
                     cont.mm = function(e) {
+                        if(!window.location.href.includes('ecoengine')) {
+                            return
+                        }
                         if (pushed) {
                             (scroller = el.scroller||el).scrollLeft -=
                                 newScrollX = (- lastClientX + (lastClientX=e.clientX));
@@ -87,6 +97,9 @@
     if (_document.readyState == 'complete') {
         reset();
     } else {
+        if(!window.location.href.includes('ecoengine')) {
+            return
+        }
         _window[addEventListener]('load', reset, 0);
     }
 

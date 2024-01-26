@@ -90,6 +90,9 @@ export default {
     const selectedItem: Ref<WynnBaseItem | null> = ref(null);
 
     function handleUpdate(val: WynnItem) {
+      if(val === null) {
+        return;
+      }
       type.value = val.type;
       emit('update-item', val)
     }
