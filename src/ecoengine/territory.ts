@@ -283,9 +283,6 @@ export class Territory {
     }
 
     receiveResource(transference: ResourceTransference) {
-        if(transference.origin.name == 'Hive' || transference.target.name == 'Hive') {
-            console.log(transference);
-        }
         if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
         } else {
