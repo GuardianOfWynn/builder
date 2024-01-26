@@ -309,8 +309,8 @@ export class Territory {
         }
     }
 
-    private consume(cost: number, usedResource: ResourceType): boolean {
-        let costPerSecond = cost / 3600;
+    private consume(times: number, cost: number, usedResource: ResourceType): boolean {
+        let costPerSecond = (cost / 3600) * times;
         let left = costPerSecond;
         if (this.storage.get(usedResource)! >= costPerSecond) {
             this.storage.set(usedResource, this.storage.get(usedResource)! - cost);
@@ -335,11 +335,11 @@ export class Territory {
         return false;
     }
 
-    consumeResources() {
+    consumeResources(times: number) {
         for (let [upgrade, status] of this.upgrades) {
             let upg: TerritoryUpgrade = UPGRADES.get(upgrade)!
             let lvl: UpgradeLevel = upg.Levels[status.level];
-            if (this.consume(lvl.Cost, upg.UsedResource)) {
+            if (this.consume(times, lvl.Cost, upg.UsedResource)) {
                 this.upgrades.get(upgrade)!.activated = true;
             } else {
                 this.upgrades.get(upgrade)!.activated = false;
@@ -349,7 +349,7 @@ export class Territory {
         for (let [bonus, status] of this.bonuses) {
             let b: TerritoryBonus = bonuses.BONUSES_MAP.get(bonus)!
             let lvl: BonusLevel = b.Levels.get(status.level)!;
-            if (this.consume(lvl.Cost, b.UsedResorce)) {
+            if (this.consume(times, lvl.Cost, b.UsedResorce)) {
                 this.bonuses.get(bonus)!.activated = true;
             } else {
                 this.bonuses.get(bonus)!.activated = false;
@@ -364,25 +364,28 @@ export class Territory {
         if (this.claim !== null) {
             // Produce emerald
             if (currentTimeMillis - this.lastEmeraldProduced >= this.getEmeraldRate() * 1000) {
+                let delta = (currentTimeMillis - this.lastEmeraldProduced) / 1000
                 this.lastEmeraldProduced = currentTimeMillis;
-                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)!);
+                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)! * delta);
             }
 
             // Produce resource
             if (currentTimeMillis - this.lastResourceProduced >= this.getResourceRate() * 1000) {
+                let delta = (currentTimeMillis - this.lastResourceProduced) / 1000
                 this.lastResourceProduced = currentTimeMillis;
                 for (let [resType, multiplier] of this.productionMultipliers) {
                     if (resType === ResourceType.EMERALD) {
                         continue
                     }
-                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier);
+                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier * delta);
                 }
             }
 
             // Consume resources
             if (currentTimeMillis - this.lastConsumedResource >= 1000) {
+                let delta = (currentTimeMillis - this.lastConsumedResource) / 1000;
                 this.lastConsumedResource = currentTimeMillis
-                this.consumeResources();
+                this.consumeResources(delta);
             }
         }
 
@@ -464,10 +467,11 @@ export class Territory {
             [ResourceType.EMERALD, 0]
         ]);
         this.passingResource = [];
-        this.lastResourceProduced = 0;
-        this.lastEmeraldProduced = 0;
-        this.lastConsumedResource = 0;
-        this.lastResourceTransfer = 0;
+        let now = new Date().getTime();
+        this.lastResourceProduced = now;
+        this.lastEmeraldProduced = now;
+        this.lastConsumedResource = now;
+        this.lastResourceTransfer = now;
         this.resourceGap = false;
         this.resourceOverflow = false;
         this.bonuses = new Map<string, UpgradeBonusStatus>([

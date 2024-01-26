@@ -17,19 +17,16 @@ export class Engine {
 
     Start() {
         console.log("Starting EcoEngine...");
-        let fn = function () {
-            EngineInstance!.guildMap.territories.forEach(terr => {
-                terr.tick()
-            })
-        }
         setInterval(() => {
             EngineInstance!.currentTransferenceId++
         }, 50000)
         const setIntervalAsync = (ms) => {
-            fn()
+            EngineInstance!.guildMap.territories.forEach(terr => {
+                terr.tick()
+            })
             setTimeout(() => setIntervalAsync(ms), ms);
         };
-        setIntervalAsync(1000)
+        setIntervalAsync(10000)
     }
 }
 
