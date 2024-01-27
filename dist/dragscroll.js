@@ -8,6 +8,10 @@
 
 
 (function (root, factory) {
+    console.log(window.location.href)
+    if(!window.location.href.includes('ecoengine')) {
+        return
+    }
     if (typeof define === 'function' && define.amd) {
         define(['exports'], factory);
     } else if (typeof exports !== 'undefined') {
@@ -16,6 +20,9 @@
         factory((root.dragscroll = {}));
     }
 }(this, function (exports) {
+    if(!window.location.href.includes('ecoengine')) {
+        return
+    }
     var _window = window;
     var _document = document;
     var mousemove = 'mousemove';
@@ -28,6 +35,10 @@
 
     var dragged = [];
     var reset = function(i, el) {
+        if(!window.location.href.includes('ecoengine')) {
+            
+            return
+        }
         for (i = 0; i < dragged.length;) {
             el = dragged[i++];
             el = el.container || el;
@@ -35,14 +46,27 @@
             _window[removeEventListener](mouseup, el.mu, 0);
             _window[removeEventListener](mousemove, el.mm, 0);
         }
-
+        if(!window.location.href.includes('ecoengine')) {
+            return
+        }
         // cloning into array since HTMLCollection is updated dynamically
         dragged = [].slice.call(_document.getElementsByClassName('dragscroll'));
         for (i = 0; i < dragged.length;) {
-            (function(el, lastClientX, lastClientY, pushed, scroller, cont){
+            if(!window.location.href.includes('ecoengine')) {
+                console.log("blocked")
+                return
+            }
+            (function(el, lastClientX, lastClientY, pushed, scroller, cont){    
+                if(!window.location.href.includes('ecoengine')) {
+                    return
+                }
                 (cont = el.container || el)[addEventListener](
                     mousedown,
                     cont.md = function(e) {
+                        if(!window.location.href.includes('ecoengine')) {
+                            console.log("blocked")
+                            return
+                        }
                         if (!el.hasAttribute('nochilddrag') ||
                             _document.elementFromPoint(
                                 e.pageX, e.pageY
@@ -58,12 +82,21 @@
                 );
 
                 _window[addEventListener](
-                    mouseup, cont.mu = function() {pushed = 0;}, 0
+                    mouseup, cont.mu = function() {
+                        if(!window.location.href.includes('ecoengine')) {
+                            console.log("blocked")
+                            return
+                        }
+                        pushed = 0;}, 0
                 );
 
                 _window[addEventListener](
                     mousemove,
                     cont.mm = function(e) {
+                        if(!window.location.href.includes('ecoengine')) {
+                            console.log("blocked")
+                            return
+                        }
                         if (pushed) {
                             (scroller = el.scroller||el).scrollLeft -=
                                 newScrollX = (- lastClientX + (lastClientX=e.clientX));
@@ -80,7 +113,9 @@
         }
     }
 
-      
+    if(!window.location.href.includes('ecoengine')) {
+        return
+    }
     if (_document.readyState == 'complete') {
         reset();
     } else {
