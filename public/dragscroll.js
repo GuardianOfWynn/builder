@@ -64,7 +64,6 @@
                     mousedown,
                     cont.md = function(e) {
                         if(!window.location.href.includes('ecoengine')) {
-                            console.log("blocked")
                             return
                         }
                         if (!el.hasAttribute('nochilddrag') ||
@@ -75,8 +74,6 @@
                             pushed = 1;
                             lastClientX = e.clientX;
                             lastClientY = e.clientY;
-
-                            e.preventDefault();
                         }
                     }, 0
                 );

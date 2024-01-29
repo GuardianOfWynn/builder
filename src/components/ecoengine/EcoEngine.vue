@@ -41,7 +41,7 @@
         </div>
       </div>
       <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
-        @click.stop="handleTerritoryClick!(terr!)"
+        @click="handleTerritoryClick!(terr!)"
         class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
@@ -87,6 +87,7 @@ import TerritoryBonuses from "./TerritoryBonuses.vue";
 import { ResourceType } from "../../ecoengine/resource";
 import { importGuildMap } from "../../ecoengine/wynncraft";
 import { Pathfinder } from "../../ecoengine/pathfinding/pathfinder";
+import {TransitionChild, TransitionRoot, Dialog, DialogPanel, DialogTitle} from '@headlessui/vue'
 
 export default {
   name: 'EcoEngine',
@@ -109,6 +110,8 @@ export default {
     const count = ref(0);
     const connections: Ref<any[]> = ref([]);
     const transferTimer = ref(0);
+
+    const territoryPanelOpen = ref(true)
 
     setInterval(() => transferTimer.value++, 1000)
 
@@ -212,12 +215,13 @@ export default {
       getConnectionAngle,
       getConnectionHeight,
       handleTerritoryClick,
+      territoryPanelOpen,
       transferTimer,
       currentRoute,
       clearHighlightedRoutes
     }
   },
-  components: { TerritoryCard, TerritoryBonuses }
+  components: { TerritoryCard, TerritoryBonuses, TransitionChild, TransitionRoot, Dialog, DialogPanel, DialogTitle }
 }
 </script>
   
