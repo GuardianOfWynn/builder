@@ -3,13 +3,13 @@
 GsW Builder works like hppeng WynnBuilder, but we intend bring updates more often.
 
 ### Attention:
-- By now, GsWBuilder only brings the Crafter app, but we intend to bring Builder, EcoEngine and Atlas apps.
+- By now, GsWBuilder only brings the Crafter and EcoEngine app, but we intend to bring Builder, Workspace and Atlas apps.
 - If you find any issue in our app, please open an issue in the Issue tab. Further help or fixes will be tracked there.
 - Pull requests are welcomed!
 
 ### Before opening an issue, keep in mind:
 - WIP: Builder app.
-- WIP: EcoEngine app
+- Future: Workspace app
 - Future: Powders in crafted armour and weapons.
 - Future: Atlas app
 
