@@ -414,8 +414,6 @@ export class Territory {
         }
         this.passingResource.forEach(x => this.transferResource(x))
         this.clearTransferencesOfPreviousGroup();
-        EngineInstance!.isTransferingResource = false
-    
     }
 
     tick() {
@@ -426,19 +424,21 @@ export class Territory {
             if (currentTimeMillis - this.lastEmeraldProduced >= this.getEmeraldRate() * 1000) {
                 let delta = (currentTimeMillis - this.lastEmeraldProduced) / 1000
                 this.lastEmeraldProduced = currentTimeMillis;
-                this.storage.set(ResourceType.EMERALD, this.storage.get(ResourceType.EMERALD)! + this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)! * delta);
+                this.storeResource(new Map<ResourceType, number>([[ResourceType.EMERALD, this.getProducedEmerald() * this.productionMultipliers.get(ResourceType.EMERALD)! * delta]]))
             }
 
             // Produce resource
             if (currentTimeMillis - this.lastResourceProduced >= this.getResourceRate() * 1000) {
                 let delta = (currentTimeMillis - this.lastResourceProduced) / 1000
                 this.lastResourceProduced = currentTimeMillis;
+                let produced = new Map<ResourceType, number>()
                 for (let [resType, multiplier] of this.productionMultipliers) {
                     if (resType === ResourceType.EMERALD) {
                         continue
                     }
-                    this.storage.set(resType, this.storage.get(resType)! + this.getProducedResource() * multiplier * delta);
+                    produced.set(resType, this.getProducedResource() * multiplier * delta)
                 }
+                this.storeResource(produced)
             }
 
             // Consume resources

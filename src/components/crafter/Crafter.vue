@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex ">
     <div class="fixed z-20">
       <AppsSidebar />
     </div>

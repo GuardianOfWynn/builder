@@ -10,6 +10,7 @@ export class Engine {
     guildMap: GuildMap
     currentTransferenceId: number;
     lastResourceTransference: number;
+    isTransferingResource: boolean
 
     constructor(guildMap: GuildMap) {
         this.guildMap = guildMap;
