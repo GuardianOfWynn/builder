@@ -7,49 +7,56 @@
           <div>
             <p class="border-b-[1px] border-mc-aqua mb-2">Actions</p>
             <div class="flex">
-              <img :src='"/builder/sprites/paper.png"' class=" mx-auto w-8 h-8 cursor-pointer" @mouseenter="moveHqHovered = true" @mouseleave="moveHqHovered = false" @click="territory!.claim!.setAsHQ(territory!)"/> 
+              <img :src='"/builder/sprites/paper.png"' class=" mx-auto w-8 h-8 cursor-pointer"
+                @mouseenter="moveHqHovered = true" @mouseleave="moveHqHovered = false"
+                @click="territory!.claim!.setAsHQ(territory!)" />
             </div>
           </div>
           <div>
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
-            <div class=" grid grid-cols-6 grid-rows-3 gap-y-4 gap-x-4">
-              <div v-for="[key, bonus] in bonuses" class="flex cursor-pointer" @contextmenu="decreaseBonusLevel"
-                @click.stop="increaseBonusLevel" @mouseenter="hoveredBonus = bonus" @mouseleave="hoveredBonus = null">
-                <img :src="'/builder/' + bonus.Sprite" class="w-8 h-8 pixelated" />
+            <div v-for="y of 3" class="flex">
+              <div v-for="x of 7">
+                <div v-if="getBonusByPosition(x - 1, y - 1) !== undefined" class="cursor-pointer"
+                  @contextmenu="decreaseBonusLevel" @click.stop="increaseBonusLevel"
+                  @mouseenter="hoveredBonus = getBonusByPosition(x - 1, y - 1)!" @mouseleave="hoveredBonus = null">
+                  <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-8 h-8 pixelated" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div :key="count" v-if="hoveredBonus !== null"
-      class="text-sm border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
-      <p class="text-sm"><span class="text-mc-light-purple">{{ hoveredBonus.Name }}</span>
-        <span class="text-mc-gray"> [Lv. {{ territory!.bonuses.get(hoveredBonus.Id)!.level }}]</span>
+  </div>
+  <div :key="count" v-if="hoveredBonus !== null"
+    class="text-sm border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
+    <p class="text-sm"><span class="text-mc-light-purple">{{ hoveredBonus.Name }}</span>
+      <span class="text-mc-gray"> [Lv. {{ territory!.bonuses.get(hoveredBonus.Id)!.level }}]</span>
 
-        <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level"
-          class="text-mc-dark-gray"> (Max)</span>
-      </p>
-      <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
-        {{ line }}
-      </p>
-      <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
-      <p class="text-mc-lime mt-2">Cost (per hour):</p>
-      <p class="text-mc-lime">- <span class="text-mc-gray">{{
-        hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
-        translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
-      <p class="text-mc-gray mt-2">Left-click to increase</p>
-      <p class="text-mc-gray mt-2">Right-click to decrease</p>
-    </div>
-    <div v-if="moveHqHovered" class="border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
-      <p class="text-mc-aqua text-md">Set as HQ</p>
-      <p class="text-xs text-mc-gray">Set this territory as your guild's headquarters</p>
-      <p class="text-mc-aqua text-xs mt-2">HQ Bonuses</p>
-      <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Health</span></p>
-      <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Damage</span></p>
-      <p class="text-mc-dark-gray text-xs">Holding more territories and creating links increases the HQ Bonus</p>
-      <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your headquarters</p>
-    </div>
+      <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level"
+        class="text-mc-dark-gray"> (Max)</span>
+    </p>
+    <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
+      {{ line }}
+    </p>
+    <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
+    <p class="text-mc-lime mt-2">Cost (per hour):</p>
+    <p class="text-mc-lime">- <span class="text-mc-gray">{{
+      hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
+    translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
+    <p class="text-mc-gray mt-2">Left-click to increase</p>
+    <p class="text-mc-gray mt-2">Right-click to decrease</p>
+  </div>
+  <div v-if="moveHqHovered"
+    class="border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
+    <p class="text-mc-aqua text-md">Set as HQ</p>
+    <p class="text-xs text-mc-gray">Set this territory as your guild's headquarters</p>
+    <p class="text-mc-aqua text-xs mt-2">HQ Bonuses</p>
+    <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Health</span></p>
+    <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Damage</span></p>
+    <p class="text-mc-dark-gray text-xs">Holding more territories and creating links increases the HQ Bonus</p>
+    <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your
+      headquarters</p>
   </div>
 </template>
       
@@ -59,6 +66,7 @@ import { BONUSES_MAP, TerritoryBonus, BonusLevel } from '../../ecoengine/bonuses
 import { ref, Ref } from 'vue';
 import { ResourceType } from '../../ecoengine/resource';
 import { UpgradeLevel } from '../../ecoengine/upgrades';
+import * as bonus from '../../ecoengine/bonuses';
 
 export default {
   name: 'TerritoryBonuses',
@@ -69,8 +77,100 @@ export default {
   setup(props) {
     const bonuses = ref(BONUSES_MAP);
     const hoveredBonus: Ref<TerritoryBonus | null> = ref(null);
-      const moveHqHovered = ref(false);
+    const moveHqHovered = ref(false);
     const count = ref(0)
+
+    const bonusesPositioning = ref([
+      {
+        column: 0,
+        row: 0,
+        bonus: bonus.STRONGER_MINIONS
+      },
+      {
+        column: 1,
+        row: 0,
+        bonus: bonus.MULTI_HIT,
+      },
+      {
+        column: 2,
+        row: 0,
+        bonus: bonus.TOWER_AURA,
+      },
+      {
+        column: 3,
+        row: 0,
+        bonus: bonus.TOWER_VOLLEY,
+      },
+      {
+        column: 0,
+        row: 1,
+        bonus: bonus.GATHERING_XP,
+      },
+      {
+        column: 1,
+        row: 1,
+        bonus: bonus.MOB_XP,
+      },
+      {
+        column: 2,
+        row: 1,
+        bonus: bonus.MOB_DAMAGE,
+      },
+      {
+        column: 3,
+        row: 1,
+        bonus: bonus.PVP_DAMAGE,
+      },
+      {
+        column: 4,
+        row: 1,
+        bonus: bonus.XP_SEEKING,
+      },
+      {
+        column: 5,
+        row: 1,
+        bonus: bonus.TOME_SEEKING,
+      },
+      {
+        column: 6,
+        row: 1,
+        bonus: bonus.EMERALD_SEEKING,
+      },
+      {
+        column: 0,
+        row: 2,
+        bonus: bonus.LARGER_RESOURCE_STORAGE,
+      },
+      {
+        column: 1,
+        row: 2,
+        bonus: bonus.LARGER_EMERALD_STORAGE,
+      },
+      {
+        column: 2,
+        row: 2,
+        bonus: bonus.EFFICIENT_RESOURCES,
+      },
+      {
+        column: 3,
+        row: 2,
+        bonus: bonus.EFFICIENT_EMERALDS,
+      },
+      {
+        column: 4,
+        row: 2,
+        bonus: bonus.RESOURCE_RATE,
+      },
+      {
+        column: 5,
+        row: 2,
+        bonus: bonus.EMERALD_RATE,
+      }
+    ])
+
+    function getBonusByPosition(x: number, y: number): TerritoryBonus | undefined {
+      return bonusesPositioning.value.filter(a => a.column == x && a.row == y)[0]?.bonus
+    }
 
     function decreaseBonusLevel() {
       let currentStats = props.territory!.bonuses.get(hoveredBonus.value!.Id)!
@@ -112,7 +212,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, decreaseBonusLevel, translateResourceName, increaseBonusLevel, getLevelObject, count, moveHqHovered }
+    return { bonuses, hoveredBonus, bonusesPositioning, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, getLevelObject, count, moveHqHovered }
   },
   components: {}
 }
