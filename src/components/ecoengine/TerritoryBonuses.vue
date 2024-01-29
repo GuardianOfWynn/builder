@@ -14,14 +14,13 @@
           </div>
           <div>
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
-            <div v-for="y of 3" class="flex">
+            <div v-for="y of 3" class="flex mt-2 gap-x-2">
               <div v-for="x of 7">
                 <div v-if="getBonusByPosition(x - 1, y - 1) !== undefined" class="cursor-pointer"
                   @contextmenu="decreaseBonusLevel" @click.stop="increaseBonusLevel"
                   @mouseenter="hoveredBonus = getBonusByPosition(x - 1, y - 1)!" @mouseleave="hoveredBonus = null">
                   <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-8 h-8 pixelated" />
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -58,6 +57,7 @@
     <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your
       headquarters</p>
   </div>
+</div>
 </template>
       
 <script lang="ts">

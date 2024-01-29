@@ -70,7 +70,7 @@
         <p :key="transferTimer" class="text-xl outlined-text text-white p-4">{{'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
             EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
-      <TerritoryBonuses @hq-changed="" v-if="selectedTerritory !== null" class="absolute z-50"
+      <TerritoryBonuses v-if="selectedTerritory !== null" class="absolute z-50"
         :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
         :territory="selectedTerritory" />
     </div>
