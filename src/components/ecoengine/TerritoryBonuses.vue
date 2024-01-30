@@ -37,9 +37,10 @@
               </div>
               <input type="number" class="text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
             </div>
+            <div class="w-full text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save tax</div>
+            <div class="w-full text-center text-white border-[1px] border-mc-lime cursor-pointer">Save global tax</div>
           </div>
           <div>
-
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
             <div v-for="y of 3" class="flex mt-2 gap-x-2">
               <div v-for="x of 7">
