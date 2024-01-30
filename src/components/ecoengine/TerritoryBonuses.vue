@@ -1,5 +1,5 @@
 <template>
-  <div class="w-fit">
+  <div class="w-fit" @click.stop="">
     <div class="text-white border-[1px] rounded-md border-mc-aqua w-full h-fit text-md bg-ability-tree">
       <div class="p-2">
         <p class="p-2 border-b-[1px] border-mc-aqua mb-2 text-sm">{{ territory?.name }}</p>
@@ -12,7 +12,34 @@
                 @click="territory!.claim!.setAsHQ(territory!)" />
             </div>
           </div>
+          <div class="flex flex-col gap-y-1">
+            <p class="border-b-[1px] border-mc-aqua mb-2">Taxes</p>
+            <div class="flex gap-x-2">
+              <div class="">
+                <div class="flex gap-x-2">
+                  <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
+                  <p class="text-xs my-auto">Tax</p>
+                </div>
+                <input type="number" class="text-sm w-20 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+              </div>
+              <div class="">
+                <div class="flex gap-x-2">
+                  <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
+                  <p class="text-xs my-auto">Ally Tax</p>
+                </div>
+                <input type="number" class="  text-sm w-20 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+              </div>
+            </div>
+            <div class="">
+              <div class="flex gap-x-2">
+                <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
+                <p class="text-xs my-auto">Ally tax</p>
+              </div>
+              <input type="number" class="text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+            </div>
+          </div>
           <div>
+
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
             <div v-for="y of 3" class="flex mt-2 gap-x-2">
               <div v-for="x of 7">
