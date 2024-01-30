@@ -1,5 +1,5 @@
 <template>
-  <div class="font-minecraft p-32 bg-mc-bg min-w-max flex justify-center" @click="selectedTerritory = null">
+  <div class="font-minecraft p-32 bg-mc-bg min-w-max flex justify-center" @click="selectedTerritory = null; hoveredTerritory = null">
     <div class="relative">
       <div>
         <div class="grid grid-cols-9 grid-rows-6 w-fit ">
@@ -40,8 +40,8 @@
             @click="clearRouteViewer">Clear</div>
         </div>
       </div>
-      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr" @mouseleave="hoveredTerritory = null"
-        @click="handleTerritoryClick!(terr!)"
+      <span v-for="terr in territories" @mouseenter="hoveredTerritory = terr"
+        @click.stop="handleTerritoryClick!(terr!)"
         class="cursor-pointer text-center text-lg z-20 text-white my-auto border-4 absolute"
         :style="{ left: terr.getTerritoryStartX() + 'px', bottom: terr.getTerritoryStartZ() + 'px', width: terr.getTerritoryWidth() + 'px', height: terr.getTerritoryHeight() + 'px', borderColor: terr.claim?.guild.color }">
         <div :style="{ opacity: 0.3, width: '100%', height: '100%', backgroundColor: terr.claim?.guild.color }"></div>
@@ -62,17 +62,13 @@
         <img src="/builder/wynncraft.png" class="w-6 h-6" />
         <p class="my-auto">Import from WynnCraft</p>
       </span-->
-      <span v-if="selectedTerritory != null">
-        {{ selectedTerritory.name }} Bonuses and upgrades
-      </span>
-      <div class="fixed z-40 left-0 top-0 flex">
-        <TerritoryCard class="ml-2 mt-2" v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
-        <p :key="transferTimer" class="text-xl outlined-text text-white p-4">{{'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
-            EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
+      <div class="fixed z-40 left-0 top-0 flex p-4 gap-x-4">
+          <TerritoryCard v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
+          <TerritoryBonuses v-if="selectedTerritory != null"
+          :territory="selectedTerritory" />
+          <p :key="transferTimer" class="text-xl outlined-text text-white p-4">{{'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
+              EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
-      <TerritoryBonuses v-if="selectedTerritory !== null" class="absolute z-50"
-        :style="{ bottom: selectedTerritory.getTerritoryStartZ() + selectedTerritory.getTerritoryHeight() + 2 + 'px', left: selectedTerritory.getTerritoryStartX() + 'px' }"
-        :territory="selectedTerritory" />
     </div>
   </div>
 </template>

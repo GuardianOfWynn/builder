@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <div class="text-white border-[1px] rounded-md border-mc-aqua w-fit h-fit text-md bg-ability-tree">
+  <div class="w-fit">
+    <div class="text-white border-[1px] rounded-md border-mc-aqua w-full h-fit text-md bg-ability-tree">
       <div class="p-2">
         <p class="p-2 border-b-[1px] border-mc-aqua mb-2 text-sm">{{ territory?.name }}</p>
         <div class="flex gap-x-4">
@@ -21,43 +21,43 @@
                   @mouseenter="hoveredBonus = getBonusByPosition(x - 1, y - 1)!" @mouseleave="hoveredBonus = null">
                   <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-8 h-8 pixelated" />
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div :key="count" v-if="hoveredBonus !== null"
+        class="text-sm border-[1px] w-fit h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
+        <p class="text-sm"><span class="text-mc-light-purple">{{ hoveredBonus.Name }}</span>
+          <span class="text-mc-gray"> [Lv. {{ territory!.bonuses.get(hoveredBonus.Id)!.level }}]</span>
+
+          <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level"
+            class="text-mc-dark-gray"> (Max)</span>
+        </p>
+        <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
+          {{ line }}
+        </p>
+        <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
+        <p class="text-mc-lime mt-2">Cost (per hour):</p>
+        <p class="text-mc-lime">- <span class="text-mc-gray">{{
+          hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
+    translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
+        <p class="text-mc-gray mt-2">Left-click to increase</p>
+        <p class="text-mc-gray mt-2">Right-click to decrease</p>
+      </div>
+      <div v-if="moveHqHovered"
+        class="border-[1px] w-fit h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
+        <p class="text-mc-aqua text-md">Set as HQ</p>
+        <p class="text-xs text-mc-gray">Set this territory as your guild's headquarters</p>
+        <p class="text-mc-aqua text-xs mt-2">HQ Bonuses</p>
+        <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Health</span></p>
+        <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Damage</span></p>
+        <p class="text-mc-dark-gray text-xs">Holding more territories and creating links increases the HQ Bonus</p>
+        <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your
+          headquarters</p>
+      </div>
     </div>
   </div>
-  <div :key="count" v-if="hoveredBonus !== null"
-    class="text-sm border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
-    <p class="text-sm"><span class="text-mc-light-purple">{{ hoveredBonus.Name }}</span>
-      <span class="text-mc-gray"> [Lv. {{ territory!.bonuses.get(hoveredBonus.Id)!.level }}]</span>
-
-      <span v-if="hoveredBonus.Levels.size - 1 <= territory!.bonuses.get(hoveredBonus.Id)!.level"
-        class="text-mc-dark-gray"> (Max)</span>
-    </p>
-    <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
-      {{ line }}
-    </p>
-    <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
-    <p class="text-mc-lime mt-2">Cost (per hour):</p>
-    <p class="text-mc-lime">- <span class="text-mc-gray">{{
-      hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
-    translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
-    <p class="text-mc-gray mt-2">Left-click to increase</p>
-    <p class="text-mc-gray mt-2">Right-click to decrease</p>
-  </div>
-  <div v-if="moveHqHovered"
-    class="border-[1px] w-full h-fit text-mc-lime rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
-    <p class="text-mc-aqua text-md">Set as HQ</p>
-    <p class="text-xs text-mc-gray">Set this territory as your guild's headquarters</p>
-    <p class="text-mc-aqua text-xs mt-2">HQ Bonuses</p>
-    <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Health</span></p>
-    <p class="text-mc-aqua text-xs">- <span class="text-mc-gray">+525% Guild Tower Damage</span></p>
-    <p class="text-mc-dark-gray text-xs">Holding more territories and creating links increases the HQ Bonus</p>
-    <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your
-      headquarters</p>
-  </div>
-</div>
 </template>
       
 <script lang="ts">

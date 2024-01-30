@@ -8,7 +8,6 @@
 
 
 (function (root, factory) {
-    console.log(window.location.href)
     if(!window.location.href.includes('ecoengine')) {
         return
     }
