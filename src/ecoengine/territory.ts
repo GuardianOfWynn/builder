@@ -457,8 +457,8 @@ export class Territory {
         this.treasury = Treasury.VERY_LOW;
         this.routeStyle = RouteStyle.CHEAPEST;
         this.borders = BorderStyle.OPEN;
-        this.tax = 0.05;
-        this.allyTax = 0.05;
+        this.tax = 5;
+        this.allyTax = 5;
         this.acquired = new Date();
         this.storage = new Map<ResourceType, number>([
             [ResourceType.CROP, 0],

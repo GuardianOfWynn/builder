@@ -12,14 +12,16 @@ export interface TerritoryUpgrade {
     Name: string;
     Format: string;
     Sprite: string;
+    Color: string;
     UsedResource: ResourceType;
     Levels: UpgradeLevel[];
 }
 
 export const DEFENCE: TerritoryUpgrade = {
     Id: "defence",
+    Color: "mc-aqua",
     Name: "Defence",
-    Format: "%",
+    Format: "Defence: +{1}%",
     Sprite: "sprites/shield.webp",
     UsedResource: ResourceType.FISH,
     Levels: [
@@ -41,7 +43,8 @@ export const DEFENCE: TerritoryUpgrade = {
 export const DAMAGE: TerritoryUpgrade = {
     Id: "damage",
     Name: "Damage",
-    Format: "%",
+    Color: "mc-gold",
+    Format: "Damage: +{1}%",
     Sprite: "sprites/iron_sword.webp",
     UsedResource: ResourceType.ORE,
     Levels: [
@@ -63,7 +66,8 @@ export const DAMAGE: TerritoryUpgrade = {
 export const ATTACK_SPEED: TerritoryUpgrade = {
     Id: "attack_speed",
     Name: "Attack Speed",
-    Format: "%",
+    Color: "mc-lime",
+    Format: "Attacks per Second: +{1}%",
     Sprite: "sprites/rabbit_hide.webp",
     UsedResource: ResourceType.CROP,
     Levels: [
@@ -85,7 +89,8 @@ export const ATTACK_SPEED: TerritoryUpgrade = {
 export const HEALTH: TerritoryUpgrade = {
     Id: "health",
     Name: "Health",
-    Format: "%",
+    Color: "mc-red",
+    Format: "Health: +{1}%",
     Sprite: "sprites/fermented_spider_eye.png",
     UsedResource: ResourceType.WOOD,
     Levels: [

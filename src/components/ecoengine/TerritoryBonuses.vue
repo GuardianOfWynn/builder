@@ -30,9 +30,9 @@
                 <input type="number" v-model="currentAllyTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
               </div>
             </div>
-            <div class="w-full px-1 text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save locally</div>
-            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer">Save tax globally</div>
-            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer">Save ally tax globally</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer" @click.stop="saveTax">Save locally</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer" @click.stop="e => saveTaxGlobally(1)">Save tax globally</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer" @click.stop="e => saveTaxGlobally(2)">Save ally tax globally</div>
           </div>
           <div>
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
@@ -41,7 +41,7 @@
                 <div v-if="getBonusByPosition(x - 1, y - 1) !== undefined" class="cursor-pointer"
                   @contextmenu="decreaseBonusLevel" @click.stop="increaseBonusLevel"
                   @mouseenter="hoveredBonus = getBonusByPosition(x - 1, y - 1)!" @mouseleave="hoveredBonus = null">
-                  <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-7 h-7 pixelated" />
+                  <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-8 h-8 pixelated" />
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@
                 <div class="cursor-pointer"
                     @contextmenu="decreaseUpgradeLevel" @click.stop="increaseUpgradeLevel"
                     @mouseenter="hoveredUpgrade = UPGRADES.get(upgrade)!" @mouseleave="hoveredUpgrade = null">
-                    <img :src="'/builder/' + UPGRADES.get(upgrade)!.Sprite" class="w-7 h-7 object-contain pixelated" />
+                    <img :src="'/builder/' + UPGRADES.get(upgrade)!.Sprite" class="w-8 h-8 object-contain pixelated" />
                   </div>
               </div>
             </div>
@@ -69,11 +69,11 @@
         <p class="text-xs text-mc-gray" v-for="line in hoveredBonus.Description">
           {{ line }}
         </p>
-        <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getLevelObject().Value + '') }}</p>
+        <p class="text-mc-light-purple mt-2">{{ hoveredBonus.Format.replace('{1}', getBonusLevelObject().Value + '') }}</p>
         <p class="text-mc-lime mt-2">Cost (per hour):</p>
         <p class="text-mc-lime">- <span class="text-mc-gray">{{
           hoveredBonus.Levels.get(territory!.bonuses.get(hoveredBonus.Id)!.level)?.Cost }} {{
-    translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
+          translateResourceName(hoveredBonus.UsedResorce) }}</span></p>
         <p class="text-mc-gray mt-2">Left-click to increase</p>
         <p class="text-mc-gray mt-2">Right-click to decrease</p>
       </div>
@@ -87,6 +87,24 @@
         <p class="text-mc-dark-gray text-xs">Holding more territories and creating links increases the HQ Bonus</p>
         <p class="text-mc-gray text-xs mt-2">To gain resource from your other territories, you must link them to your
           headquarters</p>
+      </div>
+      <div :key="count" v-if="hoveredUpgrade !== null"
+        :class="'text-' + hoveredUpgrade.Color" class="text-sm border-[1px] w-fit h-fit rounded-md mt-1 bg-mc-bg absolute border-mc-aqua p-2">
+        <p class="text-sm"><span>{{ hoveredUpgrade.Name }}</span>
+          <span class="text-mc-gray"> [Lv. {{ territory!.upgrades.get(hoveredUpgrade.Id)!.level }}]</span>
+
+          <span v-if="hoveredUpgrade.Levels.length - 1 <= territory!.upgrades.get(hoveredUpgrade.Id)!.level"
+            class="text-mc-dark-gray"> (Max)</span>
+        </p>
+
+        <p class="text-mc-gray mt-2">Left-click to increase</p>
+        <p class="text-mc-gray mt-2">Right-click to decrease</p>
+
+        <p class="text-mc-light-purple mt-2">{{ hoveredUpgrade.Format.replace('{1}', getUpgradeLevelObject().Value + '') }}</p>
+        <p class="text-mc-lime mt-2">Cost (per hour):</p>
+        <p class="text-mc-lime">- <span class="text-mc-gray">{{
+          hoveredUpgrade.Levels[territory!.upgrades.get(hoveredUpgrade.Id)!.level]?.Cost }} {{
+          translateResourceName(hoveredUpgrade.UsedResource) }}</span></p>
       </div>
     </div>
   </div>
@@ -126,91 +144,23 @@ export default {
     })
 
     const bonusesPositioning = ref([
-      {
-        column: 0,
-        row: 0,
-        bonus: bonus.STRONGER_MINIONS
-      },
-      {
-        column: 1,
-        row: 0,
-        bonus: bonus.MULTI_HIT,
-      },
-      {
-        column: 2,
-        row: 0,
-        bonus: bonus.TOWER_AURA,
-      },
-      {
-        column: 3,
-        row: 0,
-        bonus: bonus.TOWER_VOLLEY,
-      },
-      {
-        column: 0,
-        row: 1,
-        bonus: bonus.GATHERING_XP,
-      },
-      {
-        column: 1,
-        row: 1,
-        bonus: bonus.MOB_XP,
-      },
-      {
-        column: 2,
-        row: 1,
-        bonus: bonus.MOB_DAMAGE,
-      },
-      {
-        column: 3,
-        row: 1,
-        bonus: bonus.PVP_DAMAGE,
-      },
-      {
-        column: 4,
-        row: 1,
-        bonus: bonus.XP_SEEKING,
-      },
-      {
-        column: 5,
-        row: 1,
-        bonus: bonus.TOME_SEEKING,
-      },
-      {
-        column: 6,
-        row: 1,
-        bonus: bonus.EMERALD_SEEKING,
-      },
-      {
-        column: 0,
-        row: 2,
-        bonus: bonus.LARGER_RESOURCE_STORAGE,
-      },
-      {
-        column: 1,
-        row: 2,
-        bonus: bonus.LARGER_EMERALD_STORAGE,
-      },
-      {
-        column: 2,
-        row: 2,
-        bonus: bonus.EFFICIENT_RESOURCES,
-      },
-      {
-        column: 3,
-        row: 2,
-        bonus: bonus.EFFICIENT_EMERALDS,
-      },
-      {
-        column: 4,
-        row: 2,
-        bonus: bonus.RESOURCE_RATE,
-      },
-      {
-        column: 5,
-        row: 2,
-        bonus: bonus.EMERALD_RATE,
-      }
+      { column: 0, row: 0, bonus: bonus.STRONGER_MINIONS },
+      { column: 1, row: 0, bonus: bonus.MULTI_HIT },
+      { column: 2, row: 0, bonus: bonus.TOWER_AURA },
+      { column: 3, row: 0, bonus: bonus.TOWER_VOLLEY },
+      { column: 0, row: 1, bonus: bonus.GATHERING_XP, },
+      { column: 1, row: 1, bonus: bonus.MOB_XP },
+      { column: 2, row: 1, bonus: bonus.MOB_DAMAGE },
+      { column: 3, row: 1, bonus: bonus.PVP_DAMAGE },
+      { column: 4, row: 1, bonus: bonus.XP_SEEKING },
+      { column: 5, row: 1, bonus: bonus.TOME_SEEKING, },
+      { column: 6, row: 1, bonus: bonus.EMERALD_SEEKING, },
+      { column: 0, row: 2, bonus: bonus.LARGER_RESOURCE_STORAGE, },
+      { column: 1, row: 2, bonus: bonus.LARGER_EMERALD_STORAGE, },
+      { column: 2, row: 2, bonus: bonus.EFFICIENT_RESOURCES, },
+      { column: 3, row: 2, bonus: bonus.EFFICIENT_EMERALDS, },
+      { column: 4, row: 2, bonus: bonus.RESOURCE_RATE, },
+      { column: 5, row: 2, bonus: bonus.EMERALD_RATE,}
     ])
 
     function saveTax() {
@@ -279,8 +229,12 @@ export default {
       count.value++;
     }
 
-    function getLevelObject(): BonusLevel {
+    function getBonusLevelObject(): BonusLevel {
       return hoveredBonus.value!.Levels.get(props.territory!.bonuses.get(hoveredBonus.value!.Id)!.level)!
+    }
+
+    function getUpgradeLevelObject(): UpgradeLevel {
+      return hoveredUpgrade.value!.Levels[props.territory!.upgrades.get(hoveredUpgrade.value!.Id)!.level]!
     }
 
 
@@ -299,7 +253,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getLevelObject, count, moveHqHovered }
+    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getUpgradeLevelObject, getBonusLevelObject, saveTax, saveTaxGlobally, count, moveHqHovered }
   },
   components: {}
 }
