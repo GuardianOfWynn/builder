@@ -34,7 +34,8 @@
           <p class="text-mc-aqua text-md mb-2">Routing overview</p>
           <p class="text-mc-aqua">From: <span class="text-mc-gray">{{ routeViewerFirstTerritory!.name }}</span></p>
           <p class="text-mc-aqua mb-4">To: <span class="text-mc-gray">{{ routeViewerSecondTerritory!.name }}</span></p>
-          <p class="text-mc-aqua mb-4">Style: <span class="text-mc-gray">FASTEST</span></p>
+          <p class="text-mc-aqua mb-4">Style: <span class="text-mc-gray"> {{ routeViewerFirstTerritory!.routeStyle.toUpperCase() }} </span></p>
+          <p class="text-mc-aqua mb-4">Total tax: <span class="text-mc-red"> {{ currentRouteTax }}% </span></p>
           <p class="text-mc-aqua mb-4">Total territories: <span class="text-mc-gray">{{ currentRoute!.length }}</span></p>
           <div class="text-center bg-mc-dark-red text-white p-2 px-4 w-full rounded-sm cursor-pointer"
             @click="clearRouteViewer">Clear</div>
@@ -117,6 +118,8 @@ export default {
     const routeViewerFirstTerritory: Ref<Territory | null> = ref(null);
     const routeViewerSecondTerritory: Ref<Territory | null> = ref(null);
     const currentRoute: Ref<Territory[]> = ref([])
+    const currentRouteTax = ref(0);
+    const isRoutePossible = ref(false);
 
     function handleTerritoryClick(terr: Territory) {
       if (isSelectingRouteViewer.value) {
@@ -151,8 +154,10 @@ export default {
       }
       clearHighlightedRoutes();
       let pathfinder = new Pathfinder(routeViewerFirstTerritory.value!, EngineInstance!.guildMap)
-      let route = pathfinder.route(routeViewerSecondTerritory.value!, RouteStyle.FASTEST)
+      let [route, tax, possible] = pathfinder.route(routeViewerSecondTerritory.value, routeViewerFirstTerritory.value.routeStyle);
       currentRoute.value = route;
+      currentRouteTax.value = tax;
+      isRoutePossible.value = possible;
       let currentTerritory = routeViewerFirstTerritory.value!
       let highlighted: string[] = [];
       for (let terr of route) {
@@ -171,6 +176,8 @@ export default {
       isSelectingRouteViewer.value = false;
       clearHighlightedRoutes()
       routeViewerFirstTerritory.value = null;
+      currentRouteTax.value = 0;
+      isRoutePossible.value = true;
       routeViewerSecondTerritory.value = null;
     }
 
@@ -213,6 +220,8 @@ export default {
       getConnectionAngle,
       getConnectionHeight,
       handleTerritoryClick,
+      isRoutePossible,
+      currentRouteTax,
       territoryPanelOpen,
       transferTimer,
       currentRoute,

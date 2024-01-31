@@ -34,14 +34,13 @@ export class Pathfinder {
     this.guildMap = guildMap;
   }
 
-  djikstra(target: Territory, style: RouteStyle): [Map<string, number>, Map<string, string>, Map<string, Territory>, number] {
+  djikstra(target: Territory, style: RouteStyle): [Map<string, number>, Map<string, string>, Map<string, Territory>] {
     const visited: Map<string, boolean> = new Map();
     const nodes: Map<string, Territory> = new Map();
     const distances: Map<string, number> = new Map();
     const previous: Map<string, string> = new Map();
     const root: string = this.root.name;
     const nodesMap: Map<string, Node> = new Map();
-    var tax = 0;
 
     this.guildMap.territories.forEach((e: Territory) => {
       nodesMap.set(e.name, new Node(e, Number.POSITIVE_INFINITY, e.connections, null));
@@ -75,8 +74,7 @@ export class Pathfinder {
           if(territoryGuild.tag !== rootTerritory.tag) {
             if(territory?.borders === BorderStyle.CLOSED) {
               edgeWeight += 999999
-              tax += 999999
-            } else {
+            } else if(style === RouteStyle.CHEAPEST) {
               if(territoryGuild.allies.includes(root)) {
                 edgeWeight += territory!.allyTax;
               } else {
@@ -97,7 +95,7 @@ export class Pathfinder {
       });
     }
 
-    return [distances, previous, nodes, tax];
+    return [distances, previous, nodes];
   }
 
   route(target: Territory, style: RouteStyle): [Territory[], number, boolean]  {
@@ -128,7 +126,7 @@ export class Pathfinder {
   }
 
   getDistance(target: Territory): number {
-    const [distance, previous, _, tax] = this.djikstra(target, RouteStyle.FASTEST);
+    const [distance, previous, _] = this.djikstra(target, RouteStyle.FASTEST);
     return distance.get(target.name)!;
   }
 }
