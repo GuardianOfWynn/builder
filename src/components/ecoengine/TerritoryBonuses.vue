@@ -14,31 +14,25 @@
           </div>
           <div class="flex flex-col gap-y-1">
             <p class="border-b-[1px] border-mc-aqua mb-2">Taxes</p>
-            <div class="flex gap-x-2">
+            <div class="flex flex-col gap-y-2 gap-x-2">
               <div class="">
                 <div class="flex gap-x-2">
                   <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
                   <p class="text-xs my-auto">Tax (%)</p>
                 </div>
-                <input type="number" v-model="currentTax" class="font-jetbrains text-sm w-28 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+                <input type="number" v-model="currentTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
               </div>
               <div class="">
                 <div class="flex gap-x-2">
                   <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
                   <p class="text-xs my-auto">Ally Tax (%)</p>
                 </div>
-                <input type="number" v-model="currentAllyTax" class="font-jetbrains text-sm w-28 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+                <input type="number" v-model="currentAllyTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
               </div>
             </div>
-            <div class="">
-              <div class="flex gap-x-2">
-                <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
-                <p class="text-xs my-auto">Global tax (%)</p>
-              </div>
-              <input type="number" v-model="currentGlobalTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
-            </div>
-            <div class="w-full text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save taxes</div>
-            <div class="w-full text-center text-white border-[1px] border-mc-lime cursor-pointer">Save global tax</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save locally</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer">Save tax globally</div>
+            <div class="w-full px-1 text-center text-white border-[1px] border-mc-lime cursor-pointer">Save ally tax globally</div>
           </div>
           <div>
             <p class="border-b-[1px] border-mc-aqua mb-2">Bonus</p>
@@ -57,7 +51,7 @@
                 <div class="cursor-pointer"
                     @contextmenu="decreaseUpgradeLevel" @click.stop="increaseUpgradeLevel"
                     @mouseenter="hoveredUpgrade = UPGRADES.get(upgrade)!" @mouseleave="hoveredUpgrade = null">
-                    <img :src="'/builder/' + UPGRADES.get(upgrade)!.Sprite" class="w-7 h-7 pixelated" />
+                    <img :src="'/builder/' + UPGRADES.get(upgrade)!.Sprite" class="w-7 h-7 object-contain pixelated" />
                   </div>
               </div>
             </div>
@@ -120,13 +114,11 @@ export default {
     const count = ref(0);
     const currentTax = ref(0);
     const currentAllyTax = ref(0);
-    const currentGlobalTax = ref(0);
 
     watchEffect(() => {
       if(props.territory === undefined || props.territory === null) {
         currentTax.value = 0;
         currentAllyTax.value = 0;
-        currentGlobalTax.value = 0;
         return;
       }
       currentTax.value = props.territory!.tax;
@@ -221,6 +213,28 @@ export default {
       }
     ])
 
+    function saveTax() {
+      props.territory!.tax = currentTax.value
+      props.territory!.allyTax = currentAllyTax.value;
+    }
+
+    function saveTaxGlobally(mod: number) {
+      props.territory!.claim!.territories.forEach(terr => {
+        switch(mod) {
+          case 1:
+            terr.tax = currentTax.value;
+            break;
+          case 2:
+            terr.allyTax = currentAllyTax.value;
+            break;
+          default:
+            terr.allyTax = currentAllyTax.value;
+            terr.tax = currentTax.value;
+            break;
+        }
+      })
+    }
+
     function getBonusByPosition(x: number, y: number): TerritoryBonus | undefined {
       return bonusesPositioning.value.filter(a => a.column == x && a.row == y)[0]?.bonus
     }
@@ -285,7 +299,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, currentGlobalTax, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getLevelObject, count, moveHqHovered }
+    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getLevelObject, count, moveHqHovered }
   },
   components: {}
 }

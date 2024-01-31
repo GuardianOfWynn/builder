@@ -20,7 +20,7 @@ export const DEFENCE: TerritoryUpgrade = {
     Id: "defence",
     Name: "Defence",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/shield.webp",
     UsedResource: ResourceType.FISH,
     Levels: [
         { Level: 0, Cost: 0, Value: 0 },
@@ -42,7 +42,7 @@ export const DAMAGE: TerritoryUpgrade = {
     Id: "damage",
     Name: "Damage",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/iron_sword.webp",
     UsedResource: ResourceType.ORE,
     Levels: [
         { Level: 0, Cost: 0, Value: 0 },
@@ -64,7 +64,7 @@ export const ATTACK_SPEED: TerritoryUpgrade = {
     Id: "attack_speed",
     Name: "Attack Speed",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/rabbit_hide.webp",
     UsedResource: ResourceType.CROP,
     Levels: [
         { Level: 0, Cost: 0, Value: 0 },
@@ -86,7 +86,7 @@ export const HEALTH: TerritoryUpgrade = {
     Id: "health",
     Name: "Health",
     Format: "%",
-    Sprite: "",
+    Sprite: "sprites/fermented_spider_eye.png",
     UsedResource: ResourceType.WOOD,
     Levels: [
         { Level: 0, Cost: 0, Value: 0 },

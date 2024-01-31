@@ -495,10 +495,10 @@ export class Territory {
             [bonuses.KEY_BONUS_EMERALD_RATE, { activated: false, level: 0 }],
         ]);
         this.upgrades = new Map<string, UpgradeBonusStatus>([
-            [upgrades.KEY_UPGRADE_ATTACK_SPEED, { activated: true, level: 0 }],
             [upgrades.KEY_UPGRADE_DAMAGE, { activated: true, level: 0 }],
-            [upgrades.KEY_UPGRADE_DEFENSE, { activated: true, level: 0 }],
-            [upgrades.KEY_UPGRADE_HEALTH, { activated: true, level: 0 }]
+            [upgrades.KEY_UPGRADE_ATTACK_SPEED, { activated: true, level: 0 }],
+            [upgrades.KEY_UPGRADE_HEALTH, { activated: true, level: 0 }],
+            [upgrades.KEY_UPGRADE_DEFENSE, { activated: true, level: 0 }]
         ]);
     }
 }

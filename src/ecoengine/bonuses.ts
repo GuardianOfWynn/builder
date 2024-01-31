@@ -168,7 +168,7 @@ const MOB_DAMAGE: TerritoryBonus = {
     Id: KEY_BONUS_MOB_DAMAGE,
     Name: "Mob Damage",
     Format: "Damage to mobs: +{1}%",
-    Sprite: "",
+    Sprite: "sprites/stone_sword.webp",
     UsedResorce: ResourceType.CROP,
     Description: [
         'Guild member in this territory',
@@ -192,7 +192,7 @@ const PVP_DAMAGE: TerritoryBonus = {
     Id: KEY_BONUS_PVP_DAMAGE,
     Name: "PvP Damage",
     Format: "Damage Bonus: +{1}%",
-    Sprite: "",
+    Sprite: "sprites/gold_sword.webp",
     UsedResorce: ResourceType.ORE,
     Description: [
         'Guild members in this territory',
