@@ -18,24 +18,24 @@
               <div class="">
                 <div class="flex gap-x-2">
                   <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
-                  <p class="text-xs my-auto">Tax</p>
+                  <p class="text-xs my-auto">Tax (%)</p>
                 </div>
-                <input type="number" class="text-sm w-20 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+                <input type="number" v-model="currentTax" class="font-jetbrains text-sm w-28 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
               </div>
               <div class="">
                 <div class="flex gap-x-2">
                   <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
-                  <p class="text-xs my-auto">Ally Tax</p>
+                  <p class="text-xs my-auto">Ally Tax (%)</p>
                 </div>
-                <input type="number" class="  text-sm w-20 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+                <input type="number" v-model="currentAllyTax" class="font-jetbrains text-sm w-28 border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
               </div>
             </div>
             <div class="">
               <div class="flex gap-x-2">
                 <img :src='"/builder/sprites/emerald.png"' class="w-6 h-6 cursor-pointer" />
-                <p class="text-xs my-auto">Ally tax</p>
+                <p class="text-xs my-auto">Global tax (%)</p>
               </div>
-              <input type="number" class="text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
+              <input type="number" v-model="currentGlobalTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
             </div>
             <div class="w-full text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save tax</div>
             <div class="w-full text-center text-white border-[1px] border-mc-lime cursor-pointer">Save global tax</div>
@@ -91,7 +91,7 @@
 <script lang="ts">
 import { Territory } from '../../ecoengine/territory';
 import { BONUSES_MAP, TerritoryBonus, BonusLevel } from '../../ecoengine/bonuses';
-import { ref, Ref } from 'vue';
+import { ref, Ref, watchEffect } from 'vue';
 import { ResourceType } from '../../ecoengine/resource';
 import { UpgradeLevel } from '../../ecoengine/upgrades';
 import * as bonus from '../../ecoengine/bonuses';
@@ -106,7 +106,21 @@ export default {
     const bonuses = ref(BONUSES_MAP);
     const hoveredBonus: Ref<TerritoryBonus | null> = ref(null);
     const moveHqHovered = ref(false);
-    const count = ref(0)
+    const count = ref(0);
+    const currentTax = ref(0);
+    const currentAllyTax = ref(0);
+    const currentGlobalTax = ref(0);
+
+    watchEffect(() => {
+      if(props.territory === undefined || props.territory === null) {
+        currentTax.value = 0;
+        currentAllyTax.value = 0;
+        currentGlobalTax.value = 0;
+        return;
+      }
+      currentTax.value = props.territory!.tax;
+      currentAllyTax.value = props.territory!.allyTax;
+    })
 
     const bonusesPositioning = ref([
       {
@@ -240,7 +254,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, bonusesPositioning, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, getLevelObject, count, moveHqHovered }
+    return { bonuses, hoveredBonus, bonusesPositioning, currentTax, currentAllyTax, currentGlobalTax, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, getLevelObject, count, moveHqHovered }
   },
   components: {}
 }

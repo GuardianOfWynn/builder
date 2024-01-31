@@ -26,17 +26,17 @@
           <div class="col-span-2 bg-no-repeat bg-cover bg-map73 w-[1024px] h-[1024px] pixelated"></div>
         </div>
       </div>
-      <div class="fixed right-4 top-4 z-50">
-        <p class="bg-mc-bg text-md text-mc-lime border-2 border-mc-light-purple px-4 py-2 rounded-md cursor-pointer"
-          @click.stop="isSelectingRouteViewer = !isSelectingRouteViewer">{{ isSelectingRouteViewer ? 'Cancel routing overview':'Start route viewer'}}</p>
+      <div class="fixed right-4 text-md bottom-4 z-50 font-jetbrains">
+        <p class="bg-mc-bg text-md text-center text-mc-lime border-2 border-mc-light-purple px-4 py-2 rounded-md cursor-pointer"
+          @click.stop="isSelectingRouteViewer = !isSelectingRouteViewer">{{ isSelectingRouteViewer ? 'Stop route viewer':'Start route viewer'}}</p>
         <div class="bg-mc-bg border-[1px] text-sm border-mc-aqua p-4 mt-2"
           v-if="routeViewerFirstTerritory != null && routeViewerSecondTerritory != null">
-          <p class="text-mc-aqua text-lg mb-2">Routing overview</p>
+          <p class="text-mc-aqua text-md mb-2">Routing overview</p>
           <p class="text-mc-aqua">From: <span class="text-mc-gray">{{ routeViewerFirstTerritory!.name }}</span></p>
           <p class="text-mc-aqua mb-4">To: <span class="text-mc-gray">{{ routeViewerSecondTerritory!.name }}</span></p>
           <p class="text-mc-aqua mb-4">Style: <span class="text-mc-gray">FASTEST</span></p>
           <p class="text-mc-aqua mb-4">Total territories: <span class="text-mc-gray">{{ currentRoute!.length }}</span></p>
-          <div class="text-center bg-mc-red text-white p-2 px-4 w-full rounded-sm cursor-pointer"
+          <div class="text-center bg-mc-dark-red text-white p-2 px-4 w-full rounded-sm cursor-pointer"
             @click="clearRouteViewer">Clear</div>
         </div>
       </div>
@@ -66,8 +66,10 @@
           <TerritoryCard v-if="hoveredTerritory !== null" :territory="hoveredTerritory" />
           <TerritoryBonuses v-if="selectedTerritory != null"
           :territory="selectedTerritory" />
-          <p :key="transferTimer" class="text-xl outlined-text text-white p-4">{{'Next resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
-              EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
+      </div>
+      <div class="fixed z-40 left-0 bottom-0 font-jetbrains flex text-sm p-4 gap-x-4">
+        <p :key="transferTimer" class="outlined-text text-white p-4">{{'Resource transfer in ' + Math.max(0, (60 - Math.floor(((new Date().getTime() -
+          EngineInstance!.lastResourceTransference) / 1000)))) + ' seconds' }}</p>
       </div>
     </div>
   </div>
@@ -75,7 +77,7 @@
   
 <script lang="ts">
 
-import { Ref, ref, onBeforeUpdate, onMounted } from "vue";
+import { Ref, ref } from "vue";
 import { Engine, EngineInstance, createEngineFromMap } from "../../ecoengine/engine"
 import { RouteStyle, Territory } from "../../ecoengine/territory";
 import TerritoryCard from "../ecoengine/TerritoryCard.vue"

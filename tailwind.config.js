@@ -5,7 +5,8 @@ module.exports = {
      extend: {
       fontFamily: {
         minecraft: "Minecraft",
-        inter: "Inter, sans-serif"
+        inter: "Inter, sans-serif",
+        jetbrains: 'JetBrains Mono, monospace'
       },
       colors: {
         'mc-dark-blue': "#0000AA",
