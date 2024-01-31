@@ -37,7 +37,7 @@
               </div>
               <input type="number" v-model="currentGlobalTax" class="font-jetbrains text-sm w-full border-b-2 border-mc-aqua outline-none bg-transparent  " @mousemove.stop="" @click.stop="" />
             </div>
-            <div class="w-full text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save tax</div>
+            <div class="w-full text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer">Save taxes</div>
             <div class="w-full text-center text-white border-[1px] border-mc-lime cursor-pointer">Save global tax</div>
           </div>
           <div>
@@ -47,8 +47,18 @@
                 <div v-if="getBonusByPosition(x - 1, y - 1) !== undefined" class="cursor-pointer"
                   @contextmenu="decreaseBonusLevel" @click.stop="increaseBonusLevel"
                   @mouseenter="hoveredBonus = getBonusByPosition(x - 1, y - 1)!" @mouseleave="hoveredBonus = null">
-                  <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-8 h-8 pixelated" />
+                  <img :src="'/builder/' + getBonusByPosition(x - 1, y - 1)!.Sprite" class="w-7 h-7 pixelated" />
                 </div>
+              </div>
+            </div>
+            <p class="border-b-[1px] border-mc-aqua mt-2 mb-2">Upgrades</p>
+            <div class="flex gap-x-2">
+              <div v-for="[upgrade, lvl] in territory!.upgrades">
+                <div class="cursor-pointer"
+                    @contextmenu="decreaseUpgradeLevel" @click.stop="increaseUpgradeLevel"
+                    @mouseenter="hoveredUpgrade = UPGRADES.get(upgrade)!" @mouseleave="hoveredUpgrade = null">
+                    <img :src="'/builder/' + UPGRADES.get(upgrade)!.Sprite" class="w-7 h-7 pixelated" />
+                  </div>
               </div>
             </div>
           </div>
@@ -93,7 +103,7 @@ import { Territory } from '../../ecoengine/territory';
 import { BONUSES_MAP, TerritoryBonus, BonusLevel } from '../../ecoengine/bonuses';
 import { ref, Ref, watchEffect } from 'vue';
 import { ResourceType } from '../../ecoengine/resource';
-import { UpgradeLevel } from '../../ecoengine/upgrades';
+import { TerritoryUpgrade, UPGRADES, UpgradeLevel } from '../../ecoengine/upgrades';
 import * as bonus from '../../ecoengine/bonuses';
 
 export default {
@@ -105,6 +115,7 @@ export default {
   setup(props) {
     const bonuses = ref(BONUSES_MAP);
     const hoveredBonus: Ref<TerritoryBonus | null> = ref(null);
+    const hoveredUpgrade: Ref<TerritoryUpgrade | null> = ref(null);
     const moveHqHovered = ref(false);
     const count = ref(0);
     const currentTax = ref(0);
@@ -234,6 +245,26 @@ export default {
       count.value++;
     }
 
+    function decreaseUpgradeLevel() {
+      let currentStats = props.territory!.upgrades.get(hoveredUpgrade.value!.Id)!
+      if (currentStats.level <= 0) {
+        return;
+      }
+      currentStats.level = currentStats.level - 1;
+      props.territory?.upgrades.set(hoveredUpgrade.value!.Id, currentStats)
+      count.value++;
+    }
+
+    function increaseUpgradeLevel() {
+      let currentStats = props.territory!.upgrades.get(hoveredUpgrade.value!.Id)!
+      if (currentStats.level >= hoveredUpgrade.value!.Levels.length - 1) {
+        return;
+      }
+      currentStats.level = currentStats.level + 1;
+      props.territory?.upgrades.set(hoveredUpgrade.value!.Id, currentStats)
+      count.value++;
+    }
+
     function getLevelObject(): BonusLevel {
       return hoveredBonus.value!.Levels.get(props.territory!.bonuses.get(hoveredBonus.value!.Id)!.level)!
     }
@@ -254,7 +285,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, bonusesPositioning, currentTax, currentAllyTax, currentGlobalTax, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, getLevelObject, count, moveHqHovered }
+    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, currentGlobalTax, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getLevelObject, count, moveHqHovered }
   },
   components: {}
 }
