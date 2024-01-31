@@ -40,10 +40,14 @@ export type ResourceStorage = Map<ResourceType, number>
 
 export type ResourceTransference = {
     id: string
-    transferenceGroup: number;
+    transferenceGroup: number
     direction: TransferDirection
     currentTerritory: Territory
+    isStuck: boolean
     origin: Territory
+    originalClaim: Claim
+    originalStyle: RouteStyle
+    originalRoute: Territory[]
     storage: ResourceStorage
     target: Territory
 }
@@ -104,8 +108,8 @@ export class Territory {
 
     getTerritoryStartZ(): number {
         let delta = 0;
-        if(["Heavenly Ingress", "Field of Life", "Otherwordly Monolith", "Luminous Plateau", "Path to Light", "Primal Fen", "Nexus of Light", "Azure Frontier"].includes(this.name)) {
-            delta+=520
+        if (["Heavenly Ingress", "Field of Life", "Otherwordly Monolith", "Luminous Plateau", "Path to Light", "Primal Fen", "Nexus of Light", "Azure Frontier"].includes(this.name)) {
+            delta += 520
         }
         let lower = this.position.startZ > this.position.endZ
         let z = lower ? this.position.startZ : this.position.startZ + this.getTerritoryHeight()
@@ -121,11 +125,11 @@ export class Territory {
     }
 
     getTerritoryCenterX(): number {
-        return this.getTerritoryStartX() + this.getTerritoryWidth()/2
+        return this.getTerritoryStartX() + this.getTerritoryWidth() / 2
     }
 
     getTerritoryCenterZ(): number {
-        return (this.getTerritoryStartZ() + this.getTerritoryHeight()/2)
+        return (this.getTerritoryStartZ() + this.getTerritoryHeight() / 2)
     }
 
 
@@ -138,14 +142,14 @@ export class Territory {
     }
 
     getResourceRate(): number {
-        if(!this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.activated) {
+        if (!this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.activated) {
             return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(0)!.Value;
         }
         return bonuses.BONUSES_MAP.get(KEY_BONUS_RESOURCE_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_RESOURCE_RATE)!.level)!.Value
     }
 
     getEmeraldRate(): number {
-        if(!this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.activated) {
+        if (!this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.activated) {
             return bonuses.BONUSES_MAP.get(KEY_BONUS_EMERALD_RATE)!.Levels.get(0)!.Value;
         }
         return bonuses.BONUSES_MAP.get(KEY_BONUS_EMERALD_RATE)!.Levels.get(this.bonuses.get(KEY_BONUS_EMERALD_RATE)!.level)!.Value
@@ -218,10 +222,10 @@ export class Territory {
 
     getStoredResource(res: ResourceType): number {
         let sum = this.storage.get(res)!;
-        for(let transf of this.passingResource) {
+        for (let transf of this.passingResource) {
             sum += transf.storage.get(res)!;
         }
-        return Math.floor(sum) 
+        return Math.floor(sum)
     }
 
     findExternals(): Territory[] {
@@ -253,33 +257,52 @@ export class Territory {
         return costs
     }
 
-    transferResource(transf: ResourceTransference) {
-        let target = transf.target;
+    transferResource(transf: ResourceTransference): boolean {
+
+        // Try to reroute stuck transferences
+        for (let stuckTransferences of this.passingResource.filter(x => x.isStuck)) {
+            let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
+            let [route, tax, possible] = pathfinder.route(stuckTransferences.target, transf.originalStyle)
+            if (!possible) {
+                transf.isStuck = true;
+                return false;
+            }
+            transf.originalRoute = route;
+        }
+
         if (transf.direction == TransferDirection.TERRITORY_TO_HQ) {
             if (this.claim != null) {
                 // If territory is member of a claim, reroute it to HQ
-                target = this.claim.getHQ()!;
-                transf.target = target;
+                transf.target = transf.originalClaim.getHQ()!;
+                let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
+                let [route, tax, possible] = pathfinder.route(transf.target, transf.originalStyle)
+                if (!possible) {
+                    transf.isStuck = true;
+                    return false;
+                }
+                transf.originalRoute = route;
+
             }
         }
 
-        for (let conn of this.connections) {
-            if (conn === target.name) {
-                target.receiveResource(transf);
-                return;
+        if (this.name === transf.target.name || this.connections.includes(transf.target.name)) {
+            transf.target.receiveResource(transf);
+            return true;
+        }
+
+        let currentRoute = transf.originalRoute;
+        if (this.connections.includes(currentRoute[0].name)) {
+            currentRoute[0].receiveResource(transf);
+        } else {
+            let currentIndex = currentRoute.findIndex(x => x.name === this.name)
+            if (currentIndex === -1) {
+                transf.isStuck = true;
+                return false;
             }
+            currentRoute[currentIndex + 1].receiveResource(transf);
         }
 
-        if (this.name === target.name) {
-            this.receiveResource(transf);
-            return;
-        }
-
-        let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
-        let route = pathfinder.route(target!, this.routeStyle)
-        if (route.length > 0) {
-            route[0].receiveResource(transf)
-        }
+        return true
     }
 
     receiveResource(transference: ResourceTransference) {
@@ -300,7 +323,7 @@ export class Territory {
                 storageSize = this.getResourceStorageSize();
             }
             let stored = this.storage.get(resType)!;
-            if(stored >= storageSize) {
+            if (stored >= storageSize) {
                 this.resourceOverflow = true;
                 continue;
             }
@@ -398,15 +421,23 @@ export class Territory {
                 this.storage.set(res, qty - transfer.get(res)!)
             }
 
+            let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
+            let [route, tax, possible] = pathfinder.route(this.claim.getHQ()!, this.routeStyle)
+
             let transference: ResourceTransference = {
                 id: uuidv4(),
                 currentTerritory: this,
                 origin: this,
                 target: this.claim.getHQ()!,
+                isStuck: !possible,
+                originalRoute: route,
+                originalClaim: this.claim,
+                originalStyle: this.routeStyle,
                 direction: TransferDirection.TERRITORY_TO_HQ,
                 storage: transfer,
                 transferenceGroup: EngineInstance!.currentTransferenceId
             }
+
             if (needRes) {
                 this.claim.askForResources(this, askFor);
             }
@@ -448,7 +479,7 @@ export class Territory {
                 this.consumeResources(delta);
             }
         }
-            
+
     }
 
     reset() {

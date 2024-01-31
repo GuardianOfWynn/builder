@@ -1,5 +1,5 @@
 import { FibonacciHeap } from '@tyriar/fibonacci-heap';
-import { RouteStyle, Territory } from '../territory';
+import { BorderStyle, RouteStyle, Territory } from '../territory';
 import { GuildMap } from '../guild_map';
 
 
@@ -34,13 +34,14 @@ export class Pathfinder {
     this.guildMap = guildMap;
   }
 
-  djikstra(target: Territory, style: RouteStyle): [Map<string, number>, Map<string, string>, Map<string, Territory>] {
+  djikstra(target: Territory, style: RouteStyle): [Map<string, number>, Map<string, string>, Map<string, Territory>, number] {
     const visited: Map<string, boolean> = new Map();
     const nodes: Map<string, Territory> = new Map();
     const distances: Map<string, number> = new Map();
     const previous: Map<string, string> = new Map();
     const root: string = this.root.name;
     const nodesMap: Map<string, Node> = new Map();
+    var tax = 0;
 
     this.guildMap.territories.forEach((e: Territory) => {
       nodesMap.set(e.name, new Node(e, Number.POSITIVE_INFINITY, e.connections, null));
@@ -67,7 +68,22 @@ export class Pathfinder {
       const fromNode = nodesMap.get(tag)!;
       fromNode.territory.connections.forEach((conn: string) => {
         if (!visited.get(conn)) {
-          const edgeWeight = 1;
+          var edgeWeight = 1;
+          let territory = nodes.get(conn);
+          let territoryGuild = territory!.claim!.guild;
+          let rootTerritory = this.root.claim!.guild;
+          if(territoryGuild.tag !== rootTerritory.tag) {
+            if(territory?.borders === BorderStyle.CLOSED) {
+              edgeWeight += 999999
+              tax += 999999
+            } else {
+              if(territoryGuild.allies.includes(root)) {
+                edgeWeight += territory!.allyTax;
+              } else {
+                edgeWeight += territory!.tax;
+              }
+            }
+          }
           const toNode = nodesMap.get(conn)!;
           const newDistance = distances.get(fromNode.territory.name)! + edgeWeight;
           if (newDistance < distances.get(conn)!) {
@@ -81,22 +97,38 @@ export class Pathfinder {
       });
     }
 
-    return [distances, previous, nodes];
+    return [distances, previous, nodes, tax];
   }
 
-  route(target: Territory, style: RouteStyle): Territory[] {
+  route(target: Territory, style: RouteStyle): [Territory[], number, boolean]  {
     const [_, previous, nodes] = this.djikstra(target, style);
     const path: Territory[] = [];
+    let tax = 0;
     let currentNode: string | undefined = previous.get(target.name);
+    let rootTerritory = this.root.claim!.guild;
+    let possible = true;
     while (currentNode && currentNode !== this.root.name) {
+      let currentTerritory = nodes.get(currentNode)!
+      let territoryGuild = currentTerritory.claim!.guild
+      if(territoryGuild.tag !== rootTerritory.tag) {
+        if(currentTerritory!.borders === BorderStyle.CLOSED) {
+          possible = false;
+        } else {
+          if(territoryGuild.allies.includes(rootTerritory.tag)) {
+            tax += currentTerritory!.allyTax;
+          } else {
+            tax += currentTerritory!.tax;
+          }
+        }
+      }
       path.push(nodes.get(currentNode)!);
       currentNode = previous.get(currentNode);
     }
-    return path.reverse();
+    return [path.reverse(), tax, possible];
   }
 
   getDistance(target: Territory): number {
-    const [distance, previous, _] = this.djikstra(target, RouteStyle.FASTEST);
+    const [distance, previous, _, tax] = this.djikstra(target, RouteStyle.FASTEST);
     return distance.get(target.name)!;
   }
 }
