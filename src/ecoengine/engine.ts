@@ -26,7 +26,6 @@ export class Engine {
             setTimeout(() => setIntervalAsync(ms), ms);
         };
         setInterval(() => {
-            console.log("CHAMOU")
             EngineInstance!.currentTransferenceId++
             let currentTimeMillis = new Date().getTime();
             EngineInstance!.guildMap.territories.forEach(terr => {
