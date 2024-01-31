@@ -12,6 +12,27 @@
                 @click="territory!.claim!.setAsHQ(territory!)" />
             </div>
           </div>
+          <div>
+            <p class="border-b-[1px] border-mc-aqua mb-2">Borders and Style</p>
+            <div class="flex flex-col gap-x-2 gap-y-2">
+              <div>
+                Border:
+                <div @click.stop="switchBorders" class="outlined-text cursor-pointer text-sm font-jetbrains text-center border-2 py-0.5" :class="[currentBorder === BorderStyle.OPEN ? 'bg-mc-gold border-mc-yellow' : 'bg-mc-dark-red border-mc-red']">
+                  {{ currentBorder === BorderStyle.OPEN ? 'OPEN' : 'CLOSED' }}
+                </div>
+              </div>
+              <div>
+                Style:
+                <div @click.stop="switchStyle" class="outlined-text cursor-pointer text-sm font-jetbrains text-center py-0.5 border-2" :class="[currentStyle === RouteStyle.CHEAPEST ? 'bg-mc-dark-green border-mc-lime' : 'bg-mc-dark-aqua border-mc-aqua']">
+                  {{ currentStyle === RouteStyle.CHEAPEST ? 'CHEAPEST' : 'FASTEST' }}
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-2 mb-1 text-center text-white border-[1px] border-mc-aqua mt-2 cursor-pointer" @click.stop="saveBorderAndStyle">Save locally</div>
+            <div class="w-full px-2 mb-1 text-center text-white border-[1px] border-mc-lime cursor-pointer" @click.stop="e => saveBorderAndStyleGlobally(1)">Save borders globally</div>
+            <div class="w-full px-2 text-center text-white border-[1px] border-mc-lime cursor-pointer" @click.stop="e => saveBorderAndStyleGlobally(2)">Save style globally</div>
+            
+          </div>
           <div class="flex flex-col gap-y-1">
             <p class="border-b-[1px] border-mc-aqua mb-2">Taxes</p>
             <div class="flex flex-col gap-y-2 gap-x-2">
@@ -111,7 +132,7 @@
 </template>
       
 <script lang="ts">
-import { Territory } from '../../ecoengine/territory';
+import { Territory, BorderStyle, RouteStyle } from '../../ecoengine/territory';
 import { BONUSES_MAP, TerritoryBonus, BonusLevel } from '../../ecoengine/bonuses';
 import { ref, Ref, watchEffect } from 'vue';
 import { ResourceType } from '../../ecoengine/resource';
@@ -132,6 +153,8 @@ export default {
     const count = ref(0);
     const currentTax = ref(0);
     const currentAllyTax = ref(0);
+    const currentBorder = ref(BorderStyle.CLOSED);
+    const currentStyle = ref(RouteStyle.CHEAPEST);
 
     watchEffect(() => {
       if(props.territory === undefined || props.territory === null) {
@@ -141,6 +164,8 @@ export default {
       }
       currentTax.value = props.territory!.tax;
       currentAllyTax.value = props.territory!.allyTax;
+      currentBorder.value = props.territory!.borders;
+      currentStyle.value = props.territory!.routeStyle;
     })
 
     const bonusesPositioning = ref([
@@ -162,6 +187,39 @@ export default {
       { column: 4, row: 2, bonus: bonus.RESOURCE_RATE, },
       { column: 5, row: 2, bonus: bonus.EMERALD_RATE,}
     ])
+
+    function switchBorders() {
+      let newBorder = currentBorder.value === BorderStyle.CLOSED ? BorderStyle.OPEN : BorderStyle.CLOSED;
+      currentBorder.value = newBorder;
+    }
+
+    function saveBorderAndStyle() {
+      props.territory!.borders = currentBorder.value;
+      props.territory!.routeStyle = currentStyle.value;
+    }
+
+    function saveBorderAndStyleGlobally(mod: number) {
+      props.territory!.claim!.territories.forEach(terr => {
+        switch(mod) {
+          case 1:
+            terr.borders = currentBorder.value;
+            break;
+          case 2:
+            terr.routeStyle = currentStyle.value;
+            break;
+          default:
+            terr.borders = currentBorder.value;
+            terr.routeStyle = currentStyle.value;
+            break;
+        }
+        
+      })
+    }
+
+    function switchStyle() {
+      let newStyle = currentStyle.value === RouteStyle.CHEAPEST ? RouteStyle.FASTEST : RouteStyle.CHEAPEST;
+      currentStyle.value = newStyle;
+    }
 
     function saveTax() {
       props.territory!.tax = currentTax.value
@@ -253,7 +311,7 @@ export default {
       }
     }
 
-    return { bonuses, hoveredBonus, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getUpgradeLevelObject, getBonusLevelObject, saveTax, saveTaxGlobally, count, moveHqHovered }
+    return { bonuses, hoveredBonus, BorderStyle, RouteStyle, currentBorder, currentStyle, bonusesPositioning, hoveredUpgrade, currentTax, currentAllyTax, UPGRADES, saveBorderAndStyle, saveBorderAndStyleGlobally, decreaseBonusLevel, getBonusByPosition, translateResourceName, increaseBonusLevel, decreaseUpgradeLevel, increaseUpgradeLevel, getUpgradeLevelObject, getBonusLevelObject, saveTax, saveTaxGlobally, switchBorders, switchStyle, count, moveHqHovered }
   },
   components: {}
 }
