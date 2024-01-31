@@ -318,6 +318,7 @@ export class Territory {
 
     storeResource(resources: ResourceStorage) {
         let storageSize = 0;
+        let resourceOverflowed = false;
         for (let [resType, qty] of resources) {
             if (resType == ResourceType.EMERALD) {
                 storageSize = this.getEmeraldStorageSize();
@@ -325,13 +326,14 @@ export class Territory {
                 storageSize = this.getResourceStorageSize();
             }
             let stored = this.storage.get(resType)!;
-            if (stored >= storageSize) {
-                this.resourceOverflow = true;
+            if (stored + qty >= storageSize) {
+                this.storage.set(resType, storageSize)
+                resourceOverflowed = true;
                 continue;
-            }
-            this.resourceOverflow = false;
+            } 
             this.storage.set(resType, stored + qty);
         }
+        this.resourceOverflow = resourceOverflowed;
     }
 
     private consume(times: number, cost: number, usedResource: ResourceType): boolean {
