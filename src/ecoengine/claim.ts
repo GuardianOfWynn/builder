@@ -67,6 +67,7 @@ export class Claim {
     let pathfinder = new Pathfinder(hq, EngineInstance!.guildMap);
     let [route, tax, composed, possible] = pathfinder.route(territory, hq.routeStyle)
 
+    // FIX ME: When moving HQ the resource is not sent in one time
     hq.passingResource.push({
       id: uuidv4(),
       currentTerritory: hq,

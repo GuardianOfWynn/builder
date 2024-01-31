@@ -311,6 +311,25 @@ export class Territory {
         if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
         } else {
+            // Apply tax
+            if(transference.originalClaim !== this.claim) {
+                let tax = 0;
+                let taxed = new Map<ResourceType, number>();
+
+                if(this.claim!.guild.allies.includes(transference.originalClaim.guild.tag)) {
+                    tax = this.allyTax;
+                } else {
+                    tax = this.tax;
+                }
+                for(let [res, qty] of transference.storage) {
+                    let taken = qty * (tax / 100)
+                    let left = qty - taken;
+                    taxed.set(res, taken);
+                    transference.storage.set(res, left);
+                }
+                this.storeResource(taxed);
+            }
+
             this.passingResource.push(transference);
             transference.currentTerritory = this;
         }
