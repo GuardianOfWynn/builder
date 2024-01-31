@@ -43,7 +43,6 @@ export type ResourceTransference = {
     transferenceGroup: number
     direction: TransferDirection
     currentTerritory: Territory
-    isStuck: boolean
     origin: Territory
     originalClaim: Claim
     originalStyle: RouteStyle
@@ -257,9 +256,9 @@ export class Territory {
         return costs
     }
 
-    transferResource(transf: ResourceTransference): boolean {
+    transferResource(transf: ResourceTransference) {
 
-        // Try to reroute stuck transferences
+        /* Try to reroute stuck transferences
         for (let stuckTransferences of this.passingResource.filter(x => x.isStuck)) {
             let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
             let [route, tax, possible] = pathfinder.route(stuckTransferences.target, transf.originalStyle)
@@ -283,11 +282,11 @@ export class Territory {
                 transf.originalRoute = route;
 
             }
-        }
+        }*/
 
         if (this.name === transf.target.name || this.connections.includes(transf.target.name)) {
             transf.target.receiveResource(transf);
-            return true;
+            return;
         }
 
         let currentRoute = transf.originalRoute;
@@ -296,13 +295,16 @@ export class Territory {
         } else {
             let currentIndex = currentRoute.findIndex(x => x.name === this.name)
             if (currentIndex === -1) {
-                transf.isStuck = true;
-                return false;
+                this.storeResource(transf.storage);
+                return;
+            }
+            let nextTerr = currentRoute[currentIndex + 1];
+            if(nextTerr.borders == BorderStyle.CLOSED) {
+                this.storeResource(transf.storage);
+                return;
             }
             currentRoute[currentIndex + 1].receiveResource(transf);
         }
-
-        return true
     }
 
     receiveResource(transference: ResourceTransference) {
@@ -429,7 +431,6 @@ export class Territory {
                 currentTerritory: this,
                 origin: this,
                 target: this.claim.getHQ()!,
-                isStuck: !possible,
                 originalRoute: route,
                 originalClaim: this.claim,
                 originalStyle: this.routeStyle,
