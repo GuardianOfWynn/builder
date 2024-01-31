@@ -426,7 +426,7 @@ export class Territory {
             }
 
             let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
-            let [route, tax, possible] = pathfinder.route(this.claim.getHQ()!, this.routeStyle)
+            let [route, tax, composed, possible] = pathfinder.route(this.claim.getHQ()!, this.routeStyle)
 
             let transference: ResourceTransference = {
                 id: uuidv4(),

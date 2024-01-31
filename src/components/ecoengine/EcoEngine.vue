@@ -69,8 +69,8 @@
           :territory="selectedTerritory" />
       </div>
       <div class="fixed z-40 left-0 bottom-0 font-jetbrains flex text-sm p-4 gap-x-4">
-        <p :key="transferTimer" class="outlined-text text-white p-4">{{'Resource transfer in ' + Math.max(0, (60 - Math.floor(((new Date().getTime() -
-          EngineInstance!.lastResourceTransference) / 1000)))) + ' seconds' }}</p>
+        <p :key="transferTimer" class="outlined-text text-white bg-mc-bg">{{'Resource transfer in ' + (60 - Math.floor(((new Date().getTime() -
+          EngineInstance!.lastResourceTransference) / 1000))) + ' seconds' }}</p>
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@ export default {
       }
       clearHighlightedRoutes();
       let pathfinder = new Pathfinder(routeViewerFirstTerritory.value!, EngineInstance!.guildMap)
-      let [route, tax, possible] = pathfinder.route(routeViewerSecondTerritory.value, routeViewerFirstTerritory.value.routeStyle);
+      let [route, tax, composedTax, possible] = pathfinder.route(routeViewerSecondTerritory.value, routeViewerFirstTerritory.value.routeStyle);
       currentRoute.value = route;
       currentRouteTax.value = tax;
       isRoutePossible.value = possible;

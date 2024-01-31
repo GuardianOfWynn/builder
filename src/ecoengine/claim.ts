@@ -4,6 +4,7 @@ import { GuildMap } from './guild_map';
 import { Guild } from './guild';
 import { EngineInstance } from './engine';
 import { ResourceType } from './resource';
+import { Pathfinder } from './pathfinding/pathfinder';
 
 export class Claim {
   globalTax: number;
@@ -45,7 +46,7 @@ export class Claim {
   }
 
   setAsHQ(territory: Territory): void {
-    if(territory.HQ) {
+    if (territory.HQ) {
       return;
     }
     let hq = this.getHQ()!
@@ -58,18 +59,27 @@ export class Claim {
       [ResourceType.FISH, 0],
       [ResourceType.EMERALD, 0]
     ])
-    for(let [res, num] of storedResource) {
+
+    for (let [res, num] of storedResource) {
       send.set(res, (num - costs.get(res)!))
     }
+
+    let pathfinder = new Pathfinder(hq, EngineInstance!.guildMap);
+    let [route, tax, composed, possible] = pathfinder.route(territory, hq.routeStyle)
+
     hq.passingResource.push({
       id: uuidv4(),
       currentTerritory: hq,
       origin: hq,
       direction: TransferDirection.HQ_TO_TERRITORY,
       storage: send,
+      originalStyle: hq.routeStyle,
+      originalClaim: this,
+      originalRoute: route,
       target: territory,
       transferenceGroup: EngineInstance!.currentTransferenceId
     });
+
     for (const t of this.territories) {
       t.HQ = false;
     }
@@ -77,18 +87,30 @@ export class Claim {
   }
 
   askForResources(asking: Territory, res: ResourceStorage): void {
-    const hq = this.getHQ();
-    if (hq) {
-      hq.passingResource.push({
-        id: uuidv4(),
-        currentTerritory: hq,
-        origin: hq,
-        direction: TransferDirection.HQ_TO_TERRITORY,
-        storage: res,
-        target: asking,
-        transferenceGroup: EngineInstance!.currentTransferenceId
-      });
+    const hq = this.getHQ()!;
+
+    let pathfinder = new Pathfinder(hq, EngineInstance!.guildMap);
+    let [route, tax, composedTax, possible] = pathfinder.route(asking, hq.routeStyle)
+
+    let send: ResourceStorage = new Map<ResourceType, number>();
+
+    // Send more resource fo cover tax
+    for(let [resource, qty] of res) {
+      send.set(resource, qty / (composedTax));
     }
+
+    hq.passingResource.push({
+      id: uuidv4(),
+      currentTerritory: hq,
+      origin: hq,
+      originalClaim: this,
+      originalRoute: route,
+      originalStyle: this.getHQ()!.routeStyle,
+      direction: TransferDirection.HQ_TO_TERRITORY,
+      storage: send,
+      target: asking,
+      transferenceGroup: EngineInstance!.currentTransferenceId
+    });
   }
 }
 

@@ -98,13 +98,14 @@ export class Pathfinder {
     return [distances, previous, nodes];
   }
 
-  route(target: Territory, style: RouteStyle): [Territory[], number, boolean]  {
+  route(target: Territory, style: RouteStyle): [Territory[], number, number, boolean]  {
     const [_, previous, nodes] = this.djikstra(target, style);
     const path: Territory[] = [];
     let tax = 0;
     let currentNode: string | undefined = previous.get(target.name);
     let rootTerritory = this.root.claim!.guild;
     let possible = true;
+    let composedTax = 1;
     while (currentNode && currentNode !== this.root.name) {
       let currentTerritory = nodes.get(currentNode)!
       let territoryGuild = currentTerritory.claim!.guild
@@ -114,15 +115,17 @@ export class Pathfinder {
         } else {
           if(territoryGuild.allies.includes(rootTerritory.tag)) {
             tax += currentTerritory!.allyTax;
+            composedTax *= (1 - (currentTerritory!.allyTax/100));
           } else {
             tax += currentTerritory!.tax;
+            composedTax *= (1 - (currentTerritory!.tax/100));
           }
         }
       }
       path.push(nodes.get(currentNode)!);
       currentNode = previous.get(currentNode);
     }
-    return [path.reverse(), tax, possible];
+    return [path.reverse(), tax, composedTax, possible];
   }
 
   getDistance(target: Territory): number {

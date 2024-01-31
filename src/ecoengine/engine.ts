@@ -19,7 +19,14 @@ export class Engine {
 
     Start() {
         console.log("Starting EcoEngine...");
-        setInterval(async () => {
+        const setIntervalAsync = (ms) => {
+            EngineInstance!.guildMap.territories.forEach(terr => {
+                terr.tick()
+            })
+            setTimeout(() => setIntervalAsync(ms), ms);
+        };
+        setInterval(() => {
+            console.log("CHAMOU")
             EngineInstance!.currentTransferenceId++
             let currentTimeMillis = new Date().getTime();
             EngineInstance!.guildMap.territories.forEach(terr => {
@@ -27,12 +34,6 @@ export class Engine {
             })
             EngineInstance!.lastResourceTransference = currentTimeMillis;
         }, 60000)
-        const setIntervalAsync = (ms) => {
-            EngineInstance!.guildMap.territories.forEach(terr => {
-                terr.tick()
-            })
-            setTimeout(() => setIntervalAsync(ms), ms);
-        };
         setIntervalAsync(10000)
     }
 }
