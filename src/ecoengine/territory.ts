@@ -283,6 +283,10 @@ export class Territory {
 
             }
         }*/
+        if(this.claim?.guild.tag === 'GsW' && transf.direction === TransferDirection.HQ_TO_TERRITORY) {
+            console.log("Em " + this.name + ":")
+            console.log(transf)
+        }
 
         if (this.name === transf.target.name || this.connections.includes(transf.target.name)) {
             transf.target.receiveResource(transf);
@@ -299,17 +303,20 @@ export class Territory {
                 return;
             }
             let nextTerr = currentRoute[currentIndex + 1];
-            if(nextTerr.borders == BorderStyle.CLOSED) {
+            if(nextTerr.borders === BorderStyle.CLOSED && nextTerr.claim !== this.claim ) {
                 this.storeResource(transf.storage);
                 return;
             }
-            currentRoute[currentIndex + 1].receiveResource(transf);
+            nextTerr.receiveResource(transf);
+            transf.currentTerritory = nextTerr;
         }
     }
 
     receiveResource(transference: ResourceTransference) {
+        transference.transferenceGroup = EngineInstance!.currentTransferenceId + 1;
         if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
+            transference.currentTerritory = this;
         } else {
             // Apply tax
             if(transference.originalClaim !== this.claim) {
@@ -329,9 +336,7 @@ export class Territory {
                 }
                 this.storeResource(taxed);
             }
-
             this.passingResource.push(transference);
-            transference.currentTerritory = this;
         }
     }
 
@@ -424,11 +429,11 @@ export class Territory {
                 [ResourceType.WOOD, 0],
             ])
             for (let [res, cost] of costMinute) {
-                if (this.storage.get(res)! > cost) {
+                if (this.storage.get(res)! >= cost) {
                     transfer.set(res, transfer.get(res)! + this.storage.get(res)! - cost);
                 } else {
                     if (this.productionMultipliers.get(res)! > 0) {
-                        let produced = (this.getProducedResource() * this.productionMultipliers.get(res)!);
+                        let produced = 60 * (this.getProducedResource() * this.productionMultipliers.get(res)!);
                         if (produced < cost) {
                             askFor.set(res, askFor.get(res)! + cost - produced);
                             needRes = true;
@@ -457,7 +462,7 @@ export class Territory {
                 originalStyle: this.routeStyle,
                 direction: TransferDirection.TERRITORY_TO_HQ,
                 storage: transfer,
-                transferenceGroup: EngineInstance!.currentTransferenceId
+                transferenceGroup: EngineInstance!.currentTransferenceId + 1
             }
 
             if (needRes) {
@@ -465,8 +470,10 @@ export class Territory {
             }
             this.transferResource(transference);
         }
-        this.passingResource.forEach(x => this.transferResource(x))
-        this.clearTransferencesOfPreviousGroup();
+        this.passingResource.filter(x => x.transferenceGroup === EngineInstance!.currentTransferenceId).forEach(x => {
+            x.transferenceGroup = EngineInstance!.currentTransferenceId + 1;
+            this.transferResource(x)
+        })
     }
 
     tick() {

@@ -30,6 +30,7 @@ export class Engine {
             let currentTimeMillis = new Date().getTime();
             EngineInstance!.guildMap.territories.forEach(terr => {
                 terr.startResourceTransfer()
+                terr.passingResource = terr.passingResource.filter(x => x.transferenceGroup === this.currentTransferenceId + 1)
             })
             EngineInstance!.lastResourceTransference = currentTimeMillis;
         }, 60000)

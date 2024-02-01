@@ -88,6 +88,7 @@ export class Claim {
   }
 
   askForResources(asking: Territory, res: ResourceStorage): void {
+    console.log(asking.name + " pediu recurso")
     const hq = this.getHQ()!;
 
     let pathfinder = new Pathfinder(hq, EngineInstance!.guildMap);
@@ -97,7 +98,17 @@ export class Claim {
 
     // Send more resource fo cover tax
     for(let [resource, qty] of res) {
-      send.set(resource, qty / (composedTax));
+      let neededRes = qty / composedTax;
+      if(hq.storage.get(resource)! <= 0) {
+        continue;
+      }
+      if(hq.storage.get(resource)! >= neededRes) {
+        send.set(resource, neededRes);
+        hq.storage.set(resource, hq.storage.get(resource)! - neededRes);
+      } else {
+        send.set(resource, hq.storage.get(resource)!)
+        hq.storage.set(resource, 0)
+      }
     }
 
     hq.passingResource.push({
@@ -110,7 +121,7 @@ export class Claim {
       direction: TransferDirection.HQ_TO_TERRITORY,
       storage: send,
       target: asking,
-      transferenceGroup: EngineInstance!.currentTransferenceId
+      transferenceGroup: EngineInstance!.currentTransferenceId + 1
     });
   }
 }
