@@ -91,7 +91,7 @@ export class Territory {
     connections: string[]
 
     clearTransferencesOfPreviousGroup() {
-        this.passingResource = this.passingResource.filter(x => x.transferenceGroup === EngineInstance!.currentTransferenceId);
+        this.passingResource = this.passingResource.filter(x => x.transferenceGroup > EngineInstance!.currentTransferenceId);
     }
 
     getProducedResourceType(res: ResourceType): number {
@@ -257,33 +257,6 @@ export class Territory {
     }
 
     transferResource(transf: ResourceTransference) {
-
-        /* Try to reroute stuck transferences
-        for (let stuckTransferences of this.passingResource.filter(x => x.isStuck)) {
-            let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
-            let [route, tax, possible] = pathfinder.route(stuckTransferences.target, transf.originalStyle)
-            if (!possible) {
-                transf.isStuck = true;
-                return false;
-            }
-            transf.originalRoute = route;
-        }
-
-        if (transf.direction == TransferDirection.TERRITORY_TO_HQ) {
-            if (this.claim != null) {
-                // If territory is member of a claim, reroute it to HQ
-                transf.target = transf.originalClaim.getHQ()!;
-                let pathfinder = new Pathfinder(this, EngineInstance!.guildMap);
-                let [route, tax, possible] = pathfinder.route(transf.target, transf.originalStyle)
-                if (!possible) {
-                    transf.isStuck = true;
-                    return false;
-                }
-                transf.originalRoute = route;
-
-            }
-        }*/
-
         if (this.name === transf.target.name || this.connections.includes(transf.target.name)) {
             transf.target.receiveResource(transf);
             return;
@@ -308,6 +281,7 @@ export class Territory {
     }
 
     receiveResource(transference: ResourceTransference) {
+        transference.currentTerritory = this;
         if (this.name === transference.target.name) {
             this.storeResource(transference.storage);
         } else {
@@ -329,9 +303,8 @@ export class Territory {
                 }
                 this.storeResource(taxed);
             }
-
             this.passingResource.push(transference);
-            transference.currentTerritory = this;
+
         }
     }
 
@@ -463,9 +436,22 @@ export class Territory {
             if (needRes) {
                 this.claim.askForResources(this, askFor);
             }
-            this.transferResource(transference);
+            this.passingResource.push(transference);
         }
-        this.passingResource.forEach(x => this.transferResource(x))
+        this.passingResource.
+            filter(x => x.transferenceGroup === EngineInstance!.currentTransferenceId)
+            .forEach(x => this.transferResource({
+                currentTerritory: this,
+                direction: x.direction,
+                id: x.id,
+                origin: x.origin,
+                originalClaim: x.originalClaim,
+                originalRoute: x.originalRoute,
+                originalStyle: x.originalStyle,
+                storage: x.storage,
+                target: x.target,
+                transferenceGroup: EngineInstance!.currentTransferenceId + 1
+            }))
         this.clearTransferencesOfPreviousGroup();
     }
 

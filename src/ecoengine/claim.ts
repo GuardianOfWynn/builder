@@ -110,7 +110,7 @@ export class Claim {
       direction: TransferDirection.HQ_TO_TERRITORY,
       storage: send,
       target: asking,
-      transferenceGroup: EngineInstance!.currentTransferenceId
+      transferenceGroup: EngineInstance!.currentTransferenceId + 1
     });
   }
 }
